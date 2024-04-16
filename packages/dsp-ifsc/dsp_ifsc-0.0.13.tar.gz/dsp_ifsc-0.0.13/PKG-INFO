@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: dsp-ifsc
+Version: 0.0.13
+Summary: A small package with some utilities for DSP grade at IFSC - Campus Florianópolis
+Home-page: https://github.com/JoaoMario109/ifsc-dsp-2024
+License: MIT
+Author: João Mário Lago
+Author-email: joao.mcil2003@aluno.ifsc.edu.br
+Requires-Python: >=3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Project-URL: Issues, https://github.com/JoaoMario109/ifsc-dsp-2024/issues
+Project-URL: Repository, https://github.com/JoaoMario109/ifsc-dsp-2024
+Description-Content-Type: text/markdown
+
+# DSP - IFSC (Campus Florianópolis)
+
+## Set of helper functions for DSP classes at IFSC (Campus Florianópolis)
+
