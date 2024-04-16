@@ -1,0 +1,6 @@
+pydantic-settings[toml]
+tomlkit
+packaging
+
+[cli]
+click
