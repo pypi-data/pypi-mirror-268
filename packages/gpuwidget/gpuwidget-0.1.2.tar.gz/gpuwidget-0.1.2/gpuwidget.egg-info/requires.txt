@@ -1,0 +1,2 @@
+ipywidgets>=7.6
+gpustat>=1.0
