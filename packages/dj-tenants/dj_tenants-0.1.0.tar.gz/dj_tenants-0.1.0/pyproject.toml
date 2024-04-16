@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dj-tenants"
+version = "0.1.0"
+description = ""
+authors = ["Hugo Mesquita <hugohomesquita@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "dj_tenants" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django-appconf = "^1.0.4"
+django = "^5.0.4"
+
+[tool.pytest.ini_options]
+env = ["DJANGO_SETTINGS_MODULE=tests.settings"]
+minversion = "6.0"
+addopts = """\
+    --strict-config
+    --strict-markers
+    """
+testpaths = ["tests"]
+python_files = ["tests.py", "test_*.py"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
