@@ -1,0 +1,12 @@
+danila/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+danila/danila.py,sha256=-v89nlKg2L__NZRBIf3tJyo5htshhdVLI1uOUjcMp3g,663
+data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data/neuro/Rama_classify_class.py,sha256=uW1GL3-M6RRdwm01g2JXome9R84LOHsmnqwJG2QbZn8,2721
+data/neuro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data/neuro/models.py,sha256=1Jej3SAipvQ_UtGJIGjqklvTCAVUdhuBH3TlsE3Xpvg,71
+data/result/Class_im.py,sha256=MrdTROeKKg4OEj-sAvCFLIoL4AmQxVddGmSVav-ISNo,89
+data/result/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+danila_lib-1.0.5.dist-info/METADATA,sha256=NoXu0BmILrPqHx3s5ANpisq8JOipFaqm-1lNLQ8E-OU,5395
+danila_lib-1.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+danila_lib-1.0.5.dist-info/top_level.txt,sha256=84lz506gS7iDhw6TBDKjYrmnYF7f4FBn20bwOk7k4gI,12
+danila_lib-1.0.5.dist-info/RECORD,,
