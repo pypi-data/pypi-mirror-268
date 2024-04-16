@@ -1,0 +1,11 @@
+README.md
+setup.py
+megicparc/__init__.py
+megicparc/functions.py
+megicparc/test_flame.py
+megicparc/utils.py
+megicparc/viz.py
+megicparc.egg-info/PKG-INFO
+megicparc.egg-info/SOURCES.txt
+megicparc.egg-info/dependency_links.txt
+megicparc.egg-info/top_level.txt
