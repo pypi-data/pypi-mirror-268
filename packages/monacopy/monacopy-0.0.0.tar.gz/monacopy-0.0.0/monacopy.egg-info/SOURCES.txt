@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+monacopy/__init__.py
+monacopy.egg-info/PKG-INFO
+monacopy.egg-info/SOURCES.txt
+monacopy.egg-info/dependency_links.txt
+monacopy.egg-info/requires.txt
+monacopy.egg-info/top_level.txt
