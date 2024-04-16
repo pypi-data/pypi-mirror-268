@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+danila/__init__.py
+danila/danila.py
+danila_lib.egg-info/PKG-INFO
+danila_lib.egg-info/SOURCES.txt
+danila_lib.egg-info/dependency_links.txt
+danila_lib.egg-info/requires.txt
+danila_lib.egg-info/top_level.txt
+data/__init__.py
+data/neuro/Rama_classify_class.py
+data/neuro/__init__.py
+data/result/Class_im.py
+data/result/__init__.py
