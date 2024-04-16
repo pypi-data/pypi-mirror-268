@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: celery-streaming-result
+Version: 0.1.1
+Summary: Celery任务结果分片管理
+Home-page: UNKNOWN
+Author: Zhou WeiKe
+Maintainer: Zhou WeiKe
+License: MIT
+Keywords: celery_streaming_result,celery,streaming result
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: msgpack
+Requires-Dist: celery
+Requires-Dist: redis
+Requires-Dist: asgiref
+
+# celery-streaming-result
+
+Celery任务结果分片管理。
+
+## 安装
+
+```
+pip install celery-streaming-result
+```
+
+## 使用方法
+
+### 服务端
+
+```python
+import time
+import redis
+from celery.app import app_or_default
+from celery_streaming_result import CeleryStreamingResultManager
+
+app = app_or_default()
+redis_instance = redis.Redis()
+csrm = CeleryStreamingResultManager(redis_instance)
+
+@app.task(bind=True)
+def task1(celery_task):
+    result = []
+    for i in range(10):
+        csrm.append_result_chunk(celery_task, i)
+        result.append(i)
+    csrm.append_ended_chunk(celery_task)
+    return result
+
+```
+
+## 客户端（同步）
+
+```python
+import redis
+from celery.app import app_or_default
+from celery_streaming_result import CeleryStreamingResultManager
+
+# 根据你的task定义，正确引用
+from test_server import task1
+
+app = app_or_default()
+redis_instance = redis.Redis()
+csrm = CeleryStreamingResultManager(redis_instance)
+
+# 生成一个异步任务
+atask1 = task1.delay()
+# 读取该异步任务的结果分片
+for chunk in csrm.get_result_chunks(atask1):
+    print(chunk, end="-", flush=True)
+```
+
+## 客户端（异步）
+
+```python
+from redis import asyncio as aioredis
+from celery.app import app_or_default
+from celery_streaming_result import CeleryStreamingResultManager
+from celery_streaming_result import start_celery_task_async
+from celery_streaming_result import get_celery_task_result_async
+from test_server import task1  # 根据你的task定义，正确引用
+
+app = app_or_default()
+redis_instance = aioredis.Redis()
+csrm = CeleryStreamingResultManager(redis_instance)
+
+
+async def on_finished(
+    celery_task,
+):
+    print("on finished...")
+    task_result = await get_celery_task_result_async(
+        celery_task,
+    )
+    # 这里的task_result值是celery任务的返回值。
+    # 一般来说是所有结果分片的集合，但实际只取决于celery任务的实现。
+
+
+atask1 = await start_celery_task_async(
+    task1
+)  # task1.delay()是一个同步函数。需要使用`sync_to_async`进行转化。
+# 读取该异步任务的结果分片，如果任务结果，则回调on_finished函数。
+async for chunk in csrm.get_result_chunks(
+    atask1,
+    on_finished=on_finished,
+):
+    print(chunk, end="-", flush=True)
+```
+
+## 版本记录
+
+### v0.1.0
+
+1. 首次发布。
+
+### v0.1.1
+
+1. 添加asyncio支持。
+1. 获取结果支持on_finished回调。
+
+
