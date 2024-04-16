@@ -1,0 +1,6 @@
+domainize/__init__.py,sha256=e2U6Qkaa3-SG46bo-jgBUrLsSXhrCCXsiOVNHU2saTM,1071
+domainize/resources/public_suffix_list.dat.gz,sha256=teNcwDZPatsT1v36957CDjV11n0P48X5HPUFeAwIkOw,85498
+domainize-1.2.0.dist-info/METADATA,sha256=pPAFROVeyW6BkMI-mPTE5PDPZP_ZNpfkZuPCDxbWCyQ,1317
+domainize-1.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+domainize-1.2.0.dist-info/entry_points.txt,sha256=EwbgJdpIXduPHNOdBeV-QoALsXn4YowCgZ7krGC6Bqg,48
+domainize-1.2.0.dist-info/RECORD,,
