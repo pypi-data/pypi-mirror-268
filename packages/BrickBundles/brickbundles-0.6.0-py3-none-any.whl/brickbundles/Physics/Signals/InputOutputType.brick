@@ -1,0 +1,12 @@
+
+const InputOutputType:
+    Position1D is Int: 1
+    Position3D is Int: 2
+    RPY is Int: 3
+    Velocity1D is Int: 4
+    Velocity3D is Int: 5
+    Angle is Int: 6
+    AngularVelocity is Int: 7
+    Torque is Int: 8
+    ControlEvent is Int: 9
+    Composite is Int: 10
