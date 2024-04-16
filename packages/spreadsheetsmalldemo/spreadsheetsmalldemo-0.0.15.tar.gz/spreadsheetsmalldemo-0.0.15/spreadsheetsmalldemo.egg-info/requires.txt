@@ -1,0 +1,3 @@
+pandas
+rpaframework==28.5.1
+robocorp==2.0.1
