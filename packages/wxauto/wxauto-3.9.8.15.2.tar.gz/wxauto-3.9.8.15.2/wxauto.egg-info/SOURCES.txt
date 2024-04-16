@@ -1,0 +1,14 @@
+README.md
+setup.py
+wxauto/__init__.py
+wxauto/color.py
+wxauto/elements.py
+wxauto/errors.py
+wxauto/languages.py
+wxauto/utils.py
+wxauto/wxauto.py
+wxauto.egg-info/PKG-INFO
+wxauto.egg-info/SOURCES.txt
+wxauto.egg-info/dependency_links.txt
+wxauto.egg-info/requires.txt
+wxauto.egg-info/top_level.txt
