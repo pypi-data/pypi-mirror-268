@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: modelgauge
+Version: 0.5.0
+Summary: Automatically and uniformly measure the behavior of many AI Systems.
+Home-page: https://github.com/mlcommons/modelgauge
+License: Apache-2.0
+Keywords: AI,GenAI,LLM,NLP,evaluate,measure,quality,testing,prompt,safety,compare,artificial,intelligence,Large,Language,Models
+Author: MLCommons AI Safety
+Author-email: ai-safety-engineering@mlcommons.org
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Benchmark
+Classifier: Typing :: Typed
+Provides-Extra: all-plugins
+Provides-Extra: demo
+Provides-Extra: huggingface
+Provides-Extra: openai
+Provides-Extra: perspective-api
+Provides-Extra: standard-tests
+Provides-Extra: together
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: gdown (>=5.1.0)
+Requires-Dist: modelgauge_demo_plugin ; extra == "demo" or extra == "all-plugins"
+Requires-Dist: modelgauge_huggingface ; extra == "huggingface" or extra == "all-plugins"
+Requires-Dist: modelgauge_openai ; extra == "openai" or extra == "all-plugins"
+Requires-Dist: modelgauge_perspective_api ; extra == "perspective-api" or extra == "all-plugins"
+Requires-Dist: modelgauge_standard_tests ; extra == "standard-tests" or extra == "all-plugins"
+Requires-Dist: modelgauge_together ; extra == "together" or extra == "all-plugins"
+Requires-Dist: pydantic (>=2.6.0,<3.0.0)
+Requires-Dist: sqlitedict (>=2.1.0,<3.0.0)
+Requires-Dist: tomli (>=2.0.1,<3.0.0)
+Requires-Dist: tqdm (>=4.66.1)
+Requires-Dist: types-tqdm (>=4.66.0.0,<5.0.0.0)
+Requires-Dist: typing-extensions (>=4.10.0,<5.0.0)
+Requires-Dist: zstandard (>=0.18.0,<0.19.0)
+Project-URL: Repository, https://github.com/mlcommons/modelgauge
+Description-Content-Type: text/markdown
+
+# ModelGauge
+
+Goal: Make it easy to automatically and uniformly measure the behavior of many AI Systems.
+
+> [!WARNING]
+> This repo is still in **beta** with a planned full release in Fall 2024. Until then we reserve the right to make backward incompatible changes as needed.
+
+ModelGauge is an evolution of [crfm-helm](https://github.com/stanford-crfm/helm/), intended to meet their existing use cases as well as those needed by the [MLCommons AI Safety](https://mlcommons.org/working-groups/ai-safety/ai-safety/) project.
+
+## Summary
+
+ModelGauge is a library that provides a set of interfaces for Tests and Systems Under Test (SUTs) such that:
+
+* Each Test can be applied to all SUTs with the required underlying capabilities (e.g. does it take text input?)
+* Adding new Tests or SUTs can be done without modifications to the core libraries or support from ModelGauge authors.
+
+Currently ModelGauge is targeted at LLMs and [single turn prompt response Tests](docs/prompt_response_tests.md), with Tests scored by automated Annotators (e.g. LlamaGuard). However, we expect to extend the library to cover more Test, SUT, and Annotation types as we move toward full release.
+
+
+## Docs
+
+* [Developer Quick Start](docs/dev_quick_start.md)
+* [Tutorial for how to create a Test](docs/tutorial_tests.md)
+* [Tutorial for how to create a System Under Test (SUT)](docs/tutorial_suts.md)
+* How we use [plugins](docs/plugins.md) to connect it all together.
+
