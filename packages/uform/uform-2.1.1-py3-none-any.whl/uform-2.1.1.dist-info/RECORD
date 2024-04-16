@@ -1,0 +1,14 @@
+uform/__init__.py,sha256=MExiMSz2eF5FCZk0tPRSQ-wENU37RNiF1lC8BNpQIPs,1963
+uform/chat.py,sha256=jJtwKoMAn24wyJcfQT48dbCEzpCum1HwjwZc5n352ss,3359
+uform/gen_model.py,sha256=xH6egxiMH2mCIf5ySVcxk7NRNPkxYrO8B1rMBk1Puic,16130
+uform/numpy_preprocessor.py,sha256=uzYqONochgRrgUMT6hOfHzld02fiov6Buf3-VNhGbDM,3585
+uform/onnx_models.py,sha256=HPGoMHA_jGWYOs-KmR_JCKQXz6KmdWRVsgz5NRw0HNA,8242
+uform/preprocessing.py,sha256=xJczCbQ1Z5Ir82CUxIuPXOywUaCuLWDbl9ySAEOUVOk,3474
+uform/torch_models.py,sha256=U_wbodavimvOSL6kXZ-enYeLokWT4Dinm2s84SYlHDI,16376
+uform/torch_preprocessor.py,sha256=P_MFmKL__jMH8urmmBqhJzhGL2eUG02K20YOzLRuGpw,3054
+uform-2.1.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+uform-2.1.1.dist-info/METADATA,sha256=8MOgj41K9bLweUTr6xdkF9L2mQRx9Ie351Hpu4cHxYU,27286
+uform-2.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+uform-2.1.1.dist-info/entry_points.txt,sha256=PbTwvGUg0tk2IZ309Xc6XDey9zF2LH49NpDlrZswXRA,47
+uform-2.1.1.dist-info/top_level.txt,sha256=8ucoOD-KzaTD0oC3NwjI7jYbupdjCv0dT_4h4qC7GwI,6
+uform-2.1.1.dist-info/RECORD,,
