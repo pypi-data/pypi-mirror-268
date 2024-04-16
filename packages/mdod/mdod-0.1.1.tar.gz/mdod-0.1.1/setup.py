@@ -1,0 +1,22 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="mdod",
+    version="0.1.1",
+    packages=find_packages(),
+    package_data={"": ["*"]},  
+    install_requires=[
+        '',
+    ],
+    author="Z Shen",
+    author_email="626456708@qq.com",
+    description="MDOD, Multi-Dimensional data Outlier Detection",
+    license="BSD 3-Clause License",
+    url="https://github.com/mddod/mdod",
+    classifiers=[
+        "Development Status :: 1 - Planning",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+    ],
+)
