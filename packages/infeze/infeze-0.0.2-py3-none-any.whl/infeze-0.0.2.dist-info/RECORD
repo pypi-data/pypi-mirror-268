@@ -1,0 +1,8 @@
+infeze/__init__.py,sha256=XQaWuD9Qz3Jtb_yO0dKrxXx_5oYlMoheJN6ZG1Lg8xA,75
+infeze/_version.py,sha256=rXRSFbIb6xsE47gngNCqyglQARtQK9rthF2BDjGN5p8,23
+infeze/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+infeze/backports/langchain/tongyi.py,sha256=F6qZWBmzM9dK8WaU5_CQ04o7L6jd2VcMt6dHGZ5cFeE,25172
+infeze-0.0.2.dist-info/METADATA,sha256=H7bVlXNjCBIY_cMgxGMyytwZTecCu7mR-hgxkiAYIpI,322
+infeze-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+infeze-0.0.2.dist-info/top_level.txt,sha256=_bqkup_9key24vna7LtbS4c7AisyQZ4AplLdvhz7rGE,7
+infeze-0.0.2.dist-info/RECORD,,
