@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: length-nest-pro-MQ
+Version: 0.0.2
+Summary: length_nest_pro_MQ
+Author: Niels Bos
+Author-email: nielsb00@gmail.com
+Keywords: rabbit mq,length nest pro
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: wheel
+Requires-Dist: setuptools
+Requires-Dist: pika
+
+An adapted version of the length nest pro, enriched with a message queue connection
