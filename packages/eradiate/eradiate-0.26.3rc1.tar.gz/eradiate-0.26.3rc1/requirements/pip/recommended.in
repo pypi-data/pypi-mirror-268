@@ -1,0 +1,9 @@
+-c main.lock.txt
+aabbtree
+astropy
+ipython
+ipywidgets
+jupyterlab
+python-dateutil
+graphviz
+seaborn
