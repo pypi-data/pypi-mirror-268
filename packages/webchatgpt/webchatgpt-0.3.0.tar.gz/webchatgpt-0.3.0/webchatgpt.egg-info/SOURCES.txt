@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+WebChatGPT/__init__.py
+WebChatGPT/__main__.py
+WebChatGPT/console.py
+WebChatGPT/errors.py
+WebChatGPT/main.py
+WebChatGPT/utils.py
+tests/test_webchatgpt.py
+webchatgpt.egg-info/PKG-INFO
+webchatgpt.egg-info/SOURCES.txt
+webchatgpt.egg-info/dependency_links.txt
+webchatgpt.egg-info/entry_points.txt
+webchatgpt.egg-info/requires.txt
+webchatgpt.egg-info/top_level.txt
