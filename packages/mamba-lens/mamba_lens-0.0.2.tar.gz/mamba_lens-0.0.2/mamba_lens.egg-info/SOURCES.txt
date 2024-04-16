@@ -1,0 +1,48 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.py
+examples/Activation And Weight Plotter.ipynb
+examples/Activation Plotter Minimal.ipynb
+examples/Direct Logit Attribution.ipynb
+examples/Logit Lens.ipynb
+examples/Patching Minimal.ipynb
+examples/Patching.ipynb
+examples/Roboto-Regular.ttf
+examples/h similarities.ipynb
+mamba_lens/HookedMamba.py
+mamba_lens/__init__.py
+mamba_lens/input_dependent_hooks.py
+mamba_lens.egg-info/PKG-INFO
+mamba_lens.egg-info/SOURCES.txt
+mamba_lens.egg-info/dependency_links.txt
+mamba_lens.egg-info/requires.txt
+mamba_lens.egg-info/top_level.txt
+media/activation visualization.png
+media/activation visualizer.png
+media/and sims.png
+media/conv filters patch.png
+media/dla d term clipped.png
+media/dla d term.png
+media/dla e sized h clipped.png
+media/dla e sized h.png
+media/dla ssm out clipped.png
+media/dla ssm out.png
+media/dla top 100 clipped.png
+media/dla top 100 layer 39.png
+media/dla top 100.png
+media/dla y clipped.png
+media/dla y.png
+media/h patching.png
+media/h similarity 1.png
+media/h similarity 2.png
+media/h similarity 3.png
+media/h similarity not 39.png
+media/h_n patching.png
+media/layer input patching.png
+media/logit lens.png
+media/patching ui.png
+media/resid_pre patching.png
+media/shelby sims.png
+media/top n outputs.png
