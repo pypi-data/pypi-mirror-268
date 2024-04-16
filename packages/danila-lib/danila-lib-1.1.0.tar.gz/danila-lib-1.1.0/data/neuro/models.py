@@ -1,0 +1,1 @@
+RAMA_CLASSIFY_MODEL_ADDRESS = 'https://disk.yandex.ru/d/k6Wx0bD98fpswQ'
