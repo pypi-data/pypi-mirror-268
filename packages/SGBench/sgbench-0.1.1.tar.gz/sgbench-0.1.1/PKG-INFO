@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: SGBench
+Version: 0.1.1
+Summary: A collection of metrics for scene graph generation
+License: MIT
+Author: Julian Lorenz
+Author-email: julian.lorenz@uni-a.de
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: imagecodecs (>=2024.1.1,<2025.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: tifffile (>=2024.2.12,<2025.0.0)
+Description-Content-Type: text/markdown
+
+# SGBench
+
