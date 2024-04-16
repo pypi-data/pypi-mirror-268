@@ -1,0 +1,7 @@
+sdmx1
+starlette
+
+[tests]
+pytest>=8
+sdmx1[tests]
+starlette[full]
