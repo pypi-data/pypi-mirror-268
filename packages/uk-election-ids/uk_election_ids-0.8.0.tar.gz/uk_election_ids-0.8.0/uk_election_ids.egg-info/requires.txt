@@ -1,0 +1,11 @@
+
+[development]
+sphinx
+sphinx_rtd_theme
+ghp-import
+pydantic
+black==23.3.0
+ruff==0.0.261
+
+[testing]
+coveralls
