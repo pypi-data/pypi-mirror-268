@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rfccsv"
+version = "0.2.0"
+description = "A simple RFC 4180 CSV validator."
+authors = ["Trygve Falch <trygve.falch@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/trygu/rfccsv"  # Optional: Project homepage URL
+repository = "https://github.com/trygu/rfccsv"  # Project repository URL
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
