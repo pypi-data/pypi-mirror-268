@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=69.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "raspimonitor"
+description = "Monitoring and alerting for your RaspberryPi "
+readme = "README.md"
+authors = [{ name = "w0rmr1d3r" }]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+]
+# Make this keywords match the ones in GitHub
+keywords = ["raspberry", "raspberrypi", "pi", "monitor"]
+
+version = "0.0.1"
+# Minumum supported version
+# If supporting newer versions, update ->  CI and classifiers
+# If minimum supported version changes, update -> CI, release and classifiers.
+requires-python = "~=3.9.0"
+
+dependencies = [
+    "requests~=2.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pip-tools~=7.0",
+    "pytest~=8.0",
+    "ruff==0.3.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/w0rmr1d3r/raspimonitor"
+"Repository" = "https://github.com/w0rmr1d3r/raspimonitor"
+"Bug Tracker" = "https://github.com/w0rmr1d3r/raspimonitor/issues"
+"Documentation" = "https://github.com/w0rmr1d3r/raspimonitor"
+"Changelog" = "https://github.com/w0rmr1d3r/raspimonitor/releases"
+"Funding" = "https://github.com/sponsors/w0rmr1d3r"
+
+[project.scripts]
+raspimonitor = "raspimonitor:main"
+
+[tool.setuptools]
+packages = ["raspimonitor"]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".pyenv",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "node_modules",
+    "site",
+    "site-packages",
+    "venv",
+]
+line-length = 120
+indent-width = 4
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "A", "PLC", "PLE", "PLW", "I"]
+ignore = ["A002", "E501"]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"

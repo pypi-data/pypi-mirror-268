@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+raspimonitor/__init__.py
+raspimonitor/raspimonitor.py
+raspimonitor.egg-info/PKG-INFO
+raspimonitor.egg-info/SOURCES.txt
+raspimonitor.egg-info/dependency_links.txt
+raspimonitor.egg-info/entry_points.txt
+raspimonitor.egg-info/requires.txt
+raspimonitor.egg-info/top_level.txt
