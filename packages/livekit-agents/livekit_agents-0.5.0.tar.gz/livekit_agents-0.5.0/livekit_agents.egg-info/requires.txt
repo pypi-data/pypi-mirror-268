@@ -1,0 +1,14 @@
+click~=8.1.0
+livekit~=0.9
+livekit-api~=0.4
+livekit-protocol~=0.4
+protobuf>=3
+types-protobuf<5,>=4
+python-json-logger~=2.0
+attrs~=23.0
+watchfiles~=0.21
+colorlog~=6.0
+psutil~=5.9
+
+[codecs]
+av>=11.0.0
