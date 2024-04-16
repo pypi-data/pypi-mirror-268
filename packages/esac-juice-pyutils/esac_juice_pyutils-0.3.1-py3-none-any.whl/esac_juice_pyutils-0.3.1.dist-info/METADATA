@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: esac_juice_pyutils
+Version: 0.3.1
+Summary: Python package including common modules for ESAC planetary missions
+Home-page: https://juigitlab.esac.esa.int/core-system/uplink/esac_juice_pyutils
+Author: Claudio Munoz Crego, Marc Costa Sitja
+Author-email: marc.costa@ext.esa.int
+Requires-Dist: numpy >=1.21.6
+Requires-Dist: six >=1.16
+Requires-Dist: pandas >=1.1.5
+Requires-Dist: spiceypy >=5.1.2
+Requires-Dist: matplotlib >=3.5.3
+Requires-Dist: docutils >=0.19
+Requires-Dist: pypandoc >=1.11
+Requires-Dist: wget >=3.2
+
