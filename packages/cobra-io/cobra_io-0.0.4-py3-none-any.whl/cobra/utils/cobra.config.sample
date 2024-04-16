@@ -1,0 +1,22 @@
+# Using a custom configuration file like this one, you can set filepaths for various CoBRA I/O functionalities.
+# This is a yaml file, for details on how it is parsed, see cobra.utilities.configuration
+# To check which configuration file is loaded for CoBRA I/O, you can run the following command in your terminal:
+# python -c "from cobra.utilities import configurations; print(configurations.CONFIG_FILE)"
+
+# You can specify multiple options that declare how you want to perform logging.
+# All arguments declared here will be passed to cobra.utilities.logging.basicConfig
+[LOGGING]
+# Append. This can also be 'w' to overwrite previous logs
+filemode = a
+level = INFO
+# If you do not provide a filename, stdout will be the logging destination
+filename = /tmp/cobra.log
+
+# This is where you can specify the location of the files CoBRA I/O caches for you.
+[FILE_LOCATIONS]
+cache = /tmp/cobra_cache
+
+# Configure which CoBRA API to use, e.g., for local development
+[API]
+base_url = https://cobra.cps.cit.tum.de/api/
+version = 2022
