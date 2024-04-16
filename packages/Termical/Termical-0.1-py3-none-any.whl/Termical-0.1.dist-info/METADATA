@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Termical
+Version: 0.1
+Summary: Simple terminal-based calendar
+Home-page: UNKNOWN
+Author: Marek Kužel
+Author-email: marekuzel1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth-httplib2
+Requires-Dist: google-auth-oauthlibpytz
+
+UNKNOWN
+
