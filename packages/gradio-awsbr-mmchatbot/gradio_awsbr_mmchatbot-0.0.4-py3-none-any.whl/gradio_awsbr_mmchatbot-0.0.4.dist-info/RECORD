@@ -1,0 +1,9 @@
+gradio_awsbr_mmchatbot/__init__.py,sha256=BqG3NJm5JUJdrR1esMEbCiQxZStDH3cJfGQ_sRZDvkc,83
+gradio_awsbr_mmchatbot/multimodalchatbot.py,sha256=WVLD_MQKo4sLxGhZTbQfRaVQpm_Q5HskoPVKOlGMiz8,11240
+gradio_awsbr_mmchatbot/multimodalchatbot.pyi,sha256=HQOyrzgw7WXWWPeePctoBHiNHMoz9ozIU4P6yuk2DlQ,26428
+gradio_awsbr_mmchatbot/templates/component/index.js,sha256=1hI3JxQMl0CRu1QBsMFzPClvsmoafPVHUTJ3qRyGXPc,766349
+gradio_awsbr_mmchatbot/templates/component/style.css,sha256=_PiwFuRgJSr7tc5C8CziSl6KG3kOgT8Wd6fmBhjq9Is,1483905
+gradio_awsbr_mmchatbot/templates/component/assets/worker-43d19264.js,sha256=t2H7ERfi6C1zImIL1tZmxLdtySPkGq4bnYOycKNU1uU,2374
+gradio_awsbr_mmchatbot-0.0.4.dist-info/METADATA,sha256=HZQLwrYGzu3ooDwuZMCkIyhcg25xD7oTNZwLXMtLyp0,15563
+gradio_awsbr_mmchatbot-0.0.4.dist-info/WHEEL,sha256=xl5aZkiJYVTjhVaiADvIe6UeUVylGNomrxKZ0Zda1CE,87
+gradio_awsbr_mmchatbot-0.0.4.dist-info/RECORD,,
