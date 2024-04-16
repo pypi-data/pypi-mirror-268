@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: xiaobai-id-validator
+Version: 1.0.1
+Summary: Chinese idcard validator
+Author: xiaobai
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+

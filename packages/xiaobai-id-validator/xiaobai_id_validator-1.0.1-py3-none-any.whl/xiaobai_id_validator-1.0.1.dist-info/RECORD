@@ -1,0 +1,10 @@
+xiaobai_id_validator/__init__.py,sha256=lUgMFBsAEehBVp0Yic9-zf5mNTcUYSIgid4gYvKdgic,46
+xiaobai_id_validator/data.py,sha256=mC8sDgq-lu3tGKv2wA-b1X7CU5PtsON-bbUmdSBfHmk,689350
+xiaobai_id_validator/func.py,sha256=Eksy_Fpwdua_EqtHhmy98HiqDcrctVJBJrCTKzjxrIE,1073
+xiaobai_id_validator/helper.py,sha256=ui_KpLlRDmmFmtR4-EKRWwhtgzTLF3q-7i7e6ReNTuo,9939
+xiaobai_id_validator/utils.py,sha256=uDbtRGw_jkHpdPNJ_pHc4Zm5X0tIr3DMsXiPa86wMKs,1024
+xiaobai_id_validator/validator.py,sha256=DSKMzWlIpcbVR6aXSJ8u_mSpbM3lkDnxjVcKh0KbxHs,3353
+xiaobai_id_validator-1.0.1.dist-info/METADATA,sha256=FfRmsTkM7FijYd1p6MsCqf5_K9ximK5qs7_RyZMp160,265
+xiaobai_id_validator-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+xiaobai_id_validator-1.0.1.dist-info/top_level.txt,sha256=7UNjvl57Km1_jwYDG_GLg-NzrsA0KVYA_U8OGYgnKbQ,21
+xiaobai_id_validator-1.0.1.dist-info/RECORD,,
