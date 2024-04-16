@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: meteo-icm
+Version: 0.0.1
+Summary: An API client to access weather data on Polish Meteo ICM institute
+Home-page: https://github.com/outlying/meteo-icm
+Author: outlying
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10.4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
