@@ -1,0 +1,20 @@
+[project]
+name = "la_coding_theory"
+version = "0.0.1"
+authors = [
+  { name="Max Kutsenko", email="kutsenko.pn@ucu.edu.ua" },
+	{ name="Katja Kovalchuk", email="kovalchuk.pn@ucu.edu.ua" },
+	{ name="Roman Zaletskyy", email="rzaletskyy@gmail.com" },
+]
+description = "A small library, where we implemented  some coding algorithms with LA proving"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
