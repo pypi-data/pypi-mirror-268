@@ -1,0 +1,12 @@
+feos_torch-0.1.0.dist-info/METADATA,sha256=G5WtOXFtJ3-gW4rYIp1XqjbVW_vnwetOxggywTfCFL0,2606
+feos_torch-0.1.0.dist-info/WHEEL,sha256=fY7dXh9dBwlsNvKHi8XA9j08U-OjYDv8m_70bREjsQ0,146
+feos_torch-0.1.0.dist-info/license_files/LICENSE-APACHE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+feos_torch-0.1.0.dist-info/license_files/LICENSE-MIT,sha256=iS0DFdIuFTOy1bMqJzHULZdFy2F-ehcTNpGD6gDx044,1071
+feos_torch/pcsaft_pure.py,sha256=atGs1HGwUzxNIV4PbZrZawW66W4vvQZyiz6FK9g1mhw,7914
+feos_torch/__init__.py,sha256=fNP83kOIPRrx6z_B8W9YkQIfAvuNF2JzniaobuW8Y5I,146
+feos_torch/gc_pcsaft.py,sha256=mv0Dh_MQcjhKBGFURd1yD7MFpHhQNBZCVgSym-zQZAc,20774
+feos_torch/dual.py,sha256=eLAldlCAduulJZ_vHfLMEuopuD4nluRChb0tQiYhJ0k,2409
+feos_torch/pcsaft_mix.py,sha256=AxxFvARhFqSSIS6vxM8QlKFwJMcbdr0FhH82JbAB46E,18861
+feos_torch/dual_torch.py,sha256=kAkFaxsJMqbcHOkCvriuMRR29mQiW0mZAVYJQS7c9sQ,6639
+feos_torch/feos_torch.abi3.so,sha256=Vttslms29Ycc-TOW0BOLN_iz0ff8CzMf88EtDI-KZos,9118143
+feos_torch-0.1.0.dist-info/RECORD,,
