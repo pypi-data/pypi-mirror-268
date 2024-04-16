@@ -1,0 +1,13 @@
+scmopy/LICENSE,sha256=1WH7uuF09aSaKL7JuiGU_lj183wshApE32DVeChIgU4,1077
+scmopy/__init__.py,sha256=qxm8udbvM7tXljgJ6YBoNX2BDxMDp96k1LhZjIVk2FI,891
+scmopy/base.py,sha256=fE488d3ZteS9fj23qSwpUmBDjrfoKXBjWQmS2F8d6Do,2036
+scmopy/gaussian_scm.py,sha256=bx9MYCwOk6WL6_EJwfDGDjKk2cyzv59Ih4jXBrcEGfM,7089
+scmopy/model_selection.py,sha256=AGBbfeEDDR-KduqOU3sL-7RJ4ODSm77uOoefoecBiKM,5087
+scmopy/nongaussian_scm.py,sha256=zbDEm7AxmnSCsxmILKWVd0icJPFEDbx4mCpseuTDfcM,14208
+scmopy/components/__init__.py,sha256=HvGAGnYrhH4-Cyc307vENDudAcyc8kijLXOnS4IlXhw,905
+scmopy/components/syniv.py,sha256=DZH49kgDshnKTAzboypgx8i4VrVMVZ4hBmwOy39FHvE,5517
+scmopy-0.1.4.dist-info/LICENSE,sha256=1WH7uuF09aSaKL7JuiGU_lj183wshApE32DVeChIgU4,1077
+scmopy-0.1.4.dist-info/METADATA,sha256=h9uBISekjBwRwq6yLJ6NpdfyPK1LDhItNAm_pqNmXjE,21391
+scmopy-0.1.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scmopy-0.1.4.dist-info/top_level.txt,sha256=jQnlAJUDVEPzvLkMZoYDGo3egp_rj3n3-IfhiL5TJmM,7
+scmopy-0.1.4.dist-info/RECORD,,
