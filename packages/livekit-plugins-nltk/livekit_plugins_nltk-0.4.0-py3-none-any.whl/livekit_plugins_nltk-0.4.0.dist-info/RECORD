@@ -1,0 +1,8 @@
+livekit/plugins/nltk/__init__.py,sha256=HGbaUwK-0cU-SbvbEl2WSQKwNrkHn8XuO-86Hiy0cy4,1134
+livekit/plugins/nltk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/nltk/sentence_tokenizer.py,sha256=1Oy0pmvCiD_vHepi-Vp6lEKEOFS1FdHjO9bvBX8dPCk,4561
+livekit/plugins/nltk/version.py,sha256=yelanl1wEXtgUH0CzoNVXfi2yTc2hElSzuAhULFzANc,600
+livekit_plugins_nltk-0.4.0.dist-info/METADATA,sha256=xzUdecj4xBjWc9nyYXddYgNOQ2ES1DlE2ZPzeRdN8fY,1184
+livekit_plugins_nltk-0.4.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+livekit_plugins_nltk-0.4.0.dist-info/top_level.txt,sha256=OoDok3xUmXbZRvOrfvvXB-Juu4DX79dlq188E19YHoo,8
+livekit_plugins_nltk-0.4.0.dist-info/RECORD,,
