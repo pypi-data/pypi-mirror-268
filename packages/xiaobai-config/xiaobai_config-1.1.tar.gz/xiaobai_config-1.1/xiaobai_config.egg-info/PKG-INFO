@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: xiaobai-config
+Version: 1.1
+Summary: A small tool to parse and store project config
+Author: xiaobai
+Author-email: xiaobaizrx@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# xiaobai_config
+
+Python项目的配置信息工具，可以从解析配置文件、环境变量。
+
