@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+sensibleapi/__init__.py
+sensibleapi/sensibleapi.py
+sensibleapi.egg-info/PKG-INFO
+sensibleapi.egg-info/SOURCES.txt
+sensibleapi.egg-info/dependency_links.txt
+sensibleapi.egg-info/requires.txt
+sensibleapi.egg-info/top_level.txt
