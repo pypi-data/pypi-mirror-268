@@ -1,0 +1,10 @@
+gradio_variableslider/__init__.py,sha256=SCOuTz9Ws39yuOhPetRLy3M7AaIlwMzxEhhvves38Eo,74
+gradio_variableslider/variableslider.py,sha256=m1yBpsJjD8YGtCR0zxW_FN93d007nFOdzxRj8JN3dpo,5220
+gradio_variableslider/variableslider.pyi,sha256=QesPa4He_SYD9UcKAbztIFqEaktAn7oc1jjh5vcOFFM,20521
+gradio_variableslider/templates/component/index.js,sha256=nzebYF0fY8CYRN5OgHMmYG58Do9b6Cfgl83MwjC35kw,56583
+gradio_variableslider/templates/component/style.css,sha256=G8O5c-mukwjvfc9DdsVcMQBKYfkyxKzXPdQhIfwLKJs,15152
+gradio_variableslider/templates/example/index.js,sha256=AcEKu2d4hjZyQsKf4pvOMqUT-QB_uFGbfbtGYc7mf9o,1549
+gradio_variableslider/templates/example/style.css,sha256=Aj4k-S41TV83pot-J9j9Fi2UonrXHFC1Jl4Zb1xaYo4,61
+gradio_variableslider-0.0.2.dist-info/METADATA,sha256=wTE19BXZgp76yX6jvgGvoGpv9k5eS2TERHeebYIAphI,8880
+gradio_variableslider-0.0.2.dist-info/WHEEL,sha256=xl5aZkiJYVTjhVaiADvIe6UeUVylGNomrxKZ0Zda1CE,87
+gradio_variableslider-0.0.2.dist-info/RECORD,,
