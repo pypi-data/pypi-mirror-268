@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: stomics3d
+Version: 0.1.1
+Summary: A web server for visualization of spatial-temporal single cell transcriptomics data
+Home-page: https://github.com/twocucao/doumu.fm
+Author: 吴晨
+Author-email: 1078497976@qq.com
+License: GNU GPLv3
+Keywords: python single cell transcriptomics 3D visualization spatial temporal
+License-File: LICENSE
+Requires-Dist: requests
+
+A test release

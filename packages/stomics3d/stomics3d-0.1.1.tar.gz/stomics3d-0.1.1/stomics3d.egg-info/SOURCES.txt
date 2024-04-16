@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+stomics3d.egg-info/PKG-INFO
+stomics3d.egg-info/SOURCES.txt
+stomics3d.egg-info/dependency_links.txt
+stomics3d.egg-info/entry_points.txt
+stomics3d.egg-info/requires.txt
+stomics3d.egg-info/top_level.txt
+stomics3d.egg-info/zip-safe
