@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: webthing-client
+Version: 0.2.8
+Summary: Client for the Dynamic Dashboard Webthings
+Home-page: https://github.com/predict-idlab/webthing-client-python
+Author: Emile Deman
+Maintainer: Emile Deman
+Maintainer-email: emile.deman@ugent.be
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: jsonschema (==4.21.1)
+Requires-Dist: python-dateutil (==2.8.2)
+Requires-Dist: rdflib (==6.2.0)
+Requires-Dist: requests (==2.28.2)
+Requires-Dist: stomper (==0.4.3)
+Requires-Dist: websocket-client (==1.5.0)
+Project-URL: Repository, https://github.com/predict-idlab/webthing-client-python
+Description-Content-Type: text/markdown
+
+# Webthing Client Python
+
+A package for performing data operations on remote Webthing and listening to Observations.
+
+## Installation
+
+Install the package `webthing-client` using your Python package manager of choice.
+You can import the client class itself as:
+```python
+from webthing_client.client import WebthingClient
+```
+
