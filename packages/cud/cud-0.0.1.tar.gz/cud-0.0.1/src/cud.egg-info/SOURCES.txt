@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/cud/__init__.py
+src/cud/cud.py
+src/cud.egg-info/PKG-INFO
+src/cud.egg-info/SOURCES.txt
+src/cud.egg-info/dependency_links.txt
+src/cud.egg-info/requires.txt
+src/cud.egg-info/top_level.txt
