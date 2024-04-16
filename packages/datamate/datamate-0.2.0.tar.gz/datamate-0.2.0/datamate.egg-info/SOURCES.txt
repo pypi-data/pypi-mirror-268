@@ -1,0 +1,19 @@
+.gitignore
+README.md
+license
+setup.py
+.github/workflows/auto_test.yml
+datamate/__init__.py
+datamate/directory.py
+datamate/namespaces.py
+datamate/version.py
+datamate.egg-info/PKG-INFO
+datamate.egg-info/SOURCES.txt
+datamate.egg-info/dependency_links.txt
+datamate.egg-info/requires.txt
+datamate.egg-info/top_level.txt
+examples/01. Introduction to Datamate.ipynb
+examples/another thread.ipynb
+tests/test_directory.py
+tests/test_namespaces.py
+tests/test_swmr.py
