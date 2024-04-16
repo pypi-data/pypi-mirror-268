@@ -1,0 +1,3 @@
+[console_scripts]
+heiwa4126_hello = heiwa4126.hello:hello
+heiwa4126_hello2 = heiwa4126.hello.cli:main
