@@ -1,0 +1,10 @@
+tfs_client/__init__.py,sha256=T0lGMB2QO8n5IfwJXoX9YudgQc_E3_9TqQIFKYN535k,78
+tfs_client/http.py,sha256=IIz0pyE09BuAUw-3hGUqcCTrsCcQxYNlYLKGhgBN7pU,761
+tfs_client/util/__init__.py,sha256=SfWYaaSNryKap_OG1VvKL8Y0aFL8h1Qv6t2-04I68V4,52
+tfs_client/util/postprocessing.py,sha256=b-tVjbkGvPBXO-BhcQoCsphwE6tlxXxQQbtkjrfU4Is,734
+tfs_client/util/cit_images/__init__.py,sha256=AvaoehS63PNo5JQvxolBal2_mcAc8vtahWc07VpL2nU,80
+tfs_client/util/cit_images/cit_images.py,sha256=7BL1XvVgnpy4a9ypxDy4G7NghbaXyGW22o8e0Ugxxt0,1498
+tfs_client-0.1.6.dist-info/METADATA,sha256=Ds-naHPdjjvbZwoB_oyH7zYZNLfZA9QgGN3CxPJERp4,439
+tfs_client-0.1.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tfs_client-0.1.6.dist-info/top_level.txt,sha256=d3h4YEJDesbjo5vKXlIfuuFyC2JLBOf-i7PUppwkwC0,11
+tfs_client-0.1.6.dist-info/RECORD,,
