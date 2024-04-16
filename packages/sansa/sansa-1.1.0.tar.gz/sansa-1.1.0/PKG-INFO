@@ -1,0 +1,433 @@
+Metadata-Version: 2.1
+Name: sansa
+Version: 1.1.0
+Summary: Scalable collaborative filtering model based on sparse approximate inverse
+Author-email: Martin Spisak <masp430@gmail.com>, Radek Bartyzal <radek.bartyzal@glami.cz>, Antonin Hoskovec <antonin.hoskovec@glami.cz>, Ladislav Peska <ladislav.peska@matfyz.cuni.cz>, Miroslav Tuma <miroslav.tuma@mff.cuni.cz>
+Maintainer-email: Martin Spisak <masp430@gmail.com>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://github.com/glami/sansa
+Project-URL: Repository, https://github.com/glami/sansa.git
+Project-URL: Issues, https://github.com/glami/sansa/issues
+Keywords: recommendation,collaborative filtering,sparse matrix,sparse approximate inverse
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: NOTICE
+Requires-Dist: numba>=0.57.0
+Requires-Dist: numpy>=1.22.3
+Requires-Dist: scikit-sparse>=0.4.8
+Requires-Dist: scipy>=1.7.3
+Provides-Extra: mkl
+Requires-Dist: sparse_dot_mkl; extra == "mkl"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Provides-Extra: demo
+Requires-Dist: jupyter; extra == "demo"
+Requires-Dist: matplotlib; extra == "demo"
+Requires-Dist: pandas; extra == "demo"
+Requires-Dist: pyarrow; extra == "demo"
+Requires-Dist: ipyplot; extra == "demo"
+Requires-Dist: scikit-learn; extra == "demo"
+
+# SANSA: how to compute EASE on million item datasets
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/scalable-approximate-nonsymmetric-autoencoder/recommendation-systems-on-amazon-book)](https://paperswithcode.com/sota/recommendation-systems-on-amazon-book?p=scalable-approximate-nonsymmetric-autoencoder)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/scalable-approximate-nonsymmetric-autoencoder/collaborative-filtering-on-million-song)](https://paperswithcode.com/sota/collaborative-filtering-on-million-song?p=scalable-approximate-nonsymmetric-autoencoder)
+
+Official implementation of scalable collaborative filtering model **SANSA**.
+
+![Architecture and training procedure of SANSA](assets/sansa.png)
+
+> **Scalable Approximate NonSymmetric Autoencoder for Collaborative Filtering**  
+> Spišák M., Bartyzal R., Hoskovec A., Peška L., Tůma M.  
+> Paper: [10.1145/3604915.3608827](https://doi.org/10.1145/3604915.3608827)
+> 
+> *Best Short Paper Runner-Up*, [17th ACM Conference on Recommender Systems (ACM RecSys 2023)](https://recsys.acm.org/recsys23/)
+
+### Reproducibility
+See branch [reproduce_our_results](https://github.com/glami/sansa/tree/reproduce_our_results) for codes used in experiments and complete experimental results. 
+
+## About
+
+SANSA is a scalable modification of [EASE](https://arxiv.org/abs/1905.03375), a shallow autoencoder for collaborative filtering, **specifically designed to handle item sets with millions of items**.
+- End-to-end sparse training procedure: instead of strenuously inverting the Gramian $X^TX$ of user-item interaction matrix $X$, SANSA efficiently finds a *sparse approximate inverse* of $X^TX$. 
+- Training memory requirements are proportional to the number of non-zero elements in $X^TX$ (and this can be improved further).  
+- The model's density is prescribed via a hyperparameter. 
+- As a sparse neural network, SANSA offers *very fast inference* times.
+
+### Learn more in our [short paper](https://dl.acm.org/doi/10.1145/3604915.3608827), or check out the conference [poster](assets/poster.pdf).
+
+## Installation
+```bash
+pip install sansa
+```
+(make sure to install prerequisites first, see next section)
+### Prerequisites
+Training of SANSA uses [scikit-sparse](https://github.com/scikit-sparse/scikit-sparse), which depends on the [SuiteSparse](https://github.com/DrTimothyAldenDavis/SuiteSparse) numerical library. To install SuiteSparse on Ubuntu and macOS, run the commands below: 
+```bash
+# Ubuntu
+sudo apt-get install libsuitesparse-dev
+
+# macOS
+brew install suite-sparse
+```
+Note that `brew` (and possibly other package managers) installs SuiteSparse objects to non-standard location. Before installing the package, you need to set
+the correct path to SuiteSparse by setting the following 2 environment variables:
+```bash
+export SUITESPARSE_INCLUDE_DIR={PATH TO YOUR SUITESPARSE}/include/suitesparse
+export SUITESPARSE_LIBRARY_DIR={PATH TO YOUR SUITESPARSE}/lib
+```
+For `brew`, you can find `{PATH TO YOUR SUITESPARSE}` by running `brew info suite-sparse`. To streamline this process, you can run
+```bash
+SUITESPARSE_DIR=$(brew info suitesparse | sed -n 4p | awk '{print $1}')  # path to brew-installed package is on the 4th line, 1st column
+export SUITESPARSE_INCLUDE_DIR=$SUITESPARSE_DIR/include/suitesparse
+export SUITESPARSE_LIBRARY_DIR=$SUITESPARSE_DIR/lib
+```
+which should set the correct environment variables for you.
+
+### Installation from source
+With SuiteSparse path correctly specified, simply run
+```bash
+pip install .
+```
+in the root directory of this repository.
+
+## Usage
+### Configuration
+SANSA model supports two methods of factorization of the Gramian matrix $X^TX$ and one method for inverting the lower triangular factor. 
+Factorizers and inverters are configured separately and included in the model configuration:
+```python
+from sansa import SANSAConfig
+
+config = SANSAConfig(
+    l2 = 20.0,  # regularization strength
+    weight_matrix_density = 5e-5,  # desired density of weights
+    gramian_factorizer_config = factorizer_config,  # factorizer configuration
+    lower_triangle_inverter_config = inverter_config,  # inverter configuration
+)
+```
+To get the configuration of a model instance, use the `config` property:
+```python
+config = model.config
+```
+#### Factorizer configuration
+Choose between two factorization techniques:
+1. **CHOLMOD** = exact Cholesky factorization sparsified after factorization. More accurate but memory-hungry; recommended for smaller, denser matrices.
+```python
+from sansa import CHOLMODGramianFactorizerConfig
+
+factorizer_config = CHOLMODGramianFactorizerConfig()  # no hyperparameters
+```
+2. **ICF** = Incomplete Cholesky factorization. Less accurate but much more memory-efficient; recommended for very large, sparse matrices.
+```python
+from sansa import ICFGramianFactorizerConfig
+
+factorizer_config = ICFGramianFactorizerConfig(
+    factorization_shift_step = 1e-3,  # initial diagonal shift if incomplete factorization fails
+    factorization_shift_multiplier = 2.0,  # multiplier for the shift for subsequent attempts
+)
+```
+#### Inverter configuration
+Currently only one inverter is available: **UMR** -- residual minimization approach
+```python
+from sansa import UMRUnitLowerTriangleInverterConfig
+
+inverter_config = UMRUnitLowerTriangleInverterConfig(
+    scans=1,  # number of scans through all columns of the matrix
+    finetune_steps=5,  # number of finetuning steps, targeting worst columns
+)
+```
+### Training
+```python
+from sansa import SANSA
+
+X = ...  # training data -- scipy.sparse.csr_matrix (rows=users, columns=items)
+config = ...  # specify configuration of SANSA model
+
+# Instantiate model with the config
+model = SANSA(config)
+
+# Train model on the user-item matrix
+model.fit(X)
+# or on a precomputed symmetric item-item matrix
+model.fit(X, compute_gramian=False)
+```
+Weights of a SANSA model can be accessed using the `weights` attribute:
+```python
+w1, w2 = model.weights  # tuple of scipy.sparse.csr_matrix of shape (num_items, num_items)
+```
+Weights can be loaded into a model using the `load_weights` method:
+```python
+w1, w2 = ...  # tuple of scipy.sparse.csr_matrix of shape (num_items, num_items)
+
+model.load_weights((w1, w2))
+```
+### Inference
+#### 1. High-level inference: recommendation for a batch of users
+```python
+X = ...  # input interactions -- scipy.sparse.csr_matrix (rows=users, columns=items)
+
+# Get indices of top-k items for each user + corresponding scores
+# if mask_input=True, input items get score=0
+top_k_indices, top_k_scores = model.recommend(X, k=10, mask_input=True)  # np.ndarrays of shape (X.shape[0], k)
+```
+#### 2. Low-level inference: forward pass
+```python
+X = ...  # input interactions -- scipy.sparse.csr_matrix (rows=users, columns=items)
+
+# Forward pass
+scores = model.forward(X)  # scipy.sparse.csr_matrix of shape X.shape
+```
+
+## License
+Copyright 2023 Inspigroup s.r.o.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+[https://github.com/glami/sansa/blob/main/LICENSE](https://github.com/glami/sansa/blob/main/LICENSE)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+## Cite us
+Please consider citing our paper:
+```
+@inproceedings{10.1145/3604915.3608827,
+author = {Spi\v{s}\'{a}k, Martin and Bartyzal, Radek and Hoskovec, Anton\'{\i}n and Peska, Ladislav and T\r{u}ma, Miroslav},
+title = {Scalable Approximate NonSymmetric Autoencoder for Collaborative Filtering},
+year = {2023},
+isbn = {9798400702419},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3604915.3608827},
+doi = {10.1145/3604915.3608827},
+abstract = {In the field of recommender systems, shallow autoencoders have recently gained significant attention. One of the most highly acclaimed shallow autoencoders is easer, favored for its competitive recommendation accuracy and simultaneous simplicity. However, the poor scalability of easer (both in time and especially in memory) severely restricts its use in production environments with vast item sets. In this paper, we propose a hyperefficient factorization technique for sparse approximate inversion of the data-Gram matrix used in easer. The resulting autoencoder, sansa, is an end-to-end sparse solution with prescribable density and almost arbitrarily low memory requirements — even for training. As such, sansa allows us to effortlessly scale the concept of easer to millions of items and beyond.},
+booktitle = {Proceedings of the 17th ACM Conference on Recommender Systems},
+pages = {763–770},
+numpages = {8},
+keywords = {Algorithm scalability, Numerical approximation, Sparse approximate inverse, Sparse autoencoders},
+location = {Singapore, Singapore},
+series = {RecSys '23}
+}
+```
