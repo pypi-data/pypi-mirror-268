@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: somnetics_seamless_utils
+Version: 0.0.4
+Summary: Seamless Framework Utility
+Project-URL: Homepage, https://github.com/bibhas-das-somnetics/seamless-utils
+Project-URL: Issues, https://github.com/bibhas-das-somnetics/seamless-utils/issues
+Author-email: Bibhas Das <bibhas.das@somnetics.in>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: elasticsearch>=8.13.0
+Requires-Dist: etcd3>=0.12.0
+Requires-Dist: falcon>=3.1.3
+Requires-Dist: minio>=7.2.5
+Requires-Dist: pika>=1.3.2
+Requires-Dist: protobuf>=3.20.3
+Requires-Dist: requests>=2.25.1
+Description-Content-Type: text/markdown
+
+# seamless-utils
