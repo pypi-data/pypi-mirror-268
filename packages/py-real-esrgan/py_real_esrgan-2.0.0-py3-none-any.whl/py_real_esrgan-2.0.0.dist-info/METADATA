@@ -1,0 +1,128 @@
+Metadata-Version: 2.3
+Name: py-real-esrgan
+Version: 2.0.0
+Project-URL: Homepage, https://github.com/ai-forever/Real-ESRGAN
+Project-URL: Documentation, https://github.com/ai-forever/Real-ESRGAN/wiki
+Project-URL: Repository, https://github.com/ai-forever/Real-ESRGAN.git
+Project-URL: Issues, https://github.com/ai-forever/Real-ESRGAN/issues
+Project-URL: Changelog, https://github.com/ai-forever/Real-ESRGAN/blob/main/CHANGELOG.md
+Author: Sberbank AI, Xintao Wang
+Maintainer: Sberbank AI, Xintao Wang, nbdy
+License: BSD 3-Clause License
+        
+        Copyright (c) 2021, Sberbank AI
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: huggingface-hub
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+Requires-Dist: torch>=1.7
+Requires-Dist: torchvision>=0.8.0
+Requires-Dist: tqdm
+Description-Content-Type: text/markdown
+
+# Real-ESRGAN
+PyTorch implementation of a Real-ESRGAN model trained on custom dataset. This model shows better results on faces compared to the original version. It is also easier to integrate this model into your projects.
+
+> This is not an official implementation. We partially use code from the [original repository](https://github.com/xinntao/Real-ESRGAN)
+
+Real-ESRGAN is an upgraded [ESRGAN](https://arxiv.org/abs/1809.00219) trained with pure synthetic data is capable of enhancing details while removing annoying artifacts for common real-world images. 
+
+You can try it in [google colab](https://colab.research.google.com/drive/1YlWt--P9w25JUs8bHBOuf8GcMkx-hocP?usp=sharing) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YlWt--P9w25JUs8bHBOuf8GcMkx-hocP?usp=sharing)
+
+- [Paper (Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data)](https://arxiv.org/abs/2107.10833)
+- [Original implementation](https://github.com/xinntao/Real-ESRGAN)
+- [Huggingface 🤗](https://huggingface.co/sberbank-ai/Real-ESRGAN)
+
+### Installation
+
+```bash
+pip install git+https://github.com/sberbank-ai/Real-ESRGAN.git
+```
+
+### Usage
+
+---
+
+Basic usage:
+
+```python
+import torch
+from PIL import Image
+from py_real_esrgan.model import RealESRGAN
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+model = RealESRGAN(device, scale=4)
+model.load_weights('weights/RealESRGAN_x4.pth', download=True)
+
+path_to_image = 'inputs/lr_image.png'
+image = Image.open(path_to_image).convert('RGB')
+
+sr_image = model.predict(image)
+
+sr_image.save('results/sr_image.png')
+```
+
+### Examples
+
+---
+
+Low quality image:
+
+![](inputs/lr_image.png)
+
+Real-ESRGAN result:
+
+![](results/sr_image.png)
+
+---
+
+Low quality image:
+
+![](inputs/lr_face.png)
+
+Real-ESRGAN result:
+
+![](results/sr_face.png)
+
+---
+
+Low quality image:
+
+![](inputs/lr_lion.png)
+
+Real-ESRGAN result:
+
+![](results/sr_lion.png)

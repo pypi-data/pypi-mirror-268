@@ -1,0 +1,2 @@
+[console_scripts]
+py-real-esrgan = py_real_esrgan.__main__:main
