@@ -1,0 +1,16 @@
+CHANGES
+=======
+
+2.4.0
+-----
+
+* little update
+* feat(shell): Add times for volume\_up and volume\_down
+* add framebuffer
+* add back package\_info
+* refactor code
+* add codecov, fix coveragerc (#106)
+* fix github actions
+* little fix
+* add UnitTest
+* change github actions python version to 3.8
