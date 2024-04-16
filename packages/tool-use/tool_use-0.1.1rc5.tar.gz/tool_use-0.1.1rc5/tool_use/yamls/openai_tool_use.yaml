@@ -1,0 +1,85 @@
+tool_use.tools.openai_tool_use.openai_tool_use:
+  name: openai_tool_use
+  type: custom_llm
+  inputs:
+    connection:
+      type:
+        - OpenAIConnection
+        - AzureOpenAIConnection
+    model:
+      type:
+        - string
+      default: gpt-3.5-turbo-1106
+    temperature:
+      type:
+        - double
+      default: 0.7
+      optional: true
+    top_p:
+      type:
+        - double
+      default: 1.
+      optional: true
+    n:
+      type:
+        - int
+      default: 1
+      optional: true
+    stop:
+      type:
+        - list
+      optional: true
+    max_tokens:
+      type:
+        - int
+      optional: true
+    presence_penalty:
+      type:
+        - double
+      default: 0.
+      optional: true
+    frequency_penalty:
+      type:
+        - double
+      default: 0.
+      optional: true
+    logit_bias:
+      type:
+        - object
+      default: {}
+      optional: true
+    function_call:
+      type:
+        - object
+      optional: true
+    functions:
+      type:
+        - list
+      optional: true
+    response_format:
+      type:
+        - object
+      default: { "type": "text" }
+      optional: true
+    tool_choice:
+      type:
+        - string
+      optional: true
+    tools:
+      type:
+        - list
+      optional: true
+    extra_headers:
+      type:
+        - object
+      optional: true
+    is_raw_output:
+      type:
+        - bool
+      optional: true
+    stream:
+      type:
+        - bool
+      optional: true
+  module: tool_use.tools.openai_tool_use
+  function: openai_tool_use
