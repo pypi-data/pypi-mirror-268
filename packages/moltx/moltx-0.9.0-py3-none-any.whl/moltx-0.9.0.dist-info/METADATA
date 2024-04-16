@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: moltx
+Version: 0.9.0
+Summary: Molcule Generation
+Home-page: https://gitlab.ish.org.cn/aidd/molgen/moltx-task
+Author: Michael Ding
+Author-email: yandy.ding@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rdkit ~=2023.9.1
+Requires-Dist: torch ~=2.2.0
+
+# MolTx
+
+![CI](https://github.com/js-ish/MolTx/actions/workflows/ci.yml/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/js-ish/MolTx/badge.svg?branch=main)](https://coveralls.io/github/js-ish/MolTx?branch=main)
+[![](https://img.shields.io/badge/pyversion-3.8%7C3.9%7C3.10-blue.svg)](https://github.com/js-ish/MolTx)
