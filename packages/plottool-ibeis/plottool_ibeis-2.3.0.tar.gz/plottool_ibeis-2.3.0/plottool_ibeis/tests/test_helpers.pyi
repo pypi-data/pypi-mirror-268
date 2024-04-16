@@ -1,0 +1,6 @@
+def dummy_bbox(img, shiftxy=..., scale: float = ...):
+    ...
+
+
+def imread_many(imgpaths):
+    ...
