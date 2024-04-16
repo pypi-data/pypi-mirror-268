@@ -1,0 +1,2 @@
+[console_scripts]
+stomics3d = stomics3d.app:main
