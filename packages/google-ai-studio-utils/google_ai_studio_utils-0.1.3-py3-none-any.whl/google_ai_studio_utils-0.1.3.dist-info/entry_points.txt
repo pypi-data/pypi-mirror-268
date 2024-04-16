@@ -1,0 +1,3 @@
+[console_scripts]
+gai2html=google_ai_studio_utils.google_ai_studio_conversation_csv_to_html:main
+
