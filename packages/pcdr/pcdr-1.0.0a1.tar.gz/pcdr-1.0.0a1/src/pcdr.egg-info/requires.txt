@@ -1,0 +1,4 @@
+numpy
+termcolor
+typeguard
+attrs>=21.1.0
