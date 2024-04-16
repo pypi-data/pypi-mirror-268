@@ -1,0 +1,4 @@
+livekit~=0.9
+livekit-agents~=0.5.dev0
+openai>=1.0.0
+requests<3,>=2
