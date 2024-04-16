@@ -1,0 +1,10 @@
+dig_ass_chat_protos/DigitalAssistantChatManager_pb2.py,sha256=CQa3bwG9RlHnYhVEJjiPMcRxv2YcdJ3GkF-8GaVMc-k,2119
+dig_ass_chat_protos/DigitalAssistantChatManager_pb2.pyi,sha256=iEj-oWZiJDq-s00aAtCGpD0aJzJjoyFZ1CjuMIuUukM,1273
+dig_ass_chat_protos/DigitalAssistantChatManager_pb2_grpc.py,sha256=qxpJHtEutmpJH_dDdp0feyYTbZsFj2FUbA1LVIqC8gI,3093
+dig_ass_chat_protos/__init__.py,sha256=46Yjk3fz9o8aTN8E95McnzpJcjGzVJmHmQqUZ5mXzfc,22
+dig_ass_chat_protos/abstract_client.py,sha256=uNUwe2yTFj9PTAIxkE_DotTVytcUbcUUWoKRgYd-H-M,389
+dig_ass_chat_protos/client.py,sha256=LALssNj02W_DTq0k_G1LgYmLOUjYtkwSlaSQTPKXHeM,916
+dig_ass_chat_protos-0.0.9.dist-info/METADATA,sha256=gYvQ5vb3xKoqp0F-5zu6JbNU0HBDYEPQd1dWHCqvAfk,337
+dig_ass_chat_protos-0.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dig_ass_chat_protos-0.0.9.dist-info/top_level.txt,sha256=id6fEoB_3P9_uGlTvxX4usfb37nl9n9rTiCvrWrDQIc,20
+dig_ass_chat_protos-0.0.9.dist-info/RECORD,,
