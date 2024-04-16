@@ -1,0 +1,6 @@
+setup.py
+thsspeechtraningtools.egg-info/PKG-INFO
+thsspeechtraningtools.egg-info/SOURCES.txt
+thsspeechtraningtools.egg-info/dependency_links.txt
+thsspeechtraningtools.egg-info/requires.txt
+thsspeechtraningtools.egg-info/top_level.txt
