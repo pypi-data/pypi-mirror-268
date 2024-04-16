@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/haskellian/asyn/iter/__init__.py
+src/haskellian/asyn/iter/managed.py
+src/haskellian/asyn/iter/iter/__init__.py
+src/haskellian/asyn/iter/iter/funcs.py
+src/haskellian/asyn/iter/iter/iter.py
+src/haskellian/asyn/iter/ops/__init__.py
+src/haskellian/asyn/iter/ops/ops.py
+src/haskellian/asyn/iter/ops/prefetching.py
+src/haskellian_asyn_iter.egg-info/PKG-INFO
+src/haskellian_asyn_iter.egg-info/SOURCES.txt
+src/haskellian_asyn_iter.egg-info/dependency_links.txt
+src/haskellian_asyn_iter.egg-info/requires.txt
+src/haskellian_asyn_iter.egg-info/top_level.txt
