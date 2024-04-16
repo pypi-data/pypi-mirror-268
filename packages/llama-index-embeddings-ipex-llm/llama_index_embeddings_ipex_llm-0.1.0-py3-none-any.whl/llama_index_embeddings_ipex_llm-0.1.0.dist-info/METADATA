@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: llama-index-embeddings-ipex-llm
+Version: 0.1.0
+Summary: llama-index embeddings ipex-llm integration
+License: MIT
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: accelerate (==0.21.0)
+Requires-Dist: intel-openmp ; platform_machine == "x86_64" or platform_machine == "AMD64"
+Requires-Dist: ipex-llm (>=2.1.0b20240409)
+Requires-Dist: llama-index-core (>=0.10.0,<0.11.0)
+Requires-Dist: mpmath (<=1.3.0)
+Requires-Dist: numpy (<=1.26.4)
+Requires-Dist: protobuf
+Requires-Dist: py-cpuinfo
+Requires-Dist: sentence-transformers (>=2.6.1,<3.0.0)
+Requires-Dist: sentencepiece
+Requires-Dist: tabulate
+Requires-Dist: torch (<2.2.0)
+Requires-Dist: transformers (>=4.34.0,<4.39.0)
+Description-Content-Type: text/markdown
+
+# LlamaIndex Embeddings Integration: Ipex_Llm
+
+[IPEX-LLM](https://github.com/intel-analytics/ipex-llm) is a PyTorch library for running LLM on Intel CPU and GPU (e.g., local PC with iGPU, discrete GPU such as Arc, Flex and Max) with very low latency. This module allows loading Embedding models with ipex-llm optimizations.
+
