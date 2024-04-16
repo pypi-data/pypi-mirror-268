@@ -1,0 +1,11 @@
+mrsegmentator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mrsegmentator/inference.py,sha256=E3AnmyujXJX0hFfQzGu7wKxTRJMGIuvKRMCMwvOiCxM,5368
+mrsegmentator/main.py,sha256=QbTBol9QikcFpl3RYMJVgfubPMEioCTBudVXe9ysFIY,2898
+mrsegmentator/parser.py,sha256=HTypwH-pdGhNGIh9QHowye7-bTa7wiLW6zga0X5zoJ4,3742
+mrsegmentator/simpleitk_reader_writer.py,sha256=qt8__ltfGQN0uXKmNCFElxgZrEgeoHg0lqfsgWy_9jY,3368
+mrsegmentator/utils.py,sha256=DnTrJrBu1dPYsFAV1Q8ndxtXGdZaC9AfwfubTSChfnw,2455
+mrsegmentator-1.0.0.dist-info/METADATA,sha256=wGZkCzBsq7dYwctOF3tASkxK_I6r__ZkOYk2LsQaFzc,6406
+mrsegmentator-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mrsegmentator-1.0.0.dist-info/entry_points.txt,sha256=atvotVT40Lq4CB0O7k8Bd3ykvBA8vBZsKPs9WZRgz20,58
+mrsegmentator-1.0.0.dist-info/top_level.txt,sha256=c4jdPw4X6B0oPiRARVr2tOrmOZxsft7qOaFzCmMNNpk,14
+mrsegmentator-1.0.0.dist-info/RECORD,,
