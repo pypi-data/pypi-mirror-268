@@ -1,0 +1,241 @@
+name: CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: "3.10"
+  BART_VERSION: "0.8.00"
+  ref_backend: "finufft"
+
+jobs:
+  test-cpu:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'style')}}
+    strategy:
+      matrix:
+        backend: [finufft, pynfft, pynufft-cpu, bart, sigpy]
+        exclude:
+          - backend: bart
+          - backend: pynufft-cpu
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install Dependencies
+        shell: bash
+        run: |
+          python --version
+
+      - name: Install Python Deps
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .[test]
+
+      - name: Install pynfft
+        if: ${{ matrix.backend == 'pynfft' || env.ref_backend == 'pynfft' }}
+        shell: bash
+        run: |
+          sudo apt install -y libnfft3-dev
+          python -m pip install pynfft2
+
+      - name: Install pynufft
+        if: ${{ matrix.backend == 'pynufft-cpu' || env.ref_backend == 'pynufft-cpu' }}
+        run: python -m pip install pynufft
+
+      - name: Install finufft
+        if: ${{ matrix.backend == 'finufft'  || env.ref_backend == 'finufft'}}
+        shell: bash
+        run: python -m pip install finufft
+
+      - name: Install Sigpy
+        if: ${{ matrix.backend == 'sigpy'  || env.ref_backend == 'sigpy'}}
+        shell: bash
+        run: python -m pip install sigpy
+
+
+      - name: Install BART
+        if: ${{ matrix.backend == 'bart'  || env.ref_backend == 'bart'}}
+        shell: bash
+        run: |
+          cd $RUNNER_WORKSPACE
+          sudo apt-get install make gcc libfftw3-dev liblapacke-dev libpng-dev libopenblas-dev
+          wget https://github.com/mrirecon/bart/archive/v${{ env.BART_VERSION }}.tar.gz
+          tar xzvf v${{ env.BART_VERSION }}.tar.gz
+          cd bart-${{ env.BART_VERSION }}
+          make
+          echo $PWD >> $GITHUB_PATH
+
+      - name: Run Tests
+        shell: bash
+        run: |
+          export COVERAGE_FILE=coverage_${{ matrix.backend }}
+          pytest -k='operators' --backend ${{ matrix.backend }} --ref ${{ env.ref_backend }} --cov --disable-pytest-warnings --cov-branch --cov-report=term
+      - name: Upload coverage
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage_data
+          path: coverage_${{ matrix.backend}}
+
+  test-gpu:
+    runs-on: gpu
+    if: ${{ !contains(github.event.head_commit.message, 'style')}}
+    strategy:
+      matrix:
+        backend: [gpunufft, cufinufft]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install mri-nufft and finufft
+        shell: bash
+        run: |
+          cd $RUNNER_WORKSPACE
+          python --version
+          python -m venv venv
+          source $RUNNER_WORKSPACE/venv/bin/activate
+          pip install --upgrade pip wheel
+          pip install -e mri-nufft[test]
+          pip install cupy-cuda11x
+          pip install torch --index-url https://download.pytorch.org/whl/cu118
+          pip install finufft
+
+
+      - name: Install backend
+        if: ${{ matrix.backend == 'gpunufft' || matrix.backend == 'cufinufft' }}
+        shell: bash
+        run: |
+          source $RUNNER_WORKSPACE/venv/bin/activate
+          export CUDA_BIN_PATH=/usr/local/cuda-11.8/
+          export PATH=/usr/local/cuda-11.8/bin/${PATH:+:${PATH}}
+          export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib/{LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+          pip install ${{ matrix.backend }}
+
+      - name: Install pynfft
+        if: ${{ matrix.backend == 'pynfft' }}
+        shell: bash
+        run: |
+          source $RUNNER_WORKSPACE/venv/bin/activate
+          pip install pynfft2
+
+      - name: Run Tests
+        shell: bash
+        run: |
+          cd $RUNNER_WORKSPACE/mri-nufft
+          source $RUNNER_WORKSPACE/venv/bin/activate
+          export COVERAGE_FILE=coverage_${{ matrix.backend }}
+          python -m pytest -k='operators' --ref ${{ env.ref_backend }} --backend ${{ matrix.backend }} --disable-pytest-warnings --cov --cov-branch --cov-report=term
+
+      - name: Upload coverage
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage_data
+          path: coverage_${{ matrix.backend }}
+
+      - name: Cleanup
+        if: always()
+        shell: bash
+        run: |
+          cd $RUNNER_WORKSPACE
+          ls -al
+          rm -rf finufft
+          rm -rf gpuNUFFT
+          rm -rf venv
+
+  test-examples:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'style')}}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install Python deps
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .[test,dev]
+          python -m pip install finufft pooch brainweb-dl
+
+      - name: Run examples
+        shell: bash
+        run: |
+          export COVERAGE_FILE=coverage_plots
+          pytest examples tests -k="not operators" --cov --cov-branch --cov-report=term
+
+      - name: Upload coverage
+        if: success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage_data
+          path: coverage_plots
+
+  coverage:
+    runs-on: ubuntu-latest
+    needs: [test-cpu, test-gpu, test-examples]
+    if: ${{ always() }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Collect Coverages
+        uses: actions/download-artifact@v2
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: add the coverage tool
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install coverage[toml]
+          python -m pip install -e .
+
+      - name: Combine coverage
+        run: |
+          export COVERAGE_FILE=coverage_combined
+          coverage combine -a coverage_data/*
+
+      - name: Upload Combined coverage
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage_combined
+          path: coverage_combined
+
+      - name: Reports
+        run: |
+          export COVERAGE_FILE=coverage_combined
+          coverage xml
+          coverage report
+          echo COVERAGE_PERC=$(coverage report | tail -n 1 | grep -oE [0-9\.]*?% | cut -d '%' -f1) >> $GITHUB_ENV
+
+      - name: Create a Coverage Badge
+        if: ${{github.event_name == 'push'}}
+        run: |
+          wget https://img.shields.io/badge/coverage-${{env.COVERAGE_PERC}}%25-green -O coverage_badge.svg
+
+      - name: Upload badge as artifact
+        if: ${{github.event_name == 'push'}}
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage_badge
+          path: coverage_badge.svg
