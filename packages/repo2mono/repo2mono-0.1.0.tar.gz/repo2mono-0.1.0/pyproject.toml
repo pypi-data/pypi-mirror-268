@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "repo2mono"
+version = "0.1.0"
+description = "Codebase to single Markdown string with file tree."
+authors = ["jaredkirby <jpeterkirby@gmail.com>"]
+packages = [
+    { include = "repo2mono" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+
+[tool.poetry.scripts]
+repo2mono = "repo2mono.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
