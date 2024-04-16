@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "datagouv-python"
+version = "0.0.18"
+description = ""
+authors = ["Maxime Pawlak <maxime.pawlak@amatek.fr>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+packages = [{include = "datagouv"}]
+
+[tool.poetry.scripts]
+start = "datagouv.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.0.0"
+toml = "^0.10.2"
+flake8 = "^7.0.0"
+black = "^24.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
