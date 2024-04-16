@@ -1,0 +1,2 @@
+[console_scripts]
+dexus-vault = dexus_vault.__main__:main
