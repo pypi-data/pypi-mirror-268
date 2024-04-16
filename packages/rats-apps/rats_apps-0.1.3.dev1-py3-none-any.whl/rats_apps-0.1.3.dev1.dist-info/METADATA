@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: rats-apps
+Version: 0.1.3.dev1
+Summary: research analysis tools for building applications
+Home-page: https://github.com/microsoft/rats/
+License: MIT
+Keywords: pipelines,machine learning,research
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: typing_extensions
+Project-URL: Documentation, https://microsoft.github.io/rats/
+Project-URL: Repository, https://github.com/microsoft/rats/
+Description-Content-Type: text/markdown
+
+# rats-apps
+...
+
