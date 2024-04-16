@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: shtec-rlhf
+Version: 0.0.1.dev0
+Summary: shtec-rlhf: Safe Reinforcement Learning from Human Feedback
+Author: PKU-Alignment Team
+License: Apache License, Version 2.0
+Project-URL: Homepage, https://github.com/PKU-Alignment/shtec-rlhf
+Project-URL: Repository, https://github.com/PKU-Alignment/shtec-rlhf
+Project-URL: Documentation, https://shtec-rlhf.readthedocs.io
+Project-URL: Bug Report, https://github.com/PKU-Alignment/shtec-rlhf
+Keywords: Reinforcement Learning,Safe Reinforcement Learning,Reinforcement Learning from Human Feedback,Safe Reinforcement Learning from Human Feedback,Large Language Model,Language Model,RLHF,Safe RLHF,LLM
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: torch (>=1.13)
+Requires-Dist: transformers (>=4.37)
+Requires-Dist: datasets
+Requires-Dist: tokenizers (>=0.13.3)
+Requires-Dist: accelerate
+Requires-Dist: deepspeed
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: sentencepiece
+Requires-Dist: wandb
+Requires-Dist: tensorboard
+Requires-Dist: optree
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: rich
+Provides-Extra: lint
+Requires-Dist: isort (>=5.11.0) ; extra == 'lint'
+Requires-Dist: black (>=23.1.0) ; extra == 'lint'
+Requires-Dist: pylint[spelling] (>=2.15.0) ; extra == 'lint'
+Requires-Dist: mypy (>=1.0) ; extra == 'lint'
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-bugbear ; extra == 'lint'
+Requires-Dist: flake8-comprehensions ; extra == 'lint'
+Requires-Dist: flake8-docstrings ; extra == 'lint'
+Requires-Dist: flake8-pyi ; extra == 'lint'
+Requires-Dist: flake8-simplify ; extra == 'lint'
+Requires-Dist: ruff ; extra == 'lint'
+Requires-Dist: doc8 ; extra == 'lint'
+Requires-Dist: pydocstyle[toml] ; extra == 'lint'
+Requires-Dist: pyenchant ; extra == 'lint'
+Requires-Dist: pre-commit ; extra == 'lint'
+
