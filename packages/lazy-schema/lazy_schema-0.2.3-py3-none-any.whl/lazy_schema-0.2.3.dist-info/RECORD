@@ -1,0 +1,6 @@
+lazy_schema/__init__.py,sha256=ahQKVqqOVNJfiIpYjloi8k20yRDCfOroqByGAbR9N0k,71
+lazy_schema/schema.py,sha256=qxmp_cuNFkb2lIgQLqXHOhzJt5MJqXAKzId5ieb0RE4,3680
+lazy_schema/schema_pool.py,sha256=3MNIP_HxbPKcJITc101EjszkiVb3kzOP7tp7LWpktvI,2467
+lazy_schema-0.2.3.dist-info/METADATA,sha256=O-M_jGs9jbvGnn9Vsj6Q6Mbh4mFr8vJX5W11LqxQD1c,3447
+lazy_schema-0.2.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+lazy_schema-0.2.3.dist-info/RECORD,,
