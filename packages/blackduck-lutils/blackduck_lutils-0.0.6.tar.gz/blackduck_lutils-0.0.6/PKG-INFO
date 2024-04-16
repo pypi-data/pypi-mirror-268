@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: blackduck-lutils
+Version: 0.0.6
+Summary: Collection of license related tools. License-tagging, License-conflicts
+Project-URL: Documentation, https://github.com/blackducksoftware/blackduck-lutils#README.md
+Project-URL: Issues, https://github.com/blackducksoftware/blackduck-lutils/issues
+Project-URL: Source, https://github.com/blackducksoftware/blackduck-lutils
+Author-email: Murat Kumykov <kumykov@synopsys.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
