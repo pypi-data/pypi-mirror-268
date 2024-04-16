@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: types-pyone
+Version: 0.1.6.1
+Summary: Type stubs for pyone library
+Author: d34d5p4rr0w
+Project-URL: Homepage, https://github.com/d34d5p4rr0w/types-pyone
+Project-URL: Issues, https://github.com/d34d5p4rr0w/types-pyone/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Stubs Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyone
+
+This project under development.
+
+If you have any issues or ideas how to improve typing for this library feel free to contribute.

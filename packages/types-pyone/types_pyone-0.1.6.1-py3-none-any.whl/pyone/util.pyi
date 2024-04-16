@@ -1,0 +1,23 @@
+# Stub file for utility functions related to XML and dict transformations
+
+from collections import OrderedDict
+from typing import Any, Dict, Optional
+
+from lxml.etree import _Element
+
+TEMPLATE_ALWAYS_LIST_ELEM: list[str]
+
+def cast2one(param: Any) -> Any: ...
+
+def one2dict(element: Any) -> Dict: ...
+
+def none2emptystr(d: Dict) -> None: ...
+
+def fix_dict(d: Dict, tag: str) -> None: ...
+
+def child2dict(element: _Element) -> OrderedDict: ...
+
+def build_template_node(obj: Any, nodeName: str, child: _Element) -> bool: ...
+
+class TemplatedType:
+    def _buildChildren(self, child_: _Element, node: Any, nodeName_: str, fromsubclass_: bool = False, gds_collector_: Optional[Any] = None) -> None: ...
