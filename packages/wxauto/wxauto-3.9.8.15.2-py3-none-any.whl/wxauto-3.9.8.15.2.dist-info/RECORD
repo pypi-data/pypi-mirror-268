@@ -1,0 +1,11 @@
+wxauto/__init__.py,sha256=DgFwR5nmLHtSCYXKbpbduHalThV07lvaKqZ5OU7doDo,52
+wxauto/color.py,sha256=9OEFyCnqykfODxXErrmY89q-oJ0lLiRsIm4es31xf0E,8728
+wxauto/elements.py,sha256=QCPMdjbdEbI13nwJGmNWFsBPZzXmIt-GRgE-KY4fub8,23156
+wxauto/errors.py,sha256=rEfkIjgfs2BzJxRZ67GxrYTxJ1n6109Iflh291XU2bs,49
+wxauto/languages.py,sha256=Qne8PRC02PI5xxcaPGvE2sguvtMjeFNDC9rmDdq8Axg,5449
+wxauto/utils.py,sha256=7dA8FBU8aF5agc8JvWRhKvypBWBxUX7ANaCQU47Xggo,8735
+wxauto/wxauto.py,sha256=C_C5Xxgpmm6i7k1evGsh--nkmG2AoPoygzdl4WusN6Q,23945
+wxauto-3.9.8.15.2.dist-info/METADATA,sha256=ylPapwt5T-u4bt_lnkxvHhRBwLQqK4157vfhJybj3e8,3702
+wxauto-3.9.8.15.2.dist-info/WHEEL,sha256=qB97nP5e4MrOsXW5bIU5cUn_KSVr10EV0l-GCHG9qNs,97
+wxauto-3.9.8.15.2.dist-info/top_level.txt,sha256=gvzUUFeVZ43QovapBXaSEo4FYgJq_TxuvWNZ857Y3Zw,7
+wxauto-3.9.8.15.2.dist-info/RECORD,,
