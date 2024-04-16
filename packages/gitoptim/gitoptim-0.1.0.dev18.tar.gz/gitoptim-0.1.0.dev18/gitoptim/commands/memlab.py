@@ -1,0 +1,4 @@
+def command():
+    """
+    Memlab integration.
+    """
