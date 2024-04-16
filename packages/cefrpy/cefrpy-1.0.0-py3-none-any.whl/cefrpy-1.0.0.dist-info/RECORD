@@ -1,0 +1,14 @@
+cefrpy/CEFRAnalyzer.py,sha256=JK02NlKll_m-zT7lPAfL6uoGeRijkIuJv9pBVkwaA-4,16745
+cefrpy/CEFRDataProcessor.py,sha256=9efBc43-UaLHUUTGjIDgW1-Di78UmQO6sEQNElMXBz4,24936
+cefrpy/CEFRDataReader.py,sha256=rBF5amVQYYemfDl0q6j-vUklamx6BSdkF05M0g1JVZw,3278
+cefrpy/CEFRDataValidator.py,sha256=lvEnCzm1oRsiVb2cVTDkDZs-oDMK1jG8d7CSjMSB56g,3009
+cefrpy/CEFRLevel.py,sha256=HT6FcKRnmtbxKMIRXnX-s-BOobsRJvyN9Vmia7_KrEA,2367
+cefrpy/CEFRSpacyAnalyzer.py,sha256=CfAfNUSty_tS0UONiRxfYGIR6rxQEOEPlo1jd4lGKGw,5308
+cefrpy/POSTag.py,sha256=xwtIcFYVkoAPjKWNbhzBJBGVaO_Z6LSu_uhmXtH4_7k,5226
+cefrpy/__init__.py,sha256=iS7ZHAV5Zyk_TMndOXCAvXPmOH4dIvNQQWv-Gb7XSgU,373
+cefrpy/data.bin,sha256=IYZuL1ioWcpdYtQCyFBynvCRmw_2czhP1tFDe9yfajg,2474756
+cefrpy-1.0.0.dist-info/LICENSE,sha256=GDTKDmiB5Zmkm9JV0z7V-9K_aGYsTZ5wh2d_cQN-xZk,1070
+cefrpy-1.0.0.dist-info/METADATA,sha256=AC00lJwJEWWBmHwbKsDaoM0nGYpFdn5tN9WpKzgKMP4,13198
+cefrpy-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cefrpy-1.0.0.dist-info/top_level.txt,sha256=wXHPD33h2OeaUHpJve20Ar2hGjbpsgYd9nJw0DU9Xjk,7
+cefrpy-1.0.0.dist-info/RECORD,,
