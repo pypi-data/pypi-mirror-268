@@ -1,0 +1,1 @@
+from .dataslurper import slurpdata
