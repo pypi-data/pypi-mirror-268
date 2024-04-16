@@ -1,0 +1,2 @@
+[console_scripts]
+oem2orm = oem2orm.main:cli
