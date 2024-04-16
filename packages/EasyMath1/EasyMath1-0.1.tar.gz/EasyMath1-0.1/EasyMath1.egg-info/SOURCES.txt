@@ -1,0 +1,9 @@
+README.md
+setup.py
+EasyMath1.egg-info/PKG-INFO
+EasyMath1.egg-info/SOURCES.txt
+EasyMath1.egg-info/dependency_links.txt
+EasyMath1.egg-info/top_level.txt
+EasyMath2/__init__.py
+EasyMath2/module1.py
+EasyMath2/module2.py
