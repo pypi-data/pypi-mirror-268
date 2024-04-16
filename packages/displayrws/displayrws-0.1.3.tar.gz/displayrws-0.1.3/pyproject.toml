@@ -1,0 +1,103 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "displayrws"
+dynamic = ["version", "readme"]
+description = "SPI Display and ESP32 project"
+keywords = ["displayrws"]
+authors = [
+    {name = "RWS Datalab", email = "datalab.codebase@rws.nl"},
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "esphome",
+    "pillow",
+]
+requires-python = ">=3.10"
+
+[project.urls]
+homepage = "https://gitlab.com/rwsdatalab/displayrws"
+repository = "https://gitlab.com/rwsdatalab/displayrws"
+changelog = "https://gitlab.com/rwsdatalab/displayrws/blob/main/CHANGELOG.rst"
+
+[project.optional-dependencies]
+dev = [
+    "bandit[toml]",
+    "black",
+    "flake8",
+    "flake8-bugbear",
+    "flake8-comprehensions",
+    "flake8-docstrings",
+    "flake8-polyfill",
+    "isort",
+    "mypy",
+    "pre-commit",
+    "pylint",
+    "pytest",
+    "pytest-cov",
+    "rstcheck[sphinx]",
+    "radon",
+    "safety",
+]
+doc = [
+    "pydata-sphinx-theme",
+    "sphinx",
+    "sphinx-autodoc-typehints",
+]
+
+[tool.setuptools]
+include-package-data = false
+license-files = ["LICENSE"]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["displayrws", "displayrws.*"]
+
+[tool.setuptools.package-data]
+"displayrws" = ["py.typed"]
+
+[tool.setuptools.dynamic]
+version = {attr = "displayrws.__version__"}
+readme = {file = ["README.rst"]}
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+
+[tool.isort]
+profile = "black"
+known_first_party = ["displayrws"]
+skip_glob = ".venv/**,tests/**,doc/**"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.pylint]
+extension-pkg-whitelist = ""
+fail-under = 8.0
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov --cov-report xml --cov-report term --cov-report html"
+
+[tool.coverage.run]
+branch = true
+source = ["displayrws"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311"]
