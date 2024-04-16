@@ -1,0 +1,13 @@
+data_karkhana/Downloader.py,sha256=TeU2t9ZEFPh0WN27AgOoQRRyn4ie4uQpt8sssBIPoCc,4812
+data_karkhana/Peer.py,sha256=vc5_OtcHXUrUrh7vsIcHEWK9HWLgbWfyVTiGO5hviVM,4185
+data_karkhana/Tracker.py,sha256=h9uVCx61NsY69WTbLfuHDHoLwkAw1GJwzYvr3HKM5fs,3524
+data_karkhana/Uploader.py,sha256=8XAUYGN_A48qfYy7vI7_n-SUimKsv8ZMs6wXhlCNn8Y,6479
+data_karkhana/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+data_karkhana/main.py,sha256=zoZtt8DlLigb8Yb-zqcnPSQi41RwhGfu_6BdnXiF8HE,2749
+data_karkhana/setup.py,sha256=YnYa8MwJhEoZLH4v2Y2aWchxFjS8NrZW6vp-gMft-Ss,1725
+datakarkhana-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+datakarkhana-0.1.0.dist-info/METADATA,sha256=fxAyJ8eAWejw8rn2BeInVcNU5qE9qpYkv2WTl5u4eXg,1055
+datakarkhana-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+datakarkhana-0.1.0.dist-info/entry_points.txt,sha256=-94KBRc8fdAS6mcLdtJNO44BWGKOzDTxc4gZK_alGE8,57
+datakarkhana-0.1.0.dist-info/top_level.txt,sha256=qS5svsfVOOUWxWyIlC3Dd2Xnx-gHEG7O7ifXZXg_hVM,14
+datakarkhana-0.1.0.dist-info/RECORD,,

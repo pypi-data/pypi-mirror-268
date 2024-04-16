@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: datakarkhana
+Version: 0.1.0
+Summary: A peer-to-peer file sharing system
+Home-page: https://github.com/timsinashok/data_karkhana
+Author: Yaghyesh Ghimire, Manoj Dhakal, Mahmud Faisal , Ashok Timsina
+Author-email: md5121@nyu.edu, yg2810@nyu.edu, fm2357@nyu.edu, ashoktimsina147181@gmail.com
+Project-URL: Bug Reports, https://github.com/timsinashok/data_karkhana/issues
+Project-URL: Source, https://github.com/timsinashok/data_karkhana
+Keywords: peer peer-to-peer file sharing alice bob
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Datakarkhana is a peer-to-peer file sharing system which works on a hybrid peer-to-peer and client-server model. 
