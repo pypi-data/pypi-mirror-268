@@ -1,0 +1,21 @@
+requests>=2.25.1
+Deprecated==1.2.14
+
+[:python_version != "2.7"]
+python-socketio[client]<6,>=5.11.0
+
+[dev]
+wheel
+
+[lint]
+
+[lint:python_version >= "3.8"]
+black==24.4.0
+
+[lint:python_version >= "3.9"]
+pre-commit==3.7.0
+
+[test]
+pytest
+pytest-cov
+requests_mock
