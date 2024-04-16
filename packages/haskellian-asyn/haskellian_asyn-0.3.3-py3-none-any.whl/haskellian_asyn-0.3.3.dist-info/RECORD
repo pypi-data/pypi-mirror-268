@@ -1,0 +1,9 @@
+haskellian/asyn/promises/__init__.py,sha256=1irkCzCyrTlN7Bc8wLAJFYX19ZKYFZb5T4QQpRsLclE,140
+haskellian/asyn/promises/funcs.py,sha256=VAfSc-RBX2mQ6BCCXuS9prLdU_xsYUGU6h0PAV6zGgM,423
+haskellian/asyn/promises/managed.py,sha256=KJ10AUBes1IgyxOIZyEDz_SO5RD_8CGfGT9vPgTJWbw,479
+haskellian/asyn/promises/ops.py,sha256=_8_sKg2BcUwOKViMuEolEgoXuA4CDt-NcvtjuWfbmyY,807
+haskellian/asyn/promises/promise.py,sha256=0M1QfHuwoAoQsFftIgaAKK9phlamhj814Bos-K2TEc0,732
+haskellian_asyn-0.3.3.dist-info/METADATA,sha256=odhTkQg7EhA9qk71udCvkzSmAhiS-h2uEdzDQWPd6L0,325
+haskellian_asyn-0.3.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+haskellian_asyn-0.3.3.dist-info/top_level.txt,sha256=zSGTID8MlZHo6u8AHYi9nFKt3D5RVRuV1UWM1vpUUbY,11
+haskellian_asyn-0.3.3.dist-info/RECORD,,
