@@ -1,0 +1,13 @@
+yaclog/__init__.py,sha256=nQ1iOCcX0Ppc2iEaw8KQu6kLmmzh7Pgi5qXxXILCZGM,256
+yaclog/changelog.py,sha256=2nI-ZhSTwrLmuAKuE5b15FMd_YYrgI7mSPh7G1em5aU,14074
+yaclog/markdown.py,sha256=WDfyIc53wyY1lpBW0Jp_o0X2F09SZXp5fd5LmZhZPqc,5663
+yaclog/version.py,sha256=BI-YEitBd3PE468L7vBtKn2dWQ8QJa0cAy24wA-qFhg,3957
+yaclog/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yaclog/cli/__main__.py,sha256=SFOgLd60xbwybFJiidIJBTM1OubDGaNGI8wYHnN1Yrk,12056
+yaclog/cli/cargo_toml.py,sha256=_Xine6RBPNNll6WUrQu4o7BFHXE-wCKNxI8v5eFXS_M,1171
+yaclog-1.2.0.dist-info/LICENSE.md,sha256=z5aMVBrc-9kk0pxaOdOAkI62S5YhYMiF6ADsMtZmOZg,34353
+yaclog-1.2.0.dist-info/METADATA,sha256=1hFuCJnK0odROANx4TqZ60DMOocIFNjtrmTnh6EHzms,3352
+yaclog-1.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+yaclog-1.2.0.dist-info/entry_points.txt,sha256=ODNSWzPuP4bmCnQadbOwXVXXMW7M52vct2Jl2asibYs,51
+yaclog-1.2.0.dist-info/top_level.txt,sha256=I7-ww7i7oVZpdxPzthcEk7UuyNap78GUfcad4FtRZbA,7
+yaclog-1.2.0.dist-info/RECORD,,
