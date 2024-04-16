@@ -1,0 +1,17 @@
+dittoed/__init__.py,sha256=FzxuOAdth3dZsxM7Wpb03E-GwxZllKgWai5HwRNh-rE,35
+dittoed/cli.py,sha256=NGEUNMZFgMcpVh8pcNPP-WS6cw1274Fg4y-HJM7wes4,1147
+dittoed/installables/base.py,sha256=25Jq3T-8MrzHMTZhjNunPfVo4AVDBTjCRcSuMEdtU2k,669
+dittoed/installables/command.py,sha256=IqnDPiXN77vixATOrTV2f00sPcRAfrb6LLgjsLXbMcU,2494
+dittoed/installables/distro.py,sha256=BYU2Bsogd8cZqIt71DeFbUCzg5i-gVL5HRhRKMKAf9g,1924
+dittoed/installables/link.py,sha256=WORfcxKIFtjn0hEke0spvNdBl77587hQbCgxllXU6ok,1259
+dittoed/installables/node.py,sha256=s5XJbPFbEL4yaBGz9txgy8uwt7UKmi3U1Sdj8w7FcbQ,1113
+dittoed/installables/python.py,sha256=br9pRVGxndjZLOVBqG36WuPbnjX16DFtqrOGjSKPHlY,2137
+dittoed/installables/rust.py,sha256=U6VkplrMN3i2i7QMqE_X8nBW2kHqgXpNQiZmv7pMqTY,906
+dittoed/installables/vcs.py,sha256=r_xc7Uts3MvWl8yj7zgNdhOpgbtBySLJrbX-KznPnQU,1764
+dittoed/main.py,sha256=I6DXTX88eRY5moygXgMfKLOqd3jbb9mbqQxG_Pnuo2c,1649
+dittoed/util/merge.py,sha256=3IQsjDDOvKohGU_vKk6ud_gfoscvZEWKv_sCHzZl1R0,1216
+dittoed/util/python_path.py,sha256=dB_8p_BdSbkks5d8VP7fIhjeTdxMHmMiTct6ph9cCLo,793
+dittoed-0.4.0.dist-info/METADATA,sha256=-pN4qBQvD7cXsd-rC3ulIegmchhWjRgEbVAqy2JAKTY,1253
+dittoed-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dittoed-0.4.0.dist-info/entry_points.txt,sha256=ixWOL7uR3nz_TkNcF-IC0ZY8M-HKhyKFauWtWA_tL4g,65
+dittoed-0.4.0.dist-info/RECORD,,

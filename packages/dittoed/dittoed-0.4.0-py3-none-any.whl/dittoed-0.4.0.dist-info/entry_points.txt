@@ -1,0 +1,4 @@
+[console_scripts]
+ditto=dittoed.cli:run
+dittoed=dittoed.cli:run
+
