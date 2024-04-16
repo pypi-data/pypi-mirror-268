@@ -1,0 +1,10 @@
+chatmemoryc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chatmemoryc/__main__.py,sha256=HVc25tdlI_W2BXYhF3MakxceSVJken3RjAGRRRPQfB8,1347
+chatmemoryc/chatmemoryc.py,sha256=Npy03QkWihUgy37Ccy6_cU3S2CdLmE6L2dbTY8tu1wA,14963
+chatmemoryc/client.py,sha256=qwLjzk71q2s50mtDuNncnqf8Wh-s2D3B7qYtKJYDX3I,3279
+chatmemoryc/server.py,sha256=cwgrHbP3JQfzopsLnrLhgKyigvZ0tEEIunIg6Gc2oaI,12092
+chatmemoryc-0.1.4rc1.dist-info/LICENSE.txt,sha256=UOZ1F5fFDe3XXvG4oNnkL1-Ecun7zpHzRxjp-XsMeAo,11324
+chatmemoryc-0.1.4rc1.dist-info/METADATA,sha256=DJrsQRRFzFzqt-uZs-NB-pABSvnj5muImjPMLp4YaEw,8039
+chatmemoryc-0.1.4rc1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+chatmemoryc-0.1.4rc1.dist-info/top_level.txt,sha256=HQl7sfN0aCyBFp3EsOtXfWzpZZHtNRGJ-box4gg3IVU,12
+chatmemoryc-0.1.4rc1.dist-info/RECORD,,
