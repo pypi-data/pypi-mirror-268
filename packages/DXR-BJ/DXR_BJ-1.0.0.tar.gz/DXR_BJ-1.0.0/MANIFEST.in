@@ -1,0 +1,2 @@
+include simsun.ttc
+recursive-include DXR_BJ/common/dependency *
