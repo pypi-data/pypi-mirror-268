@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: bfiocpp
+Version: 0.1.0
+Summary: Tensorstore Based Backend for BFIO
+Home-page: https://github.com/PolusAI/bfiocpp
+Author: Sameeul Bashir Samee
+Author-email: sameeul.samee@axleinfo.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+This is the new backend for bfio, using Tensorstore and other high-throughput IO library
