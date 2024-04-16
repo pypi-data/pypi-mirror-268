@@ -1,0 +1,14 @@
+docopt-ng<1,>=0.6
+munch<5,>=2.3
+Pillow<11,>=8
+playwright<1.44
+requests<3,>=2.23
+requests-cache<2,>=0.5
+
+[:python_version < "3.9"]
+typing-extensions<5
+
+[service]
+fastapi<0.111
+pydantic-settings<3
+uvicorn<0.30
