@@ -1,0 +1,5 @@
+tstype_py-0.1.5.dist-info/METADATA,sha256=aHhEIvzL4SzAilDBEjwcfn1PPaFCalf5LVFvA1LC9SI,1637
+tstype_py-0.1.5.dist-info/WHEEL,sha256=5HyBAIXy6w_lmX9AQnFspp6An6SPZJwRKkYM1H8iHP0,95
+tstype_py/__init__.py,sha256=Y9iSolcCWqJbGCUhOB3jPPHO4ceLEm12uZG4TihOrL4,119
+tstype_py/tstype_py.cp310-win_amd64.pyd,sha256=mV0TjcP2w3Z1rzlLFDX5Lw_yQgAhGl54z_hGjqjanjA,1953280
+tstype_py-0.1.5.dist-info/RECORD,,
