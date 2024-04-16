@@ -1,0 +1,10 @@
+inflect
+num2words
+
+[classifier]
+numpy
+scipy
+scikit-learn
+joblib
+wikipedia
+stemming
