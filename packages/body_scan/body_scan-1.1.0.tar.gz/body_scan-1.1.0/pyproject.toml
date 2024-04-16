@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+
+
+[tool.poetry]
+name = "body_scan"
+version = "1.1.0"
+description = "Health Checks"
+authors = []
+readme = "readme.md"
+
+packages = [
+    { include = "body_scan", from = "venues/stages" }
+]
+exclude = []
+include = [ "*.HTML", "*.html", "*.JSON", "*.json" ]
+
+license = "GPL-3.0-only"
+keywords = []
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+botanist = "^1.0.0"
+click = "^8.1.7"
+flask = "^3.0.3"
+pdoc3 = "^0.10.0"
+requests = "^2.31.0"
+textual = "^0.56.4"
+tinydb = "^4.8.0"
+
+
+[tool.poetry.scripts]
+body_scan = 'body_scan:clique'
+
+[tool.poetry.urls]
+GitLab = "https://gitlab.com/reptilian_climates/body_scan.git"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

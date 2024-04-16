@@ -1,0 +1,149 @@
+
+
+
+
+## EXAMPLE OUTPUT:
+<code json>
+{
+    "paths": [
+        {
+            "path": "path_1_HEALTH.py",
+            "stats": {
+                "passes": 2,
+                "alarms": 1
+            },
+            "checks": [
+                {
+                    "check": "check 1",
+                    "passed": true,
+                    "elapsed": [
+                        5.320599666447379e-05,
+                        "SECONDS"
+                    ]
+                },
+                {
+                    "check": "check 2",
+                    "passed": true,
+                    "elapsed": [
+                        1.0949999705189839e-05,
+                        "SECONDS"
+                    ]
+                },
+                {
+                    "check": "check 3",
+                    "passed": false,
+                    "exception": "Exception('NOT 100%')",
+                    "exception trace": [
+                        "Traceback (most recent call last):",
+                        "  File \"/REPTILIAN_CLIMATES/MODULES/body_scan/src/SCAN_PROC/keg/SCAN.py\", line 69, in SCAN",
+                        "    checks [ check ] ()",
+                        "  File \"<string>\", line 24, in check_3",
+                        "Exception: NOT 100%"
+                    ]
+                }
+            ]
+        },
+        {
+            "path": "path_2_HEALTH.py",
+            "empty": true
+        }
+    ],
+    "stats": {
+        "empty": 1,
+        "checks": {
+            "passes": 2,
+            "alarms": 1
+        }
+    }
+}
+</code>
+
+
+## HOW TO WRITE checks:
+
+The "checks" dictionary is retrieved with the python "exec"
+and then each "check" in "checks" is run.
+
+These checks correspond to the example output shown above.
+```
+path_1_HEALTH.py
+```
+```
+def check_1 ():
+	print ("check 1")
+	
+def check_2 ():
+	print ("check 2")
+	
+def check_3 ():
+	raise Exception ("NOT 100%")
+
+checks = {
+	"check 1": check_1,
+	"check 2": check_2,
+	"check 3": check_3
+}
+```
+```
+path_2_HEALTH.py
+```
+```
+#
+#	There isn't a "checks" dictionary present, 
+#	so the scanner reports:
+#
+#		"empty": true
+#	
+```
+
+## HOW TO START THE BODY SCANNER
+
+```python3
+import body_scan
+
+import pathlib
+THIS_FOLDER = pathlib.Path (__file__).parent.resolve ()
+
+from os.path import dirname, join, normpath
+SEARCH = normpath (join (THIS_FOLDER, "MODULE"))
+
+
+SCAN = body_scan.START (
+	#
+	#	REQUIRED
+	#		This is all the files that are sent to the scanner.
+	#
+	GLOB = SEARCH + '/**/*HEALTH.py',
+	
+	#
+	#	This runs all the checks in a thread pool,
+	#	so maybe at the same time, more or less.
+	#
+	SIMULTANEOUS = True,
+	
+	#
+	# 	OPTIONAL
+	#		These are the folders that are added to "sys.path"
+	#
+	module_paths = [
+		normpath (join (SEARCH, "MODULES"))
+	],
+	
+	#
+	#	OPTIONAL
+	#		This is the folder path to remove from the paths in the output.
+	#
+	relative_path = SEARCH
+)
+```
+
+### NOTES
+```
+Currently all the checks aren't run in parallel,
+but sequential order of paths found in glob is not guaranteed.
+```
+```
+Each check suite found by the glob is started by 
+a process with a flask API, that is opened on the first available port found.
+```
+

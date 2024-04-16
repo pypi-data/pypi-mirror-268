@@ -1,0 +1,57 @@
+
+
+
+
+
+
+<body>
+	<header>
+		<h1>body_scan</h1>
+		<p>{ physical scan, health scan }</p>
+	</header>
+
+	<h2>publish</h2>
+		mv module.r.html module.txt
+	
+		# change setup.py version
+	
+		(cd status && python -m unittest *status.py)
+		(rm -rf dist && python3 -m build --sdist && twine upload dist/*)
+		(git commit -am "0.0.20" && git tag 0.0.20)
+
+	<h2>build</h2>
+		(cd STRUCTURE && pip install --requirement MODULES_PIP.UTF8 --target MODULES_PIP)
+
+	<h2>status</h2>
+		<h3>start</h3>
+			#
+			#	CHANGE UT_STATUS MODULE SELECTOR
+			#
+			(cd status && python -m unittest *STATUS.py)
+	
+		<h3>build</h3>
+			
+			#
+			#	Add the source modules requirement modules
+			#
+			#		These need to be the same as the "setup.py" "install_requires"
+			#
+			(cd STATUS && pip install --requirement STATUS_MODULES_PIP.UTF8 --target STATUS_MODULES_PIP)
+			
+		<h3>BUILD_PIP_DIST_CHECK</h3>
+			(cd STRUCTURE/MODULES_DIST && rm -rf *)
+			
+			#
+			#	INSTALL THE LATEST VERSION OF THE "BODY_SCAN" FROM PIP
+			#
+			(cd STRUCTURE && pip install "BODY_SCAN==0.0.17" --target MODULES_DIST)
+			
+			
+	<h2>pertinent</h2>
+		https://github.com/locustio/locust
+		
+		pytest
+		ward
+		unittest
+
+</body>
