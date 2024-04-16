@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ScrathonPayments/__init__.py
+scrathon_payments.egg-info/PKG-INFO
+scrathon_payments.egg-info/SOURCES.txt
+scrathon_payments.egg-info/dependency_links.txt
+scrathon_payments.egg-info/requires.txt
+scrathon_payments.egg-info/top_level.txt
