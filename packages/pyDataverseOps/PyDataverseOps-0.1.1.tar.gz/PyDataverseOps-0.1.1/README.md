@@ -1,0 +1,125 @@
+
+# pyDataverseOps Library
+
+## Overview
+The `pyDataverseOps` library facilitates operations on Microsoft Dataverse, handling authentication, data manipulation, and batch operations. It's designed for developers needing to interface with Dataverse for creating, reading, updating, and deleting records.
+
+## Features
+- Authenticate with OAuth2.
+- Read and write data using pandas DataFrames.
+- Perform batch updates and deletes to optimize network use.
+
+## Installation
+
+First, clone this repository to your local machine:
+
+```bash
+git clone  https://github.com/ray2199/pyDataverseOps.git
+cd your-repository-folder
+```
+
+
+Then install the library using pip:
+
+```bash
+pip install pyDataverseOps
+```
+
+## Requirements
+- Python 3.6+
+- pandas
+- requests
+
+## Configuration
+
+Before using the `pyDataverseOps` library, you must configure it with your Dataverse access credentials and endpoint. Here are the steps and parameters required:
+
+### Parameters
+- `domain`: Your Dataverse domain.
+- `tenant_id`: Tenant ID for OAuth authentication.
+- `client_id`: Client ID for OAuth authentication.
+- `client_secret`: Client Secret for OAuth authentication.
+
+### Example Initialization
+```python
+from dataverse_ops import pyDataverseOps
+
+dv_ops = pyDataverseOps(
+    domain='your_dataverse_domain',
+    tenant_id='your_tenant_id',
+    client_id='your_client_id',
+    client_secret='your_client_secret'
+)
+```
+
+This initializes your connection to Dataverse with the necessary authentication headers.
+
+## Usage Examples
+
+### Reading Data
+Retrieve data from a Dataverse table with optional filtering and pagination:
+
+#### Parameters
+- `table_logical_name`: Logical name of the Dataverse table.
+- `filters`: Optional dictionary for OData filter expressions.
+- `pagination`: Set to `True` to paginate results if your query exceeds one page.
+
+#### Example
+```python
+filters = {'statuscode': ('eq', 1)}  # Equality filter example
+data = dv_ops.read_data('Contacts', filters=filters, pagination=True)
+print(data)
+```
+
+### Writing Data
+Write data to a Dataverse table from a pandas DataFrame:
+
+#### Parameters
+- `table_logical_name`: Logical name of the Dataverse table.
+- `data_df`: DataFrame where each row represents a new record.
+
+#### Example
+```python
+import pandas as pd
+
+data_df = pd.DataFrame({
+    'firstname': ['John', 'Jane'],
+    'lastname': ['Doe', 'Doe']
+})
+dv_ops.write_data('Contacts', data_df)
+```
+
+### Updating Records
+Update existing records in a Dataverse table:
+
+#### Parameters
+- `table_logical_name`: Logical name of the table.
+- `unique_column`: Column name that uniquely identifies each record.
+- `data_df`: DataFrame containing the updated data.
+
+#### Example
+```python
+update_data = pd.DataFrame({
+    'contactid': ['guid1', 'guid2'],
+    'new_field_value': [123, 456]
+})
+dv_ops.update_records('Contacts', 'contactid', update_data)
+```
+
+### Deleting Records
+Batch delete records from a Dataverse table based on their IDs:
+
+#### Parameters
+- `table_logical_name`: Logical name of the table.
+- `unique_column`: Unique identifier column for the records.
+
+#### Example
+```python
+dv_ops.batch_delete_records('Contacts', 'contactid')
+```
+
+## Contributions
+We welcome contributions to improve this library. Please fork the repository, make your changes, and submit a pull request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
