@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: lenstr
+Version: 0.2
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: jinja2
+

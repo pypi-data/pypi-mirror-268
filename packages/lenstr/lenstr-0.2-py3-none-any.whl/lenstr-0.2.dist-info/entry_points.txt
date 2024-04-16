@@ -1,0 +1,2 @@
+[console_scripts]
+my_backend = my_backend.main:app
