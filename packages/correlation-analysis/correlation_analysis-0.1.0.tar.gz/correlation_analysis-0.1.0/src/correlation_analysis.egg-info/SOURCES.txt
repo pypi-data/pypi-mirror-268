@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/correlation/__init__.py
+src/correlation/analytic.py
+src/correlation/numeric.py
+src/correlation/result.py
+src/correlation/utils.py
+src/correlation_analysis.egg-info/PKG-INFO
+src/correlation_analysis.egg-info/SOURCES.txt
+src/correlation_analysis.egg-info/dependency_links.txt
+src/correlation_analysis.egg-info/requires.txt
+src/correlation_analysis.egg-info/top_level.txt
+src/tests/__init__.py
+src/tests/test_analytic.py
+src/tests/test_numeric.py

@@ -1,0 +1,7 @@
+numpy
+scipy
+stim
+
+[dev]
+pytest
+ruff
