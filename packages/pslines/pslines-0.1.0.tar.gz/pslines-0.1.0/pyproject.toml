@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pslines"
+version = "0.1.0"
+description = "Horizon and source lines plotting tool for 21-cm cosmology experiments"
+authors = ["satyapan <satyapan.iiserm@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.26.4"
+matplotlib = "^3.8.4"
+astropy = "^6.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
