@@ -1,0 +1,281 @@
+# MARK: WORKFLOW ====================
+# 1. Lint (ruff), type checker (mypy) (hatch run style:fmt | hatch run types:check)
+# 2. Test in all supported version (hatch run all:test) (python 3.11 only: hatch run test)
+# 3. Bump version (hatch version <major | minor | patch>)
+# 4. Build package (hatch build)
+# 5. Generating docs (hatch run docs:build)
+# 6. Publish packge (hatch publish)
+## Run entire workflow: hatch run workflow:perform
+## `hatch env show` for more information
+
+# MARK: BUILD ====================
+[build-system]
+requires = ["hatchling>=1.22.2", "hatch-vcs>=0.3.0"]
+build-backend = "hatchling.build"
+
+# MARK: PROJECT ====================
+[project]
+name = "absfuyu"
+description = "A small collection of code"
+readme = { "file" = "README.md", "content-type" = "text/markdown" }
+requires-python = ">=3.8, <4"
+license = { text = "MIT License" }
+keywords = ["utilities"]
+authors = [{ name = "somewhatcold (AbsoluteWinter)" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+dependencies = [
+    "bs4",
+    "click>=8.0.0",
+    "colorama",
+    "Deprecated",
+    "importlib_resources; python_version < '3.10'",
+    "python-dateutil",
+    "requests",
+    "tomli>=1.1.0; python_version < '3.11'",
+    "typing_extensions>=4.0.1; python_version < '3.11'",
+    "unidecode",
+]
+
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/AbsoluteWinter/absfuyu-public"
+Documentation = "https://absolutewinter.github.io/absfuyu-docs/"
+Repository = "https://github.com/AbsoluteWinter/absfuyu-public"
+Issues = "https://github.com/AbsoluteWinter/absfuyu-public/issues"
+
+[project.optional-dependencies]
+res = ["absfuyu-res"]
+full = ["absfuyu-res", "numpy", "pandas", "rich"]
+beautiful = ["rich"]
+extra = ["numpy", "pandas"]
+dev = ["hatch", "pytest"]
+
+[project.scripts]
+absfuyu = "absfuyu.__main__:main"
+fuyu = "absfuyu.__main__:main"    # alias
+
+# MARK: TOOL ====================
+# MARK: TOOL: hatch
+[tool.hatch.version] # Dynamic version
+path = "src/absfuyu/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src", "tests", "docs", "images", "dev_requirements.txt"]
+
+# Set up virtual env: use hatch env show
+[tool.hatch.envs.default]
+dependencies = ["coverage[toml]", "pytest-cov", "pytest"]
+features = ["full"]
+description = """
+Default environment
+
+Main cmd:
+- test: Run test
+- cov : Show coverage report
+- cov2: More coverage report
+"""
+
+[tool.hatch.envs.default.scripts] # hatch env run <script>
+test = "pytest {args:tests}"                                        # use this
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = ["- coverage combine", "coverage report"]
+cov = ["test-cov", "cov-report"]                                    # use this
+cov2 = "pytest --cov-report=term-missing --cov=absfuyu --cov=tests" # use this
+
+[tool.hatch.envs.all]
+description = """
+All python version to test:
+hatch run all:test
+
+Use `hatch run all:install` when occur "no module named" error
+"""
+
+[tool.hatch.envs.all.scripts]
+install = "pip install -e .[full]" # This command fix "no module named"
+
+[[tool.hatch.envs.all.matrix]] # hatch env run -e all test
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = ["mypy>=1.0.0"]
+detached = true
+description = "Type checker"
+
+[tool.hatch.envs.types.scripts] # hatch env run -e types check
+check = "mypy --install-types --non-interactive {args:src/absfuyu}"
+# check = "mypy --install-types --non-interactive {args:src/absfuyu tests}"
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "sphinx>=7.0.0",
+    "sphinx_rtd_theme",
+    "sphinx_copybutton",
+    "myst-parser",       # Markdown parser
+    "sphinx-autobuild",  # Live preview build
+    "watchfiles",        # sphinx-autobuild support library
+]
+description = """
+Build documentation
+
+Main cmd:
+- build: Build documentation
+- live: Live preview of documentation
+"""
+
+[tool.hatch.envs.docs.scripts]
+build = [
+    "sphinx-apidoc -o docs/ src/absfuyu", # Generate
+    "sphinx-build docs docs/build",       # Build
+]
+live = [
+    "sphinx-apidoc -o docs/ src/absfuyu", # Generate
+    "sphinx-autobuild docs docs/build",   # Live preview
+]
+
+[tool.hatch.envs.style]
+detached = true
+dependencies = ["black", "ruff"]
+description = "Source code styling"
+
+[tool.hatch.envs.style.scripts]
+check = [
+    "ruff check",                   # Linting
+    "- black --check --diff src",   # Source code folder
+    "- black --check --diff tests", # Test folder
+]
+fmt = [ # Format the code
+    "ruff format", # Lint fix + Code styling
+    # "black src",   # Code styling - Source code folder
+    # "black tests", # Code styling - Test folder
+    "check", #
+]
+
+[tool.hatch.envs.workflow]
+detached = true
+skip-install = true
+description = """
+Package workflow:
+hatch run workflow:perform
+
+Note:
+- perform: bump version patch
+- perform2: bump version minor
+- perform3: bump version major
+"""
+
+[tool.hatch.envs.workflow.scripts]
+test = [
+    "hatch run style:fmt",   # Code quality check
+    "hatch run types:check", # type-hint check
+    "hatch run all:test",    # Test
+]
+build = [
+    "hatch clean",          # Clean dist/ folder
+    "hatch -v build",       # Build package
+    "hatch run docs:build", # Build docs
+    "hatch publish",        # Publish
+]
+perform = [
+    "test",
+    "hatch version patch", # Bump version patch
+    "build",
+]
+perform2 = [
+    "test",
+    "hatch version minor", # Bump version minor
+    "build",
+]
+perform3 = [
+    "test",
+    "hatch version major", # Bump version major
+    "build",
+]
+
+# MARK: TOOL: pytest
+[tool.pytest.ini_options]
+addopts = [
+    "--strict-markers",
+    "--maxfail=1",
+    # "--cov=absfuyu"
+]
+markers = [ # pytest -m <marker> -v
+    "test_this: Select desire tests to test",
+    "data_extension: Test all data extension classes",
+    "abs_tools: Test in absfuyu.tools",
+    "abs_util: Test in absfuyu.util",
+]
+
+# MARK: TOOL: mypy
+[tool.mypy]
+# python_version = "3.8"
+mypy_path = "src"
+check_untyped_defs = true
+# disallow_any_generics = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+show_column_numbers = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+# install_types = true  # type: ignore
+
+# MARK: TOOL: ruff
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py38"
+include = ["pyproject.toml", "src/**", "tests/**"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+exclude = ["config.json", "*.pkl", "sudoku.py", "tictactoe.py"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B", "Q"]
+unfixable = ["B"]
+exclude = ["*.json", "*.pkl"]
+ignore = [
+    "E266", # too many leading "#" for block comment
+    "E501", # line too long
+    "W291", # trailing whitespace
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402", "F401"] # module level import not at top of file
+"core.py" = ["E402"]
+"human.py" = ["E741"] # Ambiguous variable name
+"test_everything.py" = ["F403"] # unable to detect undefined names
+"test_version.py" = [
+    # Within an `except` clause, raise exceptions with `raise ... from err`
+    # or `raise ... from None` to distinguish them from errors in exception handling
+    "B904",
+]
+"tests/*" = ["F401"] # imported but unused
+
+# MARK: TOOL: black
+[tool.black]
+line-length = 88
