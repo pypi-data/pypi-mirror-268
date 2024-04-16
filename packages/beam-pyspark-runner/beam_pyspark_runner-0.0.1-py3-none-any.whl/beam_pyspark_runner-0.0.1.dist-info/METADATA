@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: beam-pyspark-runner
+Version: 0.0.1
+Summary: An Apache Beam pipeline Runner built on Apache Spark's python API
+Author-email: Nathan Zimmerman <npzimmerman@gmail.com>
+License: MIT
+Project-URL: homepage, https://github.com/moradology/beam-pyspark-runner
+Project-URL: repository, https://github.com/moradology/beam-pyspark-runner.git
+Keywords: virtualenv,dependencies
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: apache-beam ==2.53.0
+Requires-Dist: pyspark ==3.5.1
+Requires-Dist: psutil ==5.9.8
+Provides-Extra: dev
+Requires-Dist: pytest >=8.0.0 ; extra == 'dev'
+Requires-Dist: pytest-cov >=4.1.0 ; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: black >=23.9.1 ; extra == 'lint'
+Requires-Dist: isort >=5.13.0 ; extra == 'lint'
+Requires-Dist: flake8 >=7.0.0 ; extra == 'lint'
+Requires-Dist: Flake8-pyproject >=1.2.3 ; extra == 'lint'
+Requires-Dist: mypy >=1.8.0 ; extra == 'lint'
+Requires-Dist: pre-commit >=3.4.0 ; extra == 'lint'
+Requires-Dist: pytest >=8.0.0 ; extra == 'lint'
+Requires-Dist: pytest-cov >=4.1.0 ; extra == 'lint'
+Requires-Dist: tox >=4.11.3 ; extra == 'lint'
+
+# PySpark Apache Beam Runner
+
+## Overview
+(WHY? Doesn't Beam ship with a Spark runner?)
+
+This project introduces a custom Apache Beam runner that leverages PySpark directly.
+This is not a 'portability' framework compliant runner! It is designed for environments
+where a SparkSession is available but a Spark master server is not. This is useful for
+e.g. serverless environments where jobs are triggered without a long-running cluster,
+sidestepping the expectations of Beam's default Spark runner.
+
+The other benefit is that this strategy for building a runner helps to keep the stack as
+python-centric as possible. The compilation process, the optimizations, the execution
+planning - these all happen in python (for better or worse). Depending on your needs,
+this might be a significant advantage.
+
+## Features
+- **Direct Integration with PySpark**: Utilizes a PySpark  assumed SparkSession directly.
+- **Serverless Compatibility**: Ideal for environments without a dedicated Spark master, supporting execution in serverless frameworks.
+- **Simplified Setup**: Potentially reduces the complexity of job submission by avoiding the need for port listening on a Spark master.
+
+## Getting Started
+
+### Prerequisites
+- Apache Spark
+- Apache Beam
+- Python 3.8 or later
+
+### Installation
+To use this custom runner, just `pip install` as you would any library
+
+```bash
+pip install beam-pyspark-runner
+```
