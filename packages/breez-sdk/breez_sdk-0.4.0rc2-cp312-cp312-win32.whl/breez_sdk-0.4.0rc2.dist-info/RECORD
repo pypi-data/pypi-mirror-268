@@ -1,0 +1,9 @@
+breez_sdk/__init__.py,sha256=_1jQlVB_ZIt6zIB6xI5edBU06Vxq0mtpg8lxMrE63F0,35
+breez_sdk/breez_sdk.py,sha256=Vk6MlEjpflmZDMEVRIlabb2zQVNvjkE3SNNG7i08WWI,274634
+breez_sdk/breez_sdk_bindings.dll,sha256=uMCNkjr1jeDJ5eRnKc6HJ4AgVd479dI1ifUzlu0wvZ0,11363840
+breez_sdk/msvcp140.dll,sha256=haqMirTL8f-a5ce94b9touGKVw424thwuIU2uGWMW6g,446840
+breez_sdk/vcruntime140.dll,sha256=x9nf3b5oz3xvC1lWkOMaJt9HgPRl0rkLX0APLY14hRI,91104
+breez_sdk-0.4.0rc2.dist-info/METADATA,sha256=8aGKC_KJDhQElQoc5uresLX1d21lnMQNSLTobTGwGWs,491
+breez_sdk-0.4.0rc2.dist-info/WHEEL,sha256=N7fPzcANYQSP-1lTeUuLriuOSDjRoCV8Fj8BnfANnGQ,98
+breez_sdk-0.4.0rc2.dist-info/top_level.txt,sha256=ODUlftZqLYNOiQMgNS89NcRyfIRAGWNRha-UALToWCE,10
+breez_sdk-0.4.0rc2.dist-info/RECORD,,
