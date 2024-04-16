@@ -1,0 +1,6 @@
+pyproject.toml
+mathease/__init__.py
+mathease.egg-info/PKG-INFO
+mathease.egg-info/SOURCES.txt
+mathease.egg-info/dependency_links.txt
+mathease.egg-info/top_level.txt
