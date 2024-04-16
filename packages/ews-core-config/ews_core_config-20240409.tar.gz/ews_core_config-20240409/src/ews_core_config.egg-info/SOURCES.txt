@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+requirements/requirements.cli.in
+requirements/requirements.in
+src/ews_core_config/__init__.py
+src/ews_core_config/config.py
+src/ews_core_config/version.py
+src/ews_core_config.egg-info/PKG-INFO
+src/ews_core_config.egg-info/SOURCES.txt
+src/ews_core_config.egg-info/dependency_links.txt
+src/ews_core_config.egg-info/entry_points.txt
+src/ews_core_config.egg-info/requires.txt
+src/ews_core_config.egg-info/top_level.txt
+src/ews_core_config/cli/entry.py
+tests/test_config.py
+tests/test_version.py

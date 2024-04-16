@@ -1,0 +1,5 @@
+simple-toml-configurator>=1.2.2
+packaging
+
+[cli]
+click
