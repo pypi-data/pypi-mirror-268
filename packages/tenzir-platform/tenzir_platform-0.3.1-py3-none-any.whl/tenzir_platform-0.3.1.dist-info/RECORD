@@ -1,0 +1,16 @@
+tenzir_platform/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tenzir_platform/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tenzir_platform/helpers/auth_rule.py,sha256=W7_mc3LOGNf3SwrABiiyLFywRXvYD8YSfNGqPynbq3c,1195
+tenzir_platform/helpers/cache.py,sha256=J_Il-eYt70JQLti6SxIpKeTUaNZr1TaqGgWEI3nf3QM,1196
+tenzir_platform/helpers/client.py,sha256=RDFycYEipxyaQLVJcexzT0nQfe1naW8Cf0I-shA0pg0,3216
+tenzir_platform/helpers/environment.py,sha256=UA7FbtZapX7kt456uZp8wP7d3DOi0c5dCi_YsIBoyiM,817
+tenzir_platform/helpers/oidc.py,sha256=Z57iQjvjgs7-U9eoalz3xyyHKub9nleJjap-W3oHrDI,5908
+tenzir_platform/subcommand_admin.py,sha256=zm7tK-SXNJGKYx_Z2xbw2ZMoi-7nFOKHB9eBgNl-LyU,6232
+tenzir_platform/subcommand_auth.py,sha256=Jv8kNTIhMbkOgoyt5gZz7BcmM0J9bkJTf-b6M3FIfUw,585
+tenzir_platform/subcommand_node.py,sha256=YqKOX_FS_15za71RHohOEmjpEHjNdedL1ZK4anDF6cA,5654
+tenzir_platform/subcommand_workspace.py,sha256=BK_vHjxL9BbACWXH-BJsHDh1v7QJ9IzaLacSNfPoPJA,1741
+tenzir_platform/tenzir_platform.py,sha256=CZxXANMrAqmJeJocd5PCv5clL4ImUhFPtfAGBYsECZw,1787
+tenzir_platform-0.3.1.dist-info/METADATA,sha256=U6S1aJhdrdwsrekvt8k5yORgkqw5pD7i-UOZwwf4p3U,1110
+tenzir_platform-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tenzir_platform-0.3.1.dist-info/entry_points.txt,sha256=VjwcVRbPjYPkw26JIaaSuZ3OU6PTGS7P40Cdyu7NzqY,72
+tenzir_platform-0.3.1.dist-info/RECORD,,
