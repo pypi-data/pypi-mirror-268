@@ -1,0 +1,10 @@
+easy_logstash/__init__.py,sha256=tzZRbvNF8H7i5hp0Ne1U958YokMvM8ictacpCiaaRRE,128
+easy_logstash/constants.py,sha256=Vmm_J8Y-yVp1i1t8K1TCsrGOo7h8BDnF9_uD-p2xcQ8,214
+easy_logstash/django_logstash_config.py,sha256=pBq3yf33XLAWMKzv_vk6KCeIyIZO7HKVhpDan395ESc,3317
+easy_logstash/handler.py,sha256=JTss-hMYPtRp73b7E7X9frxixkr9oNzR_kezLXbYUKM,1461
+easy_logstash/logstash_config.py,sha256=U7qjz8yM_DoGFabVCjb4cXsdCB2oKffdhkthNXtuQUU,1538
+easy_logstash-1.0.0.dist-info/LICENSE,sha256=LQei2n-KDWJhTbMHKNuuZh43AOQ2ni0C9U201iBY-zs,1066
+easy_logstash-1.0.0.dist-info/METADATA,sha256=b9SEv8jwX6ZXsukzxtBTU8IwY_lEc6gAd5_UWIYnn0I,3959
+easy_logstash-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+easy_logstash-1.0.0.dist-info/top_level.txt,sha256=6l-ZHqTn4GLGF_s9_ONEHbTFFf4mDLmtQ1VkX88xpQY,14
+easy_logstash-1.0.0.dist-info/RECORD,,
