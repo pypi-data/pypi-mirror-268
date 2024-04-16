@@ -1,0 +1,6 @@
+unidecode
+keyring
+keyrings.alt
+meraki
+pydantic
+python-jose[cryptography]
