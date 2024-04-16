@@ -1,0 +1,11 @@
+taskara/__init__.py,sha256=YFH9EfNF1tsui74ke2vUCirQYf-c5SleJt2AvdCOUCU,23
+taskara/db/conn.py,sha256=uyRMbAQl3mqIYoKveyinP6TNH8vQAQO9cE33CBQVhEk,2001
+taskara/db/models.py,sha256=GAOK744_ItblF2XfFJPro2DpNbieDtkhjeRxmJknItk,1162
+taskara/env.py,sha256=AMmqfFJZTml34sopZbVIubVzhOD8LumWS6GawURPvxQ,195
+taskara/metrics,sha256=WJtXXktqtCFcIpuLoltRwnhx0UFNBAl6Cy0XNCHfjCs,1520
+taskara/models.py,sha256=9y--CgNLq8aqWpzKxhIh540UIrmRnZ6-0H39pUzTMiY,1750
+taskara/task.py,sha256=RtOUYxteIsP4RJKXzk_tmTpnaLe2Pyo_cDecaeMUuNY,20302
+taskara-0.1.25.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+taskara-0.1.25.dist-info/METADATA,sha256=BdEmW2vppLnpIP8apCibsWc9Oag4Sw1z5YmzExm3D20,1367
+taskara-0.1.25.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+taskara-0.1.25.dist-info/RECORD,,
