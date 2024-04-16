@@ -1,0 +1,17 @@
+pynfe_xml2dict/cte/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynfe_xml2dict/cte/index.py,sha256=eVgpF_MycC4WIGh_UARa3IP6tZv11rutgx3n-_ZiuAY,25
+pynfe_xml2dict/nfce/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynfe_xml2dict/nfe/__init__.py,sha256=6kMNw7qCYt-rvKyUrUSTgi3clXS-_51egVYgvX1wfxU,160
+pynfe_xml2dict/nfe/__tag_dest__.py,sha256=wcPboQsdU3mRFnV4zi8Le73AVOP1C4Pa3tvjoT844_k,1844
+pynfe_xml2dict/nfe/__tag_det__.py,sha256=3knqhjniR0sqt2DUcjFjIqTIT9XeCdxLC3j2jmPb0So,2704
+pynfe_xml2dict/nfe/__tag_emit__.py,sha256=GTDuE1tq6tA0SRThEgPui4CAApOpgnICgqabJFFzmaY,1569
+pynfe_xml2dict/nfe/__tag_ide__.py,sha256=2v0C_S7Pnq4ZkLELqdBOFl5toVa4fmN99Pp0IxRMT-o,1453
+pynfe_xml2dict/nfe/ler_nfe.py,sha256=NDnl_s88BMy35xaN4TH9vWJCkYXCtI4maIg4JAvHnw8,2108
+pynfe_xml2dict/nfse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pynfe_xml2dict/nfse/index.py,sha256=ME-Wc0O21FrzJOjGR5KokgrXr83oYJBhAKzIhrKo7mA,26
+pynfe_xml2dict/utils/__init__.py,sha256=oY4RELAQAGeT3Nl_2pxJjqsDxqG4DjZUTueXwRvormg,178
+pynfe_xml2dict/utils/functions.py,sha256=M0UZXl4xdN98CLwmBxF1rJVTCvuyCc_0XG_Doy5jXUs,4087
+pynfe_xml2dict/utils/read_xml.py,sha256=a2HglJC-8ZDsN43oybhelnllW6Ehd2ABpLy2UCpRaJk,491
+pynfe_xml2dict-0.0.2.dist-info/METADATA,sha256=KPv2KOqikcpmrY1A20Z3f3NADBK5TCAkvFJqSaE6pJM,695
+pynfe_xml2dict-0.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pynfe_xml2dict-0.0.2.dist-info/RECORD,,
