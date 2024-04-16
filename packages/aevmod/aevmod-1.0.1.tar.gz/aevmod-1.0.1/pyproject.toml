@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools", "wheel", "pybind11"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aevmod"
+version = "1.0.1"
+description = "Compute atomic environment vector (AEV) and its derivatives"
+readme = "README.rst"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+# keywords = []
+authors = [
+    {name="Habib N Najm", email="hnnajm@sandia.gov"},
+    {name="Christian J Devereux", email="cjdever@sandia.gov"},
+    {name="Carles Martí", email="cmartia@sandia.gov"},
+]
+maintainers = [
+    {name="Carles Martí", email="cmartia@sandia.gov"},
+    {name="Habib N Najm", email="hnnajm@sandia.gov"},
+    {name="Christian J Devereux", email="cjdever@sandia.gov"},
+]
+
+dependencies = [
+ "numpy>=1.17.0",
+]
+
+[project.urls]
+homepage = "https://github.com/sandialabs/aevmod/"
+documentation = "https://github.com/sandialabs/aevmod/?tab=readme-ov-file#aevmod-package"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra"
+testpaths = [
+    "tests",
+]
+norecursedirs = [
+    ".git", "tmp*", ".eggs", "bin", "include", "lib", "src",
+]
