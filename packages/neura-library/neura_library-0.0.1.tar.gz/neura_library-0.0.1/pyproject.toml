@@ -1,0 +1,41 @@
+[project]
+name = "neura-library"
+version = "0.0.1"
+requires-python = ">=3.9"
+description = "Utility tools for system neuroscience research, including Open Source Wrapper or Parser"
+authors = [
+    { name = "Yu-Ting Wei", email = "ytsimon2004@gmail.com" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+keywords = ["Neuroscience", "visual neuroscience", "cellular imaging", "brain mapping", "spatial navigation"]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    'Intended Audience :: Science/Research',
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/ytsimon2004/neuralib"
+Documentation = "https://neuralib.readthedocs.io/en/latest/index.html"
+Repository = "https://github.com/ytsimon2004/neuralib"
+Issues = "https://github.com/ytsimon2004/neuralib/issues"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.dynamic.optional-dependencies]
+opt = { file = ["requirements-optional.txt"] }
+doc = { file = ["requirements-document.txt"] }
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=61.0"]
+
+[project.scripts]
+brender = "neuralib.atlas.brainrender.main_app:main"
+ppv = "neuralib.tools.pkl_parq_view.main_app:main"
