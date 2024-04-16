@@ -1,0 +1,14 @@
+fivetran_connector_sdk/__init__.py,sha256=Et-91_d4nfl0sqgW0mXiddImUdVDfdSaN5TEdYUSvsI,29429
+fivetran_connector_sdk/protos/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+fivetran_connector_sdk/protos/common_pb2.py,sha256=TtSQBIMjzugRMwBuC0mDaSpbqILjtlqdbg7Licw9BC0,6749
+fivetran_connector_sdk/protos/common_pb2.pyi,sha256=aPFyc2tDOFJnQKhwP9moA2xrd3ygrDwYjTY6KT-INfY,9035
+fivetran_connector_sdk/protos/common_pb2_grpc.py,sha256=1oboBPFxaTEXt9Aw7EAj8gXHDCNMhZD2VXqocC9l_gk,159
+fivetran_connector_sdk/protos/connector_sdk_pb2.py,sha256=I49KpGCshFNZVjGf3TcvPrO_4VzmpE-TYWjsAXliQkI,7454
+fivetran_connector_sdk/protos/connector_sdk_pb2.pyi,sha256=T0NRVDpyl-B-yKy_6AxQYODH4bfim16cJ0q2Eo_MS8E,8404
+fivetran_connector_sdk/protos/connector_sdk_pb2_grpc.py,sha256=4kmJ3SBcr3JTL5vh63wgMJ454HUJCv0dXlK3fvRyRQ0,7212
+fivetran_connector_sdk-0.4.8.1.dist-info/LICENSE,sha256=Kutp3D0T7HmHuBifKmbw39OZLAL1ckaLRb8u9lyJxE8,1065
+fivetran_connector_sdk-0.4.8.1.dist-info/METADATA,sha256=UDsADaUV8PiYsAesTI1nujMT5f0jRaGuXsUH554mjDc,669
+fivetran_connector_sdk-0.4.8.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fivetran_connector_sdk-0.4.8.1.dist-info/entry_points.txt,sha256=uQn0KPnFlQmXJfxlk0tifdNsSXWfVlnAFzNqjXZM_xM,57
+fivetran_connector_sdk-0.4.8.1.dist-info/top_level.txt,sha256=-_xk2MFY4psIh7jw1lJePMzFb5-vask8_ZtX-UzYWUI,23
+fivetran_connector_sdk-0.4.8.1.dist-info/RECORD,,
