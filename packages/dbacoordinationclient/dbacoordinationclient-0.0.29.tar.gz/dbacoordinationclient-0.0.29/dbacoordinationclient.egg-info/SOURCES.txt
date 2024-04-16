@@ -1,0 +1,6 @@
+setup.py
+dbacoordinationclient.egg-info/PKG-INFO
+dbacoordinationclient.egg-info/SOURCES.txt
+dbacoordinationclient.egg-info/dependency_links.txt
+dbacoordinationclient.egg-info/requires.txt
+dbacoordinationclient.egg-info/top_level.txt
