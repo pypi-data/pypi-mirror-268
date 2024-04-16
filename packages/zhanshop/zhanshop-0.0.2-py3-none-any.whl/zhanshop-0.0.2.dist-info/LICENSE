@@ -1,0 +1,18 @@
+关于自动区域选择我这边提供以下可参考的解决方案
+
+谷歌mediapipe框架 可以用于目标监测 图像分割和分类 人脸检测等
+https://mediapipe-studio.webapps.google.com/studio/demo/object_detector
+
+关于pdf压缩，我这边提供如下解决方案
+目前市面上找到的pdf压缩工具压缩效果都不太明显
+我尝试了一下后端的解决方案使用了adobe旗下dGhostscript工具测试了几个文件
+在腾讯网站上找的一个pdf约372K的
+ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf 1.pdf
+ 压缩后 体积为274K 耗尽约1-2秒 压缩后变小约27%
+
+ 在国家统计局网站上找的一个pdf约51M的
+ gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen -dNOPAUSE -dQUIET -dBATCH -sOutputFile=output.pdf P020230301403217959330.pdf
+ 压缩后 体积为53M 耗尽约1分钟, CPU利用率99.99几乎被耗尽 压缩后变大了约2M
+
+ 拿这两个pdf文件使用【夸克扫描王】中的PDF压缩 最终均弹出文档已是最佳状态，无需瘦身
+
