@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gurobi-modelanalyzer"
+description = "Model analysis tools; v1.0 is an ill conditioning explainer."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "Apache-2.0"
+keywords = ["optimization"]
+authors = [
+  { name = "Ed Klotz", email = "klotz@gurobi.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = [
+  "gurobipy",
+  "numpy",
+]
+dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://gurobi-optimization-gurobi-modelanalyzer.readthedocs-hosted.com/en/latest"
+Issues = "https://github.com/Gurobi/gurobi-modelanalyzer/issues"
+Source = "https://github.com/Gurobi/gurobi-modelanalyzer"
+
+[tool.hatch.version]
+path = "src/gurobi_modelanalyzer/__init__.py"
