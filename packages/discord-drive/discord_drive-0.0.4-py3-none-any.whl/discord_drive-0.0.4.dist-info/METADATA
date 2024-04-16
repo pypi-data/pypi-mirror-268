@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: discord_drive
+Version: 0.0.4
+Summary: Use Google Drive via Discord!
+Home-page: https://github.com/thedomino1313/DiscordDrive
+Author: Ryan Karch, Dominic Beyer
+Author-email: 
+License: MIT
+Keywords: Discord,Google Drive
+License-File: LICENSE.md
+Requires-Dist: py-cord
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth-oauthlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: opencv-python-headless
+Requires-Dist: protobuf
+Requires-Dist: python-dotenv
+
