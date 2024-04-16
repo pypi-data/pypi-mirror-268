@@ -1,0 +1,6 @@
+setup.py
+ALLMDEV.egg-info/PKG-INFO
+ALLMDEV.egg-info/SOURCES.txt
+ALLMDEV.egg-info/dependency_links.txt
+ALLMDEV.egg-info/requires.txt
+ALLMDEV.egg-info/top_level.txt

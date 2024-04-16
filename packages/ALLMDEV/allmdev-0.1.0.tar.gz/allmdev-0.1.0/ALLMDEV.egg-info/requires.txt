@@ -1,0 +1,5 @@
+llama-index
+llama-cpp-python
+aiohttp
+llama-index-llms-llama-cpp
+huggingface_hub
