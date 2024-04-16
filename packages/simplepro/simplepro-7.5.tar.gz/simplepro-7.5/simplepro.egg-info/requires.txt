@@ -1,0 +1,7 @@
+django>=2.1
+django-simpleui>=2024.4.1
+django-import-export
+requests
+rsa
+psutil
+pillow
