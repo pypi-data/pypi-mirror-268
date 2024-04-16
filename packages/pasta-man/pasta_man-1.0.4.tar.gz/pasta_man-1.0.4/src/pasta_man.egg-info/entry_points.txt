@@ -1,0 +1,3 @@
+[console_scripts]
+pasta-man = pasta_man.self_launch_thread.Launcher:main
+pasta-man-launcher = pasta_man.self_launch_thread.Launch:drumroll
