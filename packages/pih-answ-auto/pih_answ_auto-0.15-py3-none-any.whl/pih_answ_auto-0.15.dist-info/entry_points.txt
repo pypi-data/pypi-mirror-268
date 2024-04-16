@@ -1,0 +1,2 @@
+[console_scripts]
+pih-answ_auto = AnswerAutomationService.__main__:start
