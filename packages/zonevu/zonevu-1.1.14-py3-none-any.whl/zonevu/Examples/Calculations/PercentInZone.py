@@ -1,0 +1,82 @@
+# Import the modules
+import math
+from ...Services.Client import ZonevuError
+from ...Zonevu import Zonevu
+from ...Services.WellService import WellData
+from tabulate import tabulate
+from ...DataModels.Geosteering.Calcs import calc_percent_in_zone
+
+
+def main_zone_calcs(zonevu: Zonevu, well_name: str):
+    """
+    Retrieve well data from ZoneVu and do some zone calculations
+    """
+    well_svc = zonevu.well_service
+    well = well_svc.get_first_named(well_name)
+    if well is None:
+        raise ZonevuError.local('Could not find the well "%s"' % well_name)
+
+    print('Well named "%s" was successfully found' % well_name)
+    well_svc.load_well(well, {WellData.surveys, WellData.geosteering})  # Load surveys and geosteering into well
+    wellbore = well.primary_wellbore  # Get reference to wellbore
+    if wellbore is None:
+        print('Well has no wellbores, so exiting')
+        return
+
+    # Get reference to the deviation surveys on wellbore
+    survey = wellbore.actual_survey
+
+    # If available, plot the starred or first geosteering interpretation
+    interps = wellbore.interpretations
+    if len(interps) == 0:
+        print('No geosteering interpretations available for that well')
+        return
+
+    interp = next((g for g in interps if g.starred), interps[0])  # Get starred or 1st interpretation
+    zonevu.geosteering_service.load_interpretation(interp)      # Load picks into interpretation
+
+    # Output a table of the geosteering picks
+    # picks = interp.picks
+    picks = [p for p in interp.picks if math.isfinite(p.tvd)]
+    # pick_type = 'Block' if p.block_flag else 'Fault' if p.fault_flag else 'Other'
+    headers = ["n", "MD",  "TVD", "Type", "TypeWellId"]
+    alignment = ["left", "left", "left", "left"]
+    table = [
+        [index,
+         round(p.md, 1),
+         round(p.tvd, 1),
+         'Block' if p.block_flag else 'Fault' if p.fault_flag else 'Other',
+         p.type_wellbore_id] for index, p in enumerate(picks)
+    ]
+
+    print()
+    print('Geosteering picks')
+    print(tabulate(table, headers, tablefmt="plain", colalign=alignment))
+    print()
+
+    # Compute and output a table of the percent in zone for each horizon in the interpretation
+    landing_index = next((i for i, sta in enumerate(survey.stations) if sta.inclination > 88), 0)  # Start of lateral
+    raw_lateral_stations = survey.stations[landing_index:]
+    stations = [s for s in raw_lateral_stations if s.tvd is not None]  # Cleaned up list of lateral stations
+    zone_calcs = calc_percent_in_zone(interp, stations)
+    lateral_length = sum(
+        s2.md - s1.md for s1, s2 in zip(stations, stations[1:]))  # Sum of all horizon/formation traversals
+    for calc in zone_calcs:
+        calc.percent = 100 * calc.length / lateral_length
+    zones_length = sum(calc.length for calc in zone_calcs)  # Sum of all horizon/formation traversals
+    headers = ["Horizon",  "Length", "%", "Color"]
+    alignment = ["left", "left", "Left", "Left"]
+    table = [
+        [calc.horizon.name, round(calc.length, 1), '%s%%' % round(calc.percent, 1), calc.horizon.line_style.color] for calc in zone_calcs
+    ]
+    table.append(['Total', round(zones_length), '100%', '(All Zones Length)'])
+    table.append(['Total', round(lateral_length), '100%', '(Lateral Length)'])
+    print('Zone Calculations')
+    print(tabulate(table, headers, tablefmt="plain", colalign=alignment))
+
+    print('end')
+
+
+
+
+
