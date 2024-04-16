@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: fluidimage
+Version: 0.4.4
+Summary: Fluid image processing with Python.
+Keywords: PIV
+Author-Email: Pierre Augier <pierre.augier@legi.cnrs.fr>
+License: CeCILL
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Project-URL: Homepage, https://foss.heptapod.net/fluiddyn/fluidimage
+Requires-Python: <3.13,>=3.9
+Requires-Dist: numpy>=1.8
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: scipy>=0.14.1
+Requires-Dist: h5py
+Requires-Dist: h5netcdf
+Requires-Dist: transonic>=0.6.2
+Requires-Dist: fluiddyn>=0.6.2
+Requires-Dist: pyfftw>=0.10.4
+Requires-Dist: imageio
+Requires-Dist: scikit-image>=0.12.3
+Requires-Dist: trio>=0.13
+Requires-Dist: dask[array]
+Requires-Dist: ipython
+Requires-Dist: rich>=13.7.1
+Requires-Dist: textual
+Requires-Dist: pims; extra == "pims"
+Requires-Dist: opencv-python; extra == "opencv"
+Requires-Dist: gprof2dot; extra == "graph"
+Requires-Dist: pytest; extra == "pytest"
+Requires-Dist: pytest-asyncio; extra == "pytest"
+Requires-Dist: fluidimage[gprof2dot,opencv-python,pims,pytest]; extra == "all"
+Provides-Extra: pims
+Provides-Extra: opencv
+Provides-Extra: graph
+Provides-Extra: pytest
+Provides-Extra: all
+Description-Content-Type: text/markdown
+
+FluidImage
+==========
+
+[![Latest version](https://img.shields.io/pypi/v/fluidimage.svg)](https://pypi.python.org/pypi/fluidimage/)
+![Supported Python versions](https://img.shields.io/pypi/pyversions/fluidimage.svg)
+[![Documentation status](https://readthedocs.org/projects/fluidimage/badge/?version=latest)](http://fluidimage.readthedocs.org)
+[![Code coverage](https://codecov.io/gh/fluiddyn/fluidimage/branch/branch%2Fdefault/graph/badge.svg)](https://codecov.io/gh/fluiddyn/fluidimage/branch/branch%2Fdefault/)
+[![Heptapod CI](https://foss.heptapod.net/fluiddyn/fluidimage/badges/branch/default/pipeline.svg)](https://foss.heptapod.net/fluiddyn/fluidimage/-/pipelines)
+[![Github Actions Linux](https://github.com/fluiddyn/fluidimage/actions/workflows/ci-linux.yml/badge.svg?branch=branch/default)](https://github.com/fluiddyn/fluidimage/actions/workflows/ci-linux.yml)
+[![Github Actions Pixi](https://github.com/fluiddyn/fluidimage/actions/workflows/ci-pixi.yml/badge.svg?branch=branch/default)](https://github.com/fluiddyn/fluidimage/actions/workflows/ci-pixi.yml)
+
+FluidImage is a libre Python framework for scientific processing of
+large series of images.
+
+**Documentation:** <http://fluidimage.readthedocs.org>
+
+Image processing for fluid mechanics is highly dominated by proprietary
+tools. Such tools are not ideal when you want to understand and tweak
+the processes and/or to use clusters. With the improvement of the
+open-source tools for scientific computing and collaborative
+development, one can think it is possible to build together a good
+library/toolkit specialized in image processing for fluid mechanics.
+This is our project with FluidImage.
+
+This package is young but already good enough to be used "in
+production" to
+
+- display and pre-process images,
+
+- compute displacement or velocity fields with [Particle Image
+  Velocimetry](https://en.wikipedia.org/wiki/Particle_image_velocimetry%20(PIV))
+  (PIV, i.e. displacements of pattern obtained by correlations of
+  cropped images) and [optical
+  flow](https://en.wikipedia.org/wiki/Optical_flow),
+
+- analyze and display PIV fields.
+
+We want to make FluidImage easy (useful documentation, easy
+installation, usable with scripts and GUI in Qt), reliable (with good
+[unittests](https://codecov.io/gh/fluiddyn/fluidimage/)) and very
+efficient, in particular when the number of images to process becomes
+large. Thus we want FluidImage to be able to run efficiently and easily
+on a personal computer and on big clusters. The efficiency is achieved
+by using
+
+- a framework for asynchronous computations (currently, we use
+  [Trio](https://trio.readthedocs.io) + multiprocessing, and in the
+  long term we want to be able to plug FluidImage to distributed
+  computational systems like [Dask](http://dask.pydata.org),
+  [Spark](https://spark.apache.org/) or
+  [Storm](http://storm.apache.org/)),
+
+- the available cores of the central processing units (CPU) and the
+  available graphics processing units (GPU),
+
+- good profiling and efficient and specialized algorithms,
+
+- cutting-edge tools for fast computations with Python (in particular
+  [Pythran](https://pythonhosted.org/pythran/)).
