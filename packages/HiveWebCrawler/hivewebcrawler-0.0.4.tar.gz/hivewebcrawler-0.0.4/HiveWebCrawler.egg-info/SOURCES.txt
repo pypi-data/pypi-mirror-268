@@ -1,0 +1,10 @@
+README.md
+setup.py
+HiveWebCrawler/Crawler.py
+HiveWebCrawler/__init__.py
+HiveWebCrawler.egg-info/PKG-INFO
+HiveWebCrawler.egg-info/SOURCES.txt
+HiveWebCrawler.egg-info/dependency_links.txt
+HiveWebCrawler.egg-info/requires.txt
+HiveWebCrawler.egg-info/top_level.txt
+test/test.py
