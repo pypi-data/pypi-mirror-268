@@ -1,0 +1,3 @@
+[console_scripts]
+crawler-analytics-server=crawler_analytics.server:server
+
