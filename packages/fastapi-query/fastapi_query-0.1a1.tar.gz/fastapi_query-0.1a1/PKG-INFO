@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: fastapi-query
+Version: 0.1a1
+Summary: FastAPI Library for Filtering, Ordering, and Pagination
+Home-page: https://github.com/lazarst96/fastapi-query
+License: MIT
+Author: Lazar Stamenkovic
+Author-email: lazarstamenkovic96@hotmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Environment :: Web Environment
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic
+Classifier: Framework :: Pydantic :: 1
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: all
+Provides-Extra: sqlalchemy
+Provides-Extra: tortoise
+Requires-Dist: fastapi (>=0.78,<1.0)
+Requires-Dist: pydantic (>=1.10.0,<3.0.0)
+Requires-Dist: sqlalchemy (>=1.4.36,<3.0.0) ; extra == "sqlalchemy" or extra == "all"
+Requires-Dist: tortoise-orm (>=0.16.18,<0.21.0) ; extra == "tortoise" or extra == "all"
+Project-URL: Repository, https://github.com/lazarst96/fastapi-query
+Description-Content-Type: text/markdown
+
+
