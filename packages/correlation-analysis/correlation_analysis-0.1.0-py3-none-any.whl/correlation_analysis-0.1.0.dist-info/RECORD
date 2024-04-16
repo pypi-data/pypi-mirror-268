@@ -1,0 +1,13 @@
+correlation/__init__.py,sha256=S7B5Jw2uum9HB0S9d-HXXxTVDZf9i2upx8RGQnUe9U8,294
+correlation/analytic.py,sha256=rdJZgB-Z8JMSKPFyFDhUdMs0WBjcjWixX8oNZ6-tYIM,3741
+correlation/numeric.py,sha256=s_g8QkElux-UFSJIp0hlHwHgmrG_pVwN2ApcBtBTCUg,10249
+correlation/result.py,sha256=ae9i4bkVBH4ak5lG3N0dwlnK3prhgLWgcRHqqYtoB1k,1434
+correlation/utils.py,sha256=Lx8TKb2pBphh0OZrSMvpiT8R6B9EMRIhw2CVzw_hQ7k,5911
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_analytic.py,sha256=D3hd6JXxSgF7xfW-nttfpVxsMeaUpcz6KELLvgXwe2w,954
+tests/test_numeric.py,sha256=7VgRLHOArIF0uoIpgIkxD8caoBtSKl3lr75hkyhEQhI,2154
+correlation_analysis-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+correlation_analysis-0.1.0.dist-info/METADATA,sha256=1k52eb4eRJB0q7cfWDsudm7YOEvDyvInow9_mmXxndM,1445
+correlation_analysis-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+correlation_analysis-0.1.0.dist-info/top_level.txt,sha256=a1zCUxCaul4FCpvFWwzqAHoI26lqRLW_sH9J5q7df-4,18
+correlation_analysis-0.1.0.dist-info/RECORD,,
