@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+easy_logstash/__init__.py
+easy_logstash/constants.py
+easy_logstash/django_logstash_config.py
+easy_logstash/handler.py
+easy_logstash/logstash_config.py
+easy_logstash.egg-info/PKG-INFO
+easy_logstash.egg-info/SOURCES.txt
+easy_logstash.egg-info/dependency_links.txt
+easy_logstash.egg-info/not-zip-safe
+easy_logstash.egg-info/requires.txt
+easy_logstash.egg-info/top_level.txt
