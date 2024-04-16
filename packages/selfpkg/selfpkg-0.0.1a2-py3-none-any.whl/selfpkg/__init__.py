@@ -1,0 +1,1 @@
+from selfpkg.greeting import greeting
