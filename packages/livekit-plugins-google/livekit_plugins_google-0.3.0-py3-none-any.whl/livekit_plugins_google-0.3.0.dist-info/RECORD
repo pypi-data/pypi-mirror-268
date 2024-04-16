@@ -1,0 +1,9 @@
+livekit/plugins/google/__init__.py,sha256=snPMHNLrurYbLWQOkV_o6qG1CEWsOCZ8ZfPMvmh5ejY,931
+livekit/plugins/google/models.py,sha256=DgiXOvGDO8D9rfCKHJL28lbyQR8mXXB2kpku-szXLRs,1185
+livekit/plugins/google/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+livekit/plugins/google/stt.py,sha256=lYA8hlkxG3YSw1Q34j8hgs4us5Ij-TLBQTRwtGPN9MY,15025
+livekit/plugins/google/version.py,sha256=G5iYozum4q7UpHwW43F7QfhzUfwcncPxBZ0gmUGsd5I,600
+livekit_plugins_google-0.3.0.dist-info/METADATA,sha256=sPd3OZxViD0Aq1uF1qJpbsYeqLAlq8tB720JXk-_RKw,1945
+livekit_plugins_google-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+livekit_plugins_google-0.3.0.dist-info/top_level.txt,sha256=OoDok3xUmXbZRvOrfvvXB-Juu4DX79dlq188E19YHoo,8
+livekit_plugins_google-0.3.0.dist-info/RECORD,,
