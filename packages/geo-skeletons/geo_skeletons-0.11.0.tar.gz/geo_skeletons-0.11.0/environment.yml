@@ -1,0 +1,16 @@
+name: skeletons
+channels:
+  - conda-forge
+dependencies:
+  - python=>3.9
+  - numpy
+  - pandas
+  - xarray
+  - utm
+  - pytest
+  - geopy
+  - pylint
+  - dask
+  - pip
+  - pip:
+    - geo-parameters
