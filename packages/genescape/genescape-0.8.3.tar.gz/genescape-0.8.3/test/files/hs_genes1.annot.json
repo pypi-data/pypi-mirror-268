@@ -1,0 +1,1756 @@
+{
+  "data": [
+    {
+      "count": 3,
+      "root": "MF",
+      "goid": "GO:0005515",
+      "function": "protein binding",
+      "source": [
+        "CYP1A1",
+        "SPHK2",
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(3/5)"
+    },
+    {
+      "count": 2,
+      "root": "BP",
+      "goid": "GO:0046512",
+      "function": "sphingosine biosynthetic process",
+      "source": [
+        "SPHK2",
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(2/5)"
+    },
+    {
+      "count": 2,
+      "root": "CC",
+      "goid": "GO:0043231",
+      "function": "intracellular membrane-bounded organelle",
+      "source": [
+        "CYP1A1",
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(2/5)"
+    },
+    {
+      "count": 2,
+      "root": "BP",
+      "goid": "GO:0030148",
+      "function": "sphingolipid biosynthetic process",
+      "source": [
+        "SPHK2",
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(2/5)"
+    },
+    {
+      "count": 2,
+      "root": "CC",
+      "goid": "GO:0005789",
+      "function": "endoplasmic reticulum membrane",
+      "source": [
+        "CYP1A1",
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(2/5)"
+    },
+    {
+      "count": 2,
+      "root": "CC",
+      "goid": "GO:0005743",
+      "function": "mitochondrial inner membrane",
+      "source": [
+        "CYP1A1",
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(2/5)"
+    },
+    {
+      "count": 2,
+      "root": "CC",
+      "goid": "GO:0005737",
+      "function": "cytoplasm",
+      "source": [
+        "SPHK2",
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(2/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:2001169",
+      "function": "regulation of ATP biosynthetic process",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:2000304",
+      "function": "positive regulation of ceramide biosynthetic process",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1904959",
+      "function": "regulation of cytochrome-c oxidase activity",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1904628",
+      "function": "cellular response to phorbol 13-acetate 12-myristate",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1904504",
+      "function": "positive regulation of lipophagy",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1903543",
+      "function": "positive regulation of exosomal secretion",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1903426",
+      "function": "regulation of reactive oxygen species biosynthetic process",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1901653",
+      "function": "cellular response to peptide",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1900126",
+      "function": "negative regulation of hyaluronan biosynthetic process",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:1900087",
+      "function": "positive regulation of G1/S transition of mitotic cell cycle",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0140052",
+      "function": "cellular response to oxidised low-density lipoprotein particle stimulus",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0140014",
+      "function": "mitotic nuclear division",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0120319",
+      "function": "long-chain fatty acid omega-1 hydroxylase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0106256",
+      "function": "hydroperoxy icosatetraenoate dehydratase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0102033",
+      "function": "long-chain fatty acid omega-hydroxylase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0101021",
+      "function": "estrogen 2-hydroxylase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0101020",
+      "function": "estrogen 16-alpha-hydroxylase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0098868",
+      "function": "bone growth",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0097267",
+      "function": "omega-hydroxylase P450 pathway",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0097187",
+      "function": "dentinogenesis",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0090520",
+      "function": "sphingolipid mediated signaling pathway",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0090280",
+      "function": "positive regulation of calcium ion import",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0090037",
+      "function": "positive regulation of protein kinase C signaling",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0085029",
+      "function": "extracellular matrix assembly",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0071897",
+      "function": "DNA biosynthetic process",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0071461",
+      "function": "cellular response to redox state",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0071407",
+      "function": "cellular response to organic cyclic compound",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0071356",
+      "function": "cellular response to tumor necrosis factor",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0071286",
+      "function": "cellular response to magnesium ion",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0071280",
+      "function": "cellular response to copper ion",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0070576",
+      "function": "vitamin D 24-hydroxylase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0070365",
+      "function": "hepatocyte differentiation",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0070330",
+      "function": "aromatase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0070314",
+      "function": "G1 to G0 transition",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0070301",
+      "function": "cellular response to hydrogen peroxide",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0070300",
+      "function": "phosphatidic acid binding",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0061751",
+      "function": "neutral sphingomyelin phosphodiesterase activity",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0061035",
+      "function": "regulation of cartilage development",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0060612",
+      "function": "adipose tissue development",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0060137",
+      "function": "maternal process involved in parturition",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0055093",
+      "function": "response to hyperoxia",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0051879",
+      "function": "Hsp90 protein binding",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0050665",
+      "function": "hydrogen peroxide biosynthetic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0048661",
+      "function": "positive regulation of smooth muscle cell proliferation",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0048565",
+      "function": "digestive tract development",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0048286",
+      "function": "lung alveolus development",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0048008",
+      "function": "platelet-derived growth factor receptor signaling pathway",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0046872",
+      "function": "metal ion binding",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0046685",
+      "function": "response to arsenic-containing substance",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0046513",
+      "function": "ceramide biosynthetic process",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0046511",
+      "function": "sphinganine biosynthetic process",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0045840",
+      "function": "positive regulation of mitotic nuclear division",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0045815",
+      "function": "transcription initiation-coupled chromatin remodeling",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0043491",
+      "function": "phosphatidylinositol 3-kinase/protein kinase B signal transduction",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0043306",
+      "function": "positive regulation of mast cell degranulation",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0043122",
+      "function": "regulation of canonical NF-kappaB signal transduction",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0043065",
+      "function": "positive regulation of apoptotic process",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0043010",
+      "function": "camera-type eye development",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0042904",
+      "function": "9-cis-retinoic acid biosynthetic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0042802",
+      "function": "identical protein binding",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0042759",
+      "function": "long-chain fatty acid biosynthetic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0042572",
+      "function": "retinol metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0042393",
+      "function": "histone binding",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0042359",
+      "function": "vitamin D metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0038036",
+      "function": "sphingosine-1-phosphate receptor activity",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0035902",
+      "function": "response to immobilization stress",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0035264",
+      "function": "multicellular organism growth",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0033189",
+      "function": "response to vitamin A",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0033008",
+      "function": "positive regulation of mast cell activation involved in immune response",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0032963",
+      "function": "collagen metabolic process",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0032760",
+      "function": "positive regulation of tumor necrosis factor production",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0032755",
+      "function": "positive regulation of interleukin-6 production",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0032736",
+      "function": "positive regulation of interleukin-13 production",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0032496",
+      "function": "response to lipopolysaccharide",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0032451",
+      "function": "demethylase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0032094",
+      "function": "response to food",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0031267",
+      "function": "small GTPase binding",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0030544",
+      "function": "Hsp70 protein binding",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0030509",
+      "function": "BMP signaling pathway",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0030308",
+      "function": "negative regulation of cell growth",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0030282",
+      "function": "bone mineralization",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0030170",
+      "function": "pyridoxal phosphate binding",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0030072",
+      "function": "peptide hormone secretion",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0020037",
+      "function": "heme binding",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0019899",
+      "function": "enzyme binding",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0019825",
+      "function": "oxygen binding",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0019373",
+      "function": "epoxygenase P450 pathway",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0019341",
+      "function": "dibenzo-p-dioxin catabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0017143",
+      "function": "insecticide metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0017059",
+      "function": "serine C-palmitoyltransferase complex",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0017050",
+      "function": "D-erythro-sphingosine kinase activity",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0016711",
+      "function": "flavonoid 3'-monooxygenase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0016679",
+      "function": "oxidoreductase activity, acting on diphenols and related substances as donors",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0016491",
+      "function": "oxidoreductase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0016310",
+      "function": "phosphorylation",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0016020",
+      "function": "membrane",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0015774",
+      "function": "polysaccharide transport",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0010041",
+      "function": "response to iron(III) ion",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0009812",
+      "function": "flavonoid metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0009804",
+      "function": "coumarin metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0009692",
+      "function": "ethylene metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0009635",
+      "function": "response to herbicide",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0009624",
+      "function": "response to nematode",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0009308",
+      "function": "amine metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0008481",
+      "function": "sphinganine kinase activity",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0008391",
+      "function": "arachidonic acid monooxygenase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0008284",
+      "function": "positive regulation of cell population proliferation",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0008283",
+      "function": "cell population proliferation",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0008210",
+      "function": "estrogen metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0008202",
+      "function": "steroid metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0008081",
+      "function": "phosphoric diester hydrolase activity",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0007420",
+      "function": "brain development",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006805",
+      "function": "xenobiotic metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006778",
+      "function": "porphyrin-containing compound metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006694",
+      "function": "steroid biosynthetic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006686",
+      "function": "sphingomyelin biosynthetic process",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006685",
+      "function": "sphingomyelin catabolic process",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006684",
+      "function": "sphingomyelin metabolic process",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006672",
+      "function": "ceramide metabolic process",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006670",
+      "function": "sphingosine metabolic process",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006669",
+      "function": "sphinganine-1-phosphate biosynthetic process",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0006631",
+      "function": "fatty acid metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005886",
+      "function": "plasma membrane",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005829",
+      "function": "cytosol",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005783",
+      "function": "endoplasmic reticulum",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005765",
+      "function": "lysosomal membrane",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005739",
+      "function": "mitochondrion",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005654",
+      "function": "nucleoplasm",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005634",
+      "function": "nucleus",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0005576",
+      "function": "extracellular region",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0005537",
+      "function": "mannose binding",
+      "source": [
+        "GO:0005537"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0005524",
+      "function": "ATP binding",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0005506",
+      "function": "iron ion binding",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0004767",
+      "function": "sphingomyelin phosphodiesterase activity",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0004758",
+      "function": "serine C-palmitoyltransferase activity",
+      "source": [
+        "SPTLC2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0004497",
+      "function": "monooxygenase activity",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0003433",
+      "function": "chondrocyte development involved in endochondral bone morphogenesis",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0003376",
+      "function": "sphingosine-1-phosphate receptor signaling pathway",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0002933",
+      "function": "lipid hydroxylation",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0002720",
+      "function": "positive regulation of cytokine production involved in immune response",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0002685",
+      "function": "regulation of leukocyte migration",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0002244",
+      "function": "hematopoietic progenitor cell differentiation",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0001958",
+      "function": "endochondral ossification",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0001932",
+      "function": "regulation of protein phosphorylation",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "MF",
+      "goid": "GO:0001786",
+      "function": "phosphatidylserine binding",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0001676",
+      "function": "long-chain fatty acid metabolic process",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0001666",
+      "function": "response to hypoxia",
+      "source": [
+        "CYP1A1"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "BP",
+      "goid": "GO:0001568",
+      "function": "blood vessel development",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0000786",
+      "function": "nucleosome",
+      "source": [
+        "SPHK2"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0000139",
+      "function": "Golgi membrane",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    },
+    {
+      "count": 1,
+      "root": "CC",
+      "goid": "GO:0000137",
+      "function": "Golgi cis cisterna",
+      "source": [
+        "SMPD3"
+      ],
+      "size": 5,
+      "label": "(1/5)"
+    }
+  ],
+  "status": {
+    "code": 1,
+    "unknown_terms": [
+      "FOO"
+    ]
+  }
+}
