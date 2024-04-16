@@ -1,0 +1,7 @@
+html_tree_shaking/__init__.py,sha256=MZltMyKFN97MSckTxRn3sQYnUC0a4D3cCyr8ztCxCS8,38
+html_tree_shaking/shaking.py,sha256=hHmhqMRHzeFIdga9c03vJg_7NZeWxtneSAM8JWjeCqY,1893
+html_tree_shaking/.bin/html-tree-shaking-linux,sha256=DxytauYIdDXtclLt3z65-PM_uHFAIj6r8bToXLodtEg,127673857
+html_tree_shaking-1.0.7.dist-info/METADATA,sha256=1Vas3Erd5kvZblVHxDg5hfLqTM0Jx2sFYdigtqoQCOQ,248
+html_tree_shaking-1.0.7.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+html_tree_shaking-1.0.7.dist-info/top_level.txt,sha256=v6NSAy8VSsiLrsLE_sY7tZJHy0--6YKU-5XMwyAEN70,18
+html_tree_shaking-1.0.7.dist-info/RECORD,,
