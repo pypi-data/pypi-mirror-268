@@ -1,0 +1,10 @@
+asyncirc/__init__.py,sha256=r_D-6Bb2GmQ8ig-ZglEQccviccBLbWVLqBLNFU56_4w,93
+asyncirc/protocol.py,sha256=33RFdllX6R-4MmhzdMocAyyRZID_4aF3TNnDfoDR7os,16102
+asyncirc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asyncirc/server.py,sha256=Q9LlLFRomXkMk6ayh_KCYuBkMW9S099x4I0ZYnnIILw,4603
+asyncirc/util/__init__.py,sha256=oDHgs7sXB2Ml2lGCXbPEmhlU1f1quORRbc6GoQgmhrY,60
+asyncirc/util/backoff.py,sha256=UUmllseW_A4Au_iEilZyIDJ7Rfh9zoTKQv0115Riq68,1402
+async_irc-0.2.0.dist-info/METADATA,sha256=peKfVaxH_HUXtS97M0qpWcbt1Wr0LG8YdijdJj2gZGU,1716
+async_irc-0.2.0.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+async_irc-0.2.0.dist-info/licenses/LICENSE,sha256=LyVFcZFMUBL9WQitg8YfziwPg_SQ20yr19ZDcN3zgvc,1064
+async_irc-0.2.0.dist-info/RECORD,,
