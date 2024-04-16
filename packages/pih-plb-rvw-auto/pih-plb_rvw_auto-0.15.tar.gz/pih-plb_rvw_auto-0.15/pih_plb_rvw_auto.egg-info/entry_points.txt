@@ -1,0 +1,2 @@
+[console_scripts]
+pih-plb_rvw_auto = PolibasePersonReviewAutomationService.__main__:start
