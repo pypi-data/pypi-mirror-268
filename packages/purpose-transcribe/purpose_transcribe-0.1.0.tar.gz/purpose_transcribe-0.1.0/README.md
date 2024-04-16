@@ -1,0 +1,51 @@
+# Purpose Transcribe
+A CLI tool for transcribing audio.
+## Installation
+install Purpose Transcribe via pip:
+```bash 
+pip install purpose_transcribe
+```
+## Usage
+To use the tool, navigate to the directory containing your audio files and run:
+```bash
+purpose_transcribe your_audio_file_name.zip
+```
+This will transcribe the specified zip file and output transcriptions in the same directory.
+
+
+## For only technical Update of the Package
+This should only done if there is need to upgrade or update the codebase for this project. 
+
+### 1. Software Package Upgrade
+
+Before you attempt to upgrade this package to PyPI, make sure to:
+
+- Validate all dependencies are correctly listed and installable.
+- Test the package in a clean Python environment (using virtual environments) to ensure it installs and runs as expected.
+- Ensure the package information (like the author name, version, and description) is accurate and reflective in the project.
+
+### 2. Building and Uploading to PyPI
+
+Build the package:
+```bash
+python -m pip install --upgrade build
+python -m build
+```
+
+This will generate distribution files in the dist/ directory.
+Upload the package to PyPI: First, install Twine:
+
+```bash
+python -m pip install --upgrade twine
+```
+Then, upload the contents of the dist directory:
+```bash
+python -m twine upload dist/*
+```
+You will need a PyPI account to upload. Enter your username and password as prompted.
+Verify Installation
+Once uploaded, you can install your package using:
+
+```bash
+pip install your_package
+```

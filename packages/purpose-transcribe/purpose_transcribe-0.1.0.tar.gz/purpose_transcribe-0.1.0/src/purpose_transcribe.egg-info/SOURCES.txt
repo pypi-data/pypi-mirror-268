@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+src/purpose_transcribe.egg-info/PKG-INFO
+src/purpose_transcribe.egg-info/SOURCES.txt
+src/purpose_transcribe.egg-info/dependency_links.txt
+src/purpose_transcribe.egg-info/entry_points.txt
+src/purpose_transcribe.egg-info/requires.txt
+src/purpose_transcribe.egg-info/top_level.txt
