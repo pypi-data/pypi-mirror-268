@@ -1,0 +1,9 @@
+
+#
+#	rm -rf modules_pip && pip install -r modules_pip.UTF8 -t modules_pip
+#
+
+flask==3.0.3
+click==8.1.7
+rich==13.7.1
+requests==2.31.0
