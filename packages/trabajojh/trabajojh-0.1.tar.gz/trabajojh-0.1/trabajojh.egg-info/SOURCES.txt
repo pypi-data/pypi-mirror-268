@@ -1,0 +1,9 @@
+README.md
+setup.py
+trabajojh/__init__.py
+trabajojh/cal.py
+trabajojh/config.py
+trabajojh.egg-info/PKG-INFO
+trabajojh.egg-info/SOURCES.txt
+trabajojh.egg-info/dependency_links.txt
+trabajojh.egg-info/top_level.txt
