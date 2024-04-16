@@ -1,0 +1,52 @@
+"""
+Setup script for the COGFlow package.
+
+This script defines the metadata and dependencies for the COGFlow package,
+which includes various COG modules for machine learning workflow management.
+
+Attributes:
+    name (str): The name of the package.
+    version (str): The version of the package.
+    author (str): The author of the package.
+    author_email (str): The email address of the author.
+    description (str): A brief description of the package.
+    packages (List[str]): A list of all packages to include.
+    install_requires (List[str]): A list of required dependencies for the package.
+    classifiers (List[str]): A list of classifiers for the package.
+    python_requires (str): The version of Python required by the package.
+
+"""
+
+from setuptools import setup, find_packages
+
+setup(
+    name="cogflow",
+    version="1.8.1",
+    author="Sai_kireeti",
+    author_email="sai.kireeti@hiro-microdatacenters.nl",
+    description="cog modules",
+    packages=find_packages(),
+    install_requires=[
+        "mlflow==2.10.2",
+        "kfp==1.8.22",
+        "boto3==1.34.73",
+        "tenacity==8.2.3",
+        "pandas==2.0.3",
+        "numpy==1.24.3",
+        "kubernetes==25.3.0",
+        "minio==7.2.5",
+        "scikit-learn==1.4.0",
+        "awscli==1.32.73",
+        "s3fs==0.4.2",
+        "setuptools",
+        "kserve==0.12.0",
+        "tensorflow",
+        "ray==2.9.3",
+    ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires=">=3.6",
+)
