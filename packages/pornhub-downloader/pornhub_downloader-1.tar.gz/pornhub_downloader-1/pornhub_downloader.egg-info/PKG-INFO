@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pornhub-downloader
+Version: 1
+Summary: This Package For Download Videoas From PornHub and Xnxx
+Author: m3ghos
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+
+# HOW TO USE THE PORNHUB DOWNLOADER
+
+
+----------
+
+### Example : 
+```python
+from PornHubV8 import deep_link
+download = deep_link(url='#insert url here')
+print(download)
+```
+----------
+**TELEGRAM :** **[mighoDEV](https://t.me/mighoDEV)**
+
+**INSTAGRAM :** **[@M3GHOS](https://instagram.com/m3ghos)**
