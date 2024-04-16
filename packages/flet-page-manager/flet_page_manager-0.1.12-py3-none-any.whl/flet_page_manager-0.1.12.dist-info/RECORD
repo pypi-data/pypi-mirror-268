@@ -1,0 +1,11 @@
+.gitignore,sha256=zbyuFRBda3geYggTx5x-hodA1OnMU85vX8u8Ejh630s,2
+flet_page_manager-0.1.12.dist-info/METADATA,sha256=SfoymmXjuJtxG7Gt-okt6z-UDIFBY9_nlvS216jxR1w,461
+flet_page_manager-0.1.12.dist-info/WHEEL,sha256=gZRWN_1fGFDwBnXrZ9N3dgvbKlKgo5AUcDIMajlGpKM,90
+page_manager/__init__.py,sha256=YmD4uk7wYmcpLaVG4H0B9OK8TUA-jHgCvrz0-nZjZZg,220
+page_manager/exception.py,sha256=fKn5YosQLNXgCjMWq5HeNFCf3qiqXlDb7oD4OdDlip4,121
+page_manager/manager.py,sha256=JJ-fomC2Dt3QI9kTX4wZtYydkMS-0nGflR_xW2vy3HM,2972
+page_manager/pages/__init__.py,sha256=otvgMgIQu5PAV7N5UAV4NUdde0qGqTIM5shRiOTimhY,51
+page_manager/pages/base.py,sha256=VDlJ7vyOiO-qdvj2toPgyrxas-ROUdhqrqGDTv1DzIA,692
+page_manager/state.py,sha256=d19cHVOBfkEfvpPQ3yP_BupzEklj6C1IJ5xAH9wDToM,270
+page_manager/utils.py,sha256=Oej3zKL1sYFWCwaAueFwtXeuBUrh22j1qAtgcDGcRB4,211
+flet_page_manager-0.1.12.dist-info/RECORD,,
