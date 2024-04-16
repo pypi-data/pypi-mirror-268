@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+Mojo2py.egg-info/PKG-INFO
+Mojo2py.egg-info/SOURCES.txt
+Mojo2py.egg-info/dependency_links.txt
+Mojo2py.egg-info/top_level.txt
+mojo2py/__init__.py
+mojo2py/mojo.json
+mojo2py/mojo2py.py
