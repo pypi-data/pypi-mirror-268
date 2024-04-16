@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: heiwa4126.fizzbuzz
+Version: 0.0.11
+Summary: A simple fizzbuzz generator
+Author: heiwa4126
+Author-email: heiwa4126@gmail.com
+License: MIT License
+        
+        Copyright (c) 2024 heiwa4126@gmail.com
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Repository, https://github.com/heiwa4126/pip-heiwa4126-fizzbuzz.git
+Project-URL: Homepage, https://github.com/heiwa4126/pip-heiwa4126-fizzbuzz#readme
+Keywords: fizzbuzz,demo
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# heiwa4126.fizzbuzz (pip-heiwa4126-fizzbuzz)
+
+`heiwa4126.fizzbuzz` は Python 用の FizzBuzz ジェネレータパッケージです。
+
+このプロジェクトは PyPI と GitHub Copilot の練習です。
+
+## インストール
+
+```sh
+pip install heiwa4126.fizzbuzz
+```
+
+(名前空間パッケージなので、それとわかるよう区切りに `.` を使っています)
+
+## 使用方法
+
+このパッケージは、FizzBuzz のジェネレータを提供します。以下のように使用できます:
+
+```python
+from heiwa4126.fizzbuzz import fizzbuzz
+
+for item in fizzbuzz(15):
+    print(item)
+
+# or
+print("\n".join(fizzbuzz(15)))
+```
+
+このコードは、1 から始まり、"Fizz"、"Buzz"、または "FizzBuzz" を適切に出力します。
+
+## GitHub Copilot
+
+このコードのひな形は GitHub Copilot を使って以下のプロンプトで作りました。
+
+```text
+@workspace /new fizzbuzzを生成するpythonプロジェクト。pypiで配布可能なディレクトリ構成で、プロジェクト名はheiwa4126_fizzbuzz。fizzbuzzはジェネレータで実装。
+```
+
+## 開発メモ
+
+[煩雑な開発メモは GitHub で](https://github.com/heiwa4126/pip-heiwa4126-fizzbuzz/blob/main/docs/development-note.md) 見てね。
