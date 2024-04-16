@@ -1,0 +1,36 @@
+# Templae for daily habit tracker files.
+#
+# ^ = [[template]]
+# < = [[done_log.zot]]
+# > = [[day_log.zot]]
+
+{% set day_after = date + dt.timedelta(days=1) -%}
+{% set day_before = date - dt.timedelta(days=1) -%}
+## Habits | {{ date.strftime('%Y-%m-%d.%a') }}
+##
+## ^ = [[{{ date.strftime("%Y/%Y%m%d") }}]]
+## < = [[{{ day_before.strftime('%Y/%Y%m%d') }}_habit]]
+## > = [[{{ day_after.strftime('%Y/%Y%m%d') }}_habit]]
+## @ = [[habit_log.zot]]
+##
+## 0 = [[{{ date.strftime('%Y/%Y%m%d') }}_day]]
+
+meds: ? / ?
+run (miles): ? / ?
+time_of_1st_pomodoro: ????
+wfo: ? / ?
+======= CL
+R0 bounces: ? / ?
+RN bounces: ? / ?
+submits:    ? / ?
+======= pm routine
+brush teeth:  ? / ?
+rubber bands: ? / ?
+======= pomodoros
+all:  ? / ?
+work: ? / ?
+overflow: ? / ?
+
+######### Expenses
+
+total: 0.00 / 0.00
