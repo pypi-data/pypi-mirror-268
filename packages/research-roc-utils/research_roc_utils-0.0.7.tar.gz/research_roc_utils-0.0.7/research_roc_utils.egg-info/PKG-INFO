@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: research-roc-utils
+Version: 0.0.7
+Summary: Utility functions to assist in the computation of ROC curve comparisons based on academic research.
+Home-page: https://github.com/jpbruehw/research-roc-utils
+Author: JP Bruehwiler
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: matplotlib>=3.8.4
+Requires-Dist: scikit-learn>=1.4.2
+Requires-Dist: scikits.bootstrap==1.1.0
+Requires-Dist: scipy>=1.13.0
+Requires-Dist: scikit-learn>=1.4.2
