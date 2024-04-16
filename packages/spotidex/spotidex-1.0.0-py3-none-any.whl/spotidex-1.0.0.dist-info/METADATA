@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: spotidex
+Version: 1.0.0
+Summary: Spotify Downloader TUI
+Home-page: https://github.com/libin-codes/spotidex
+License: MIT
+Keywords: spotify,downloader,spotidex,music
+Author: Libin Lalu
+Author-email: libinlalu000@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mutagen (==1.47.0)
+Requires-Dist: pyperclip (==1.8.2)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: rich (==13.7.1)
+Requires-Dist: spotipy (==2.23.0)
+Requires-Dist: textual (==0.56.4)
+Requires-Dist: tqdm (==4.66.1)
+Requires-Dist: yt-dlp (==2024.3.10)
+Requires-Dist: ytmusicapi (==1.3.2)
+Project-URL: Repository, https://github.com/libin-codes/spotidex.git
+Description-Content-Type: text/markdown
+
+# Spotidex ‎ [![PyPI - Version](https://img.shields.io/pypi/v/spotidex.svg)](https://pypi.org/project/spotidex) [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/spotidex.svg)](https://pypi.org/project/spotidex)
+
+
+Spotidex is a cutting-edge powerful TUI app build using textual which is designed to enhance your Spotify experience. 
+
+With an intuitive and user-friendly interface, Spotidex allows you to effortlessly download your favorite Spotify songs by simply pasting the Spotify link. Liberate your music and take it with you wherever you go, even when offline.
+
+Spotidex supports a wide range of Spotify links, enabling 
+users to download playlists, individual tracks, and entire albums effortlessly.
+
+https://github.com/libin-codes/spotidex/assets/129957992/dc1e20e2-3cb8-4385-bde4-e81bdc5c35b7
+
+## Installation
+
+Install Spotidex via pipx:
+
+```console
+pipx install spotidex
+```
+
+if you dont have pipx installed then install via: 
+
+```console
+pip install pipx
+```
+
+## Usage
+
+After you have installed spotidex , you can run it by typing spotidex in your terminal 
+
+![](https://github.com/libin-codes/spotidex/assets/129957992/40102e8a-6369-455d-95c6-4d7a53ffbcd4)
+
+
+## Compatibility
+
+Spotidex runs on Linux, macOS, and Windows. Spotidex requires Python 3.8 or above.
+
+## Disclaimer !!!
+
+Spotidex uses YouTube as a source for music downloads. This method is used to avoid any issues related to downloading music from Spotify.
+
+Users are responsible for their actions and potential legal consequences. We do not support unauthorized downloading of copyrighted material and take no responsibility for user actions.
+
+## License
+
+`spotidex` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
