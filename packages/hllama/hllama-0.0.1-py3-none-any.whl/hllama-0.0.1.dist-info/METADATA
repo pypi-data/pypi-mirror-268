@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: hllama
+Version: 0.0.1
+Summary: hllama provides some useful utility functions for LLM.
+Home-page: https://github.com/deep-diver/llmtoolbox
+Author: chansung park
+Author-email: deep.diver.csp@gmail.com
+Keywords: LLM,Large Language Model,Verification,Utility
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# hllama
