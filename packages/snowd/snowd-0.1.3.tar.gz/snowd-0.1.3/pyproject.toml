@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "snowd"
+version = "0.1.3"
+description = ""
+authors = ["David Gallay <david.gallay@nagra.com>"]
+readme = "README.md"
+packages = [{include = "snowd", from="."}]
+
+# [tool.poetry.scripts]
+# snowd = "snowd.__main__:main"
+
+# [tool.setuptools.dynamic]
+# version = {attr = "nagra_network_misc_utils.__version__"}
+
+[tool.poetry.dependencies]
+# https://stackoverflow.com/questions/65945929/poetry-how-to-publish-project-packages-targeting-multiple-python-versions
+python = ">=3.9.0,<4.0.0"
+nagra-network-misc-utils = "0.2.2"
+pysnow = "^0.7.17"
+gitpython = "^3.1.40"
+pyyaml = "^6.0.1"
+pydantic = "^2.5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
