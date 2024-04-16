@@ -1,0 +1,9 @@
+dcnum>=0.17.2
+h5py<4,>=3.0.0
+numpy<2,>=1.21
+
+[cli]
+click>=8
+
+[gui]
+pyqt6
