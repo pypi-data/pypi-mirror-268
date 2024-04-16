@@ -1,0 +1,15 @@
+argstruct/__init__.py,sha256=k7slQw1DM9D1XB469WOobVVCQ8QHEAnN1WgRgBYVTAI,6832
+argstruct/documentation.py,sha256=XYxcwN1xLDssHeL4r_aXdAeE489qm08FHKxSHxSHydU,8530
+argstruct/object.py,sha256=hBNUEYdzO-sPznZbU2y_6gUYkXD66FuXVjiC4PIwb-g,10391
+argstruct/specs/DO_NOT_EDIT_THESE.md,sha256=HrqHtnUS54oahN19u1UqiHNiearYXS5gVy0N8NJUxC4,129
+argstruct/specs/argmap.command.args-root.spec,sha256=4xnIO_4O6CHiKzCyDpWoNgslxCK0ByWfifvp-A44c6g,601
+argstruct/specs/argmap.command.args.spec,sha256=ygoKKhT_HchIyf0zsAJ9Ha6LdJlXQcXzpu5iOO5X9n4,1353
+argstruct/specs/argmap.command.spec,sha256=4gz3gd3Q0kTZSJHXV1_yLJWqTCIZ4wK-2p8CmiCfG54,1122
+argstruct/specs/argmap.commands.spec,sha256=nkLyZhxQdaH5AXXBLRZ0yQxYZ4g4VTKX8nn3R-bA2f8,256
+argstruct/specs/argmap.root.spec,sha256=hlxnEBXgZTJ0z0TRFsPqfNqFDGzyA7MH3EtwdJuETG8,495
+argstruct-1.1.0.dist-info/LICENSE.md,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+argstruct-1.1.0.dist-info/METADATA,sha256=VCBFQ-1yb3dJuGm2d_Vky1G5bUvvnuGi6PYz_H-0EmM,10063
+argstruct-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+argstruct-1.1.0.dist-info/entry_points.txt,sha256=NO7PsJKKfYIt2hg_v4zzatXQ49b7rqfjmfkfPO8D0Bo,62
+argstruct-1.1.0.dist-info/top_level.txt,sha256=2udlf44TqzYZJk0oiBoo97BBvZ5f-iaevGjxWSgbw-Y,10
+argstruct-1.1.0.dist-info/RECORD,,
