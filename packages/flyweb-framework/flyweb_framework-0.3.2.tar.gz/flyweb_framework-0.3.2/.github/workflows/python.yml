@@ -1,0 +1,24 @@
+name: Run tests
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eifinger/setup-rye@v2
+      - name: Pin python-version ${{ matrix.python-version }}
+        run: rye pin ${{ matrix.python-version }}
+      - name: Bootstrap dependencies
+        run: ./bootstrap
+      - name: Run tests
+        run: rye test
+      - name: Run pre-commit
+        run: misc/run_precommit

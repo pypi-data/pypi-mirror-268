@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#
+# Installs dev tools and pre-requisites.
+
+set -o errexit
+
+function check_rye {
+  echo "checking rye..."
+  if ! command -v rye &>/dev/null; then
+    if [ -d "$HOME/.rye" ]; then
+      echo "found $HOME/.rye/, but is not in PATH"
+      exit 1
+    fi
+    echo "rye not found, please install it with:"
+    echo
+    echo "  curl -sSf https://rye-up.com/get | bash"
+    echo
+    echo "See: https://rye-up.com/guide/installation"
+    exit 1
+  fi
+  echo "rye found!"
+}
+
+function main {
+  check_rye
+  rye sync --features server
+  rye run playwright install chromium
+  rye run pre-commit install -t pre-push
+}
+
+cd "$(dirname "${BASH_SOURCE[0]}")"
+main
