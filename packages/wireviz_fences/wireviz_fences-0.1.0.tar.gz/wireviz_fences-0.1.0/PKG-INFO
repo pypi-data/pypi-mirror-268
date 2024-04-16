@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: wireviz_fences
+Version: 0.1.0
+Summary: Top-level package for Wireviz Fences.
+Home-page: https://github.com/petrilli/wireviz_fences
+License: MIT
+Author: Christopher Petrilli
+Author-email: petrilli@amber.org
+Requires-Python: >=3.7,<4
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: wireviz (<1.0)
+Description-Content-Type: text/markdown
+
+# Wireviz Fences
+
+Support for Wireviz notation inside of superfences.
+
+# Features
+
+* Basic support and rendering inline of SVG version of the
+  [Wireviz](https://github.com/wireviz/WireViz) diagram. This
+  is done in the most basic fashion, but it plugs the pieces together.
+
+## Usage
+
+This is mostly for use with MkDocs, and you can add it to your configuration
+(`mkdocs.yml`) with:
+
+```yaml
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: wireviz
+          class: wireviz
+          format: !!python/name:wireviz_fences.fence_wireviz
+```
+
+You can then mark your fenced area with `wireviz` and it will automatically
+be formatted correctly.
+
