@@ -1,0 +1,11 @@
+autofff/__init__.py,sha256=qlGXalmgIVNURVH-N83Bjgujk6aQJvxhKJzIzsD4UVg,67
+autofff/__main__.py,sha256=Jwxq1YVVgGq4avBNixDZ5aZEN8VaPtVmYBpFqceRl9A,4613
+autofff/config.py,sha256=cgY8dw6KGeikDzyD3hEnyO8HUfhjkeumA4QsfzvZqhA,4250
+autofff/generator.py,sha256=NWKjtWBDEdM33FdnmJzee66HGtteQVnkJ01rbLUy2p8,7950
+autofff/scanner.py,sha256=Hn2WYuIubc68tSykCgoIIygTWviNHufOE9PRzgMrq5s,12462
+autofff/utils.py,sha256=8DEACmw1wZMN_BUflSGNKg5OOh2oqn7uT-FXkEe-eh4,4026
+autofff-0.5.dist-info/LICENSE,sha256=JTJAvbe6XircoO_FK4-LFQj8gaf59WsAVISLJTkHo2k,1071
+autofff-0.5.dist-info/METADATA,sha256=HvMBd-s1jVA0Ntc-pHeeHb2pYbnO4SMUiWxK35cBJwk,10960
+autofff-0.5.dist-info/WHEEL,sha256=kLuE8m1WYU0Ig0_YEGrXyTtiJvKPpLpDEiChiNyei5Y,88
+autofff-0.5.dist-info/entry_points.txt,sha256=LQIyYJpKeNKW7R9tgTzB0biGawsbMkZzPKQJoNYvdoM,49
+autofff-0.5.dist-info/RECORD,,

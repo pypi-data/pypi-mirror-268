@@ -1,0 +1,3 @@
+[console_scripts]
+autofff=autofff.__main__:main
+
