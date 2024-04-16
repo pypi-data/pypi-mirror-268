@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: yaml-plugin
+Version: 1.0.0
+Summary: A plugin for SnakeYAML version information
+Author: lalala
+Author-email: lalala@gmail.com
+Requires-Dist: pandas
+
