@@ -1,0 +1,4 @@
+[console_scripts]
+dataconverter = pynxtools.dataconverter.convert:main_cli
+generate_eln = pynxtools.eln_mapper.eln_mapper:get_eln
+read_nexus = pynxtools.nexus.nexus:main
