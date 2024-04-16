@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hazwaz"
+authors = [
+    {name = "Elena ``of Valhalla'' Grandi", email = "valhalla@trueelena.org"},
+]
+description = "A command line scripts framework"
+readme = "README.rst"
+requires-python = ">= 3.9"
+license = {text = "AGPLv3+"}
+keywords = ["cli"]
+classifiers = [
+    'Development Status :: 3 - Alpha',                     
+    'Environment :: Console',                              
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+    'Operating System :: POSIX',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Software Development :: User Interfaces',
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://hazwaz.trueelena.org/"
+Documentation = "https://hazwaz.trueelena.org/"
+Repository = "https://git.sr.ht/~valhalla/hazwaz"
+Source = "https://git.sr.ht/~valhalla/hazwaz"
+Issues = "https://todo.sr.ht/~valhalla/hazwaz"
+Tracker = "https://todo.sr.ht/~valhalla/hazwaz"
+Changelog = "https://git.sr.ht/~valhalla/hazwaz/tree/master/item/CHANGELOG.rst"
+
+[tool.setuptools_scm]
+version_file = "hazwaz/_version.py"
