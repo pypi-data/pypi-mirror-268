@@ -1,0 +1,6 @@
+setup.py
+speech_mongo_training_tools.egg-info/PKG-INFO
+speech_mongo_training_tools.egg-info/SOURCES.txt
+speech_mongo_training_tools.egg-info/dependency_links.txt
+speech_mongo_training_tools.egg-info/requires.txt
+speech_mongo_training_tools.egg-info/top_level.txt

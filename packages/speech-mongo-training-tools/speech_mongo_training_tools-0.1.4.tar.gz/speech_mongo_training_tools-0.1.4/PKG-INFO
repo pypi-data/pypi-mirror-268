@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: speech-mongo-training-tools
+Version: 0.1.4
+Summary: Speech training status control
+Author: Tim Zhou
+Author-email: zhouyuntao110@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: pymongo
+Requires-Dist: logging
