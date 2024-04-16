@@ -1,0 +1,14 @@
+README.md
+setup.py
+yandex_music_utilities/__init__.py
+yandex_music_utilities/music_database.py
+yandex_music_utilities/tag_editor.py
+yandex_music_utilities/yandex_music_helper.py
+yandex_music_utilities/youtube_to_mp3_downloader.py
+yandex_music_utilities.egg-info/PKG-INFO
+yandex_music_utilities.egg-info/SOURCES.txt
+yandex_music_utilities.egg-info/dependency_links.txt
+yandex_music_utilities.egg-info/top_level.txt
+yandex_music_utilities/utils/__init__.py
+yandex_music_utilities/utils/file.py
+yandex_music_utilities/utils/wrappers.py
