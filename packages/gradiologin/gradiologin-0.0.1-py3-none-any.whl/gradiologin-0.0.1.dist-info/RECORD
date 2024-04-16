@@ -1,0 +1,12 @@
+gradiologin/__init__.py,sha256=Utsa632t16eHnkOZ4HhtcxSO_mN1zfA8HMauKUCY4N8,117
+gradiologin/button.py,sha256=ntmYRTuHDw2C_OcXIzNhNJxO-s-qsPSP5jxcaWNSHk4,14
+gradiologin/functions.py,sha256=1SFTCkJ4lNAOAa9P9xcpxnhRgBUl4An65Yc-TNFaHWE,659
+gradiologin/middleware.py,sha256=p27ej-hjKbZJjHMyar99RALw422u6qDXG2U4JYFqyeo,800
+gradiologin/oauth.py,sha256=A3n-3h75RhUrltGTGgmrOAgz77c35uowvhROcJ3yPUU,74
+gradiologin/register.py,sha256=LQVpe22MN4QOsrFBKAAvDPkIICm8cuIq3N4tXWiZm1w,791
+gradiologin/routes.py,sha256=kU8uFqlVla0kEQJngxYW94jCy7x67yg--_O3-g5XeIU,1107
+gradiologin-0.0.1.dist-info/LICENSE,sha256=Bzkj3351nq-tP-PtngFAw6nAQ4nyNj8IhNT-esR70-s,1060
+gradiologin-0.0.1.dist-info/METADATA,sha256=JvoJNzXX3iCWoNZSde9wjn9Zp-HQqXVp7nT4p_tQ65E,2223
+gradiologin-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gradiologin-0.0.1.dist-info/top_level.txt,sha256=pmUuI3jpf95dHyEYiKRtBlazI0mQ04teYLUtLpbpmZ4,12
+gradiologin-0.0.1.dist-info/RECORD,,
