@@ -1,0 +1,3 @@
+[console_scripts]
+vbgpt=vbgpt.main:main
+
