@@ -1,0 +1,9 @@
+# docs/requirements.txt
+numpydoc
+numpy
+sphinx
+matplotlib
+lmfit
+scipy
+astropy
+h5py
