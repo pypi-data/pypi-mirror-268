@@ -1,0 +1,2 @@
+[llm]
+bedrock_mistral = llm_bedrock_mistral
