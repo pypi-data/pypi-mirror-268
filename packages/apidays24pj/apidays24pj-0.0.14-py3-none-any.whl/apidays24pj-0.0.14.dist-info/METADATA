@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: apidays24pj
+Version: 0.0.14
+Summary: @vianho/apidays24pj
+Home-page: https://github.com/vianho/projen-projects
+Author: Silviana<email@example.com>
+License: Apache-2.0
+Project-URL: Source, https://github.com/vianho/projen-projects
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: ~=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: constructs <11.0.0,>=10.3.0
+Requires-Dist: jsii <2.0.0,>=1.97.0
+Requires-Dist: projen <0.82.0,>=0.81.0
+Requires-Dist: publication >=0.0.3
+Requires-Dist: typeguard ~=2.13.3
+
+# Projen-Projects
