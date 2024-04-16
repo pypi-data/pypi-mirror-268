@@ -1,0 +1,5 @@
+torch
+lightning
+scipy
+numpy
+torchmetrics
