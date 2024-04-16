@@ -1,0 +1,14 @@
+pymysqls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymysqls/DB/DB.py,sha256=yq_ZMiQv9_l8mfogVLUj8G2-areyiLtxMebW0OQPSPc,755
+pymysqls/DB/ST.py,sha256=wtezEArtG8uqp_jmsELF0NhUmF5E4oM4hDY8Pu45NWU,908
+pymysqls/DB/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymysqls/OTHER/MAIN.iu.py,sha256=CC5_nxGOiKF-PD-7RV1P5o3b11pdZFaDQp6C3j8vu7I,8287
+pymysqls/OTHER/TESTW.iu.py,sha256=GYwh0-K3QsYW4IP_11cSfIyhAlXvmCefFKiCwF3MNfE,2143
+pymysqls/OTHER/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymysqls/TESTS/MAIN.py,sha256=jfu2i90yaakIfTul5z2xz3LSQs68pDWZxbInkLp7Pts,2869
+pymysqls/TESTS/TESTW.py,sha256=upVklPCWTpNr6vaAZsyZoxuryVf5IDGfFX_ubhY1v38,788
+pymysqls/TESTS/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymysqls-5.1.1.dist-info/METADATA,sha256=miz4Cd01G6DRMOI9WDI9bkPfd4-xpBuMw5YmfzhyuOs,148
+pymysqls-5.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pymysqls-5.1.1.dist-info/top_level.txt,sha256=27dw792Ef4pcjtZ5hepwZlHl_z2UnAIzlqx33t9OyZs,9
+pymysqls-5.1.1.dist-info/RECORD,,
