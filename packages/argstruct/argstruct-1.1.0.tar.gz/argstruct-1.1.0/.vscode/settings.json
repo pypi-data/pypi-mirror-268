@@ -1,0 +1,5 @@
+{
+    "python.defaultInterpreterPath": "/data/venv/python-argstruct/bin/python",
+    "pylint.importStrategy": "fromEnvironment",
+    "mypy-type-checker.importStrategy": "fromEnvironment"
+}
