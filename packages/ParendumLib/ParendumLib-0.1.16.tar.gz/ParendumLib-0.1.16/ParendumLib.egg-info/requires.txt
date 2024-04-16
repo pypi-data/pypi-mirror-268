@@ -1,0 +1,11 @@
+fastapi
+requests
+motor
+pydantic
+aiohttp
+python-multipart
+fastapi-sessions
+itsdangerous
+pyotp
+jinja2
+pillow
