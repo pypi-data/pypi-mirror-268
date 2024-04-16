@@ -1,0 +1,8 @@
+README.md
+setup.py
+prosperity2/__init__.py
+prosperity2/main.py
+prosperity2.egg-info/PKG-INFO
+prosperity2.egg-info/SOURCES.txt
+prosperity2.egg-info/dependency_links.txt
+prosperity2.egg-info/top_level.txt
