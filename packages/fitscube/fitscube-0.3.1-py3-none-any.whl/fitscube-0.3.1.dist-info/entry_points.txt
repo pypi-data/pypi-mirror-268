@@ -1,0 +1,4 @@
+[console_scripts]
+fitscube=fitscube.fitscube:cli
+stokescube=fitscube.stokescube:cli
+
