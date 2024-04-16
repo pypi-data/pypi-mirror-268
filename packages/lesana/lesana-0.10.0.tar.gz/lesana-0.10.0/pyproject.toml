@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lesana"
+authors = [
+    {name = "Elena ``of Valhalla'' Grandi", email = "valhalla@trueelena.org"},
+]
+description = "Manage collection inventories throught yaml files."
+readme = "README.rst"
+requires-python = ">= 3.8"
+license = {text = "AGPLv3+"}
+keywords = ["collection", "inventory"]
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Environment :: Console',
+    'Intended Audience :: Developers',
+    'Intended Audience :: End Users/Desktop',
+    'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+    'Operating System :: POSIX',
+    "Programming Language :: Python :: 3",
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Utilities',
+    ]
+dependencies = [
+    "ruamel.yaml",
+    "jinja2",
+    "python-dateutil",
+    #"xapian >= 1.4",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+cli = [
+    "hazwaz",
+]
+
+[project.scripts]
+lesana = "scripts.lesana:main"
+openlibrary2lesana = "scripts.openlibrary2lesana:main"
+tellico2lesana = "scripts.tellico2lesana:main"
+
+[project.urls]
+Homepage = "https://lesana.trueelena.org/"
+Documentation = "https://lesana.trueelena.org/"
+Repository = "https://git.sr.ht/~valhalla/lesana"
+Source = "https://git.sr.ht/~valhalla/lesana"
+Issues = "https://todo.sr.ht/~valhalla/lesana"
+Tracker = "https://todo.sr.ht/~valhalla/lesana"
+Changelog = "https://git.sr.ht/~valhalla/lesana/tree/master/item/CHANGELOG.rst"
+"Mailing lists" = "https://sr.ht/~valhalla/lesana/lists"
+
+[tool.setuptools_scm]
+version_file = "lesana/_version.py"
+
+[[tool.mypy.overrides]]
+module = [
+    "xapian",
+]
+ignore_missing_imports = true

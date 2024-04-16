@@ -1,0 +1,13 @@
+# A : in that position should result in invalid yaml
+name: '{{ name }}': some text
+description: |
+  {{ description if description else "." | indent(width=2, first=False) }}
+position: '{{ position }}'
+# # quantity (integer): how many items are there
+quantity: {{ quantity if quantity else "0" }}
+# # value (float): how much each item is
+value: 0.0
+# # cost (decimal): how much this costs
+cost: '0'
+# # other (yaml): 
+other:

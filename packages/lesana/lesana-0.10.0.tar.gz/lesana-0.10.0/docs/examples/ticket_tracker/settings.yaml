@@ -1,0 +1,36 @@
+name: Our tasks
+lang: english
+entry_label: '{{ short_id }}: {{ name }} [{{ status }}]'
+git: true
+search_aliases:
+  open: '(status:planned OR status:ready OR status:"in progress" OR status:comments)'
+  active: '(status:"in progress" OR status:comments)'
+  closed: '(status:done OR status:invalid)'
+fields:
+- name: name
+  type: string
+  prefix: S
+  index: free
+- name: description
+  type: text
+  index: free
+- name: status
+  type: text
+  index: field
+  sortable: true
+  values:
+    - planned
+    - ready
+    - in progress
+    - comments
+    - done
+    - invalid
+- name: assignee
+  type: string
+  index: field
+  help: insert your list of potential assignees here
+- name: comments
+  type: list
+  list: text
+  index: free
+

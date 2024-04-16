@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+
+import argparse
+import logging
+import os
+import sys
+
+import dateutil.parser
+import requests
+
+import lesana
+import lesana.command
+
+OPENAPI_BASE = "https://openlibrary.org"
+OPENAPI_ISBN_URL = OPENAPI_BASE + '/isbn/{isbn}.json'
+
+
+logger = logging.getLogger(__name__)
+
+
+class OL2L(lesana.command.Command):
+    """
+    Manage collections
+    """
+
+    arguments = [
+        (
+            ['--collection', '-c'],
+            dict(
+                help='Name of the lesana collection, default is .',
+                default='.',
+            ),
+        ),
+        (
+            ['--template', '-t'],
+            {
+                "help": "Template, "
+                + "default is templates/from_openlibrary.yaml",
+                "default": 'templates/from_openlibrary.yaml',
+            },
+        ),
+        (
+            ['isbn'],
+            {
+                'help': "ISBN of the book we want to search"
+            },
+        ),
+    ]
+
+    def _load_args(self):
+        self.parser = argparse.ArgumentParser()
+        for arg in self.arguments:
+            self.parser.add_argument(*arg[0], **arg[1])
+        self.args = self.parser.parse_args()
+
+    def main(self):
+        self._load_args()
+        self.collection = self.collection_class(
+            directory=self.args.collection
+        )
+
+        logging.info("Looking for %s on OpenLibrary", self.args.isbn)
+        res = requests.get(OPENAPI_ISBN_URL.format(isbn=self.args.isbn))
+
+        if res.status_code != 200:
+            logger.error("No such isbn found on openlibrary")
+            sys.exit(1)
+
+        edition = res.json()
+
+        langs = []
+        for l in edition.get("languages", []):
+            langs.append(l["key"].split("/")[-1])
+
+        pub_date = dateutil.parser.parse(edition.get("publish_date"))
+
+        authors = []
+        for aid in edition.get("authors", []):
+            logging.info("Retrieving %s from OpenLibrary", aid)
+            res = requests.get(OPENAPI_BASE + aid["key"] + ".json")
+            authors.append(res.json())
+
+        data = {
+            "edition": edition,
+            "langs": langs,
+            "pub_date": pub_date,
+            "authors": authors,
+        }
+
+        entry = self.collection.entry_from_rendered_template(
+            self.args.template,
+            data
+        )
+        filepath = os.path.join(self.collection.itemdir, entry.fname)
+        filepath = os.path.normpath(filepath)
+        if self.edit_file_in_external_editor(filepath):
+            self.collection.update_cache([entry.fname])
+            if self.collection.settings["git"]:
+                self.collection.git_add_files([filepath])
+        saved_entry = self.collection.entry_from_eid(entry.eid)
+        print(saved_entry)
+
+
+def main():
+    OL2L().main()
+
+
+if __name__ == '__main__':
+    main()

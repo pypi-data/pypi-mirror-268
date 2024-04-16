@@ -1,0 +1,14 @@
+name: 'Invalid category value'
+description: |
+  An entry where the category isn't in the list of valid values
+position: ''
+# # number (integer): Enter an integer here
+number: 0
+# # float (float): Enter a floating point number here
+float: 0.0
+# # price (decimal): prices are never float!
+price: '0'
+things: []
+# # cloud (cloud): There is no cloud type
+cloud:
+category: 'zeroeth'

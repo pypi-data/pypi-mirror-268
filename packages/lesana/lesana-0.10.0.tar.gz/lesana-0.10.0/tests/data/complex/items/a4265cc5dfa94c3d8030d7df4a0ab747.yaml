@@ -1,0 +1,17 @@
+name: 'Floaty price'
+description: |
+  An entry with the price stored as a float.
+position: ''
+something:
+tags: []
+keywords: []
+exists:
+with_default: 'default value'
+amount: 0
+order:
+created: 2021-12-23 15:32:22.100470+00:00
+updated: 2021-12-23 15:32:22.100486+00:00
+epoch:
+version: 0
+category: ''
+price: 1.90

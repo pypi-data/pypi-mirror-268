@@ -1,0 +1,14 @@
+name: 'Not a decimal'
+description: |
+  An entry with an invalid string for a decimal
+position: ''
+# # number (integer): Enter an integer here
+number: 0
+# # float (float): Enter a floating point number here
+float: 0.0
+# # price (decimal): prices are never float!
+price: 'nil, nada, nothing'
+things: []
+# # cloud (cloud): There is no cloud type
+cloud:
+category: ''

@@ -1,0 +1,32 @@
+title: '{{ edition.title }}'
+subtitle: ''
+authors: {% if authors %}{% for a in authors %}
+- {{ a.name }}{% endfor %}{% else %}[]{% endif %}
+editors: []
+binding: ''
+purchase_date: ''
+purchase_price: ''
+publisher: '{{ edition.publishers | join(", ") }}'
+edition: ''
+copyright_year: []
+publication_year: {{ pub_date.year }}
+isbn: '{% if edition.isbn_13 %}{{ edition.isbn_13.0 }}{% else %}{% if edition.isbn_10 %}{{ edition.isbn_10.0 }}{% endif %}{% endif %}'
+lccn: ''
+openlibrary: 'https://openlibrary.org{{ edition.key }}'
+pages: {{ edition.number_of_pages }}
+translators: []
+languages: {% if langs %}{% for l in langs %}
+- {{ l }}{% endfor %}{% else %}[]{% endif %}
+genres: []
+keywords: []
+series: ''
+series_number: 0
+condition: ''
+signed:
+read:
+gift:
+loaned:
+rating: 0
+cover: ''
+plot: ''
+comments: ''

@@ -1,0 +1,16 @@
+name: 'invalid owner'
+description: |
+  This entry has an owner that is not on the list of allowed owners.
+position: ''
+# # number (integer): Enter an integer here
+number: 0
+# # float (float): Enter a floating point number here
+float: 0.0
+# # price (decimal): prices are never float!
+price: '0'
+things: []
+# # cloud (cloud): There is no cloud type
+cloud:
+category: ''
+owners:
+  - them

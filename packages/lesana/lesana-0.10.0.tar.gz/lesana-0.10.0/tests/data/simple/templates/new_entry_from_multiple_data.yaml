@@ -1,0 +1,12 @@
+name: '{{ data.name }}'
+description: |
+  {{ description if description else "." | indent(width=2, first=False) }}
+position: '{{ data.position }}'
+# # quantity (integer): how many items are there
+quantity: {{ values.quantity if values.quantity else "0" }}
+# # value (float): how much each item is
+value: 0.0
+# # cost (decimal): how much this costs
+cost: '{{ values.cost if values.cost else "0.0" }}'
+# # other (yaml): 
+other:

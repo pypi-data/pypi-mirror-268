@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -e
+
+if [ $# -lt 1 ]
+then
+    $0 coverage
+    $0 typecheck
+    $0 qa
+    exit 0
+fi
+
+PYTHON="${PYTHON:-python3}"
+COVERAGE="${COVERAGE:-python3-coverage}"
+
+export PYTHONDEVMODE=1
+
+SUBCMD=$1
+shift 1
+
+case $SUBCMD in
+    "tests")
+        $PYTHON -m unittest discover -s tests
+        ;;
+    "coverage")
+        $COVERAGE run --source=lesana -m unittest discover -s tests
+        $COVERAGE report -m
+        ;;
+    "qa")
+        flake8 --select=E,F,W,C90,E123 --ignore=W503 lesana tests scripts
+        isort --check-only --diff .
+        if which doc8
+        then
+            doc8 .
+        fi
+        ;;
+    "typecheck")
+        mypy lesana
+        ;;
+    "static")
+        bandit --recursive --number=3 -lll -iii .
+        ;;
+    *)
+        echo "No such subcommand $SUBCMD"
+        ;;
+esac
