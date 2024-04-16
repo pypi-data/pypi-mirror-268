@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+phenopype_plugins/__init__.py
+phenopype_plugins/utils.py
+phenopype_plugins.egg-info/PKG-INFO
+phenopype_plugins.egg-info/SOURCES.txt
+phenopype_plugins.egg-info/dependency_links.txt
+phenopype_plugins.egg-info/requires.txt
+phenopype_plugins.egg-info/top_level.txt
+phenopype_plugins/plugins/measurement.py
+phenopype_plugins/plugins/segmentation.py
