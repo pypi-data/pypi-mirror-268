@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/main.py
+src/qoria_ujson.egg-info/PKG-INFO
+src/qoria_ujson.egg-info/SOURCES.txt
+src/qoria_ujson.egg-info/dependency_links.txt
+src/qoria_ujson.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+[project]
+name = "qoria-ujson"
+version = "0.0.1"
+authors = []
+description = "A placeholder package"
+readme = "README.md"
+requires-python = ">=3.8"
