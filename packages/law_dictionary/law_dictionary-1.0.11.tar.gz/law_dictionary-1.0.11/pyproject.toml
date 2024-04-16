@@ -1,0 +1,39 @@
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "law_dictionary"
+version = "1.0.11"
+description = "JSON dictionary variable checks"
+authors = []
+readme = "readme.md"
+
+packages = [
+    { include = "law_dictionary", from = "venues/stages" }
+]
+exclude = []
+include = [ "*.HTML", "*.html", "*.JSON", "*.json" ]
+
+license = "GPL-3.0-only"
+
+keywords = []
+
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+factory-farm = "^1.2.3"
+click = "^8.1.7"
+
+
+[tool.poetry.urls]
+GitLab = "https://gitlab.com/offline-money/squash-1/law_dictionary"
+
+
+
