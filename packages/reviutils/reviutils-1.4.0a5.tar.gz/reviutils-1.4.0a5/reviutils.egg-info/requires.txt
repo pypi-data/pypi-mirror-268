@@ -1,0 +1,12 @@
+numpy
+pandas
+pydantic
+requests
+
+[audio]
+librosa
+soundfile
+torch
+torchaudio
+pydub
+starlette
