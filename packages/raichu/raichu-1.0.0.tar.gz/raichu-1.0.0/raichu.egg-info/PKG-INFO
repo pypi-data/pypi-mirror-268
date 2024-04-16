@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: raichu
+Version: 1.0.0
+Summary: RAIChU
+Author: Barbara Terlouw
+Author-email: barbara.r.terlouw@gmail.com
+License-File: LICENSE.txt
+Requires-Dist: matplotlib
+Requires-Dist: biopython==1.76
+Requires-Dist: pikachu-chem>=1.1.1
+
+A package to automatically draw natural product biosynthesis pathways.
