@@ -1,0 +1,3 @@
+[console_scripts]
+modelgauge=modelgauge.main:main
+
