@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: openapiopenai
+Version: 1.1.0
+Summary: OpenAI API
+Home-page: https://github.com/oapicf/openapi-openai
+Author: Cliffano Subagio
+Author-email: blah+oapicf@cliffano.com
+License: MIT
+Keywords: OpenAPI,OpenAPI-Generator,OpenAI API
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic (>=2)
+Requires-Dist: python-dateutil
+Requires-Dist: typing-extensions (>=4.7.1)
+Requires-Dist: urllib3 (<2.1.0,>=1.25.3)
+
+The OpenAI REST API. Please see https://platform.openai.com/docs/api-reference for more details.
+
+
