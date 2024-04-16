@@ -1,0 +1,3 @@
+[console_scripts]
+source-sendgrid=source_sendgrid.run:run
+
