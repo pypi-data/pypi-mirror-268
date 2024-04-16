@@ -1,0 +1,16 @@
+catppuccin_jupyterlab/__init__.py,sha256=lz8Tvkofok66nQ0cjIMpgY3oO5s_Tco7u1N1MTxGolo,600
+catppuccin_jupyterlab/_version.py,sha256=lVzH4hSQoCJO7HfQxfO6U4vnapq0YLOe_v2oi1HqiH8,171
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/package.json,sha256=ybuBcy1Of7m5bd4cB5MWx-YvTTOr2JBHxMp0TFFuE18,5673
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/schemas/catppuccin_jupyterlab/package.json.orig,sha256=vPAWfkK06arSM_r1hkNnOhNIp88PebiItdFsD3DH61k,6433
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/schemas/catppuccin_jupyterlab/plugin.json,sha256=kJqoY8xw8IdPNeB3Q3_EJodPh1FCRkD_vk1rav_mNuo,1113
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/static/649.d990bd40ed4bd0441591.js,sha256=2ZC9QO1L0EQVkeDMLn7DplBhstJd9iQiwwSvwdZcjCY,9252
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/static/remoteEntry.b3a8b3a1d29fe76e2c73.js,sha256=s6izodKf524sc6tSTbOZiVEAejYwLIMvsuZR9-9hM8E,6258
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/static/style.js,sha256=-CQt0ZTPaCTvrRiLcznxflAbfvIKlOVzjOos-muaXQ8,118
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/static/third-party-licenses.json,sha256=MNToQfru1YnHAie-2Virp23yWsc5co3qG0IzrO6SEfw,20
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/themes/catppuccin_jupyterlab/index.css,sha256=3u5uEaV5Nz1KuMEdqczfArxOydaUgvEFNSLxVqPoXTg,19543
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/themes/catppuccin_jupyterlab/index.js,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+catppuccin_jupyterlab-0.2.1.data/data/share/jupyter/labextensions/catppuccin_jupyterlab/install.json,sha256=eHCn9q_ZwIrWDz92_RSSOv_Uh2he5VZGJhOjIsaNmfA,203
+catppuccin_jupyterlab-0.2.1.dist-info/METADATA,sha256=rFRFcNsyYmgngl4CMk4Jw6qbRpISFlR56Bu-DrVMeNo,5985
+catppuccin_jupyterlab-0.2.1.dist-info/WHEEL,sha256=xl5aZkiJYVTjhVaiADvIe6UeUVylGNomrxKZ0Zda1CE,87
+catppuccin_jupyterlab-0.2.1.dist-info/licenses/LICENSE,sha256=gUCW0sNMwhbGJHOKSTVvMrcjdzO09-2waF9OUO9QdLo,1067
+catppuccin_jupyterlab-0.2.1.dist-info/RECORD,,
