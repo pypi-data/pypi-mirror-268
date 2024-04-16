@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mageic-common
+Version: 0.3.0
+Author: Gregory D. Hunkins
+Author-email: greg@ollano.com
+License: Copyright (C) (2024) Ollano, Inc. - All Rights Reserved
+        Unauthorized copying of these files, via any medium is strictly prohibited
+        Proprietary and confidential
+        
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: pydantic >=2.0.0
+
+# mageic-common
+Common lightweight data utilities for Mageic-based applications.
