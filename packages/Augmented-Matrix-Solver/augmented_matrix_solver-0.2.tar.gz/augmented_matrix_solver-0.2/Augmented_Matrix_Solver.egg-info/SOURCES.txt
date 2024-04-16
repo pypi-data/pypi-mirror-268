@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+Augmented_Matrix_Solver.egg-info/PKG-INFO
+Augmented_Matrix_Solver.egg-info/SOURCES.txt
+Augmented_Matrix_Solver.egg-info/dependency_links.txt
+Augmented_Matrix_Solver.egg-info/requires.txt
+Augmented_Matrix_Solver.egg-info/top_level.txt
+augmented_matrix/__init__.py
+augmented_matrix/augmented_matrix.py
+test/test_augmented_matrix.py
