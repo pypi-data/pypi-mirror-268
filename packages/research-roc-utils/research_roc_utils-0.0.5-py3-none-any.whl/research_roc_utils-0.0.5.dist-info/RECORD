@@ -1,0 +1,10 @@
+research_roc_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+research_roc_utils/bootstrap_p_val.py,sha256=pQeABns7KHhuhAnAsu6MPxFktupS_fRT3lkLX9AfGjQ,1365
+research_roc_utils/corr_coeff_table.py,sha256=ife9K7hPEbo9_ptT8DyxIWdkxy8x-VbeyVJHTjLyCCQ,5025
+research_roc_utils/helpers.py,sha256=4JfZzcu0h77r6fiWB-vgGDBHM5IhLJ0KxCj-rXJ8KJY,3155
+research_roc_utils/roc_utils.py,sha256=QmxMUgWY6u1PaX3WJQdUFb3Y4wJNattESO-yyTrUEo0,8394
+research_roc_utils-0.0.5.dist-info/LICENSE,sha256=NH8FGGvAVVMLzkoG_yBXl7wscpiR2MDcuqIhNhPVjk4,1080
+research_roc_utils-0.0.5.dist-info/METADATA,sha256=gZLZXMBaeZI7-QhIQcBV801ks0j1TmqL7krl53f0HUI,515
+research_roc_utils-0.0.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+research_roc_utils-0.0.5.dist-info/top_level.txt,sha256=nk9tghRXSSlmBwY37zBrYOmoJo0dEEbFcJxSsBHq0jI,19
+research_roc_utils-0.0.5.dist-info/RECORD,,
