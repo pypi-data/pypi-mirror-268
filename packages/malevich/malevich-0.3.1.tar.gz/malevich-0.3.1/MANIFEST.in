@@ -1,0 +1,5 @@
+include requirements.txt
+include VERSION
+recursive-include . *.yml
+recursive-include . *.yaml
+recursive-include . malevich/_templates/*
