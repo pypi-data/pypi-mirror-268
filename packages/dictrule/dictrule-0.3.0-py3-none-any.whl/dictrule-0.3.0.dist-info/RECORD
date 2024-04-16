@@ -1,0 +1,12 @@
+dictrule/__init__.py,sha256=KQLoHzOz11n88YVaGkw0JlOK7G4u9KH5kWsPJE8yU-8,1197
+dictrule/__version__.py,sha256=OtBXYCqPwjhNmNXbqlijbiQIgC7BACAk-HEkBUQIj4k,772
+dictrule/context.py,sha256=1btxQaMOaySfOg1UCkHz9lhI_-wH2_34TEWJ0--VNjc,2089
+dictrule/dr_property.py,sha256=c2vjGiuiAJk2aw6y8-EI4gFI2FE7j6Sir4NEydHiTA8,3801
+dictrule/exceptions.py,sha256=1c2FUudbBiImhf-DWLuKrdZficIasAWPhdKxOf0PFmE,243
+dictrule/generator.py,sha256=iWYeLDEEJgS9MTAFDVEMS0uZY3VJZIx_YLPid2MwgJc,4969
+dictrule/rule.py,sha256=lxVMUCRgWDPmJ8_E7tZzTlSGnwUc6BRsIMH8z4HvNQE,1584
+dictrule-0.3.0.dist-info/LICENSE,sha256=WmH5mUOzjRFbsyrnFKQ4JWCjF5tC0L-vmjgkgbr-DBc,1068
+dictrule-0.3.0.dist-info/METADATA,sha256=NSaSLJlzCurOLYBfdu0h_h-f3lFOBQ1-JmdrZaPSE9k,12356
+dictrule-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dictrule-0.3.0.dist-info/top_level.txt,sha256=QpGBAuh0wNNX55jfG_s-1iz8eQSFpXU7E_TDNzkLWoY,9
+dictrule-0.3.0.dist-info/RECORD,,
