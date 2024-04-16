@@ -1,0 +1,8 @@
+README.md
+setup.py
+stringformater03201/__init__.py
+stringformater03201/stringformater.py
+stringformatter03201.egg-info/PKG-INFO
+stringformatter03201.egg-info/SOURCES.txt
+stringformatter03201.egg-info/dependency_links.txt
+stringformatter03201.egg-info/top_level.txt
