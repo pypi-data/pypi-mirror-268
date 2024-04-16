@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: gfdlfremake
+Version: 0.1.3
+Summary: Implementation of fremake
+Author: Thomas Robinson, Dana Singh
+Author-email: gfdl.climate.mode.info@noaa.gov
+License-File: LICENSE.md
+Requires-Dist: pyyaml
+Requires-Dist: argparse
+Requires-Dist: jsonschema
