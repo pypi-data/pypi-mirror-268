@@ -1,0 +1,16 @@
+dqc/__init__.py,sha256=F8QIF0PWmT3mQWNClGe9YyazRnGGyXMNYiUMls9iECA,67
+dqc/base.py,sha256=jhPt_kRFSTpJL4Jgaq2c33qyxAwDsvK558uU2HK0Vt0,585
+dqc/crossval.py,sha256=AUUIslv6LWtKrmCbP3PuAKhrwc-IHP_7oteyHg6EZ60,14962
+dqc/utils/__init__.py,sha256=IOgm2MC_rgbQQ_v2ppFgQ4sa5WHyHJl__hStjVi8j54,329
+dqc/utils/_curation.py,sha256=BNevbEs9JIF5ZgGI9AmEtj4NRPJg7tmZkwgcaQsyi7I,7254
+dqc/utils/_dataprocessing.py,sha256=NSvKBpmmW-6WdYagN4XLfglShmYnpdgX7a7V7O4zjhM,4894
+dqc/utils/_sanitychecks.py,sha256=a9B2IqIBp0ZvTEx204fug2n3LSL78Rthc9YTFrfT6ro,4680
+dqc/utils/logging.py,sha256=95JVmKONxqZ9bLNmC4Wp_NpdwHEhLxHnohsRS_A9kjE,959
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=I734uIXV7NGjnameo6LMjk6uTcS0WZfael8AuxDMJnA,252
+tests/test_crossval.py,sha256=vELAdq3rpFWW30v3o2x2eyl8uLmGR5HfZWZ-3dERes0,6124
+dqc_toolkit-0.1.0b5.dist-info/LICENSE,sha256=xftZNZvIM191NOK81fzJxnNpyt6TfLlVQk-RWUK_DhY,1070
+dqc_toolkit-0.1.0b5.dist-info/METADATA,sha256=c8lEv-o4P4AAiucnS82svjXzDCukb8LZls-EV2q7XLY,3042
+dqc_toolkit-0.1.0b5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dqc_toolkit-0.1.0b5.dist-info/top_level.txt,sha256=qOKF2-v0PiV5l2LrhS4d9UANtUC8p25k0s_VMg9eSCE,10
+dqc_toolkit-0.1.0b5.dist-info/RECORD,,
