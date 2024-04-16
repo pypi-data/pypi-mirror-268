@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: cmd2func
+Version: 0.2.1
+Summary: Convert command to callable Python object.
+Home-page: https://github.com/Nanguage/cmd2func
+Author: Weize Xu
+Author-email: vet.xwz@gmail.com
+License: MIT license
+Keywords: cmd2func
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: funcdesc >=0.1.2
+Requires-Dist: typing-extensions
+Requires-Dist: pyYAML
+Provides-Extra: dev
+Requires-Dist: pip ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: ipdb ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+
+See https://github.com/Nanguage/cmd2func
