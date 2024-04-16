@@ -1,0 +1,16 @@
+setup.py
+tests/__init__.py
+tests/geosearch_test.py
+tests/lang_test.py
+tests/page_test.py
+tests/request_mock_data.py
+tests/search_test.py
+wikipedia_zh/__init__.py
+wikipedia_zh/exceptions.py
+wikipedia_zh/util.py
+wikipedia_zh/wikipedia.py
+wikipedia_zh.egg-info/PKG-INFO
+wikipedia_zh.egg-info/SOURCES.txt
+wikipedia_zh.egg-info/dependency_links.txt
+wikipedia_zh.egg-info/requires.txt
+wikipedia_zh.egg-info/top_level.txt
