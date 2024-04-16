@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: spinqit
+Version: 0.2.3
+Summary: SpinQ Quantum Software Development Kit
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: torch
+Requires-Dist: autograd (==1.5.0)
+Requires-Dist: psutil
+Requires-Dist: retworkx
+Requires-Dist: python-igraph (==0.9.10)
+Requires-Dist: pybind11
+Requires-Dist: antlr4-python3-runtime (==4.9.2)
+Requires-Dist: python-constraint
+Requires-Dist: requests
+Requires-Dist: matplotlib (>=3.5)
+Requires-Dist: pycryptodome (==3.11.0)
+Requires-Dist: autoray (==0.6.1)
+Requires-Dist: noisyopt (==0.2.2)
+Requires-Dist: sympy
+
