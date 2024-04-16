@@ -1,0 +1,9 @@
+django_ratelimiter/__init__.py,sha256=mu9ikSyxcbMJ03j8XclW1KnO7hzPd2QtPq0FlB-csgw,144
+django_ratelimiter/decorator.py,sha256=w4hH0lnXIwoqp0BcjBXWiHS3AkkoieQs-yQJqzmjIvs,3323
+django_ratelimiter/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_ratelimiter/storage.py,sha256=cnBd5j56z6FtDj5bdFPPwNfUhxtNqij95Ia3jmrfQpo,1607
+django_ratelimiter/types.py,sha256=Kp_JqxYsjJvjzMfPdRvaUpf5gFpwBfIBK_0OoJq03Fs,315
+django_ratelimiter-0.1.1.dist-info/LICENSE,sha256=e1MjbWdzZ7Zjygp_FVTZpht6VQa7oHt2bphC_e5Di9E,1069
+django_ratelimiter-0.1.1.dist-info/METADATA,sha256=kSh1t0TK4QlDshfQMGdKmGX-UqfDJRuvUjMgZhS5lvM,4386
+django_ratelimiter-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+django_ratelimiter-0.1.1.dist-info/RECORD,,
