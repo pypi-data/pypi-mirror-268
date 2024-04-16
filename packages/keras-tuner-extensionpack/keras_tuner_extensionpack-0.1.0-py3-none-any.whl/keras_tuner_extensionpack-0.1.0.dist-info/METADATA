@@ -1,0 +1,160 @@
+Metadata-Version: 2.1
+Name: keras-tuner-extensionpack
+Version: 0.1.0
+Summary: An extension pack for keras-tuner for providing additional optimizers.
+Home-page: https://github.com/Anselmoo/keras-tuner-extensionpack
+License: Apache-2.0
+Keywords: keras-tuner,optimizers,keras,tensorflow
+Author: Anselm Hahn
+Author-email: Anselm.Hahn@gmail.com
+Maintainer: Anselm Hahn
+Maintainer-email: Anselm.Hahn@gmail.com
+Requires-Python: >=3.8,<3.12
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: all
+Provides-Extra: scipy
+Provides-Extra: tensorflow
+Requires-Dist: keras-tuner (>=1.4.6,<2.0.0)
+Requires-Dist: numpy (<1.26.4) ; python_version < "3.9"
+Requires-Dist: numpy (>=1.26.4,<2.0.0) ; python_version >= "3.9" and python_version < "4.0"
+Requires-Dist: scipy (<1.12.0) ; (python_version < "3.9") and (extra == "scipy" or extra == "all")
+Requires-Dist: scipy (>=1.12.0,<2.0.0) ; (python_version >= "3.9" and python_version < "4.0") and (extra == "scipy" or extra == "all")
+Requires-Dist: tensorflow (<2.15.0.post1) ; (python_version < "3.9") and (extra == "tensorflow" or extra == "all")
+Requires-Dist: tensorflow (<3.0.0) ; (python_version >= "3.9" and python_version < "4.0") and (extra == "tensorflow" or extra == "all")
+Requires-Dist: update (>=0.0.1,<0.0.2)
+Project-URL: Repository, https://github.com/Anselmoo/keras-tuner-extensionpack
+Description-Content-Type: text/markdown
+
+# keras-tuner-extensionpack
+
+An extension package for [KerasTuner](https://github.com/keras-team/keras-tuner) for providing more optimizers.
+
+## Currently Implemented Algorithms
+
+This package extends KerasTuner with additional optimization algorithms. The currently implemented tuners include:
+
+- **CMA-ES (Covariance Matrix Adaptation Evolution Strategy)**: An evolutionary algorithm for difficult non-linear non-convex optimization problems in continuous domain.
+
+- **Differential Evolution**: A metaheuristic approach that is useful for global optimization of a multidimensional function.
+
+- **Harmony Search**: A music-inspired algorithm that is based on the improvisation process of musicians.
+
+- **Simulated Annealing**: A probabilistic technique for approximating the global optimum of a given function.
+
+- **Sine Cosine Algorithm**: An optimization algorithm inspired by the sine and cosine mathematical functions.
+
+- **Tabu Search**: A metaheuristic search method using local or neighborhood search procedures for mathematical optimization.
+
+- **Variable Depth Search**: A search algorithm that explores more deeply into chosen paths in the search tree, rather than exploring alternative paths at the current level.
+
+Each of these tuners can be used as via:
+
+```python
+from keras_tuner_extensionpack.benchmark.functions import shifted_ackley
+from keras_tuner_extensionpack.differential_evolution import DifferentialEvolution
+import keras_tuner
+
+
+class MyTuner(DifferentialEvolution):
+    def run_trial(self, trial, *args, **kwargs):
+        # Get the hp from trial.
+        hp = trial.hyperparameters
+        # Define "x" as a hyperparameter.
+        x = hp.Float(
+            "x",
+            min_value=-5,
+            max_value=5,
+            step=1e-8,
+            sampling="linear",
+        )
+        y = hp.Float(
+            "y",
+            min_value=-5,
+            max_value=5,
+            step=1e-8,
+            sampling="linear",
+        )
+        return shifted_ackley([x, y])
+```
+
+### Algorithms are _pre_-tested for:
+
+```python
+def shifted_ackley(x: np.ndarray, shift: tuple = (1, 0.5)) -> float:
+    """Shifted Ackley function.
+
+    Args:
+        x (np.ndarray): Input vector.
+        shift (np.ndarray): Shift vector.
+
+    Returns:
+        float: Output value.
+    """
+    return ackley(np.array([x[i] - shift[i] for i in range(len(x))]))
+```
+
+```python
+def sphere(x: np.ndarray) -> float:
+    """Sphere function.
+
+    Args:
+        x (np.ndarray): Input vector.
+
+    Returns:
+        float: Output value.
+    """
+    return np.sum(x**2)
+```
+
+```python
+def rosenbrock(x: np.ndarray) -> float:
+    """Rosenbrock function.
+
+    Args:
+        x (np.ndarray): Input array of shape with larger than 2,
+            representing the coordinates.
+
+    Returns:
+        float: Output value.
+    """
+    return np.sum(100.0 * (x[1:] - x[:-1] ** 2.0) ** 2.0 + (1 - x[:-1]) ** 2.0, axis=0)
+```
+
+## Install
+
+```shell
+pip install keras-tuner-extensionpack
+```
+
+or:
+
+```shell
+pip install git+https://github.com/Anselmoo/keras-tuner-extensionpack
+```
+
+> [!NOTE]
+> Please note that this is a very early draft of `keras-tuner-extensionpack`. This version may contain incomplete features, bugs, or major changes.
+
+## Contributing
+
+Contributions to `keras-tuner-extensionpack` are welcome!
+
+## [License](LICENSE.md)
+
+---
+
+> [!WARNING]
+> This project was partially generated with extended support by GitHub Copilot and may not be completely verified. Please use with caution and feel free to report any issues you encounter. Thank you!
+
