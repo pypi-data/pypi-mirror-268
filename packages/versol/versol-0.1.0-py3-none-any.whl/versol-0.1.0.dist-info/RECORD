@@ -1,0 +1,14 @@
+versol/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+versol/_solution.py,sha256=-4AwYKhqNR05Kp5TkjI8RlhX8PhUJcU1dnQ7BvanRUs,9736
+versol/incompatibility.py,sha256=H8CGCSjw2QbACkynyPadilSJpGSt2qLiWPH4iTgpxFo,2311
+versol/interfaces.py,sha256=t_d_eguMrVVSqlrryjOtlBnHLLNJAJ1P6CEQ1VCxBC8,2687
+versol/iset.py,sha256=X-5r2fGCD1ctqDImu5w3KyJ_PN-XNCiCuT0_wS9cXlo,13947
+versol/iset_test.py,sha256=RlEb26I1LecVc2Ng-G2wM1R34g_O3Sl35p3-Gx1eLKI,2353
+versol/report.py,sha256=9TLFIYIp_biFjTzoQflAHcHu_18TalfS80B7v_48VHQ,7406
+versol/solve.py,sha256=D_2ytBFY66-rfY3kVcbSHNH2T1LCKcIeRbt157pFMGI,7741
+versol/solve_test.py,sha256=rhGnznpV1uX9a5UJj2xySASszGbq6W4pdUQbI3dNIow,9622
+versol/term.py,sha256=z5e9W9fK9MbvOnS6htR16mYzE1HawUGKcA0pDqR9a9M,4349
+versol/util.py,sha256=EWDP8qWQXseXA7t-CbDITuIDn1NMykIcu-1CFFmA3sk,2521
+versol-0.1.0.dist-info/METADATA,sha256=VeY8hUmRpQM48LA1HKPskf1SiX_JUaLQqltd7thkccI,991
+versol-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+versol-0.1.0.dist-info/RECORD,,
