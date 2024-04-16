@@ -1,0 +1,6 @@
+dill==0.3.7
+gridlooper==0.0.1
+hnswlib==0.8.0
+sentence-transformers==2.2.2
+numpy
+attrs>=22.2.0
