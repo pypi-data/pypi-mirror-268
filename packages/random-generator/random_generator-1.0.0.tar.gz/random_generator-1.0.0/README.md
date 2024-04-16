@@ -1,0 +1,56 @@
+# Random generator
+## Main
+### String
+```python
+import random_generator
+
+print(random_generator.string(15))
+```
+### Number
+```python
+import random_generator
+
+print(random_generator.number(15))
+```
+
+## Financial
+### Credit card number
+```python
+from random_generator.financial import credit_card
+print("Visa:", credit_card('Visa'))
+print("MasterCard:", credit_card('MasterCard'))
+print("American Express:", credit_card('American Express'))
+```
+
+### Iban generator
+```python
+from random_generator.financial import iban
+
+print(iban('PL'))
+print(iban('DE'))
+```
+
+## Poland
+### NIP
+Polish NIP generator
+```python
+import random_generator.poland
+
+print(random_generator.poland.nip())
+```
+### PESEL
+Polish PESEL generator
+```python
+import random_generator.poland
+
+print(random_generator.poland.pesel())
+```
+
+## Germany
+### Vat number
+German vat number generator
+```python
+import random_generator.germany
+
+print(random_generator.germany.vat())
+```
