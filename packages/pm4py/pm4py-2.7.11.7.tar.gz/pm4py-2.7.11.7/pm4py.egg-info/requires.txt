@@ -1,0 +1,17 @@
+numpy<2
+pandas<3
+wheel
+setuptools
+deprecation
+networkx
+graphviz
+intervaltree
+lxml
+matplotlib
+pydotplus
+pytz
+scipy
+tqdm
+
+[:python_version < "3.13"]
+cvxopt
