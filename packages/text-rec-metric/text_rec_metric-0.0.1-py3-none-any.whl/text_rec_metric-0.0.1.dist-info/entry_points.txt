@@ -1,0 +1,3 @@
+[console_scripts]
+text_rec_metric = text_rec_metric.main:main
+

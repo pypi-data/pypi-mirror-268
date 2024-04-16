@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: text-rec-metric
+Version: 0.0.1
+Summary: Tool of computing the metric of text recognition
+Home-page: https://github.com/SWHL/TextRecMetric
+Author: SWHL
+Author-email: liekkaskono@163.com
+License: Apache-2.0
+Keywords: ocr, text-det, hmean
+Platform: Any
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6,<3.12
+Description-Content-Type: text/markdown
+Requires-Dist: python-Levenshtein
+Requires-Dist: datasets
+
+### See details for [TextRecMetric](https://github.com/SWHL/TextRecMetric).
+
+
