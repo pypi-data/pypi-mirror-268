@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: data-syncmaster
+Version: 0.1.4
+Summary: Syncmaster REST API + Worker
+License: Apache-2.0
+Keywords: Syncmaster,REST,API,Worker,Replication
+Author: DataOps.ETL
+Author-email: onetools@mts.ru
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Provides-Extra: backend
+Provides-Extra: worker
+Requires-Dist: alembic (>=1.11.1,<2.0.0) ; extra == "backend"
+Requires-Dist: asyncpg (>=0.29.0,<0.30.0) ; extra == "backend"
+Requires-Dist: celery (>=5.3.3,<6.0.0)
+Requires-Dist: fastapi (>=0.110.0,<0.111.0) ; extra == "backend"
+Requires-Dist: onetl[spark] (>=0.10.2,<0.11.0) ; extra == "worker"
+Requires-Dist: psycopg2-binary (>=2.9.7,<3.0.0) ; extra == "worker"
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.2.1,<3.0.0)
+Requires-Dist: python-jose[cryptography] (>=3.3.0,<4.0.0)
+Requires-Dist: python-multipart (>=0.0.9,<0.0.10)
+Requires-Dist: sqlalchemy (>=2.0.18,<3.0.0)
+Requires-Dist: sqlalchemy-utils (>=0.41.1,<0.42.0)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0) ; extra == "backend"
+Project-URL: CI/CD, https://github.com/MobileTeleSystems/syncmaster/actions
+Project-URL: Documentation, https://syncmaster.readthedocs.io
+Project-URL: Homepage, https://github.com/MobileTeleSystems/syncmaster
+Project-URL: Source, https://github.com/MobileTeleSystems/syncmaster
+Project-URL: Tracker, https://github.com/MobileTeleSystems/syncmaster/issues
+Description-Content-Type: text/x-rst
+
+.. title
+
+==========
+SyncMaster
+==========
+
+|Repo Status| |PyPI| |PyPI License| |PyPI Python Version| |Docker image| |Documentation|
+|Build Status| |Coverage|  |pre-commit.ci|
+
+.. |Repo Status| image:: https://www.repostatus.org/badges/latest/active.svg
+    :target: https://github.com/MobileTeleSystems/syncmaster
+.. |PyPI| image:: https://img.shields.io/pypi/v/data-syncmaster
+    :target: https://pypi.org/project/data-syncmaster/
+.. |PyPI License| image:: https://img.shields.io/pypi/l/data-syncmaster.svg
+    :target: https://github.com/MobileTeleSystems/syncmaster/blob/develop/LICENSE.txt
+.. |PyPI Python Version| image:: https://img.shields.io/pypi/pyversions/data-syncmaster.svg
+    :target: https://badge.fury.io/py/data-syncmaster
+.. |Docker image| image:: https://img.shields.io/docker/v/mtsrus/syncmaster-backend?sort=semver&label=docker
+    :target: https://hub.docker.com/r/mtsrus/syncmaster-backend
+.. |Documentation| image:: https://readthedocs.org/projects/syncmaster/badge/?version=stable
+    :target: https://syncmaster.readthedocs.io
+.. |Build Status| image:: https://github.com/MobileTeleSystems/syncmaster/workflows/Run%20All%20Tests/badge.svg
+    :target: https://github.com/MobileTeleSystems/syncmaster/actions
+.. |Coverage| image:: https://codecov.io/gh/MobileTeleSystems/syncmaster/graph/badge.svg?token=ky7UyUxolB
+    :target: https://codecov.io/gh/MobileTeleSystems/syncmaster
+.. |pre-commit.ci| image:: https://results.pre-commit.ci/badge/github/MobileTeleSystems/syncmaster/develop.svg
+    :target: https://results.pre-commit.ci/latest/github/MobileTeleSystems/syncmaster/develop
+
+
+What is Syncmaster?
+-------------------
+
+Syncmaster is as low-code ETL tool for transfering data between databases and file systems.
+List of currently supported connections:
+
+* Apache Hive
+* Postgres
+* Oracle
+* HDFS
+* S3
+
+Current SyncMaster implementation provides following components:
+
+* REST API
+* Celery Worker
+
+Goals
+-----
+
+* Make transfering data between databases and file systems as simple as possible
+* Provide a lot of builtin connectors to transfer data in heterogeneous environment
+* RBAC and multitenancy support
+
+Non-goals
+---------
+
+* This is not a backup system
+* This is not a CDC solution
+* Only batch, no streaming
+
+.. documentation
+
+Documentation
+-------------
+
+See https://syncmaster.readthedocs.io
