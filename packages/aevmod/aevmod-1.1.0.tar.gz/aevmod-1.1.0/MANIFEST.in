@@ -1,0 +1,5 @@
+recursive-include tests *
+recursive-include doc *
+recursive-include examples *
+recursive-include include *
+recursive-include src *
