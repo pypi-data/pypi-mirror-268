@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sdmc_adhoc_processing
+Version: 0.1.46
+Summary: Helper utilities for SDMC ad-hoc data processing requests.
+Author-email: Beatrix Haddock <beatrix.haddock@gmail.com>
+Project-URL: Homepage, https://github.com/beatrixh/sdmc-adhoc-processing
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: docutils
+Requires-Dist: requires <=0.4
+
+# sdmc adhoc processing
+Helpers for sdmc ad-hoc processing requests.
