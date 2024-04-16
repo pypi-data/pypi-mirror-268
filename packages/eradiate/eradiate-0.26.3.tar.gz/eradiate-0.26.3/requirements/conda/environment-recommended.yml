@@ -1,0 +1,14 @@
+channels:
+  - eradiate
+  - conda-forge
+  - defaults
+dependencies:
+  # recommended
+  - aabbtree
+  - astropy
+  - ipython
+  - ipywidgets
+  - jupyterlab
+  - python-dateutil
+  - python-graphviz
+  - seaborn

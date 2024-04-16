@@ -1,0 +1,3 @@
+-r main.in
+pytest
+pytest-json-report
