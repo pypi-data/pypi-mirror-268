@@ -1,0 +1,9 @@
+README.md
+setup.py
+tokenizers2sblob/__init__.py
+tokenizers2sblob/tokenizer.py
+tokenizers2sblob.egg-info/PKG-INFO
+tokenizers2sblob.egg-info/SOURCES.txt
+tokenizers2sblob.egg-info/dependency_links.txt
+tokenizers2sblob.egg-info/requires.txt
+tokenizers2sblob.egg-info/top_level.txt

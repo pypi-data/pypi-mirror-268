@@ -1,0 +1,1 @@
+from tokenizers2sblob.tokenizer import tokenizer_blob
