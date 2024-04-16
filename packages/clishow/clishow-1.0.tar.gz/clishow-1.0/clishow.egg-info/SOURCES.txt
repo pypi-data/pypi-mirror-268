@@ -1,0 +1,9 @@
+README.md
+clishow.py
+setup.py
+clishow.egg-info/PKG-INFO
+clishow.egg-info/SOURCES.txt
+clishow.egg-info/dependency_links.txt
+clishow.egg-info/entry_points.txt
+clishow.egg-info/requires.txt
+clishow.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+clishow = clishow:run_cli
