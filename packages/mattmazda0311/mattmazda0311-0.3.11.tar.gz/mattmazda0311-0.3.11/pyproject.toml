@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "mattmazda0311"
+version = "0.3.11"
+description = "An API client for interacting with the MyMazda (Mazda Connected Services) API"
+authors = ["Brandon Rothweiler <brandonrothweiler@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/chorty/mattmazda0311"
+repository = "https://github.com/chorty/mattmazda0311"
+documentation = "https://github.com/chorty/mattmazda0311"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiohttp = "^3"
+cryptography = ">=36.0.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
