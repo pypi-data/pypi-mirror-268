@@ -1,0 +1,3 @@
+[console_scripts]
+vbimagetotext=vbimagetotext.__main__:main
+

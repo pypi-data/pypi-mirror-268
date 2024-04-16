@@ -1,0 +1,12 @@
+vbimagetotext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vbimagetotext/__main__.py,sha256=6PwEKBDHvVOW0n0pFsKGxtqwHYi8veAV3XQ1s2pYcw8,55
+vbimagetotext/choice_option.py,sha256=0M4rnlTqZBvJPd9KNZ9bwp_b5PCKjLt5be-CMREiP2s,1236
+vbimagetotext/functions.py,sha256=fL56gT1tylM9noq-ts9lD9ua70zFe8ap9fzVyVW4yz4,2596
+vbimagetotext/geminivision.py,sha256=kZqEEFn8giR_YPScPY9Mf83iaQECmThdVGIei6ohj4I,2006
+vbimagetotext/gptvision.py,sha256=UoLWXBBX0metjeOzE28xbKgKCIWWvqrsDnPUaHBvJZI,1441
+vbimagetotext/main.py,sha256=NvouvQ6yBErkQvLCiDy7BudJ9wsQncrbSVMNkN2lYwg,306
+vbimagetotext/prompts.py,sha256=-PTR66BFgKAPF6DJMw0dadMNnu8s3ts8oanX2D8JU9Q,7756
+vbimagetotext-0.1.0.dist-info/METADATA,sha256=2zBd44HsCHWrs9BIw6cB-Bgnmwf9SHZKYy4iVnncslM,687
+vbimagetotext-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+vbimagetotext-0.1.0.dist-info/entry_points.txt,sha256=Hzlb2pystBZhOXANtNhQJjLidpzcJl1WUpXJANZRGzE,61
+vbimagetotext-0.1.0.dist-info/RECORD,,
