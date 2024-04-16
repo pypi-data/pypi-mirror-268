@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: LENSE-STREAM
+Version: 0.1
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: jinja2
+
