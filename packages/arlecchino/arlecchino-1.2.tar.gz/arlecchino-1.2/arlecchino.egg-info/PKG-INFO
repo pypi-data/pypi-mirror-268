@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: arlecchino
+Version: 1.2
+Summary: Italian color names generator
+Author: Martin Ranieri
+Project-URL: Homepage, https://github.com/maffinyep/arlecchino
+Project-URL: Issues, https://github.com/maffinyep/arlecchino/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# 🎭 ARLECCHINO
+Italian color names generator
