@@ -1,0 +1,8 @@
+momoa-0.2.3.dist-info/METADATA,sha256=R-alsURRNOC9Cm9LCqqpRkPwNP-VyIoP94OCs6ic2Sc,2420
+momoa-0.2.3.dist-info/WHEEL,sha256=gZRWN_1fGFDwBnXrZ9N3dgvbKlKgo5AUcDIMajlGpKM,90
+momoa/__init__.py,sha256=svbzIe7DZTOZw3O81GcptMZRBz67gmbpMsuUDxnN64M,3126
+momoa/exceptions.py,sha256=qBlB-EtjDCSuu-hlEY6zNBEGvqjkj_-8ndQBs4a_rxU,294
+momoa/format.py,sha256=OQMkNhOhXnsNGKWzGC_XXbNqmsp4Udp1Q7OSETX3mE4,1978
+momoa/model.py,sha256=nUs9sEXtTqu-QSu8mJYOTMkm7WDJidsFMghb5kiNq1w,4272
+momoa/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+momoa-0.2.3.dist-info/RECORD,,
