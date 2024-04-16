@@ -1,0 +1,2 @@
+[sqlalchemy.dialects]
+postgres.oedialect = oedialect.dialect:OEDialect
