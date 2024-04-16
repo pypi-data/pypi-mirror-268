@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+chatmemoryc/__init__.py
+chatmemoryc/__main__.py
+chatmemoryc/chatmemoryc.py
+chatmemoryc/client.py
+chatmemoryc/server.py
+chatmemoryc.egg-info/PKG-INFO
+chatmemoryc.egg-info/SOURCES.txt
+chatmemoryc.egg-info/dependency_links.txt
+chatmemoryc.egg-info/requires.txt
+chatmemoryc.egg-info/top_level.txt
