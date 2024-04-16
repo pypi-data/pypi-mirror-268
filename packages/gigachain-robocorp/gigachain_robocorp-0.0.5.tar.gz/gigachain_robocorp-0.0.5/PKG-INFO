@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: gigachain-robocorp
+Version: 0.0.5
+Summary: An integration package connecting Robocorp Action Server and GigaChain
+Home-page: https://github.com/gigachain-ai/gigachain
+License: MIT
+Requires-Python: >=3.8.1,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: gigachain-core (>=0.1.31,<0.2.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: types-requests (>=2.31.0.6,<3.0.0.0)
+Project-URL: Repository, https://github.com/gigachain-ai/gigachain
+Project-URL: Source Code, https://github.com/gigachain-ai/gigachain/tree/master/libs/partners/robocorp
+Description-Content-Type: text/markdown
+
+# langchain-robocorp
+
+This package contains the LangChain integrations for [Robocorp Action Server](https://github.com/robocorp/robocorp).
+Action Server enables an agent to execute actions in the real world. 
+
+## Installation
+
+```bash
+pip install -U langchain-robocorp
+```
+
+## Action Server Toolkit
+
+See [ActionServerToolkit](https://python.langchain.com/docs/integrations/toolkits/robocorp) for detailed documentation.
+
