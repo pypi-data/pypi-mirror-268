@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "dittoed"
+version = "0.4.0"
+description = "A tool to help bootstrap your dev environment."
+readme = "README.md"
+authors = ["Andrew Halberstadt <ahal@pm.me>"]
+license = "MPL-2.0"
+
+[tool.poetry.scripts]
+ditto = 'dittoed.cli:run'
+dittoed = 'dittoed.cli:run'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tomli = "^1.2.2"
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.358"
+pytest = "^8.1.1"
+pytest-mock = "^3.14.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: dittoed
+Version: 0.4.0
+Summary: A tool to help bootstrap your dev environment.
+License: MPL-2.0
+Author: Andrew Halberstadt
+Author-email: ahal@pm.me
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: tomli (>=1.2.2,<2.0.0)
+Description-Content-Type: text/markdown
+
+![CI](https://github.com/ahal/dittoed/actions/workflows/ci.yml/badge.svg)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ahal/dittoed/main.svg)](https://results.pre-commit.ci/latest/github/ahal/dittoed/main)
+[![PyPI version](https://badge.fury.io/py/dittoed.svg)](https://badge.fury.io/py/dittoed)
+[![License](https://img.shields.io/badge/license-MPL%202.0-orange.svg)](http://mozilla.org/MPL/2.0)
+
+# dittoed
+
+A tool to bootstrap your development environment on new machines.
+
+
+# Installation
+
+Install via `pip`:
+
+    $ pip install dittoed
+
+Or `pipx`:
+
+    $ pipx install dittoed
+
+
+# Usage
+
+To install your environment:
+
+    $ ditto install [ROUTINE]
+
+To update your environment:
+
+    $ ditto update [ROUTINE]
+
