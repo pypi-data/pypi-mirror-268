@@ -1,0 +1,11 @@
+LICENSE
+README.md
+README.rst
+setup.py
+opencv.wrap.egg-info/PKG-INFO
+opencv.wrap.egg-info/SOURCES.txt
+opencv.wrap.egg-info/dependency_links.txt
+opencv.wrap.egg-info/entry_points.txt
+opencv.wrap.egg-info/not-zip-safe
+opencv.wrap.egg-info/requires.txt
+opencv.wrap.egg-info/top_level.txt
