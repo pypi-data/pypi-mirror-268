@@ -1,0 +1,3 @@
+[console_scripts]
+wbc = WebChatGPT.console:main
+webchatgpt = WebChatGPT.console:main
