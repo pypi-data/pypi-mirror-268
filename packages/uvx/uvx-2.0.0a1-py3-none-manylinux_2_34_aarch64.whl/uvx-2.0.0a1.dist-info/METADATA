@@ -1,0 +1,9 @@
+Metadata-Version: 2.3
+Name: uvx
+Version: 2.0.0a1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: uv
+Requires-Dist: patchelf
+Requires-Python: >=3.10
