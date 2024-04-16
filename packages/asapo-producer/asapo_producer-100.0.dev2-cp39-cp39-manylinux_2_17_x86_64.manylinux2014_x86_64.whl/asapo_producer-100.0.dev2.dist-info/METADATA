@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: asapo-producer
+Version: 100.0.dev2
+Requires-Dist: numpy (>=1.19.3)
+
