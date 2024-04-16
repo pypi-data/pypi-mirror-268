@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/cool_ml.egg-info/PKG-INFO
+src/cool_ml.egg-info/SOURCES.txt
+src/cool_ml.egg-info/dependency_links.txt
+src/cool_ml.egg-info/requires.txt
+src/cool_ml.egg-info/top_level.txt

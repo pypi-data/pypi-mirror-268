@@ -1,0 +1,56 @@
+# Cool ML
+
+Cool Ml is a tool developed in the University of Santiago de Compostela in collaboration with the IM2NP of Aix-Marseille Université. This tool aims to accelerate the optimization of double asymmetric barrier heterostructures. The potential profile of this devices is shown in Fig. 1.
+
+![img](images/Cooling_device.png)
+
+**Fig.1:** Lb1, LQW, and Lb2, are the lengths of the first barrier (b1),  quantum well (QW), and the second barrier (b2), respectively. The height of the first barrier (hb1) is determined from the band offset between AlAs and the emitter, and the height of the second barrier (hb2) is proportional to gamma, which is the fraction of aluminium in the alloy. V is the bias between the Efe and the Efc, V=Efe-Efc. W1 is the energy interval between the Eo and Efe. The W2 is the energy interval between Eo and the Eb2.
+
+This code consists of a double machine learning workflow based on two multi-layer perceptron neural networks, with the ability of predict not only the energetic and thermal properties of the device but also the whole potential profile, from design parameters.
+
+The machine learning workflow is feeded with data from the accurate NEGF simulation methodology coupled with the heat equation. More information about the NEGF+H methodology is shared in [BESCOND:Phys. Rev. Applied:2020](https://doi.org/10.1103/PhysRevApplied.14.064022).
+
+
+Data used to feed the neural networks is shared in the following [Zenodo Repository with DOI:](https://doi.org/10.1103/PhysRevApplied.14.064022).
+
+## Installation
+First you need to have installed **pip3** on your system. For Ubuntu, open up a terminal and type:
+
+    sudo apt update
+    sudo apt install python3-pip
+
+**Instalation of MLFoMpy via pip3**
+
+For basic usage of the tool (figure of merit extraction), install the tool using pip3:
+
+    pip3 install cool_ml
+
+and check the library is installed by importing it from a **python3 terminal**:
+
+    import cool_ml
+
+Unless an error comes up, Cool ML is now installed on your environment.
+
+<!-- For more detailed explanation about instalation, please, check
+the [documentation](https://mlfompy.readthedocs.io/#getting-started). -->
+
+<!-- **Documentation generation**
+
+Documentation of the project should be available at https://mlfompy.readthedocs.io/.
+To generate a local copy of the documentation, first it is necesary to install the
+tool [Sphinx](//sphinx-doc.org) with the following command:
+
+    pip3 install sphinx
+
+Then, to generate the documentation, run the following command in the project directory:
+
+    sphinx-build -a doc DOC_DESTINATION_DIR
+
+DOC_DESTINATION_DIR is the directory where the documentation will be generated.
+Normally you should choose a directory outside of the project directory.
+
+Once generated, the documentation, in HTML format, can be opened using a web browser,
+using the following destination:
+
+    file://DOC_DESTINATION_DIR/index.html -->
+
