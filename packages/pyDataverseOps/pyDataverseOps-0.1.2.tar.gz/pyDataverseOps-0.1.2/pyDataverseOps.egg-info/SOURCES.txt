@@ -1,0 +1,9 @@
+README.md
+setup.py
+dataverse_ops/__init__.py
+dataverse_ops/dataverse_ops.py
+pyDataverseOps.egg-info/PKG-INFO
+pyDataverseOps.egg-info/SOURCES.txt
+pyDataverseOps.egg-info/dependency_links.txt
+pyDataverseOps.egg-info/requires.txt
+pyDataverseOps.egg-info/top_level.txt
