@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: msanic
+Version: 1.0.16
+Summary: A web framework who is use sanic + tortoise-orm + redis to quick create http&websocket server
+Author: DHDONG
+Author-email: zscych@qq.com
+License: MIT
+Keywords: WebServer,Sanic,WebSite Develop,Web Framework
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9,<3.12
+License-File: LICENSE
+Requires-Dist: sanic >=22.12.0
+Requires-Dist: redis[hiredis] >=4.4.0
+Requires-Dist: pyjwt >=0.2.6
+Requires-Dist: httpx >=0.23.0
+Requires-Dist: orjson >=3.9.15
+Requires-Dist: tzdata >=2023.1
+Requires-Dist: pycryptodome >=3.16.0
+
+A web framework who is use sanic + tortoise-orm + redis to quick create http&websocket server. 
+You can quickly build a new project by command -- sanicGuider

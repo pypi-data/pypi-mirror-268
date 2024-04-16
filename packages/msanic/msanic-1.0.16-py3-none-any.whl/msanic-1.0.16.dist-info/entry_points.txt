@@ -1,0 +1,2 @@
+[console_scripts]
+sanicGuider = msanic:mult_creator
