@@ -1,0 +1,6 @@
+opal-common>=0.1.11
+pymongo
+motor
+pydantic
+tenacity
+click
