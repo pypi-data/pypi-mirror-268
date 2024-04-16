@@ -1,0 +1,10 @@
+aiohttp
+charset-normalizer
+Pyarrow
+python-magic
+colorama
+requests
+pillow
+cssutils
+beautifulsoup4
+PyMuPDF
