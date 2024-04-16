@@ -1,0 +1,57 @@
+Metadata-Version: 2.3
+Name: async-irc
+Version: 0.2.0
+Summary: A simple asyncio.Protocol implementation designed for IRC
+Project-URL: Homepage, https://github.com/TotallyNotRobots/async-irc
+Author-email: linuxdaemon <linuxdaemon@snoonet.org>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: async-irc,asyncio,asyncirc,irc,irc-framework
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: py-irclib>=0.4.0
+Requires-Dist: typing-extensions
+Description-Content-Type: text/markdown
+
+# async-irc [![Build Status](https://travis-ci.org/snoonetIRC/async-irc.svg?branch=master)](https://travis-ci.org/snoonetIRC/async-irc)
+An implementation of asyncio.Protocol for IRC
+
+## Using the library
+- You can install the library using pip: `pip install async-irc`
+
+### Example
+```python
+import asyncio
+
+from asyncirc.protocol import IrcProtocol
+from asyncirc.server import Server
+
+loop = asyncio.get_event_loop()
+
+servers = [
+    Server("irc.example.org", 6697, True),
+    Server("irc.example.com", 6667),
+]
+
+async def log(conn, message):
+    print(message)
+
+async def main():
+    conn = IrcProtocol(servers, "BotNick", loop=loop)
+    conn.register_cap('userhost-in-names')
+    conn.register('*', log)
+    await conn.connect()
+    await asyncio.sleep(24 * 60 * 60)
+
+try:
+    loop.run_until_complete(main())
+finally:
+    loop.stop()
+```
