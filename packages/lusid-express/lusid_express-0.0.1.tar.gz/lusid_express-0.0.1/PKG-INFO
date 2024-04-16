@@ -1,0 +1,177 @@
+Metadata-Version: 2.1
+Name: lusid_express
+Version: 0.0.1
+Summary: lusid-express is a python package that makes it quick and easy to get started using Lusid and Luminesce.
+Home-page: https://gitlab.com/orlando.calvo1/lusid-express
+Author: Orlando Calvo
+Author-email: orlando.calvo@finbourne.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: luminesce-sdk-preview==1.14.758
+Requires-Dist: lusid-jam==0.1.2
+Requires-Dist: lusid-sdk-preview==1.1.120
+Requires-Dist: fbnlab-preview==0.1.108
+Requires-Dist: finbourne-access-sdk==0.0.3751
+Requires-Dist: finbourne-identity-sdk==0.0.2834
+Requires-Dist: finbourne-insights-sdk-preview==0.0.763
+Requires-Dist: finbourne-sdk-utilities==0.0.10
+Requires-Dist: lusid-configuration-sdk-preview==0.1.514
+Requires-Dist: lusid-drive-sdk-preview==0.1.617
+Requires-Dist: lusid-notifications-sdk-preview==0.1.923
+Requires-Dist: lusid-scheduler-sdk-preview==0.0.829
+Requires-Dist: lusid-workflow-sdk-preview==0.1.810
+Requires-Dist: lusidtools==1.0.14
+Requires-Dist: dve-lumipy-preview==0.1.1075
+
+
+# lusid-express
+##### *`lusid-express` is a python package that makes it quick and easy to get started using Lusid and Luminesce.*
+
+
+
+<!-- vscode-markdown-toc -->
+* 1. [Getting Started](#GettingStarted)
+	* 1.1. [Requirements](#Requirements)
+		* 1.1.1. [Environmental Variable setup](#EnvironmentalVariablesetup)
+	* 1.2. [Installation](#Installation)
+* 2. [Convenience package installations](#Conveniencepackageinstallations)
+* 3. [Luminesce Magic Command](#LuminesceMagicCommand)
+	* 3.1. [Why use this?](#Whyusethis)
+* 4. [Pre-loaded Variables](#Pre-loadedVariables)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+
+This repository holds the source code for lusid-express, a python package that makes it quick and easy to get started using Lusid and Luminesce. The package provides convenience in 3 distinct ways.
+
+1. Ease of installation of finbourne packages.
+2.  `%%luminesce` cell magic in your local jupyter installation.
+3.  Preset variables that make it possible to ommit boiler plate code.
+
+##  1. <a name='GettingStarted'></a>Getting Started
+###  1.1. <a name='Requirements'></a>Requirements
+In order to authenticate the lusid api clients you will need to have generated a secrets file. furthermore, you will need to have an environmental variable named `FBN_SECRETS_PATH` set to the full path to your secrets file. 
+
+####  1.1.1. <a name='EnvironmentalVariablesetup'></a>Environmental Variable setup
+##### Mac OS
+Assuming `~/.secret/secrets.json` exists
+```bash
+echo 'export FBN_SECRETS_PATH="~/.secret/secrets.json"' >> ~/.zshrc
+```
+
+
+NOTE: Your secrets file needs to include the lumi api url under the key: `lumiApiUrl`. This url usually takes the form `https://{your-domain}.lusid.com/honeycomb`.
+
+###  1.2. <a name='Installation'></a>Installation 
+
+```sh
+pip install -U lusid-express
+python -m lusid_express --enable magic vars
+```
+ The above commands install the `lusid-express` package and enable enhancements to your IPython environment. If running from a virtual environment these enhancements are limited to that virtual environment.
+ enabling `magic` adds the `luminesce` magic command. `vars` adds preloaded variables to IPython sessions. The `--disable` command is available should you wish to disable these. 
+
+
+
+
+##  2. <a name='Conveniencepackageinstallations'></a>Convenience package installations
+
+```mermaid
+graph LR;
+    lusid_express --> luminesce_sdk_preview
+    lusid_express --> lusid_jam
+    lusid_express --> lusid_sdk_preview
+    lusid_express --> fbnlab_preview
+    lusid_express --> finbourne_access_sdk
+    lusid_express --> finbourne_identity_sdk
+    lusid_express --> finbourne_insights_sdk_preview
+    lusid_express --> finbourne_sdk_utilities
+    lusid_express --> lusid_configuration_sdk_preview
+    lusid_express --> lusid_drive_sdk_preview
+    lusid_express --> lusid_notifications_sdk_preview
+    lusid_express --> lusid_scheduler_sdk_preview
+    lusid_express --> lusid_workflow_sdk_preview
+    lusid_express --> lusidtools
+    lusid_express --> dve_lumipy_preview
+
+    luminesce_sdk_preview["luminesce-sdk-preview==1.14.758"]
+    lusid_jam["lusid-jam==0.1.2"]
+    lusid_sdk_preview["lusid-sdk-preview==1.1.120"]
+    fbnlab_preview["fbnlab-preview==0.1.108"]
+    finbourne_access_sdk["finbourne-access-sdk==0.0.3751"]
+    finbourne_identity_sdk["finbourne-identity-sdk==0.0.2834"]
+    finbourne_insights_sdk_preview["finbourne-insights-sdk-preview==0.0.763"]
+    finbourne_sdk_utilities["finbourne-sdk-utilities==0.0.10"]
+    lusid_configuration_sdk_preview["lusid-configuration-sdk-preview==0.1.514"]
+    lusid_drive_sdk_preview["lusid-drive-sdk-preview==0.1.617"]
+    lusid_notifications_sdk_preview["lusid-notifications-sdk-preview==0.1.923"]
+    lusid_scheduler_sdk_preview["lusid-scheduler-sdk-preview==0.0.829"]
+    lusid_workflow_sdk_preview["lusid-workflow-sdk-preview==0.1.810"]
+    lusidtools["lusidtools==1.0.14"]
+    dve_lumipy_preview["dve-lumipy-preview==0.1.1075"]
+
+```
+
+
+##  3. <a name='LuminesceMagicCommand'></a>Luminesce Magic Command
+###  3.1. <a name='Whyusethis'></a>Why use this?
+The main motivation to use this cell magic is to enable the use of `SQL` jupyter cells. That is, rather than display a cell on a notebook that holds an SQL string such as:
+```python
+sql_string = """
+@raw_equities =
+SELECT *,
+    'training' as Scope,
+    Currency as domCcy,
+    Ticker as DisplayName
+FROM @equitiesCSV
+WHERE Ticker IS NOT null;
+where Ticker is null
+    and "type" is not "FundsIn";
+SELECT *
+FROM Lusid.Instrument.Equity.Writer
+WHERE toWrite = @raw_equities;
+"""
+
+```
+
+You would instead have a cell with pure SQL that looks like this:
+```SQL
+%%luminesce
+
+@raw_equities =
+SELECT *,
+    'training' as Scope,
+    Currency as domCcy,
+    Ticker as DisplayName
+FROM @equitiesCSV
+WHERE Ticker IS NOT null;
+where Ticker is null
+    and "type" is not "FundsIn";
+SELECT *
+FROM Lusid.Instrument.Equity.Writer
+WHERE toWrite = @raw_equities;
+```
+VSCode allows the SQL auto-formatting of Jupyter cells. This query runs when the cell is excecuted.
+
+
+
+##  4. <a name='Pre-loadedVariables'></a>Pre-loaded Variables
+Enabling this feature provides the convenience of automatically loading important variables into python notebooks. This allows us to omit boler-plate code from each notebook. It also allows for reduce complexity as token management, authentication, and api client instantiations have all been abstracted away.
+
+| Variable Name | Statement         | Description                          |
+|---------------|-------------------|--------------------------------------|
+| lu          | `import lusid as lu` | Main LUSID package                   |
+| lm          | `import lusid.models as lm` | LUSID models module                  |
+| apis         | `import lusid_express.apis as apis` | convenience package providing pre-authenticated api access.                 |
+
+

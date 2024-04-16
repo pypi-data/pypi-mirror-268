@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+lusid_express.egg-info/PKG-INFO
+lusid_express.egg-info/SOURCES.txt
+lusid_express.egg-info/dependency_links.txt
+lusid_express.egg-info/requires.txt
+lusid_express.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_magic.py
+tests/test_vars.py
