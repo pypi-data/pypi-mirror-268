@@ -1,0 +1,12 @@
+cogflow/__init__.py,sha256=lzlJj_Kd6xQe7fxC3ZQxwhtPUMAYOxRzAOKgG2fqrmM,757
+cogflow/dataset_plugin.py,sha256=yeTuxw0M96YW_b3ZmXtomOKmdu8PhK7Q5xp9NO8QYak,4029
+cogflow/kubeflowplugin.py,sha256=rHZhJzoMRaoaOi6kAZWHKH5uBCS4sbF9GpUyNKmwJH4,8959
+cogflow/mlflowplugin.py,sha256=dcH11NQbzvXmCho9lnPCJ23nZYbDiC4fdKCZCcmfEto,11107
+cogflow/plugin_config.py,sha256=0corleT-xOlEikfseetbMcDK8DiRa_oAcad5g0442lw,714
+cogflow/plugin_status.py,sha256=FmIJ09G10Ku1T1CFHAyMqntc3mEx_5gijcWv9p5DlYI,620
+cogflow/pluginerrors.py,sha256=S7ypsBTimgVIwy8HspvDHr4cLAABHiSoesqHZpv-qw4,174
+cogflow/pluginmanager.py,sha256=j8eko6ZA1s5xZYvJ4LU5Wlkv_O0UN1ROb8XFD76THfE,5492
+cogflow-1.8.1.dist-info/METADATA,sha256=aPdo1wOuaui-dtoMZ-QGfR49ay2mgUfyVLe9Um8rEn0,861
+cogflow-1.8.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cogflow-1.8.1.dist-info/top_level.txt,sha256=M3TWoI_FQM3m4uW6sgQbNzGfdo9-j-MoKw52098WB0I,8
+cogflow-1.8.1.dist-info/RECORD,,
