@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "versol"
+version = "0.1.1"
+description = "A generic library for dependency solving, based on the pubgrub algorithm"
+authors = ["vector-of-bool <vectorofbool@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "versol", from = "src" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: OS Independent",
+]
+homepage = "https://github.com/vector-of-bool/versol"
+repository = "https://github.com/vector-of-bool/versol"
+
+[tool.poetry.urls]
+Issues = "https://github.com/vector-of-bool/versol/issues"
+Changelog = "https://github.com/vector-of-bool/versol/blob/master/CHANGELOG.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typing-extensions = "^4.11.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+pyright = "^1.1.358"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120

@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: versol
+Version: 0.1.1
+Summary: A generic library for dependency solving, based on the pubgrub algorithm
+Home-page: https://github.com/vector-of-bool/versol
+License: MIT
+Author: vector-of-bool
+Author-email: vectorofbool@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: typing-extensions (>=4.11.0,<5.0.0)
+Project-URL: Changelog, https://github.com/vector-of-bool/versol/blob/master/CHANGELOG.md
+Project-URL: Issues, https://github.com/vector-of-bool/versol/issues
+Project-URL: Repository, https://github.com/vector-of-bool/versol
+Description-Content-Type: text/markdown
+
+# `versol`
+
+`versol` is a Python library that implements a generic dependency solver based
+on the PubGrub algorithm.
+
+This is alpha-quality software. Don't depend on it for anything important!
+
+
+## Basic Usage
+
+The `versol` package is small and easily discoverable. The main modules of
+interest being:
+
+- `versol.solve` exposes the generic `solve()` function.
+- `versol.report` exposes a `generate_report` function that can be used to
+  generate diagnostic reports when dependency resolution fails.
+
