@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: tfs-client
+Version: 0.1.6
+Summary: Tools to simplify access to tfserving via HTTP, specially for Moveread
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: haskellian
+Requires-Dist: haskellian-iterables
+
+# TensorFlow Serving Client
+
+> Tools to simplify access to tfserving via HTTP, specially for Moveread
