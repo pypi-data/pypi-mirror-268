@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+BiObjClass/__init__.py
+BiObjClass/wrapper.py
+BiObjClassification.egg-info/PKG-INFO
+BiObjClassification.egg-info/SOURCES.txt
+BiObjClassification.egg-info/dependency_links.txt
+BiObjClassification.egg-info/requires.txt
+BiObjClassification.egg-info/top_level.txt
