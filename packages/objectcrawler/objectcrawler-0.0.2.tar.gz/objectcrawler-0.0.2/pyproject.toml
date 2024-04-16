@@ -1,0 +1,44 @@
+[project]
+name = "objectcrawler"
+authors = [
+    {name = "Louis Beal", email = "louis.j.beal@gmail.com"}
+]
+requires-python = ">=3.7"
+description = "simple object crawling debug tool"
+readme = "README.md"
+classifiers = [
+    "Topic :: Software Development :: Debuggers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+keywords = ["debug", "inspect", "inspection"]
+
+[project.optional-dependencies]
+dev = ["pylint", "flake8", "black"]
+
+[project.urls]
+Homepage = "https://github.com/ljbeal/ObjectCrawler"
+Documentation = "https://github.com/ljbeal/ObjectCrawler"
+Repository = "https://github.com/ljbeal/ObjectCrawler"
+Issues = "https://github.com/ljbeal/ObjectCrawler/issues"
+# Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = 'objectcrawler.__version__'}
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[tool.pylint.MASTER]
+ignore-paths = '^tests/.*$'

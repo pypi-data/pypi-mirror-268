@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+objectcrawler/__init__.py
+objectcrawler/crawler.py
+objectcrawler/entity.py
+objectcrawler/get_assignment.py
+objectcrawler.egg-info/PKG-INFO
+objectcrawler.egg-info/SOURCES.txt
+objectcrawler.egg-info/dependency_links.txt
+objectcrawler.egg-info/requires.txt
+objectcrawler.egg-info/top_level.txt
+tests/test_crawler.py
+tests/test_entity_class.py
