@@ -1,0 +1,5 @@
+pyodbc<5.2.0,>=4.0.35
+azure-identity>=1.12.0
+dbt-common<2.0,>=0.1.0a1
+dbt-core>=1.8.0a1
+dbt-adapters<2.0,>=0.1.0a1
