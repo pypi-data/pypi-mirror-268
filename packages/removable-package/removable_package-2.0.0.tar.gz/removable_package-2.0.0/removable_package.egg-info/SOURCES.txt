@@ -1,0 +1,5 @@
+setup.py
+removable_package.egg-info/PKG-INFO
+removable_package.egg-info/SOURCES.txt
+removable_package.egg-info/dependency_links.txt
+removable_package.egg-info/top_level.txt
