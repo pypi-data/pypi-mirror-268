@@ -1,0 +1,202 @@
+***Attention:***
+
+1.下载方法：pip install pyacp
+
+2.引用时需要：import AcpHub
+
+3.pyacp:默认下载了cffi,betterproto,protobuf,且指定版本，请自行避免版本冲突（建议在venv中操作）
+
+4.特别需要注意的是：AcpHub包中已经包含了所有需要的包，引用时请直接：
+
+AcpHub.pyacp.ffi.callback（用于注册callback） 或者Acp.acp\_idl（用于引用协议内容）等等
+
+# **一**.  **Python ****ACP**** overview**
+
+Acp 提供了多语言的接口版本，本章在于详细描述各个接口作用，以及使用方法和依赖。
+
+具体有关基本协议部分请参考：[ACP 通信协议详解](https://bd3ubzo9h2.feishu.cn/docx/EmGxdor9Zoqp4px30zhcT1kJnvf)
+
+# **二. 数据流转与关键接口流程图：**
+
+1. ## **c/s架构下的流程图**
+
+**暂时无法在飞书文档外展示此内容**
+
+2. ## **发布订阅模式下的流程图：**
+
+**暂时无法在飞书文档外展示此内容**
+
+# **三. 关键接口汇总与解析：**
+
+```Python
+import pyacp
+import acp_idl # 此包为内置包，数据协议的基本，使用response与request时请引用
+               #举例：AcpHub.acp_idl.Request() 等等
+from typing import Union
+class AcpClient:#Client类，客户端类，作为客户端主动请求Server
+    #构造函数，传入device id和topic，唯一确定一个通信端，要与Server端一致。
+    def __init__(self,device_id: Union[int],topic: Union[str]):
+    #Call ，主动请求Server端，
+    #Request 在请求时组合client端请求的数据
+    #Response 在请求后解析Server端返回的结果
+    #timeout_ms client端最大可接受的延时时长
+    #max_retry client端在意外未接到数据结果的情况下，最大重新请求次数
+    def call(self,request :Union[acp_idl.Request], response:Union[acp_idl.Response],timeout_ms:Union[int],max_retry:Union[int]):
+    #destroy：销毁当前的客户端。
+    def destroy(self):
+
+class AcpServer:# Server 端，服务端类，作为服务端响应客户端请求
+    #构造函数：device id 和topic 确定通信端，callback为回调函数，具体写法在流程图的评论中
+    # resp_data_size 服务端最大可接受的数据size大小
+    def __init__(self,device_id: Union[int],topic: Union[str],callback,resp_data_size:Union[int]):
+    #run方法： 启动server的监听机制，启动后进程需主动操作使其常驻而不退出。
+    def run(self):
+    #stop方法：server 端主动停止监听
+    def stop(self):
+    #destroy方法：server主动销毁本server
+    def destroy(self):
+  
+class AcpSubscriber:#发布订阅模式下的订阅端，用于接收发布者发布的数据
+    #构造函数：device id与topic 确定唯一通信端，callback为回调函数，在流程图中有具体的声明与实现方法。
+    def __init__(self,device_id: Union[int],topic: Union[str],callback):
+    #listen：开启对发布者发布数据的监听
+    def listen(self):
+    #stop：主动停止监听
+    def stop(self):
+    #destory:销毁当前订阅端
+    def destory(self):
+      
+class AcpPublisher:#发布订阅模式下的发布端，用于发布数据给接受者，支持一对多
+  
+    #构造函数： device id与topic唯一确定通信端。
+    def __init__(self,device_id: Union[int],topic: Union[str]):
+    #publish：主动推送数据，数据类型要和订阅端一致。ps:Request 和Response在这里不是请求和响应的意思，而是为了统一数据类型。换而言之，用Request和Response完全取决于用户需要
+    def publish(self,message : Union[acp_idl.Request,acp_idl.Response]):
+    #hassubscribers： 查看是否有订阅端等待接收数据，建议在真正发布数据前使用，并在检查到订阅端后再发布数据，避免不必要的资源浪费。
+    def hassubscribers(self):
+    #destroy：主动销毁发布端。
+    def destroy(self):
+```
+
+四.具体的代码示例，请结合上述所有资料理解。
+
+client:
+
+```Python
+from datetime import date
+import sys
+import AcpHub
+def main():
+    # ###########################Single varible#############################################
+    # # data = VarList()
+    # # varinfo = VarInfo()
+    # # req.read_req.data = data.SerializeToString()
+    # #################################@####################################################
+    timeout_ms = 200
+    max_retry = 3
+    req = AcpHub.acp_idl.Request()
+    req.read_req.length = 1234
+    response = AcpHub.acp_idl.Response()
+    req.read_req.id_group = AcpHub.acp_idl.enumdef.Idgroups.IGR_INVALID
+  
+    acpclient = AcpHub.AcpClient(0,"CSRCL")
+    acpclient.call(req,response,timeout_ms,max_retry)
+    print(response.read_resp)
+  
+if __name__ == "__main__":
+    main()
+```
+
+Server:
+
+```Python
+import time
+import AcpHub
+@AcpHub.pyacp.ffi.callback("void(const char *req, uint64_t req_len, char *resp, uint64_t *resp_len)")
+def server_callback(req, req_len, resp, resp_len):  
+    print("server_callback")
+    request = AcpHub.acp_idl.Request()
+    data_bytes = AcpHub.pyacp.ffi.buffer(req,req_len)
+    request.parse(data_bytes[:])
+    response = AcpHub.acp_idl.Response()
+    testresponse = AcpHub.acp_idl.Response()
+    response.read_resp.result = AcpHub.acp_idl.enumdef.Errors.ACP_ERR_OK
+    response.read_resp.data = b'application111'
+    stream = response.SerializeToString()
+    print(stream)
+  
+    response_len = len(stream)
+    AcpHub.pyacp.ffi.memmove(resp, stream, response_len)
+
+    resp_len[0] = response_len
+    RESPBYTES = AcpHub.pyacp.ffi.buffer(resp,resp_len[0])
+  
+def main():
+    print("server")
+    server = AcpHub.AcpServer(0,"CSRCL",server_callback,1000)
+    server.run()
+    while True:
+        time.sleep(1)
+
+if __name__ == "__main__":
+    main()
+```
+
+Publish:
+
+```Python
+import ctypes
+import sys
+import time
+import AcpHub
+def main():
+    print("publisher")
+    publish = AcpHub.AcpPublisher(0,"PubSub")
+    req = AcpHub.acp_idl.Request()
+    req.read_req.id_group = AcpHub.acp_idl.enumdef.Idgroups.IGR_INVALID
+    req.read_req.offset = 0
+    req.read_req.length = 1111
+  
+    while publish.hassubscribers() != True :
+        print("has no subscribers")
+        time.sleep(1)
+    i = 0
+    while (True):
+        i+=1
+        publish.publish(req)
+        time.sleep(1)
+        if (i == 5):
+            publish.destroy()
+            break
+if __name__ == "__main__":
+    main()
+```
+
+Subscribe:
+
+```Python
+import ctypes
+import sys
+import time
+import AcpHub
+@AcpHub.pyacp.ffi.callback("void(const char *msg, uint64_t msg_len)")
+def sub_callback(msg, msg_len):
+    requset = AcpHub.acp_idl.Request()
+    requset.parse(AcpHub.pyacp.ffi.string(msg))
+    print("Request length : ",requset.read_req.length)
+  
+def main():
+    print("Sub")
+    subscribe = AcpHub.AcpSubscriber(0,"PubSub",sub_callback)
+    if AcpHub.acp_idl.enumdef.Errors.ACP_ERR_OK != subscribe.listen():
+        print("Error subscription")
+        return
+    i = 0
+    while True:
+        i+=1
+        time.sleep(0.5)
+  
+  
+if __name__ == "__main__":
+    main()
+```
