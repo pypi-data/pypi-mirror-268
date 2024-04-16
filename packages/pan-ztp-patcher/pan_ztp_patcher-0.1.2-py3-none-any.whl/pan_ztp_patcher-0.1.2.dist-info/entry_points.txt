@@ -1,0 +1,3 @@
+[console_scripts]
+ztp_patcher=pan_ztp_patcher.app:main
+
