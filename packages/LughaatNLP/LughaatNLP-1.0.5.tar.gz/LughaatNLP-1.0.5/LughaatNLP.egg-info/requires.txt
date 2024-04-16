@@ -1,0 +1,8 @@
+python-Levenshtein
+tensorflow
+numpy
+scikit-learn
+scipy
+gtts
+SpeechRecognition
+pydub
