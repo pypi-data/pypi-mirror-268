@@ -1,0 +1,8 @@
+pysftp==0.2.9
+azure-core==1.29.6
+azure-data-tables==12.5.0
+azure-storage-blob==12.19.1
+python-dotenv==1.0.1
+pytest==8.1.1
+pandas==2.0.3
+pytest
