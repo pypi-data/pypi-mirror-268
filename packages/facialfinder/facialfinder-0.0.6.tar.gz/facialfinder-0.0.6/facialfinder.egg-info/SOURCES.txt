@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+facialfinder/__init__.py
+facialfinder/_path.py
+facialfinder/image.py
+facialfinder/video.py
+facialfinder.egg-info/PKG-INFO
+facialfinder.egg-info/SOURCES.txt
+facialfinder.egg-info/dependency_links.txt
+facialfinder.egg-info/requires.txt
+facialfinder.egg-info/top_level.txt
+facialfinder/datasets/faces.xml
