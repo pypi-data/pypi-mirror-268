@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: Pokemon-Library
+Version: 1.0.0
+Summary: Una biblioteca que contiene la clase RandomPokemon para generar un Pokemón aleatorio
+Author: Martha Morales
+Author-email: martha_morales@live.com.mx
+Requires-Dist: pandas
+
