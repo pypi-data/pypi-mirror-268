@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "cloudben"
+version = "1.0.0"
+description = "Simple CLI tool to interact with the Cloudflare APIs."
+authors = ["Alberto Gallinaro <albertogdesign@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = {extras = ["all"], version = "^0.12.3"}
+requests = "^2.31.0"
+
+[tool.poetry.scripts]
+cloudben = "cloudben.main:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
