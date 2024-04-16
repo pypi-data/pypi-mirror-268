@@ -1,0 +1,16 @@
+MuonDataLib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+MuonDataLib/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+MuonDataLib/data/detector1.py,sha256=LNQQHw11gxgYLPsWL2jZIvAK_lJ8g4UxVzS5VfegYaU,4493
+MuonDataLib/data/hdf5.py,sha256=CGiOJfJRFu8uB4rWuGJRX31HSg4c1_WQe9ApdMW60kE,4103
+MuonDataLib/data/muon_data.py,sha256=GukS4oLgtKwInE_IqnPBJ-cKXbpbVT7vCFLGc-hYLcM,1265
+MuonDataLib/data/periods.py,sha256=C3aQC364LhneGO-BsTJzBVC5Wu2XfsIhrfpqrMIIbzY,2600
+MuonDataLib/data/raw_data.py,sha256=7RK6R8Gcv3t9NLLLt1-V9cmgzh7j3v6r7xO4T6RuxkY,3607
+MuonDataLib/data/sample.py,sha256=p0hP8sQi5w3JN0u1Vxc2YoZIcXdPgP_avg8vyxAHlPc,2226
+MuonDataLib/data/source.py,sha256=SxOlnlVh4-7RiX32N7lS65iq0skifgsif3DYkpuxSyY,1562
+MuonDataLib/data/user.py,sha256=HjwvfCVbVVNswBBVyhgDd5_kAgotRMvYSYBaovUo-3E,1240
+MuonDataLib/data/utils.py,sha256=CrnTRS9y9xT1Vw1zk4Fk7mf-JdtO9u0NvBUrVLJ4ztM,986
+MuonDataLib/data/loader/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+MuonDataLib/data/loader/load_nxs2.py,sha256=53SOLw9bUuPmtlzI1AlSdGEcey74aNFLNmqIk4rwOfg,916
+muondatalib-0.2.0b0.dist-info/METADATA,sha256=Ool_5qdeTkYAPwa6qG91LwFn4UP0725DFiFSMYBi-CY,271
+muondatalib-0.2.0b0.dist-info/WHEEL,sha256=ur4lMSgKxRve-b6cC6GOiGGrtxpSt_vCXFQqDS1-1dA,105
+muondatalib-0.2.0b0.dist-info/RECORD,,
