@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pslines
+Version: 0.1.1
+Summary: Horizon and source lines plotting tool for 21-cm cosmology experiments
+Author: satyapan
+Author-email: satyapan.iiserm@gmail.com
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Horizon or Source lines plotting tool for 21-cm cosmology experiments
+
+pslines is a Python-based tool for generating and plotting horizon lines and source lines in the cylindrical power spectra for 21-cm cosmology analyses. The tool uses the updated horizon and source line equations derived without imposing the flat sky approximation (Munshi et al. 2024, in prep) that accurately describe the signature of the horizon and the source on the power spectrum.
+
+# Dependencies
+pslines requires some common python libraries: numpy, matplotlib, astropy.
+
+# Installation
+pslines can be installed via pip:
+```
+pip install pslines
+```
+
+# Documentation
+A step-by-step guide is presented in the wiki page.
+
