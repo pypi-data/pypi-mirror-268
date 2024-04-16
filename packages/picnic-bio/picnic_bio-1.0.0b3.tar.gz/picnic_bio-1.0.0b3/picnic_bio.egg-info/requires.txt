@@ -1,0 +1,7 @@
+requests~=2.31.0
+catboost==1.2.2
+matplotlib~=3.7.2
+pandas~=2.1.0
+Bio~=1.5.2
+numpy~=1.23.5
+prody~=2.4.0
