@@ -1,0 +1,3 @@
+include epdconvert/include/*.h
+include c_kaleido/include/*.h
+include setup.py
