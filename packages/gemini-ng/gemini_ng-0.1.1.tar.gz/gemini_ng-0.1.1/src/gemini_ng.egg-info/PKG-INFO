@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: gemini-ng
+Version: 0.1.1
+Summary: Next-generation Gemini API Client
+Author-email: Ming Yang <ymviv@qq.com>
+License: Copyright (c) 2024 Ming Yang
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Documentation, https://github.com/vivym/gemini-ng#readme
+Project-URL: Issues, https://github.com/vivym/gemini-ng/issues
+Project-URL: Source, https://github.com/vivym/gemini-ng
+Keywords: Gemini
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: google-api-python-client>=2.125.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: pydantic>=2.7.0
+Requires-Dist: av>=12.0.0
+Requires-Dist: pillow>=10.3.0
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: tqdm>=4.66.2
+Requires-Dist: diskcache>=5.6.3
+
+# Next-generation Gemini API Client
+
+A human-friendly API client for the Gemini API, with support for text, image, and video inputs.
+
+## Installation
+
+```bash
+pip install -U gemini-ng
+```
+
+## Usage
+
+1. Set the `GEMINI_NG_API_KEY` environment variable with your [Google AI Studio API key](https://aistudio.google.com/app/apikey).
+
+2. Use the client to interact with the Gemini API.
+
+```python
+from gemini_ng import GeminiClient
+
+client = GeminiClient() # api key from environment variable `GEMINI_NG_API_KEY`
+
+with client.start_chat(model="models/gemini-1.5-pro-latest") as chat:
+    image = client.upload_image("path/to/image.jpg")
+    video = client.upload_video("path/to/video.mp4", verbose=True)
+
+    prompt = [
+        video,
+        image,
+        "Describe the scene in the video and the image above in detail.",
+    ]
+    rsp = chat.send_message(prompt)
+
+    print(rsp.candidates[0].text)
+```
+
+## License
+
+This project is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for details.
