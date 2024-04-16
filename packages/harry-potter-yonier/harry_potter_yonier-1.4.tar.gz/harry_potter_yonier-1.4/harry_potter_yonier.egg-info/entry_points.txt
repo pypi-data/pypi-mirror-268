@@ -1,0 +1,2 @@
+[console_scripts]
+yonierpotter = harry_potter_yonier.__main__:call_me
