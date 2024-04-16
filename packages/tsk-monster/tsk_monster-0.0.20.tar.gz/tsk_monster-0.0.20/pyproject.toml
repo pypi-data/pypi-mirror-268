@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "tsk-monster"
+version = "0.0.20"
+description = ""
+authors = ["Gilad Kutiel <giladk@mobileye.com>"]
+readme = "README.md"
+
+[tool.poetry.urls]
+Homepage = "https://tsk.monster"
+Documentation = "https://tsk.monster"
+Repository = "https://github.com/tsk-monster/tsk"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.5"
+rope = "^1.13.0"
+autopep8 = "^2.1.0"
+isort = "^5.13.2"
+pytest = "^8.1.1"
+pyright = "^1.1.357"
+pre-commit = "^3.7.0"
+mkdocs-material = "^9.5.17"
+mkdocstrings = {extras = ["python"], version = "^0.24.3"}
+mkdocs-include-markdown-plugin = "^6.0.5"
+
+[tool.poetry.dependencies]
+python = "3.10.*"
+typer = "^0.12.3"
+
+
+[tool.poetry.scripts]
+tsk = "tsk_monster:main"

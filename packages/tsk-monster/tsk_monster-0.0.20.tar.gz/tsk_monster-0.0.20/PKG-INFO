@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: tsk-monster
+Version: 0.0.20
+Summary: 
+Author: Gilad Kutiel
+Author-email: giladk@mobileye.com
+Requires-Python: ==3.10.*
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: typer (>=0.12.3,<0.13.0)
+Project-URL: Documentation, https://tsk.monster
+Project-URL: Homepage, https://tsk.monster
+Project-URL: Repository, https://github.com/tsk-monster/tsk
+Description-Content-Type: text/markdown
+
+# tsk.monster
+## A cute little task runner.
+
+![](https://tsk.monster/tsk.svg)
+
+```python
+from tsk_monster import run_jobs, tsk
+
+run_jobs(
+    tsk(
+        'wget -O large.jpg https://picsum.photos/200/300',
+        prods=['large.jpg']),
+
+    tsk(
+        'convert -resize 100x large.jpg small.jpg',
+        needs=['large.jpg'],
+        prods=['small.jpg']))
+```
+
