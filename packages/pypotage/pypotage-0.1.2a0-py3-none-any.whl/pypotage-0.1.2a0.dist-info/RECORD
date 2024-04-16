@@ -1,0 +1,13 @@
+pypotage/__init__.py,sha256=YCz9HcFaT8_FADDtC-cH6Ujwgy-8MIqPydv3zJSpUI4,183
+pypotage/_chef.py,sha256=L38rVXfzJS1MFD-u87wdkeAIde3VLBQPVE3XNyiKuyg,405
+pypotage/_ingredient.py,sha256=1UrfqJDFHxJf7Iboo4laPHzSZwgffBOekXe_OkHhEcI,3472
+pypotage/_pot.py,sha256=WiA_AU0N8cg5JuqsmnvjSC1s0DwlcQNkgmfz2cjwxmo,2644
+pypotage/shared.py,sha256=EtWYwdkz60Ljykl1vlsrlxJagcBTLIIsYMoIgviV6iY,293
+pypotage/utils.py,sha256=ei_7HtK2m1B71UKUSYc-Bw68JbotPIlt8exEoDN0ZKs,267
+pypotage/chefs/__init__.py,sha256=EoKaT77C4QXwdV6n3N2hwZcZ5I7CA49pEdHHLzN6C-0,45
+pypotage/chefs/genericChef.py,sha256=FOx_gRNO2MVv4bC_RX8TnWuQ5Apzxu9v6x91CyEfYFI,1903
+pypotage/chefs/listChef.py,sha256=6ZI1svS_oZTEs3EkMk-aYkd2FfCbfxbiwVY-tTdPe1E,770
+pypotage-0.1.2a0.dist-info/METADATA,sha256=0n5tm25ijuhw0rtH1VhDXGE24qDIGKtSyAKGn7Uh4pk,575
+pypotage-0.1.2a0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pypotage-0.1.2a0.dist-info/top_level.txt,sha256=WxUPro6ecVHCz7Zs-MpggDPwDnOLeYPoWIJt3YFo2iY,9
+pypotage-0.1.2a0.dist-info/RECORD,,
