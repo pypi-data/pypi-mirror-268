@@ -1,0 +1,26 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "potcoder"
+version = "1.2.4"
+authors = [
+    { name = "Thai Minh Nguyen", email = "nguyenthaiminh0973200965@gmail.com" },
+]
+description = "A module created for the Python language that makes programming easier for programmers and developers"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/hiactions/potcoder"
+Issues = "https://github.com/hiactions/potcoder/issues"
+
+[tool]
