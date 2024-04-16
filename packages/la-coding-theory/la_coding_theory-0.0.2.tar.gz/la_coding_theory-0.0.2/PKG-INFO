@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: la_coding_theory
+Version: 0.0.2
+Summary: A small library, where we implemented  some coding algorithms with LA proving
+Author-email: Max Kutsenko <kutsenko.pn@ucu.edu.ua>, Katja Kovalchuk <kovalchuk.pn@ucu.edu.ua>, Roman Zaletskyy <rzaletskyy@gmail.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.

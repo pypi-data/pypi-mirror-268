@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+src/la_coding_theory/__init__.py
+src/la_coding_theory/_crs.py
+src/la_coding_theory/example.py
+src/la_coding_theory.egg-info/PKG-INFO
+src/la_coding_theory.egg-info/SOURCES.txt
+src/la_coding_theory.egg-info/dependency_links.txt
+src/la_coding_theory.egg-info/top_level.txt
