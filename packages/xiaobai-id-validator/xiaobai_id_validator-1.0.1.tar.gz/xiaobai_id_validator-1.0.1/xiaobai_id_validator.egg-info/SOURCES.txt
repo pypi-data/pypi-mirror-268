@@ -1,0 +1,12 @@
+README.md
+setup.py
+xiaobai_id_validator/__init__.py
+xiaobai_id_validator/data.py
+xiaobai_id_validator/func.py
+xiaobai_id_validator/helper.py
+xiaobai_id_validator/utils.py
+xiaobai_id_validator/validator.py
+xiaobai_id_validator.egg-info/PKG-INFO
+xiaobai_id_validator.egg-info/SOURCES.txt
+xiaobai_id_validator.egg-info/dependency_links.txt
+xiaobai_id_validator.egg-info/top_level.txt
