@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: paleta
+Version: 1.0.0
+Summary: Palette Extraction and Management Tool for Game Assets Experimentation
+Home-page: https://github.com/abhishtagatya/paleta
+Author: Abhishta Gatya
+Author-email: abhishtagatya@yahoo.com
+Project-URL: Homepage, https://github.com/abhishtagatya/paleta
+Project-URL: Change Log, https://github.com/abhishtagatya/paleta/CHANGELOG.md
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pillow==10.2.0
+
+# Paleta
+
+<img src="docs/preview.png" alt="Paleta Preview Game Sprite" width="256" align="right">
+
+Paleta is a Color Pallet Extraction and Management Tool that is focused on enhancing Visual Game Assets. It supports pallet conversion, mixing, minimizing, and matching in any way possible.

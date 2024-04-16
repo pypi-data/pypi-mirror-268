@@ -1,0 +1,17 @@
+README.md
+setup.cfg
+setup.py
+paleta/__init__.py
+paleta/color.py
+paleta/image.py
+paleta/metric.py
+paleta/palette.py
+paleta/version.py
+paleta.egg-info/PKG-INFO
+paleta.egg-info/SOURCES.txt
+paleta.egg-info/dependency_links.txt
+paleta.egg-info/requires.txt
+paleta.egg-info/top_level.txt
+paleta.egg-info/zip-safe
+tests/test_color.py
+tests/test_palette.py
