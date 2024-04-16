@@ -1,0 +1,20 @@
+[Board "0"]
+[Description "01 Mar 2024 11:33:16"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "W:8.J73.AK654.AK82 AJT75.AT62.J3.T3 Q32.K94.T87.Q974 K964.Q85.Q92.J65"]
+[Declarer N]
+[Contract 2S]
+[Auction "W"]
+1D 1S 1NT 2S
+Pass Pass Pass
+[Play "E"]
+D7 D2 DK D3
+DA DJ DT D9
+D4 C3 D8 DQ
+SK S8 S5 S2
+S4 C8 SA S3
+SJ SQ S6 D5
+CQ C5 C2 CT
+C4 CJ CA S7
+HA
