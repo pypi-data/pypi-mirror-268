@@ -1,0 +1,12 @@
+paleta/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+paleta/api.py,sha256=5ig_guImVQRdKEcRNTJYyGyIYCUPDmH1mF7VFYdnipg,565
+paleta/color.py,sha256=ogr28jXgT6pdWBk9-ePe3pF7aKyWiQJNVT-5udpPYRc,12274
+paleta/image.py,sha256=aAJA4aip0POUB8KENBu2mTwxgNr_AVEyQpTdso3Ezf8,2432
+paleta/metric.py,sha256=GnTvHjaaoVav4GWaRrfeUSIn40peBo7xKESLaRNV6wE,606
+paleta/palette.py,sha256=UtQyomh44mQL4DM9JFNsYrSbnf0b7lJ50yTgp9x3sPU,7027
+paleta/version.py,sha256=9C8U_kMX0x98w3CUW1G2vm12pYBsE-TE72pXihbWYqU,18
+paleta-1.0.1.dist-info/METADATA,sha256=khdUWNeHNmjQXrptbP585jbgnA0ci9chJzQRGx979_g,4553
+paleta-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+paleta-1.0.1.dist-info/top_level.txt,sha256=HiNpWuLPdVEAEuUv1ZkYgWr4NP1vXh2vs0a4afse18I,7
+paleta-1.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+paleta-1.0.1.dist-info/RECORD,,
