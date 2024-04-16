@@ -1,0 +1,8 @@
+setup.py
+pyalgobox/__init__.py
+pyalgobox/pyalgobox.py
+pyalgobox.egg-info/PKG-INFO
+pyalgobox.egg-info/SOURCES.txt
+pyalgobox.egg-info/dependency_links.txt
+pyalgobox.egg-info/requires.txt
+pyalgobox.egg-info/top_level.txt
