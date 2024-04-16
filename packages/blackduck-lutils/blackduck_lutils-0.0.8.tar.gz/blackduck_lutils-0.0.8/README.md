@@ -1,0 +1,243 @@
+# Black Duck License Utilities
+
+## License Conflicts
+
+# License Conflicts
+
+## Description
+This is a utility that will generate license conflict report by comparing license terms of the licenses associated with components on the Bill of Materials.
+Project version license will be taken into account and license conflicts for it will be calculated as well.
+
+## How it works
+The process is designed to minimize API calls required to produce a report. This is achieved by putting license information into a local storage file and utilizing SBOM report as the data source for project information.
+
+## Bootstrapping
+Before using the script, license data would have to be downloaded from the system and stored in to a file. To perform that task execute the following:
+
+```
+export PYTHONPATH=`pwd`/src:$PYTHONPATH
+python3 tests/test_download_license_data.py -u $BD_URL -t <(echo $API_TOKEN) -nv
+```
+This will download license data into 'license_data.json` file in the current directory. To place the file into different location use corresponding command line option.
+
+Note: This operation will execute about 3000 API calls and that is primarily the reason why we put this data into local storage. This way we don't have to put that much load onto the server when generating conflict reports.
+
+Note: This file would have to be regenerated if new licenses are added to the system.
+
+Full command line specification for this script:
+```
+usage: test_download_license_data.py [-h] -u BASE_URL -t TOKEN_FILE [-nv] [-pn PROJECT_NAME] [-pv PROJECT_VERSION_NAME] [-o OUTPUT_FILE]
+
+options:
+  -h, --help            show this help message and exit
+  -u BASE_URL, --base-url BASE_URL
+                        Hub server URL e.g. https://your.blackduck.url
+  -t TOKEN_FILE, --token-file TOKEN_FILE
+                        File containing access token
+  -nv, --no-verify      Disable TLS certificate verification
+  -pn PROJECT_NAME, --project-name PROJECT_NAME
+                        Project Name
+  -pv PROJECT_VERSION_NAME, --project-version-name PROJECT_VERSION_NAME
+                        Project Version Name
+  -o OUTPUT_FILE, --output-file OUTPUT_FILE
+                        Local Storage file for license information
+
+```
+
+## Usage
+This utility cam be used in off-line and on-lne modes.
+
+### On-line mode
+In on-line mode the following actions will take place:
+* Issue an API request to generate SBOM report.
+* Wait for report completion
+* Download the report 
+* Generate license conflicts data and write it into CSV file
+
+To use the utility in on-line mode add the following lines should be added to you automation:
+```
+from license_conflict_report import generate_license_conflict_report
+
+generate_license_conflict_report(base_url=args.base_url, 
+                                                  token=token, 
+                                                  no_verify=args.no_verify, 
+                                                  project_name=args.project_name, 
+                                                  project_version_name=args.project_version_name,
+                                                  license_data_file=args.license_data,
+                                                  csv_report_file=args.output_file)
+
+```
+Note: The folder containing license_conflict_report.py should be included in PYTHONPATH.
+
+### Off-line mode
+In off-line mode a SBOM report in SPDX format would have to exist.
+The following actions will take place:
+* Load SBOM report from a file
+* Generate license conflict data and write it into a file
+
+To use this utility in off-line mode, the following lines should be added to your automation:
+
+```
+from license_conflict_report import generate_license_conflict_report
+
+        report = generate_license_conflict_report(sbom=args.sbom, 
+                                                  license_data_file=args.license_data,
+                                                  csv_report_file=args.output_file)
+
+```
+Note: The folder containing license_conflict_report.py should be included in PYTHONPATH.
+
+## Example
+```
+tests/test_license_conflicts.py
+```
+Contains a sample code that will provide a command line to allow both on-line and off-line operations as well as specifying optional parameters like location of license data store file and output file name
+
+Note: The folder containing license_conflict_report.py should be included in PYTHONPATH.
+
+Command line specification for this script:
+```
+usage: test_license_conflicts.py [-h] -u BASE_URL -t TOKEN_FILE [-nv] [-pn PROJECT_NAME] [-pv PROJECT_VERSION_NAME] [-sbom SBOM] [-ld LICENSE_DATA] [-o OUTPUT_FILE]
+
+options:
+  -h, --help            show this help message and exit
+  -u BASE_URL, --base-url BASE_URL
+                        Hub server URL e.g. https://your.blackduck.url
+  -t TOKEN_FILE, --token-file TOKEN_FILE
+                        File containing access token
+  -nv, --no-verify      Disable TLS certificate verification
+  -pn PROJECT_NAME, --project-name PROJECT_NAME
+                        Project Name
+  -pv PROJECT_VERSION_NAME, --project-version-name PROJECT_VERSION_NAME
+                        Project Version Name
+  -sbom SBOM            SBOM File to process
+  -ld LICENSE_DATA, --license-data LICENSE_DATA
+                        Local license data storage
+  -o OUTPUT_FILE, --output-file OUTPUT_FILE
+                        CSV file name for output
+```
+
+## Results
+Conflict report will be written into CSV file with one line per license term conflict.
+The following fields will be present in the file:
+* Category
+* ComponentName
+* ComponentLicense
+* ConflictingComponentName
+* ConflictingComponentLicense
+* ConflictingLicenseTerm
+* TermValue
+* ConflictingTermValue
+* TermDescription
+* ConflictingTermDescription
+
+## TODO
+This utility is tested in off-line and online mode and has sufficient functionality for API performance testing.
+
+It is not fully tested against functional specification yet.
+
+
+## License
+This utility is licenses under Apache 2.0 License.
+
+
+## License Tagging
+## License Tagging and Grouping
+License tagging and grouping to allow easy insertion of arbitrary groups of licenses into policy definitions. 
+
+## Description
+When there is a need to add an arbitrary group of licenses into a Black Duck policy
+it requires adding them one by one through the UI. This tool allows to maintain an external data store with Tags ang Tag mappings to the licenses and will allow updating policy definitions with expanded list of licenses.
+
+## Requirements
+This tool requires python 3.9 or newer with the following packages present
+* argparse
+* blackduck
+* openpyxl
+
+Install necessary packages with `pip install -r requirements.txt`
+
+## Usage
+Tool can be executed as a standalone Python script with the following command line specification:
+```
+usage: license_tagging.py [-h] -u BASE_URL -t TOKEN_FILE [-nv] [-lsf LICENSE_STORE_FILE] [-nlc]
+
+options:
+  -h, --help            show this help message and exit
+  -u BASE_URL, --base-url BASE_URL
+                        Hub server URL e.g. https://your.blackduck.url
+  -t TOKEN_FILE, --token-file TOKEN_FILE
+                        File containing access token
+  -nv, --no-verify      Disable TLS certificate verification
+  -lsf LICENSE_STORE_FILE, --license-store-file LICENSE_STORE_FILE
+                        Local license information storage
+  -nlc, --no-license-check
+                        Skip scanning trough all licenses
+```
+
+## How it works
+The tool maintains local local data storage as an Excel file with default filename of 'LicenseStorage.xlsx'
+
+This file will contain two worksheets
+- Licenses
+- LicenseTags
+
+Licenses worksheet contains data on all licenses currently present in Black Duck instance. Columns contain data and are used as following:
+* Column A - License Name
+* Column B - License URL
+* Column C - License Family
+* Column D - License Family URL
+* Column E - SPDXID
+* Column F and above can contain tags
+
+LicenseTags worksheet contains License Tag Names in the Column A and corresponding URL in column B. 
+
+### Common parameters
+In the example command line there would be references to common paraleters:
+* $BD_URL - environment variable contaqing Blackl Duck instance URL
+* token. - a text file containing valid authentication token
+
+### Bootstrapping
+Before using the tool, local storage would have to be initalized.
+That is accomplished by running the script.  If it can not find local license store, it will generate new file with complete internal stuctures and populate Licenses worksheet with data from Black Duck instance.
+
+```
+python3 license_tagging.py -u $BD_URL -t token -nv
+```
+
+This will generate a file named LicenseStorage.xlsx in the current folder and populate Licenses worksheet with full complement of licenses from your Blackduck instance.
+
+It will also validate presence of 'TagPlaceholder' and create it as necessary.
+At this point there will be no tags defined yet.
+
+### Defining tags
+User must open the local store excel file and add tags to Column A of LicenseTag worksheet, save the Excel file and run the script again.
+```
+python3 license_tagging.py -u $BD_URL -t token -nv
+```
+This action will update the references in Black Duck and get the framework ready to be used.
+
+### Tagging Licenses
+Using Excel as a tool, tag licenses on the License worksheet by putting tag name in the columns F and above. There is no limit on how many tags could be associated with a license. 
+
+### Policy creation
+When creating a policy that would have to reference large number of licences use TagName which will be visible and searchable in the UI.
+
+### Expanding tags to full list of licenses
+Execute the script again and the Tags in the policy will be expanded to full list of licenses.
+```
+python3 license_tagging.py -u $BD_URL -t token -nv
+```
+This action will iterate through the policies, find policy conditions that have tag name in them and replace them with corresponding list of licenses.
+
+## Example of use
+See example of use here
+
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
+
+## License
+This code is licnsed under Apache 2.0 license.
+
+## Project status
+Active
