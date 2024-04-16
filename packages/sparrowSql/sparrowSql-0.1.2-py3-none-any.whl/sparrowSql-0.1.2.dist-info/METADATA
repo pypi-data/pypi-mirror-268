@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: sparrowSql
+Version: 0.1.2
+Summary: 基于各数据库连接包的二次开发SQL连接工具
+Requires-Python: >=3.11
+Requires-Dist: pymysql
+Requires-Dist: requests
+
