@@ -1,0 +1,36 @@
+[project]
+name = "caustic.lexer"
+version = "1.2.2-1"
+dependencies = [
+    "buffer-matcher >= 0.1.1",
+]
+requires-python = ">=3.12"
+authors = [{name="Shae.c32"}]
+maintainers = []
+description = "Grammar compilation for Caustic--ABANDONED AND UNUSED"
+readme = "README.md"
+keywords = ['caustic', 'language', 'parser', 'lexer']
+classifiers = [
+    "Development Status :: 7 - Inactive",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Natural Language :: English",
+    "Programming Language :: Other",
+    "Topic :: File Formats",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Software Development :: Interpreters",
+    "Topic :: Software Development :: Pre-processors",
+    "Topic :: Text Processing",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/Caustic/CausticLexer"
+Issues = "https://codeberg.org/Caustic/CausticLexer/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+"caustic.lexer" = ["grammar.cag", "precompiled_nodes.pkl"]
