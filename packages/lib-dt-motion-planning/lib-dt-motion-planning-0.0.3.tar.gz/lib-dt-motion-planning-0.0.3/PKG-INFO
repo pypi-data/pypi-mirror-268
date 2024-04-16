@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lib-dt-motion-planning
+Version: 0.0.3
+Home-page: http://github.com/duckietown/lib-dt-motion-planning
+Author: Andrea F. Daniele
+Author-email: afdaniele@duckietown.com
+Requires-Dist: numpy<=1.26.2
+
+
+dt-motion-planning: Motion Planning components of Duckietown's autonomy behavior.
+=================================================================================
+
+
+Motion Planning components of the autonomous behavior pipeline running on Duckietown robots.
+
