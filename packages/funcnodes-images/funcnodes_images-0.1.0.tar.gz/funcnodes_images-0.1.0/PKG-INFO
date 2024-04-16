@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: funcnodes-images
+Version: 0.1.0
+Summary: 
+Author: Julian Kimmig
+Author-email: julian.kimmig@gmx.net
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: funcnodes (>=0.1.30,<0.2.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Description-Content-Type: text/markdown
+
+Bassic functionalities to work with images in Funcnodes
+
+Most important is the extendable "ImageFormat" class, which allows for automatic rendering and conversion of different image formats if they are implemented. Each should have their own respective package, e.g. funcnodes_opencv as this is only the basis for them to prevent reimplementations.
+
