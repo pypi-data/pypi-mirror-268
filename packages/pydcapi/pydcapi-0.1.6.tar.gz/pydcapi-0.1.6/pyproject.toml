@@ -1,0 +1,76 @@
+[project]
+dynamic = ["version"]
+name = "pydcapi"
+description = "Unofficial Python library for Adobe Document Cloud"
+authors = [
+    { name = "Max Kuznetsov", email = "maks.kuznetsov@gmail.com" }
+]
+dependencies = [
+    "httpx>=0.20.0",
+    "uritemplate>=3.0.1",
+    "pydantic>=2.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.urls]
+GitHub = "https://github.com/mkuznets/pydcapi"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff==0.3.0",
+    "mypy==1.8.0",
+    "pytest>=8.1.1",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.hatch.version]
+source = "vcs"
+raw-options = { local_scheme = "no-local-version" }
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pydcapi"]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src/pydcapi"]
+exclude = [".gitignore"]
+
+[tool.ruff]
+exclude = ["src/pydcapi/models", "src/pydcapi/resources"]
+line-length = 256
+
+[tool.ruff.format]
+line-ending = "lf"
+quote-style = "double"
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "N"]
+ignore = [
+    "E501", # line length violations
+    "F722", # syntax error in forward annotation (false positives in models)
+]
+
+[tool.mypy]
+python_version = "3.8"
+disallow_untyped_defs = true
+files = ["src/pydcapi"]
+exclude = ["src/pydcapi/models"]  # TODO: reenable when all upstream issues are fixed
+
+[[tool.mypy.overrides]]
+module = ["pydcapi.models.*"]
+disable_error_code = ["valid-type"] # caused by con* types in models. Can be fixed by --field-constraints
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+strict = ["**"]
+include = ["src/pydcapi"]
+exclude = ["src/pydcapi/models"]

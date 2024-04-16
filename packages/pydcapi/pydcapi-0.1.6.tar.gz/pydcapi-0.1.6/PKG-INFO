@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: pydcapi
+Version: 0.1.6
+Summary: Unofficial Python library for Adobe Document Cloud
+Project-URL: GitHub, https://github.com/mkuznets/pydcapi
+Author-email: Max Kuznetsov <maks.kuznetsov@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: httpx>=0.20.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: uritemplate>=3.0.1
+Description-Content-Type: text/markdown
+
+# pydcapi: Unofficial Python library for Adobe Document Cloud
+
+[![PyPI - Version](https://img.shields.io/pypi/v/pydcapi)](https://pypi.org/project/pydcapi/)
