@@ -1,0 +1,8 @@
+vidscaler/__init__.py,sha256=_i-BQeRhY9EBCcXXGIcEqabtjRpDwp6uA3I0uqTvfFk,6073
+vidscaler/__main__.py,sha256=veVGAfb-w0TDE99HwNSrk7y56LdPFk4e-x9cf090VbI,1081
+vidscaler/gui.py,sha256=c-JsX2MbJNpZcea8QP-AYSa2kI2WJyZ0hL3fZEJiAHE,11065
+vidscaler-2024.4.15.dist-info/METADATA,sha256=nkocrgf36pJSJmLZsaA0W8jGOhZLcfAXX9lOqrBG1A8,2174
+vidscaler-2024.4.15.dist-info/WHEEL,sha256=xl5aZkiJYVTjhVaiADvIe6UeUVylGNomrxKZ0Zda1CE,87
+vidscaler-2024.4.15.dist-info/entry_points.txt,sha256=XM87OtLIKdrxLaZsC0pVvhEsrF_3W18HTWp24nJaYDo,90
+vidscaler-2024.4.15.dist-info/licenses/LICENSE,sha256=mt95YxKqVf3ez6nQwHiw5d_0zKB51umjxU2WhlFod0c,1071
+vidscaler-2024.4.15.dist-info/RECORD,,

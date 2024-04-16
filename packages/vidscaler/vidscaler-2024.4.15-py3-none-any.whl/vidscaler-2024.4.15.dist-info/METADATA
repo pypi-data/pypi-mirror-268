@@ -1,0 +1,87 @@
+Metadata-Version: 2.3
+Name: vidscaler
+Version: 2024.4.15
+Project-URL: Homepage, https://github.com/nbdy/vidscaler
+Project-URL: Documentation, https://github.com/nbdy/vidscaler/wiki
+Project-URL: Repository, https://github.com/nbdy/vidscaler.git
+Project-URL: Issues, https://github.com/nbdy/vidscaler/issues
+Project-URL: Changelog, https://github.com/nbdy/vidscaler/blob/main/CHANGELOG.md
+Author: nbdy
+Maintainer: nbdy
+License: MIT License
+License-File: LICENSE
+Keywords: esrgan,gui,realesrgan,upscaling,video upscaler
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.11
+Requires-Dist: customtkinter
+Requires-Dist: loguru
+Requires-Dist: moviepy
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: py-real-esrgan
+Requires-Dist: tqdm
+Description-Content-Type: text/markdown
+
+# video-upscaler
+
+[![](http://github-actions.40ants.com/nbdy/vidscaler/matrix.svg)](https://github.com/nbdy/vidscaler)
+
+upscale (x2/x4/x8) a video or a directory of videos using the command line
+
+## dependencies
+- moviepy
+- loguru
+- opencv
+- torch
+- numpy
+- tqdm
+- [Real-ESRGAN](https://github.com/sberbank-ai/Real-ESRGAN)
+
+
+## how to ..
+
+### .. install
+
+```shell
+# from pypi
+pip install vidscaler
+
+# from git repo
+pip install git+https://github.com/nbdy/vidscaler
+
+# or download a release from https://github.com/nbdy/vidscaler/releases
+```
+
+### .. run
+
+#### .. gui
+
+```shell
+vidscaler-gui
+# or
+vidscaler --gui
+```
+
+#### cli
+
+```shell
+vidscaler --help
+usage: vidscaler [-h] -i INPUT -o OUTPUT [-c] [-s SCALE]
+                   [-m MODEL_DIRECTORY] [-g] [-p]
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input directory or file
+  -o OUTPUT, --output OUTPUT
+                        Output directory or file
+  -c, --cpu             Use CPU mode
+  -s SCALE, --scale SCALE
+                        Upscaling factor
+  -m MODEL_DIRECTORY, --model-directory MODEL_DIRECTORY
+  -g, --gui             Run the GUI
+  -p, --preview         Enable live preview
+```

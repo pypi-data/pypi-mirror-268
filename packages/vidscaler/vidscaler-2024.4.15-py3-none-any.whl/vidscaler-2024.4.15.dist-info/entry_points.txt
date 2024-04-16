@@ -1,0 +1,5 @@
+[console_scripts]
+vidscaler = vidscaler:main
+
+[gui_scripts]
+vidscaler-gui = vidscaler:gui
