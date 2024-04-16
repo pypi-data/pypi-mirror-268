@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyclg
+Version: 1.0.0
+Summary: Python Console Graphics Library
+Author-email: Chairo Omini <charo.omini@gmail.com>
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Project-URL: Home, https://github.com/ACE-Devs/pycg
+
+pycg stands for PYthon Commandline Graphics
+It is used for making command line animations and games.
