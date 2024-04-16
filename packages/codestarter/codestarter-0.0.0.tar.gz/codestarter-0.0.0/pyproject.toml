@@ -1,0 +1,44 @@
+[project]
+name = "codestarter"
+version = "0.0.0"
+authors = [
+  { name="Ihsaan Patel" },
+]
+description = "A tool for assembling a repo using copy/paste"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pydantic",
+  "pydantic-settings",
+]
+
+[project.optional-dependencies]
+cli = ["typer"]
+local = ["aiofiles"]
+pythondep = ["packaging"]
+
+[project.scripts]
+codestarter = "codestarter.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/pateli18/codestarter"
+Issues = "https://github.com/pateli18/codestarter/issues"
+
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build]
+exclude = [
+  "/.*",
+  "/images"
+]
