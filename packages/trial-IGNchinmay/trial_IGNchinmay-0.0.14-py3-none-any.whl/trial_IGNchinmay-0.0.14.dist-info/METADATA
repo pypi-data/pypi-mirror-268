@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: trial_IGNchinmay
+Version: 0.0.14
+Summary: A small CV test package
+Author-email: Chinmay <chinmayananda.sahu@ignitarium.com>
+Project-URL: Homepage, https://gitlab.ignitarium.in/chinmayananda_sahu/trial
+Project-URL: Issues, https://gitlab.ignitarium.in/chinmayananda_sahu/trial/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cryptography
+Requires-Dist: cv-bridge
+Requires-Dist: docker
+Requires-Dist: easyprocess
+Requires-Dist: fabulous
+Requires-Dist: GitPython
+Requires-Dist: GPUtil
+Requires-Dist: imgaug
+Requires-Dist: loguru
+Requires-Dist: lsb-release-ex
+Requires-Dist: matplotlib
+Requires-Dist: ntplib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: open3d
+Requires-Dist: pandas
+Requires-Dist: Pillow
+Requires-Dist: pyautogui
+Requires-Dist: pynput
+Requires-Dist: pynvml
+Requires-Dist: pyrealsense2
+Requires-Dist: pyvirtualdisplay
+Requires-Dist: scikit-image
+Requires-Dist: shapely
+Requires-Dist: sympy
+Requires-Dist: termcolor
+
+# icutils
+<div align="center">
+  <img src="ignitarium-logo.png">
+</div>
+
+[![PyPI version](https://badge.fury.io/py/trial-IGNchinmay.svg)](https://badge.fury.io/py/trial-IGNchinmay)
+
+A sample test package for CV
