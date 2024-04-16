@@ -1,0 +1,7 @@
+servicing-0.0.4.dist-info/METADATA,sha256=61IK1gQq8BhZZ69tUksD8sIL9ndO5DUQU4onYtAbAvE,1055
+servicing-0.0.4.dist-info/WHEEL,sha256=5HyBAIXy6w_lmX9AQnFspp6An6SPZJwRKkYM1H8iHP0,95
+servicing/__init__.py,sha256=fugJtAEy5AW2XTVhD_XnnA5bbupl32K7CEHbWYtWfFk,119
+servicing/__init__.pyi,sha256=Si9l9ew5XKWSTqBI_1xMSruxQChVqGgtHbJAM9iC4L4,2862
+servicing/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+servicing/servicing.cp310-win_amd64.pyd,sha256=Jvo6_rxAP7J96HJtVid9GCM_7tZ-B1YU7ZNEOwHBaVk,5215232
+servicing-0.0.4.dist-info/RECORD,,
