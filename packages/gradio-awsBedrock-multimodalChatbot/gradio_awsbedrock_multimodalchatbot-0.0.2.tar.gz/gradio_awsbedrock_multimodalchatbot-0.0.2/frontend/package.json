@@ -1,0 +1,32 @@
+{
+  "name": "gradio_multimodalchatbot",
+  "version": "0.7.6",
+  "description": "Gradio UI packages",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "dependencies": {
+    "@gradio/atoms": "0.5.3",
+    "@gradio/audio": "0.9.6",
+    "@gradio/client": "0.13.0",
+    "@gradio/icons": "0.3.3",
+    "@gradio/image": "0.9.6",
+    "@gradio/markdown": "0.6.5",
+    "@gradio/statustracker": "0.4.8",
+    "@gradio/theme": "0.2.0",
+    "@gradio/upload": "0.7.7",
+    "@gradio/utils": "0.3.0",
+    "@gradio/video": "0.6.6",
+    "@types/dompurify": "^3.0.2",
+    "@types/katex": "^0.16.0",
+    "@types/prismjs": "1.26.3",
+    "dequal": "^2.0.2"
+  },
+  "main_changeset": true,
+  "main": "./Index.svelte",
+  "exports": {
+    ".": "./Index.svelte",
+    "./package.json": "./package.json"
+  }
+}

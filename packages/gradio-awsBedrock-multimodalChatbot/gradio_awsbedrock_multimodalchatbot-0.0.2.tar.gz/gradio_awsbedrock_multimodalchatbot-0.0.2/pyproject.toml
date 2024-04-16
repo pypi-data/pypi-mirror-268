@@ -1,0 +1,42 @@
+[build-system]
+requires = [
+  "hatchling",
+  "hatch-requirements-txt",
+  "hatch-fancy-pypi-readme>=22.5.0",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "gradio_awsBedrock_multimodalChatbot"
+version = "0.0.2"
+description = "This component enables multi-modal input for the Anthropic Claude v3 suite of models available from Amazon Bedrock"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [{ name = "Jedijamez", email = "" }]
+keywords = ["gradio-custom-component", "gradio-template-Chatbot", "AWS", "Bedrock", "Amazon Bedrock", "Anthropic", "LLM", "Chatbot", "Multimodal", "Claude", "Claude v3"]
+# Add dependencies here
+dependencies = ["gradio>=4.0,<5.0"]
+classifiers = [
+  'Development Status :: 3 - Alpha',
+  'License :: OSI Approved :: Apache Software License',
+  'Operating System :: OS Independent',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3 :: Only',
+  'Programming Language :: Python :: 3.8',
+  'Programming Language :: Python :: 3.9',
+  'Programming Language :: Python :: 3.10',
+  'Programming Language :: Python :: 3.11',
+  'Topic :: Scientific/Engineering',
+  'Topic :: Scientific/Engineering :: Artificial Intelligence',
+  'Topic :: Scientific/Engineering :: Visualization',
+]
+
+[project.optional-dependencies]
+dev = ["build", "twine"]
+
+[tool.hatch.build]
+artifacts = ["/backend/gradio_multimodalchatbot/templates", "*.pyi", "backend/gradio_multimodalchatbot/templates", "backend/gradio_multimodalchatbot/templates", "backend/gradio_multimodalchatbot/templates", "backend/gradio_multimodalchatbot/templates", "backend/gradio_multimodalchatbot/templates", "backend/gradio_multimodalchatbot/templates", "backend/gradio_multimodalchatbot/templates", "backend/gradio_multimodalchatbot/templates", "backend/gradio_awsBedrock_multimodalChatbot/templates", "backend/gradio_awsBedrock_multimodalChatbot/templates", "backend/gradio_awsBedrock_multimodalChatbot/templates", "backend/gradio_awsBedrock_multimodalChatbot/templates", "backend/gradio_awsBedrock_multimodalChatbot/templates"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["/backend/gradio_multimodalchatbot"]
