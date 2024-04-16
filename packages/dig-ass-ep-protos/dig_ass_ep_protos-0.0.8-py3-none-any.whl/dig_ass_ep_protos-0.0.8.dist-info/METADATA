@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dig_ass_ep_protos
+Version: 0.0.8
+Summary: Proto files for dig_ass_ep_protos
+Author: AGI-MED-TEAM
+Requires-Dist: grpcio ==1.62.1
+Requires-Dist: grpcio-tools ==1.62.1
+
+## Ответственный разработчик
+
+@bakulin
+
+## Зависимости
+
+`python3.10 -m pip install -r requirements.txt`

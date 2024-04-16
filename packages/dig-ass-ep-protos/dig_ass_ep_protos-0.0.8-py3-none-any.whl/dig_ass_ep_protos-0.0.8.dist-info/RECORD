@@ -1,0 +1,10 @@
+dig_ass_ep_protos/DigitalAssistantEntryPoint_pb2.py,sha256=nTtVNa0Cy_VAufQdFZfwTDU_GT0k8vyRANSLCJb0TuU,2166
+dig_ass_ep_protos/DigitalAssistantEntryPoint_pb2.pyi,sha256=VtbHs0yjEUPUak4zPdpsWy3rXwV5qnAS8Ubj4548Nb0,1455
+dig_ass_ep_protos/DigitalAssistantEntryPoint_pb2_grpc.py,sha256=h0sLqy067Ly9vL0NssQJ2smcoHX3ZZj6QCtsTpbGNDY,3050
+dig_ass_ep_protos/__init__.py,sha256=wOJN3HxAgnSon5vWYU3Txm2UZ_7tBHDKXUKZIH-mXX8,22
+dig_ass_ep_protos/abstract_client.py,sha256=uNUwe2yTFj9PTAIxkE_DotTVytcUbcUUWoKRgYd-H-M,389
+dig_ass_ep_protos/client.py,sha256=6TZY8EDNXFI-EjuJvLSW3l8lzo4KfTuzlg5RWAX0-FM,983
+dig_ass_ep_protos-0.0.8.dist-info/METADATA,sha256=IsdcCSk48Ngf7bt_h8Usu2J7yfd07jyEvt7sbRDDQLM,333
+dig_ass_ep_protos-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dig_ass_ep_protos-0.0.8.dist-info/top_level.txt,sha256=PQCUIRWapT8EGtAYQgsf9SiKk5G_m4o13Uh1dl5jRI8,18
+dig_ass_ep_protos-0.0.8.dist-info/RECORD,,
