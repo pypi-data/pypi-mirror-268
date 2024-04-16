@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+doSetup/__init__.py
+doSetup/examples.py
+doSetup.egg-info/PKG-INFO
+doSetup.egg-info/SOURCES.txt
+doSetup.egg-info/dependency_links.txt
+doSetup.egg-info/top_level.txt
