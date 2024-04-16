@@ -1,0 +1,12 @@
+pynumstim/__init__.py,sha256=iAnBdWvZd6PV4oAfWl1PxTfb2B2kkcdWPiIRTfOGHi0,362
+pynumstim/_data_sets.py,sha256=o-S6_36qrMA1apqmiiOqfSyFrRIr888uGDaXrcviPjo,2373
+pynumstim/_mplist.py,sha256=-npvHQnCjIOWq9D0g-GZqvXsgNDBTeE2Ape0yUsKvTM,7878
+pynumstim/_number.py,sha256=nSrDXpVhTexOCYgk_1aoq09NLVgx2tSN_gL9XPxVrv4,3313
+pynumstim/_problem.py,sha256=Z1w57uCxPvKNt-wDB-N5IP47vZru0nKo8z44Jzwfn3c,9404
+pynumstim/image.py,sha256=aL72FxIW2gWJBsSRi1Jqz1eFpEG-qS5N4o0pD-Uj75Q,4513
+pynumstim/datasets/Ahren_Jackson_79.toml,sha256=vMF1QQphM0adZHXvUf90O7N6IKfYNB1VgJTvc-9lFB4,346
+pynumstim/datasets/Lindemann_Tira_10.toml,sha256=XsMeeJ2bFMo2X7ffYdokLyDgPNcJyU_MeXopy8PZFrw,726
+pynumstim-0.2.6.dist-info/LICENSE,sha256=QtnRu3B0IdESAPi6ER2VDzTogJJgpVncLVxYjRIi7VE,1083
+pynumstim-0.2.6.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+pynumstim-0.2.6.dist-info/METADATA,sha256=QFoM-id4UkZS7iF9GmxFX4nJYaG_0GGK3s2fWZ9axEE,1377
+pynumstim-0.2.6.dist-info/RECORD,,
