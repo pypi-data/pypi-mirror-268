@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: numflow
+Version: 1.0.0
+Summary: Transforming vector fields
+Home-page: https://github.com/vojtatom/numflow.py
+Author: Vojtěch Tomas
+Author-email: hello@vojtatom.cz
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Numflow
+
+Python/C++ based tool for converting vector field data into models for rendering.
+
+I made a [blogpost describing the design, there are also some outputs, see more here!](https://vojtatom.github.io/numflow.py)
+
+## Dev
+
+Developing the package on localhost is recommanded in devcontainer - see `.devcontainer` folder.
+The deps are in `pyproject.toml`, you can build the package:
+
+```
+pip install .
+```
+
+The install uses pyproject.toml to install the deps, and the setup.py to install the package. For local dev, you can install the dependencies with:
+
+```
+pip install -r requirements.txt
+```
+
+Run the tests:
+
+```
+pytest
+```
