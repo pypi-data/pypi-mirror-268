@@ -1,0 +1,14 @@
+uk_election_ids/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+uk_election_ids/datapackage.py,sha256=Tz8E_2uTDy4ft5ffzXlU8Xwvbzfi7n9W1kxeMJ90820,2732
+uk_election_ids/election_ids.py,sha256=8cx_C59LKuwiAS7NZSYov5wzvIZYKnFDSS0HrIi-MYA,13999
+uk_election_ids/metadata_tools.py,sha256=N74z1j62_24bqhb05HeLdrapVOseayIAxntHmzTB-9E,5216
+uk_election_ids/parser.py,sha256=UfaPjdlco3awA1UXSzkvL5v0VeY7Jo9ZP884ASt2T6U,1482
+uk_election_ids/slugger.py,sha256=vQnfeBsvw9yfo2Z9IIOz20ZGj2FJEMAsBrtIRaZGe3E,662
+uk_election_ids/data/id_requirements.json,sha256=wdyKb_hDrDLe5DiOGfFDkEaIiiUgBYLfFc28hEiVE48,3776
+uk_election_ids/data/postal_votes.json,sha256=CkUG85RiLy3HoDY_d0P91InnK-AfB4d0xV3H2d-heHI,3646
+uk_election_ids/data/voting_systems.json,sha256=bpgin7MvO2Qgi2Pm4QwbC-LU5l7o2oJTWhELXQAcv38,3347
+uk_election_ids-0.8.0.dist-info/LICENSE,sha256=YAQUVuTMF3cEop9-U7Ntfpt48jMSMja446xpUMLKJvQ,1071
+uk_election_ids-0.8.0.dist-info/METADATA,sha256=LQB0nf15Z9bOxqB-IQKD7zS0Tsa1NMcVDUY57uhtGeQ,2298
+uk_election_ids-0.8.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+uk_election_ids-0.8.0.dist-info/top_level.txt,sha256=Bz_57LK6wgWhMKdvhc-aSwBlMkZQvO2L7zgtN4MsO-M,16
+uk_election_ids-0.8.0.dist-info/RECORD,,
