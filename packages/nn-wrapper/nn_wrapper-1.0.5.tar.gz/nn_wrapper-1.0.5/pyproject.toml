@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "nn-wrapper"
+version = "1.0.5"
+description = "A wrapper class for neural networks that makes working with them easier."
+authors = ["JohnConnor123 <ivan.eudokimoff2014@gmail.com>"]
+readme = "README.md"
+packages = [{include = "NetworkWrapper"}]
+repository = "https://github.com/JohnConnor123/NetworkWrapper"
+
+# poetry config pypi-token.testpypi <API-token>
+#[[tool.poetry.source]]
+#name = "torch-cuda"
+#url = "https://download.pytorch.org/whl/cu118/"
+#priority = "supplemental"
+
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+numpy = ">=1.24.2"
+pandas = ">=2.0.0"
+seaborn = ">=0.12.2"
+tqdm = ">=4.66.1"
+matplotlib = ">=3.8.0"
+scikit-learn = ">=1.3.0"
+torch = ">= 2.1.0"
+torchvision= ">= 0.16.0"
+torchaudio = ">= 2.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
