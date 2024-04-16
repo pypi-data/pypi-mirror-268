@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: pyaoponto-toolkit
+Version: 0.1.1
+Summary: A toolkit for python code
+License: MIT
+Author: Estevao Fonseca
+Author-email: estevaopfon@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# Code toolkit
+A python toolkit to help you with your daily coding tasks.
+## Installation
+
+```bash
+pip install pyaoponto-toolkit
+````
+
+# Usage
+```python
+# Example of using the decorator
+@log_time
+def sample_function(x):
+    """Function to simulate some processing."""
+    time.sleep(x)  # Simulate time delay with sleep
+    return x * x
+
+# Running the function to see the decorator in action
+result = sample_function(2)
+print("Result:", result)
+```
+
+## Contribution
+
+Contributions are always welcome! To contribute, please fork the repository, make your changes, and submit a pull request.
+
+## License
+
+This project is distributed under the MIT license. See the LICENSE file for more details.
+
