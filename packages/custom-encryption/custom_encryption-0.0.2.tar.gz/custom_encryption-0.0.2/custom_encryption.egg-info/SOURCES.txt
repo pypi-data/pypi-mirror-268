@@ -1,0 +1,5 @@
+setup.py
+custom_encryption.egg-info/PKG-INFO
+custom_encryption.egg-info/SOURCES.txt
+custom_encryption.egg-info/dependency_links.txt
+custom_encryption.egg-info/top_level.txt
