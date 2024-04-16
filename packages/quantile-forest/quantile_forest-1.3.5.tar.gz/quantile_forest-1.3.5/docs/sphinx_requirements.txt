@@ -1,0 +1,9 @@
+sphinx
+altair
+numpydoc
+pillow
+pydata_sphinx_theme
+sphinxcontrib.bibtex
+sphinx-design
+sphinxext-altair
+vl-convert-python
