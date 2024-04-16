@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+freeze_uuid/__init__.py
+freeze_uuid/main.py
+freeze_uuid.egg-info/PKG-INFO
+freeze_uuid.egg-info/SOURCES.txt
+freeze_uuid.egg-info/dependency_links.txt
+freeze_uuid.egg-info/top_level.txt
+tests/__init__.py
+tests/test_api.py
+tests/testdata.py
