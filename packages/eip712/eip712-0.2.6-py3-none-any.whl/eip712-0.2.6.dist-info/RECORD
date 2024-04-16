@@ -1,0 +1,10 @@
+eip712/__init__.py,sha256=ag-tbqKVNXmU4r0BeiJooIX131Qfm2m-M1uACyMDXAQ,102
+eip712/common.py,sha256=poMjDKV6X-BHxhwllmPymGI2X72nRMU6MoCLE451BlY,3618
+eip712/messages.py,sha256=kyPPqnmcDogicQL8SPXIT1Gv8lPi6q7H_1N2HrQ6otg,5721
+eip712/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+eip712/version.py,sha256=ea_eUoeOtyzu66mqXKQmkHZOdifhlCDVPsMy9xvsneQ,411
+eip712-0.2.6.dist-info/LICENSE,sha256=wKVouzimXmZeaCj3f48Vua0vk91U4vjrrt2Ax0u3qBs,11342
+eip712-0.2.6.dist-info/METADATA,sha256=0ZerOgplOxx8YhSgpnFXI8EplbZiNpIVfC0CdF5a8ig,4623
+eip712-0.2.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+eip712-0.2.6.dist-info/top_level.txt,sha256=N3WxZOPCoH8Cya9XV5XEikHSqiIiWnxycmYj8lqdkCY,7
+eip712-0.2.6.dist-info/RECORD,,
