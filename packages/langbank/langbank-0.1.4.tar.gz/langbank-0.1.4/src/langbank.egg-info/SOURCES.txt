@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/langbank/__init__.py
+src/langbank/main.py
+src/langbank.egg-info/PKG-INFO
+src/langbank.egg-info/SOURCES.txt
+src/langbank.egg-info/dependency_links.txt
+src/langbank.egg-info/top_level.txt
