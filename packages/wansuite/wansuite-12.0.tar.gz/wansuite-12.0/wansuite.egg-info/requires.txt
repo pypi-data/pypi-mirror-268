@@ -1,0 +1,8 @@
+yfinance
+beautifulsoup4
+helium
+mysql-connector-python
+SQLAlchemy
+nltk
+gensim
+top2vec
