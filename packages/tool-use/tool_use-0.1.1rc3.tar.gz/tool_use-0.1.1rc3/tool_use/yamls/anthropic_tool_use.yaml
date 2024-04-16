@@ -1,0 +1,51 @@
+tool_use.tools.anthropic_tool_use.anthropic_tool_use:
+  name: anthropic_tool_use
+  type: custom_llm
+  inputs:
+    connection:
+      type:
+        - ClaudeAnthropicConnection
+    model:
+      type:
+        - string
+      default: claude-3-opus-20240229
+    temperature:
+      type:
+        - double
+      default: 0.7
+      optional: true
+    top_p:
+      type:
+        - double
+      default: 1.
+      optional: true
+    n:
+      type:
+        - int
+      default: 1
+      optional: true
+    stop:
+      type:
+        - list
+      optional: true
+    max_tokens:
+      type:
+        - int
+    tools:
+      type:
+        - list
+      optional: true
+    extra_headers:
+      type:
+        - object
+      optional: true
+    is_raw_output:
+      type:
+        - bool
+      optional: true
+    stream:
+      type:
+        - bool
+      optional: true
+  module: tool_use.tools.anthropic_tool_use
+  function: anthropic_tool_use
