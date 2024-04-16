@@ -1,0 +1,25 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "uvx"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = ["version"]
+
+dependencies = [
+    "uv",
+    "patchelf"
+]
+
+[tool.maturin]
+bindings = "bin"
+profile = "release"
+
+[tool.maturin.target.x86_64-unknown-linux-gnu]
+[tool.maturin.target.aarch64-unknown-linux-gnu]
