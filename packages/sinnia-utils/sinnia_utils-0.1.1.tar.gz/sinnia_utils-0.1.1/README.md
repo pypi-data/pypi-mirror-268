@@ -1,0 +1,179 @@
+# Sinnia Utils
+
+Python utilities for Sinnia
+
+ - AMQP Utils
+ - Timezone Utils
+ - Miscellaneous Utils
+
+
+### To publish changes to this library in PyPi
+
+For tutorial click [here](https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives "Python packaging")
+
+#### To publish for the first time:
+
+`python3 -m pip install --upgrade build`
+
+`python3 -m pip install --user --upgrade twine`
+
+Edit the version in setup.py
+
+`python3 -m build`
+
+`python3 -m twine upload dist/{package_with_version}`
+
+#### To publish subsequent versions:
+
+Edit the version in setup.py
+
+`python3 -m build`
+
+`python3 -m twine upload dist/{package_with_version}`
+
+#### Auth must have been configured in `$HOME/.pypirc`
+
+
+
+----
+### Dependencies:
+
+Using python 3.9.12
+
+* build==0.8.0
+* bleach==5.0.0
+* certifi==2021.10.8
+* charset-normalizer==2.0.12
+* commonmark==0.9.1
+* docutils==0.18.1
+* idna==3.3
+* importlib-metadata==4.11.3
+* keyring==23.5.0
+* pkginfo==1.8.2
+* Pygments==2.12.0
+* PyMySQL==1.0.2
+* PyYAML==6.0
+* readme-renderer==35.0
+* requests==2.27.1
+* requests-toolbelt==0.9.1
+* rfc3986==2.0.0
+* rich==12.3.0
+* six==1.16.0
+* twine==4.0.0
+* urllib3==1.26.9
+* webencodings==0.5.1
+* zipp==3.8.0
+
+
+
+
+
+
+
+
+
+
+RELEASE 2024
+
+Split utils into utils (connection methods), string_utils, date_utils.
+Added tests to string_utils, date_utils.
+A few methods have been improved.
+The intention overall is to uniformize in order to remove duplicate methods across different versions of _utils.py
+
+
+
+Checking the changes needed in the projects that depend on utils (or some version of it):
+
+
+
+    daterange -> date_utils.get_dates_in_range
+    * QUITADO DE SHARED/UTILS
+        scripts/database/huge/py/utils.py:                                  def daterange(start_date, end_date):                                        PROPIO UTILS; METODO NO SE USA. REVISAR IMPLEMENTACION DIFERENTE
+        data-requests-app/app/utils.py:                                     def daterange(start_date, end_date):                                        PROPIO UTILS; METODO NO SE USA. REVISAR IMPLEMENTACION DIFERENTE
+    get_dates_in_range -> date_utils
+        scripts/tiktok/tiktok-business/tiktok_business/py/basic_reports.py:         def get_dates_in_range(start_date: date, end_date: date):           PROPIO METODO; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/tiktok/tiktok-business/tiktok_business/py/basic_reports.py:         dates_range = get_dates_in_range(analytics_since, analytics_until)  PROPIO METODO; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/fb-marketing-insights/fb_marketing_insights/campaign_insights.py:   def get_dates_in_range(start_date, end_date):                       PROPIO METODO; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/fb-marketing-insights/fb_marketing_insights/campaign_insights.py:   dates_range = get_dates_in_range(reporting_since, reporting_until)  PROPIO METODO; SI SE USA. IMPLEMENTACION IDENTICA
+
+    csv_mapper -> __
+    *  QUITADO DE SHARED/UTILS
+        scripts/database/huge/py/utils.py:                  def csv_mapper(row):                                            PROPIO UTILS; METODO NO SE USA. QUITAR DE SCRIPT
+        data-requests-app/app/utils.py:                     def csv_mapper(row):                                            PROPIO UTILS; METODO NO SE USA. QUITAR DE APP
+
+    insert_mapper -> __
+    *  QUITADO DE SHARED/UTILS
+        scripts/database/huge/py/utils.py:                  def insert_mapper(row, default = "NULL"):                       PROPIO UTILS; METODO NO SE USA. QUITAR DE SCRIPT
+        data-requests-app/app/utils.py:                     def insert_mapper(row, default = "NULL", conn = None):          PROPIO UTILS; METODO NO SE USA. QUITAR DE APP
+
+    get_date -> date_utils
+        scripts/fb-insights/py/fb_insights_posts.py:            self.date_limit = self.utils.get_date(args[1])                           SHARED/UTILS; SI SE USA
+        scripts/instagram/ig/instagram_utils.py:                def get_date(self, s = None):                                            PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA SIMPLIFICADO
+        scripts/instagram/ig/get_business_media.py:             self.media_since = self.utils.get_date(kwargs.get("media_since"))        PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA SIMPLIFICADO
+        scripts/instagram/ig/get_business_media_insights.py:    self.media_since = self.utils.get_date(kwargs.get("media_since"))        PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA SIMPLIFICADO
+        scripts/instagram/ig/get_business_insights.py:          self.insights_since = self.utils.get_date(kwargs.get("insights_since"))  PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA SIMPLIFICADO
+    get_date_from_string -> comparar con date_utils.get_date()!
+        scripts/instagram/ig/instagram_utils.py:                def get_date_from_string(self, s):                                       PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA SIMPLIFICADO
+        scripts/instagram/ig/instagram_utils.py:                def get_date(self, s=None): d = self.get_date_from_string(s)             PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA SIMPLIFICADO
+
+    get_yesterday -> date_utils
+        scripts/instagram/ig/instagram_utils.py:            def get_yesterday(self):                                        PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/instagram/ig/get_user_media.py:             date_from = self.utils.get_yesterday()                          PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/instagram/ig/get_business_insights.py:      self.insights_since = self.utils.get_yesterday()                PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+
+    get_last_week(self) -> date_utils
+        scripts/instagram/ig/instagram_utils.py:            def get_last_week(self):                                        PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/instagram/ig/get_business_media.py:         self.media_since = self.utils.get_last_week()                   PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+
+    get_start_end_delta_str -> __
+    * QUITADO DE SHARED/UTILS 
+        scripts/instagram/ig/instagram_utils.py:            def get_start_end_delta_str(self, delta):                       PROPIO UTILS; METODO NO SE USA; QUITAR DE SCRIPTS
+
+    get_start_end_delta_dates -> adaptar para usar date_utils.get_start_end_dates
+    * QUITADO DE SHARED/UTILS
+        scripts/instagram/ig/instagram_utils.py:            def get_start_end_delta_dates(self, delta):                     PROPIO UTILS; SI SE USA; QUITAR DE SCRIPTS
+        scripts/instagram/ig/get_user_media.py:             date_from, date_to = self.utils.get_start_end_delta_dates(1)    PROPIO UTILS; SI SE USA; CAMBIAR A date_utils.get_start_end_dates() 
+
+    get_start_end_str -> adaptar para usar date_utils.get_start_end_dates
+    * QUITADO DE SHARED/UTILS
+        scripts/instagram/ig/instagram_utils.py:            def get_start_end_str(self, str1, str2):                        PROPIO UTILS; SI SE USA; QUITAR DE SCRIPTS
+        scripts/instagram/ig/get_user_media.py:             df,dt = self.utils.get_start_end_str(dates_arr[0],dates_arr[1]) PROPIO UTILS; SI SE USA; CAMBIAR A date_utils.get_start_end_dates()
+
+    get_start_end_dates -> date_utils
+        scripts/instagram/ig/instagram_utils.py:                                    def get_start_end_dates(self, str1, str2):                          
+                                            PROPIO UTILS; NO SE USA; QUITAR DE SCRIPTS
+        scripts/tiktok/tiktok-business/tiktok_business/py/basic_reports.py:         def get_start_end_dates(date_from_str, date_to_str, DF=DATE_FMT):                          
+                                            PROPIO METODO; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/tiktok/tiktok-business/tiktok_business/py/basic_reports.py:         analytics_since, analytics_until = get_start_end_dates(analytics_since_arg, analytics_until_arg)                PROPIO METODO; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/fb-marketing-insights/fb_marketing_insights/campaign_insights.py:   reporting_since, reporting_until = StringUtils.get_start_end_dates(reporting_since_arg, reporting_until_arg)                SHARED/UTILS; SI SE USA
+
+    remove_nonspacing_marks -> string_utils
+        scripts/instagram/ig/instagram_utils.py:            def remove_nonspacing_marks(self, s):                           PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/instagram/ig/instagram_utils.py:            clean_caption = self.remove_nonspacing_marks(caption)           PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+
+    boolean_str_to_int -> string_utils
+        scripts/instagram/ig/instagram_utils.py:            def boolean_str_to_int(self, x):                                 PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA MEJORADO
+        scripts/instagram/ig/get_business_media.py:         "hidden": self.utils.boolean_str_to_int(str(item.get("hidden"))) PROPIO UTILS; SI SE USA. IMPLEMENTACION SE HA MEJORADO
+
+    get_number_from_string -> string_utils
+        scripts/instagram/ig/instagram_utils.py:            def get_number_from_string(self, s):                            PROPIO UTILS; NO SE USA; QUITAR DE SCRIPTS
+
+    get_twitter_ids_from_string -> string_utils.get_as_comma_separated_integers
+        scripts/fb-insights/py/fb_insights_posts.py:        self.user_ids = self.utils.get_twitter_ids_from_string(args[2]) SHARED/UTILS; USAR string_utils.get_as_comma_separated_integers
+
+    get_youtube_ids_from_string -> string_utils.get_as_comma_separated_youtube_channel_ids
+        ! no se usa. Deberia validar el input de yt-analytics/get_analytics.py
+                     
+    camel_case_to_snake_case -> string_utils
+        scripts/yt-analytics/py/analytics/get_analytics.py:                             headers.append(self.utils.camel_case_to_snake_case(item['name']))       SHARED/UTILS; SI SE USA
+        scripts/tiktok/tiktok-business/tiktok_business/temps/py/get_basic_report.py:    headers.append(self.utils.camel_case_to_snake_case(item['name']))       SHARED/UTILS; SI SE USA
+        scripts/tiktok/tiktok-public/tikapi/py/tiktok_utils.py:                         def camel_case_to_snake_case(self, camel):                              PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/tiktok/tiktok-public/tikapi/py/tiktok_utils.py:                         filtered[self.camel_case_to_snake_case(key)]= dic[key]                  PROPIO UTILS; SI SE USA. IMPLEMENTACION IDENTICA
+        scripts/tiktok/tiktok-public/tikapi/py/get_posts_by_hashtag.py:                 row[self.utils.camel_case_to_snake_case(key)] = video.get(key)          SHARED/UTILS; SI SE USA
+        scripts/tiktok/tiktok-public/tikapi/py/get_user_posts.py:                       row[self.utils.camel_case_to_snake_case(key)] = video.get(key)          SHARED/UTILS; SI SE USA
+
+
+
+
+
+
