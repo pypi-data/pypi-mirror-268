@@ -1,0 +1,6 @@
+selfpkg/__init__.py,sha256=8SX-6dwzGenjuxOA2kf7pffrF_QrdCh9DwalyMojfC0,37
+selfpkg/greeting.py,sha256=CM7x8jYE3ojaE54r11IX7IsUPdEQVhLNobrYXW2VGSw,51
+selfpkg-0.0.1b3.dist-info/METADATA,sha256=avcVV-IrQjql8-i1_iD-X0vsX55nQMKK0JRoI8owF3M,322
+selfpkg-0.0.1b3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+selfpkg-0.0.1b3.dist-info/top_level.txt,sha256=-MY5X6k-U6Nax89KQaaVrj3C2POIeJ_EZbhjFJeDDiU,8
+selfpkg-0.0.1b3.dist-info/RECORD,,
