@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pixel-font-builder"
+version = "0.0.19"
+description = "A library that helps create pixel style fonts."
+readme = "README.md"
+license = { text = "MIT License" }
+requires-python = ">=3.11"
+authors = [
+    { name = "TakWolf" },
+]
+maintainers = [
+    { name = "TakWolf" },
+]
+keywords = ["font", "pixel"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "fonttools>=4.51.0",
+    "Brotli>=1.1.0",
+    "bdffont>=0.0.20",
+    "pcffont>=0.0.4",
+]
+
+[project.urls]
+homepage = "https://github.com/TakWolf/pixel-font-builder"
+source = "https://github.com/TakWolf/pixel-font-builder"
+issues = "https://github.com/TakWolf/pixel-font-builder/issues"
+
+[tool.pytest.ini_options]
+pythonpath = [
+    ".",
+    "src",
+]
+addopts = [
+    "--import-mode=importlib",
+]
