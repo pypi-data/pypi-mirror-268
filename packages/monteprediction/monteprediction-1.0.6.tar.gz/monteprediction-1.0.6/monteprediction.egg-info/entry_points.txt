@@ -1,0 +1,2 @@
+[console_scripts]
+monteprediction = monteprediction.__main__:main
