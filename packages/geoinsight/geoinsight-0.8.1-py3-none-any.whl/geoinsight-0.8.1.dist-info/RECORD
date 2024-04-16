@@ -1,0 +1,7 @@
+geoinsight/__init__.py,sha256=BuKpKRnDHhFBMS6Vk11wofVgYQq7sQhro-N3RnhlCrA,43
+geoinsight/api.py,sha256=4i1bxWwABXesXSkYxeDp4XximqCssHNNuy8oR2lpEt8,162148
+geoinsight/util.py,sha256=qDRbd05ZpPHBkkarjXS26xavZxV7hew7HQZ_h_aw1MA,4999
+geoinsight-0.8.1.dist-info/METADATA,sha256=7Pnw32bKxEwdnkJmzaY07M6VRVNoNqeoquN8zUIeFJM,1791
+geoinsight-0.8.1.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+geoinsight-0.8.1.dist-info/licenses/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geoinsight-0.8.1.dist-info/RECORD,,
