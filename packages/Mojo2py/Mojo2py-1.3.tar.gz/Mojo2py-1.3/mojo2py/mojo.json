@@ -1,0 +1,19 @@
+{
+    "mojo":[
+        {
+            "fn":"def",
+            "String":"str",
+            "var ":"",
+            "let ":"",
+            "struct":"class",
+            "Int":"int",
+            "inout self":"self",
+            "Bool":"bool",
+            "->":"->",
+            " raises":"",
+            ":PythonObject":"",
+            "from python import Python":""
+          
+        }
+    ]
+}
