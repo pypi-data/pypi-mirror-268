@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: bec-server
+Version: 2.4.0
+Summary: BEC server
+Home-page: https://gitlab.psi.ch/bec/bec
+Project-URL: Bug Tracker, https://gitlab.psi.ch/bec/bec/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: bec-lib
+Requires-Dist: cytoolz
+Requires-Dist: h5py
+Requires-Dist: libtmux
+Requires-Dist: lmfit
+Requires-Dist: msgpack
+Requires-Dist: numpy
+Requires-Dist: ophyd
+Requires-Dist: ophyd-devices
+Requires-Dist: pydantic
+Requires-Dist: py-scibec
+Requires-Dist: pyyaml
+Requires-Dist: python-dotenv
+Requires-Dist: rich
+Requires-Dist: xmltodict
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-random-order ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Requires-Dist: pytest-timeout ; extra == 'dev'
+
