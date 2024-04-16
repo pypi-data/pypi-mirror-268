@@ -1,0 +1,78 @@
+
+
+
+
+
+
+
+<pre>
+
+	<h1>shares</h1>
+	
+	<h2>docker</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.151 -v .:/shares -it jumps:v2.1.0
+		docker exec -it 389597d6510a bash
+
+	<h2>link the readme</h2>
+		ln -s venues/stages/shares/room.md readme.MD
+
+	<h2>poetry</h2>
+		pip install poetry poetry-plugin-export
+	
+		<h3>add</h3>
+			poetry add sanic
+			
+			
+			#
+			#	if dev dependencies
+			#
+			# poetry export --with dev --format requirements.txt --output requirements.txt
+			
+			
+			rm -rf /shares/venues/stages_pip && poetry export --format requirements.txt --output requirements.txt && pip install -r requirements.txt -t /shares/venues/stages_pip
+			
+			# /root/.cache/pypoetry/virtualenvs/shares-p2eJTVsK-py3.10/lib/python3.10/site-packages/
+			# cp -R /root/.cache/pypoetry/virtualenvs/shares-p2eJTVsK-py3.10/lib/python3.10/site-packages/ /shares/venues/stages_pip
+		
+		<h3>upgrade</h3>
+			poetry update sanic
+		
+		<h3>installations venv</h3>
+			poetry config virtualenvs.path /path/to/your/directory
+			poetry env use python3
+			poetry shell
+
+
+		
+	<h2>publishing</h2>
+		
+		#
+		#	statuses
+		#
+		python3 /shares/venues/stages/shares/_status/status.proc.py
+		python3 /shares/status_E2E/status.proc.py
+		
+		#
+		#	git push
+		#
+		#		if Circle CI is successful, then publish
+		#
+		
+		#
+		#	increase version
+		#
+		
+		#
+		#	poetry auth
+		#
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+		
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>
