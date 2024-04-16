@@ -1,0 +1,8 @@
+FM13_transform/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+FM13_transform/data2bufr.py,sha256=Mf4HGlrNSextxcsHuFk-6_MsyLhkdQUMZa7YnvuCVz0,85110
+FM13_transform/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+FM13_transform/resources/synop-mappings-308009.json,sha256=f74gUi_S4ujUNJFo5cEXbRbXHaPHuBamVHkaeMgbHdw,13902
+FM13_transform-0.0.4.dist-info/METADATA,sha256=vfOWul3eeNZcojw5jYdtgUd7aT9Cc_lQkLHd_Y_9_S0,623
+FM13_transform-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+FM13_transform-0.0.4.dist-info/top_level.txt,sha256=50ITp3FQi-HSSpxzJYvSNRK9GIthQCcze3YoKCbfB-Y,15
+FM13_transform-0.0.4.dist-info/RECORD,,
