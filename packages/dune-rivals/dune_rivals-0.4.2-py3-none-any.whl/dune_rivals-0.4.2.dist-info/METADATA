@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: dune-rivals
+Version: 0.4.2
+Summary: Dune rivals for 6.S079 Lab 6
+Project-URL: homepage, https://github.com/mitdbg/datascienceclass
+Project-URL: repository, https://github.com/mitdbg/datascienceclass
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
