@@ -1,0 +1,10 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svtter_template_creator/__init__.py,sha256=LBK46heutvn3KmsCrKIYu8RQikbfnjZaj2xFrXaeCzQ,22
+svtter_template_creator/__main__.py,sha256=uUgkxFOHgJDR2SFB2H5XTjBrDS4aFFjL7lFLra2RTf4,1029
+svtter_template_creator/lib.py,sha256=q5c2_J1935HBg5cXYPOroQ4qmNaH6fUtcXvehV8_5Kc,1042
+svtter_template_creator/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+svtter_template_creator-0.5.0.dist-info/LICENSE,sha256=1OZ9dtvLzug9SqtoL3v_tfe_aLLmH2JwmLO4HYARkjE,1067
+svtter_template_creator-0.5.0.dist-info/METADATA,sha256=lJYxUC-chkcGZgES4mCM8oqSi-o_Ud0fLQuhQCCrosw,1069
+svtter_template_creator-0.5.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+svtter_template_creator-0.5.0.dist-info/entry_points.txt,sha256=Nd4e9O93o35yPoR3r4YOLnEWvgxPTyDSVryY725m5PM,59
+svtter_template_creator-0.5.0.dist-info/RECORD,,
