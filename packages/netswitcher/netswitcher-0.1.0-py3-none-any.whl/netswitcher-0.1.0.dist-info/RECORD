@@ -1,0 +1,11 @@
+core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core/acl.py,sha256=XbYbXwRWMYGvtzO6PNqn2Fg0j47wNVODITc6Z9DAtLM,3278
+core/lacp.py,sha256=ghMyMpVsaxQZria6C0wEuzWArmbjfGsCuLzeIfRnkvo,2827
+core/speed.py,sha256=9TsBieCqO7btQ4cHy5PKdtcoA5J_3BEFUT25ee0zmuQ,1333
+core/state.py,sha256=wkDn7GSaKeCiX5ibTlLEmllXAT__9s8G4Mv5GKic7as,1074
+core/status.py,sha256=6Bo6oeOGxIM5q3zxjZnxaZapD3kZwAbl_eVW2UoNok4,2021
+core/utils.py,sha256=a7M9FZGFeKIVF5MUkKE3N2g4VJ_gYAgR2TZLkP4BSIg,492
+netswitcher-0.1.0.dist-info/METADATA,sha256=iljBfRJqSTW3WInHIvplDzu3465vDWwjH-IL-zTIRl4,2538
+netswitcher-0.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+netswitcher-0.1.0.dist-info/entry_points.txt,sha256=oqPMKRzh-R9CuKNuALP85zkB6BmEyBiOkm7ZPqHRwTs,38
+netswitcher-0.1.0.dist-info/RECORD,,
