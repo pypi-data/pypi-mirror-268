@@ -1,0 +1,86 @@
+[project]
+name = "cvxportfolio"
+version = "1.3.1"
+description = "Portfolio optimization and back-testing."
+readme = "README.rst"
+license = {text = "Apache License (2.0)"}
+authors = [{name = "Enzo Busseti"}, {name = "Stephen Boyd"},
+    {name = "Steven Diamond"}, {name = "BlackRock Inc."}]
+maintainers = [{name = "Enzo Busseti", email = "enzo.busseti@gmail.com"}]
+dependencies = ["pandas", "numpy", "matplotlib", "requests", "cvxpy",
+    "multiprocess", # robustifies usage w/ 3rd party modules
+    "scs" # it's hardcoded as fallback solver if numerical errors
+    ]
+
+[project.optional-dependencies]
+docs = ["sphinx", "furo", "sphinx-github-style"]
+dev = ["build", "twine", "coverage", "diff_cover", "pylint", "isort",
+    "autopep8", "docformatter", "beautifulsoup4"]
+examples = ['beautifulsoup4', 'lxml', 'clarabel', 'ecos']
+
+[project.urls]
+Homepage = "https://www.cvxportfolio.com"
+Repository = "https://github.com/cvxgrp/cvxportfolio"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["cvxportfolio", "cvxportfolio.data", "cvxportfolio.constraints",
+    "cvxportfolio.tests"]
+
+[tool.setuptools.package-data]
+"cvxportfolio.tests" = ["*.csv"]
+
+[tool.pylint.main]
+fail-under = 9.75
+jobs = 0 # multiprocessing pylint
+max-line-length = 79 # PEP8 default
+load-plugins =["pylint.extensions.docparams", "pylint.extensions.docstyle"]
+
+[tool.pylint.basic]
+# These variable names are defined in the paper.
+good-names = ["t", "u", "v", "w", "h", "z", "F", "d", "Sigma"]
+disable = ['fixme'] # We are using TODOs in code comments
+
+[tool.pylint.variables]
+# These are sometimes ignored, we might instead use dataclasses for
+# sharing data between elements of a policy's DAG
+ignored-argument-names = "args|kwargs"
+
+[tool.pylint.parameter_documentation]
+# we require docstrings of public methods to document everything
+accept-no-param-doc = false
+accept-no-raise-doc = false
+accept-no-return-doc = false
+accept-no-yields-doc = false
+
+[tool.pylint.'MESSAGE CONTROL'] # check updates for the spelling of this
+enable=["useless-suppression"] # flag useless pylint pragmas
+
+[tool.coverage.report]
+fail_under = 99
+
+[tool.coverage.run]
+omit = ["*/site-packages/*", "*/dist-packages/*"]
+
+[tool.diff_cover]
+# this will be superflous once we push coverage to 100
+compare_branch = "origin/master"
+fail_under = 99
+
+[tool.diff_quality]
+# this will be superflous once we push pylint score to 10
+compare_branch = "origin/master"
+fail_under = 99
+
+[tool.autopep8]
+# these have been selected by hand, whitespaces and empty lines
+select = ["W291","W292","W293","W391","E231","E225","E303"]
+
+[tool.docformatter]
+# tweaked to remove whitespaces and other simple fixes 
+wrap-summaries = 0
+wrap-descriptions = 0
+tab-width = 4
