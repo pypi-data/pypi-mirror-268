@@ -1,0 +1,11 @@
+jiebanlp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jiebanlp/constant.py,sha256=M6Lnl4ZCpSedcYxKtt5J0euP5lMX5xLA2FL09dcde00,569
+jiebanlp/manager.py,sha256=Rll_rj2L0CIoqcx1OYOql_tQxtXXjZ1R_LquwR0HgiA,1629
+jiebanlp/predict.py,sha256=4HYtBzx5_Yyv07_48l0o_5lb6QgzVAZ70eMvFhFUh9A,290
+jiebanlp/scheduler.py,sha256=2Gx5ULA-H5Ju2gBBuG_psvAHIn-xVORIuImml8upuUA,296
+jiebanlp/service.py,sha256=fRFm-4-z0tc3XTxxM09GYETLsZ8Cc_Z_WYx_cnZ9WHw,1357
+jiebanlp-2.1.0.dist-info/LICENSE,sha256=IpZl4pKfHATNv-UdSctOtXjBEAd34T7Eltpzu2GLYV4,469
+jiebanlp-2.1.0.dist-info/METADATA,sha256=yWLk6OHtlSC0HMoDjSWc3MccPz0z-jn0OMd7wHft3bI,404
+jiebanlp-2.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+jiebanlp-2.1.0.dist-info/top_level.txt,sha256=bcjqocZ2zub09VYyY8iS7i13CT7-1-cDenlNL6oL6RQ,9
+jiebanlp-2.1.0.dist-info/RECORD,,
