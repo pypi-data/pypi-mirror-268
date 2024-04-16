@@ -1,0 +1,38 @@
+{
+  "request":
+      {
+        "root_path": "./",
+        "scenario": "08Sep2022-140545",
+        "partition_times": ["2031-08-09T22:00:00", "2031-08-10T00:00:00"],
+        "experiment_types": ["instrument"],
+        "output_dir": "output",
+        "report_title": "Summary Report 08Sep2022-140545",
+        "add_start_end_scenario": 0,
+        "report_file_name": "report_08Sep2022_140545",
+        "include_power_metrics": 1,
+        "include_power_metrics_partition_details": 1,
+        "include_instantaneous_data_rate_per_experiment": 1,
+        "include_ssmm_status_per_instruments": 1,
+        "include_downlink_status_per_instruments": 1,
+        "battery_capacity_if_sim_not_run": 4946
+      },
+  "config_for_command_line_tool": "scenario_reporter",
+  "request_parameter_descriptions": {
+        "root_path": "path of directory where eps_package is located ",
+        "scenario": "Name of the eps_package (directory)",
+        "partition_times": "list of time requested within (time format: YYYY-mm-ddTHH:MM:SS)",
+        "experiment_types": "list of experiment type [instrument]; only instrument is supported",
+        "output_dir": "path of output dir (which must exist); by default soa_report_output within eps_package directory",
+        "add_start_end_scenario": "This flag must be set to 0/1 to allow/avoid the inclusion of periods from/util start/end eps_package window",
+        "report_title": "Report title",
+        "report_file_name": "[Optional] Report file Name; default is 'report'",
+        "overwrite_periods": "This allow to overwrite sub-periods distributing the corresponding DV in per experiment in % (only for target experiment types)",
+        "include_power_metrics": "Flag to enforce/avoid inclusion of power metrics; default is 1/true",
+        "include_power_metrics_partition_details": "[Optional] Flag to enforce/avoid inclusion of power metric partition; default is 0/false to reduce report size; take into account only if include_power_metrics=1/true",
+        "include_instantaneous_data_rate_per_experiment": "Flag to enforce/avoid inclusion instantaneous data rate per experiment metrics; default is 1/true",
+        "include_ssmm_status_per_instruments": "[Optional] Flag to enforce/avoid inclusion of SSMM status per experiment; default True/0",
+        "include_downlink_status_per_instruments": "[Optional] Flag to enforce/avoid inclusion of donwlink status per experiment; default True/0",
+        "battery_capacity_if_sim_not_run": "Allows to set the battery capacity in case OSVE sim not run"
+      }
+}
+

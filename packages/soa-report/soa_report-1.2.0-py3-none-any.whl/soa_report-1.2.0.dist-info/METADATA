@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: soa_report
+Version: 1.2.0
+Summary: Python package for reporting uplink resources from EPS output (i.e. data volume)
+Home-page: https://juigitlab.esac.esa.int/core-system/uplink/soa_report
+Author: Claudio Munoz Crego, Marc Costa Sitja
+Author-email: marc.costa@ext.esa.int
+Keywords: esa,JUICE,EPS,planetary,space,metrics
+Requires-Dist: esac-juice-pyutils >=0.3.1
+Requires-Dist: osve-wrapper >=0.2.3
+

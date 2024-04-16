@@ -1,0 +1,30 @@
+import matplotlib.colors as mcolors
+
+colors = {
+          'PEP': mcolors.CSS4_COLORS['maroon'],
+          'MGNS': mcolors.CSS4_COLORS['lavender'],
+          'dummy3': mcolors.CSS4_COLORS['black'],
+          'MPOMAG': mcolors.CSS4_COLORS['lightgrey'],
+          '3GM': mcolors.CSS4_COLORS['grey'],
+          'MAJIS': mcolors.CSS4_COLORS['coral'],
+          'JANUS': mcolors.CSS4_COLORS['khaki'],
+          'BELA': mcolors.CSS4_COLORS['yellow'],
+          'JMAG': mcolors.CSS4_COLORS['orange'],
+          'GALA': mcolors.CSS4_COLORS['goldenrod'],
+          'RPWI': mcolors.CSS4_COLORS['gold'],
+          'SWI': mcolors.CSS4_COLORS['red'],
+          'RIME': mcolors.CSS4_COLORS['green'],
+          'UVS': mcolors.CSS4_COLORS['blue'],
+          'NAVCAM': mcolors.CSS4_COLORS['dimgrey'],
+          'RADEM': mcolors.CSS4_COLORS['darkviolet'],
+          'CALLISTO': mcolors.CSS4_COLORS['blue'],
+          'GANYMEDE': mcolors.CSS4_COLORS['red'],
+          'EUROPA': mcolors.CSS4_COLORS['green'],
+          'PLASMA': mcolors.CSS4_COLORS['lavender'],
+          'JUPITER_ATMOSPHERE': mcolors.CSS4_COLORS['lavender'],
+          'RING_AND_SATELLITES': mcolors.CSS4_COLORS['lavender'],
+          'GEOPHYSICS': mcolors.CSS4_COLORS['green'],
+          'IN_SITU': mcolors.CSS4_COLORS['orange'],
+          'REMOTE_SENSING': mcolors.CSS4_COLORS['blue'],
+          'NAVIGATION': mcolors.CSS4_COLORS['grey']
+         }
