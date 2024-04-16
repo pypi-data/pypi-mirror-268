@@ -1,0 +1,24 @@
+{
+    "metadata": {
+        "name": "examples_voxel/core",
+        "timestamp": "2024-04-02 12:06:00.077333"
+    },
+    "mesher": {
+        "n_total": 175,
+        "n_used": 55
+    },
+    "solver": {
+        "sim_dc": {
+            "freq": 0.0,
+            "has_converged": true,
+            "P_tot": 5.999999999999999e-06,
+            "W_tot": 8.28570752833844e-08
+        },
+        "sim_ac": {
+            "freq": 1000.0,
+            "has_converged": true,
+            "P_tot": 0.00021823488357388955,
+            "W_tot": 4.142853764162962e-08
+        }
+    }
+}
