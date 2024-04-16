@@ -1,0 +1,12 @@
+numflow/__init__.py,sha256=st_eVypmOX0nbVBK9X9Mg_EwGDH0KcAKfdFm7ksG7MA,206
+numflow/compute.cp39-win_amd64.pyd,sha256=0e8nri92iJ9U47695jgEJmLj9747y8Ccs8eEs53HduY,207872
+numflow/dataset.py,sha256=cmQJPIGmvA0zNl7jESjSEWKPGPHpyNrX5BXTm0nph9Y,2504
+numflow/encoder.py,sha256=mXlFAcWaNmVfzdOIXGea68-nymDLNvGPS0j4xWe6YuM,299
+numflow/exceptions.py,sha256=19-E0yClLDw0cuZw3KMI1Q5ERI9dfxQk1TQI3QAYCHY,103
+numflow/geometry.py,sha256=c6-i5Paw41BnmQgYhKhQXVumXTAaq0lkEQWzGbaxKAE,4080
+numflow/kernels.py,sha256=3dvX9V7HaSD2-ejww7EOeI9VsYNSsHFBMBmRKijTsXk,2629
+numflow/visualization.py,sha256=jiMftf0H-6-oKWigKTV7NrBjcoKZnRONyEBp2ZS2UEE,9193
+numflow-1.0.0.dist-info/METADATA,sha256=wFHw50Wy3SKo42ezps4k7sr_lHDNq9XuUjSEzbJhAF0,1090
+numflow-1.0.0.dist-info/WHEEL,sha256=aFh_uQusBybh-RCXOkSlg-ycdQBtqU_JDPyXfjBBBgs,94
+numflow-1.0.0.dist-info/top_level.txt,sha256=SA3ER58_VARNMsVR09Sn8Eq78X_4hKJ6OODrduM1sOs,8
+numflow-1.0.0.dist-info/RECORD,,
