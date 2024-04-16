@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: libs-zip
+Version: 0.0.0
+Download-URL: 
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+
