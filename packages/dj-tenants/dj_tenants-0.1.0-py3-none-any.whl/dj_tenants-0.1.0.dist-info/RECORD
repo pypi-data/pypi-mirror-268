@@ -1,0 +1,11 @@
+dj_tenants/__init__.py,sha256=PEJ2sVgl3r35Tl2WXgoEQKGKCapSQNBecLHHW4qawfc,213
+dj_tenants/apps.py,sha256=M9yrSzhSmaruWmoEosrYrGh09GHPAExE8uHyA0GT4DM,173
+dj_tenants/cache.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_tenants/context.py,sha256=a-W5SCoP_bKSt5NaEIPLFZoPywzwkmGwoqQcmawE6lE,977
+dj_tenants/exceptions.py,sha256=7n7MH64QFv3eMTcmjmFSXqJHpA_Vo-7b5G7D3kggXY8,41
+dj_tenants/log.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_tenants/models.py,sha256=ipk_2c8WgmVt4qEtcqF06JpBFTCiMhgRVZAuva0-7UI,1330
+dj_tenants/storage.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_tenants-0.1.0.dist-info/METADATA,sha256=RTydevaScWp_ekImyapUtHeR5lI405xy0A8ac-E2o-g,381
+dj_tenants-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+dj_tenants-0.1.0.dist-info/RECORD,,
