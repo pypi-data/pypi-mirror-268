@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/haskellian/asyn/promises/__init__.py
+src/haskellian/asyn/promises/funcs.py
+src/haskellian/asyn/promises/managed.py
+src/haskellian/asyn/promises/ops.py
+src/haskellian/asyn/promises/promise.py
+src/haskellian_asyn.egg-info/PKG-INFO
+src/haskellian_asyn.egg-info/SOURCES.txt
+src/haskellian_asyn.egg-info/dependency_links.txt
+src/haskellian_asyn.egg-info/requires.txt
+src/haskellian_asyn.egg-info/top_level.txt
