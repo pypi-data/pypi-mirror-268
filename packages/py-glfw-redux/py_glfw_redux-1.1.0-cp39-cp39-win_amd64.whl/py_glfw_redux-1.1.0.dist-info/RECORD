@@ -1,0 +1,15 @@
+glad.dll,sha256=6mLh7YMcSDK_INZy-_8T0gO_Zl5LfHTIL4bTsM4JrP8,91136
+glad.lib,sha256=Ngv6aI46M0ZV7O9hPie0_4ijhSniVwHnQ4QcK49vvIQ,194054
+glfw.cp39-win_amd64.pyd,sha256=gf6UUjGJG73jrUm_MHmQePuAiKESKHSWyo4WHMs_lEo,369664
+glfw.pyi,sha256=DIuKW0HXeXblm-NN6Xz0NcFFB7cvuG9NIO1uYlRSK8E,24239
+glfw3.dll,sha256=-Seqg_FPsBadpkYy9vJXH4F3DYTtOXOfbiy0XSJB0AM,231424
+glfw3dll.lib,sha256=o5wKtRdrKuqhRyggTLRlSTz8TCN3Ln3Svk2JiCgmSPA,31378
+py_glfw_redux-1.1.0.inc/glad/KHR/khrplatform.h,sha256=ex4Bqqetj2_DS1x733nr9RibsJ4sTS55_F01BiPRHoM,11131
+py_glfw_redux-1.1.0.inc/glad/glad/gl.h,sha256=slo05XzPE4P-YPJRnfBLwbEQzLMtW2-ND_tG_udOFF0,299906
+py_glfw_redux-1.1.0.inc/glfw/GLFW/glfw3.h,sha256=qjcJhfa0k7vgNYo2q0n1eApjl8AgnG2YpiFD3qWVtzw,241826
+py_glfw_redux-1.1.0.inc/glfw/GLFW/glfw3native.h,sha256=QANYgf3AKpqyZcIIYzj3SaBBHhwVto-tpnj6NOi9iVg,21201
+py_glfw_redux-1.1.0.dist-info/LICENSE,sha256=lLrq1iQPd_x2HXDrDBN0xZW4dNVDmyNy2lomcGQMvDo,1070
+py_glfw_redux-1.1.0.dist-info/METADATA,sha256=Bi1XGFxR7VERca_byY5zHPoS0vVMeTlLPILyQFRs3Is,1311
+py_glfw_redux-1.1.0.dist-info/WHEEL,sha256=Z6c-bE0pUM47a70GvqO_SvH_XXU0lm62gEAKtoNJ08A,100
+py_glfw_redux-1.1.0.dist-info/top_level.txt,sha256=n6GNY584FzIdaCsyFH_mQw_kXzRH9bZ9wYb8VvDeT3k,5
+py_glfw_redux-1.1.0.dist-info/RECORD,,
