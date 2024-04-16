@@ -1,0 +1,19 @@
+
+<thead>
+
+<tr>
+
+{% for column in tdata["columns"] %}
+
+{% if column!="uid" %}
+    <td><b>{{ column|upper }}</b></td>
+{% else %}
+    <td></td>
+{% endif %}
+
+{% endfor %}
+
+</tr>
+
+</thead>
+

@@ -1,0 +1,24 @@
+
+{% if tdata['row']['enable']==1 %}
+{% set enable_checked='checked' %}
+{% else %}
+{% set enable_checked='' %}
+{% endif %}
+
+<form hx-post="{{url_for('.hx_admin_group_update',id=tdata['row']['id'])}}" hx-target="#hx-results">
+
+
+    <div class="mb-3">
+        <label for="input_1" class="form-label">name</label>
+        <input class="form-control" id="input_1" name="name" value="{{tdata['row']['name']}}">
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="1" id="input_2" name="enable" {{enable_checked}}>
+        <label class="form-check-label" for="input_2">enable</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">UPDATE</button>
+
+</form>
+
