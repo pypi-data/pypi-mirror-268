@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: MuonDataLib
+Version: 0.3.0b0
+Summary: Reading and writing for ISIS muon experiments
+Author-email: Anthony Lim <anthony.lim@stfc.ac.uk>
+License: BSD
+Requires-Python: >=3.7.1
+Requires-Dist: h5py
+Requires-Dist: numpy
+Description-Content-Type: text/markdown
+
+# MuonDataLib
