@@ -1,0 +1,2 @@
+[console_scripts]
+purpose_transcribe = purpose_transcribe.main:process_audio
