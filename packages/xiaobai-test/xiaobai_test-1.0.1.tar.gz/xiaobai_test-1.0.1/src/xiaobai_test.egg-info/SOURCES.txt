@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/xiaobai_test/__init__.py
+src/xiaobai_test/test.py
+src/xiaobai_test.egg-info/PKG-INFO
+src/xiaobai_test.egg-info/SOURCES.txt
+src/xiaobai_test.egg-info/dependency_links.txt
+src/xiaobai_test.egg-info/top_level.txt

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'xiaobai_test'
+version = '1.0.1'
+description = 'test'
+readme = 'README.md'
+authors = [{name = 'xiaobai', email = '1419017823@qq.com'}]
+license = {file = "LICENSE"}
+keywords = ['test11', 'zrx11']
+requires-python = ">= 3.6"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+#[project.urls]
+#Homepage = "https://example.com"
+#Documentation = "https://readthedocs.org"
+#Repository = "https://github.com/me/spam.git"
+#Issues = "https://github.com/me/spam/issues"
+#Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
