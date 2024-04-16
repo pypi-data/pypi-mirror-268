@@ -1,0 +1,3 @@
+[poetry.application.plugin]
+watson=watson_poetry.plugin:PoetryPlugin
+
