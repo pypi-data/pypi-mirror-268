@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: phenopype-plugins
+Version: 0.1.1
+Summary: Plugins for phenopype
+Author-email: Moritz Lürig <moritz.luerig@gmail.com>
+Project-URL: Homepage, https://phenopype.org
+Project-URL: Bug Tracker, https://github.com/phenopype/phenopype-plugins/issues
+Keywords: computer vision,biology
+Requires-Python: ==3.9.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: phenopype >=5.0
+
+# phenopype-plugins
+
+AI-plugins for [phenopype](https://www.phenopype.org/) - currently under development, stay tuned!

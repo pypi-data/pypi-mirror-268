@@ -1,0 +1,9 @@
+phenopype_plugins/__init__.py,sha256=XnAJ1rZ-OtMtWzY7qpMqwFnpgJJfncYzW76lCmk1Vc8,191
+phenopype_plugins/utils.py,sha256=PMsgkK-yICVsBglS-1agcpJAoOi5jKOVGokaBnYCZMI,1156
+phenopype_plugins/plugins/measurement.py,sha256=2w0KYI3ERWrERAFUuP-D-M7V5e6P_Lt-tSkAecywps8,3579
+phenopype_plugins/plugins/segmentation.py,sha256=6c1ujyRF-wB6YA5vn6lHlW1IkdpZGlFYEVYfy9m-Leg,14595
+phenopype_plugins-0.1.1.dist-info/LICENSE,sha256=-DHn7tV3SBaHqbwLSAJOXkC29lX83gc-3pZLUL5dVdk,7815
+phenopype_plugins-0.1.1.dist-info/METADATA,sha256=fcIhXo45MRYucL8FP6E6YbPiexmg_rvqonOnmc88BN0,559
+phenopype_plugins-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+phenopype_plugins-0.1.1.dist-info/top_level.txt,sha256=rcQjr_dSrkAfkQgxD0Ikdf_Ewslr8a_gB6bij4tE2fw,18
+phenopype_plugins-0.1.1.dist-info/RECORD,,
