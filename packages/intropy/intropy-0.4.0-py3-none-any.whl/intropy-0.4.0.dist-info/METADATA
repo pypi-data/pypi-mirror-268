@@ -1,0 +1,213 @@
+Metadata-Version: 2.1
+Name: intropy
+Version: 0.4.0
+Summary: Jump-start your python project
+License: MIT License
+        
+        Copyright (c) 2024 Richard Nordström
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: binaryornot ==0.4.4
+Requires-Dist: text-unidecode ==1.3
+Requires-Dist: charset-normalizer ==3.3.2 ; python_full_version >= "3.7.0"
+Requires-Dist: rich ==13.7.1 ; python_full_version >= "3.7.0"
+Requires-Dist: python-dateutil ==2.9.0.post0 ; python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3"
+Requires-Dist: six ==1.16.0 ; python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3"
+Requires-Dist: idna ==3.7 ; python_version >= "3.5"
+Requires-Dist: certifi ==2024.2.2 ; python_version >= "3.6"
+Requires-Dist: pyyaml ==6.0.1 ; python_version >= "3.6"
+Requires-Dist: chardet ==5.2.0 ; python_version >= "3.7"
+Requires-Dist: click ==8.1.7 ; python_version >= "3.7"
+Requires-Dist: cookiecutter ==2.6.0 ; python_version >= "3.7"
+Requires-Dist: jinja2 ==3.1.3 ; python_version >= "3.7"
+Requires-Dist: markupsafe ==2.1.5 ; python_version >= "3.7"
+Requires-Dist: mdurl ==0.1.2 ; python_version >= "3.7"
+Requires-Dist: pygments ==2.17.2 ; python_version >= "3.7"
+Requires-Dist: python-slugify ==8.0.4 ; python_version >= "3.7"
+Requires-Dist: requests ==2.31.0 ; python_version >= "3.7"
+Requires-Dist: arrow ==1.3.0 ; python_version >= "3.8"
+Requires-Dist: markdown-it-py ==3.0.0 ; python_version >= "3.8"
+Requires-Dist: types-python-dateutil ==2.9.0.20240316 ; python_version >= "3.8"
+Requires-Dist: urllib3 ==2.2.1 ; python_version >= "3.8"
+Provides-Extra: dev
+Requires-Dist: binaryornot ==0.4.4 ; extra == 'dev'
+Requires-Dist: distlib ==0.3.8 ; extra == 'dev'
+Requires-Dist: text-unidecode ==1.3 ; extra == 'dev'
+Requires-Dist: wcwidth ==0.2.13 ; extra == 'dev'
+Requires-Dist: prompt-toolkit ==3.0.36 ; (python_full_version >= "3.6.2") and extra == 'dev'
+Requires-Dist: charset-normalizer ==3.3.2 ; (python_full_version >= "3.7.0") and extra == 'dev'
+Requires-Dist: rich ==13.7.1 ; (python_full_version >= "3.7.0") and extra == 'dev'
+Requires-Dist: python-dateutil ==2.9.0.post0 ; (python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3") and extra == 'dev'
+Requires-Dist: six ==1.16.0 ; (python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3") and extra == 'dev'
+Requires-Dist: nodeenv ==1.8.0 ; (python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6") and extra == 'dev'
+Requires-Dist: idna ==3.7 ; (python_version >= "3.5") and extra == 'dev'
+Requires-Dist: mypy-extensions ==1.0.0 ; (python_version >= "3.5") and extra == 'dev'
+Requires-Dist: certifi ==2024.2.2 ; (python_version >= "3.6") and extra == 'dev'
+Requires-Dist: pyyaml ==6.0.1 ; (python_version >= "3.6") and extra == 'dev'
+Requires-Dist: chardet ==5.2.0 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: click ==8.1.7 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: cookiecutter ==2.6.0 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: iniconfig ==2.0.0 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: jinja2 ==3.1.3 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: markupsafe ==2.1.5 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: mdurl ==0.1.2 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: packaging ==24.0 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: pygments ==2.17.2 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: pyproject-hooks ==1.0.0 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: pytest-cookies ==0.7.0 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: python-slugify ==8.0.4 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: requests ==2.31.0 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: rich-click ==1.7.4 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: ruff ==0.3.7 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: tomlkit ==0.12.4 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: virtualenv ==20.25.1 ; (python_version >= "3.7") and extra == 'dev'
+Requires-Dist: annotated-types ==0.6.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: arrow ==1.3.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: build ==1.2.1 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: bump-my-version ==0.20.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: cfgv ==3.4.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: coverage[toml] ==7.4.4 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: filelock ==3.13.4 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: identify ==2.5.35 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: markdown-it-py ==3.0.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: mypy ==1.9.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: platformdirs ==4.2.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: pluggy ==1.4.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: pydantic ==2.7.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: pydantic-core ==2.18.1 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: pydantic-settings ==2.2.1 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: pytest ==8.1.1 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: pytest-cov ==5.0.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: python-dotenv ==1.0.1 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: questionary ==2.0.1 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: setuptools ==69.4.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: types-python-dateutil ==2.9.0.20240316 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: typing-extensions ==4.11.0 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: urllib3 ==2.2.1 ; (python_version >= "3.8") and extra == 'dev'
+Requires-Dist: pre-commit ==3.7.0 ; (python_version >= "3.9") and extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: livereload ==2.6.3 ; extra == 'docs'
+Requires-Dist: snowballstemmer ==2.2.0 ; extra == 'docs'
+Requires-Dist: charset-normalizer ==3.3.2 ; (python_full_version >= "3.7.0") and extra == 'docs'
+Requires-Dist: tornado ==6.4 ; (python_version > "2.7") and extra == 'docs'
+Requires-Dist: sphinxcontrib-jquery ==4.1 ; (python_version >= "2.7") and extra == 'docs'
+Requires-Dist: imagesize ==1.4.1 ; (python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3") and extra == 'docs'
+Requires-Dist: six ==1.16.0 ; (python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3") and extra == 'docs'
+Requires-Dist: colorama ==0.4.6 ; (python_version >= "2.7" and python_version not in "3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6") and extra == 'docs'
+Requires-Dist: idna ==3.7 ; (python_version >= "3.5") and extra == 'docs'
+Requires-Dist: sphinxcontrib-jsmath ==1.0.1 ; (python_version >= "3.5") and extra == 'docs'
+Requires-Dist: certifi ==2024.2.2 ; (python_version >= "3.6") and extra == 'docs'
+Requires-Dist: pyyaml ==6.0.1 ; (python_version >= "3.6") and extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ==2.0.0 ; (python_version >= "3.6") and extra == 'docs'
+Requires-Dist: babel ==2.14.0 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: docutils ==0.20.1 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: jinja2 ==3.1.3 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: markupsafe ==2.1.5 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: mdurl ==0.1.2 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: packaging ==24.0 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: pygments ==2.17.2 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: requests ==2.31.0 ; (python_version >= "3.7") and extra == 'docs'
+Requires-Dist: markdown-it-py ==3.0.0 ; (python_version >= "3.8") and extra == 'docs'
+Requires-Dist: mdit-py-plugins ==0.4.0 ; (python_version >= "3.8") and extra == 'docs'
+Requires-Dist: myst-parser ==2.0.0 ; (python_version >= "3.8") and extra == 'docs'
+Requires-Dist: urllib3 ==2.2.1 ; (python_version >= "3.8") and extra == 'docs'
+Requires-Dist: alabaster ==0.7.16 ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: sphinx ==7.2.6 ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: sphinx-autobuild ==2024.2.4 ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: sphinxcontrib-applehelp ==1.0.8 ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: sphinxcontrib-devhelp ==1.0.6 ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: sphinxcontrib-htmlhelp ==2.0.5 ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: sphinxcontrib-qthelp ==1.0.7 ; (python_version >= "3.9") and extra == 'docs'
+Requires-Dist: sphinxcontrib-serializinghtml ==1.1.10 ; (python_version >= "3.9") and extra == 'docs'
+Provides-Extra: style
+Requires-Dist: mypy-extensions ==1.0.0 ; (python_version >= "3.5") and extra == 'style'
+Requires-Dist: ruff ==0.3.7 ; (python_version >= "3.7") and extra == 'style'
+Requires-Dist: mypy ==1.9.0 ; (python_version >= "3.8") and extra == 'style'
+Requires-Dist: typing-extensions ==4.11.0 ; (python_version >= "3.8") and extra == 'style'
+
+# Intropy
+
+[![Version](https://img.shields.io/pypi/v/intropy?color=blue)](https://pypi.org/project/intropy/)
+[![Build Status](https://github.com/RicNord/intropy/actions/workflows/ci.yaml/badge.svg)](https://github.com/RicNord/intropy/actions)
+
+Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter),
+intropy is a framework for jump-starting production-ready python projects. The
+python project will be generated and configured automatically with:
+
+- Build system
+- Test and code quality tooling
+- Documentation
+- Automation pipelines
+- etc...
+
+## Features
+
+- [Ruff](https://docs.astral.sh/ruff/) | Linter and formatter
+- [Pytest](https://docs.pytest.org/en/latest/) | Test framework
+- [Tox](https://tox.wiki/en/latest/) | Standardized testing and automation
+- [Coverage](https://coverage.readthedocs.io/en/latest/) | Code coverage
+- [Mypy](https://www.mypy-lang.org/) | Static type checker
+- [Pipenv](https://pipenv.pypa.io/en/latest/) | Package management
+- [Pre-commit](https://pre-commit.com/) | pre-commit hooks
+- [Bump my version](https://callowayproject.github.io/bump-my-version/) | Bump
+  semantic version
+- [Sphinx](https://www.sphinx-doc.org/) | Documentation tool
+- Github workflows | CI and publishing to PyPi
+- Github templates | Pull Requests and Issues
+- Makefile for convenience
+
+## Optional feature alternatives
+
+- [Black](https://black.readthedocs.io/en/stable/) | Code formatter
+
+## Usage
+
+Install cookiecutter:
+
+```shell
+pip install cookiecutter
+```
+
+Create project:
+
+```shell
+cookiecutter https://github.com/RicNord/intropy
+```
+
+You will be prompted for some values. After that the project will be generated!
+
+### (Optional) CLI
+
+A wrapper around the `cookiecutter` CLI is also provided and can be installed
+with:
+
+```shell
+pip install intropy
+```
+
+For API reference see:
+
+```shell
+intropy --help
+```
