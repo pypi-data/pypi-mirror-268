@@ -1,0 +1,9 @@
+datasets
+sentencepiece
+tomli>=1.1.0
+
+[dev]
+pre-commit
+pytest
+pytest-cov
+tensorboard

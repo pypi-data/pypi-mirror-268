@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+test/test_job_config.py
+torchtitan.egg-info/PKG-INFO
+torchtitan.egg-info/SOURCES.txt
+torchtitan.egg-info/dependency_links.txt
+torchtitan.egg-info/requires.txt
+torchtitan.egg-info/top_level.txt
