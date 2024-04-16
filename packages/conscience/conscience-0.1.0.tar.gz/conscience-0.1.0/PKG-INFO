@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: conscience
+Version: 0.1.0
+Summary: Perform automated testing of TKinter GUI applications
+License: MIT
+Author: Harry Keightley
+Author-email: harrykeightley@outlook.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: behave (>=1.2.6,<2.0.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: parse (>=1.20.1,<2.0.0)
+Requires-Dist: parse-type (>=0.6.2,<0.7.0)
+Requires-Dist: pillow (>=10.3.0,<11.0.0)
+Requires-Dist: six (>=1.16.0,<2.0.0)
+Description-Content-Type: text/markdown
+
+# conscience
+
+__A library to perform automated testing of Tkinter GUI applications__
+
+_Forced to observe, without agency, the consequences of their actions_
+
+## 
+
+Conscience is a tool that allows automated acceptance testing
+of Tkinter GUI applications.
+
+The tool is designed for automated assessment of introductory
+programming assignments.
+
+As such, there is included support to recognize GUI widgets
+based upon a description of their functionality.
+
