@@ -1,0 +1,80 @@
+
+
+
+
+
+
+<pre>
+
+	<h1>body_scan</h1>
+		# neurons
+	
+	<h2>docker</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.108 -v .:/body_scan -it jumps:v2.1.0
+		docker exec -it 9234bd995b6f bash
+
+	<h2>link the readme</h2>
+		ln -s venues/stages/body_scan/room.md readme.MD
+
+	<h2>poetry</h2>
+		pip install poetry poetry-plugin-export
+	
+		<h3>add</h3>
+			#
+			#	⚠️
+			#		Make sure that none of these depend on this module!
+			#
+			#		For the sake of sanity, please keep the "reliability, testing, etc."
+			#		structure as a "tree, hierarchy, etc." etc. with no coodependencies
+			#		that almost definitely cause chaos.
+			#
+						
+			poetry add botanist click flask pdoc3 requests textual tinydb
+	
+
+			
+			#
+			#	if dev dependencies
+			#
+			# poetry export --with dev --format requirements.txt --output requirements.txt
+			
+			
+			rm -rf /body_scan/venues/stages_pip && poetry export --format requirements.txt --output requirements.txt && pip install -r requirements.txt -t /body_scan/venues/stages_pip
+			
+			# /root/.cache/pypoetry/virtualenvs/body_scan-p2eJTVsK-py3.10/lib/python3.10/site-packages/
+			# cp -R /root/.cache/pypoetry/virtualenvs/body_scan-p2eJTVsK-py3.10/lib/python3.10/site-packages/ /body_scan/venues/stages_pip
+		
+		<h3>installations venv</h3>
+			poetry config virtualenvs.path /path/to/your/directory
+			poetry env use python3
+			poetry shell
+
+			
+		<h3>scripts</h3>
+			#
+			#	https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#creating-executable-scripts
+			#	from this_module import clique; clique ()
+			#
+		
+	<h2>publishing</h2>
+		(cd /body_scan/status && python3 -m unittest *status.py)
+		
+		
+		cp /body_scan/venues/stages/body_scan/room.md /body_scan/readme.md
+		
+		#
+		#	poetry auth
+		#
+		
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+		
+		# rm -rf stages_pip && pip install body_scan -t stages_pip
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>

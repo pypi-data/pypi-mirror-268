@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+
+
+def ADD_SYSTEM_paths (paths):
+	import pathlib
+	from os.path import dirname, join, normpath
+	import sys
+	
+	THIS_FOLDER = pathlib.Path (__file__).parent.resolve ()	
+	for path in paths:
+		sys.path.insert (0, normpath (join (THIS_FOLDER, path)))
+
+	return;
+
+
+ADD_SYSTEM_paths ([ 
+	'MODULES',
+	'MODULES_PIP'
+])
+

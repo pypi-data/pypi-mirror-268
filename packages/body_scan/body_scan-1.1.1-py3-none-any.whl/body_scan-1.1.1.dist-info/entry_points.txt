@@ -1,0 +1,3 @@
+[console_scripts]
+body_scan=body_scan:clique
+
