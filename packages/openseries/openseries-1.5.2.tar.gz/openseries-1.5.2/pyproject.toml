@@ -1,0 +1,114 @@
+[tool.poetry]
+name = "openseries"
+version = "1.5.2"
+description = "Tools for analyzing financial timeseries."
+authors = ["Martin Karrin <martin.karrin@captor.se>"]
+repository = "https://github.com/CaptorAB/openseries"
+license = "BSD-3-Clause"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: BSD License",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Natural Language :: English",
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: OS Independent",
+    "Framework :: Pydantic",
+]
+keywords = [
+    "python",
+    "finance",
+    "fintech",
+    "data-science",
+    "timeseries",
+    "timeseries-data",
+    "timeseries-analysis",
+    "investment",
+    "investment-analysis",
+    "investing"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+holidays = ">=0.30,<1.0"
+numpy = ">=1.23.2,<=2.0.0"
+openpyxl = ">=3.1.2,<4.0.0"
+pandas = ">=2.1.2,<3.0.0"
+plotly = ">=5.18.0,<6.0.0"
+pyarrow = ">=14.0.2,<16.0.0"
+pydantic = ">=2.5.2,<3.0.0"
+python-dateutil = ">=2.8.2,<3.0.0"
+requests = ">=2.20.0,<3.0.0"
+scipy = ">=1.11.4,<2.0.0"
+statsmodels = ">=0.14.0,<1.0.0"
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^7.4.4"
+coverage-badge = "^1.1.0"
+mypy = "^1.9.0"
+pandas-stubs = "^2.2.1.240316"
+pre-commit = "^3.7.0"
+pytest = "^8.1.1"
+ruff = "^0.3.7"
+types-openpyxl = "^3.1.0.20240408"
+types-python-dateutil = "^2.9.0.20240316"
+types-requests = "^2.31.0.20240406"
+
+[build-system]
+requires = ["poetry-core>=1.8.2"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore::DeprecationWarning:openpyxl.*:"
+]
+
+[tool.coverage.run]
+omit = ["venv/*"]
+include = ["openseries/*"]
+
+[tool.coverage.report]
+skip_empty = true
+fail_under = 99
+
+[tool.mypy]
+exclude = ["venv/*"]
+strict = true
+pretty = true
+warn_unreachable = false
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_any_generics = true
+check_untyped_defs = true
+no_implicit_reexport = true
+disallow_untyped_defs = true
+follow_imports = "normal"
+plugins = [
+    "pydantic.mypy",
+    "numpy.typing.mypy_plugin"
+]
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
+[tool.ruff]
+line-length = 87
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D211", "D212", "TCH"]
+fixable = ["ALL"]
+
+[tool.ruff.lint.pylint]
+max-args = 12
+max-branches = 22
+max-statements = 66
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
