@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: opencv-wrap
+Version: 0.0.5
+Summary: working with opencv can be quite a hussel, a lot of boiler code, nested functions for specific use cases, this package is designed to make it easier to work with opencv, while focusing on the main task in hand.
+Home-page: https://github.com/rishi23root/opencv.util
+Author: rishi23root
+Author-email: rishi23root@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+
+opencv.wrap
+===========
+
+::
+
+   A collection of decorators for opencv and helper functions for multiple opencv tasks.
+
+Built with ❤︎ and ☕ by [@rishi23root](https://github.com/rishi23root/)
+
+rishi23root/opencv.wrap/
+
+|GitHub stars| |PyPI| |GitHub| |PyPI - Python Version| |Say Thanks!|
+
+Features
+========
+
+-  TotalTimeTaken
+-  CalculateFps
+-  MirrorFrame
+-  ConvertCOLOR
+-  ReadCamAndShowFrames
+-  ReadCamAddDetectShowFrames
+-  ReadCamAddDetectShowFrames_video
+
+additional Utils
+================
+
+-  saveFrames
+-  detectionBox
+-  show_all_frames
+
+Detection Utils
+===============
+
+-  face detection
+-  hand detection
+-  eye detection (yet to be added)
+
+add code examples here for each feature and utilities
+
+.. |GitHub stars| image:: https://img.shields.io/github/stars/rishi23root/opencv.wrap.svg
+   :target: https://github.com/rishi23root/opencv.wrap/stargazers
+.. |PyPI| image:: https://img.shields.io/pypi/v/opencv.wrap.svg
+   :target: https://pypi.org/project/opencv.wrap/
+.. |GitHub| image:: https://img.shields.io/github/license/rishi23root/opencv.wrap.svg
+   :target: https://github.com/rishi23root/opencv.wrap/blob/master/LICENSE
+.. |PyPI - Python Version| image:: https://img.shields.io/pypi/pyversions/Django.svg
+.. |Say Thanks!| image:: https://img.shields.io/badge/Say%20Thanks-:D-1EAEDB.svg
+   :target: https://saythanks.io/to/rishi23root27@gmail.com
+
+

@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+setup.py
+opencv-wrap/__init__.py
+opencv-wrap/cv2Decorator.py
+opencv-wrap/test.py
+opencv-wrap/test2.py
+opencv_wrap.egg-info/PKG-INFO
+opencv_wrap.egg-info/SOURCES.txt
+opencv_wrap.egg-info/dependency_links.txt
+opencv_wrap.egg-info/entry_points.txt
+opencv_wrap.egg-info/not-zip-safe
+opencv_wrap.egg-info/requires.txt
+opencv_wrap.egg-info/top_level.txt
