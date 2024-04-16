@@ -1,0 +1,8 @@
+sqlogging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlogging/logging.py,sha256=RUhUyfTQK-4OQWkvM3k04XdkUfILOmZxIcGRDU9ZhpU,3372
+sqlogging/test_logging.py,sha256=DI3v7Uiffq_CoS2YAE-_OFsa0LO2uXTSf00Qk746ig8,7223
+sqlite_logging-0.0.1.dist-info/LICENSE,sha256=3Yu1mAp5VsKmnDtzkiOY7BdmrLeNwwZ3t6iWaLnlL0Y,1071
+sqlite_logging-0.0.1.dist-info/METADATA,sha256=w3RSqFky5WS_GehhlVUgNlwu_BQvCxIAQldvkW8WE80,3715
+sqlite_logging-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sqlite_logging-0.0.1.dist-info/top_level.txt,sha256=JBoAkKBCpySZasxTt6xlWDFRnje7WV_koTDqdm8JKPY,10
+sqlite_logging-0.0.1.dist-info/RECORD,,
