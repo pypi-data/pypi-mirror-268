@@ -1,0 +1,12 @@
+prerun/__init__.py,sha256=Bn_qsCDypYyB98IgleSp-pJYq_5qmNrC-ef5U6UwJ3Y,454
+prerun/__main__.py,sha256=1D8_FTsml8marqttlIiWnRty1BvTHHQxSe_I-zXTX1w,51
+prerun/client.py,sha256=usHeEwkyDL_byQ1fpxBzPQaT61Khv-DIu_XR6QvtCCU,860
+prerun/recv_bytes.py,sha256=7jXfmQU4Ivp60UZKNuxE9oL7Q0mxYhjtmZSTwujARHo,218
+prerun/server.py,sha256=-HP1_qZqGCRcgS64dflekvUZuEEPw_Uaxw5CElRDyU8,4696
+prerun/sigint.py,sha256=We-rbC_YOBFWlc9Xkb0h6oSIwqToBj6LdbqZ1fQSi-g,634
+prerun-0.1.8.dist-info/LICENSE,sha256=t8gTouxv5bVKOgfFEkRvqz0LW5cJBUvPl4W_W1GoKE4,1065
+prerun-0.1.8.dist-info/METADATA,sha256=zjHmbS7B0WrrI30M3CDVVy96QC3Q3UOKttAny4WKH2w,1638
+prerun-0.1.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+prerun-0.1.8.dist-info/entry_points.txt,sha256=8v8BPn3KemoTdvunr5A0uBO9NTwIJ6Gj1VeSEr7kDu4,39
+prerun-0.1.8.dist-info/top_level.txt,sha256=8Boso-r8i4vgkLdYPAOgo9ppqwYFC3CKA6GL6fYnACA,7
+prerun-0.1.8.dist-info/RECORD,,
