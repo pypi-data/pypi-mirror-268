@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "autofff"
+version = "0.5"
+description = "Auto-generate FFF fake definitions for C API header files"
+authors = ["Andreas Baulig <free.geronimo@hotmail.de>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/ChiefGokhlayeh/autofff"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: C",
+    "Programming Language :: C++",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.6",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Testing",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pycparser = "^2.21"
+overrides = ">=6.5,<8.0"
+configobj = "^5.0.8"
+validator = "^0.7.1"
+phmutest = "^0.0.3"
+
+[tool.poetry.dev-dependencies]
+black = "^24.4.0"
+flake8 = "^7.0.0"
+pre-commit = "^3.7.0"
+
+[tool.poetry.scripts]
+autofff = "autofff.__main__:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
