@@ -1,0 +1,6 @@
+syntax = "proto3";
+
+message Resource {
+    string name = 1;  // required
+    string value = 2;  // required
+}
