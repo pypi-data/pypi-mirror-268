@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: komoutils
+Version: 0.0.224
+Summary: 
+Author: Makhosonke Morafo
+Author-email: makhosonke@komokun.org
+Requires-Python: >=3.8,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: pendulum (==3.0.0)
+Requires-Dist: prefect (==2.10.0)
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: pymongo (>=4.6.2,<5.0.0)
+Requires-Dist: pytest (>=8.1.1,<9.0.0)
+Description-Content-Type: text/markdown
+
+
