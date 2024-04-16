@@ -1,0 +1,2 @@
+[console_scripts]
+pycody = harry_potter_yonier.__main__:main
