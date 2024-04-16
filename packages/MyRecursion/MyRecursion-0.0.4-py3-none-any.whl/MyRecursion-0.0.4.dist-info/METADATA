@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: MyRecursion
+Version: 0.0.4
+Summary: This Is Recursion Function Package
+Author: Lee Jae Hwang
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+
+This is a package containing a function that can use a recursive function.
