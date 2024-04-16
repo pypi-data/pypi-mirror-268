@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: ctf-architect
+Version: 0.1.0a6
+Summary: A tool for managing challenges for CTFs.
+License: MIT
+Author: Jus-Codin
+Author-email: 70018166+Jus-Codin@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.6.1,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: tomlkit (>=0.12.3,<0.13.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# CTF-Architect
+
+A tool for managing challenges for CTFs.
+
+> [!WARNING]
+> This tool is still a work in progress, bugs are to be expected. If you find any, please open an [issue](https://github.com/Jus-Codin/CTF-Architect/issues)
+
+
+---
+
+<p align="center">
+    <a href="https://pypi.org/project/ctf-architect/" target="_blank">
+        <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/ctf-architect">
+    </a>
+    <a href="https://pypi.org/project/ctf-architect/" target="_blank">
+        <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/ctf-architect">
+    </a>
+</p>
+
+---
+
+Github: <a href="https://github.com/Jus-Codin/CTF-Architect" target="_blank">https://github.com/Jus-Codin/CTF-Architect</a>
+
+Documentation: <a href="https://jus-codin.github.io/CTF-Architect/" target="_blank">https://jus-codin.github.io/CTF-Architect/</a>
+
+---
+
+## Installation
+Refer to the [installation guide](./guides/installation.md) for instructions on how to install CTF-Architect.
+
+## Usage
+- [For Challenge Creators](./guides/packaging-challenges.md)
+- [For CTF Organizers](./guides/repository-setup.md)
