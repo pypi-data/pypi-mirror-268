@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: arch-flow
+Version: 0.0.9
+Summary: biblioteca que busca ajudar a desenvolver automatizacoes
+Author: Carlos Vinicius Da Silva
+Author-email: vini989073599@gmail.com
+License: MIT License
+Keywords: arch flow
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: colorama
+
+# readme so para teste de publicacao, maiores detalhes futuramente
