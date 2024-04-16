@@ -1,0 +1,6 @@
+data-plumber<2,>=1.13.0
+
+[tests]
+flask>=3
+pytest-cov<5,>=4.1
+pytest<8,>=7.4
