@@ -1,0 +1,12 @@
+upstash_vector/__init__.py,sha256=ejb6w8mn-_QcAZ6M-HYunl53I4qZ8vvx7RwLvhxJ5KE,160
+upstash_vector/client.py,sha256=TkzIHK76BfmxYQfx4XoonKJpXQSh4yJqC9UQ1X3Fkw8,3403
+upstash_vector/core/index_operations.py,sha256=uBTFwJYwTag_5U4cP8EOH3vGmQ-qREM1z5dp0ulZC14,16201
+upstash_vector/errors.py,sha256=xu738-c31_yE8IwPjWYyf57lAmyR6AmOd_SxzaEWlFI,81
+upstash_vector/http.py,sha256=IYSlO_JmuU5H_vFrrK4oVvRhmP1YGKWNDFuBSYOQpSc,2187
+upstash_vector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+upstash_vector/types.py,sha256=WRvGIRq5Gz3dSqyDt56pGAsTm-Z8yUxjLSrnKWrS6QM,2074
+upstash_vector/utils.py,sha256=F8bgoVnPmxDUVfIvXLBLvIQytqn785WjqiNoi78V-_s,3145
+upstash_vector-0.3.1.dist-info/LICENSE,sha256=XoqAkpEiOcQhcuragcwNkq7oMEoMOsQOH26Q07Pjy_E,1070
+upstash_vector-0.3.1.dist-info/METADATA,sha256=vsJmdl269Q_cGKGLmS_xFT9qcJ-4PfjhJt1jZGu746k,6486
+upstash_vector-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+upstash_vector-0.3.1.dist-info/RECORD,,
