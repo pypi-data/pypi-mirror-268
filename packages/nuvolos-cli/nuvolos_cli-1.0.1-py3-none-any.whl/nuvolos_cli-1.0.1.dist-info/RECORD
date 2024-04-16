@@ -1,0 +1,14 @@
+nuvolos_cli/__init__.py,sha256=uxyS1HW1jrJcB4aenzBKL-Ry79al4opzknsm4zFmd4A,31
+nuvolos_cli/__main__.py,sha256=fPa8l1t3F7KMISYBvO1Z3jcQlup05UjnYDyNQDgzwxk,95
+nuvolos_cli/api_client.py,sha256=sg2zK6Yr-2V6sy8SehaLo0aI2IxsdfJWAa7NsIYQhUY,10821
+nuvolos_cli/config.py,sha256=aUz--F630KrAsNw1EPqCJbfhSBG2yBE9GYVV_hPQO94,4357
+nuvolos_cli/interface.py,sha256=7q7UHKxRgtTx8gfU-0iUBfuRrEQsHAIhA-jCUfcbEow,11712
+nuvolos_cli/logging.py,sha256=LTXUziWItriBDy3vHgpC706ETFMo2OSKwHVLc9tr4kw,647
+nuvolos_cli/utils.py,sha256=4GBY0fq87AvImOtgKUMvtuJdurzgNnHje5M5tOzLpkI,4495
+nuvolos_cli/version.py,sha256=AAiJFITqWJB_ret9rsnqG73DAwk1V4WzpvKPcrB0McA,77
+nuvolos_cli-1.0.1.dist-info/LICENSE,sha256=-6GKN4-a6C_RVPMnBXehf_QGMFEZp4rIHk-kUEAj5-U,1073
+nuvolos_cli-1.0.1.dist-info/METADATA,sha256=5dRlh79OUTKMs2s145Wa1ea2xRSnQvDVm0EP1xBp-7Y,2605
+nuvolos_cli-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nuvolos_cli-1.0.1.dist-info/entry_points.txt,sha256=QlAvNJYIMKO0lE71pnVjl0hNyFBeUpj0u8oGaP4AorU,58
+nuvolos_cli-1.0.1.dist-info/top_level.txt,sha256=ZUyPV112g-z5eXWHav71ADMi1PA82TAPA8WEHZrt558,12
+nuvolos_cli-1.0.1.dist-info/RECORD,,
