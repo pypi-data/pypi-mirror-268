@@ -1,0 +1,3 @@
+[console_scripts]
+gen-data-dict = sdmc_adhoc_processing.generate_dict:gen_data_dict
+gen-readme = sdmc_adhoc_processing.generate_README:gen_README

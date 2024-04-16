@@ -1,0 +1,43 @@
+[project]
+name = "sdmc_adhoc_processing"
+version = "0.1.46"
+authors = [
+  { name="Beatrix Haddock", email="beatrix.haddock@gmail.com" },
+]
+description = "Helper utilities for SDMC ad-hoc data processing requests."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["docutils", "requires <= 0.4"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/beatrixh/sdmc-adhoc-processing"
+
+[build-system]
+requires = [
+  "setuptools",
+  "pandas",
+  "numpy",
+  "typing",
+  "datetime",
+  "openpyxl",
+  "xlsxwriter"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+[project.scripts]
+gen-readme = "sdmc_adhoc_processing.generate_README:gen_README"
+gen-data-dict = "sdmc_adhoc_processing.generate_dict:gen_data_dict"
