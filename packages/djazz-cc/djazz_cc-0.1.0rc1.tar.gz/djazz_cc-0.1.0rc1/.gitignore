@@ -1,0 +1,8 @@
+# Python
+*.py[co]
+.tox/
+__pycache__
+db.sqlite3
+
+# Flit
+dist/

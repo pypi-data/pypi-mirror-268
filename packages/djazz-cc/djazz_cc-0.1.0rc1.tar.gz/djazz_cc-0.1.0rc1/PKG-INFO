@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: djazz-cc
+Version: 0.1.0rc1
+Summary: A ready-to-use Django project tailored for practical, real-world applications, djazz comes with pre-configured essential settings and industry best practices built-in, ensuring a streamlined development process right out of the box. Ideal for developers looking to jumpstart their projects without the hassle of initial setup.
+Keywords: django,djazz,rest,api,json,serializer,django-rest-framework,drf,django-rest-framework-json-api,json-api,jsonapi,json-api-serializer,json-api
+Author-email: Azat <to@azat.cc>
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Framework :: Django
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Internet
+Requires-Dist: django
+Requires-Dist: pillow
+Requires-Dist: django-debug-toolbar
+Requires-Dist: typer ; extra == "cli"
+Project-URL: Home, https://github.com/azataiot/djazz 
+Project-URL: Source, https://github.com/azataiot/djazz 
+Provides-Extra: cli
+
+# djazz!
+A ready-to-use Django project tailored for practical, real-world applications, djazz comes with pre-configured essential settings and industry best practices built-in, ensuring a streamlined development process right out of the box. Ideal for developers looking to jumpstart their projects without the hassle of initial setup.
+

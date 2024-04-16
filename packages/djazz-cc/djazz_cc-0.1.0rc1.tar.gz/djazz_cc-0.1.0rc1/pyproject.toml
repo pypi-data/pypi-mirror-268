@@ -1,0 +1,53 @@
+# ---
+# pyproject.toml
+# docs/pyproject.toml.md
+# ---
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "djazz-cc"
+authors = [{ name = "Azat", email = "to@azat.cc" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+dynamic = ["version", "description"]
+keywords = ["django", "djazz", "rest", "api", "json", "serializer", "django-rest-framework", "drf", "django-rest-framework-json-api", "json-api", "jsonapi", "json-api-serializer", "json-api"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    'Programming Language :: Python',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Programming Language :: Python :: Implementation :: PyPy',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Framework :: Django',
+    'Operating System :: Unix',
+    'Operating System :: POSIX :: Linux',
+    'Environment :: Console',
+    'Environment :: MacOS X',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Information Technology',
+    'Intended Audience :: System Administrators',
+    'License :: OSI Approved :: BSD License',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Internet',
+]
+dependencies = [
+    "django",
+    "pillow",
+    "django-debug-toolbar",
+]
+
+[project.optional-dependencies]
+cli = ["typer"]
+
+[project.urls]
+Home = "https://github.com/azataiot/djazz "
+Source = "https://github.com/azataiot/djazz "
+
+
+[tool.flit.module]
+name = "djazz"
