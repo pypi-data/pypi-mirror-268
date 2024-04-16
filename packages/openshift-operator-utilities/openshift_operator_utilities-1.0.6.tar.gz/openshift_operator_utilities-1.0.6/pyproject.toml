@@ -1,0 +1,40 @@
+[tool.ruff]
+preview = true
+line-length = 120
+fix = true
+output-format = "grouped"
+
+[tool.ruff.format]
+exclude = [".git", ".venv", ".mypy_cache", ".tox", "__pycache__"]
+
+[tool.poetry]
+name = "openshift-operator-utilities"
+version = "1.0.6"
+description = "Utilities to interact with openshift operators"
+authors = ["dbasunag <dbasunag@redhat.com>"]
+license = "Apache License"
+readme = "README.md"
+packages = [{ include = "operator_utilities" }]
+homepage = "https://github.com/RedHatQE/openshift-operator-utilities"
+documentation = "https://github.com/RedHatQE/openshift-operator-utilities/blob/main/README.md"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+kubernetes = "^29.0.0"
+openshift-python-utilities = "^5.0.16"
+openshift-python-wrapper = "^10.0.0"
+
+[tool.poetry-dynamic-versioning.substitution]
+files = ["VERSION"]
+
+[tool.poetry-dynamic-versioning]
+enable = false
+pattern = "((?P<epoch>\\d+)!)?(?P<base>\\d+(\\.\\d+)*)"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"

@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: openshift-operator-utilities
+Version: 1.0.6
+Summary: Utilities to interact with openshift operators
+Home-page: https://github.com/RedHatQE/openshift-operator-utilities
+License: Apache License
+Author: dbasunag
+Author-email: dbasunag@redhat.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: kubernetes (>=29.0.0,<30.0.0)
+Requires-Dist: openshift-python-utilities (>=5.0.16,<6.0.0)
+Requires-Dist: openshift-python-wrapper (>=10.0.0,<11.0.0)
+Project-URL: Documentation, https://github.com/RedHatQE/openshift-operator-utilities/blob/main/README.md
+Description-Content-Type: text/markdown
+
+# openshift-operator-utilities
+Utilities to interact with various openshift operators
+
