@@ -1,0 +1,26 @@
+[project]
+name = "length_nest_pro_MQ"
+version = "0.0.1"
+authors = [
+  { name="Niels Bos", email="nielsb00@gmail.com" },
+]
+description = "An adapted version of the length nest pro, enriched with a message queue connection"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/NielssBoss/LengthNestProMQ"
+
+[build-system]
+requires = [
+    "numpy",
+    "wheel",
+    "setuptools",
+    "pika"
+]
+build-backend = "setuptools.build_meta"
