@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "types-pyone"
+version = "0.1.6.1"
+authors = [
+  { name="d34d5p4rr0w" },
+]
+description = "Type stubs for pyone library"
+readme = "README.md"
+dependencies = [
+    "pyone"
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Typing :: Stubs Only"
+]
+
+[project.urls]
+Homepage = "https://github.com/d34d5p4rr0w/types-pyone"
+Issues = "https://github.com/d34d5p4rr0w/types-pyone/issues"
+
+[tool.mypy]
+ignore_missing_imports = true
