@@ -1,0 +1,16 @@
+ducktools/pythonfinder/__init__.py,sha256=5-bM6Q_iyq8DLVHS7l6O99E6vIBbmqfgJDG3iplxfas,1254
+ducktools/pythonfinder/__main__.py,sha256=iYpRxX4VUKXqhU1f1ihlc8pq9fWrB2YqmgLsTkFA_po,3494
+ducktools/pythonfinder/details_script.py,sha256=Rsskky9nPXGlAbb1WV2-mFISPxTXQjbTKsnF2WGDlKo,1668
+ducktools/pythonfinder/shared.py,sha256=FPoDf2pOYYqf9XIqlzZ-TjE5gccEqvGENpnN31YOXm0,5549
+ducktools/pythonfinder/darwin/__init__.py,sha256=oi1m5PQ_2wNS1yYkTQN2kq7OrZIB9AR3Og5UKEHaEIo,836
+ducktools/pythonfinder/linux/__init__.py,sha256=fgwuWbrkqHAXh5RbIlZXLjw7Wp361FdlKl4Y4GKYEOI,1727
+ducktools/pythonfinder/linux/pyenv_search.py,sha256=tT3dDO4dqJQLQeTMlOo_3Lzh4txXUFngFGJQz609Pbw,2725
+ducktools/pythonfinder/win32/__init__.py,sha256=e_3VnU97y_jzjy6UgHHAWxtX-izUnomXZKwyqW42OW8,466
+ducktools/pythonfinder/win32/pyenv_search.py,sha256=hnkteCPudiRTMBinJzs8_U7RT8UgwBh5ePwOakudsc4,2159
+ducktools/pythonfinder/win32/registry_search.py,sha256=ugMfwR7jtxwtYg6-ODxWBTbrh18M4YQaLUEC9_DFh14,4086
+ducktools_pythonfinder-0.1.1.dist-info/COPYING,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ducktools_pythonfinder-0.1.1.dist-info/COPYING.LESSER,sha256=c-yUVNxdaGgxr5aDIj4Zu5QgZ9RtiRYevigJqF3aJAo,7636
+ducktools_pythonfinder-0.1.1.dist-info/METADATA,sha256=5USSfR8xHFOqP9s3HWUXoi0zGl3PQMqTd_m0ia73viM,6150
+ducktools_pythonfinder-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ducktools_pythonfinder-0.1.1.dist-info/top_level.txt,sha256=uSDLtio3ZFqdwcsMJ2O5yhjB4Q3ytbBWbA8rJREganc,10
+ducktools_pythonfinder-0.1.1.dist-info/RECORD,,
