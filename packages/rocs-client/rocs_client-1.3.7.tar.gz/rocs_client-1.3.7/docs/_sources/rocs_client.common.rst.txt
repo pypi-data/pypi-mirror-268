@@ -1,0 +1,28 @@
+common subpackage
+===========================
+
+Introduction
+---------------
+
+.. automodule:: rocs_client.common
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+camera module
+---------------------------------
+
+.. automodule:: rocs_client.common.camera
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+system module
+---------------------------------
+
+.. automodule:: rocs_client.common.system
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
