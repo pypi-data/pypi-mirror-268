@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: neobuilder
+Version: 5.0.0b1
+Summary: Builds Neobuf Packages from Protobuf files using Protoplasm! :D
+Author-email: Thordur Matthiasson <thordurm@ccpgames.com>
+License: MIT License
+        
+        Copyright (c) 2022-2024 CCP Games
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/ccpgames/neobuilder
+Project-URL: Documentation, https://github.com/ccpgames/neobuilder/blob/main/README.md
+Project-URL: Repository, https://github.com/ccpgames/neobuilder.git
+Project-URL: Issues, https://github.com/ccpgames/neobuilder/issues
+Project-URL: Changelog, https://github.com/ccpgames/neobuilder/blob/main/CHANGELOG.md
+Keywords: protobuf,proto,protoplasm,dataclasses,tools,ccp,utils
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: protoplasm <6,>=5.0
+Requires-Dist: ccptools <2,>=1.1
+Requires-Dist: Jinja2 <4,>=3.1
+Requires-Dist: semver <4,>=3.0.2
+
+# NeoBuilder
+
+Builds Neobuf Packages from Protobuf files using Protoplasm! :D
+
+## Useful info
+
+Installing this package creates a command line executable called `neobuild` (or 
+`neobuild.exe` in Windows) in Python's `Scripts` folder so you just run the 
+`neobuild` command from a console.
+
+## Usage
+
+Assuming you've got a package called `sandbox` and you're storing your protobuf 
+files in a directory called `proto` and you want to spit out the build into the 
+directory `build` just go:
+
+```
+neobuild sandbox 
+```
+
+## Versioning Your Package
+
+If you place a plain text file called `VERSION` in the root of your proto 
+package (e.g. `/proto/sandbox/VERSION` from the example above) and skip any 
+versioning parameters (the `--major`, `-m`, `--patch` and `-p` guys) Neobuilder
+will use that file for versioning.
+
+The first line in the file should be the semantic version number `x.y.z.a`
+
+## More stuff
+
+```
+usage: neobuild [-h] [-m | -p] [-b [BUILDROOT]] [-v] package [protopath]
+
+Builds neobuf packages with protoplasm.
+
+positional arguments:
+  package               Package name
+  protopath             Path to the root of the protobuf files (default="./proto")
+
+options:
+  -h, --help            show this help message and exit
+  -m, --major           Bump the major version number instead of the minor
+  -p, --patch           Bump the patch version number instead of the minor
+  -b [BUILDROOT], --buildroot [BUILDROOT]
+                        Path to the root of the output build files (default="./build")
+  -v, --verbose         Spits out DEBUG level logs
+```
