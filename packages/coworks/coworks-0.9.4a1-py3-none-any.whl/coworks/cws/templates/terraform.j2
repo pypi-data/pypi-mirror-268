@@ -1,0 +1,77 @@
+{% if terraform_cloud -%}
+# ---------------------------------------------------------------------------------------------------------------------
+# TERRAFORM ON CLOUD
+# ---------------------------------------------------------------------------------------------------------------------
+
+terraform {
+  backend "remote" {
+    organization = "{{ terraform_organization }}"
+
+    workspaces {
+      name = "{{ ms_name }}_{{ stage }}"
+    }
+  }
+  required_version = ">= 1.2.0"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.2.0"
+    }
+  }
+}
+
+variable "AWS_ACCESS_KEY_ID" {}
+variable "AWS_SECRET_ACCESS_KEY" {}
+variable "AWS_REGION" {default="eu-west-1"}
+variable "TFC_WORKSPACE_NAME" {}
+
+provider "aws" {
+  access_key = var.AWS_ACCESS_KEY_ID
+  secret_key = var.AWS_SECRET_ACCESS_KEY
+  region     = var.AWS_REGION
+
+  default_tags {
+    tags = {
+      Creator = "terraform"
+      Stage = "{{ stage }}"
+    }
+  }
+}
+
+locals {
+{%- if profile_name %}
+  profile = "{{ profile_name }}"
+{% else %}
+  account_id = data.aws_caller_identity.current.account_id
+{%- endif %}
+  region = {{ '"{}"'.format(aws_region) if aws_region else 'var.AWS_REGION'}}
+}
+{%  else  -%}
+# ---------------------------------------------------------------------------------------------------------------------
+# TERRAFORM ON S3
+# ---------------------------------------------------------------------------------------------------------------------
+
+variable "AWS_REGION" {default="eu-west-1"}
+
+terraform {
+  backend "s3" {
+    bucket  = "{{ tf_bucket }}"
+    key     = "{{ tf_key }}/tfstate_{{ workspace }}.json"
+    region  = {{ '"{}"'.format(aws_region) if aws_region else 'var.CUSTOMER_AWS_REGION'}}
+    profile = "{{ profile_name }}"
+  }
+  required_version = ">= 1.2.0"
+  required_providers {
+    local = {
+      source  = "hashicorp/local"
+    }
+  }
+}
+
+locals {
+  account_id = "{{ aws_account }}"
+  region = {{ '"{}"'.format(aws_region) if aws_region else 'var.AWS_REGION'}}
+}
+{%- endif %}
+
+data "aws_caller_identity" "current" {}
