@@ -1,0 +1,82 @@
+name: Pyinstaller
+
+on:
+  workflow_dispatch:
+    inputs:
+      push:
+        description: Push the artifact to github. 
+        required: false
+        default: true
+        type: boolean
+      tag:
+        description: The git tag to build on
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      push:
+        description: Push the artifact to github. 
+        required: false
+        default: true
+        type: boolean
+      tag:
+        description: The git tag to build on
+        required: false
+        type: string
+    secrets:
+      GH_APP_KEY:
+        description: GitHub App private key
+        required: true
+jobs:
+  installer:
+    name: Pyinstaller
+    runs-on: ${{ matrix.os.runs-on }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+        - name: windows
+          runs-on: windows-latest
+        - name: linux
+          runs-on: ubuntu-latest
+        - name: darwin
+          runs-on: macos-latest
+        arch:
+        - amd64
+    steps:
+
+    - name: Get Tag Name
+      id: set_tag
+      shell: bash
+      env:
+        OS: ${{ matrix.os.name }}
+        ARCH: ${{ matrix.arch }}
+        GIT_TAG: ${{ inputs.tag }}
+      run: |
+        if [ -z "${GIT_TAG}" ]; then
+          GIT_TAG=${GITHUB_REF#refs/*/}
+        fi
+        VERSION="${GIT_TAG#v*}"
+        NAME="duploctl-${VERSION}-${OS}-${ARCH}"
+        echo "GIT_TAG=${GIT_TAG}" >> $GITHUB_OUTPUT
+        echo "NAME=${NAME}" >> $GITHUB_OUTPUT
+
+    - name: Setup
+      uses: duplocloud/duploctl/.github/actions/setup@main
+      with:
+        ref: ${{ inputs.tag }}
+        optionals: "[build]"
+        app-id: ${{ vars.GH_APP_ID }}
+        private-key: ${{ secrets.GH_APP_KEY }}
+    
+    - name: Pyinstaller
+      id: installer
+      run: pyinstaller scripts/installer.spec
+
+    - name: View Files
+      run: ls dist
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: ${{ steps.set_tag.outputs.NAME }}
+        path: dist
