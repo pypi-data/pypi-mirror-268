@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+openphrasebank/openphrasebank.egg-info/PKG-INFO
+openphrasebank/openphrasebank.egg-info/SOURCES.txt
+openphrasebank/openphrasebank.egg-info/dependency_links.txt
+openphrasebank/openphrasebank.egg-info/entry_points.txt
+openphrasebank/openphrasebank.egg-info/requires.txt
+openphrasebank/openphrasebank.egg-info/top_level.txt
+tests/test_core.py
