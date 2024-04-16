@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "somatic"
+version = "3.0.2"
+description = "The best documentation framework every created."
+authors = []
+readme = "readme.md"
+
+packages = [
+    { include = "somatic", from = "venues/stages" }
+]
+exclude = []
+include = [ "*.HTML", "*.html", "*.JSON", "*.json" ]
+
+license = "GPL-3.0-only"
+
+keywords = [
+	"documentation"
+]
+
+[tool.poetry.scripts]
+somatic = 'somatic:clique'
+
+[tool.poetry.dependencies]
+python = "^3.10"
+factory-farm = "^1.2.3"
+click = "^8.1.7"
+law-dictionary = "^1.0.11"
+flask = "^3.0.3"
+jsonschema = "^4.21.1"
+mako = "^1.3.3"
+rich = "^13.7.1"
+sanic = "^23.12.1"
+
+
+[tool.poetry.urls]
+GitLab = "https://gitlab.com/offline-money/squash-1/somatic"
+
+
+
