@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "icotest-voice"
+version = "1.0.43"
+description = "Icotest Voice API"
+readme = "README.md"
+keywords = ["OpenAPI", "OpenAPI-Generator", "Icotest Voice"]
+authors = [
+    { name = "Shaun Hirst", email = "shaun.hirst@3adesign.co.uk" },
+    { name = "Ivo Shipkaliev", email = "ivo@3adesign.co.uk" },
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.7"
