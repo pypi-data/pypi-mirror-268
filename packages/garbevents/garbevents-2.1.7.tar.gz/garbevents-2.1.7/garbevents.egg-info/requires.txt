@@ -1,0 +1,7 @@
+mitmproxy==8.0.0
+jsonpath
+paramiko
+emoji
+deepdiff
+jmespath
+loguru
