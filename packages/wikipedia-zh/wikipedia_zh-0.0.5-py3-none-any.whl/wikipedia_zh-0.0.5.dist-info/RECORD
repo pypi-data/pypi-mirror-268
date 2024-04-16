@@ -1,0 +1,14 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/geosearch_test.py,sha256=28YznZvfWOQGOEJLfB0sg1ThPP_HsUOmeIKpDxfmpDo,1711
+tests/lang_test.py,sha256=bqDhkhLseMdSjHftbbvLIamMVThuD4XrwNiargXwWro,344
+tests/page_test.py,sha256=4OtMPPC9Vil4AnQXGxY1Q9DyupHsFxEh8YTNtGTjXdg,7156
+tests/request_mock_data.py,sha256=26f32g-YXi1Jt35R0MWv0Rc57rPSBpjHfLgxU7gw5S0,69689
+tests/search_test.py,sha256=4nVjH2AYzQ1Zhs5jVbFVk1mKZISdD9zezQ2h_LeMq4E,1399
+wikipedia_zh/__init__.py,sha256=O7oVhp5sQvbjk2KzwUNKFp4LWZM50mgvgbxMX8Dju1A,55
+wikipedia_zh/exceptions.py,sha256=aeplcQATAK1ABiBxfK5hcHRkMH30T90FYdnS9rQQyrg,2363
+wikipedia_zh/util.py,sha256=CPMhITqHJ08uzOr0OmbT-kYvCWGhjqtiD0VdqdN3RIg,1026
+wikipedia_zh/wikipedia.py,sha256=dTFUNu2TkMw1k8U5-FQZE9B3ArSbq0YSVRi2UJ1UFgY,23580
+wikipedia_zh-0.0.5.dist-info/METADATA,sha256=dqb6dzti9nX6wZ6802BOEfIz-Z0cI9AP24aJvrQhD_Q,459
+wikipedia_zh-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+wikipedia_zh-0.0.5.dist-info/top_level.txt,sha256=zra8AdXD49MED7NXxJi73wHkhJO0bJRtnGX1fXntbYU,19
+wikipedia_zh-0.0.5.dist-info/RECORD,,
