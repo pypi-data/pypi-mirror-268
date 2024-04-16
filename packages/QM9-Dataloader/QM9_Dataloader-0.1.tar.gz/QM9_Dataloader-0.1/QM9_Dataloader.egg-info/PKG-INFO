@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: QM9-Dataloader
+Version: 0.1
+Summary: Uploads current (4/15/24) version of QM9 to dataframe object
+Author: Logan Snider
+Author-email: logop1112@gmail.com
