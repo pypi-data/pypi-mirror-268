@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+celery_streaming_result/__init__.py
+celery_streaming_result/core.py
+celery_streaming_result.egg-info/PKG-INFO
+celery_streaming_result.egg-info/SOURCES.txt
+celery_streaming_result.egg-info/dependency_links.txt
+celery_streaming_result.egg-info/not-zip-safe
+celery_streaming_result.egg-info/requires.txt
+celery_streaming_result.egg-info/top_level.txt
