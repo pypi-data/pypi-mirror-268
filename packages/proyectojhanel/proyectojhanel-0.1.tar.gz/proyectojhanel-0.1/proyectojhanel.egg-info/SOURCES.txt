@@ -1,0 +1,9 @@
+README.md
+setup.py
+proyecto/__init__.py
+proyecto/cal.py
+proyecto/config.py
+proyectojhanel.egg-info/PKG-INFO
+proyectojhanel.egg-info/SOURCES.txt
+proyectojhanel.egg-info/dependency_links.txt
+proyectojhanel.egg-info/top_level.txt
