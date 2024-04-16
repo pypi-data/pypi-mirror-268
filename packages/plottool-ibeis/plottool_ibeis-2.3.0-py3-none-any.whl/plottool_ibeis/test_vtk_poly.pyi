@@ -1,0 +1,6 @@
+def rhombicuboctahedron() -> None:
+    ...
+
+
+def rhombic_dodecahedron() -> None:
+    ...
