@@ -1,0 +1,3 @@
+[console_scripts]
+factory_farm=factory_farm:clique
+
