@@ -1,0 +1,6 @@
+reka_torch/__init__.py,sha256=DG3IOQ_cI7qGaxhQHv_On-LFlgZRZrlnMB5xl5b20EQ,53
+reka_torch/model.py,sha256=XKxBg4iD2MZPY_rldOX_kFmFTkUtucjbPHlq0cKHZMg,6944
+reka_torch-0.0.2.dist-info/LICENSE,sha256=GHYD0Vn7cqu6O1FibXB1ix_cx8js09uZI1rKjCjW5sY,1074
+reka_torch-0.0.2.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+reka_torch-0.0.2.dist-info/METADATA,sha256=HczhfEYKFRZTfueO0DQwKzlQBUlef5CyivpTg88WGrE,2207
+reka_torch-0.0.2.dist-info/RECORD,,
