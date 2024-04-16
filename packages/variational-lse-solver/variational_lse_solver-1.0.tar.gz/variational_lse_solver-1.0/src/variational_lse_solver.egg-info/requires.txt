@@ -1,0 +1,3 @@
+pennylane~=0.34
+torch~=2.2.1
+tqdm~=4.66.2
