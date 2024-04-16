@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+gpuwidget/__init__.py
+gpuwidget/core.py
+gpuwidget/widgets.py
+gpuwidget.egg-info/PKG-INFO
+gpuwidget.egg-info/SOURCES.txt
+gpuwidget.egg-info/dependency_links.txt
+gpuwidget.egg-info/requires.txt
+gpuwidget.egg-info/top_level.txt
+tests/test_core.py
