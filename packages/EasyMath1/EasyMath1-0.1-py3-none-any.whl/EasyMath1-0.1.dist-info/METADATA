@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: EasyMath1
+Version: 0.1
+Summary: A simple math library
+Home-page: 
+Author: Dr. Abdulkareem
+Author-email: agri_1982@yahoo.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+# EasyMath1
+
+A simple python library for basic mathematical operations.
+
+## Installation
+
+you can install this library using pip:
+
+``` bash
+pip install EasyMath1
+
+python setup.py sdist bdist_wheel
+you can upload to the packing library index pypi
+
+to upload it
+you need to install
+pip install twine
+
+pip install EasyMath1
