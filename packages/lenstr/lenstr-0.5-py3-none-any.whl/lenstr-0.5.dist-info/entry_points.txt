@@ -1,0 +1,2 @@
+[console_scripts]
+lense = my_backend.main:app
