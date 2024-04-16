@@ -1,0 +1,184 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pop-cli"
+version = "4.1.0"
+description = "A POP cli interface"
+readme = "README.rst"
+authors = [
+    {name = "Tyler Levy Conde", email = "yonstib@gmail.com"},
+]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: Apache Software License",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiopath",
+    "cPop>=35.0.0",
+    "aioconsole",
+    "prompt-toolkit",
+]
+
+
+[project.optional-dependencies]
+test = [
+    "cpop[test]",
+    "pexpect",
+    "pytest",
+    "pytest-asyncio",
+]
+
+[project.scripts]
+hub = "hub.__main__:main"
+
+[tool.hatch.build.targets.wheel.sources]
+"src" = "hub"
+
+[tool.hatch.build.targets.wheel]
+include = ["src/**"]
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+addopts = "--tb native --full-trace --color=yes -vv"
+asyncio_mode = "auto"
+
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = [
+  "black>=23.1.0",
+  "mypy>=1.0.0",
+  "ruff>=0.0.243",
+  "hatchling",
+]
+[tool.hatch.envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:hatch_build_scripts tests}"
+style = [
+  "ruff {args:.}",
+  "black --check --diff {args:.}",
+]
+
+fix = [
+  "black {args:.}",
+  "ruff --fix {args:.}",
+  "style",
+]
+
+all = [
+  "style",
+  "typing",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+(
+/(
+    \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+)/
+)
+'''
+
+
+[tool.ruff]
+target-version = "py310"
+exclude = ["tests", "docs"]
+
+[tool.ruff.lint]
+select = [
+  "A",
+  "ARG",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "FBT",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "Q",
+  "RUF",
+  "S",
+  "T",
+  "TID",
+  "UP",
+  "W",
+  "YTT",
+]
+
+fixable = ["ALL"]
+unfixable = [
+  # Don't touch unused imports
+  "F401",
+]
+
+ignore = [
+  # Allow boolean positional values in function calls, like `dict.get(... True)`
+  "FBT003",
+  # Allow unused arguments
+  "ARG001",
+  "ARG002",
+  # Allow function names that start with __
+  "N807",
+  # Allow implicit Optional
+  "RUF013",
+  # Allow a lot of arguments
+  "PLR0913",
+  # Allow complexity
+  "C901",
+  "ISC001",
+  # Don't require logging exceptions
+  "S112",
+  # Ignore 'too many branches'
+  "PLR0912",
+  # Mutltiple isinstance calls
+  "UP038",
+
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["cpop"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
