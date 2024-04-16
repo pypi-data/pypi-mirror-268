@@ -1,0 +1,8 @@
+README
+setup.py
+FYSH/__init__.py
+FYSH/fysh.py
+fysh_barracuda.egg-info/PKG-INFO
+fysh_barracuda.egg-info/SOURCES.txt
+fysh_barracuda.egg-info/dependency_links.txt
+fysh_barracuda.egg-info/top_level.txt
