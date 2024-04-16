@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "LookoutConfig",
+  "properties": {
+    "ros_domain_id": {
+      "type": "integer",
+      "default": 0
+    },
+    "namespace_vessel": {
+      "type": "string",
+      "default": "vessel"
+    },
+    "gama_vessel": {
+      "type": "boolean",
+      "default": false
+    },
+    "mode": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Mode"
+        }
+      ],
+      "default": "stubs"
+    },
+    "log_level": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/LogLevel"
+        }
+      ],
+      "default": "info"
+    },
+    "greenstream": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Greenstream"
+        }
+      ]
+    },
+    "network": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Network"
+        }
+      ],
+      "default": "host"
+    }
+  },
+  "$defs": {
+    "Mode": {
+      "title": "Mode",
+      "enum": [
+        "simulator",
+        "hardware",
+        "stubs"
+      ]
+    },
+    "LogLevel": {
+      "title": "LogLevel",
+      "enum": [
+        "info",
+        "debug"
+      ]
+    },
+    "Pipeline": {
+      "type": "object",
+      "title": "Pipeline",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "order": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "name",
+        "order",
+        "elements"
+      ]
+    },
+    "Greenstream": {
+      "type": "object",
+      "title": "Greenstream",
+      "properties": {
+        "pipeline_overrides": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "allOf": [
+                      {
+                        "$ref": "#/$defs/Pipeline"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "A list of greenstream pipelines.\nThese will only take affect if the the mode is 'hardware'\n\nSet these to 'null' to ignore the override.",
+          "examples": [
+            "- null\n- name: bow\n  elements:\n  - v4l2src\n  - video/x-raw, format=RGB,width=1280,height=720"
+          ]
+        }
+      }
+    },
+    "Network": {
+      "title": "Network",
+      "enum": [
+        "shared",
+        "host"
+      ]
+    }
+  }
+}
