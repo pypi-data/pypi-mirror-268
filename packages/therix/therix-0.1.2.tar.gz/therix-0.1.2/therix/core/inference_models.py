@@ -1,0 +1,72 @@
+from therix.core.constants import InferenceModelMaster
+from therix.core.pipeline_component import InferenceModel
+
+
+class OpenAIGPT35TurboInferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(name=InferenceModelMaster.OPENAI_GPT_3_5_TURBO, config=config)
+
+
+class OpenAIGPT4InferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(name=InferenceModelMaster.OPENAI_GPT_4, config=config)
+
+
+class OpenAIGPT4TurboPreviewInferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(
+            name=InferenceModelMaster.OPENAI_GPT_4_TURBO_PREVIEW, config=config
+        )
+
+
+class AzureOpenAIGPT3TurboPreviewInferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(name=InferenceModelMaster.AZURE_GPT_3_5_TURBO, config=config)
+
+
+class AzureOpenAIGPT3TurboInstructnferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(
+            name=InferenceModelMaster.AZURE_GPT_3_5_TURBO_INSTRUCT, config=config
+        )
+
+
+class AzureOpenAIGPT4InferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(name=InferenceModelMaster.AZURE_GPT_4, config=config)
+
+
+class AzureOpenAIGPT4TurboPreviewInferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(
+            name=InferenceModelMaster.AZURE_GPT_4_TURBO_PREVIEW, config=config
+        )
+
+
+class GroqMixtral87bInferenceModel(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(
+            name=InferenceModelMaster.GROQ_LLM_MIXTRAL_8_7_B, config=config
+        )
+
+
+class GroqGemma7B(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(name=InferenceModelMaster.GROQ_LLM_GEMMA7B, config=config)
+
+
+class GroqLlama270b(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(name=InferenceModelMaster.GROQ_LLM_LLAMA2_70B, config=config)
+
+
+class BedrockTextExpressV1(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(
+            name=InferenceModelMaster.BEDROCK_TEXT_EXPRES_V1, config=config
+        )
+
+
+class BedrockTextExpressV1(InferenceModel):
+    def __init__(self, config: dict):
+        super().__init__(name=InferenceModelMaster.BEDROCK_TEXT_LITE_G1, config=config)
