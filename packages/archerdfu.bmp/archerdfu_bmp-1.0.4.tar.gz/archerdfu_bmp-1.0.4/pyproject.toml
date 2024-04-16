@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "archerdfu.bmp"
+version = "1.0.4"
+authors = [
+    { name="o-murphy" },
+]
+
+description = "PyDfuUtil binds for archerdfu library"
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["ARCHER", "archerdfu", "bmp", "icon", "reticle"]
+license = {file = "LICENSE"}
+classifiers = [
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+dependencies = [
+    'construct',
+    'pyfiglet',
+]
+
+
+[project.urls]
+"Homepage" = "https://github.com/archerdfu/archerdfu.bmp"
+"Bug Reports" = "https://github.com/archerdfu/archerdfu.bmp/issues"
+"Source" = "https://github.com/archerdfu/archerdfu.bmp"
+
+[tool.setuptools]
+py-modules = ["archerdfu.bmp"]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["archerdfu*"]
+
+[project.scripts]
+archerdfu-icon = "archerdfu.bmp.__main__:main"

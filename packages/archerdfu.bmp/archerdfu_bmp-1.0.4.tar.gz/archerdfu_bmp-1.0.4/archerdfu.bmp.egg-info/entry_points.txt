@@ -1,0 +1,2 @@
+[console_scripts]
+archerdfu-icon = archerdfu.bmp.__main__:main
