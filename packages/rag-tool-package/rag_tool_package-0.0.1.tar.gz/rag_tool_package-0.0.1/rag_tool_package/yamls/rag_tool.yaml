@@ -1,0 +1,13 @@
+rag_tool_package.tools.rag_tool.rag_answer:
+  function: rag_answer
+  inputs:
+    connection:
+      type:
+      - CustomConnection
+    input_text:
+      type:
+      - string
+  module: rag_tool_package.tools.rag_tool
+  name: Hello World Tool
+  description: This is hello world tool
+  type: python
