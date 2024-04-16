@@ -1,0 +1,10 @@
+num_to_words/__init__.py,sha256=HgFaTbA22LeE7voOedpENdCLkEqRuMY2F08VpETfyfU,3814
+num_to_words/exception.py,sha256=N7YwqeeVgmgXlc8GYpgkq2GUOrhc8rOfR3ONOzU-Q9A,2293
+num_to_words/version.py,sha256=Mlm4Gvmb_6yQxwUbv2Ksc-BJFXLPg9H1Vt2iV7wXrA4,22
+num_to_words/utils/__init__.py,sha256=YKfgUJPySa42PHc_LFnKf5CI_DyrYDxWJz_aX1rlpjk,45
+num_to_words/utils/constants.py,sha256=C1Vk_R-9gubjbSBsF4B4vfDuqFmceWGtwE3u0IoeU34,37477
+indic_num2words-1.2.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+indic_num2words-1.2.1.dist-info/METADATA,sha256=PyTBfQtkxpD_9zplZT04mZhK25vssQhnVBL-KjM9AVY,2735
+indic_num2words-1.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+indic_num2words-1.2.1.dist-info/top_level.txt,sha256=Bdzy2klnoJb5RJRkDJy8WZ3iokJdlpZXbZrBB31dy3c,13
+indic_num2words-1.2.1.dist-info/RECORD,,
