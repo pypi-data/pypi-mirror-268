@@ -1,0 +1,8 @@
+nacl_middleware/__init__.py,sha256=piZMN2O9T3f9y6JeCJ2OgM3c-8uCEuepNBNNWs0mYeA,113
+nacl_middleware/nacl_middleware.py,sha256=zRBwwHjZMyYHaKqHEjKmmzuSX0IDqX8d6k8SiSytKa0,5014
+nacl_middleware/nacl_utils.py,sha256=jYpvEr95Ai6caNWYZ68mC4MLhFa4HCDbZax3DC2kWqA,3128
+nacl_middleware/utils.py,sha256=GcX7CmIQMLaNvysCLcSt_RP2zdCSEX-nOHd7PKGe-IM,570
+nacl_middleware-0.0.8.dist-info/METADATA,sha256=VIMo6eD9xTHiUWmsst50gdo7U0S3LC8ow5r4WcSryhw,8150
+nacl_middleware-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nacl_middleware-0.0.8.dist-info/top_level.txt,sha256=YwDnM6xK5PqOgrokPBCOVlK22XE9avF8ekKi2EfmKvk,16
+nacl_middleware-0.0.8.dist-info/RECORD,,
