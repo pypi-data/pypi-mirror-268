@@ -1,0 +1,9 @@
+hugr/__init__.py,sha256=swDrPSBOP0dViIwegWQGFFpwcUyDf60-i_WKpnMcSUg,209
+hugr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hugr/serialization/__init__.py,sha256=fG5h-o2csq-9x0zuE_3_ERl-NMTwr43cdGGMPk_Kdrw,62
+hugr/serialization/ops.py,sha256=CuiQT2xSO3PIAmMjqXBXxEmY0dzgPLA_pmFccgsgUBg,16294
+hugr/serialization/serial_hugr.py,sha256=9WzZ44SoxOKBbfso0wfOpMooJXRlREZy6mCUrmJV0Ok,894
+hugr/serialization/tys.py,sha256=pLCkSBnoP7PkXwsjIkqgWRV552RO0eGBXnS983iCRC4,8033
+hugr-0.1.0.dist-info/METADATA,sha256=Yj9BHRzbUqkXXLbOkh0-MslsIPGxLMkMLhC3yen2d-k,2530
+hugr-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+hugr-0.1.0.dist-info/RECORD,,
