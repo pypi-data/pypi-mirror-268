@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: heiwa4126.hello
+Version: 0.0.6
+Summary: A simple hello function.
+Author-email: heiwa4126 <heiwa4126@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 heiwa4126@gmail.com
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Repository, https://github.com/heiwa4126/pip-heiwa4126-hello.git
+Project-URL: Homepage, https://github.com/heiwa4126/pip-heiwa4126-hello#readme
+Keywords: demo,hello
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: invoke; extra == "dev"
+Requires-Dist: packaging; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: toml; extra == "dev"
+
+# heiwa4126.hello (pip-heiwa4126-hello)
+
+`heiwa4126.fizzbuzz` は Python 用の パッケージです。
+'hello' を返す関数 `hello()` を実装します。
+
+## インストール
+
+```sh
+pip install heiwa4126.hello
+```
+
+(名前空間パッケージなので、それとわかるよう区切りに `.` を使っています)
+
+## 使用方法
+
+このパッケージは、以下のように使用できます:
+
+```python
+from heiwa4126.hello import hello
+
+print(hello())
+```
+
+このコードは、"hello" を適切に出力します。
+
+またパッケージをインストールすると コマンド `heiwa4126_hello` も
+インストールされます。
+
+```sh
+heiwa4126_hello
+# or
+heiwa4126_hello2
+```
+
+このコマンドは、"hello" を適切に出力します。2 つの違いは
+[pyproject.toml](pyproject.toml)
+の project.scripts のところを参照。
+
+## このパッケージはテンプレートです
+
+```sh
+YOUR_NAMESPACE="お好みの名前空間"
+YOUR_PACKAGE="お好みのパッケージ名"
+find . -type f | xargs perl -i.bak -pe "s/heiw4126/$YOUR_NAMESPACE/g;s/hello/$YOUR_PACKAGE/g;"
+mv src/heiwa4126 "src/$YOUR_NAMESPACE"
+mv "src/$YOUR_NAMESPACE/hello.py" "src/$YOUR_NAMESPACE/$YOUR_PACKAGE"
+```
+
+のようにして置き換えて使ってください。

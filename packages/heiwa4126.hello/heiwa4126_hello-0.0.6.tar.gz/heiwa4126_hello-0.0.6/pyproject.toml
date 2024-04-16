@@ -1,0 +1,50 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heiwa4126.hello"
+version = "0.0.6"
+description = "A simple hello function."
+readme = "README.md"
+keywords = [ "demo", "hello",]
+classifiers = [ "License :: OSI Approved :: MIT License", "Operating System :: OS Independent", "Programming Language :: Python :: 3",]
+requires-python = ">=3.6"
+dependencies = []
+[[project.authors]]
+name = "heiwa4126"
+email = "heiwa4126@gmail.com"
+
+[project.license]
+file = "LICENSE"
+
+[project.optional-dependencies]
+dev = [ "build", "twine", "invoke", "packaging", "ruff", "toml",]
+
+[project.scripts]
+heiwa4126_hello = "heiwa4126.hello:hello"
+heiwa4126_hello2 = "heiwa4126.hello.cli:main"
+
+[project.urls]
+Repository = "https://github.com/heiwa4126/pip-heiwa4126-hello.git"
+Homepage = "https://github.com/heiwa4126/pip-heiwa4126-hello#readme"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 119
+
+[tool.ruff.lint]
+select = [ "E", "F", "I", "Q", "W",]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.isort]
+force-single-line = false
+
+[tool.setuptools.packages.find]
+where = [ "src/",]
+include = [ "heiwa4126.hello",]
