@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: osve_wrapper
+Version: 0.2.3
+Summary: Python package for OSVE wrapping
+Home-page: http://mundogeek.net/tutorial-python/
+Author: Claudio Munoz Crego
+Author-email: cmunoz@sciops.esa.int
+Keywords: esa,JUICE,EPS,planetary,space,metrics,trajectory,assessment,crema
+Requires-Dist: esac-juice-pyutils >=0.3.0
+Requires-Dist: osve >=2.0.0
+

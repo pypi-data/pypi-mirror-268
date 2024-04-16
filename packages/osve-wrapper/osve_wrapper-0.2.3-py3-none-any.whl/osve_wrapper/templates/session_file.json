@@ -1,0 +1,58 @@
+{
+  "sessionConfiguration": {
+    "sessionID": "OSVE_VV_T002_PT",
+    "version": "1.0.0",
+    "simulationConfiguration": {
+      "timeStep": 1
+    },
+    "attitudeSimulationConfiguration": {
+      "kernelsList": {
+        "id": "CREMA 5.0",
+        "version": "1.0.0",
+        "baselineRelPath": "KERNEL",
+        "fileList": [
+          {
+            "fileRelPath": "meta.tm",
+            "description": "meta.tm"
+          }
+        ]
+      },
+      "baselineRelPath": "CONFIG/AGE",
+      "ageConfigFileName": "AGMConfig_PT.xml",
+      "userDefinitionFile":   "CFG_AGM_JUI_MULTIBODY_FIXED_DEFINITIONS.xml",
+      "predefinedBlockFile":  "CFG_AGM_JUI_MULTIBODY_PREDEFINED_BLOCK.xml",
+      "eventDefinitionsFile": "CFG_AGM_JUI_MULTIBODY_EVENT_DEFINITIONS.xml"
+    },
+    "instrumentSimulationConfiguration": {
+      "baselineRelPath":  "./CONFIG/ISE",
+      "unitFileName":     "units.def",
+      "configFileName":   "eps.cfg",
+      "eventDefFileName": "events.juice.def"
+    },
+    "inputFiles": {
+      "baselineRelPath": "PTR",
+      "xmlPtrPath": "ptr.xml",
+      "segmentTimelineFilePath": "ITL/TOP_timelines.itl",
+      "modellingConfiguration": {
+        "baselineRelPath": "EDF",
+        "edfFileName": "TOP_experiments.edf",
+        "observationDefFileName": ""
+      },
+      "eventTimelineFilePath": "TOP_events.evf"
+    },
+    "outputFiles": {
+      "baselineRelPath": "OUTPUT",
+      "ckAttitudeFilePath": "test.ck",
+      "txtAttitudeFilePath": "quaternions.csv",
+      "attitudeXmlPtr": "PTR_RESOLVED.ptx",
+      "powerFilePath": "power.csv",
+      "powerConfig": {
+        "powerTimeStep": 5
+      }
+    },
+    "logging": {
+      "stdOutLogLevel": "ERROR",
+      "jsonLogFile": "log.json"
+    }
+  }
+}

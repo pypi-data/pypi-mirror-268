@@ -1,0 +1,2 @@
+[console_scripts]
+osve_wrapper = osve_wrapper_cmd.osve_wrapper_cmd:main

@@ -1,0 +1,52 @@
+{
+    "sessionConfiguration": {
+        "version": "1.0.0",
+        "simulationConfiguration": {
+            "timeStep": 60,
+            "outputTimeStep": 600,
+			"filterStartTime": "2031-01-20T20:15:00Z",
+			"filterEndTime":   "2031-07-25T03:30:08Z",
+			"resizePtrBlocks": true
+        },
+        "atttitudeSimulationConfiguration": {
+            "kernelsList": {
+                "id": "CREMA_5_0",
+                "version": "1.0.0",
+                "baselineRelPath": "./",
+                "fileList": [
+                    {
+                        "fileRelPath": "osve_crema_5_0.tm",
+                        "description": "metakernel crema 5 0"
+                    }
+                ]
+            },
+            "baselineRelPath": "./CONFIG/AGE",
+            "ageConfigFileName": ".",
+            "userDefinitionFile": "CFG_AGM_JUI_MULTIBODY_FIXED_DEFINITIONS.xml",
+            "predefinedBlockFile": "CFG_AGM_JUI_MULTIBODY_PREDEFINED_BLOCK.xml"
+        },
+        "instumentSimulationConfiguration": {
+            "baselineRelPath": "./CONFIG/ISE",
+            "unitFileName": "units.def",
+            "configFileName": "eps.cfg",
+            "edfFileName": "../../instrument_type/EDF/TOP_experiments.edf",
+            "eventDefFileName": "events.juice.def",
+            "observationDefFileName": "../top_obs_dummy.def"
+        },
+        "inputFiles": {
+            "baselineRelPath": "instrument_type",
+            "jsonSegmentFilePath": "spice_segmentation_attitude_5_0_last_reduced.json",
+            "segmentTimelineFilePath": "ITL/TOP_timelines_reduced.itl",
+            "eventTimelineFilePath": "TOP_events.evf"
+        },
+        "outputFiles": {
+            "baselineRelPath": "simu",
+            "simOutputFilesPath": "eps_output",
+            "ckAttitudeFilePath": "",
+            "simDataFilePath": "",
+            "attitudeXmlPtr": "",
+            "runtimeErrorFilePath": "run_errorFile.out",
+            "runtimeLogFilePath": "run_logFile.out"
+        }
+    }
+}

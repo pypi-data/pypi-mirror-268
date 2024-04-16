@@ -1,0 +1,83 @@
+{
+  "file_name": "osve_wrapper_default_values.json",
+  "descriptions": {
+    "main": "contains default parameters/paths used to run OSVE",
+    "default_paths": " 'dir' are used to set relative default path in osve_wrapper; icd an info are informational"
+  },
+  "default_paths": {
+    "eps_config_file": {
+      "dir": "internal/phs/eps",
+      "prefix": "cfg_eps_",
+      "icd": "CONE_0123",
+      "ext": "cfg",
+      "info": "the code assumes the file is stored in a crema sub-dir"
+    },
+    "eps_tm_file": {
+      "dir": "internal/common/meta_kernels",
+      "prefix": "Generic_meta_kernel_",
+      "icd": "CONE_0124",
+      "ext": "cfg",
+      "info": "the code assumes the file is stored in a crema sub-dir"
+    },
+    "event_def_file": {
+      "dir": "internal/phs/eps",
+      "name": "cfg_eps_evd.def",
+      "icd": "CONE_0121",
+      "ext": "def",
+      "info": "Metakernel file path"
+    },
+    "unit_file": {
+      "dir": "internal/phs/eps",
+      "name": "cfg_eps_units.def",
+      "icd": "CONE_0161",
+      "ext": "def",
+      "info": ""
+    },
+    "solar_cell_efficiency_file": {
+      "dir": "internal/geopipeline/output",
+      "icd": "GEOP_0060",
+      "info": "the code assumes the file is stored in a crema sub-dir"
+    },
+    "bit_rate_file": {
+      "dir": "internal/geopipeline/output/",
+      "icd": "GEOP_0150",
+      "info": ""
+    },
+    "solar_cell_counter_file": {
+      "dir": "internal/phs/eps",
+      "name": "cfg_eps_res_sa_cells_count.asc",
+      "icd": "CONE_0160",
+      "ext": "asc",
+      "info": "the code assumes the file is stored in a crema sub-dir; Note the file name must be specified in cfg_eps_crema_X_Y.cfg"
+    },
+    "agm_config_ptr_file": {
+      "dir": "internal/phs/agm",
+      "name": "cfg_agm_jui_jupiter.xml",
+      "icd": "CONE_016X",
+      "info": ""
+    },
+    "agm_cfg_predefined_file": {
+      "dir": "internal/phs/agm",
+      "name": "cfg_agm_jui_multibody_predefined_block.xml",
+      "icd": "CONE_0164",
+      "info": ""
+    },
+    "agm_cfg_fixed_def_file": {
+      "dir": "internal/phs/agm",
+      "name": "cfg_agm_jui_multibody_fixed_definitions.xml",
+      "icd": "CONE_0163",
+      "info": ""
+    },
+    "agm_cfg_event_def_file": {
+      "dir": "internal/phs/agm",
+      "name": "cfg_agm_jui_multibody_event_definitions.xml",
+      "icd": "CONE_0166",
+      "info": ""
+    },
+    "ptr_path": {
+      "dir": "internal/timeline/output",
+      "icd": "TMLN_0030",
+      "info": "Default Spice Attitude Segmentation Timeline"
+    }
+  }
+}

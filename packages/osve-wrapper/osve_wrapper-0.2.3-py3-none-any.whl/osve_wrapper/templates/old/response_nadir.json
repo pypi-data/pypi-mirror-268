@@ -1,0 +1,18 @@
+{
+	"trajectory":  "CREMA_3_2",
+	"mnemonic":    "POINTING_TEST",
+	"name":        "Pointing Test",
+	"description": "Pointing test to be pass to OSVE",
+	"segments": [
+		{
+			"start": "2029-04-05T23:30:31.000Z",
+			"end":   "2033-06-25T03:22:10.000Z",
+			"segment_definition": "NADIR_TEST",
+			"timeline": "PRIME",
+			"pointing_request_snippet": "<block ref=\"OBS\">\n      <attitude ref=\"track\">\n        <boresight ref=\"SC_Zaxis\" />\n        <target ref=\"Ganymede\" />\n        <phaseAngle ref=\"powerOptimised\">\n          <yDir>false </yDir>\n        </phaseAngle>\n      </attitude>\n      <metadata>\n        <comment>Track Power Optimised Ganymede</comment>\n      </metadata>\n    </block>\n",
+			"slew_policy": "EXTEND_BLOCK"
+		}
+	],
+	"default_block": "<block ref=\"OBS\">\r\n      <attitude ref=\"track\">\r\n        <boresight ref=\"SC_Zaxis\" />\r\n        <target ref=\"JUPITER\" />\r\n        <phaseAngle ref=\"powerOptimised\">\r\n          <yDir>false </yDir>\r\n        </phaseAngle>\r\n      </attitude>\r\n      <metadata>\r\n        <comment>Track Power Optimised Jupiter</comment>\r\n      </metadata>\r\n    </block>",
+	"default_slew_policy": "KEEP_BLOCK"
+}

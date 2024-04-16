@@ -1,0 +1,62 @@
+{
+    "sessionConfiguration": {
+        "sessionID":"proposal_20191020",
+        "version":"1.0.0",
+		"simulationConfiguration":
+        {
+            "timeStep":60,
+            "outputTimeStep": 600
+        },
+        "attitudeSimulationConfigurationREMOVED":
+        {
+            "kernelsList":
+            {
+                "id":"CREMA 3.2",
+                "version": "1.0.0",
+                "baselineRelPath":"./",
+                "fileList":
+                [{
+                    "fileRelPath":"juice_crema_3_2.tm",
+                    "description":"metakernel crema 3.2"
+                }]
+            },
+            "baselineRelPath":"./CONFIG/AGE",
+            "ageConfigFileName":"cfg_agm_jui_jupiter.xml",
+            "fixedDefinitionsFile": "CFG_AGM_JUI_MULTIBODY_FIXED_DEFINITIONS.xml",
+            "predefinedBlockFile":  "CFG_AGM_JUI_MULTIBODY_PREDEFINED_BLOCK.xml",
+            "eventDefinitionsFile": "CFG_AGM_JUI_MULTIBODY_EVENT_DEFINITIONS.xml"
+        },
+        "instrumentSimulationConfiguration":
+        {
+            "baselineRelPath":"./CONFIG/ISE",
+            "unitFileName":"units.def",
+            "configFileName":"eps.cfg",
+            "eventDefFileName":"events.juice.def"
+        },
+        "inputFiles":
+        {
+            "baselineRelPath":"target",
+            "modellingConfiguration": {
+                "baselineRelPath": "EDF",
+                "edfFileName":     "TOP_experiments.edf",
+                "observationDefFileName": ""
+            },
+            "segmentTimelineFilePath":"ITL/TOP_timelines.itl",
+            "eventTimelineFilePath": "TOP_events.evf",
+            "xmlPtrPath": "spice_segmentation_attitude_5_0.ptx"
+        },
+        "outputFiles": {
+            "baselineRelPath":      "simu",
+            "simOutputFilesPath":   "eps_output",
+            "ckAttitudeFilePath":   "",
+            "simDataFilePath":      "",
+            "attitudeXmlPtr":       "",
+            "runtimeErrorFilePath": "run_errorFile.out",
+            "runtimeLogFilePath":   "run_logFile.out"
+        }
+    },
+    "logging": {
+      "stdOutLogLevel": "ERROR",
+      "jsonLogFile": "log.json"
+    }
+}
