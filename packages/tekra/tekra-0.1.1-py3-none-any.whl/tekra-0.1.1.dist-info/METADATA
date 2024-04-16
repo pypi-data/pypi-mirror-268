@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tekra
+Version: 0.1.1
+Summary: A simple adventure game engine
+License: MIT
+Author: Samith Sandanayake
+Author-email: samith@sansolue.com
+Requires-Python: >=3.12,<3.13
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: jinja2 (>=3.1.3,<4.0.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: pyinstaller (>=6.6.0,<7.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: raylib (>=5.0.0.2,<6.0.0.0)
+Description-Content-Type: text/markdown
+
+tekra
+================
+
