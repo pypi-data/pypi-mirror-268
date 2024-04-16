@@ -1,0 +1,9 @@
+# editors
+
+.idea/
+
+# python dirs
+
+__pycache__/
+.venv/
+dist/
