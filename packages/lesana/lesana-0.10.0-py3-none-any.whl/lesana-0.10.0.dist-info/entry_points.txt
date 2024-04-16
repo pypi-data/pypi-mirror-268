@@ -1,0 +1,4 @@
+[console_scripts]
+lesana = scripts.lesana:main
+openlibrary2lesana = scripts.openlibrary2lesana:main
+tellico2lesana = scripts.tellico2lesana:main

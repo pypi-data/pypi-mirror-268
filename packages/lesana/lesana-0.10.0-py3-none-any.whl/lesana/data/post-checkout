@@ -1,0 +1,21 @@
+#!/bin/sh
+#
+# Update a lesana cache when the repository is changed with git
+# 
+# To use this hook add it to .git/hooks under the names "post-checkout" and
+# "post-merge"
+
+if [ $(basename $0) = "post-checkout" ] ; then
+    diff_cmd="git diff --name-status $1 $2"
+elif [ $(basename $0) = "post-merge" ] ; then
+    diff_cmd="git diff --name-status --no-commit-id ORIG_HEAD HEAD"
+else
+    echo "This hook can only work as post-checkout or post-merge"
+    exit 1
+fi
+
+for F in $( $diff_cmd | grep "^D" | grep "items/.*.yaml" | cut -c 2-) ; do
+    lesana rm $(basename $F .yaml)
+done
+
+lesana index $( $diff_cmd | grep "^[AM]" | grep "items/.*.yaml" | cut -c 2- | xargs)
