@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: rfccsv
+Version: 0.1.0
+Summary: A simple RFC 4180 CSV validator.
+Home-page: https://github.com/trygu/rfccsv
+License: MIT
+Author: Trygve Falch
+Author-email: trygve.falch@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Repository, https://github.com/trygu/rfccsv
+Description-Content-Type: text/markdown
+
+# rfccsv
+
+`rfccsv` is a lightweight, easy-to-use Python package designed to validate CSV files according to RFC 4180 standards. It ensures that CSV files are properly formatted and meet the criteria necessary for standardized data processing tasks.
+
+## Features
+
+- Validate any CSV file to check its compliance with RFC 4180.
+- Easy integration into existing Python projects.
+- Detailed error reporting for quick troubleshooting of CSV files.
+
+## Installation
+
+Install `rfccsv` using pip:
+
+```bash
+pip install rfccsv
+```
+
+Or, if you are using Poetry:
+
+```bash
+poetry add rfccsv
+```
+
+## Usage
+
+Here’s how you can use `rfccsv` to validate a CSV file:
+
+```python
+from rfccsv import validate_csv
+
+# Validate a CSV file
+result = validate_csv('path/to/your/file.csv')
+print(result)
+```
+
+### Validating Files
+
+You can validate CSV files by providing the path to the file:
+
+```python
+validate_csv('example.csv')
+```
+
+## License
+
+Distributed under the MIT License. 
+
+## Contact
+
+Project Link: [https://github.com/trygu/rfccsv](https://github.com/trygu/rfccsv)
+
+## Acknowledgements
+
+- [RFC 4180 Standard](https://tools.ietf.org/html/rfc4180)
+
+
