@@ -1,0 +1,45 @@
+- name: Both head and spouse have positive taxable income
+  period: 2023
+  input:
+    people:
+      head:
+        ms_unadjusted_taxable_income_joint: 500
+        is_tax_unit_head: true
+      spouse:
+        ms_unadjusted_taxable_income_joint: 300
+        is_tax_unit_head: false
+    tax_units:
+      tax_unit:
+        members: [head,spouse]
+    spm_units:
+      spm_unit:
+        members: [head,spouse]
+    households:
+      household:
+        members: [head,spouse]
+        state_code: MS
+  output:
+    ms_taxable_income_joint: [500,300]
+
+- name: Only one of head or spouse has positive taxable income
+  period: 2023
+  input:
+    people:
+      head:
+        ms_unadjusted_taxable_income_joint: -100
+        is_tax_unit_head: true
+      spouse:
+        ms_unadjusted_taxable_income_joint: 300
+        is_tax_unit_head: false
+    tax_units:
+      tax_unit:
+        members: [head,spouse]
+    spm_units:
+      spm_unit:
+        members: [head,spouse]
+    households:
+      household:
+        members: [head,spouse]
+        state_code: MS
+  output:
+    ms_taxable_income_joint: [200,0]
