@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/selfpkg/__init__.py
+src/selfpkg/greeting.py
+src/selfpkg.egg-info/PKG-INFO
+src/selfpkg.egg-info/SOURCES.txt
+src/selfpkg.egg-info/dependency_links.txt
+src/selfpkg.egg-info/top_level.txt
