@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: picoh
+Version: 1.276
+Summary: Python library for controlling Picoh Robot
+Home-page: https://github.com/ohbot/picoh
+Download-URL: https://github.com/ohbot/picoh-python/archive/1.26.tar.gz
+Author: ohbot
+Author-email: info@ohbot.co.uk
+Keywords: ohbot,robot,picoh
+Requires-Dist: pyserial
+Requires-Dist: lxml
+Requires-Dist: playsound
+Requires-Dist: numpy
+Requires-Dist: comtypes
+Requires-Dist: requests
+
