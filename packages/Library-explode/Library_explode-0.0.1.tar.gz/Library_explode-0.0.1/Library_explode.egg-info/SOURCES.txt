@@ -1,0 +1,9 @@
+README.md
+setup.py
+Library_explode.egg-info/PKG-INFO
+Library_explode.egg-info/SOURCES.txt
+Library_explode.egg-info/dependency_links.txt
+Library_explode.egg-info/requires.txt
+Library_explode.egg-info/top_level.txt
+mylib/__init__.py
+mylib/main.py
