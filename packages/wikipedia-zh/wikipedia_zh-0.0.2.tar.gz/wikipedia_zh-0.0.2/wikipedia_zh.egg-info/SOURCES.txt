@@ -1,0 +1,10 @@
+setup.py
+code/__init__.py
+code/exceptions.py
+code/util.py
+code/wikipedia.py
+wikipedia_zh.egg-info/PKG-INFO
+wikipedia_zh.egg-info/SOURCES.txt
+wikipedia_zh.egg-info/dependency_links.txt
+wikipedia_zh.egg-info/requires.txt
+wikipedia_zh.egg-info/top_level.txt
