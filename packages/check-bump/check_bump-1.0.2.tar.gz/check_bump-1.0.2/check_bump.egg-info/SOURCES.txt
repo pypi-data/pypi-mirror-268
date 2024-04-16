@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements_dev.txt
+check_bump/__init__.py
+check_bump.egg-info/PKG-INFO
+check_bump.egg-info/SOURCES.txt
+check_bump.egg-info/dependency_links.txt
+check_bump.egg-info/entry_points.txt
+check_bump.egg-info/requires.txt
+check_bump.egg-info/top_level.txt
+tests/test_unit.py
