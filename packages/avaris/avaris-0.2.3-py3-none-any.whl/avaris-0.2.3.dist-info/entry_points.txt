@@ -1,0 +1,3 @@
+[console_scripts]
+avaris=avaris.cli:avaris
+
