@@ -1,0 +1,9 @@
+setup.py
+mdod/LICENSE.txt
+mdod/README.md
+mdod/__init__.py
+mdod/mdod.py
+mdod.egg-info/PKG-INFO
+mdod.egg-info/SOURCES.txt
+mdod.egg-info/dependency_links.txt
+mdod.egg-info/top_level.txt
