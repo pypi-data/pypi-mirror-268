@@ -1,0 +1,34 @@
+[project.urls]
+Homepage = "https://github.com/JoaoMario109/ifsc-dsp-2024"
+Issues = "https://github.com/JoaoMario109/ifsc-dsp-2024/issues"
+
+[tool.poetry]
+name = "dsp-ifsc"
+version = "0.0.14"
+description = "A small package with some utilities for DSP grade at IFSC - Campus Florianópolis"
+authors = [
+    "João Mário Lago <joao.mcil2003@aluno.ifsc.edu.br>",
+    "Alejo Perdomo Milar <alejo.pm@aluno.ifsc.edu.br>"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+readme = "README.md"
+repository = "https://github.com/JoaoMario109/ifsc-dsp-2024"
+license = "MIT"
+packages = [{include = "dsp_ifsc"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+numpy = "*"
+matplotlib = "*"
+
+[tool.poetry.urls]
+Homepage = "https://github.com/JoaoMario109/ifsc-dsp-2024"
+Issues = "https://github.com/JoaoMario109/ifsc-dsp-2024/issues"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
