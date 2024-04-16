@@ -1,0 +1,6 @@
+pyserial
+lxml
+playsound
+numpy
+comtypes
+requests
