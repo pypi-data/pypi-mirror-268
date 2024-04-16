@@ -1,0 +1,13 @@
+spyglass/app.py,sha256=33IaOZr2glbJfI5wXi_v9jb6yAC8Sme8XR8Zn9xOtfE,3064
+spyglass/database.py,sha256=Y8mOU9VfjbUkQvNLnTDqycVbtqX1S6spvQ2QPOtsBLc,1396
+spyglass/utils.py,sha256=Uf7I9lPvZcIaEVxEAIQhvjDjx4XRiTse7fhesFq38tw,517
+spyglass/__pycache__/database.cpython-311.pyc,sha256=os0oGPeMzgln7gEhm4BO8j_BzMF92DQBzHjL17KPqHc,3175
+spyglass/__pycache__/database.cpython-312.pyc,sha256=O9gVjuhB4Qts6lgC0yPvtl5bIYiT2_y_328j1c2xEbw,2943
+spyglass/__pycache__/utils.cpython-311.pyc,sha256=fYbfdFCyQC6YWw2rzbkk1D8jvmYtIo6m9y27X6flP90,1429
+spyglass/__pycache__/utils.cpython-312.pyc,sha256=iEztJHW6RELKMDbrazazK9vh3X-lrEzmbpjBjtj8Zpc,1404
+spyglass_brk-0.1.0.dist-info/LICENSE,sha256=6HUoGk1LfJqPgG5J4PjpnbEXN-qy-OtnNnGVZcoBVBk,1523
+spyglass_brk-0.1.0.dist-info/METADATA,sha256=09z0Q5s_icKAZdF912yRNNjHhN0MKGUmz5alXE2b2Z0,1013
+spyglass_brk-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+spyglass_brk-0.1.0.dist-info/entry_points.txt,sha256=OxWyBGY-83XgJvv1JvbJwwtvOFDnqKAyHGbEfKtJDsQ,43
+spyglass_brk-0.1.0.dist-info/top_level.txt,sha256=bCMuU4Cf9XNHucle5vDbOreq499MjFzsxKTR8qaj69M,9
+spyglass_brk-0.1.0.dist-info/RECORD,,

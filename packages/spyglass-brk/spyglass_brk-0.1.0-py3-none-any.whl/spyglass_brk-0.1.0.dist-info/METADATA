@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: spyglass-brk
+Version: 0.1.0
+Summary: Project management cli tool written in python
+Author-email: Jovan Djokic-Sumarac <sumarac@protonmail.com>
+License: MIT
+Project-URL: Homepage, https://gitlab.com/sumarac/spyglass
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer >=0.12.1
+Requires-Dist: rich >=13.7.1
+Requires-Dist: shelve2 >=1.0
+Requires-Dist: icecream >=2.1.3
+Requires-Dist: inquirer >=3.2.4
+Provides-Extra: dev
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: setuptools-scm ; extra == 'dev'
+
+# spyglass
+
+1. create a venv
+    ```
+    python -m venv .venv
+    ```
+2. install requirements
+    ```
+    pip install -r requirements.txt
+    ```
+3. run with 
+    ```
+    python spyglass.py
+    ```
