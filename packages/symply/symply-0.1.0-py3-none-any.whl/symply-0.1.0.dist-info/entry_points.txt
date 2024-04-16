@@ -1,0 +1,3 @@
+[console_scripts]
+symply-cli=symply.cli.cli:main
+
