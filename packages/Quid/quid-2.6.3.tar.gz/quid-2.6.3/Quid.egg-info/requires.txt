@@ -1,0 +1,4 @@
+yattag~=1.15.2
+rapidfuzz~=3.6.1
+datasketch~=1.6.4
+tqdm~=4.66.2
