@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: dank_mids
+Version: 4.20.88
+Summary: Multicall batching middleware for asynchronous scripts using web3.py
+Home-page: https://github.com/BobTheBuidler/dank_mids
+Author: BobTheBuidler
+Author-email: bobthebuidlerdefi@gmail.com
+License: MIT
+Requires-Dist: eth-retry <0.2,>=0.1.15
+Requires-Dist: ez-a-sync >=0.6.3
+Requires-Dist: msgspec
+Requires-Dist: multicall <1,>=0.6.2
+Requires-Dist: typed-envs >=0.0.2
+Requires-Dist: web3 !=5.29.*,!=5.30.*,!=5.31.1,!=5.31.2,>=5.27
+
