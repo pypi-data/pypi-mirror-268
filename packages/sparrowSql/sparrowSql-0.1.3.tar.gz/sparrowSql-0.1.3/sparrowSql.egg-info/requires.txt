@@ -1,0 +1,3 @@
+pymysql
+requests
+psycopg2-binary
