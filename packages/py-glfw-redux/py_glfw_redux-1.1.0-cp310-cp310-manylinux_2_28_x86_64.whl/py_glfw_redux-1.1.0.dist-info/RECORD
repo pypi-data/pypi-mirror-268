@@ -1,0 +1,13 @@
+glfw.cpython-310-x86_64-linux-gnu.so,sha256=jY524OXrb8o83r0WUz-7Ike10Io6G5014BomhoGWKA4,713801
+glfw.pyi,sha256=WDlRupc5tqCU8xzAN19p_bitB79JdFe_rxWq8ax88VE,23636
+py_glfw_redux-1.1.0.inc/glad/glad/gl.h,sha256=slo05XzPE4P-YPJRnfBLwbEQzLMtW2-ND_tG_udOFF0,299906
+py_glfw_redux-1.1.0.inc/glad/KHR/khrplatform.h,sha256=ex4Bqqetj2_DS1x733nr9RibsJ4sTS55_F01BiPRHoM,11131
+py_glfw_redux-1.1.0.inc/glfw/GLFW/glfw3native.h,sha256=QANYgf3AKpqyZcIIYzj3SaBBHhwVto-tpnj6NOi9iVg,21201
+py_glfw_redux-1.1.0.inc/glfw/GLFW/glfw3.h,sha256=qjcJhfa0k7vgNYo2q0n1eApjl8AgnG2YpiFD3qWVtzw,241826
+py_glfw_redux-1.1.0.dist-info/top_level.txt,sha256=n6GNY584FzIdaCsyFH_mQw_kXzRH9bZ9wYb8VvDeT3k,5
+py_glfw_redux-1.1.0.dist-info/LICENSE,sha256=lLrq1iQPd_x2HXDrDBN0xZW4dNVDmyNy2lomcGQMvDo,1070
+py_glfw_redux-1.1.0.dist-info/RECORD,,
+py_glfw_redux-1.1.0.dist-info/METADATA,sha256=G6D4oLHtqc_yoo1HV52PcYEetzt5Y8K1UIjqoMIKytg,1276
+py_glfw_redux-1.1.0.dist-info/WHEEL,sha256=DRFGfbmk00iwRfDF9fpLQAJbF-b4Wp23htOC54ltOsw,114
+py_glfw_redux.libs/libglfw-8d1fc4ab.so.3.4,sha256=abgMCbxf-U1oZgcv3n9wqE9PWDoZ_MgFMRFjk73q9yo,336761
+py_glfw_redux.libs/libglad-dcf0a554.so,sha256=DavsBunkCFQ43mAeGK215rpGn9CpnSn-2uRfJFZkbXU,238785
