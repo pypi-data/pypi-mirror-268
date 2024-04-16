@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "gitoptim"
+version = "0.1.0-dev16"
+description = "SDK tool to connect Gitlab pipelines with Workflows"
+authors = ["Łukasz Leszko <leszko.lucas@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+gitoptim = "gitoptim.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+typer = { extras = ["all"], version = "^0.9.0" }
+httpx = "^0.27.0"
+pydantic = "^2.6.3"
+regex = "^2023.12.25"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.6.2"
+pylint = "^3.0.4"
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
