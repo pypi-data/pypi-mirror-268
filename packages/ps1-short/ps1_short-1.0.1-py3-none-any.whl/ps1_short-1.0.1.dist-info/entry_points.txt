@@ -1,0 +1,3 @@
+[console_scripts]
+ps1-short=ps1_short.__main__:main
+
