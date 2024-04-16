@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: torchfunction
+Version: 0.0.77
+Summary: This package is based on pytorch and try to provide a more user-friendly interface for pytorch. 
+Home-page: https://github.com/Bertie97/pyctlib/tree/main/torchplus
+Author: Yiteng Zhang
+Author-email: zytfdu@icloud.com
+License: MIT Licence
+Keywords: pip,pyctlib,pytorch
+Platform: any
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pyctlib
+Requires-Dist: pynvml
+
+UNKNOWN
+
