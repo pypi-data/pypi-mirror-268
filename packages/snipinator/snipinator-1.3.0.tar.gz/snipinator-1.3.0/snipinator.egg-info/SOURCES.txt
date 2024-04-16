@@ -1,0 +1,13 @@
+LICENSE.md
+README.md
+pyproject.toml
+snipinator/__init__.py
+snipinator/cli.py
+snipinator/snipinate.py
+snipinator/snipinate_test.py
+snipinator.egg-info/PKG-INFO
+snipinator.egg-info/SOURCES.txt
+snipinator.egg-info/dependency_links.txt
+snipinator.egg-info/entry_points.txt
+snipinator.egg-info/requires.txt
+snipinator.egg-info/top_level.txt
