@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: detoxio-dtx
+Version: 0.1.3
+Summary: detoxio.ai - API first LLM security testing and red team automation
+Home-page: https://detoxio.ai
+License: Apache-2.0
+Author: detoxio.ai
+Author-email: hello@detoxio.ai
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Security
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: detoxio (>=0.1.18,<0.2.0)
+Requires-Dist: tenacity (>=8.2.3,<9.0.0)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Requires-Dist: transformers (>=4.38.2,<5.0.0)
+Project-URL: Documentation, https://docs.detoxio.ai
+Description-Content-Type: text/markdown
+
+# detoxio.ai Command Line Tool
+
+## Installation
+
+```bash
+python3 -m pip install detoxio-dtx --upgrade
+```
+
+Install protocol buffers client libraries from BSR
+
+```bash
+python3 -m pip install \
+    detoxio-api-protocolbuffers-python detoxio-api-grpc-python \
+    --upgrade --extra-index-url https://buf.build/gen/python
+```
+
+> **Note:** We need to install additional packages because as per PEP-440, we
+> cannot have a package with direct dependencies outside the public index
+
+Install [PyTorch](https://pytorch.org/) if it is not already installed:
+
+```bash
+python3 -m pip install torch
+```
+
+## Usage
+
+```bash
+dtx --help
+```
+
+For more details, refer to documentation
+
+* https://docs.detoxio.ai/
+
+
