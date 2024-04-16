@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: loe_simp_app_fw
+Version: 1.0.0
+Summary: A super simple python app framework that includes a logger and a config management.
+Project-URL: Homepage, https://github.com/loeeeee/loe-simp-app-fw
+Project-URL: Issues, https://github.com/loeeeee/loe-simp-app-fw/issues
+Author-email: loeeeee <95266635+loeeeee@users.noreply.github.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pyyaml
+Description-Content-Type: text/markdown
+
+# loe-simp-app-fw
+A super simple python app framework that includes a logger and a config management
+
+## Example
+
+```python
+import os
+
+from loe_simp_app_fw.config import Config
+from loe_simp_app_fw.logger import Logger
+
+Config("config.yaml", example_config_path="config-example.yaml", project_root_path=os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+Logger("log", project_root_path=os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+```
+
+It will read from 
+
+```bash
+[project root path]/"config.yaml"
+```
+
+The example config is located at
+
+```bash
+[project root path]/"config-example.yaml"
+```
+
+The log file will be at
+
+```bash
+[project root path]/"log"/yyyy-mm-dd.log
+```
