@@ -1,0 +1,12 @@
+oem2orm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oem2orm/main.py,sha256=_1YGGfafREg97gMdRH9kc-9t9sAooYfXmyFsA1V6FHw,836
+oem2orm/oep_compliance.py,sha256=r7jy_Qew8pGgaY1ME_ajQZTbIEQzBSG4lyf-JV_1y7U,6607
+oem2orm/oep_oedialect_oem2orm.py,sha256=Yr1D96vsZWIvAsSPYgCexHU-TRQN8S1LdTLF-wc_JTg,14437
+oem2orm/postgresql_types.py,sha256=_OaOppfi_Z0iIdAKu-OLm-cIwWmTapcS_as1EQJrOUM,1580
+oem2orm/settings.py,sha256=5iU2NCkCwcRlSpwT40UMCad4wRxm8gccYADjFQetWUk,92
+oem2orm-0.3.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+oem2orm-0.3.3.dist-info/METADATA,sha256=mLW4UIKHICCRUGP8wlBjsFVxTnVu-Wk7t4lH_TBwCf8,4102
+oem2orm-0.3.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+oem2orm-0.3.3.dist-info/entry_points.txt,sha256=BJ2wRXyAt_5d-dTQ1LP_QGrHDQHHPnLzNrBWKYPDVmg,45
+oem2orm-0.3.3.dist-info/top_level.txt,sha256=xSb1cuX96EiIY_UNu1CLQt0GjfRZMHfDPqVDfi_Wmlw,8
+oem2orm-0.3.3.dist-info/RECORD,,
