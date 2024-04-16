@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: medicafe
+Version: 0.240415.1
+Summary: MediCafe
+Home-page: https://github.com/katanada2
+Author: Daniel Vidaud
+Author-email: daniel@personalizedtransformation.com
+License: MIT
+Keywords: medicafe python34 medibot medilink
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: argparse
+Requires-Dist: logging
+Requires-Dist: pandas
+
+This module ensures that MediCafe remains up-to-date by performing version checks for its dependencies on startup. It utilizes PyPI, the official repository for Python packages, to retrieve information about the latest available versions of the required packages. When an internet connection is available, MediUpdate automatically installs any available updates using pip, the package installer for Python.

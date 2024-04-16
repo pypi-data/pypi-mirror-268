@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+medicafe.egg-info/PKG-INFO
+medicafe.egg-info/SOURCES.txt
+medicafe.egg-info/dependency_links.txt
+medicafe.egg-info/not-zip-safe
+medicafe.egg-info/requires.txt
+medicafe.egg-info/top_level.txt
