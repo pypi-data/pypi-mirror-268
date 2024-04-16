@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pyLICOS
+Version: 0.2.0
+Summary: Python interface for LICOS.
+Author: Brian Yui Eto
+Author-email: helppy.licos@linearsm.com.br
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: requests
+
+ `pyLICOS`
+
+The `pyLICOS` is a python implementation for LICOS. 

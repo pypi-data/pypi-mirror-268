@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/pyLICOS/__init__.py
+src/pyLICOS/client.py
+src/pyLICOS/communication.py
+src/pyLICOS.egg-info/PKG-INFO
+src/pyLICOS.egg-info/SOURCES.txt
+src/pyLICOS.egg-info/dependency_links.txt
+src/pyLICOS.egg-info/requires.txt
+src/pyLICOS.egg-info/top_level.txt
