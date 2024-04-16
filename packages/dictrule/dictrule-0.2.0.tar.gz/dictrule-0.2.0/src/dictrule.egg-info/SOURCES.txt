@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/dictrule/__init__.py
+src/dictrule/__version__.py
+src/dictrule/context.py
+src/dictrule/dr_property.py
+src/dictrule/exceptions.py
+src/dictrule/generator.py
+src/dictrule/rule.py
+src/dictrule.egg-info/PKG-INFO
+src/dictrule.egg-info/SOURCES.txt
+src/dictrule.egg-info/dependency_links.txt
+src/dictrule.egg-info/not-zip-safe
+src/dictrule.egg-info/top_level.txt
