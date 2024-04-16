@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/apidays24pj/__init__.py
+src/apidays24pj/py.typed
+src/apidays24pj.egg-info/PKG-INFO
+src/apidays24pj.egg-info/SOURCES.txt
+src/apidays24pj.egg-info/dependency_links.txt
+src/apidays24pj.egg-info/requires.txt
+src/apidays24pj.egg-info/top_level.txt
+src/apidays24pj/_jsii/__init__.py
+src/apidays24pj/_jsii/apidays24pj@0.0.14.jsii.tgz
