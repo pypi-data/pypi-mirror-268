@@ -1,0 +1,17 @@
+quil-0.8.0.dist-info/METADATA,sha256=Y8-776-aXUwqExFcyFFktV6GNlA1DQWpa-IcpGaGlaU,1467
+quil-0.8.0.dist-info/WHEEL,sha256=AEzK96G3xlBcsQD-Ws0twRlFNgY4RQGp0Lp8uAh_1Jo,127
+quil/instructions/__init__.py,sha256=piCXBhfgoUKW5gtgjeFIDSczOZOStxa1-Z03jYp1jTU,124
+quil/instructions/__init__.pyi,sha256=bYUbY7JV9F-I9P-WdzU2_1Ps1qvq92rH3vbClZVIOt0,91321
+quil/program/__init__.py,sha256=SwUvi31vIuXQPyBwzVNgiYmK3r3aczMSxv3geBp4B0I,129
+quil/program/__init__.pyi,sha256=5vKxX3-GTx5nr4txp1HnI1V1AF2rtZkfhAMPXmkhj5A,18326
+quil/validation/identifier.pyi,sha256=AUSCQQMmtOvxDH8iQn1ObXpPRLBZHdd5EbR0C1bKTCE,439
+quil/validation/__init__.py,sha256=bH0UGTRKObazB91ik140PmWHE_41AGgay9nbdxncmPA,161
+quil/validation/identifier.py,sha256=O7sARyxWuB-j0EUfXaOpaw7rSin_GBGGiC6FWqoD7xE,41
+quil/validation/__init__.pyi,sha256=KOBAbOztVMtUE9sGsKDGugOq3MQS3LsK7Qmj6jjBXKk,39
+quil/__init__.py,sha256=c2HQqbXikgmkz0B7-D_A6h9qGFUq2SGApDY6T_dQ-o4,283
+quil/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quil/expression/__init__.py,sha256=aUdTACmrmhoEGu5MXlifLKLFNVaXi7LsuZXn0ni2oDc,30
+quil/expression/__init__.pyi,sha256=xtkZelfVrs8aPfiBtK3OicbsNhUfFOUG6gInmlNb7_0,7690
+quil/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quil/quil.cpython-38-x86_64-linux-gnu.so,sha256=DHRfx_gTO37gFrhA90vqaXj75sz9DLd-V3kLUSWvQvQ,7418504
+quil-0.8.0.dist-info/RECORD,,
