@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: harry_potter_yonier
+Version: 1.3
+Summary: Permite consumir el API de Harry Potter para obtener o listar personajes
+Home-page: https://github.com/YonierGomez/harrypotter_python
+Author: Yonier Asprilla
+Author-email: yoonier13@gmail.com
+License: MIT
+Keywords: harrypotter
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+# MundoServicios
+
+Código de laboratorio Yonier Asprilla.
