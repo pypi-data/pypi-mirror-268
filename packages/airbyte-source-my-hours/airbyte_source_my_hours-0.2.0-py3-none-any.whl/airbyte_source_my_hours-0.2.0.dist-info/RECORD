@@ -1,0 +1,10 @@
+main.py,sha256=mmCde5Vb69RjPF0dTJQdy2g0-idGeeqtUckx6VA_6Ps,136
+source_my_hours/__init__.py,sha256=YXd34ufGRr8yaEE-QNJ-045F320fowxy0gkEtAxFY8Y,126
+source_my_hours/components.py,sha256=88AIv-9_MNz67lLcPJkJImdyA5l6jBBk4w7iyvuCqm0,3323
+source_my_hours/manifest.yaml,sha256=l4iwn-G09t20ormdo8Pfa4f7e-6_rwlgth_r2DKn1Xw,13376
+source_my_hours/run.py,sha256=ImEfqQimG9I1cmfOMvXDgZlHz60dACJO-hbW1ogKd2E,227
+source_my_hours/source.py,sha256=tfoHH7htGujmto13dFchwDPwSZblxfL8UmRypQ-k-fE,476
+airbyte_source_my_hours-0.2.0.dist-info/METADATA,sha256=opfBU7unznSG_rkDJeUrLqhn92o6JFBy__0tuASIQeA,5232
+airbyte_source_my_hours-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_my_hours-0.2.0.dist-info/entry_points.txt,sha256=V216OJXVVV0Getf5f2TMcWDB0Mcm6Fr75Rf6Q03u7l0,59
+airbyte_source_my_hours-0.2.0.dist-info/RECORD,,
