@@ -1,0 +1,9 @@
+ipyleaflet
+numpy
+pandas
+
+[all]
+geohey[extra]
+
+[extra]
+pandas

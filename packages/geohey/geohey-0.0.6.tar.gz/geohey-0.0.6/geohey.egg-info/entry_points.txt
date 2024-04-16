@@ -1,0 +1,2 @@
+[console_scripts]
+geohey = geohey.cli:main
