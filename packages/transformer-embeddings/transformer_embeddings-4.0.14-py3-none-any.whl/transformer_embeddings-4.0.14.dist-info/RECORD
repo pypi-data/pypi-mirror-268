@@ -1,0 +1,8 @@
+transformer_embeddings/__init__.py,sha256=z7oyNhWl6dbYjaUpmMm-K3AW64WV7_nPr4hPCIoqnsg,193
+transformer_embeddings/helpers.py,sha256=SMyTajFnAX50mi_brtg7Da1YtZCt9VkiVmRjNOI5wJ4,2100
+transformer_embeddings/model.py,sha256=715jwW3MZrJctwv4fM_I-2ZCRN2ulpE8yE6rRNwF8mM,11657
+transformer_embeddings/poolers.py,sha256=cMtZKRD7v6dJ5zU84Z3ot7-Ju4Ex_Wcv_yZNr9SuYVo,1828
+transformer_embeddings-4.0.14.dist-info/LICENSE,sha256=P3eFqikt40DKS_khyfRyAsNoyV9wZyp8hY2VGsrm7AU,11334
+transformer_embeddings-4.0.14.dist-info/METADATA,sha256=fnAOXcNBkd-IQIz31su5dNc5NUXfaBOpzzYeGS23c_4,6680
+transformer_embeddings-4.0.14.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+transformer_embeddings-4.0.14.dist-info/RECORD,,
