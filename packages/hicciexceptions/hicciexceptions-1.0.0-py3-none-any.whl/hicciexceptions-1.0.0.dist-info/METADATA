@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hicciexceptions
+Version: 1.0.0
+Summary: Hitachi raidcom / cci exceptions
+Home-page: https://github.com/hv-ps/hicciexceptions
+Author: Darren Chambers
+Author-email: darren.chambers@hitachivantara.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# hicciexceptions
+
+
