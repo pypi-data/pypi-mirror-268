@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+@author  : Hu Ji
+@file    : container.py
+@time    : 2024/3/21
+@site    : https://github.com/ice-black-tea
+@software: PyCharm
+
+              ,----------------,              ,---------,
+         ,-----------------------,          ,"        ,"|
+       ,"                      ,"|        ,"        ,"  |
+      +-----------------------+  |      ,"        ,"    |
+      |  .-----------------.  |  |     +---------+      |
+      |  |                 |  |  |     | -==----'|      |
+      |  | $ sudo rm -rf / |  |  |     |         |      |
+      |  |                 |  |  |/----|`---=    |      |
+      |  |                 |  |  |   ,/|==== ooo |      ;
+      |  |                 |  |  |  // |(((( [33]|    ,"
+      |  `-----------------'  |," .;'| |((((     |  ,"
+      +-----------------------+  ;;  | |         |,"
+         /_)______________(_/  //'   | +---------+
+    ___________________________/___  `,
+   /  oooooooooooooooo  .o.  oooo /,   \,"-----------
+  / ==ooooooooooooooo==.o.  ooo= //   ,`\--{)B     ,"
+ /_==__==========__==_ooo__ooo=_/'   /___________,"
+"""
+import os
+import sys
+from typing import Any
+
+from linktools import utils
+from linktools.cli import subcommand, subcommand_argument, SubCommandWrapper, BaseCommandGroup, iter_command_modules, \
+    commands
+from linktools.cli.argparse import auto_complete
+from linktools.utils import get_system, list2cmdline
+
+DEFAULT_SHELL = "bash" if get_system() != "windows" else "powershell"
+
+
+class InitCommand(BaseCommandGroup):
+    """
+    initialize environment
+    """
+
+    @property
+    def name(self) -> str:
+        return "init"
+
+    @subcommand("android", help="initialize android environment")
+    def on_init_android(self):
+        try:
+            self.logger.info("initialize adb ...")
+            self.environ.tools["adb"].prepare()
+        except Exception as e:
+            self.logger.warning(f"initialize adb failed: {e}")
+
+        try:
+            from linktools.frida.android import AndroidFridaServer
+            self.logger.info("initialize android frida server ...")
+            AndroidFridaServer.setup(abis=["arm", "arm64"])
+        except Exception as e:
+            self.logger.warning(f"initialize android frida server failed: {e}")
+
+    @subcommand("ios", help="initialize ios environment")
+    def on_init_ios(self):
+        try:
+            self.logger.info("initialize sib ...")
+            self.environ.tools["sib"].prepare()
+        except Exception as e:
+            self.logger.warning(f"initialize sib failed: {e}")
+
+
+class Command(BaseCommandGroup):
+    """
+    Linktools environment commands
+    """
+
+    def init_subcommands(self) -> Any:
+        return [
+            SubCommandWrapper(InitCommand()),
+            self
+        ]
+
+    @subcommand("shell", help="run shell command")
+    @subcommand_argument("-c", "--command", help="shell command")
+    def on_shell(self, command: str = None):
+        shell = self.environ.tools["shell"]
+        if not shell.exists:
+            raise NotImplementedError(f"Not found shell path")
+
+        if command:
+            process = utils.Process(command, shell=True)
+            return process.call()
+
+        process = shell.popen()
+        return process.call()
+
+    @subcommand("complete", help="generate shell auto complete script")
+    @subcommand_argument("-s", "--shell", help="output code for the specified shell",
+                         choices=["bash", "zsh", "tcsh", "fish", "powershell"])
+    def on_complete(self, shell: str = DEFAULT_SHELL):
+        if not auto_complete:
+            self.logger.warning("argcomplete module not found")
+            return
+
+        executables = []
+        modules = {c.name: c for c in iter_command_modules(commands, onerror="warn")}
+        for module in modules.values():
+            if module.command:
+                temp = module
+                names = [module.command_name]
+                while temp.parent_name in modules:
+                    temp = modules[temp.parent_name]
+                    names.append(temp.command_name)
+                executable = "-".join(reversed(names))
+                executables.append(executable)
+                self.logger.info(f"found executable: {executable}")
+
+        print(auto_complete.shellcode(executables, shell=shell), flush=True)
+
+    @subcommand("alias", help="generate shell alias script")
+    @subcommand_argument("-s", "--shell", help="output code for the specified shell",
+                         choices=["bash", "zsh", "tcsh", "fish", "powershell"])
+    def on_alias(self, shell: str = DEFAULT_SHELL):
+        lines = []
+        if shell not in ("powershell",):
+            lines.append(f"#!/usr/bin/env {shell}")
+
+        modules = {c.name: c for c in iter_command_modules(commands, onerror="warn")}
+        for module in modules.values():
+            if module.command:
+                temp = module
+                names = [module.command_name]
+                while temp.parent_name in modules:
+                    temp = modules[temp.parent_name]
+                    names.append(temp.command_name)
+                executable = "-".join(reversed(names))
+                cmdline = list2cmdline([sys.executable, "-m", module.module.__name__])
+                self.logger.info(f"found alias: {executable} -> {cmdline}")
+
+                if shell in ("bash", "zsh"):
+                    lines.append(f"alias {executable}='{cmdline}'")
+                elif shell in ("tcsh", "fish"):
+                    lines.append(f"alias {executable} '{cmdline}'")
+                elif shell in ("powershell",):
+                    lines.append(f"function __{executable}__ {{ {cmdline} $args }}")
+                    lines.append(f"Set-Alias -Name {executable} -Value __{executable}__")
+
+        print(os.linesep.join(lines), flush=True)
+
+    @subcommand("clean", help="clean temporary files")
+    @subcommand_argument("days", metavar="DAYS", nargs="?", help="expire days")
+    def on_clean(self, days: int = 7):
+        self.environ.clean_temp_files(days)
+
+
+command = Command()
+if __name__ == "__main__":
+    command.main()
