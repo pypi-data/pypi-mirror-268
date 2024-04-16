@@ -1,0 +1,6 @@
+[console_scripts]
+fiftyonify = eli_utils.scripts.fiftyonify:main
+
+[nbdev]
+eli_utils = eli_utils._modidx:d
+
