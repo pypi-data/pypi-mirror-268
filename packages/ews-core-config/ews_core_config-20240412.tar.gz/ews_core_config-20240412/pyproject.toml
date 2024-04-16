@@ -1,0 +1,131 @@
+[project]
+name = "ews-core-config"
+version = "v20240412"
+authors = [{ name = "EWS Consulting", email = "github@ews-consulting.com" }]
+description = "A simple TOML configuration for EWS settings"
+license = { file = "LICENSE" }
+dynamic = ["readme", "dependencies", "optional-dependencies"]
+requires-python = ">=3.9"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["configuration", "settings", "EWS"]
+
+[tool.setuptools.dynamic]
+readme = { file = ["README.md"], content-type = "text/markdown" }
+dependencies = { file = ["requirements/requirements.in"] }
+optional-dependencies.cli = { file = ["requirements/requirements.cli.in"] }
+
+[project.urls]
+Homepage = "https://github.com/EWS-Consulting-Private/ews-core-config"
+Source = "https://github.com/EWS-Consulting-Private/ews-core-config"
+Documentation = 'https://mb.ews.tools/ews-core-config'
+
+[project.scripts]
+ews_config = "ews_core_config.cli.entry:cli"
+
+[tool.pip-tools]
+annotate = true
+strip-extras = false
+# Resolve makes piptools sync fail!
+# resolver = "backtracking" # backtracking / legacy
+verbose = false
+header = false            # Fucks up diffs
+allow-unsafe = true
+emit-find-links = true
+emit-options = true
+emit-index-url = false
+emit-trusted-host = false
+generate-hashes = false
+
+[tool.pytest.ini_options]
+addopts = "--log-cli-level=INFO -sv"
+testpaths = ['tests']
+python_files = 'test_*.py'
+python_functions = 'test_*'
+xfail_strict = true
+filterwarnings = [
+    # https://github.com/aio-libs/aiohttp/pull/7302
+    "ignore:datetime.*utcfromtimestamp\\(\\) is deprecated and scheduled for removal:DeprecationWarning",
+]
+
+
+[tool.coverage.run]
+omit = ["tests", "*/site-packages/*", ".tox/*", ".nox/*"]
+source = ['src/ews_core_config']
+parallel = true
+branch = true
+
+
+[tool.coverage.paths]
+source = ['src/ews_core_config']
+
+[tool.coverage.report]
+show_missing = true
+precision = 2
+fail_under = 1
+exclude_lines = ['pragma: no cover']
+
+
+[tool.black]
+color = true
+line-length = 120
+target-version = ['py39', 'py310', 'py311', 'py312']
+skip-string-normalization = false
+
+[tool.pyright]
+# https://microsoft.github.io/pyright/#/configuration?id=main-configuration-options
+include = ["src", "noxfile.py"]
+venvPath = ".venv"
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+
+
+[tool.bumpver]
+current_version = "v20240412"
+version_pattern = "vYYYY0M0D[.PATCH]"
+commit_message = "bump version to {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+pre_commit_hook = ""
+post_commit_hook = ""
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+
+# --------------------------------------------------
+# Build system
+# --------------------------------------------------
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+# https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
+# https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#finding-simple-packages
+[tool.setuptools.packages.find]
+where = ["src/"] # list of folders that contain the packages (["."] by default)
+# package names should match these glob patterns (["*"] by default)
+include = ["*"] # Future me: Keep the * !!!
+# Ignored modules go here
+exclude = ["*hidden*"] # All modules containing hidden will be ignore
+# https://setuptools.pypa.io/en/latest/userguide/datafiles.html#package-data
+[tool.setuptools.package-data]
+"*" = ["*"]
+
+# exclude packages matching these glob patterns (empty by default)
+# https://stackoverflow.com/questions/72464123/exclude-tests-files-from-setuptools-find-packages
+# https://github.com/pypa/setuptools/issues/3260
+[tool.setuptools.exclude-package-data]
+"*" = ["*.ignore", "~*"]
