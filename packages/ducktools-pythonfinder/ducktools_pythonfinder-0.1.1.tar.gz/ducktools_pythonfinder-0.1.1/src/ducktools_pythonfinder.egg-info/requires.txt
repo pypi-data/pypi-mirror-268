@@ -1,0 +1,7 @@
+ducktools-lazyimporter
+ducktools-classbuilder
+
+[testing]
+pytest
+pytest-cov
+pyfakefs
