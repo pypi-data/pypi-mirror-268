@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "postfinancex"
+version = "0.0.2"
+description = "🤖 PostFinance LLM agent powered by IBM watsonx.ai ✨ PostFinance X IBM watsonx.ai"
+packages = [
+    {include = "postfinance"}
+]
+authors = ["Yi ZHANG <yizhang.dev@gmail.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+homepage = "https://pypi.org/project/postfinancex"
+repository = "https://github.com/imyizhang/postfinancex"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ibm-watsonx-ai = "^0.2.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
