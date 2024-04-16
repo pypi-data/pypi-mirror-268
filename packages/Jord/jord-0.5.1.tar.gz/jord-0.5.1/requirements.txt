@@ -1,0 +1,8 @@
+apppath>=1.0.2
+draugr>=1.0.9
+numpy>=1.20.0
+pyzmq
+sorcery
+sympy
+tqdm
+warg>=1.1.6
