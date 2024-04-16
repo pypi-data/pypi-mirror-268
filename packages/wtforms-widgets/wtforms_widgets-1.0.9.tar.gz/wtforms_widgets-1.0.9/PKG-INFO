@@ -1,0 +1,87 @@
+Metadata-Version: 2.3
+Name: wtforms-widgets
+Version: 1.0.9
+Summary: Decorator driven wtforms extension with Bootstrap 5 support for Flask
+Project-URL: Repository, http://github.com/agdsn/wtforms-widgets/
+Project-URL: Issues, http://github.com/agdsn/wtforms-widgets/issues
+Author: The Pycroft Authors
+License: Apache Software License
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.5
+Requires-Dist: flask
+Requires-Dist: flask-wtf
+Requires-Dist: markupsafe
+Requires-Dist: wtforms
+Provides-Extra: sql
+Requires-Dist: wtforms-sqlalchemy; extra == 'sql'
+Description-Content-Type: text/markdown
+
+# wtforms-widgets
+Decorator driven wtforms extension with Bootstrap 5 support for Flask
+
+Copyright (c) The Pycroft Authors. See the [AUTHORS](https://github.com/agdsn/pycroft/blob/develop/AUTHORS) file.
+
+Install with
+```shell
+pip install wtforms-widgets
+```
+
+Initialize your form with `wtforms_widgets.base_form.BaseForm` instead of `flask_wtf.FlaskForm` or `wtforms.Form`.
+
+Import the `StringField` and `PasswordField` from `wtforms_widgets.fields.core`.
+```python
+from wtforms import validators
+
+from wtforms.validators import Email
+from wtforms_widgets.base_form import BaseForm
+from wtforms_widgets.fields.core import StringField, PasswordField
+
+class RegisterForm(BaseForm):
+    email = StringField('Email Address', [Email(), validators.DataRequired(message='Forgot your email address?')])
+    password = PasswordField('Password', [validators.DataRequired(message='Must provide a password. ;-)')])
+```
+
+Displaying the form in jinja is much simpler and looks great.
+```html+jinja
+<form method="POST" action="{{ url_for('auth.register') }}" accept-charset="UTF-8" role="form">
+    {% for field in form %}
+        {{ field(render_mode='horizontal', autocomplete='off') }}
+    {% endfor %}
+    <input type="submit" value="submit">
+</form>
+```
+
+# Available field types
+
+- `SelectField`
+- `SelectMultipleField`
+- `RadioField`
+- `StringField` / `TextField`
+- `IntegerField`
+- `DecimalField`
+- `MoneyField`
+- `FloatField`
+- `BooleanField`
+- `DateTimeField`
+- `DateField` (with [bootstrap-datepicker](https://www.npmjs.com/package/bootstrap-datepicker))
+- `TextAreaField`
+- `PasswordField`
+- `FileField`
+- `HiddenField`
+- `SubmitField`
+- `QuerySelectField`
+- `QuerySelectMultipleField`
+- `FieldList`
+- `FormField`
+- `TypeaheadField`
+- `ReadonlyTextField`
+- `MacField`
