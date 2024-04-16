@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "komoutils"
+version = "0.0.224"
+description = ""
+authors = ["Makhosonke Morafo <makhosonke@komokun.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+pendulum = "3.0.0"
+prefect = "2.10.0"
+pymongo = "^4.6.2"
+pytest = "^8.1.1"
+pydantic = "^2.6.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
