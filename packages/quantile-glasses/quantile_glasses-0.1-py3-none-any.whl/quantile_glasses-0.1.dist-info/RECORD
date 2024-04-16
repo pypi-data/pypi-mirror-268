@@ -1,0 +1,7 @@
+quantile_glasses/__init__.py,sha256=2XFSMIJIeD4bgKX7Bgoj4jp5j816pZOjech6v-uYG2Q,133
+quantile_glasses/exceptions.py,sha256=iAzJ6jg9qF5sM5fKM81iznNf7RcKqHu-q-ZjRpi-F-4,39
+quantile_glasses/linear.py,sha256=LvYVvg42yfUNhG5BxVu7BkOphzhJ54HrPFs-eMskYnk,6453
+quantile_glasses-0.1.dist-info/METADATA,sha256=BC6YEXHyyBI2Ltvzs0t9BWhKwvMgKT3t3JPCVIOS06s,2909
+quantile_glasses-0.1.dist-info/WHEEL,sha256=xl5aZkiJYVTjhVaiADvIe6UeUVylGNomrxKZ0Zda1CE,87
+quantile_glasses-0.1.dist-info/licenses/LICENSE,sha256=eMmh6AnQzFnS1RRGWlV1DwQYu9k7gvV5VReWNiJwDX0,1066
+quantile_glasses-0.1.dist-info/RECORD,,
