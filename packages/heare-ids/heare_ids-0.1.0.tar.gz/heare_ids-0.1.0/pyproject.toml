@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "heare-ids"
+version = "0.1.0"
+description = "Stripe-like tokens in pure-python with no dependencies."
+authors = ["Sean Fitzgerald <sean@fitzgeralds.me>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "heare", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+pylint = "^3.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
