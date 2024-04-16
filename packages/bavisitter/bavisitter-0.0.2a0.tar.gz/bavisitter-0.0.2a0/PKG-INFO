@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: bavisitter
+Version: 0.0.2a0
+Requires-Dist: anywidget
+Requires-Dist: open-interpreter
+Requires-Dist: open-interpreter[safe]
+Requires-Dist: openai
+Requires-Dist: pandas
+Provides-Extra: dev
+Requires-Dist: jupyterlab; extra == 'dev'
+Requires-Dist: pyright; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: vega-datasets; extra == 'dev'
+Requires-Dist: watchfiles; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# Bavisitter: Babysitting LLMs for Visualization
+
+<img width="1347" alt="image" src="https://github.com/jiwnchoi/Bavisitter/assets/2310571/6947496e-4275-4765-8d7b-f176740a6cad">
+
+
+```python
+import os
+from bavisitter import Bavisitter
+
+os.environ["OPENAI_API_KEY"] = "sk-"
+# If you are using different LLMs (e.g., Claude, Gemini) use different api keys.
+
+bavisitter = Bavisitter(df, model="gpt-4-turbo-preview", color_mode="dark")
+bavisitter
+```
+
+## Development
+
+Install [pnpm](https://pnpm.io/installation) and [Hatch](https://hatch.pypa.io/latest/install/) to set up the development environment.
+
+```shell
+git clone https://github.com/jiwnchoi/bavisitter.git && cd bavisitter
+pnpm install
+hatch shell
+pnpm dev
+```
