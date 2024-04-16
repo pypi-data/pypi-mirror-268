@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pyforma/core.py
+pyforma/fields.py
+pyforma.egg-info/PKG-INFO
+pyforma.egg-info/SOURCES.txt
+pyforma.egg-info/dependency_links.txt
+pyforma.egg-info/requires.txt
+pyforma.egg-info/top_level.txt
