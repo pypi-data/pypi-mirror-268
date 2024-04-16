@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/waitcondition-hook-for-aws-fargate-task/__init__.py
+src/waitcondition-hook-for-aws-fargate-task/py.typed
+src/waitcondition-hook-for-aws-fargate-task/_jsii/__init__.py
+src/waitcondition-hook-for-aws-fargate-task/_jsii/waitcondition-hook-for-aws-fargate-task@1.0.6.jsii.tgz
+src/waitcondition_hook_for_aws_fargate_task.egg-info/PKG-INFO
+src/waitcondition_hook_for_aws_fargate_task.egg-info/SOURCES.txt
+src/waitcondition_hook_for_aws_fargate_task.egg-info/dependency_links.txt
+src/waitcondition_hook_for_aws_fargate_task.egg-info/requires.txt
+src/waitcondition_hook_for_aws_fargate_task.egg-info/top_level.txt
