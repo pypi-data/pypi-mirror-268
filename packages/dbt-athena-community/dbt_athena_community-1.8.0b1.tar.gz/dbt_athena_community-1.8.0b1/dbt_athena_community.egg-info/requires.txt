@@ -1,0 +1,8 @@
+dbt-common<2.0,>=1.0.0b2
+dbt-adapters<2.0,>=1.0.0b2
+boto3>=1.28
+boto3-stubs[athena,glue,lakeformation,sts]>=1.28
+pyathena<4.0,>=2.25
+mmh3<4.2.0,>=4.0.1
+pydantic<3.0,>=1.10
+tenacity~=8.2
