@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: selfpkg
+Version: 0.0.0
+Summary: Just for self-learning publishing from GitHub!
+Author-email: Shao-Lun Huang <simon.linux7@gmail.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# selfpkg
+
+This project is only for personal used. Nothing special is contained.
