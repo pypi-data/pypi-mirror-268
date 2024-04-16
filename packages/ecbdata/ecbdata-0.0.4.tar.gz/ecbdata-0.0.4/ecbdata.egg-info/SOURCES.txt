@@ -1,0 +1,10 @@
+LICENSE.md
+README.md
+setup.py
+ecbdata/__about__.py
+ecbdata/__init__.py
+ecbdata/api.py
+ecbdata.egg-info/PKG-INFO
+ecbdata.egg-info/SOURCES.txt
+ecbdata.egg-info/dependency_links.txt
+ecbdata.egg-info/top_level.txt
