@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+tests/test_matcher.py
+tests/test_patterns.py
+url_matcher/__init__.py
+url_matcher/__version__.py
+url_matcher/example.py
+url_matcher/matcher.py
+url_matcher/patterns.py
+url_matcher/util.py
+url_matcher.egg-info/PKG-INFO
+url_matcher.egg-info/SOURCES.txt
+url_matcher.egg-info/dependency_links.txt
+url_matcher.egg-info/requires.txt
+url_matcher.egg-info/top_level.txt
