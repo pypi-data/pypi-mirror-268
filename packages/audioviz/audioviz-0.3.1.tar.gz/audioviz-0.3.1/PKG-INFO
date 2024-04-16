@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: audioviz
+Version: 0.3.1
+Summary: An user-friendly music information retrieval tools interfacing with Google Colab
+Home-page: https://github.com/TrangDuLam/audioviz
+Author: ayTrang
+Author-email: andrew.chuang@gapp.nthu.edu.tw
+License: MIT
+Keywords: Music Information Retrieval,Academia Sinica,NTHU
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Sound/Audio :: Analysis
+Classifier: Topic :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: librosa
+Requires-Dist: libfmp
+Requires-Dist: plotly
+Requires-Dist: soundfile
+
+# audioviz-colab ##
+
+* An user-friendly music information retrieval visualization API interfacing with Google Colab
+* Coordinated by Prof. [Li Su](https://homepage.iis.sinica.edu.tw/pages/lisu/index_en.html), Prof. [Yu-Fen Huang](https://yfhuang.info/) from the [Music and Culture Technology Lab](https://sites.google.com/view/mctl/), Academia Sinica, Taipei, Taiwan
+* A collaration project with graduate students from National Tsing Hua University, Hsinchu, Taiwan
+
+## Introduction to this packages ##
+
+* Custom visualization wrappers for open source module [librosa](https://librosa.org/doc/latest/index.html)
+* Using open source graphing library [Plotly](https://plotly.com/python/) to enhance visualization capabilities
+* Direcctly integrated with Google Colab functions to provide platform-free user experience
+* Please refer to [official page](https://grace1287986s-organization.gitbook.io/musicai-ui-space-v2/) for more details
+
+## Installation and Dependency ##
+
+### Installation ###
+
+* PyPi installation
+
+  ```bash
+  pip install audioviz
+  ```
+
+* setup.py
+
+## Developer Demo ##
+![alt text](panel.png "Title")
+
+## Future Works ##
+
+* Colab upload solution
+  * Direct instruction
+* Programming Copilot
