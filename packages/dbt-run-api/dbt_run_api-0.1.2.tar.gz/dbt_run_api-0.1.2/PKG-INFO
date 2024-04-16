@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: dbt-run-api
+Version: 0.1.2
+Summary: api runner for DBT
+Author: datatactics
+Author-email: info@datatactics.de
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: dbt-core (>=1.7.11,<2.0.0)
+Requires-Dist: fastapi (>=0.110.1,<0.111.0)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0)

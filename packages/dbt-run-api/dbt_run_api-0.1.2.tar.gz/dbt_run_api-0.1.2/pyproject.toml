@@ -1,0 +1,20 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+
+[tool.poetry]
+name = "dbt-run-api"
+version = "0.1.2"
+description = "api runner for DBT"
+authors = ["datatactics <info@datatactics.de>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dbt-core = "^1.7.11"
+uvicorn = "^0.29.0"
+fastapi = "^0.110.1"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0.0"
+
+
