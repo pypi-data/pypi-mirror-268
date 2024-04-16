@@ -1,0 +1,12 @@
+napari_imodmodel/__init__.py,sha256=-1QZAyBGXP7FueyyR4UFsqUrKgyFHqFNqPb4jyxgGCU,173
+napari_imodmodel/_reader.py,sha256=fpGHrBmu8j5KZoXFE6PyqmOfmFFnQ3-K8sWvOhn49Bk,2434
+napari_imodmodel/_sample_data.py,sha256=xH1frjJRRlEdtBxJsebIYJ1FHq1hN53bMlL_--HaYfE,644
+napari_imodmodel/napari.yaml,sha256=5xOQI8KrvGr5LvY3dZl2dzAWfG3cXr0-fpDY9Cw7X-w,638
+napari_imodmodel/_tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+napari_imodmodel/_tests/test_reader.py,sha256=if7Km8Cch0Ec7GCfoLUYTQJONyMxt5Zh3pOyP5LsYRY,329
+napari_imodmodel-1.0.2.dist-info/LICENSE,sha256=Nsa4LDw-aDiBVankmD39gbHyAJcOis4ug71vw2F9ox4,1496
+napari_imodmodel-1.0.2.dist-info/METADATA,sha256=dhLVdhIZ7vig-buz208P_9-9-EK73Kg6ZFGfngPfO1I,4023
+napari_imodmodel-1.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+napari_imodmodel-1.0.2.dist-info/entry_points.txt,sha256=m_oM3EsEQieNDcG4iVHBFYuiXkTFVYtL5nsZMFkVNMg,66
+napari_imodmodel-1.0.2.dist-info/top_level.txt,sha256=nnSMi5h7h8lRZDUXyNdFD74C_VDK5yS10_vhbZb4Vts,17
+napari_imodmodel-1.0.2.dist-info/RECORD,,

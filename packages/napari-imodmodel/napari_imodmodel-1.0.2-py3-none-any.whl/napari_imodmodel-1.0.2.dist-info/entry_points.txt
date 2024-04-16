@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-imodmodel = napari_imodmodel:napari.yaml
