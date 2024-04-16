@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+pyproject.toml
+arlecchino/__init__.py
+arlecchino/colors.txt
+arlecchino/shades.txt
+arlecchino.egg-info/PKG-INFO
+arlecchino.egg-info/SOURCES.txt
+arlecchino.egg-info/dependency_links.txt
+arlecchino.egg-info/top_level.txt
