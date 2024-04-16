@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+[tool.poetry]
+name = "factory_farm"
+version = "1.0.1"
+description = "Ensuring that your prod-uctions are absolutely stunning"
+authors = []
+readme = "readme.md"
+
+packages = [
+    { include = "factory_farm", from = "venues/stages" }
+]
+exclude = []
+include = [ "*.HTML", "*.html", "*.JSON", "*.json" ]
+
+license = "GPL-3.0-only"
+
+keywords = [
+	"neurons",
+	"nervous system",
+	"bioelectric",
+
+	"homeostasis",
+	"reliability",
+	"consistency",
+	"integrity",
+	
+	"guarantees",
+	"vows",
+	"oaths",
+	"assurances",
+	"insurances",
+	"ensurances",
+
+	"speed",
+	"calmness",
+
+	"education",
+
+	"augmentation",
+	"enhancement",
+	"improvements"
+]
+
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+body-scan = "^1.0.6"
+botanist = "^1.0.0"
+shares = "^3.1.9"
+click = "^8.1.7"
+coverage = "^7.4.4"
+flask = "^3.0.3"
+pdoc3 = "^0.10.0"
+pexpect = "^4.9.0"
+redis = "^5.0.3"
+requests = "^2.31.0"
+textual = "^0.56.4"
+tinydb = "^4.8.0"
+rich = "^13.7.1"
+sanic = "^23.12.1"
+pymongo = "^4.6.3"
+quart = "^0.19.5"
+
+
+[tool.poetry.scripts]
+factory_farm = 'factory_farm:clique'
+
+[tool.poetry.urls]
+GitLab = "https://gitlab.com/status600/climates/factory_farm"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
