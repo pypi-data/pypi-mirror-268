@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+dig_ass_ep_protos/DigitalAssistantEntryPoint_pb2.py
+dig_ass_ep_protos/DigitalAssistantEntryPoint_pb2.pyi
+dig_ass_ep_protos/DigitalAssistantEntryPoint_pb2_grpc.py
+dig_ass_ep_protos/__init__.py
+dig_ass_ep_protos/abstract_client.py
+dig_ass_ep_protos/client.py
+dig_ass_ep_protos.egg-info/PKG-INFO
+dig_ass_ep_protos.egg-info/SOURCES.txt
+dig_ass_ep_protos.egg-info/dependency_links.txt
+dig_ass_ep_protos.egg-info/requires.txt
+dig_ass_ep_protos.egg-info/top_level.txt
