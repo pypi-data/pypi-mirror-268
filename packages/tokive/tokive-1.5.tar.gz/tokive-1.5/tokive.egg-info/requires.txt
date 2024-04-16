@@ -1,0 +1,5 @@
+cryptography
+requests
+opencv-python
+protobuf
+numpy

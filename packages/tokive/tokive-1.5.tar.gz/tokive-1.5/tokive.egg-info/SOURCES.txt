@@ -1,0 +1,13 @@
+README.md
+setup.py
+tokive
+tokhelper/__init__.py
+tokhelper/captchaCheck_pb2.py
+tokhelper/solve_captcha.py
+tokhelper/tiktok_main.py
+tokhelper/utils.py
+tokive.egg-info/PKG-INFO
+tokive.egg-info/SOURCES.txt
+tokive.egg-info/dependency_links.txt
+tokive.egg-info/requires.txt
+tokive.egg-info/top_level.txt
