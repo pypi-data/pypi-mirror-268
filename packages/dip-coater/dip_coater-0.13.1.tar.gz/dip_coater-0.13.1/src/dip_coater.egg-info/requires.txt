@@ -1,0 +1,6 @@
+textual>=0.48.0
+textual-dev
+
+[rpi]
+RPi.GPIO
+TMC-2209-Raspberry-Pi>=0.4.4

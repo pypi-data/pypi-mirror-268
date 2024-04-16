@@ -1,0 +1,243 @@
+Status {
+    height: 4;
+    width: 30;
+    visibility: visible;
+}
+
+#right-side {
+    width: 25%;
+    height: 100%;
+}
+
+#left-side {
+    width: 74%;
+}
+
+Status {
+    border: solid $panel;
+    height: 100%;
+}
+
+StepMode {
+    align-vertical: middle;
+    height: 6;
+
+    #step-mode {
+        layout: horizontal;
+        width: 100%;
+        overflow: auto;
+        height: 5;
+        margin: 0;
+    }
+
+}
+
+#logger {
+    background: $panel;
+    margin-bottom: 1;
+}
+
+MotorControls {
+    layout: horizontal;
+    width: 100%;
+
+    Button {
+        margin: 0 1 1 1;
+    }
+}
+
+HelpScreen {
+    #help-container {
+        width: auto;
+        max-width: 60%;
+        height: auto;
+        max_height: 80%;
+        background: $panel;
+        padding: 1 2 0 0;
+    }
+    align: center middle;
+    margin-top: 2;
+}
+
+SpeedControls {
+    margin-top: 1;
+    margin-right: 0;
+    margin-left: 0;
+    height: 2;
+    #speed-label {
+        width: 10;
+    }
+    .btn-speed-control {
+        content-align: center middle;
+        margin-right: 0;
+        margin-left: 0;
+        border: none;
+        min-width: 0;
+        width: 7;
+        padding: 0;
+    }
+    #speed-down-fine {
+        margin-right: 2;
+        margin-left: 1;
+    }
+    #speed-up-fine {
+        margin-right: 1;
+    }
+    #speed-input {
+        content-align: left top;
+        margin-left: 2;
+        width: 7;
+        height: 1;
+        padding: 0;
+        border: none;
+    }
+}
+
+DistanceControls {
+    margin-right: 0;
+    margin-left: 0;
+    height: 2;
+    #distance-label {
+        width: 10;
+    }
+    .btn-distance-control {
+        content-align: center middle;
+        margin-right: 0;
+        margin-left: 0;
+        border: none;
+        min-width: 0;
+        width: 7;
+        padding: 0;
+    }
+    #distance-down-fine {
+        margin-right: 2;
+        margin-left: 1;
+    }
+    #distance-up-fine {
+        margin-right: 1;
+    }
+    #distance-input {
+        content-align: left top;
+        margin-left: 2;
+        width: 7;
+        height: 1;
+        padding: 0;
+        border: none;
+    }
+}
+
+.selected {
+    background: $success;
+}
+
+#left-side-advanced {
+    width: 69%;
+}
+
+#right-side-advanced {
+    width: 30%;
+}
+
+AdvancedSettings {
+    height: 13;
+    .input-fields {
+        content-align: left top;
+        margin-left: 2;
+        width: 7;
+        height: 1;
+        padding: 0;
+        border: none;
+    }
+
+    #interpolation-container {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    #interpolation-checkbox {
+        margin-right: 2;
+    }
+
+    .checkbox {
+        content-align: left top;
+        height: 1;
+        padding: 0;
+        border: none;
+    }
+
+    #logging-level-select {
+        height: 3;
+        border: none;
+    }
+}
+
+StatusAdvanced {
+    border: solid $panel;
+    height: 80%;
+}
+
+#reset-to-defaults-btn {
+    height: 3;
+    border: none;
+    margin-left: 1;
+    margin-top: 1;
+}
+
+#motor-logger {
+    background: $panel;
+    margin-top: 1;
+}
+
+Coder {
+    #coder-api-collapsible {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    #coder-api-markdown {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #coder-api-markdown > MarkdownFence {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #run-and-load-code-container {
+        height: 4;
+        width: 100%;
+    }
+
+    #run-code-btn {
+        height: 3;
+        margin-right: 2;
+    }
+
+    #load-code-btn {
+        height: 3;
+    }
+
+    #code-file-path-input {
+        content-align: left top;
+        margin-left: 1;
+        padding: 0;
+    }
+
+    #code-file-path-input.-valid {
+        border: solid green;
+    }
+
+    #code-file-path-input.-invalid {
+        border: solid red;
+    }
+
+    #coder-path-invalid-reasons {
+        margin-left: 1;
+    }
+}
+
