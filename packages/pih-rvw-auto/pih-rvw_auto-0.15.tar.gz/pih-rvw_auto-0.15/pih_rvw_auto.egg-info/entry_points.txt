@@ -1,0 +1,2 @@
+[console_scripts]
+pih-rvw_auto = ReviewAutomationService.__main__:start
