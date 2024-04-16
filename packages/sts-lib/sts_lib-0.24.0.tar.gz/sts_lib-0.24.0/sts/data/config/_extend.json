@@ -1,0 +1,33 @@
+{
+  "name": "Extended dictionaries",
+  "dicts": [{
+    "file": "../dictionary/STCharacters.list",
+    "mode": "load",
+    "sort": true,
+    "src": [
+      "STCharacters.txt",
+      "STCharactersEx.txt"
+    ]
+  }, {
+    "file": "../dictionary/TSCharacters.list",
+    "mode": "load",
+    "sort": true,
+    "src": [
+      "TSCharacters.txt",
+      "TSCharactersEx.txt"
+    ]
+  }, {
+    "file": "../dictionary/JPVariants.list",
+    "mode": "join",
+    "sort": true,
+    "src": [
+      [
+        "JPKyujitaiCharacters.txt"
+      ],
+      [
+        "JPVariants.txt",
+        "JPVariantsEx.txt"
+      ]
+    ]
+  }]
+}

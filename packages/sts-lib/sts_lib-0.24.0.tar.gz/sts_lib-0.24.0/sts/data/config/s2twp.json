@@ -1,0 +1,21 @@
+{
+  "name": "Simplified Chinese to Traditional Chinese (Taiwan standard) (with phrases)",
+  "requires": [
+    "_default"
+  ],
+  "dicts": [{
+    "file": "../dictionary/s2twp.list",
+    "mode": "join",
+    "src": [
+      [
+        "STPhrases.txt",
+        "STCharacters.txt",
+        "STCharactersEx.txt"
+      ],
+      [
+        "TWPhrases.list",
+        "TWVariants.txt"
+      ]
+    ]
+  }]
+}

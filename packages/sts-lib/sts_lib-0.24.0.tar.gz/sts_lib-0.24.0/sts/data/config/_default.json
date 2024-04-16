@@ -1,0 +1,60 @@
+{
+  "name": "Built-in dictionaries",
+  "dicts": [{
+    "file": "../dictionary/TWPhrases.list",
+    "mode": "load",
+    "src": [
+      "TWPhrasesIT.txt",
+      "TWPhrasesName.txt",
+      "TWPhrasesOther.txt"
+    ]
+  }, {
+    "file": "../dictionary/HKPhrases.list",
+    "mode": "load",
+    "src": [
+      "HKPhrases.txt"
+    ]
+  }, {
+    "file": "../dictionary/TWPhrasesRev.list",
+    "mode": "swap",
+    "src": [
+      "TWPhrases.list"
+    ]
+  }, {
+    "file": "../dictionary/HKPhrasesRev.list",
+    "mode": "swap",
+    "src": [
+      "HKPhrases.list"
+    ]
+  }, {
+    "file": "../dictionary/TWVariantsRev.list",
+    "mode": "swap",
+    "src": [
+      "TWVariants.txt"
+    ]
+  }, {
+    "file": "../dictionary/HKVariantsRev.list",
+    "mode": "swap",
+    "src": [
+      "HKVariants.txt"
+    ]
+  }, {
+    "file": "../dictionary/JPVariantsRev.list",
+    "mode": "swap",
+    "src": [
+      "JPVariants.txt"
+    ]
+  }, {
+    "file": "../dictionary/JPVariantsExRev.list",
+    "mode": "swap",
+    "src": [
+      "JPVariantsEx.txt"
+    ]
+  }, {
+    "file": "../dictionary/JPVariantsPhrases.list",
+    "mode": "swap",
+    "src": [
+      "JPShinjitaiPhrases.txt"
+    ]
+  }]
+}
