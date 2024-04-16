@@ -1,0 +1,8 @@
+setup.py
+colarg/__init__.py
+colarg/__main__.py
+colarg/colarg.py
+colarg.egg-info/PKG-INFO
+colarg.egg-info/SOURCES.txt
+colarg.egg-info/dependency_links.txt
+colarg.egg-info/top_level.txt
