@@ -1,0 +1,11 @@
+ews_core_config/__init__.py,sha256=5rzOLBGIMjeKQYfaaUnN_5Z3M8ZvdABPer1DqOyciCY,96
+ews_core_config/config.py,sha256=NzFXnj29PDDve5kAyCdQUsytQZLqtUnN-_XhnLC0Dxs,4035
+ews_core_config/schema.py,sha256=smNrGCszRShyi2QpLgZzWcpG8-dvRccKA43Wo-3ULeA,2782
+ews_core_config/version.py,sha256=ko6PrwnlRmv8-taduP0ukZiyUdzAZiR89AX1wB-QLMI,2684
+ews_core_config/cli/entry.py,sha256=-8c0Hm1ydxqxHO2f364Ds8FKnzVMfehQjJrcgrIXC6E,3595
+ews_core_config-20240414.dist-info/LICENSE,sha256=EsEsEJM7Tudfgqfg65xUqIRZSkqtdrJzyZDfFlvZTKo,1071
+ews_core_config-20240414.dist-info/METADATA,sha256=ilFBbTXTMKvgRxtjlDnpGgNVTALZCrx0fR_dFCZ2b00,4830
+ews_core_config-20240414.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ews_core_config-20240414.dist-info/entry_points.txt,sha256=BAHCriQGZyZSihe2s21v2NewQ61MTk4JUgK6ozzksDE,61
+ews_core_config-20240414.dist-info/top_level.txt,sha256=CKynaUkuVfUWCsY-4VNKiXJXPxsEvexF9ByGcubEiWc,16
+ews_core_config-20240414.dist-info/RECORD,,
