@@ -1,0 +1,8 @@
+viktor
+openpyxl
+plotly
+
+[dev]
+black
+isort
+pylint
