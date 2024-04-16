@@ -1,0 +1,13 @@
+modelgauge/annotators/demo_annotator.py,sha256=vIrbNBpX15df8VzVIp868mrZsr91BQw4tqAFBBSBIQk,1334
+modelgauge/suts/demo_01_yes_no_sut.py,sha256=UEV1R0F1q56XQsVu559OHb1U9f_LvGSBlwlf1u0GBWk,1726
+modelgauge/suts/demo_02_secrets_and_options_sut.py,sha256=MD_mMqGzYHILm4o-tpGIRA7KG6urMpWKFww1J0TxE0w,5599
+modelgauge/suts/demo_03_sut_with_args.py,sha256=uiov6HWdBWgYajoghNWS1y1KL8nqp7oeqVrtrRVzCis,2003
+modelgauge/tests/demo_01_simple_qa_test.py,sha256=OqxBf4pWXant-jQQOFSWu4WWpGqh2V_j0H22BJR0J_Y,3414
+modelgauge/tests/demo_02_unpacking_dependency_test.py,sha256=kLGHJGEV8nabusftlCT_RisD5282eaLX6Qg6LB2KV5g,3727
+modelgauge/tests/demo_03_paired_prompts_test.py,sha256=hhjN_2MzR4XjsmADq_KIrmQmA2LRwuDDcQ7cZutKc9M,4784
+modelgauge/tests/demo_04_using_annotation_test.py,sha256=PEVrqUC9lflYeW1-B9FkMg7xEL_SSDIznNM4YSqJiIM,3120
+modelgauge/tests/specifications/README.md,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+modelgauge/tests/specifications/demo_01.toml,sha256=7U2IoRKtCNl7IfoPGeRREdjJTZXdMhQtTuFpz8xW8W8,79
+modelgauge_demo_plugin-0.5.0.dist-info/METADATA,sha256=Ahfb74o8-oPEqrcwumfGNtbAEeQ2w6ek2Pkd-QefYRs,747
+modelgauge_demo_plugin-0.5.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+modelgauge_demo_plugin-0.5.0.dist-info/RECORD,,
