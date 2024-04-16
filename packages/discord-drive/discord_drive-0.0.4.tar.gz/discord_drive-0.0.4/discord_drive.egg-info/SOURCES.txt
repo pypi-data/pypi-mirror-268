@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.py
+discord_drive/__init__.py
+discord_drive/_drive.py
+discord_drive/_utils.py
+discord_drive/discord_drive.py
+discord_drive.egg-info/PKG-INFO
+discord_drive.egg-info/SOURCES.txt
+discord_drive.egg-info/dependency_links.txt
+discord_drive.egg-info/requires.txt
+discord_drive.egg-info/top_level.txt
