@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+jetson_examples.egg-info/PKG-INFO
+jetson_examples.egg-info/SOURCES.txt
+jetson_examples.egg-info/dependency_links.txt
+jetson_examples.egg-info/entry_points.txt
+jetson_examples.egg-info/top_level.txt
+reComputer/__init__.py
+reComputer/main.py
+reComputer/scripts/check.sh
+reComputer/scripts/live-llava.sh
+reComputer/scripts/nanodb.sh
+reComputer/scripts/run.sh
