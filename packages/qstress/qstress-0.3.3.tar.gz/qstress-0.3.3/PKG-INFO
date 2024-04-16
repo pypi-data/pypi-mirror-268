@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: qstress
+Version: 0.3.3
+Summary: A simple tool for stress testing.
+Project-URL: Documentation, https://github.com/GMbrianlaw/qstress#readme
+Project-URL: Issues, https://github.com/GMbrianlaw/qstress/issues
+Project-URL: Source, https://github.com/GMbrianlaw/qstress
+Author-email: Brian Law <gmbrianlaw@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Requires-Python: >=3.9
+Requires-Dist: typer[all]>=0.9.0
+Description-Content-Type: text/markdown
+
+# qstress
+
+A simple tool for stress testing.
