@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/ubitlogger/__init__.py
+src/ubitlogger.egg-info/PKG-INFO
+src/ubitlogger.egg-info/SOURCES.txt
+src/ubitlogger.egg-info/dependency_links.txt
+src/ubitlogger.egg-info/requires.txt
+src/ubitlogger.egg-info/top_level.txt

@@ -1,0 +1,93 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ubitlogger"
+version = "0.1.0"
+authors = [
+  { name="p4irin", email="p4irin.github.io@gmail.com" },
+]
+description = "A micro:bit serial port logger"
+readme = "README.md"
+requires-python = ">=3.8.10"
+keywords = [
+  "microbit", "microbit-v1", "data-logger", "serial-port-listener"
+]
+dependencies = [
+  "pyserial >= 3.5",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: POSIX :: Linux",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.optional-dependencies]
+lint = [
+  "mypy >= 1.9.0",
+  "ruff >= 0.3.4",
+]
+test = [
+  "pytest >= 8.1.1",
+  "pytest-cov >= 4.1.0",
+]
+package = [
+  "build == 0.10.0",
+  "twine >= 4.0.2",
+]
+dev = [
+  "bumpver >= 2023.1126",
+  "ubitlogger[lint]",
+  "ubitlogger[test]",
+  "ubitlogger[package]",
+]
+
+[project.scripts]
+
+[project.urls]
+"Homepage" = "https://github.com/p4irin/ubitlogger"
+"Bug Tracker" = "https://github.com/p4irin/ubitlogger/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.bumpver]
+current_version = "0.1.0"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "Bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+  'current_version = "{version}"',
+  'version = "{version}"',
+]
+"src/ubitlogger/__init__.py" = [
+  "^__version__ = '{version}'$",
+]
+"tests/tests.py" = [
+  "^__version__ = '{version}'$",
+]
+"README.md" = [
+  " - v{version}$",
+]
+
+
+[tool.mypy]
+
+[[tool.mypy.overrides]]
+module = "serial.*"
+ignore_missing_imports = true
