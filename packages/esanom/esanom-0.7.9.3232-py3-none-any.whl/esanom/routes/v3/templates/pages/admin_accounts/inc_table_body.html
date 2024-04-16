@@ -1,0 +1,23 @@
+
+<tbody>
+
+{% for row in tdata["rows"] %}
+
+<tr>
+
+{% for column in tdata["columns"] %}
+
+{% if column=="uid" %}
+    <td><a hx-get="{{ url_for('.hx_admin_account',account_uid=row['uid']) }}" hx-target="#hx_admin_nav" href="#">👁</a></td>
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+

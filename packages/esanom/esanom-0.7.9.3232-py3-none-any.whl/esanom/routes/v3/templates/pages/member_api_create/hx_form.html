@@ -1,0 +1,34 @@
+
+
+{% if tdata["error_msgs"]|length>0 %}
+
+{{tdata["error_msgs"]}}
+
+{% else %}
+
+{% if tdata['api_row'] %}
+
+<script>
+element = document.getElementById("form_container");
+element.remove(); 
+</script>
+
+
+<div class="alert alert-danger" role="alert">
+API TOKEN
+<pre>
+
+<b class="user-select-all">{{tdata['api_row']['token']}}</b>
+</pre>
+WARNING: SAVE API TOKEN NOW. IT WILL NOT BE MADE VISIBLE AGAIN!
+</div>
+
+
+
+
+
+
+{% endif %}
+
+{% endif %}
+

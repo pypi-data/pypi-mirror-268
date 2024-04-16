@@ -1,0 +1,65 @@
+
+<div class="container pt-0">
+
+{% if _tdata["config_data"]["server_security_lax"] %}
+{% set badge_name="danger" %}
+{% else %}
+{% set badge_name="secondary" %}
+{% endif %}
+<span class="badge bg-{{badge_name}}">server_security_lax</span>
+
+{% if _tdata["config_data"]["server_debug"] %}
+{% set badge_name="danger" %}
+{% else %}
+{% set badge_name="secondary" %}
+{% endif %}
+<span class="badge bg-{{badge_name}}">server_debug</span>
+
+{% if _tdata["flag_sampledata"] %}
+{% set badge_name="danger" %}
+{% else %}
+{% set badge_name="secondary" %}
+{% endif %}
+<span class="badge bg-{{badge_name}}">flag_sampledata</span>
+
+{% if _tdata["orchestrator_time_dt"]<20 %}
+{% set badge_name="success" %}
+{% else %}
+{% set badge_name="danger" %}
+{% endif %}
+<span class="badge bg-{{badge_name}}">orchestrator_time_dt {{_tdata["orchestrator_time_dt"]}}</span>
+
+{% if _tdata["scheduler_time_dt"]<20 %}
+{% set badge_name="success" %}
+{% else %}
+{% set badge_name="danger" %}
+{% endif %}
+<span class="badge bg-{{badge_name}}">scheduler_time_dt {{_tdata["scheduler_time_dt"]}}</span>
+
+<div>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+&gt;&gt;&gt;
+</button>
+</div>
+
+</div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">DEBUG</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+<pre>
+benchmark={{_tdata["benchmark"]}}
+fs_storage_path={{_tdata["config_data"]["fs_storage_path"]}}
+_load_from_env={{_tdata["config_data"]["_load_from_env"]}}
+</pre>
+
+    </div>
+
+
+  </div>
+</div>
+

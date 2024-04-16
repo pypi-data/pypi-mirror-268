@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block main_title %}PIN : {{ tdata['row']['name'] }}{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/pins/read_inc_info.html" ) %}
+
+{% endblock %}
+

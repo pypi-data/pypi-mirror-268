@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{% block title %}pipeline_row ({{tdata["pipeline_row"]["name"]}}){% endblock title %}</h2>
+{% endblock header %}
+
+
+{% block main %}
+
+<div>
+{{tdata["pipeline"].status}}
+</div>
+
+
+<div>
+{% if tdata["pipeline"].archived==1 %}
+ARCHIVED
+{% else %}
+IN USE
+{% endif %}
+</div>
+
+<div>
+{% if tdata["pipeline"].done==1 %}
+DONE
+{% else %}
+ONGOING
+{% endif %}
+</div>
+
+
+<table>
+<tr>
+    <td>key</td><td>name</td><td>status</td>
+</tr>
+
+{% for key, segment in tdata["pipeline"].nodes.items()|sort %}
+<tr>
+<td>{{ key }}</td><td>{{ tdata["pipeline"].nodes[key]['name'] }}</td><td>{{ tdata["pipeline"].nodes[key]['task_status'] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock main %}
+

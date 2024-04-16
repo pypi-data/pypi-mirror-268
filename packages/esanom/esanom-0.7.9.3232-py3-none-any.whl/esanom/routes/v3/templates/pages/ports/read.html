@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block main_title %}PORT : {{ tdata['row']['name'] }}{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/ports/read_inc_info.html" ) %}
+
+{% include( "pages/ports/read_inc_table.html" ) %}
+
+{% endblock %}
+

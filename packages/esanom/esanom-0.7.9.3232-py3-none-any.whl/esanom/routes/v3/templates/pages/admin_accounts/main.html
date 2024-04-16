@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ADMIN ACCOUNTS{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/admin_accounts/inc_create_button.html" ) %}
+
+{% if tdata["rows"]|length>0 %}
+{% include( "pages/admin_accounts/inc_table.html" ) %}
+{% else %}
+No accounts found!
+{% endif %}
+
+{% endblock %}
+

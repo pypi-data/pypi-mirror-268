@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main_title %}LOG IN{% endblock %}
+
+{% block main_content %}
+
+<div class="col-3 bg-light p-3 border">
+
+<form hx-post="{{url_for('.hx_login')}}" hx-target="#login-results">
+  <div class="mb-3">
+    <label for="form_email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="form_email" name="account_email">
+  </div>
+  <div class="mb-3">
+    <label for="form_password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="form_password" name="account_password">
+  </div>
+  <button type="submit" class="btn btn-primary">Log In</button>
+</form>
+
+</div>
+
+<div id="login-results">FOO</div>
+
+{% endblock %}
+

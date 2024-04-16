@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ADMIN MODELS{% endblock %}
+
+{% block main_content %}
+
+
+
+{% if tdata["rows"]|length>0 %}
+{% include( "pages/admin_models/inc_table.html" ) %}
+{% else %}
+No APIs found!
+{% endif %}
+
+{% endblock %}
+

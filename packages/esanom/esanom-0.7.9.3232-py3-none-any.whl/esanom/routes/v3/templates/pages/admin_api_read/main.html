@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ADMIN API READ{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/admin_api_read/inc_button_update.html" ) %}
+
+<div>name: {{tdata["row"]["name"]}}</div>
+<div>enable: {{tdata["row"]["enable"]}}</div>
+<div>ip_update: {{tdata["row"]["ip_update"]}}</div>
+<div>ip: {{tdata["row"]["ip"]}}</div>
+<div>expires_at: {{tdata["row"]["expires_at"]}}</div>
+
+
+{% if tdata["row"]["[group_names]"]|length>0 %}
+GROUPS
+{{tdata["row"]["[group_names]"]}}
+{% else %}
+No groups!
+{% endif %}
+
+
+{% endblock %}
+

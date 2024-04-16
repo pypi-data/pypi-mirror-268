@@ -1,0 +1,52 @@
+
+{% include( "inc_page_header_logo.html" ) %}
+{% include( "inc_page_header_toggle.html" ) %}
+
+<div class="collapse navbar-collapse" id="navbarCollapse">
+
+<ul class="navbar-nav me-auto mb-2 mb-md-0">
+{% include( "inc_page_header_nav.html" ) %}
+</ul>
+
+<ul class="navbar-nav">
+
+
+{% if _tdata["session_data"]["loggedin"] %}
+
+{% if _tdata["is_admin"] %}
+    {% set loggedin_page=url_for('.page_admin') %}
+{% else %}
+    {% set loggedin_page=url_for('.page_member') %}
+{% endif %}
+
+    <li class="nav-item"><a class="nav-link" href="{{loggedin_page}}">
+    {{_tdata["session_data"]["account_row"]["email"]}}</a></li>
+
+    <li class="nav-item"><a class="nav-link" href="{{url_for('.page_logout')}}">Log Out</a></li>
+
+{% else %}
+
+    <li class="nav-item"><a class="nav-link" href="{{url_for('.page_register')}}">Register</a></li>
+    <li class="nav-item"><a class="nav-link" href="{{url_for('.page_login')}}">Log In</a></li>
+
+{% endif %}
+
+
+</ul>
+
+
+<!--
+<ul class="navbar-nav">
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Logged Out</a>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+<li><a class="dropdown-item" href="{{url_for('.page_login')}}">Log In</a></li>
+</ul>
+</li>
+</ul>
+-->
+
+
+</div>
+
+

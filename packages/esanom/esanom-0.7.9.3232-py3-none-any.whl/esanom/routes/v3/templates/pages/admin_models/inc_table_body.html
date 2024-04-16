@@ -1,0 +1,25 @@
+
+<tbody>
+
+{% for row in tdata["rows"] %}
+
+<tr>
+
+{% for column in tdata["columns"] %}
+
+{% if column=="id" %}
+    <td><a href="{{ url_for('.page_admin_model_read',id=row['id']) }}">👁</a></td>
+{% elif column=="token" %}
+    <td>{{ row[column]|truncate(11) }}</td>
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
