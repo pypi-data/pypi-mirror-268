@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: example_package_mxgnxs
+Version: 0.0.1
+Summary: Simple test project
+Home-page: https://github.com/CMM02/python-publishing
+Author: Carl Magnus Meier
+Author-email: magnus.meier@outook.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
