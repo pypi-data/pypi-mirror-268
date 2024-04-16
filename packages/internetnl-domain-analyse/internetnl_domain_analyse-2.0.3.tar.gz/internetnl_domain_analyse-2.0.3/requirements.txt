@@ -1,0 +1,14 @@
+cbsplotlib
+PyLaTeX
+PyYAML
+tldextract
+tqdm
+pandas
+internetnl_scan
+importlib_metadata
+matplotlib
+numpy
+seaborn
+requests
+openpyxl
+weighted_sample_statistics
