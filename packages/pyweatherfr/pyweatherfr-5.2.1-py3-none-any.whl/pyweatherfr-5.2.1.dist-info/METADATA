@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pyweatherfr
+Version: 5.2.1
+Summary: pyweatherfr displays weather forecast for a given town in world (with high accuracy for France)
+Home-page: https://github.com/thib1984/pyweatherfr
+Author: thib1984
+Author-email: thibault.garcon@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: columnar
+Requires-Dist: termcolor
+Requires-Dist: colorama
+Requires-Dist: openmeteo-requests
+Requires-Dist: requests-cache
+Requires-Dist: retry-requests
+Requires-Dist: geopy
+Requires-Dist: numpy
+Requires-Dist: timezonefinder
+Requires-Dist: tzlocal
+Requires-Dist: pytz
+
+The complete description/installation/use/FAQ is available at : https://github.com/thib1984/pyweatherfr#readme
