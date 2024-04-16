@@ -1,0 +1,3 @@
+[console_scripts]
+desssign=desssign.__main__:main
+
