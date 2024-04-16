@@ -1,0 +1,21 @@
+# cd tools/experimental
+# nnictl create --config nni_football_config.yaml --port 8080
+experimentName: FootBall
+
+searchSpaceFile: path_to_the_search_space_json_file
+
+trialCommand: python nni_football.py
+trialCodeDirectory: .
+trialConcurrency: 1
+maxExperimentDuration: 8h
+maxTrialNumber: 300
+
+# Tuners: 'TPE', 'GridSearch', 'Evolution', 'Anneal', 'SMAC'
+tuner:
+  name: GridSearch
+  classArgs:
+    optimize_mode: maximize
+
+trainingService:
+  platform: local
+  useActiveGpu: True

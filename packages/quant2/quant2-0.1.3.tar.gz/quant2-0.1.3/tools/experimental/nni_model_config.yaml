@@ -1,0 +1,21 @@
+# cd tools/experimental
+# nnictl create --config nni_model_config.yaml --port 8080
+experimentName: Model
+
+searchSpaceFile: nni_football_config_search_space.json
+
+trialCommand: python nni_model.py
+trialCodeDirectory: .
+trialConcurrency: 2
+maxExperimentDuration: 10m
+maxTrialNumber: 10
+
+# Tuners: 'TPE', 'Evolution', 'Anneal'
+tuner:
+  name: TPE
+  classArgs:
+    optimize_mode: maximize
+
+trainingService:
+  platform: local
+  useActiveGpu: True
