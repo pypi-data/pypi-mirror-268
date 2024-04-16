@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/bmi_dbseabed/__init__.py
+src/bmi_dbseabed/_version.py
+src/bmi_dbseabed/bmi.py
+src/bmi_dbseabed/cli.py
+src/bmi_dbseabed/dbseabed.py
+src/bmi_dbseabed.egg-info/PKG-INFO
+src/bmi_dbseabed.egg-info/SOURCES.txt
+src/bmi_dbseabed.egg-info/dependency_links.txt
+src/bmi_dbseabed.egg-info/entry_points.txt
+src/bmi_dbseabed.egg-info/requires.txt
+src/bmi_dbseabed.egg-info/top_level.txt
