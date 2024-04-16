@@ -1,0 +1,7 @@
+setup.py
+cpmtokenizer/__init__.py
+cpmtokenizer/tokenizer_warper.py
+cpmtokenizer.egg-info/PKG-INFO
+cpmtokenizer.egg-info/SOURCES.txt
+cpmtokenizer.egg-info/dependency_links.txt
+cpmtokenizer.egg-info/top_level.txt
