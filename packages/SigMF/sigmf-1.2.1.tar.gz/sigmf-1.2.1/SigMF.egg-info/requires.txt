@@ -1,0 +1,12 @@
+numpy
+jsonschema
+
+[apps]
+scipy
+PySimpleGUI<5.0.0
+
+[test]
+pylint
+pytest
+pytest-cov
+hypothesis
