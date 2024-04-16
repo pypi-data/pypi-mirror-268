@@ -1,0 +1,3 @@
+[console_scripts]
+gitoptim=gitoptim.main:app
+
