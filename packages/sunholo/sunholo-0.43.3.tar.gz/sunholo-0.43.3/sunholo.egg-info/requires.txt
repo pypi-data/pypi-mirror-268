@@ -1,0 +1,13 @@
+google-cloud-alloydb-connector[pg8000]
+google-cloud-logging
+google-cloud-storage
+lancedb
+langchain
+langchain_experimental
+langchain-community
+langchain-openai
+langchain-google-genai
+langchain-anthropic
+langfuse
+pg8000
+sqlalchemy
