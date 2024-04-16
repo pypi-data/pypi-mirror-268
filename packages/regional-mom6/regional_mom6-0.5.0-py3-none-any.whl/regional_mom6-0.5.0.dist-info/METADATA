@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: regional_mom6
+Version: 0.5.0
+Summary: Automatic generation of regional configurations for Modular Ocean Model 6
+Author: Ashley Barnes, COSIMA community, and contributors
+Keywords: mom6,regional,ocean modeling
+License-File: LICENSE
+Requires-Dist: bottleneck
+Requires-Dist: dask[array]
+Requires-Dist: dask[distributed]
+Requires-Dist: netCDF4
+Requires-Dist: numpy >=1.17.0
+Requires-Dist: scipy >=1.2.0
+Requires-Dist: xarray
+Requires-Dist: xesmf >=0.8.4
+Requires-Dist: f90nml >=1.4.1
+
