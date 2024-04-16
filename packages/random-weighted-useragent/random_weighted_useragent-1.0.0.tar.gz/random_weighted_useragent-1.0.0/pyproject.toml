@@ -1,0 +1,22 @@
+[project]
+name = "random_weighted_useragent"
+version = "1.0.0"
+authors = [
+  { name="Lilly Aronleigh", email="ghostoverflow256@gmail.com" },
+]
+description = "Randomly returns a weighted user agent for firewall evasion"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/GhostDog98/random-ua"
+Issues = "https://github.com/GhostDog98/random-ua/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

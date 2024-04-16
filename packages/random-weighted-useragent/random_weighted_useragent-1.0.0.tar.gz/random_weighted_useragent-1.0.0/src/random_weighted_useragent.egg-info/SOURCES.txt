@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/random_weighted_useragent/__init__.py
+src/random_weighted_useragent.egg-info/PKG-INFO
+src/random_weighted_useragent.egg-info/SOURCES.txt
+src/random_weighted_useragent.egg-info/dependency_links.txt
+src/random_weighted_useragent.egg-info/top_level.txt
