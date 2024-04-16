@@ -1,0 +1,2 @@
+[console_scripts]
+adt-sim = adt_sim.cli.cli:adt_sim
