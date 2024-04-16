@@ -1,0 +1,2 @@
+[console_scripts]
+ews_config = ews_core_config.cli.entry:cli
