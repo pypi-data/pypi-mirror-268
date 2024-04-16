@@ -1,0 +1,13 @@
+ecsmanage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ecsmanage/apps.py,sha256=LxIS84fpWi1Ls3cMenMk4cc48aha_PFoCCG6NRQKB6s,125
+ecsmanage/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ecsmanage/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ecsmanage/management/commands/ecsmanage.py,sha256=BcH8D5S72NzL14iNARVnNujCADvo2V4gMgxrnl10Wg4,7624
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/settings_test.py,sha256=tkTedbVh6EgDLL6w7_HX-xpI2Ho2ujAeA8Ac4scjR6Y,70
+tests/test_configuration.py,sha256=ht2K8Khq8IySI2IBsDGey9ijqXkruWK_iSVUxZFIIgU,3328
+django_ecsmanage-4.0.1.dist-info/LICENSE,sha256=M_opgkwkgPlQTGYKUNVqctuDTYxA85UEpvf0_PbRwlk,11342
+django_ecsmanage-4.0.1.dist-info/METADATA,sha256=B_ukiGv3fEXf1aNHHaOuhgbvrWFzkqKIdvoecZBB35I,8337
+django_ecsmanage-4.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_ecsmanage-4.0.1.dist-info/top_level.txt,sha256=bS8tBUHFiz3YTNiTXvi32mmXPB8kH3KVHeEN_c1HQTI,16
+django_ecsmanage-4.0.1.dist-info/RECORD,,
