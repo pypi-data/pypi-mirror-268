@@ -1,0 +1,1 @@
+# readme só para teste de publicacao, maiores detalhes futuramente
