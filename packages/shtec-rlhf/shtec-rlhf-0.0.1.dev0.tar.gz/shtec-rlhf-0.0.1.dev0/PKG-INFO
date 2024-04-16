@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: shtec-rlhf
+Version: 0.0.1.dev0
+Summary: shtec-rlhf: Safe Reinforcement Learning from Human Feedback
+Author: PKU-Alignment Team
+License: Apache License, Version 2.0
+Project-URL: Homepage, https://github.com/PKU-Alignment/shtec-rlhf
+Project-URL: Repository, https://github.com/PKU-Alignment/shtec-rlhf
+Project-URL: Documentation, https://shtec-rlhf.readthedocs.io
+Project-URL: Bug Report, https://github.com/PKU-Alignment/shtec-rlhf
+Keywords: Reinforcement Learning,Safe Reinforcement Learning,Reinforcement Learning from Human Feedback,Safe Reinforcement Learning from Human Feedback,Large Language Model,Language Model,RLHF,Safe RLHF,LLM
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: lint
