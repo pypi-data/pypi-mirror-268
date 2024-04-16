@@ -1,0 +1,1 @@
+ews_core_config
