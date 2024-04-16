@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: gw-chirpy
+Version: 0.0.2
+Summary: Gravitational Waveforms in python
+Home-page: https://gitlab.com/SpaceTimeKhantinuum/chirpy
+Author: Sebastian Khan
+Author-email: sebastian.khan@LIGO.org
+License-File: LICENSE
+
