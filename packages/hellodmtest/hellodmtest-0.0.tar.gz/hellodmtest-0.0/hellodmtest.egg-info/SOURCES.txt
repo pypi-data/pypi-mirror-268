@@ -1,0 +1,8 @@
+README.md
+setup.py
+hello-dmtest/__init__.py
+hello-dmtest/main.py
+hellodmtest.egg-info/PKG-INFO
+hellodmtest.egg-info/SOURCES.txt
+hellodmtest.egg-info/dependency_links.txt
+hellodmtest.egg-info/top_level.txt
