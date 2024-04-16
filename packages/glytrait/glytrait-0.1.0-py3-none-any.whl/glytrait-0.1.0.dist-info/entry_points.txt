@@ -1,0 +1,3 @@
+[console_scripts]
+glytrait=glytrait.cli:cli
+
