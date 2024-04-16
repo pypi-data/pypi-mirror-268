@@ -1,0 +1,31 @@
+[package]
+name = "pystaleds"
+version = "0.1.5"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "pystaleds"
+crate-type = ["lib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "pystaleds"
+
+
+[dependencies]
+anyhow = "1.0.81"
+cc = "1.0.90"
+clap = { version = "4.5.4", features = ["derive"] }
+glob = "0.3.1"
+pyo3 = { version = "0.21.1", optional = true }
+rayon = "1.10.0"
+regex = "1.10.4"
+thiserror = "1.0.58"
+tracing = "0.1.40"
+tracing-appender = "0.2.3"
+tracing-subscriber = "0.3.18"
+tracing-test = "0.2.4"
+tree-sitter = "0.22.2"
+tree-sitter-python = "0.21.0"
+walkdir = "2.5.0"
