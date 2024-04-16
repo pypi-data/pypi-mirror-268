@@ -1,0 +1,24 @@
+[project]
+name = "berremueller"
+version = "1.0.0"
+authors = [
+    {name = "Andrew Salij", email = "andrewsalij@gmail.com"}
+]
+dependencies = [
+"numpy",
+"matplotlib",
+"scipy",
+"sympy",
+"pandas",
+]
+description="A library for implementing the Berreman 4X4 matrix method alongside Mueller matrices"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tools.setuptools]
+packages = ["src/berremueller"]
+
+
