@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pynumstim
+Version: 0.2.4
+Summary: Python library to create symbolic number and arithmetic stimuli for psychological experiments
+Keywords: experiment control,open science,experimental psychology
+Author-email: Oliver Lindemann <lindemann@essb.eur.nl>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Dist: pandas>=2.1
+Requires-Dist: toml>=0.10.2
+Requires-Dist: sympy>=1.12
+Project-URL: Documentation, https://github.com/lindemann09/PyNumStim
+Project-URL: Source, https://github.com/lindemann09/PyNumStim
+
+# PyNumStim
+
+**Python library to create symbolic number and arithmetic stimuli for psychological experiments**
+
+[![GitHub license](https://img.shields.io/github/license/lindemann09/PyNumStim)](https://github.com/lindemann09/PyNumStim/blob/master/LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/pynumstim?style=flat)](https://www.python.org)
+[![PyPI](https://img.shields.io/pypi/v/pynumstim?style=flat)](https://pypi.org/project/pynumstim/)
+
+(c) Oliver Lindemann (lindemann@cognitive-psychology.eu)
+
+Project homepage: https://github.com/lindemann09/PyNumStim
+
+
+## Requirements
+
+* Python >= 3.10
+* dvipng
+
+
+
