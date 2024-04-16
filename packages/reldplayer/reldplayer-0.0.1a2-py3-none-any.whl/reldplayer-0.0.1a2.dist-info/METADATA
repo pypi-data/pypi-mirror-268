@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: reldplayer
+Version: 0.0.1a2
+Summary: a reimagined pyldplayer that better suits scripting needs
+Author-email: ZackaryW <36378555+ZackaryW@users.noreply.github.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Provides-Extra: all
+Requires-Dist: psutil>=5.8.0; extra == 'all'
+Requires-Dist: pyautogui>=0.9.54; extra == 'all'
+Requires-Dist: pydantic>=2.6.4; extra == 'all'
+Requires-Dist: pygetwindow>=0.0.9; extra == 'all'
+Requires-Dist: screeninfo>=0.8.1; extra == 'all'
+Description-Content-Type: text/markdown
+
+# reldplayer
+ reimagined pyldplayer

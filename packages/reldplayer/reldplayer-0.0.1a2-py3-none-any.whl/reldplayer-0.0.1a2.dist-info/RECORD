@@ -1,0 +1,16 @@
+reldplayer/__init__.py,sha256=46aB-hdygJKyRV6_sSlD-h54v-Y9mvk9bQ3rv7enzyA,35
+reldplayer/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+reldplayer/autogui.py,sha256=82XGlyUDWJLsJ3NswAGCkt-09MfOHrfIpWh2DHoFywA,3802
+reldplayer/console.py,sha256=tGN0HCeJii1QwJVNfw16rKtqWwji5N9T0TjafH70UyM,1581
+reldplayer/main.py,sha256=aNqLn0O_aTgsas1XS_BvSNt2QC7DDZurOAhnLFftNbY,4816
+reldplayer/metaMgr.py,sha256=0ofG9tUQqcWhaD8-g8qsM8c-ZzN56d4HwZo0OuMlwgg,1624
+reldplayer/rawconsole.py,sha256=WI80xPw7UKjby4P2jJOWPy50KXrrdwA0WGuV_EtaiVk,16417
+reldplayer/wndMgr.py,sha256=Oy7pwCFy6D0YjhvD3pX0jFsEjIS6MW42saDwTOgXLLI,2852
+reldplayer/models/__init__.py,sha256=P7gvBeRre1X1ljON9EPErlymppwPxtrDGA9EHJSKpf8,4302
+reldplayer/models/file.py,sha256=cFmDRzciByKZ8k5droMprZTaAnNmM8sxrPxUlTJP2Ms,7815
+reldplayer/utils/screen.py,sha256=aOW358WkfwFthRSRytoOx_P8jQNOmur73wfsQG6i7Qk,2583
+reldplayer/utils/wip.py,sha256=968fs1Jk2lrfCwQlkxqSjJENgdAWjRurl8BJ6Dbhk40,1910
+reldplayer-0.0.1a2.dist-info/METADATA,sha256=uQ_wSMAX3LhnmHC28hGZ8Up_LPnL9L09Erx1rtALA7c,573
+reldplayer-0.0.1a2.dist-info/WHEEL,sha256=xl5aZkiJYVTjhVaiADvIe6UeUVylGNomrxKZ0Zda1CE,87
+reldplayer-0.0.1a2.dist-info/licenses/LICENSE,sha256=Z_acxgUhHhHVjyiucx3ky2YM_zmYVL_X2NaMXadKJPc,1085
+reldplayer-0.0.1a2.dist-info/RECORD,,
