@@ -1,0 +1,11 @@
+pymavlink
+pyserial
+pillow
+requests
+
+[dev]
+ruff
+pytest
+pytest-cov
+coverage
+mock
