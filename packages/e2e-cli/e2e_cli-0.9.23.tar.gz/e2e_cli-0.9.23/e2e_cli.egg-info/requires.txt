@@ -1,0 +1,5 @@
+prettytable
+requests
+setuptools
+chardet
+bidict~=0.23.1
