@@ -1,0 +1,6 @@
+
+[gmail-oauth2]
+python-social-auth
+
+[office365-oauth2]
+O365
