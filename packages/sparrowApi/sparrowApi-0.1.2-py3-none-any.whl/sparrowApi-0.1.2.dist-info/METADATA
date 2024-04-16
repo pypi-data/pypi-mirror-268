@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: sparrowApi
+Version: 0.1.2
+Summary: 基于socket的Api工具
+Requires-Python: >=3.11
+Requires-Dist: colorama
+
