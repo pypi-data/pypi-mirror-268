@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "mkdocs-rtd"
+version = "0.0.14"
+description = "A fork of mkdocs readthedocs theme to make it work with mkapi"
+authors = ["pwwang <pwwang@pwwang.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "rtd"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.build]
+generate-setup-file = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.5"
+pymdown-extensions = [
+    {version = "<10.3", python = "<3.8"},
+    {version = "^10.3", python = "^3.8"},
+]
+mike = "^2.0"
+
+[tool.poetry.plugins."mkdocs.themes"]
+rtd = "rtd"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
