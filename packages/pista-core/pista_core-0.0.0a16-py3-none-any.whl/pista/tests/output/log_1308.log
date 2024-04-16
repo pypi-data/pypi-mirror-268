@@ -1,0 +1,12 @@
+
+RunCmd: D:\Practice\pista_cores\pista_core\pista\tests\test_Pista_VariableDataFile.py --no-header --no-summary -q
+RunArgs: -rA -l -vs -p no:warnings --capture=sys --cache-clear --no-header --show-capture=no --dist=loadgroup --order-scope=module
+PistaCore: File not found requirements.txt
+Env: DEMO_qa (Browser: None)
+TcMark: 
+
+
+Function: test_Pista_VariableDataFile
+Markers: [Mark(name='dependency', args=(), kwargs={'name': 'test_Pista_VariableDataFile'}), Mark(name='order', args=(1,), kwargs={}), Mark(name='xdist_group', args=(), kwargs={'name': 'pista'})]
+20240407T143330 1308 PRNT (pytest_pyfunc_call:195) Variable data file
+Function: test_Pista_VariableDataFile (Status: passed)

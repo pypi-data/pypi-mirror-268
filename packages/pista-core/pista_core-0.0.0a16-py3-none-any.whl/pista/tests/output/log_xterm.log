@@ -1,0 +1,71 @@
+
+> WebTerminal-xterm@1.0.0 start
+> node demo/start.js
+
+App listening to http://127.0.0.1:3000
+(node:29084) [DEP_WEBPACK_WATCH_WITHOUT_CALLBACK] DeprecationWarning: A 'callback' argument needs to be provided to the 'webpack(options, callback)' function when the 'watch' option is set. There is no way to handle the 'watch' option without a callback.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+asset [1m[32mclient-bundle.js[39m[22m 1.78 MiB [1m[33m[compared for emit][39m[22m (name: main)
+modules by path [1m./[39m[22m 693 KiB
+  [1m./demo/client.ts[39m[22m 40 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm/lib/xterm.js[39m[22m 265 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm-addon-attach/lib/xterm-addon-attach.js[39m[22m 1.32 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm-addon-fit/lib/xterm-addon-fit.js[39m[22m 1.57 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm-addon-search/lib/xterm-addon-search.js[39m[22m 12 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm-addon-serialize/lib/xterm-addon-serialize.js[39m[22m 9.99 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm-addon-web-links/lib/xterm-addon-web-links.js[39m[22m 2.65 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm-addon-webgl/lib/xterm-addon-webgl.js[39m[22m 83.9 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1m./node_modules/xterm-addon-unicode11/lib/xterm-addon-unicode11.js[39m[22m 7.52 KiB [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  + 2 modules
+[1mfs (ignored)[39m[22m 15 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+[1mpath (ignored)[39m[22m 15 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+[1mutil (ignored)[39m[22m 15 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+[1mstream (ignored)[39m[22m 15 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.89.0 compiled [1m[32msuccessfully[39m[22m in 3308 ms
+Setting encoding on Windows is not supported
+Created terminal with PID: 34652
+Connected to terminal 34652
+Closed terminal 34652
+D:\new-webterminal\node_modules\node-pty\lib\conpty_console_list_agent.js:17
+var consoleProcessList = getConsoleProcessList(shellPid);
+                         ^
+
+Error: AttachConsole failed
+    at Object.<anonymous> (D:\new-webterminal\node_modules\node-pty\lib\conpty_console_list_agent.js:17:26)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+    at node:internal/main/run_main_module:23:47
+
+Node.js v20.9.0
+Setting encoding on Windows is not supported
+Created terminal with PID: 27536
+Connected to terminal 27536
+Closed terminal 27536
+Setting encoding on Windows is not supported
+Created terminal with PID: 37160
+Connected to terminal 37160
+Closed terminal 37160
+D:\new-webterminal\node_modules\node-pty\lib\conpty_console_list_agent.js:17
+var consoleProcessList = getConsoleProcessList(shellPid);
+                         ^
+
+Error: AttachConsole failed
+    at Object.<anonymous> (D:\new-webterminal\node_modules\node-pty\lib\conpty_console_list_agent.js:17:26)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:83:12)
+    at node:internal/main/run_main_module:23:47
+
+Node.js v20.9.0
+Setting encoding on Windows is not supported
+Created terminal with PID: 12992
+Connected to terminal 12992
+Closed terminal 12992
+Setting encoding on Windows is not supported
+Created terminal with PID: 60364
+Connected to terminal 60364
