@@ -1,0 +1,17 @@
+deltabot-cli<7.0,>=6.0.0
+signalstickers-client>=3.1.0
+emoji>=1.6.1
+cachelib>=0.7.0
+requests>=2.26.0
+pillow>=10.3.0
+rembg>=2.0.56
+
+[dev]
+black
+mypy
+isort
+pylint
+pylama
+pytest
+types-emoji
+types-requests
