@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+Utube/__init__.py
+Utube/functions/__init__.py
+Utube/functions/function01.py
+Utube/scripts/__init__.py
+Utube/scripts/en.py
+Utube/scripts/eo.py
+utube_dl.egg-info/PKG-INFO
+utube_dl.egg-info/SOURCES.txt
+utube_dl.egg-info/dependency_links.txt
+utube_dl.egg-info/not-zip-safe
+utube_dl.egg-info/top_level.txt
