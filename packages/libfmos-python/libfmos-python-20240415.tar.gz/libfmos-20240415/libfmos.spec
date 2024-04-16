@@ -1,0 +1,85 @@
+Name: libfmos
+Version: 20240415
+Release: 1
+Summary: Library to support common Mac OS specific formats
+Group: System Environment/Libraries
+License: LGPL-3.0-or-later
+Source: %{name}-%{version}.tar.gz
+URL: https://github.com/libyal/libfmos
+   
+BuildRequires: gcc   
+
+%description -n libfmos
+Library to support common Mac OS specific formats
+
+%package -n libfmos-static
+Summary: Library to support common Mac OS specific formats
+Group: Development/Libraries
+Requires: libfmos = %{version}-%{release}
+
+%description -n libfmos-static
+Static library version of libfmos.
+
+%package -n libfmos-devel
+Summary: Header files and libraries for developing applications for libfmos
+Group: Development/Libraries
+Requires: libfmos = %{version}-%{release}
+
+%description -n libfmos-devel
+Header files and libraries for developing applications for libfmos.
+
+%package -n libfmos-python3
+Summary: Python 3 bindings for libfmos
+Group: System Environment/Libraries
+Requires: libfmos = %{version}-%{release} python3
+BuildRequires: python3-devel python3-setuptools
+
+%description -n libfmos-python3
+Python 3 bindings for libfmos
+
+%prep
+%setup -q
+
+%build
+%configure --prefix=/usr --libdir=%{_libdir} --mandir=%{_mandir} --enable-python
+make %{?_smp_mflags}
+
+%install
+rm -rf %{buildroot}
+%make_install
+
+%clean
+rm -rf %{buildroot}
+
+%post -p /sbin/ldconfig
+
+%postun -p /sbin/ldconfig
+
+%files -n libfmos
+%license COPYING COPYING.LESSER
+%doc AUTHORS README
+%{_libdir}/*.so.*
+
+%files -n libfmos-static
+%license COPYING COPYING.LESSER
+%doc AUTHORS README
+%{_libdir}/*.a
+
+%files -n libfmos-devel
+%license COPYING COPYING.LESSER
+%doc AUTHORS README
+%{_libdir}/*.so
+%{_libdir}/pkgconfig/libfmos.pc
+%{_includedir}/*
+%{_mandir}/man3/*
+
+%files -n libfmos-python3
+%license COPYING COPYING.LESSER
+%doc AUTHORS README
+%{_libdir}/python3*/site-packages/*.a
+%{_libdir}/python3*/site-packages/*.so
+
+%changelog
+* Mon Apr 15 2024 Joachim Metz <joachim.metz@gmail.com> 20240415-1
+- Auto-generated
+
