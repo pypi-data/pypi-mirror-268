@@ -1,0 +1,5 @@
+fsspec
+pandas
+tabulate
+typer[all]
+tzlocal
