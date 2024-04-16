@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "policy_priority_inference"
+version = "3.0.5"
+authors = [
+  { name="Omar A. Guerrero", email="oguerrer@gmail.com" },
+]
+description = "The model of the Policy Priority Inference impact-evaluation toolkit and its calibration algorithm."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://policypriority.org"
+Issues = "https://github.com/oguerrer/ppi"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/policy_priority_inference"]
