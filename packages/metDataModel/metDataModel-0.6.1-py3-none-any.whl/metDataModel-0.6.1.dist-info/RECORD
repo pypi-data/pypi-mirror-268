@@ -1,0 +1,14 @@
+metDataModel/__init__.py,sha256=7lX4pk4SiVJhlGqPyOGNIZLiHXda_qTi4WqICumafpw,87
+metDataModel/core.py,sha256=sIw0qvZCTo8zdqPTIuI22vqB426UJ57PM2Txbzw1jyM,25985
+metDataModel/core_simple.py,sha256=UjQ7kts9V1Jq2w6gZUJep1PS1rd-0sW1HWzjOXw7_q0,27392
+metDataModel/derived.py,sha256=ydo80VllFt2vnfEMSI2XmPnl9dOZR9L8N8sTZ8iyhbU,4147
+metDataModel/derived_simple.py,sha256=MXedUFtaYS8DlnJMRmQKBGVjUPBgsuICkwpXQSbJehE,2965
+metDataModel/simpleTuples.py,sha256=1HyeXp0rP69sjkNuUcQFDvUHCcHwkGihIShneW12cRE,785
+metDataModel/util.py,sha256=mFcbhEJKE-oNK_6g1Mo50DKZXYM94-KSdhwQRpK6gC8,838
+metDataModel/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=yJsyQGlITTHI8zfgbvpZQmjb9RZVLbS1B_99STbV-xo,50
+metDataModel-0.6.1.dist-info/LICENSE,sha256=uNCEca8X5yBr3A_Udg09E26uy_wQqCM9bgODeCv0LBM,1508
+metDataModel-0.6.1.dist-info/METADATA,sha256=GBAwk-Ut-oAiH6H0oEzVLM9aMVRFbAPxh9m2M5mzaG8,9407
+metDataModel-0.6.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+metDataModel-0.6.1.dist-info/top_level.txt,sha256=SfD4vqhCvhe2rIgFVm5C4QrSpL0WjzADWD4OuOb_yn4,19
+metDataModel-0.6.1.dist-info/RECORD,,
