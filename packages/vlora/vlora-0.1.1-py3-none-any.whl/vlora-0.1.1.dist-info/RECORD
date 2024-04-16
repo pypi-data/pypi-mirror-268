@@ -1,0 +1,8 @@
+vlora/__init__.py,sha256=K7ccUG1Y5VjCoH-c3ieLNxybtpBe2-2KgBRGLGj3jyA,43
+vlora/models/__init__.py,sha256=qC1O7u9Z4UVl2t6jnhP1-B2yZc4eZMPJPj8j8E0ZA6Y,40
+vlora/models/vit.py,sha256=5ZSvegKVK1YX9hsaun8mMRTFjpvszJouf5LZ9Vs8hpk,1891
+vlora/utils/__init__.py,sha256=xv3cFtOwaXq3t_uUDCkBWjIHTDQmkG_cSYa8vjiIW1Y,29
+vlora/utils/vlorafy.py,sha256=P43gN1OnV9S55VcB1M8UiVHFiZyoj8OdhJEBbOyZgoA,3473
+vlora-0.1.1.dist-info/METADATA,sha256=OMm0ixRxvWYk5DBpnWwOsz_jWAd9MQ6RGbydR_txLMw,429
+vlora-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+vlora-0.1.1.dist-info/RECORD,,
