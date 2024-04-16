@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: lcz
+Version: 0.1.4
+Summary: Simplified Leela Chess Zero (aka lc0 aka lcz) with Python
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/lc0
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: meson ==1.2.2
+Requires-Dist: lczero-bindings
+Requires-Dist: ramda
+
+# Lcz
+
+> Simplified Leela Chess Zero (aka lc0 aka lcz) with Python
