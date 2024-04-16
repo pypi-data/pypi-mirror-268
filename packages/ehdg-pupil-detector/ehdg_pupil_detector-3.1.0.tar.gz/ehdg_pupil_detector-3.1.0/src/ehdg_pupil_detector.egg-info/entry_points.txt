@@ -1,0 +1,2 @@
+[console_scripts]
+opmtrack = ehdg_pupil_detector.opmtrack:main
