@@ -1,0 +1,10 @@
+tsugu/__init__.py,sha256=FAI2AgVa1Qr0xmfpMeQ0tJXSQIty8TwyfIrekOCYvOU,134
+tsugu/bot.py,sha256=qraE7ZTni0-6Fm0pKfbIbcs32FG-hY0BLKHSb7ez0lA,11131
+tsugu/config.py,sha256=KUW7B3ZNJ4vd6UGOOXaZN9jx6GrG6QBCVUmmB75z0EQ,21143
+tsugu/router.py,sha256=Cthli3QvVKI2YOdLHfWE8kDgwSMGTIel1X7uTAFsfrs,5833
+tsugu/utils.py,sha256=IwN4rq0cP5he-WhQcIXNNRRD2mmwzpy0ROXNa174T6k,19371
+tsugu-0.4.7.dist-info/LICENSE,sha256=fpf5L79pjfu7HFWTTQ_KWtBtcTRkGCgoubWweiZYgCw,1083
+tsugu-0.4.7.dist-info/METADATA,sha256=nyZ9PIObptK3n3bMHdSQyj0a-_KEJDRpEZLCb9cF_Ys,5523
+tsugu-0.4.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tsugu-0.4.7.dist-info/top_level.txt,sha256=QqNQZcbqmuerqmycAliOGR5Z_cJ-rszVedkApt_YGdI,6
+tsugu-0.4.7.dist-info/RECORD,,
