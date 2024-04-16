@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: setreq
+Version: 0.0.5
+Summary: function
+Home-page: https://github.com/kimleo03/oss_homework
+Download-URL: https://github.com/kimleo03/oss_homework/
+Author: KimSungYoun
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: requests
+
