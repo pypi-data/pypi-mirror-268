@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+recommender_agent/__init__.py
+recommender_agent/recommenderSystem.py
+recommender_agent.egg-info/PKG-INFO
+recommender_agent.egg-info/SOURCES.txt
+recommender_agent.egg-info/dependency_links.txt
+recommender_agent.egg-info/requires.txt
+recommender_agent.egg-info/top_level.txt
+recommender_agent/components/__init__.py
+recommender_agent/components/agent.py
+recommender_agent/components/vectorStoreClient.py
