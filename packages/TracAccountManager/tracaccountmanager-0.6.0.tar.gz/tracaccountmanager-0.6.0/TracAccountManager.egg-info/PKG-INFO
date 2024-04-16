@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: TracAccountManager
+Version: 0.6.0
+Summary: User account management plugin for Trac
+Home-page: https://trac-hacks.org/wiki/AccountManagerPlugin
+Author: Matthew Good
+Author-email: trac@matt-good.net
+Maintainer: Steffen Hoffmann
+Maintainer-email: hoff.st@web.de
+License: 3-Clause BSD
+Classifier: Framework :: Trac
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+License-File: COPYING
+Requires-Dist: Trac
+Provides-Extra: babel
+Requires-Dist: Babel>=0.9.5; extra == "babel"
+Provides-Extra: announcer
+Requires-Dist: TracAnnouncer; extra == "announcer"
+Provides-Extra: forms
+Requires-Dist: TracForms; extra == "forms"
+Provides-Extra: pyrad
+Requires-Dist: Pyrad; extra == "pyrad"
+Provides-Extra: screenshots
+Requires-Dist: TracScreenshots; extra == "screenshots"
+Provides-Extra: vote
+Requires-Dist: TracVote; extra == "vote"
