@@ -1,0 +1,3 @@
+[console_scripts]
+t = termax.cli.cli:cli
+termax = termax.cli.cli:cli
