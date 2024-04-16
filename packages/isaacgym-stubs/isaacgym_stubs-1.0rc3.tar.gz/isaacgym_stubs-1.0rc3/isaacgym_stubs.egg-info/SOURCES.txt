@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+isaacgym-stubs/__init__.py
+isaacgym-stubs/gymapi.pyi
+isaacgym_stubs.egg-info/PKG-INFO
+isaacgym_stubs.egg-info/SOURCES.txt
+isaacgym_stubs.egg-info/dependency_links.txt
+isaacgym_stubs.egg-info/top_level.txt
