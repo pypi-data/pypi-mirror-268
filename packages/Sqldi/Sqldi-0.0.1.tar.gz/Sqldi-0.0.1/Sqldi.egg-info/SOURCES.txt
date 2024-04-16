@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+Sqldi/__init__.py
+Sqldi/main.py
+Sqldi.egg-info/PKG-INFO
+Sqldi.egg-info/SOURCES.txt
+Sqldi.egg-info/dependency_links.txt
+Sqldi.egg-info/requires.txt
+Sqldi.egg-info/top_level.txt
