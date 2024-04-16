@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+pennylane_kq/__init__.py
+pennylane_kq/_version.py
+pennylane_kq/kq_emulator.py
+pennylane_kq/kq_emulator_aws.py
+pennylane_kq/kq_hardware.py
+pennylane_kq/kq_local_emulator.py
+pennylane_kq.egg-info/PKG-INFO
+pennylane_kq.egg-info/SOURCES.txt
+pennylane_kq.egg-info/dependency_links.txt
+pennylane_kq.egg-info/entry_points.txt
+pennylane_kq.egg-info/not-zip-safe
+pennylane_kq.egg-info/requires.txt
+pennylane_kq.egg-info/top_level.txt
