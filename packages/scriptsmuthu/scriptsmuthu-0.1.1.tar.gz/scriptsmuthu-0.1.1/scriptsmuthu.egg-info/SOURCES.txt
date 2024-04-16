@@ -1,0 +1,7 @@
+README.md
+setup.py
+scriptsmuthu.egg-info/PKG-INFO
+scriptsmuthu.egg-info/SOURCES.txt
+scriptsmuthu.egg-info/dependency_links.txt
+scriptsmuthu.egg-info/requires.txt
+scriptsmuthu.egg-info/top_level.txt
