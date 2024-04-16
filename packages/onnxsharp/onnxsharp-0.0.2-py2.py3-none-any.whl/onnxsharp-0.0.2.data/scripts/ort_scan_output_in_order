@@ -1,0 +1,9 @@
+#!/bin/bash
+
+file=$1
+dump_dir=$2
+
+grep -E "Input 0 Name: |Input 1 Name: |Input 2 Name: |Input 3 Name: |Input 4 Name: |Input 5 Name: |Input 6 Name: " $file > $file.output_names
+
+ort_parse_output_name --path $file.output_names --dump_dir $dump_dir
+
