@@ -1,0 +1,12 @@
+PyCosmoMMF/__init__.py,sha256=5eRwExYAIMF9TKicib5iTfZ_52gHB_ong66-mEDPmj0,468
+PyCosmoMMF/filter.py,sha256=spC_G2J3U9gtvHRLYe2lwrDrrFHAs6tNbE9b9Ebuszk,4401
+PyCosmoMMF/hessian.py,sha256=v3LsODISHzacrYGZoNOg5q7a5lIN7dPthUYAdfAzAAE,1972
+PyCosmoMMF/signatures.py,sha256=7sa_36RD9jHvVeF2mCsl61SRsZeC_OXJ1B9EOEikX-k,3995
+PyCosmoMMF/tagging.py,sha256=4xNpGGhBhZueuC1ZW4xD7SqKLnmAa2w0-KPSl4YuDVM,13385
+PyCosmoMMF/test_density_cube.npy,sha256=WGhNAA4ja-NRkChvWXYSWQruuC2AG-zbwow5Wu29XMY,131200
+PyCosmoMMF/utils.py,sha256=evWIDwRRiqXQcy4OrKTxs81l7Ux__RLYzJypO4to5yE,661
+PyCosmoMMF-0.0.8.dist-info/LICENSE,sha256=6WlYpuEFF26eGU-3slIeHSkgBUd6_PnY8bZUi5R489Q,1070
+PyCosmoMMF-0.0.8.dist-info/METADATA,sha256=ZDhTOKc7EsKY9zu4c1uNQ5J8zRMyggUj-eSv5fppLPU,7708
+PyCosmoMMF-0.0.8.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+PyCosmoMMF-0.0.8.dist-info/top_level.txt,sha256=DBkJA2VF3bXlBt5UXANVQAdbTjxrGGa007Y4yAlMYSA,11
+PyCosmoMMF-0.0.8.dist-info/RECORD,,
