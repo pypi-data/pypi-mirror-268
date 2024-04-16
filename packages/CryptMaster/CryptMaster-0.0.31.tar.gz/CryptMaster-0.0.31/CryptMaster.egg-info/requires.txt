@@ -1,0 +1,12 @@
+pycryptodome==3.20.0
+httpx==0.26.0
+argon2-cffi==23.1.0
+platformdirs==4.2.0
+pypedreams==0.0.1
+
+[dev]
+black
+bumpver
+isort
+pip-tools
+pytest
