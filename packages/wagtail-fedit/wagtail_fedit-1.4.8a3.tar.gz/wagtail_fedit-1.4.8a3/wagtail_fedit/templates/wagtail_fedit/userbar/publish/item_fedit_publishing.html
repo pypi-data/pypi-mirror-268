@@ -1,0 +1,26 @@
+{% extends "wagtailadmin/userbar/item_base.html" %}
+{% load i18n wagtailadmin_tags %}
+
+{% block item_content %}
+    <svg class="w-hidden">
+        <defs>
+            {% include "wagtail_fedit/icons/fedit-save.svg" %}
+            {% include "wagtail_fedit/icons/fedit-eye-open.svg" %}
+            {% include "wagtail_fedit/icons/fedit-eye-closed.svg" %}
+            {% include "wagtail_fedit/icons/fedit-stop-sign.svg" %}
+            {% include "wagtail_fedit/icons/fedit-check-list.svg" %}
+        </defs>
+    </svg>
+    <div class="wagtail-fedit-publish-menu" role="menuitem">
+        <button id="wagtail-fedit-publish-menu">
+            {% icon name="fedit-save" classname="w-action-icon" %}
+            {% trans "Revision Management" %}
+        </button>
+        <div class="wagtail-fedit-form-buttons">
+            {% for button in buttons %}
+                {{ button }}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
