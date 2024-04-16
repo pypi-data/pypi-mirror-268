@@ -1,0 +1,9 @@
+include CMakeLists.txt
+recursive-include src *
+recursive-include inc *
+recursive-include third-party *
+
+prune **/.github
+prune **/docs
+prune **/examples
+prune **/tests

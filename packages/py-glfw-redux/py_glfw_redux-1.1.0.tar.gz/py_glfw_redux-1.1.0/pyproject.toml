@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0.0", "wheel", "cmake>=3.25", "setuptools-pybind11"]
+build-backend = "setuptools_pybind11"
+
+[tool.distutils.egg_info]
+egg_base = "build"
+
+[project]
+name = "py-glfw-redux"
+version = "1.1.0"
+authors = [{ name = "Alagyn" }]
+description = "A python wrapper for GLFW made with PyBind11"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/alagyn/py-glfw-redux"
+"Bug Tracker" = "https://github.com/alagyn/py-glfw-redux/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools-pybind11.modules.glfw]
+dep_bin_prefixes = ["third-party/glfw/src", "third-party"]
+inc_dirs = [
+    [
+        "third-party/glfw/include",
+        "glfw",
+    ],
+    [
+        "third-party/glad/include",
+        "glad",
+    ],
+]
