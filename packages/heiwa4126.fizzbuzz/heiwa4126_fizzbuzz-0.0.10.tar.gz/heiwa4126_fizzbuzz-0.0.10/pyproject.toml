@@ -1,0 +1,47 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heiwa4126.fizzbuzz"
+version = "0.0.10"
+description = "A simple fizzbuzz generator"
+readme = "README.md"
+keywords = [ "fizzbuzz", "demo",]
+classifiers = [ "Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License", "Operating System :: OS Independent",]
+requires-python = ">=3.6"
+[[project.authors]]
+name = "heiwa4126"
+
+[[project.authors]]
+email = "heiwa4126@gmail.com"
+
+[project.scripts]
+heiwa4126_fizzbuzz = "heiwa4126.fizzbuzz.cli:main"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/heiwa4126/pip-heiwa4126-fizzbuzz.git"
+Homepage = "https://github.com/heiwa4126/pip-heiwa4126-fizzbuzz#readme"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 119
+
+[tool.ruff.lint]
+select = [ "E", "F", "W", "I", "Q",]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+
+[tool.ruff.lint.isort]
+force-single-line = false
+
+[tool.setuptools.packages.find]
+where = [ "src/",]
+include = [ "heiwa4126.fizzbuzz",]

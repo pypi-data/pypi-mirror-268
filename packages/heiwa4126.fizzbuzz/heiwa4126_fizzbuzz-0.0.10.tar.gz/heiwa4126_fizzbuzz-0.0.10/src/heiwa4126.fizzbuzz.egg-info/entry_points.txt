@@ -1,0 +1,2 @@
+[console_scripts]
+heiwa4126_fizzbuzz = heiwa4126.fizzbuzz.cli:main
