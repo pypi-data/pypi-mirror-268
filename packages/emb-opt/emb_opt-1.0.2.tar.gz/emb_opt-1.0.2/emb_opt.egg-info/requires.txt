@@ -1,0 +1,10 @@
+numpy
+pydantic>=2.0
+scipy
+httpx
+
+[dev]
+faiss-cpu
+qdrant-client
+matplotlib
+datasets
