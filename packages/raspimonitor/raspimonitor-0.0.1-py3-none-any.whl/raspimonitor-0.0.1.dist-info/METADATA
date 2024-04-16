@@ -1,0 +1,87 @@
+Metadata-Version: 2.1
+Name: raspimonitor
+Version: 0.0.1
+Summary: Monitoring and alerting for your RaspberryPi 
+Author: w0rmr1d3r
+License: MIT
+Project-URL: Homepage, https://github.com/w0rmr1d3r/raspimonitor
+Project-URL: Repository, https://github.com/w0rmr1d3r/raspimonitor
+Project-URL: Bug Tracker, https://github.com/w0rmr1d3r/raspimonitor/issues
+Project-URL: Documentation, https://github.com/w0rmr1d3r/raspimonitor
+Project-URL: Changelog, https://github.com/w0rmr1d3r/raspimonitor/releases
+Project-URL: Funding, https://github.com/sponsors/w0rmr1d3r
+Keywords: raspberry,raspberrypi,pi,monitor
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests ~=2.0
+Provides-Extra: dev
+Requires-Dist: pip-tools ~=7.0 ; extra == 'dev'
+Requires-Dist: pytest ~=8.0 ; extra == 'dev'
+Requires-Dist: ruff ==0.3.1 ; extra == 'dev'
+
+# raspimonitor
+
+Monitoring and alerting to your Discord server for your RaspberryPi
+
+## Installation
+
+You will need to set up a Discord server and webhook, see
+how [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
+After that, proceed to install the package in your raspberry:
+
+```bash
+pip3 install raspimonitor
+```
+
+## Usage
+
+### Direct usage
+
+```bash
+# raspimonitor YOURHOOKHERE THRESHOLD_TEMP_IN_CELSIUS
+# Example
+raspimonitor http://your.web.hook.here 45
+# Example temp as float:
+raspimonitor http://your.web.hook.here 45.6
+```
+
+### As a cron job
+
+Add your cron job as a script from above:
+
+```bash
+# 1. Open cron file
+crontab -e
+# 2. Add a cron
+# Example - run every minute:
+* * * * * raspimonitor http://your.web.hook.here 45
+# Example - run every 5 minutes
+*/5 * * * * raspimonitor http://your.web.hook.here 45
+# 3. Reload cron service
+sudo service cron reload
+```
+
+Ref. https://superuser.com/questions/232144/how-to-stop-a-currently-running-cron-job
+
+## Contributing
+
+Pull requests and issues are welcome.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/) - [License file](LICENSE)
+
+## Obtained inspiration from
+
+- https://github.com/git-ogawa/raspi-statmon/blob/main/src/rstatmon/statdata.py
+- https://github.com/mityax/rpi-temperature-alert/tree/master
+- https://www.howtogeek.com/discord-slack-alert-raspberry-pi-too-hot/
