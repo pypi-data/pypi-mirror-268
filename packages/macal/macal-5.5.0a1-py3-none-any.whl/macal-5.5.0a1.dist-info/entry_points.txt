@@ -1,0 +1,5 @@
+[console_scripts]
+mcomp = macal.mccomp:main
+mdeco = macal.mdeco:main
+mrepl = macal.mrepl:main
+mrun = macal.mrun:main
