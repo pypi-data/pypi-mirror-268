@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+tests/__init__.py
+tests/test_thepipe.py
+thepipe_api/__init__.py
+thepipe_api/compressor.py
+thepipe_api/core.py
+thepipe_api/extractor.py
+thepipe_api/thepipe.py
+thepipe_api.egg-info/PKG-INFO
+thepipe_api.egg-info/SOURCES.txt
+thepipe_api.egg-info/dependency_links.txt
+thepipe_api.egg-info/entry_points.txt
+thepipe_api.egg-info/requires.txt
+thepipe_api.egg-info/top_level.txt
