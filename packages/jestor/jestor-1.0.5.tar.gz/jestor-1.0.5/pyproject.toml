@@ -1,0 +1,19 @@
+[project]
+name = "jestor"
+version = "1.0.5"
+description = "Jestor Python Client"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Jestor-Tecnologia/python-client"
+"Bug Tracker" = "https://github.com/Jestor-Tecnologia/python-client/issues"
+
+[build-system]
+requires = ["requests", "setuptools >= 40.9.0"]
+build-backend = "setuptools.build_meta"
