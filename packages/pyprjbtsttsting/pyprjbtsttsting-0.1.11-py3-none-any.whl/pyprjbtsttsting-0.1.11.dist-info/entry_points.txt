@@ -1,0 +1,2 @@
+[console_scripts]
+pyprjbtsttsting = pyprjbtsttsting:EntryPoint.app
