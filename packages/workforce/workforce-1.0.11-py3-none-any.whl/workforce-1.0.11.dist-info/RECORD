@@ -1,0 +1,12 @@
+workforce/__init__.py,sha256=_vKe0Icepr8BRLeMpOaafaY_2D4P0jLrYlak-bbf8LY,133
+workforce/cli.py,sha256=vt_rkf68ZZ9PdCl2bLxwup3V7bwMrJ-WHNpKnvdWjFQ,555
+workforce/gui.py,sha256=ybvBi3WInkTiZnWSYkyA_XHoaiNSZvA4jLChOYGKpwM,6322
+workforce/newtestworkforce.py,sha256=7P87bV88Pdjks1bVsyj5IHtbwbTBYTWVblgPWKA9ECc,1812
+workforce/workforce.py,sha256=E975gNsYo2lNPFNXrVJ8sYtol6aU4ZmKDCXc3U242DE,1388
+workforce-1.0.11.dist-info/AUTHORS.rst,sha256=fLa0CebqzN0-h0u09S7JIWWqrZb5IcAZkDukUMO7h7k,161
+workforce-1.0.11.dist-info/LICENSE,sha256=8O3tAvB02tsiXo-Mi7KiXr53mhGO52eeuY5ila3TFPQ,1072
+workforce-1.0.11.dist-info/METADATA,sha256=nMASNeMB688AQWo3ZCwWGIh3Kc-BxIHMh1ZILYytKOM,3195
+workforce-1.0.11.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+workforce-1.0.11.dist-info/entry_points.txt,sha256=csHmcPpZ2nDfBCGWCQGf--5dCNITJVeF0-7oXR2pzIo,49
+workforce-1.0.11.dist-info/top_level.txt,sha256=p1PMstih6amIDp9Xr3N-FIxxMHC5sfswsuRKnxJ1sgs,10
+workforce-1.0.11.dist-info/RECORD,,
