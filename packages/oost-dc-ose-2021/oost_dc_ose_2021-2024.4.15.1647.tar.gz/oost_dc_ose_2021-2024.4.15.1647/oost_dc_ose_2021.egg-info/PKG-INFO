@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: oost-dc-ose-2021
+Version: 2024.4.15.1647
+Author-email: Quentin Febvre <quentin.febvre@gmail.com>
+Project-URL: Repository, https://github.com/quentinf00/oost-demo-ssh-dc.git
+License-File: LICENSE
+Requires-Dist: aprl
+Requires-Dist: copernicusmarine
