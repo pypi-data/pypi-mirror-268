@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: uGot_Broadcast_message
+Version: 0.0.1
+Summary: =A broadcast communication Python Library for uGot
+Home-page: https://github.com/naOKiGor/Python_ugot_broadcast_message
+Author: naOKiGor
+Author-email: evenaoki@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: protobuf >=5.26.1
+
+uGot_Broadcast_message Python library
