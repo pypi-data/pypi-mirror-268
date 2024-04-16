@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: crawler-analytics
+Version: 0.1.13
+Summary: 
+Author: AprilNEA
+Author-email: github@sku.moe
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiohttp (>=3.9.3,<4.0.0)
+Requires-Dist: nanoid (>=2.0.0,<3.0.0)
+Requires-Dist: redis (>=5.0.3,<6.0.0)
+Description-Content-Type: text/markdown
+
+
