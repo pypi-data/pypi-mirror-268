@@ -1,0 +1,16 @@
+numpy
+requests
+
+[api]
+absl-py
+fastapi
+uvicorn
+orjson
+
+[db]
+pandas
+asyncpg
+
+[pubsub]
+msgpack
+google-cloud-pubsub
