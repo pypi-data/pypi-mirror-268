@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+python/uform/__init__.py
+python/uform/chat.py
+python/uform/gen_model.py
+python/uform/numpy_preprocessor.py
+python/uform/onnx_models.py
+python/uform/preprocessing.py
+python/uform/torch_models.py
+python/uform/torch_preprocessor.py
+python/uform.egg-info/PKG-INFO
+python/uform.egg-info/SOURCES.txt
+python/uform.egg-info/dependency_links.txt
+python/uform.egg-info/entry_points.txt
+python/uform.egg-info/requires.txt
+python/uform.egg-info/top_level.txt
