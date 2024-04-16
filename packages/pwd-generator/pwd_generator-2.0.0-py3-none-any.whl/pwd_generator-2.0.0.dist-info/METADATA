@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: pwd-generator
+Version: 2.0.0
+Summary: A simple password generator
+License: MIT
+Author: RadoTheProgrammer
+Author-email: rado@arazakar.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+This is a generator of simple, strong, memorable and easy-to-type passwords.
+
+You can install it with `pip install pwd-generator` and use the cli version:
+
+```
+
+pwdgen
+```
+
+Then the output would be like:
+
+```
+
+6Nixe#Becokace
+0Qubyby+Pomafy
+7Zuxogu:Lebuwo
+Zy&Jivulezexu0
+```
+
+To use it in a python code
+
+```python
+
+import pwdgen
+print(pwdgen.generate())
+```
+
