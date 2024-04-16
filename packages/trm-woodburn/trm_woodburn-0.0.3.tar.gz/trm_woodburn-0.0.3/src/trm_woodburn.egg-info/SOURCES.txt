@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/trm/__init__.py
+src/trm/trm.py
+src/trm_woodburn.egg-info/PKG-INFO
+src/trm_woodburn.egg-info/SOURCES.txt
+src/trm_woodburn.egg-info/dependency_links.txt
+src/trm_woodburn.egg-info/requires.txt
+src/trm_woodburn.egg-info/top_level.txt
