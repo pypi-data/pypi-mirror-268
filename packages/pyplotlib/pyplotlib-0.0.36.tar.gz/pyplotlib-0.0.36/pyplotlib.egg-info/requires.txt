@@ -1,0 +1,4 @@
+mystring
+plotly
+
+[all]
