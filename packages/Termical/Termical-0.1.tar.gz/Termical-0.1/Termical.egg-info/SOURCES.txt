@@ -1,0 +1,6 @@
+setup.py
+Termical.egg-info/PKG-INFO
+Termical.egg-info/SOURCES.txt
+Termical.egg-info/dependency_links.txt
+Termical.egg-info/requires.txt
+Termical.egg-info/top_level.txt
