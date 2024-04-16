@@ -1,0 +1,13 @@
+app/__init__.py,sha256=r0ZN_8udm6WybGwNhGvt52AIRS3gnSoV8Ufa73Wkaro,2517
+sleekify/__init__.py,sha256=6iArg1vuRFMtBUst-8MhemRyMxWktHG00o-wNTz6Nb4,1693
+sleekify/_types.py,sha256=PFmUQ0dW0zUzFGHwjLB40ja-svQpgPIjabnGwedzg7s,310
+sleekify/const.py,sha256=Sq5GOcsWw71GtvZJPRRRhb5WKOpNC4vtMjxsfC8_7nc,162
+sleekify/guards.py,sha256=EwDAOIbClHCQjxO0GXBiIReE3TFp7R8vlPoSBXDOu8E,568
+sleekify/requests.py,sha256=S8gu5hINrW0-wPt1x6iF0cYbsvpiqc8lnk8EJoi8Sxw,1160
+sleekify/responses.py,sha256=sAFwvi3wtVABGvoQXoT7Xw_kFSczoRMofgaaz12G5A8,45
+sleekify/router.py,sha256=8-ahUvZXhuCMUIHHCddkC6seE2xFqvJzSIfaSpYLVYk,3508
+sleekify/util.py,sha256=2Gm4sVV_2rqS1un32rqqOUxZMlNToCVl6CR537fFeU4,141
+sleekify-0.0.21.dist-info/METADATA,sha256=ANhXBmQbYnlB4LL77T83NrIQgIaeZ_2tg-TAdhIHcKQ,3335
+sleekify-0.0.21.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+sleekify-0.0.21.dist-info/top_level.txt,sha256=yyN1QucsAYrmL7cQHjHu329Sr1kur5zhfTCkf2EqDK8,13
+sleekify-0.0.21.dist-info/RECORD,,
