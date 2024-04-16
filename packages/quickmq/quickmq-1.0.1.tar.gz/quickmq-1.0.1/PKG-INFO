@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: quickmq
+Version: 1.0.1
+Author-email: mndrexler <mndrexler@wisc.com>
+License-Expression: MIT
+Keywords: amqp,amqp client,rabbitmq,ssec
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Requires-Dist: amqp<=5.2.0
