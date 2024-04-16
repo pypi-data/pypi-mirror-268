@@ -1,0 +1,74 @@
+{
+  "data.type": {
+    "_type": "choice",
+    "_value": ["FootballDatasetV2"]
+  },
+  "data.data_root": {
+    "_type": "choice",
+    "_value": ["/datasets/table20240415_train_2301_2312_2403_lb_5_15_label_whole_c20_maxabs_direct"]
+  },
+  "data.batch_size": {
+    "_type": "choice",
+    "_value": [96, 128, 192, 256]
+  },
+  "model.type": {
+    "_type": "choice",
+    "_value": ["STNetV4"]
+  },
+  "model.in_features": {
+    "_type": "choice",
+    "_value": [122]
+  },
+  "model.hidden_features": {
+    "_type": "choice",
+    "_value": [128, 192, 256, 320, 384, 512, 640, 768]
+  },
+  "model.out_features": {
+    "_type": "choice",
+    "_value": [20]
+  },
+  "model.n_layers": {
+    "_type": "choice",
+    "_value": [1, 5, 10, 20]
+  },
+  "model.bias": {
+    "_type": "choice",
+    "_value": [true, false]
+  },
+  "model.drop": {
+    "_type": "choice",
+    "_value": [0.0, 0.1, 0.2, 0.3, 0.5, 0.7]
+  },
+  "model.enable_skip": {
+    "_type": "choice",
+    "_value": [true, false]
+  },
+  "model.season_embeddings": {
+    "_type": "choice",
+    "_value": [300]
+  },
+  "model.season_embedding_dim": {
+    "_type": "choice",
+    "_value": [3, 5, 10]
+  },
+  "model.team_embeddings": {
+    "_type": "choice",
+    "_value": [4000]
+  },
+  "model.team_embedding_dim": {
+    "_type": "choice",
+    "_value": [10, 30, 50, 70, 100]
+  },
+  "optimizer.type": {
+    "_type": "choice",
+    "_value": ["AdamW"]
+  },
+  "optimizer.lr": {
+    "_type": "uniform",
+    "_value": [0.0002, 0.005]
+  },
+  "optimizer.weight_decay": {
+    "_type": "uniform",
+    "_value": [0.0001, 0.05]
+  }
+}
