@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: monteprediction
+Version: 1.0.5
+Summary: A Weekly Monte Carlo Game
+Home-page: https://github.com/microprediction/monteprediction
+Author: microprediction
+Author-email: peter.cotton@microprediction.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: yfinance
+
+# monteprediction
+Monte Prediction Utilities
