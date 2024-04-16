@@ -1,0 +1,46 @@
+cmake_minimum_required(VERSION 3.27)
+
+project({{ module }} VERSION 0.0.1)
+
+find_package(HDF5 REQUIRED COMPONENTS C CXX)
+find_package(OpenMP REQUIRED COMPONENTS C CXX)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+find_program(CCACHE_FOUND ccache)
+if(CCACHE_FOUND)
+    set(CMAKE_CXX_COMPILER_LAUNCHER ccache)
+endif(CCACHE_FOUND)
+
+include(FetchContent)
+
+FetchContent_Declare(Fmt
+    GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+    GIT_TAG 10.1.1
+)
+FetchContent_MakeAvailable(Fmt)
+
+add_custom_command(
+    OUTPUT
+        ${CMAKE_CURRENT_BINARY_DIR}/simulator_openmp.cpp
+        ${CMAKE_CURRENT_BINARY_DIR}/simulator_openmp_common.h
+    COMMAND
+        episim37 codegen-openmp compile -s {{ input }} -g ${CMAKE_CURRENT_BINARY_DIR}
+    DEPENDS {{ input }}
+    VERBATIM
+)
+
+SET(SIMULATOR_COMPILE_FLAGS -O3 -march=native)
+# SET(SIMULATOR_COMPILE_FLAGS -g -fno-omit-frame-pointer -O3 -march=native)
+
+add_executable(simulator_openmp
+    ${CMAKE_CURRENT_BINARY_DIR}/simulator_openmp.cpp)
+target_include_directories(simulator_openmp
+    PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
+target_link_libraries(simulator_openmp
+    hdf5::hdf5
+    hdf5::hdf5_cpp
+    OpenMP::OpenMP_CXX
+    fmt::fmt
+)
+target_compile_features(simulator_openmp PRIVATE cxx_std_17)
+target_compile_options(simulator_openmp PRIVATE ${SIMULATOR_COMPILE_FLAGS})
