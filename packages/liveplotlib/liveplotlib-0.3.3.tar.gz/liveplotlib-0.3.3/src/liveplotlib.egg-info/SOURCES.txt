@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/liveplotlib/__init__.py
+src/liveplotlib/get_file_format.py
+src/liveplotlib/if_ipynb.py
+src/liveplotlib/live_plot_only_train.py
+src/liveplotlib/live_plot_train_and_val.py
+src/liveplotlib.egg-info/PKG-INFO
+src/liveplotlib.egg-info/SOURCES.txt
+src/liveplotlib.egg-info/dependency_links.txt
+src/liveplotlib.egg-info/requires.txt
+src/liveplotlib.egg-info/top_level.txt
