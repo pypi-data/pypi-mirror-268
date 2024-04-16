@@ -1,0 +1,11 @@
+numpy
+scipy
+sympy
+gw-phenom
+pandas==1.5.1
+cloudpickle
+lalsuite
+pycbc
+scikit-learn
+matplotlib
+jupyterlab
