@@ -1,0 +1,8 @@
+setup.py
+ResoluteCNS/ResoluteCNS.py
+ResoluteCNS/__init__.py
+ResoluteCNS.egg-info/PKG-INFO
+ResoluteCNS.egg-info/SOURCES.txt
+ResoluteCNS.egg-info/dependency_links.txt
+ResoluteCNS.egg-info/requires.txt
+ResoluteCNS.egg-info/top_level.txt
