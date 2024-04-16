@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: search-engine-tool
+Version: 0.1.0
+Summary: 搜索引擎API Bing / Google / Yahoo / Baidu
+Home-page: https://github.com/freewu/search-engine-tool
+Author: bluefrog
+Author-email: bluefrog.wu@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium
+
+# 项目说明
+```
+https://github.com/bravekingzhang/search-engine-tool 项目的python版本
+
+原项目使用 node + puppeteer 
+python版本使用 selenium
+```
+
+# 安装
+```bash
+pip install search-engine-tool
+
+```
+
+# 支持搜索引擎
+```
+Bing
+Google (需要调用方自身能够访问)
+Yahoo
+```
+
+# todo 
+```
+1 处理人机验证
+2 
+
+```
+
