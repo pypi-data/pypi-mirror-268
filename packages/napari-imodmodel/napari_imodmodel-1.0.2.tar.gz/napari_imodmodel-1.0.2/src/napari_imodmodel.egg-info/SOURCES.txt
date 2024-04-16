@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+src/napari_imodmodel/__init__.py
+src/napari_imodmodel/_reader.py
+src/napari_imodmodel/_sample_data.py
+src/napari_imodmodel/napari.yaml
+src/napari_imodmodel.egg-info/PKG-INFO
+src/napari_imodmodel.egg-info/SOURCES.txt
+src/napari_imodmodel.egg-info/dependency_links.txt
+src/napari_imodmodel.egg-info/entry_points.txt
+src/napari_imodmodel.egg-info/requires.txt
+src/napari_imodmodel.egg-info/top_level.txt
+src/napari_imodmodel/_tests/__init__.py
+src/napari_imodmodel/_tests/test_reader.py

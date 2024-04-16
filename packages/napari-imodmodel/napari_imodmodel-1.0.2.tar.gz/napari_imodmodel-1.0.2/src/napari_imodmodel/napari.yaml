@@ -1,0 +1,18 @@
+name: napari-imodmodel
+display_name: Napari Imod Model
+contributions:
+  commands:
+    - id: napari-imodmodel.get_reader
+      python_name: napari_imodmodel._reader:napari_get_reader
+      title: Open data with Napari Imod Model
+    - id: napari-imodmodel.make_sample_data
+      python_name: napari_imodmodel._sample_data:make_sample_data
+      title: Load sample data from Napari Imod Model
+  readers:
+    - command: napari-imodmodel.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.mod']
+  sample_data:
+    - command: napari-imodmodel.make_sample_data
+      display_name: Napari Imod Model
+      key: unique_id.1

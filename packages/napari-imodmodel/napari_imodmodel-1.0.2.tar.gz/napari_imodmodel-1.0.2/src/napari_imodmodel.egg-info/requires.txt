@@ -1,0 +1,7 @@
+numpy
+imodmodel
+
+[testing]
+tox
+pytest
+pytest-cov
