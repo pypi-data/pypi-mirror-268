@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "fitscube"
+version = "0.3.1"
+description = ""
+authors = ["Thomson, Alec (S&A, Kensington) <AlecThomson@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+astropy = ">=5"
+numpy = "^1.20"
+tqdm = "*"
+
+[tool.poetry.scripts]
+fitscube = 'fitscube.fitscube:cli'
+stokescube = 'fitscube.stokescube:cli'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
