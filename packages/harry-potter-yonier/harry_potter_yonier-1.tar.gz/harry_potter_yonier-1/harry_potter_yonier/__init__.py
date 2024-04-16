@@ -1,0 +1,1 @@
+from harry_potter_yonier import get_one_person
