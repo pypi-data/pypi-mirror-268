@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: emtl
+Version: 0.1.1
+Summary: 东方财富交易系统
+Home-page: https://github.com/riiy/emtl
+Author: Eastmoney Trade Library
+Author-email: riiyzhou@gmail.com
+License: MIT
+Project-URL: Documentation, https://emtl.readthedocs.io/
+Project-URL: Changelog, https://emtl.readthedocs.io/en/latest/changelog.html
+Project-URL: Issue Tracker, https://github.com/riiy/emtl/issues
+Keywords: trade,东方财富,股票,交易
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+========
+Overview
+========
+
+
+
+东方财富交易系统
+
+* Free software: MIT license
+
+Installation
+============
+
+::
+
+    pip install emtl
+
+You can also install the in-development version with::
+
+    pip install https://github.com/riiy/emtl/archive/master.zip
+
+
+Documentation
+=============
+
+
+https://emtl.readthedocs.io/
+
+
+Development
+===========
+
+To run all the tests run::
+
+    tox
+
+Note, to combine the coverage data from all the tox environments run:
+
+.. list-table::
+    :widths: 10 90
+    :stub-columns: 1
+
+    - - Windows
+      - ::
+
+            set PYTEST_ADDOPTS=--cov-append
+            tox
+
+    - - Other
+      - ::
+
+            PYTEST_ADDOPTS=--cov-append tox
+
+
+Changelog
+=========
+
+0.1.0 (2024-04-16)
+------------------
+
+* First release on PyPI.
+
+
