@@ -1,0 +1,9 @@
+bias_detection_tool/__init__.py,sha256=hfQ4Yb6bGBameYzj63wdiliVs9IyJGFnGjkyS8c8YsY,26
+bias_detection_tool/clustering/__init__.py,sha256=wwOeXBA3iGmBScXsqVK0dsyqK-Fittfm5kXl5-92fmA,284
+bias_detection_tool/clustering/_bahc.py,sha256=KgIsWhOPZQLXtiu7lL3uDPExtrrfWFu4EoeOPJeBZgg,3723
+bias_detection_tool/clustering/_kmeans.py,sha256=04oCUFMg2cqdJ6xO61g3yyssoxbj-11kk6V_VuS4ayo,2126
+bias_detection_tool/clustering/_kmodes.py,sha256=vhj0BsXxNUleN2VLeHvJDDwfZ7-jdxk8pcj0em_XxgE,1978
+bias_detection_tool-0.1.0.dist-info/LICENSE,sha256=CdIlZc0AgAl0BL7Dvdy8zRqdqQQsNmL7mc0dbpDVG7Y,1076
+bias_detection_tool-0.1.0.dist-info/METADATA,sha256=hTW7mYF96e5bauMXZN9azZY_XrZsAImnzpbqI-xo5qQ,14057
+bias_detection_tool-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+bias_detection_tool-0.1.0.dist-info/RECORD,,
