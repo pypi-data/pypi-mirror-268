@@ -1,0 +1,18 @@
+provider "aws" {
+  alias = "{{ ms_name }}"
+{% if terraform_cloud %}
+  access_key = var.AWS_ACCESS_KEY_ID
+  secret_key = var.AWS_SECRET_ACCESS_KEY
+{% else %}
+  profile = "{{ profile_name }}"
+{% endif %}
+  region = {{ '"{}"'.format(aws_region) if aws_region else 'var.AWS_REGION'}}
+
+  default_tags {
+    tags = {
+      Creator = "terraform"
+      MicroService = "{{ ms_name }}"
+      Stage = "{{ stage }}"
+    }
+  }
+}
