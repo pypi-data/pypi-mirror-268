@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: ebtorch
+Version: 0.22.3
+Summary: Collection of PyTorch additions, extensions, utilities, uses and abuses
+Home-page: https://github.com/emaballarin/ebtorch
+Author: Emanuele Ballarin
+Author-email: emanuele@ballarin.cc
+License: Apache-2.0
+Keywords: Deep Learning,Machine Learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: advertorch>=0.2.4
+Requires-Dist: matplotlib>=3.8
+Requires-Dist: numpy>=1.24
+Requires-Dist: requests>=2.25
+Requires-Dist: torch>=2
+Requires-Dist: torchattacks>=3.5.1
+Requires-Dist: torchvision>=0.15
+Requires-Dist: tqdm>=4.65
+
+# :fire: `ebtorch` <a href="https://ballarin.cc/cdn/ebtorch_dalle2.png"><img src="https://ballarin.cc/cdn/ebtorch_dalle2.png" align="right" height="139" /></a>
+
+Collection of [PyTorch](https://pytorch.org/) additions, extensions, utilities, *uses and abuses*.
