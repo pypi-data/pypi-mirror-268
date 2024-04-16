@@ -1,0 +1,3 @@
+protobuf==3.19.5
+cffi==1.15.1
+betterproto==1.2.5

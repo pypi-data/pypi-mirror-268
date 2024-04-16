@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pyacp
+Version: 0.2.0
+Summary: python fastdds acp api
+Author: Li Meng
+Requires-Dist: protobuf==3.19.5
+Requires-Dist: cffi==1.15.1
+Requires-Dist: betterproto==1.2.5
