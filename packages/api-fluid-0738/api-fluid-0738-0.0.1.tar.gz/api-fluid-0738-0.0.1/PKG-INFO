@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: api-fluid-0738
+Version: 0.0.1
+Summary: Wrapper não oficial do Panda Video
+Author: Alex Abatti
+Author-email: abattialex1999@gmail.com
+License: MIT License
+Keywords: api fluid
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+<!-- Biblioteca utilizada para autenticaÃ§Ã£o de requisiÃ§Ã£o na plataforma Fluid
+MÃ©todos de GET e POST
+Busca de informaÃ§Ãµes, download de documentos e protocolo de processos -->
