@@ -1,0 +1,10 @@
+posteriors/__init__.py,sha256=kzYxsucbeZB2pmyzeeoZwe-DE-kv9hchtVZP0BVqnXc,1302
+posteriors/optim.py,sha256=173Nsb2XyFKFuQja70Id3ew5I2jf4PRA3dw2aK1Oocw,3224
+posteriors/torchopt.py,sha256=onSXvRfVQHBApDtp0fiTz7A3Mx34mY_-UD930RTOCjI,3401
+posteriors/types.py,sha256=cP_3-Q8BS9ZbQe_oecRTjO5PBs2KZ30Z89tSdr3GGSs,4095
+posteriors/utils.py,sha256=htuDUBPL1um8N9U6BeL8C_vtCO2I8dygJ9IKqKdkVLM,22478
+posteriors-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+posteriors-0.0.1.dist-info/METADATA,sha256=ljEro3SowLdjwOSNN2mDgMK3abNSn5U2CQv7F4A2cuc,6318
+posteriors-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+posteriors-0.0.1.dist-info/top_level.txt,sha256=bf5Uj6Cu6hWVzT8hHZbhM6uXUx7OrXzx0pcx7PJwSgg,11
+posteriors-0.0.1.dist-info/RECORD,,
