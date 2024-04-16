@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "matrix-gptbot"
+version = "0.3.7"
+
+authors = [
+  { name="Kumi Mitterer", email="gptbot@kumi.email" },
+]
+
+description = "Multifunctional Chatbot for Matrix"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+
+packages = [
+    "src/gptbot"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "matrix-nio[e2e]",
+    "markdown2[all]",
+    "tiktoken",
+    "python-magic",
+    "pillow",
+    ]
+
+[project.optional-dependencies]
+openai = [
+    "openai>=1.2",
+    "pydub",
+]
+
+wolframalpha = [
+    "wolframalpha",
+]
+
+e2ee = [
+    "pantalaimon>=0.10.5",
+]
+
+all = [
+  "matrix-gptbot[openai,wolframalpha,e2ee]",
+  "geopy",
+  "beautifulsoup4",
+]
+
+dev = [
+  "matrix-gptbot[all]",
+  "black",
+  "hatchling",
+  "twine",
+  "build",
+]
+
+[project.urls]
+"Homepage" = "https://kumig.it/kumitterer/matrix-gptbot"
+"Bug Tracker" = "https://kumig.it/kumitterer/matrix-gptbot/issues"
+
+[project.scripts]
+gptbot = "gptbot.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gptbot"]
