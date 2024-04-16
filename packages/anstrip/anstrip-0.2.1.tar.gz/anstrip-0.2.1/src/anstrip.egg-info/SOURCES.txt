@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/anstrip/__init__.py
+src/anstrip/__init__.pyi
+src/anstrip/py.typed
+src/anstrip.egg-info/PKG-INFO
+src/anstrip.egg-info/SOURCES.txt
+src/anstrip.egg-info/dependency_links.txt
+src/anstrip.egg-info/requires.txt
+src/anstrip.egg-info/top_level.txt
