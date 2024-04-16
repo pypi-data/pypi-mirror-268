@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: modulojordan
+Version: 0.0.1
+Summary: esta es la descripcion de mi paquete
+Author: jordan_sion
+Author-email: yordansioncossiofuentes@gamil.com
+License: MIT
+Description-Content-Type: text/markdown
+
+# este es mi proyecto 1 de modulos donde muestro el area de un circulo
+donde imgresa un numero de radio y calcula el area del numero dado 
