@@ -1,0 +1,3 @@
+livekit~=0.9
+nltk<4,>=3
+livekit-agents~=0.5.dev0
