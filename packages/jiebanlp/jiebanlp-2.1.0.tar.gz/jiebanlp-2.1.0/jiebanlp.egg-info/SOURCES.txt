@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+jiebanlp/__init__.py
+jiebanlp/constant.py
+jiebanlp/manager.py
+jiebanlp/predict.py
+jiebanlp/scheduler.py
+jiebanlp/service.py
+jiebanlp.egg-info/PKG-INFO
+jiebanlp.egg-info/SOURCES.txt
+jiebanlp.egg-info/dependency_links.txt
+jiebanlp.egg-info/top_level.txt
