@@ -1,0 +1,10 @@
+NotificationAutomationService/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+NotificationAutomationService/__main__.py,sha256=ghPYVtf7c6PMjhEM5lH5Kd5xptVb73gjg8pnR7I99tw,164
+NotificationAutomationService/api.py,sha256=R6cNl6JYv4el2O7iZz3ZO1lkor4mRa0HgJhULrt5zoI,1615
+NotificationAutomationService/const.py,sha256=LiRM5oi2L9wwMieqjaNZfbOlQ7KLWpN4VYinvMU93Rg,424
+NotificationAutomationService/service.py,sha256=UL4YcIHVv60jPN3e1vEZ4wUzC3f6oQV-wdVe1EO4vkI,19907
+pih_ntfc_auto-0.15.dist-info/METADATA,sha256=MfJHtJ8xv6NutcchSpbDPA0gHjmHUbLSv4xQ2k-5zFs,291
+pih_ntfc_auto-0.15.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pih_ntfc_auto-0.15.dist-info/entry_points.txt,sha256=8UD5wk5USbZD--sDF8PmFLkQue9CNxNIkxpYbvGyE5E,79
+pih_ntfc_auto-0.15.dist-info/top_level.txt,sha256=hMdaZMM6wP84Um8MQKVhozKOCxbAP5XRQTreAhfTNYM,30
+pih_ntfc_auto-0.15.dist-info/RECORD,,
