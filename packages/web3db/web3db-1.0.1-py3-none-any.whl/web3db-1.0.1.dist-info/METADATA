@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: web3db
+Version: 1.0.1
+Summary: Database for web3
+Author: timertimertimer
+Author-email: timerkhan2002@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: SQLAlchemy (>=2.0.29,<3.0.0)
+Requires-Dist: aptos-sdk (==0.7.1)
+Requires-Dist: asyncpg (>=0.29.0,<0.30.0)
+Requires-Dist: base58 (>=2.1.1,<3.0.0)
+Requires-Dist: bitcoin-utils (>=0.6.6,<0.7.0)
+Requires-Dist: eth-account (>=0.12.2,<0.13.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: python-gnupg (>=0.5.2,<0.6.0)
+Requires-Dist: solana (>=0.33.0,<0.34.0)
