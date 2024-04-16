@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: drivelinepy
+Version: 1.7.1
+Summary: A Python package for Driveline Baseball API interactions
+Home-page: https://github.com/drivelineresearch/drivelinepy
+Author: Garrett York
+Author-email: garrett@drivelinebaseball.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Drivelinepy
+
+## Installation
+
+```
+pip install drivelinepy
+```
+
+[Using Environment Variables](/docs/env-variables.md).
+
+## System Specific Docs
+- [Slack API](/docs/slack-api.md)
+- [TRAQ API](/docs/traq-api.md)
+- [Virtuagym API](/docs/virtuagym-api.md)
+- [Zoho APIs](/docs/zoho-overview.md)
+
+
+
