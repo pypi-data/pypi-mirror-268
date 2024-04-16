@@ -1,0 +1,44 @@
+#!python
+from __future__ import absolute_import
+import click
+import importlib.metadata
+
+from tokhelper import TokHelper
+def get_package_version(package_name):
+    try:
+        version = importlib.metadata.version(package_name)
+        return version
+    except importlib.metadata.PackageNotFoundError:
+        return None
+
+VERSION = get_package_version('tokive')
+
+@click.group()
+@click.version_option(version=VERSION, prog_name='tokive')
+def tokive():  # pragma: no cover
+    pass
+
+@click.command()
+@click.option('--id', help='id user')
+@click.option('--room', help=' room')
+@click.option('--live_id', help=' live_id')
+def solve_auto(id, room, live_id):
+    if id != None :
+        print(f"solve:{id}- {room} - {live_id}")
+        stream_id = live_id.split("?")[0].replace("stream-", "").strip()
+        tokh=TokHelper()
+        tokh.solve_auto_helper(id,room, stream_id)
+    else:
+        print("{}")
+@click.command()
+@click.option('--id', help='id user')
+def live_create(id):
+    if id != None :
+        tokh=TokHelper()
+        tokh.live_create(id)
+    else:
+        print("{}")
+tokive.add_command(solve_auto)
+tokive.add_command(live_create)
+if __name__ == '__main__':  # pragma: no cover
+    tokive()
