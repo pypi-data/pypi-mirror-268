@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: lnbits
+Version: 0.12.6
+Summary: LNbits, free and open-source Lightning wallet and accounts system.
+Author: Alan Bits
+Author-email: alan@lnbits.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: liquid
+Requires-Dist: bcrypt (>=4.1.1,<5.0.0)
+Requires-Dist: bech32 (==1.2.0)
+Requires-Dist: bolt11 (==2.0.5)
+Requires-Dist: click (==8.1.7)
+Requires-Dist: ecdsa (==0.18.0)
+Requires-Dist: embit (==0.7.0)
+Requires-Dist: environs (==9.5.0)
+Requires-Dist: fastapi (==0.109.2)
+Requires-Dist: fastapi-sso (>=0.9.1,<0.10.0)
+Requires-Dist: grpcio (==1.58.0)
+Requires-Dist: httpx (==0.25.0)
+Requires-Dist: itsdangerous (>=2.1.2,<3.0.0)
+Requires-Dist: jinja2 (==3.1.3)
+Requires-Dist: lnurl (==0.4.2)
+Requires-Dist: loguru (==0.7.2)
+Requires-Dist: packaging (==23.1)
+Requires-Dist: passlib (>=1.7.4,<2.0.0)
+Requires-Dist: protobuf (==4.24.3)
+Requires-Dist: psycopg2-binary (==2.9.7)
+Requires-Dist: pycryptodomex (==3.19.1)
+Requires-Dist: pydantic (==1.10.9)
+Requires-Dist: pyln-client (==23.8)
+Requires-Dist: pyqrcode (==1.2.1)
+Requires-Dist: python-crontab (==3.0.0)
+Requires-Dist: python-jose (>=3.3.0,<4.0.0)
+Requires-Dist: pywebpush (==1.14.0)
+Requires-Dist: secp256k1 (==0.14.0)
+Requires-Dist: shortuuid (==1.0.11)
+Requires-Dist: slowapi (==0.1.9)
+Requires-Dist: sqlalchemy (==1.3.24)
+Requires-Dist: sqlalchemy-aio (==0.17.0)
+Requires-Dist: sse-starlette (==1.6.5)
+Requires-Dist: typing-extensions (==4.8.0)
+Requires-Dist: uvicorn (==0.23.2)
+Requires-Dist: uvloop (==0.17.0)
+Requires-Dist: wallycore (>=1.0.0,<2.0.0) ; extra == "liquid"
+Requires-Dist: websocket-client (==1.6.3)
+Requires-Dist: websockets (==11.0.3)
