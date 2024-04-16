@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: internetnl_domain_analyse
+Version: 1.9.9
+Summary: A tool to create image belong to internetnl time series
+Home-page: https://github.com/eelcovv/internetnl_domain_analyse
+Author: Eelco van Vliet
+Author-email: 
+License: MIT
+Project-URL: Documentation, https://internetnl-domain-analyse.readthedocs.io/en/latest/
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Description-Content-Type: text/x-rst; charset=UTF-8
+License-File: LICENSE.txt
+License-File: AUTHORS.rst
+Requires-Dist: importlib-metadata; python_version < "3.8"
+Requires-Dist: weighted_sample_statistics
+Requires-Dist: cbsplotlib
+Requires-Dist: PyLaTeX
+Requires-Dist: PyYAML
+Requires-Dist: tldextract
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: internetnl_scan
+Requires-Dist: importlib_metadata
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Requires-Dist: requests
+Requires-Dist: openpyxl
+Requires-Dist: internetnl-scan
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: pytest-cov; extra == "testing"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: tox; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+
+=========================
+internetnl_domain_analyse
+=========================
+
+
+Een tool om internet nl scan data te analyseren en plotten
+
+
+Description
+===========
+
+A longer description of your project goes here...
+
+
+.. _pyscaffold-notes:
+
+Note
+====
+
+This project has been set up using PyScaffold 4.0.1. For details and usage
+information on PyScaffold see https://pyscaffold.org/.
