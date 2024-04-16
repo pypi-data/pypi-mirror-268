@@ -1,0 +1,9 @@
+README.md
+setup.py
+tokeninputblobs/__init__.py
+tokeninputblobs/tokenizer.py
+tokeninputblobs.egg-info/PKG-INFO
+tokeninputblobs.egg-info/SOURCES.txt
+tokeninputblobs.egg-info/dependency_links.txt
+tokeninputblobs.egg-info/requires.txt
+tokeninputblobs.egg-info/top_level.txt
