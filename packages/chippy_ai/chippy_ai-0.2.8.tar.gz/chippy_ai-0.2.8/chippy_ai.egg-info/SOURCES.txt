@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+setup.py
+chippy_ai/__init__.py
+chippy_ai/main.py
+chippy_ai.egg-info/PKG-INFO
+chippy_ai.egg-info/SOURCES.txt
+chippy_ai.egg-info/dependency_links.txt
+chippy_ai.egg-info/entry_points.txt
+chippy_ai.egg-info/top_level.txt
