@@ -1,0 +1,2 @@
+[console_scripts]
+smtp-proxy = smtp_proxy.smtp_proxy:main
