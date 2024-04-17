@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyeasyedit/LexersCustom.py
+pyeasyedit/__init__.py
+pyeasyedit/__main__.py
+pyeasyedit.egg-info/PKG-INFO
+pyeasyedit.egg-info/SOURCES.txt
+pyeasyedit.egg-info/dependency_links.txt
+pyeasyedit.egg-info/entry_points.txt
+pyeasyedit.egg-info/requires.txt
+pyeasyedit.egg-info/top_level.txt
+pyeasyedit/images/easyedit.png
+pyeasyedit/images/icon.png
+pyeasyedit/images/wright_bros.png
