@@ -1,0 +1,10 @@
+*.pyc
+__pycache__
+*.egg-info
+docs/_build/
+.coverage*
+dist/
+.python-version
+.tox/
+build/
+build-check-description/
