@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/__init__.py
+src/kardb_local.py
+src/kardb_mysql.py
+src/kardb.egg-info/PKG-INFO
+src/kardb.egg-info/SOURCES.txt
+src/kardb.egg-info/dependency_links.txt
+src/kardb.egg-info/requires.txt
+src/kardb.egg-info/top_level.txt
