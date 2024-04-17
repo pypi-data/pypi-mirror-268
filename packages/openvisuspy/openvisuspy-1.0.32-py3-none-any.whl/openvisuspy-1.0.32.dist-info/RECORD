@@ -1,0 +1,13 @@
+openvisuspy/__init__.py,sha256=1Vqxjb_yVgjcz8ktAHF5dk3RLqd8k8XVpphp6T84az4,106
+openvisuspy/backend.py,sha256=EU5jvVP8qgKSAZClvHQSlhCSb9sWgkCOe6KxqWYu4pM,18961
+openvisuspy/probe.py,sha256=Mpp6FNZDth1Ohpoero8Tsdo8vDVVIPG42eb4GaYXggY,14855
+openvisuspy/slice.py,sha256=YkFhUrEnT7qAKaS7ZsEEXTmCRtFynbl80goFO3yjZ1M,44852
+openvisuspy/utils.py,sha256=0YEIqfUIL1UASN-CTH6ZIFfvj_L1UUU5_RbaZuUUI84,13290
+openvisuspy/dashboards/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openvisuspy/dashboards/app_hooks.py,sha256=bLBBVhJDIx1UX7c4QkO8q6SHWgeaO47UBcnoI-hR6AQ,475
+openvisuspy/dashboards/main.py,sha256=F3ltOZAb60tfZnVGxkmw1GioTJvYEpoH8eEN_fNm_1I,1184
+openvisuspy-1.0.32.dist-info/LICENSE,sha256=6e8f7JrZAwWAqUNg-mtEFpikTHZvcDrSGPViHeAlgrw,1849
+openvisuspy-1.0.32.dist-info/METADATA,sha256=8veCIvDmgY8tYsaWO0p10Ry0GAtXObMiklfChlFTw08,6519
+openvisuspy-1.0.32.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+openvisuspy-1.0.32.dist-info/top_level.txt,sha256=o9WLF82UoNRuLU1MIOWVUfHBb7u7oGs9w2i6lfhRy_Y,12
+openvisuspy-1.0.32.dist-info/RECORD,,
