@@ -1,0 +1,15 @@
+void {{ name }}() {
+    size_type size = 0;
+    for (size_type x = {{ set.value.name | mangle }}->thread_start(); x < {{ set.value.name | mangle }}->thread_end(); x++) {
+        const auto b = {{ function.value.name | mangle }}(x);
+        {{ set.value.name | mangle }}->is_in[x] = b;
+        size += b;
+    }
+
+    {{ set.value.name | mangle }}->thread_size[THREAD_IDX] = size;
+
+    #pragma omp barrier
+
+    #pragma omp master
+    {{ set.value.name | mangle }}->update_size();
+}
