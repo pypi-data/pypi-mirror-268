@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+ptcr.egg-info/PKG-INFO
+ptcr.egg-info/SOURCES.txt
+ptcr.egg-info/dependency_links.txt
+ptcr.egg-info/top_level.txt
