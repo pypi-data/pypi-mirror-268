@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: ant-fin-agent-framework
+Version: 0.0.2b1
+Summary: AntFinAgentFramework is a framework for developing applications powered by multi-agent base on large language model.
+Home-page: https://gitee.com/ant-fin-agent-framework/ant-fin-agent-framework
+Author: AntGroup
+Author-email: jerry.zzw@antgroup.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.31.0
+Requires-Dist: cffi >=1.15.1
+Requires-Dist: flask >=2.2
+Requires-Dist: werkzeug >=2.2.2
+Requires-Dist: langchain >=0.0.352
+Requires-Dist: langchain-core >=0.1.3
+Requires-Dist: openai >=1.13.3
+Requires-Dist: tiktoken >=0.5.2
+Requires-Dist: loguru >=0.7.2
+Requires-Dist: flask-cors >=4.0.0
+Requires-Dist: SQLAlchemy >=2.0.25
+Requires-Dist: pydantic >=2.6.4
+Requires-Dist: gunicorn >=21.2.0
+Requires-Dist: chromadb >=0.4.24
+Requires-Dist: sphinx >=7.2.6
+Requires-Dist: sphinx-rtd-theme >=2.0.0
+Requires-Dist: aliyun-log-python-sdk >=0.8.8
+Requires-Dist: googleapis-common-protos >=1.63.0
+Requires-Dist: myst-parser >=2.0.0
+
+# AntFinAgentFramework（AFAF）
+
+## Overview
+AntFinAgentFramework is a framework for developing applications powered by multi-agent base on large language model.  It provides all the essential components for building a single agent, and a multi-agent collaboration mechanism which  serves as a pattern factory that allowing developers to buid and customize multi-agent collaboration patterns. With this framework,  developers can easily construct multi-agent applications, and share the pattern practices from different technical  and business fields.
+
+The framework will come with serveral pre-install multi-agent collaboration patterns which have been proven effective in real business scenarios, and will continue to be enriched in the future. Patterns that are currently about to be released include:
+
+- PEER pattern：
+This pattern utilizes four distinct agent roles: Plan, Execute, Express, and Review, to achieve a multi-step breakdown and sequential execution of a complex task. It also performs autonomous iteration based on evaluative feedback which enhancing performance in reasoning and analytical tasks. 
+
+
+- DOE pattern：
+This pattern consists of three agents: Data-fining agent, which is designed to solve data-intensive and high-computational-precision task; Opinion-inject agent, which combines the data results from first agent and the expert opinions which are pre-collected and structured; the third agent, Express agent generates the final result base on given document type and language style.
+
+More patterns are coming soon...
