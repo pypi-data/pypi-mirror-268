@@ -1,0 +1,7 @@
+rich
+openai
+mistralai
+python-dotenv
+lark
+databases
+knowledge_engineer

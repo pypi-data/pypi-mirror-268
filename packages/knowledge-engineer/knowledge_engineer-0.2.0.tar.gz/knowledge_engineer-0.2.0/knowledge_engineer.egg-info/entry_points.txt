@@ -1,0 +1,2 @@
+[console_scripts]
+knowledge-engineer = knowledge_engineer.ke:main
