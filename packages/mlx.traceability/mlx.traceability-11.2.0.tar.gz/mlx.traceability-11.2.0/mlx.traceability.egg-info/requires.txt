@@ -1,0 +1,7 @@
+Sphinx<8.0,>=2.4.5
+sphinxcontrib-jquery!=3.0.0,>=2.0.0
+docutils
+matplotlib<4.0
+natsort
+python-decouple
+requests
