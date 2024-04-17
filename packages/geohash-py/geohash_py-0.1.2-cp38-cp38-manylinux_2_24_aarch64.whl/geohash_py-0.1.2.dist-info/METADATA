@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: geohash-py
+Version: 0.1.2
+Classifier: Programming Language :: Rust
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
