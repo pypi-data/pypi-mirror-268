@@ -1,0 +1,2 @@
+[console_scripts]
+vidsrc-search = vidsrc_search.__main__:main
