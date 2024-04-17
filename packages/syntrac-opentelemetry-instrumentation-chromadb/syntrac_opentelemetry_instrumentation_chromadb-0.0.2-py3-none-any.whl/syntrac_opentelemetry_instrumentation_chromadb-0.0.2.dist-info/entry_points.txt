@@ -1,0 +1,3 @@
+[opentelemetry_instrumentor]
+chromadb=syntrac_opentelemetry.instrumentation.chromadb:ChromaInstrumentor
+
