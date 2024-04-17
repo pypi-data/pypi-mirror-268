@@ -1,0 +1,3 @@
+iso8601
+requests<3,>=1
+htimeseries<8,>=7
