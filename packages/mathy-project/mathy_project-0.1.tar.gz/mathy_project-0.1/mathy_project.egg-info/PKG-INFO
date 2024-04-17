@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mathy-project
+Version: 0.1
+Summary: Package made for an aptitude test, which contains functions for basic math operations
+Author: Dedeepya Avancha
+Author-email: Avancha.Dedeepya@iiitb.ac.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE.txt
