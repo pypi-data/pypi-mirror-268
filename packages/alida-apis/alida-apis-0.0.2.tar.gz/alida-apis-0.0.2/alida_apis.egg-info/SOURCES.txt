@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+alida_apis.egg-info/PKG-INFO
+alida_apis.egg-info/SOURCES.txt
+alida_apis.egg-info/dependency_links.txt
+alida_apis.egg-info/requires.txt
+alida_apis.egg-info/top_level.txt
+alidaapis/__init__.py
+alidaapis/apis.py
+alidaapis/minio_utils.py
+alidaapis/utils.py
