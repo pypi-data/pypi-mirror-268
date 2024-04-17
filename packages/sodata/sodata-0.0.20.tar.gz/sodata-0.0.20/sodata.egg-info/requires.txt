@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+jionlp
+regex
+datasketch
+tqdm
+langchain
+jieba
+pyyaml
