@@ -1,0 +1,7 @@
+datetime
+eccodes
+ecmwflibs
+cfgrib
+xarray
+requests
+netcdf4
