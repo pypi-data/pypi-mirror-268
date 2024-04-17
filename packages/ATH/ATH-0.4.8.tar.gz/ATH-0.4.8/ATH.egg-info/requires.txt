@@ -1,0 +1,12 @@
+pyttsx3
+cryptography
+speechrecognition
+asyncio
+discord
+discord.py
+telebot
+pyscreenshot
+python-dotenv
+qrcode[pil]
+numpy
+pydub
