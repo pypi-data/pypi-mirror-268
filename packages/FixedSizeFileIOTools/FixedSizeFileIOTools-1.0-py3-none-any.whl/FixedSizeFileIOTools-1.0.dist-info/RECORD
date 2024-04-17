@@ -1,0 +1,11 @@
+FixedSizeFileIOTools/__init__.py,sha256=ea7boINTRZ443ZF4HajESBo6OXQljmf6NypdhUj77g8,122
+FixedSizeFileIOTools/cli.py,sha256=-Nk72xnQoVqy3lYPRuvpo_WSLvmCZ8rF61lywP80Y7o,16368
+FixedSizeFileIOTools/file_handler.py,sha256=s9fcG5bcUMVuvHavN0fkly0ZMu3R1Uz3C6z30khfDfM,20571
+FixedSizeFileIOTools/models.py,sha256=eQf0Wg81V7JbOpQYr5LTHMYi1IWFdRLhq2_tLUeyhbU,19703
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_file_handler.py,sha256=JDU7sFwAXjHmyUbamVKbWDYzYV1k6OQ8NxJstvn2VYA,10395
+tests/test_models.py,sha256=JNhZAiPfEagXGDJ6yLNP_xtqb-StP7WKI5fXT4bjri0,7405
+FixedSizeFileIOTools-1.0.dist-info/METADATA,sha256=ZvFXatHfIC7Sx05RH9XMfW9H9nTPU_1aXwclRujMs1I,164
+FixedSizeFileIOTools-1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+FixedSizeFileIOTools-1.0.dist-info/top_level.txt,sha256=ehkmUUytal87VTN1u-vrT7u1PEQOrQeHmHY34eoANkk,27
+FixedSizeFileIOTools-1.0.dist-info/RECORD,,
