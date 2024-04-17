@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_tursopy_client.py
+tests/test_tursopy_db.py
+tursopy/__init__.py
+tursopy/dataclasses.py
+tursopy/db.py
+tursopy/endpoints.py
+tursopy/exceptions.py
+tursopy/tursopy.py
+tursopy.egg-info/PKG-INFO
+tursopy.egg-info/SOURCES.txt
+tursopy.egg-info/dependency_links.txt
+tursopy.egg-info/requires.txt
+tursopy.egg-info/top_level.txt
