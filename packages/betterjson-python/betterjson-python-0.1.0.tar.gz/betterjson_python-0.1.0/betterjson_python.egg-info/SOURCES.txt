@@ -1,0 +1,11 @@
+README.md
+setup.py
+betterjson/__version__.py
+betterjson/betterjson.py
+betterjson/modules/files.py
+betterjson/modules/format.py
+betterjson/modules/parse.py
+betterjson_python.egg-info/PKG-INFO
+betterjson_python.egg-info/SOURCES.txt
+betterjson_python.egg-info/dependency_links.txt
+betterjson_python.egg-info/top_level.txt

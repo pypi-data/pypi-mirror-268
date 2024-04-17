@@ -1,0 +1,79 @@
+# betterjson-python
+`betterjson-python` is a Python library implementing an extension to the JSON format with additional features such as adding comments and mathematical operations.
+
+## Installation
+You can install the library via pip:
+
+```bash
+pip install betterjson-python
+```
+
+## Usage
+### Python
+```python
+import betterjson-python as bj
+
+# Example usage
+data = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+
+# Writing JSON data to a file
+bj.dump(data, "example.json")
+
+# Loading JSON data from a file
+loaded_data = bj.load("example.json")
+print(loaded_data)
+
+# Formatting a dictionary as a JSON string
+formatted_json = bj.format(data)
+print(formatted_json)
+```
+
+### C++
+(comming soon)
+
+## Features
+- Comment Support: BetterJSON allows you to include comments in your JSON files, making them more readable
+- Mathematical Operations: You can perform mathematical operations directly json file
+
+## Example
+### Normal json
+```cpp
+{
+    "name": "Alice",
+    "age": 25, 
+    "--comment": "this is a comment",
+    "salary": 50000,
+    "--comment": "we need to calculate json inside the program",
+    "bonus": 0
+}
+```
+### BetterJSON
+```cpp
+{
+    "name": "Alice",
+    "age": 25, // this is a comment
+    "salary": 50000,
+    "bonus": 50000 * 0.1 // calculating bonus as 10% of salary 
+}
+```
+
+You can load this file using BetterJSON:
+```python
+import BetterJSON as bj
+
+# Load JSON data
+data = bj.load("data.json")
+
+# Print loaded data
+print(data)
+
+# Format loaded data as JSON string
+formatted_json = bj
+```
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/ruxixa/BetterJSON/blob/main/LICENSE) file for details.
