@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: authpolicy
+Version: 0.1.1
+Summary: Python SDK for AuthPolicy.com
+Home-page: https://github.com/AuthPolicy/sdk-python
+Author: Arpit Maheshwari
+Author-email: hello@authpolicy.com
+License: MIT
+Keywords: auth policy,permissions,authentication,authorization,rbac,abac,permissions as service
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+# AuthPolicy - Python SDK
+
+For detailed documentation, please visit https://authpolicy.com/documentation/getting-started/
+
+
+## Installation
+
+```bash
+  pip install authpolicy
+```
+    
+## Documentation
+
+[Documentation](https://authpolicy.com/documentation/getting-started/)
+
+
+## Support
+
+For support, email us at hello@authpolicy.com
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
