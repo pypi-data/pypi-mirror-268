@@ -1,0 +1,3 @@
+dist
+songbirdcli
+tests
