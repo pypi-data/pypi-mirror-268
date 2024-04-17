@@ -1,0 +1,8 @@
+loguru
+dbutils
+pymysql
+django==3.0.0
+djangorestframework
+drf-yasg
+asyncio
+aiofiles
