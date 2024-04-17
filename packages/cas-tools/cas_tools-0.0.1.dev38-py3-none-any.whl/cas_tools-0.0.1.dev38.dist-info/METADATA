@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: cas-tools
+Version: 0.0.1.dev38
+Summary: Cell Annotation Schema tools.
+Home-page: https://github.com/cellannotation/cas-tools
+Author: 
+License: Apache-2.0 license
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: anndata ==0.10.3
+Requires-Dist: cellxgene-census ==1.10.2
+Requires-Dist: openpyxl ==3.1.2
+Requires-Dist: dataclasses-json ==0.6.4
+Requires-Dist: pandas ==2.2.1
+Requires-Dist: ruamel.yaml ==0.18.6
+Requires-Dist: jsonschema ==4.4.0
+Requires-Dist: ordered-set ==4.1.0
+Requires-Dist: deepmerge ==1.1.0
+Requires-Dist: cell-annotation-schema ==0.2b0
+Requires-Dist: h5py ==3.10.0
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: marshmallow ==3.21.1
+Requires-Dist: python-dateutil ==2.9.0
+
+# CAS Tools
+
+**Note: CAS-Tools is currently under active development. Its behavior and interfaces may change as new features are added and existing ones are refined. Use with caution in production environments.**
+
+CAS-Tools is a comprehensive utility package designed to facilitate the effective use and manipulation of the Cell Annotation Schema (CAS) in single-cell transcriptomics data analysis.
+
+## Overview
+
+The Cell Annotation Schema (CAS) addresses the inherent variability in annotating cell types/classes in single-cell transcriptomics datasets. While annotations lack the reasoning behind the choice of labels, CAS enables the recording of additional metadata about individual cell type annotations. This includes marker genes used as evidence and details of automated annotation transfer.
+
+CAS-Tools simplifies the utilization of CAS by offering a set of programmatically accessible operations to:
+
+- Integration with AnnData: Flatten CAS onto observations in AnnData format for seamless integration and analysis.
+- Flatten Onto Dataframes: Decompose the schema into individual tables suitable for use in dataframes/TSVs.
+- Validate Annotations: Validate annotations against the CAS standard to ensure compliance and consistency.
+
+## Installation
+
+You can install CAS-Tools [pypi package](https://pypi.org/project/cas-tools/) using `pip`:
+
+```commandline
+pip install cas-tools
+```
+
+## Getting Started
+
+Please see related guides:
+
+- [Command line interface](docs/cli.md)
+
+
+
