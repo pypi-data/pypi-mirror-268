@@ -1,0 +1,14 @@
+numpy
+scipy
+pyyaml
+packaging
+torch>=2.2.0
+transformers>=4.37
+tokenizers>=0.13.3
+sentencepiece
+protobuf
+tiktoken
+gradio
+accelerate>=0.22.0
+optimum>=1.12.0
+bitsandbytes>=0.41.1
