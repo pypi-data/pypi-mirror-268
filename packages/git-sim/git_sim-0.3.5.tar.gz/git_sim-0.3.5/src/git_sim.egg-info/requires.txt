@@ -1,0 +1,13 @@
+git-dummy
+gitpython
+manim
+opencv-python-headless
+pydantic_settings
+typer
+fonttools
+
+[dev]
+black
+numpy
+pillow
+pytest
