@@ -1,0 +1,34 @@
+externalId: product_CogShop
+space: "{{power_ops_models}}"
+version: "1"
+name: CogShop
+description: CogShop data model
+views:
+  - externalId: ShopCase
+    space: "{{power_ops_models}}"
+    type: view
+    version: "{{version}}"
+  - externalId: ShopScenario
+    space: "{{power_ops_models}}"
+    type: view
+    version: "{{version}}"
+  - externalId: ShopCommands
+    space: "{{power_ops_models}}"
+    type: view
+    version: "{{version}}"
+  - externalId: ShopAttributeMapping
+    space: "{{power_ops_models}}"
+    type: view
+    version: "{{version}}"
+  - externalId: ShopModel
+    space: "{{power_ops_models}}"
+    type: view
+    version: "{{version}}"
+  - externalId: PowerAsset
+    space: "{{power_ops_models}}"
+    type: view
+    version: "{{version}}"
+  - externalId: ShopFile
+    space: "{{power_ops_models}}"
+    type: view
+    version: "{{version}}"
