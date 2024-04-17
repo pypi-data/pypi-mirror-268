@@ -1,0 +1,4 @@
+baseapp-core[graphql]>=0.2.9
+baseapp-auth>=0.2
+baseapp-notifications>=0.1
+baseapp-reactions>=0.1.8
