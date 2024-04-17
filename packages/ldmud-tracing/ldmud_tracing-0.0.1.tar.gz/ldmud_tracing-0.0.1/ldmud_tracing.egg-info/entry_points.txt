@@ -1,0 +1,5 @@
+[ldmud_efun]
+profile_call = ldmud_tracing.profile:efun_profile_call
+
+[ldmud_type]
+profile_result = ldmud_tracing.profile:profile_result
