@@ -1,0 +1,8 @@
+
+[dev]
+isort
+black
+flake8
+pylint
+pytest
+hypothesis
