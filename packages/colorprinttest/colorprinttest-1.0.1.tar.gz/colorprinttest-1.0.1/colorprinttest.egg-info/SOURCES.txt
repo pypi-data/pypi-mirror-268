@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+colorprinttest/__init__.py
+colorprinttest/colorprinttest.py
+colorprinttest.egg-info/PKG-INFO
+colorprinttest.egg-info/SOURCES.txt
+colorprinttest.egg-info/dependency_links.txt
+colorprinttest.egg-info/top_level.txt
