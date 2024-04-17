@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: anyerplint
+Version: 0.2.91
+Summary: anyerplint
+Project-URL: Homepage, https://github.com/Basware/anyerplint
+Project-URL: Repository, https://github.com/Basware/anyerplint
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: chardet
+Requires-Dist: PyYAML
+Requires-Dist: rich
+
+# anyerplint
+Static checker for AnyErp, a proprietary scripting and integration platform
