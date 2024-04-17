@@ -1,0 +1,8 @@
+pelicanfs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pelicanfs/core.py,sha256=zYvOdO6iSARN8so4xzPqd3Ux7L0p-bQ-up__HhtKlhI,10002
+pelicanfs/dir_header_parser.py,sha256=i2R0U7Bnqwnb30dXlqPkNqck8KVqpbCE8EXg9h4LzJU,1868
+pelicanfs-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pelicanfs-0.0.1.dist-info/METADATA,sha256=frBYd6yh_VT2Or05ZBoWwH2tE7sBUB6-P1IaMgDxsHg,1210
+pelicanfs-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pelicanfs-0.0.1.dist-info/top_level.txt,sha256=BxBxzkxBCbS4hl-pr5-W5vf4eqOaHAYq3TAQEsue6gA,10
+pelicanfs-0.0.1.dist-info/RECORD,,
