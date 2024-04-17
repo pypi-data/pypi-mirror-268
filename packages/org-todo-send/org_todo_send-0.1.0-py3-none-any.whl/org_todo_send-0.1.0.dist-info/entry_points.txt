@@ -1,0 +1,3 @@
+[console_scripts]
+org-todo-send=org_todo_send.main:app
+

@@ -1,0 +1,8 @@
+org_todo_send/__init__.py,sha256=1oLL20yLB1GL9IbFiZD8OReDqiCpFr-yetIR6x1cNkI,23
+org_todo_send/main.py,sha256=4Inc_1FC-eKqNzYryuIG-TBLew8P6HWPdpXxNK72PKg,1713
+org_todo_send/parse.py,sha256=23KtD8nnzEyhNJQd3AAlRUcmVyWyMEIB_zIIhs5TVI4,2104
+org_todo_send/recipients.toml,sha256=LMg6ms7Y-vBLc0joMLdOsM5cr5v0VqqSEAg9ZVbBu1A,114
+org_todo_send-0.1.0.dist-info/METADATA,sha256=XUjTQE6aZMSx4zGr_MX_5bZzat7ihLRv21WAOIfIx3E,1522
+org_todo_send-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+org_todo_send-0.1.0.dist-info/entry_points.txt,sha256=SPuTWBOCMOy8e3DE6VJq4J_NnGF9zQ-mOMYd_-uG7E0,56
+org_todo_send-0.1.0.dist-info/RECORD,,
