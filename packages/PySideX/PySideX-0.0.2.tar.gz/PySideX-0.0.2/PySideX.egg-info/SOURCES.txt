@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+PySideX/__init__.py
+PySideX.egg-info/PKG-INFO
+PySideX.egg-info/SOURCES.txt
+PySideX.egg-info/dependency_links.txt
+PySideX.egg-info/requires.txt
+PySideX.egg-info/top_level.txt
