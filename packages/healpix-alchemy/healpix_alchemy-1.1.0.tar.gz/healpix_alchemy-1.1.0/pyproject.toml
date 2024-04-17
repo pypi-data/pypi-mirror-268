@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "healpix-alchemy"
+version = "1.1.0"
+description = "SQLAlchemy extensions for HEALPix spatially indexed astronomy data"
+readme = "README.md"
+authors = ["Leo Singer <leo.singer@ligo.org>"]
+license = "BSD-3-clause"
+repository = "https://github.com/skyportal/healpix-alchemy"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering :: Astronomy"
+]
+include = [
+    { path = "tests", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+astropy = "*"
+astropy_healpix = "*"
+mocpy = ">=0.12.2"
+sqlalchemy = ">=1.4"
+
+[tool.poetry.group.dev.dependencies]
+astroquery = "*"
+numpy = "*"
+pandas = "*"
+psycopg = { version = "*", extras = ["binary"] }
+pytest = "*"
+pytest-benchmark = "*"
+pytest-doctestplus = "*"
+pytest-postgresql = ">=4.0.0"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-glob *.md"
+doctest_plus = true
+doctest_optionflags = [
+    "ELLIPSIS",
+    "FLOAT_CMP"
+]
+filterwarnings = [
+    "error::sqlalchemy.exc.SAWarning",
+    "error::DeprecationWarning",
+    "error::PendingDeprecationWarning"
+]
+
+[tool.coverage.run]
+omit = [
+    "*/conftest.py",
+    "*/tests/*"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
