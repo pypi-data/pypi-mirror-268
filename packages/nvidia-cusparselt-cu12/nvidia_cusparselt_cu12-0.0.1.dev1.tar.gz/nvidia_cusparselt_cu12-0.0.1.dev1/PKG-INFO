@@ -1,0 +1,6 @@
+Metadata-Version: 2.3
+Name: nvidia-cusparselt-cu12
+Version: 0.0.1.dev1
+Summary: A placeholder package to hold the name cusparselt-cu12 to request a size increase.
+Author-email: Nvidia CUDA Installer Team <compute_installer@nvidia.com>
+Requires-Python: >=3.7
