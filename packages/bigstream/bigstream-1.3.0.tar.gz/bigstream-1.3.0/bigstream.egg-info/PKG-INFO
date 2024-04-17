@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bigstream
+Version: 1.3.0
+Summary: Tools for distributed alignment of massive images
+Home-page: https://github.com/JaneliaScicomp/bigstream
+Author: Greg M. Fleishman
+Author-email: greg.nli10me@gmail.com
+License: BSD-3
+License-File: LICENSE.md
