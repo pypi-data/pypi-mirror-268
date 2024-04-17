@@ -1,0 +1,13 @@
+that_depends/__init__.py,sha256=y3V09PRbmdBC_jMKnFEeqdR0P1rxYvOiSDpBzD0KeaY,164
+that_depends/container.py,sha256=WhtLdgIX7NYT4BfDupViyKnEJU0Sc7LJR2kc0ygN37Q,747
+that_depends/injection.py,sha256=TTIY67iyh5a48pU-GbxR1Vyvhir6iYaKMjl7MYaVfsc,1013
+that_depends/providers/__init__.py,sha256=3AAtB5wGw2hgxh7Y1kb-LxUoUAHy5fDCim_VZKLzcnM,484
+that_depends/providers/base.py,sha256=1zec3MWBjazdPfnGheZbTFLI1r6_W5rwEQSlE6DzLWw,642
+that_depends/providers/collections.py,sha256=ZXr5zH4MI0PGkJEaUKewKUhcWvUeDTvac2CGScy0DdE,465
+that_depends/providers/factories.py,sha256=dUuIZQN8aXAcziTVIyTArmBpGOQjZVHQ7ei1qNzSBy4,1365
+that_depends/providers/resources.py,sha256=swpxJEo7EapLfGuPkR5CyIerJpvQoyzCh0AdaIT40Gg,2552
+that_depends/providers/singleton.py,sha256=JkkIZ9UNEtjSeelofU7rXytDcgaD7UQ4cqeTmAz-HoA,993
+that_depends/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+that_depends-1.5.2.dist-info/METADATA,sha256=_IgPWWzA9WNI2C8xJ_8qFaULSP6PQaEwhID70JBhT-U,7191
+that_depends-1.5.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+that_depends-1.5.2.dist-info/RECORD,,
