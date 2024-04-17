@@ -1,0 +1,3 @@
+[console_scripts]
+pharmcat_runner = pharmcat_runner.__main__:main
+
