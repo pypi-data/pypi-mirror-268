@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: joptional
+Version: 0.1.1
+Summary: Exact implementation of Java's Optional in Python with 100% test coverage.
+License: MIT
+Author: Tobias Waslowski
+Author-email: tobiaswaslowski@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# pyoptional
+
+Java-style Optionals for Python.
+
+## Installation
+
+Simply install this package with your favourite package manager:
+
+    pip install pyoptional
+
+or
+
+    poetry install pyoptional
+
+## Usage
+
+The `Optional` class is a generic class that can be used to wrap a value that may or may not be `None`.
+Its functionality is roughly equivalent to Java's `Optional` class. For example:
+
+```java
+Optional<String> opt = Optional.of("Hello, world!");
+opt.ifPresent(System.out::println);
+```
+
+turns to the following Python code:
+
+```python
+opt = Optional[str].of("Hello, world!")
+opt.if_present(print)
+```
+
+Of course, type annotations in Python are optional (no pun intended),
+so you can simply write `Optional.of("Hello, world!")` if you prefer.
+

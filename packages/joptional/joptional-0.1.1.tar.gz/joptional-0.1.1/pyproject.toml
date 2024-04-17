@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "joptional"
+version = "0.1.1"
+description = "Exact implementation of Java's Optional in Python with 100% test coverage."
+authors = ["Tobias Waslowski <tobiaswaslowski@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+mypy = "^0.910"
+pytest-cov = "4.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "7.4.4"
+addopts = "-v --cov=joptional --cov-report=html"
+testpaths = [
+    "test",
+]
