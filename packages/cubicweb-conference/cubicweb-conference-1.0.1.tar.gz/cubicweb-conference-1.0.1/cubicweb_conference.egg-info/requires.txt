@@ -1,0 +1,8 @@
+cubicweb<5.0.0,>=4.0.0
+cubicweb-web<2.0.0,>=1.0.0
+cubicweb-addressbook<3.0.0,>=2.0.0
+cubicweb-card<3.0.0,>=2.0.0
+cubicweb-comment<4.0.0,>=3.0.0
+cubicweb-file<5.0.0,>=4.0.0
+cubicweb-tag<4.0.0,>=3.0.0
+cubicweb-seo<2.0.0,>=1.0.0
