@@ -1,0 +1,2 @@
+[console_scripts]
+cosmix = cosmix:cosmix
