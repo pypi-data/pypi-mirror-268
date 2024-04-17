@@ -1,0 +1,4 @@
+basc_py4chan
+PIL
+gtts
+moviepy

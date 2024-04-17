@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+src/greentext2vid/__init__.py
+src/greentext2vid/video_generator.py
+src/greentext_to_video.egg-info/PKG-INFO
+src/greentext_to_video.egg-info/SOURCES.txt
+src/greentext_to_video.egg-info/dependency_links.txt
+src/greentext_to_video.egg-info/requires.txt
+src/greentext_to_video.egg-info/top_level.txt
