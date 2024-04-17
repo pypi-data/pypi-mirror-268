@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "mxops"
+version = "2.2.0"
+authors = [
+  {name="Etienne Wallet"},
+]
+description = "Python package to automate MultiversX smart contracts deployment and contract interactions in general"
+readme = "README.md"
+keywords = ["elrond", "multiversx", "smart-contract", "devops", "tests"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.10"
+dynamic = ["dependencies"]
+
+[project.scripts]
+mxops = "mxops.__main__:main"
+
+[project.urls]
+"Homepage" = "https://github.com/Catenscia/MxOps"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mxops*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.ini"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "ignore:ssl.PROTOCOL_TLS is deprecated:DeprecationWarning",
+    "ignore:ssl.match_hostname\\(\\) is deprecated:DeprecationWarning",
+]

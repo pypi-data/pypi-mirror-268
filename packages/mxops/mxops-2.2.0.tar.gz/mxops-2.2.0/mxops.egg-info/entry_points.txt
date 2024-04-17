@@ -1,0 +1,2 @@
+[console_scripts]
+mxops = mxops.__main__:main
