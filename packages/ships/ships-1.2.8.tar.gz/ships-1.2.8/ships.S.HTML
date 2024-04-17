@@ -1,0 +1,51 @@
+
+
+
+<pre>
+	<h1>ships</h1>
+
+	<h2>docker with custom IP address</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.98 -v .:/ships -it jumps:v2.1.0
+		docker exec -it f524ed410d13 bash
+
+	<h2>dockers</h2>
+		docker run -p 127.0.0.1:20000:20000 -v .:/ships-v /online/crowns_safes/mint:/online/crowns_safes/mint -it jumps:v2.1.0
+		docker exec -it 598cd384d874 bash
+
+	<h2>dependencies</h2>
+		python = "^3.10,<3.13"
+		python = "^3.10,<4"
+
+
+
+	<h2>publishing</h2>
+		
+		(cp /ships/fields/gardens/ships/module.MD readme.md)
+		
+		#
+		#	statuses
+		#
+		python3 /ships/fields/gardens/ships/_status/status.proc.py
+		
+		#
+		#	git push
+		#
+		#		if Circle CI is successful, then publish
+		#
+		
+		#
+		#	increase version
+		#
+		
+		#
+		#	poetry auth
+		#
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+
+
+
+
+
+
+</pre>

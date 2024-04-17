@@ -1,0 +1,48 @@
+
+
+<pre>
+
+	<h1>cycle</h1>
+
+
+	<h2>itinerary</h2>
+		[ ] return insteal of raise exception option 
+			if every loop fails.
+	
+	
+
+	<code>
+		import ships.cycle as cycle
+
+		def fn (* positionals, ** keywords):
+			print ("cycling", positionals, keywords)
+		
+			assert (positionals [0] == 1)
+			assert (len (positionals) == 1)
+			assert (len (keywords) == 0)
+
+			nonlocal request_worked;
+			request_worked += 1
+
+			assert (request_worked == 10)		
+		
+			return 99
+			
+		returns = cycle.loops (
+			fn, 
+			cycle.presents ([ 1 ]),
+			
+			loops = 10,
+			delay = Fraction (1, 4),
+			
+			records = 1
+		)
+
+
+	</code>
+
+
+
+
+
+</pre>

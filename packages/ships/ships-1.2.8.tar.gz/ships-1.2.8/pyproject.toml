@@ -1,0 +1,40 @@
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "ships"
+version = "1.2.8"
+description = "Various calculator tools"
+authors = []
+readme = "readme.md"
+
+packages = [
+    { include = "ships", from = "fields/gardens" }
+]
+include = [ "*.HTML", "*.html", "*.JSON", "*.json" ]
+
+license = "GPL-3.0-only"
+
+keywords = []
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.13"
+biotech = "^1.0.3"
+rich = "^13.7.1"
+psutil = "^5.9.8"
+pyinotify = "^0.9.6"
+
+
+
+[tool.poetry.scripts]
+ships = "ships:clique"
+
+# [tool.poetry.urls]
+# GitLab = ""
+
+
+
