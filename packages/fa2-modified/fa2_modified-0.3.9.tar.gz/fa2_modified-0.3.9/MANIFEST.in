@@ -1,0 +1,2 @@
+include fa2_modified/fa2util.pxd
+include examples/*
