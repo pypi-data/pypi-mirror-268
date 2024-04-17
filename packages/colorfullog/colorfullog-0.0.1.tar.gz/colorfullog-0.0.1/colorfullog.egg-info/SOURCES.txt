@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+colorfullog/__init__.py
+colorfullog/colorfullog.py
+colorfullog.egg-info/PKG-INFO
+colorfullog.egg-info/SOURCES.txt
+colorfullog.egg-info/dependency_links.txt
+colorfullog.egg-info/top_level.txt
