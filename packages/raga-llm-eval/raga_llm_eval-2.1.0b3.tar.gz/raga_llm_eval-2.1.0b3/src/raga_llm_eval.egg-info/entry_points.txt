@@ -1,0 +1,2 @@
+[console_scripts]
+raga-eval-ui = raga_llm_eval.rag_builder_ui:main
