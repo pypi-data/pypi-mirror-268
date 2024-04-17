@@ -1,0 +1,18 @@
+[project]
+name = "ptcr"
+version = "0.0.1"
+authors = [
+  { name="Tiernan Lindauer", email="tiernanlind@tamu.edu" },
+]
+description = "Construct and process PTCR simulations."
+readme = "README.md"
+requires-python = "==3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/T-Lind/ptcr"
+Issues = "https://github.com/T-Lind/ptcr/issues"
