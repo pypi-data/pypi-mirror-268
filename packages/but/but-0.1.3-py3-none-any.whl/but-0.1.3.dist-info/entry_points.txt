@@ -1,0 +1,2 @@
+[console_scripts]
+but = but.app:main
