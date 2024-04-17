@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: spell4checker
+Version: 0.0.1
+Author: TAWSIF AHMED
+Author-email: sleeping4cat@outlook.com
+Description-Content-Type: text/markdown
+
+### Spell-Checker: Wrote studying LeetCode 75 Problems
+
+#### Introduction
+
+Writing Spell-checker is a challenge due to the complicated nature of searching and matching correct matches of user written words. Thus, providing correct spellings. 
+
+[StackOverflow](https://stackoverflow.com/questions/2294915/what-algorithm-gives-suggestions-in-a-spell-checker) and [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance) offer in-depth knowledge in writing a spell-checker but are quite limited and outdated. Itâ€™s quite difficult to reverse engineer the spell checker ones present in Windows 11 by default. Including spell-checker has fundamental rules and later others tweak them to make it faster and add more features. 
+
+Establishing no prior rules how it should work, and present Neural Spell Checkers being prominent in Grammarly and Google Docs, I went on quest to write a spell checker from scratch using my understanding of Algorithms specifically LeetCode problems I solved in the past couple of weeks and reading through Articles. 
+
+#### Structure of SpellChecker
+
+A unique and similar structure of past and present spell checkers were derived while designing this Algorithm. Starting 
+
+1. A Prefix Tree search Algorithm to load every word from the dictionary into its respective nodes
+2. Iterating over the words and using Longest Common Sequence (LCS) to find most likely match for the input word
+3. Edit Distance (Levenshtein Distance) to determine the perfect match and returning result. 
+
+Word with highest LCS and lowest Edit distance is determined as a perfect match. 
+
+#### Learning outcomes
+
+Practising LeetCode concepts in a real world project is valuable. Including better understanding how different Algorithms come into play and work to solve a critical problem in a unified manner. And showcasing problem solving and creativity traits. 
+
+##### LeetCode Problems (used)
+1. Edit Distance 
+2. Longest Common Sequence 
+3. Implement a Trie 
+
+These were part of LeetCode 75 Problems. https://leetcode.com/studyplan/leetcode-75/
+
+##### Critical Pointers
+1. I donâ€™t provide UI and interface to interact with the algorithm. A terminal interface needs to be utilised. 
+2. A Public dictionary dataset was used. 
+3. The clearest explanation of Spell Checker Algorithm and Code on the Internet. 
+4. Time Complexity O(n * m * (m + m))
+
+**Consider star the repository if it helps you!**
