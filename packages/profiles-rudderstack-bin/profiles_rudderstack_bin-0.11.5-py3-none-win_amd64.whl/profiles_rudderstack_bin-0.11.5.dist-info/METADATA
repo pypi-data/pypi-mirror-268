@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: profiles_rudderstack_bin
+Version: 0.11.5
+Home-page: https://www.rudderstack.com/
+Author: rudderstack
+Author-email: kuldeep@rudderstack.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+
