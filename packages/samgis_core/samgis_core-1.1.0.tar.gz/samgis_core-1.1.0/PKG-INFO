@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: samgis_core
+Version: 1.1.0
+Summary: SamGIS CORE
+License: MIT
+Author: alessandro trinca tornidor
+Author-email: alessandro@trinca.tornidor.com
+Requires-Python: >=3.10,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: bson (>=0.5.10,<0.6.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: numpy (==1.25.2)
+Requires-Dist: onnxruntime (==1.16.3)
+Requires-Dist: opencv-python-headless (==4.8.1.78)
+Requires-Dist: pillow (>=10.2.0,<11.0.0)
+Description-Content-Type: text/markdown
+
+# SamGIS CORE
+
+Core functionality for [SamGIS](https://github.com/trincadev/samgis-be) project:
+- instance segmentation and recognition with a [segment anything](https://segment-anything.com/) model
+- various utilities (logging, serialize, type hints, etcetera)
+
