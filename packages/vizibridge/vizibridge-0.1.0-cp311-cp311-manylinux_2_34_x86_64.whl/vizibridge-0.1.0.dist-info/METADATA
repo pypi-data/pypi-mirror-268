@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: vizibridge
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: ruff
+Requires-Dist: mypy
+Requires-Dist: pytest
+License-File: LICENSE
+Requires-Python: >=3.8
