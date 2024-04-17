@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "modal-migrate"
+dynamic = ["version"]
+description = "Migrate Modal codebases automatically."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [{ name = "Eric Zhang", email = "ekzhang1@gmail.com" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = ["libcst>=1,<2", "rich>=12", "typer>=0.10"]
+
+[project.scripts]
+modal-migrate = "modal_migrate.main:entrypoint"
+
+[project.urls]
+Documentation = "https://github.com/modal-labs/modal-migrate#readme"
+Issues = "https://github.com/modal-labs/modal-migrate/issues"
+Source = "https://github.com/modal-labs/modal-migrate"
+
+[tool.hatch.version]
+path = "src/modal_migrate/__about__.py"
+
+[tool.hatch.envs.default]
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.hatch.envs.types]
+dependencies = ["mypy>=1.0.0"]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/modal_migrate tests}"
