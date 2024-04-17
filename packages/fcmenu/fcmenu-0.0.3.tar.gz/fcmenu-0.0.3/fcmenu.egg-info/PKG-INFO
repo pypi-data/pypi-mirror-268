@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fcmenu
+Version: 0.0.3
+Summary: ICQA / FCMenu automation functions
+Author: Adonis N
+Author-email: workamzn@outlook.com
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: Image
+Requires-Dist: pandas
+Requires-Dist: selenium
+
+Tools: DeleteItems, Sideline, PickUI

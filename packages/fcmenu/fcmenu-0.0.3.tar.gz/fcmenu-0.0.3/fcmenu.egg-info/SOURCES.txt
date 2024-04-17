@@ -1,0 +1,9 @@
+README.md
+setup.py
+fcmenu/Chrome_Session.py
+fcmenu/__init__.py
+fcmenu.egg-info/PKG-INFO
+fcmenu.egg-info/SOURCES.txt
+fcmenu.egg-info/dependency_links.txt
+fcmenu.egg-info/requires.txt
+fcmenu.egg-info/top_level.txt
