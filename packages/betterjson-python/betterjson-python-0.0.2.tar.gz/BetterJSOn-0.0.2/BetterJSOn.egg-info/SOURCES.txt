@@ -1,0 +1,8 @@
+setup.py
+BetterJSOn.egg-info/PKG-INFO
+BetterJSOn.egg-info/SOURCES.txt
+BetterJSOn.egg-info/dependency_links.txt
+BetterJSOn.egg-info/top_level.txt
+modules/files.py
+modules/format.py
+modules/parse.py
