@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+conventional_commits_check/__init__.py
+conventional_commits_check/main.py
+conventional_commits_check.egg-info/PKG-INFO
+conventional_commits_check.egg-info/SOURCES.txt
+conventional_commits_check.egg-info/dependency_links.txt
+conventional_commits_check.egg-info/entry_points.txt
+conventional_commits_check.egg-info/requires.txt
+conventional_commits_check.egg-info/top_level.txt
