@@ -1,0 +1,8 @@
+httpx
+dateparser
+rich
+typer
+
+[test]
+pytest
+mock
