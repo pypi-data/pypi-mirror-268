@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+savable/__init__.py
+savable/savable.py
+savable.egg-info/PKG-INFO
+savable.egg-info/SOURCES.txt
+savable.egg-info/dependency_links.txt
+savable.egg-info/requires.txt
+savable.egg-info/top_level.txt
+tests/test_savable.py
