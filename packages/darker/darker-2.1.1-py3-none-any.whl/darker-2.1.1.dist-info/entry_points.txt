@@ -1,0 +1,2 @@
+[console_scripts]
+darker = darker.__main__:main_with_error_handling
