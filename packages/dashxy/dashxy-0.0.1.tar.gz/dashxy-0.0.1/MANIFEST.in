@@ -1,0 +1,11 @@
+include dashxy/dashxy.min.js
+include dashxy/dashxy.min.js.map
+include dashxy/async-*.js
+include dashxy/async-*.js.map
+include dashxy/*-shared.js
+include dashxy/*-shared.js.map
+include dashxy/metadata.json
+include dashxy/package-info.json
+include README.md
+include LICENSE
+include package.json
