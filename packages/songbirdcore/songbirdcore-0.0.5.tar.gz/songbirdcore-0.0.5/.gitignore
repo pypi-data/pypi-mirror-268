@@ -1,0 +1,29 @@
+# ENV files
+*.env
+
+# Vscode
+.vscode
+
+# Python
+__pycache__
+venv*
+*.egg-info
+
+
+# Taskfile
+.task
+
+# Work directories
+app
+data
+# pytest junit output
+junit
+
+# code coverage
+htmlcov
+.coverage
+coverage.xml
+
+# Secrets
+credentials.json
+token.json
