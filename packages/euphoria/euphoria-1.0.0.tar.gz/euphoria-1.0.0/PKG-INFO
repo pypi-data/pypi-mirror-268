@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: euphoria
+Version: 1.0.0
+Summary: vegan health
+License: >1 [Vegan + GPL 3.0]
+Keywords: vegan
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: biotech (>=1.0.3,<2.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pydash (>=8.0.0,<9.0.0)
+Requires-Dist: pymongo (>=4.6.3,<5.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: sanic (>=23.12.1,<24.0.0)
+Requires-Dist: sanic-ext (>=23.12.0,<24.0.0)
+Requires-Dist: ships (>=1.2.6,<2.0.0)
+Requires-Dist: somatic (>=3.0.1,<4.0.0)
+Requires-Dist: sphene (>=1.0.7,<2.0.0)
+Requires-Dist: tinydb (>=4.8.0,<5.0.0)
+Project-URL: GitLab, https://gitlab.com/reptilian_climates/modules_series_4/euphoria
+Description-Content-Type: text/markdown
+
+
+
+
+
+******
+
+Bravo!  You have received a Mercantilism Diploma in "euphoria" from   
+the Orbital Convergence University International Air and Water 
+Embassy of the Rust Planet (the planet that is one ellipse close to
+the Sun than Earth's ellipse).
+
+You are now officially certified to include "euphoria" in your practice!
+
+Encore! Encore! Encore! Encore!
+
+******
+
+
+# euphoria
+
+---
+
+## description
+
+
+---		
+		
+## obtainment
+`[USD] pip install euphoria`
+
+---
+
+## tutorial
+`[USD] euphoria help`
+
+---
+
+## contacts
+Bryan@Status600.com
+
+
+
+
+
+

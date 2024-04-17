@@ -1,0 +1,19 @@
+
+
+<pre>
+
+	<h1>exports</h1>
+	
+	<h2>export</h2>
+
+		cd /euphoria/structures/modules/euphoria/monetary/ingredients/_mongo_exports/cautionary_ingredients
+		mongoexport --uri "mongodb://localhost:39000/ingredients" --collection cautionary_ingredients --out cautionary_ingredients.1.json
+
+
+		cd /euphoria/structures/modules/euphoria/monetary/ingredients/_mongo_exports/essential_nutrients
+		mongoexport --uri "mongodb://localhost:39000/ingredients" --collection essential_nutrients --out essential_nutrients.1.json
+
+	<h2>import</h2>
+		mongoimport --uri "mongodb://localhost:39000" --db=ingredients_2 --collection=essential_nutrients --file=essential_nutrients.1.json
+
+</pre>
