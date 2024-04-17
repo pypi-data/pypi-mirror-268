@@ -1,0 +1,8 @@
+ml_adapter/numpy/__init__.py,sha256=zTOjAnqYoVNAMfpXBgluPhmRgnVnQWiu2C6AOZL0Y0g,166
+ml_adapter/numpy/adapter.py,sha256=Tkkwa4ZNTi1GwHDQss2asQR9reEjygMmIZ5gjgFrDDk,1210
+ml_adapter/numpy/marshall.py,sha256=rBZNF5tlyyD_LFmE5PN3NFgjrjihEWzs9HGbbG3-x-4,4944
+ml_adapter/numpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+waylay_ml_adapter_numpy-0.0.2.dist-info/METADATA,sha256=EcyW5iJTtwUb-Ifl0v68-9YOGW9m3GefVCJ5iM6MTxU,284
+waylay_ml_adapter_numpy-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+waylay_ml_adapter_numpy-0.0.2.dist-info/top_level.txt,sha256=3WkkE3yhxG7TqlWKnkHRQb1IAk4cS0ikRBDJ-cTOHY4,11
+waylay_ml_adapter_numpy-0.0.2.dist-info/RECORD,,

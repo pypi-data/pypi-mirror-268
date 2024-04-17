@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: waylay-ml-adapter-numpy
+Version: 0.0.2
+Summary: ML_adapter for numpy.
+Author: Waylay
+Requires-Python: >=3.9
+Requires-Dist: numpy >=1.25.0
+Requires-Dist: waylay-ml-adapter-base
+Provides-Extra: dev
+Requires-Dist: waylay-ml-adapter-devtools ; extra == 'dev'
+
