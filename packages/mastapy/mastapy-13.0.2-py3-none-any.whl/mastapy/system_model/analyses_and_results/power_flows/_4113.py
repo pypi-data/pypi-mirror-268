@@ -1,0 +1,226 @@
+"""KlingelnbergCycloPalloidHypoidGearPowerFlow"""
+
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, TypeVar
+
+from mastapy._internal import constructor
+from mastapy.system_model.analyses_and_results.power_flows import _4110
+from mastapy._internal.cast_exception import CastException
+from mastapy._internal.python_net import python_net_import
+
+_KLINGELNBERG_CYCLO_PALLOID_HYPOID_GEAR_POWER_FLOW = python_net_import(
+    "SMT.MastaAPI.SystemModel.AnalysesAndResults.PowerFlows",
+    "KlingelnbergCycloPalloidHypoidGearPowerFlow",
+)
+
+if TYPE_CHECKING:
+    from mastapy.system_model.part_model.gears import _2545
+    from mastapy.gears.rating.klingelnberg_hypoid import _412
+    from mastapy.system_model.analyses_and_results.static_loads import _6924
+    from mastapy.system_model.analyses_and_results.power_flows import (
+        _4073,
+        _4102,
+        _4120,
+        _4065,
+        _4122,
+    )
+    from mastapy.system_model.analyses_and_results.analysis_cases import _7556, _7553
+    from mastapy.system_model.analyses_and_results import _2665, _2661, _2659
+
+
+__docformat__ = "restructuredtext en"
+__all__ = ("KlingelnbergCycloPalloidHypoidGearPowerFlow",)
+
+
+Self = TypeVar("Self", bound="KlingelnbergCycloPalloidHypoidGearPowerFlow")
+
+
+class KlingelnbergCycloPalloidHypoidGearPowerFlow(
+    _4110.KlingelnbergCycloPalloidConicalGearPowerFlow
+):
+    """KlingelnbergCycloPalloidHypoidGearPowerFlow
+
+    This is a mastapy class.
+    """
+
+    TYPE = _KLINGELNBERG_CYCLO_PALLOID_HYPOID_GEAR_POWER_FLOW
+    _CastSelf = TypeVar(
+        "_CastSelf", bound="_Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow"
+    )
+
+    class _Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow:
+        """Special nested class for casting KlingelnbergCycloPalloidHypoidGearPowerFlow to subclasses."""
+
+        def __init__(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+            parent: "KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ):
+            self._parent = parent
+
+        @property
+        def klingelnberg_cyclo_palloid_conical_gear_power_flow(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_4110.KlingelnbergCycloPalloidConicalGearPowerFlow":
+            return self._parent._cast(
+                _4110.KlingelnbergCycloPalloidConicalGearPowerFlow
+            )
+
+        @property
+        def conical_gear_power_flow(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_4073.ConicalGearPowerFlow":
+            from mastapy.system_model.analyses_and_results.power_flows import _4073
+
+            return self._parent._cast(_4073.ConicalGearPowerFlow)
+
+        @property
+        def gear_power_flow(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_4102.GearPowerFlow":
+            from mastapy.system_model.analyses_and_results.power_flows import _4102
+
+            return self._parent._cast(_4102.GearPowerFlow)
+
+        @property
+        def mountable_component_power_flow(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_4120.MountableComponentPowerFlow":
+            from mastapy.system_model.analyses_and_results.power_flows import _4120
+
+            return self._parent._cast(_4120.MountableComponentPowerFlow)
+
+        @property
+        def component_power_flow(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_4065.ComponentPowerFlow":
+            from mastapy.system_model.analyses_and_results.power_flows import _4065
+
+            return self._parent._cast(_4065.ComponentPowerFlow)
+
+        @property
+        def part_power_flow(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_4122.PartPowerFlow":
+            from mastapy.system_model.analyses_and_results.power_flows import _4122
+
+            return self._parent._cast(_4122.PartPowerFlow)
+
+        @property
+        def part_static_load_analysis_case(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_7556.PartStaticLoadAnalysisCase":
+            from mastapy.system_model.analyses_and_results.analysis_cases import _7556
+
+            return self._parent._cast(_7556.PartStaticLoadAnalysisCase)
+
+        @property
+        def part_analysis_case(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_7553.PartAnalysisCase":
+            from mastapy.system_model.analyses_and_results.analysis_cases import _7553
+
+            return self._parent._cast(_7553.PartAnalysisCase)
+
+        @property
+        def part_analysis(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_2665.PartAnalysis":
+            from mastapy.system_model.analyses_and_results import _2665
+
+            return self._parent._cast(_2665.PartAnalysis)
+
+        @property
+        def design_entity_single_context_analysis(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_2661.DesignEntitySingleContextAnalysis":
+            from mastapy.system_model.analyses_and_results import _2661
+
+            return self._parent._cast(_2661.DesignEntitySingleContextAnalysis)
+
+        @property
+        def design_entity_analysis(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "_2659.DesignEntityAnalysis":
+            from mastapy.system_model.analyses_and_results import _2659
+
+            return self._parent._cast(_2659.DesignEntityAnalysis)
+
+        @property
+        def klingelnberg_cyclo_palloid_hypoid_gear_power_flow(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+        ) -> "KlingelnbergCycloPalloidHypoidGearPowerFlow":
+            return self._parent
+
+        def __getattr__(
+            self: "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow",
+            name: str,
+        ):
+            try:
+                return self.__dict__[name]
+            except KeyError:
+                class_name = "".join(n.capitalize() for n in name.split("_"))
+                raise CastException(
+                    f'Detected an invalid cast. Cannot cast to type "{class_name}"'
+                ) from None
+
+    def __init__(
+        self: Self, instance_to_wrap: "KlingelnbergCycloPalloidHypoidGearPowerFlow.TYPE"
+    ):
+        super().__init__(instance_to_wrap)
+        self._freeze()
+
+    @property
+    def component_design(self: Self) -> "_2545.KlingelnbergCycloPalloidHypoidGear":
+        """mastapy.system_model.part_model.gears.KlingelnbergCycloPalloidHypoidGear
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.ComponentDesign
+
+        if temp is None:
+            return None
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp)
+
+    @property
+    def component_detailed_analysis(
+        self: Self,
+    ) -> "_412.KlingelnbergCycloPalloidHypoidGearRating":
+        """mastapy.gears.rating.klingelnberg_hypoid.KlingelnbergCycloPalloidHypoidGearRating
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.ComponentDetailedAnalysis
+
+        if temp is None:
+            return None
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp)
+
+    @property
+    def component_load_case(
+        self: Self,
+    ) -> "_6924.KlingelnbergCycloPalloidHypoidGearLoadCase":
+        """mastapy.system_model.analyses_and_results.static_loads.KlingelnbergCycloPalloidHypoidGearLoadCase
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.ComponentLoadCase
+
+        if temp is None:
+            return None
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp)
+
+    @property
+    def cast_to(
+        self: Self,
+    ) -> "KlingelnbergCycloPalloidHypoidGearPowerFlow._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow":
+        return self._Cast_KlingelnbergCycloPalloidHypoidGearPowerFlow(self)

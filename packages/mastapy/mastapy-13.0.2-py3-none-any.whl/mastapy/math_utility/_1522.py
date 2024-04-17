@@ -1,0 +1,215 @@
+"""GriddedSurface"""
+
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, TypeVar, List
+
+from mastapy._internal.type_enforcement import enforce_parameter_types
+from mastapy._internal import conversion
+from mastapy import _0
+from mastapy._internal.cast_exception import CastException
+from mastapy._internal.python_net import python_net_import
+
+_GRIDDED_SURFACE = python_net_import("SMT.MastaAPI.MathUtility", "GriddedSurface")
+
+if TYPE_CHECKING:
+    from mastapy.math_utility import _1517
+
+
+__docformat__ = "restructuredtext en"
+__all__ = ("GriddedSurface",)
+
+
+Self = TypeVar("Self", bound="GriddedSurface")
+
+
+class GriddedSurface(_0.APIBase):
+    """GriddedSurface
+
+    This is a mastapy class.
+    """
+
+    TYPE = _GRIDDED_SURFACE
+    _CastSelf = TypeVar("_CastSelf", bound="_Cast_GriddedSurface")
+
+    class _Cast_GriddedSurface:
+        """Special nested class for casting GriddedSurface to subclasses."""
+
+        def __init__(
+            self: "GriddedSurface._Cast_GriddedSurface", parent: "GriddedSurface"
+        ):
+            self._parent = parent
+
+        @property
+        def gridded_surface(
+            self: "GriddedSurface._Cast_GriddedSurface",
+        ) -> "GriddedSurface":
+            return self._parent
+
+        def __getattr__(self: "GriddedSurface._Cast_GriddedSurface", name: str):
+            try:
+                return self.__dict__[name]
+            except KeyError:
+                class_name = "".join(n.capitalize() for n in name.split("_"))
+                raise CastException(
+                    f'Detected an invalid cast. Cannot cast to type "{class_name}"'
+                ) from None
+
+    def __init__(self: Self, instance_to_wrap: "GriddedSurface.TYPE"):
+        super().__init__(instance_to_wrap)
+        self._freeze()
+
+    @property
+    def has_data(self: Self) -> "bool":
+        """bool
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.HasData
+
+        if temp is None:
+            return False
+
+        return temp
+
+    @property
+    def has_non_zero_data(self: Self) -> "bool":
+        """bool
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.HasNonZeroData
+
+        if temp is None:
+            return False
+
+        return temp
+
+    @property
+    def is_sorted(self: Self) -> "bool":
+        """bool
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.IsSorted
+
+        if temp is None:
+            return False
+
+        return temp
+
+    @property
+    def x_values(self: Self) -> "List[float]":
+        """List[float]
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.XValues
+
+        if temp is None:
+            return None
+
+        value = conversion.pn_to_mp_objects_in_list(temp, float)
+
+        if value is None:
+            return None
+
+        return value
+
+    @property
+    def y_values(self: Self) -> "List[float]":
+        """List[float]
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.YValues
+
+        if temp is None:
+            return None
+
+        value = conversion.pn_to_mp_objects_in_list(temp, float)
+
+        if value is None:
+            return None
+
+        return value
+
+    @enforce_parameter_types
+    def data_value_interpolated_at(
+        self: Self,
+        row_value: "float",
+        column_value: "float",
+        row_extrapolation_option: "_1517.ExtrapolationOptions",
+        column_extrapolation_option: "_1517.ExtrapolationOptions",
+    ) -> "float":
+        """float
+
+        Args:
+            row_value (float)
+            column_value (float)
+            row_extrapolation_option (mastapy.math_utility.ExtrapolationOptions)
+            column_extrapolation_option (mastapy.math_utility.ExtrapolationOptions)
+        """
+        row_value = float(row_value)
+        column_value = float(column_value)
+        row_extrapolation_option = conversion.mp_to_pn_enum(
+            row_extrapolation_option, "SMT.MastaAPI.MathUtility.ExtrapolationOptions"
+        )
+        column_extrapolation_option = conversion.mp_to_pn_enum(
+            column_extrapolation_option, "SMT.MastaAPI.MathUtility.ExtrapolationOptions"
+        )
+        method_result = self.wrapped.DataValueInterpolatedAt(
+            row_value if row_value else 0.0,
+            column_value if column_value else 0.0,
+            row_extrapolation_option,
+            column_extrapolation_option,
+        )
+        return method_result
+
+    @enforce_parameter_types
+    def get_column(self: Self, column_id: "int") -> "List[float]":
+        """List[float]
+
+        Args:
+            column_id (int)
+        """
+        column_id = int(column_id)
+        return conversion.pn_to_mp_objects_in_list(
+            self.wrapped.GetColumn(column_id if column_id else 0), float
+        )
+
+    @enforce_parameter_types
+    def get_row(self: Self, row_id: "int") -> "List[float]":
+        """List[float]
+
+        Args:
+            row_id (int)
+        """
+        row_id = int(row_id)
+        return conversion.pn_to_mp_objects_in_list(
+            self.wrapped.GetRow(row_id if row_id else 0), float
+        )
+
+    @enforce_parameter_types
+    def get_value(self: Self, x_index: "int", y_index: "int") -> "float":
+        """float
+
+        Args:
+            x_index (int)
+            y_index (int)
+        """
+        x_index = int(x_index)
+        y_index = int(y_index)
+        method_result = self.wrapped.GetValue(
+            x_index if x_index else 0, y_index if y_index else 0
+        )
+        return method_result
+
+    @property
+    def cast_to(self: Self) -> "GriddedSurface._Cast_GriddedSurface":
+        return self._Cast_GriddedSurface(self)
