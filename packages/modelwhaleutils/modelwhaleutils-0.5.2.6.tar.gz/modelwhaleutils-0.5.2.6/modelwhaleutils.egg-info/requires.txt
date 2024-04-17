@@ -1,0 +1,6 @@
+PyJWT
+requests
+pynvml
+psutil
+boto3
+mlflow
