@@ -1,0 +1,6 @@
+assets
+dist
+logs
+tests
+uav_collision_avoidance
+venv
