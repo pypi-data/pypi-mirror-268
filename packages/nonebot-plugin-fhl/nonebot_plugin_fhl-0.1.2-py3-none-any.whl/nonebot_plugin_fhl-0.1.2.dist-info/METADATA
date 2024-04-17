@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-fhl
+Version: 0.1.2
+Summary: Nonebot plugin for fhl
+Keywords: nonebot,fei hua ling
+Home-page: https://github.com/baiqwerdvd/nonebot-plugin-fhl
+Author-Email: baiqwerdvd <158065462+baiqwerdvd@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/baiqwerdvd/nonebot-plugin-fhl
+Project-URL: Repository, https://github.com/baiqwerdvd/nonebot-plugin-fhl
+Requires-Python: >=3.9
+Requires-Dist: nonebot2>=2.2.1
+Requires-Dist: nonebot-plugin-alconna>=0.42.4
+Requires-Dist: nonebot-plugin-session>=0.3.1
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: msgspec>=0.18.6
+Description-Content-Type: text/markdown
+
+# nonebot-plugin-fhl
