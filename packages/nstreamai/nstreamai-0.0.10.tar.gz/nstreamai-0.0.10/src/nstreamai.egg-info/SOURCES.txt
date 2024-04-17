@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/nstreamai.egg-info/PKG-INFO
+src/nstreamai.egg-info/SOURCES.txt
+src/nstreamai.egg-info/dependency_links.txt
+src/nstreamai.egg-info/requires.txt
+src/nstreamai.egg-info/top_level.txt
+src/nstreamai_nstream_ai/__init__.py
