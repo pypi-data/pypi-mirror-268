@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "git2prompt"
+version = "0.1.0"
+description = "Tool for converting the contents of a git repository to a single markdown file that can be used in an LLM prompt."
+authors = ["Sean Fitzgerald <sean@fitzgeralds.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+igittigitt = "^2.1.4"
+
+
+[tool.poetry.group.test.dependencies]
+pylint = "^3.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+git2prompt = "git2prompt.__main__:main"
