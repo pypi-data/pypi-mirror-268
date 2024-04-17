@@ -1,0 +1,23 @@
+[project]
+name = "arguments_parser"
+version = "0.0.1"
+authors = [
+  { name="Danny Vaca", email="danny270793@gmail.com" },
+]
+description = "A library to parse command line arguments"
+readme = "readme.md"
+license = { file = "license.md" }
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+
+]
+keywords = ["cmd"]
+
+[project.urls]
+Homepage = "https://github.com/danny270793/arguments_parser"
+Issues = "https://github.com/danny270793/arguments_parser/issues"

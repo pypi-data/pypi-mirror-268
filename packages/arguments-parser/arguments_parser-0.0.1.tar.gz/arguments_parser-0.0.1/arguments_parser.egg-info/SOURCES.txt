@@ -1,0 +1,8 @@
+license.md
+pyproject.toml
+readme.md
+arguments_parser/__init__.py
+arguments_parser.egg-info/PKG-INFO
+arguments_parser.egg-info/SOURCES.txt
+arguments_parser.egg-info/dependency_links.txt
+arguments_parser.egg-info/top_level.txt
