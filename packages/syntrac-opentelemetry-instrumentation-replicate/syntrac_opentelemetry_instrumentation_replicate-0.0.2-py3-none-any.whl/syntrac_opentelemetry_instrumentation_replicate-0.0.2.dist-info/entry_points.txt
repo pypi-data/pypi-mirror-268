@@ -1,0 +1,3 @@
+[opentelemetry_instrumentor]
+replicate=syntrac_opentelemetry.instrumentation.replicate:ReplicateInstrumentor
+
