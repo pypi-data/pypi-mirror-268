@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: syntrac-opentelemetry-instrumentation-chromadb
+Version: 0.0.2
+Summary: OpenTelemetry Chroma DB instrumentation
+Home-page: https://github.com/syntracAI/syntrac/tree/main/packages/python/opentelemetry-instrumentation-chromadb
+License: Apache-2.0
+Author: Vuong Ngo
+Author-email: vuongngo.pd@gmail.com
+Requires-Python: >=3.9,<4
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: instruments
+Requires-Dist: opentelemetry-api (>=1.23.0,<2.0.0)
+Requires-Dist: opentelemetry-instrumentation (==0.44b0)
+Requires-Dist: opentelemetry-semantic-conventions (==0.44b0)
+Requires-Dist: syntrac-opentelemetry-semantic-conventions-ai (==0.0.1)
+Project-URL: Repository, https://github.com/syntracAI/syntrac/tree/main/packages/python/opentelemetry-instrumentation-chromadb
+Description-Content-Type: text/markdown
+
+# OpenTelemetry Chroma Instrumentation
+
+<a href="https://pypi.org/project/syntrac-opentelemetry-instrumentation-chromadb/">
+    <img src="https://badge.fury.io/py/syntrac-opentelemetry-instrumentation-chromadb.svg">
+</a>
+
+This library allows tracing client-side calls to Chroma vector DB sent with the official [Chroma library](https://github.com/chroma-core/chroma).
+
+## Installation
+
+```bash
+pip install syntrac-opentelemetry-instrumentation-chromadb
+```
+
+## Example usage
+
+```python
+from syntrac_opentelemetry.instrumentation.chromadb import ChromaInstrumentor
+
+ChromaInstrumentor().instrument()
+```
+
