@@ -1,0 +1,4 @@
+dagster==1.7.2rc2
+
+[test]
+psutil
