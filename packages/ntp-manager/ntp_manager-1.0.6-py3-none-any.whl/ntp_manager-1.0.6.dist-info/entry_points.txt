@@ -1,0 +1,4 @@
+[console_scripts]
+checkntp=ntp_manager.gui:main
+web=ntp_manager.web:main
+
