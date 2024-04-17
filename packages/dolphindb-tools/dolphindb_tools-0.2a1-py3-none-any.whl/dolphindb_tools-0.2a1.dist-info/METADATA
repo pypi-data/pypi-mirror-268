@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: dolphindb-tools
+Version: 0.2a1
+Summary: A tool package based on DolphinDB Python API.
+Home-page: https://www.dolphindb.com
+Author: DolphinDB, Inc.
+Author-email: support@dolphindb.com
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dolphindb >=1.30.19.4
+Requires-Dist: intervaltree
+Requires-Dist: numpy >=1.18.0
+Requires-Dist: pandas >=1.0.0
+Provides-Extra: pytorch
+Requires-Dist: torch ; extra == 'pytorch'
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow ; extra == 'tensorflow'
+
+# dolphindb-tools
+
+DolphinDB Python Tool Collection
+
+## How to Install
+```
+pip install dolphindb-tools
+```
+For installing dolphindb-tools with support for PyTorch, use the following command:
+```
+pip install dolphindb-tools[pytorch]
+```
+For installing dolphindb-tools with support for tensorflow, use the following command:
+```
+pip install dolphindb-tools[tensorflow]
+```
+## Example
+
+```
+import dolphindb as ddb
+from dolphindb_tools.dataloader import DDBDataLoader
+
+sess = ddb.session()
+sess.connect("localhost", 8848, "admin", "123456")
+
+sess.run("""
+    t = table(1..10 as a, 2..11 as b, 3..12 as c)
+""")
+
+sql = 'select * from objByName("t")'
+         
+dataloader = DDBDataLoader(sess, sql, ["c"])
+
+for X, y in dataloader:
+    print(X, y)
+
+--------------------------------------------------
+tensor([[1, 2, 3]], dtype=torch.int32) tensor([[3]], dtype=torch.int32)
+tensor([[2, 3, 4]], dtype=torch.int32) tensor([[4]], dtype=torch.int32)
+tensor([[3, 4, 5]], dtype=torch.int32) tensor([[5]], dtype=torch.int32)
+tensor([[4, 5, 6]], dtype=torch.int32) tensor([[6]], dtype=torch.int32)
+tensor([[5, 6, 7]], dtype=torch.int32) tensor([[7]], dtype=torch.int32)
+tensor([[6, 7, 8]], dtype=torch.int32) tensor([[8]], dtype=torch.int32)
+tensor([[7, 8, 9]], dtype=torch.int32) tensor([[9]], dtype=torch.int32)
+tensor([[ 8,  9, 10]], dtype=torch.int32) tensor([[10]], dtype=torch.int32)
+tensor([[ 9, 10, 11]], dtype=torch.int32) tensor([[11]], dtype=torch.int32)
+tensor([[10, 11, 12]], dtype=torch.int32) tensor([[12]], dtype=torch.int32)
+```

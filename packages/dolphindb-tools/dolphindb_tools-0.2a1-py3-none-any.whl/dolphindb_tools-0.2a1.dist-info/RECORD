@@ -1,0 +1,13 @@
+dolphindb_tools/__init__.py,sha256=H5c6HnNF__zQOuWF65_jZJa8iGb7Aisd9UQEr2LnR3U,27
+dolphindb_tools/dataloader/__init__.py,sha256=_av_VYrZ7Twx0tgElcbVqRZcsMJoBNl99T4U2m9ldoI,171
+dolphindb_tools/dataloader/config.py,sha256=4cNf0c_WCdcr79YCptQylm0MHnGsdUcGqH1gIVjWsW8,51
+dolphindb_tools/dataloader/dataloader.py,sha256=VrNDRrBy714uTzYdLCikO0kMfKrekmWwPMjBb9sf0z4,23404
+dolphindb_tools/dataloader/datamanager.py,sha256=yjMyEO4gS4MqTpv959mgFQb3BlMoHe-RGGnDxotJam0,8463
+dolphindb_tools/dataloader/datasource.py,sha256=YppQe3tv7_cRa--El09H-NVYqza6SqBqWo8303o3_UU,13144
+dolphindb_tools/dataloader/helper.py,sha256=ci-V3Axd6RhGBshp0EdJa6P2KFR-jy5zMo1g5vLajNI,9981
+dolphindb_tools/dataloader/utils.py,sha256=9o11sGSh9XxmfODM1NYaINet3eCXsCJeYMiRVxmD9oU,13394
+dolphindb_tools-0.2a1.dist-info/LICENSE,sha256=djE9fEYevJ0JwCBOQhjt9qmG6RyC8gP5GF5jCeIVjbY,11392
+dolphindb_tools-0.2a1.dist-info/METADATA,sha256=quQRJENslYRRM9zXmNlzDV3jBcjX5DjhkFGpZWpQavE,2420
+dolphindb_tools-0.2a1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+dolphindb_tools-0.2a1.dist-info/top_level.txt,sha256=lb7oEzXGajAcaYWSgrxQK4foTKDWNcrwgllE_heJwjA,16
+dolphindb_tools-0.2a1.dist-info/RECORD,,
