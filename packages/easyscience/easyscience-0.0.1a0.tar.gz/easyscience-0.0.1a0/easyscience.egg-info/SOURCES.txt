@@ -1,0 +1,6 @@
+pyproject.toml
+easyscience/__init__.py
+easyscience.egg-info/PKG-INFO
+easyscience.egg-info/SOURCES.txt
+easyscience.egg-info/dependency_links.txt
+easyscience.egg-info/top_level.txt
