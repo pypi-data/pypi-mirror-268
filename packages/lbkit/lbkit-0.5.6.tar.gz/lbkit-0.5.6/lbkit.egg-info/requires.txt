@@ -1,0 +1,9 @@
+pyyaml
+colorama
+mako
+node-semver==0.6.1
+jsonschema
+conan==2.1
+requests
+gitpython
+inflection
