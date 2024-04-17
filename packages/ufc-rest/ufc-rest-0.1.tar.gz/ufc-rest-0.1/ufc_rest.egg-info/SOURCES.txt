@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+ufc-rest/__init__.py
+ufc-rest/client.py
+ufc-rest/misc.py
+ufc-rest/models/__init__.py
+ufc-rest/models/event.py
+ufc_rest.egg-info/PKG-INFO
+ufc_rest.egg-info/SOURCES.txt
+ufc_rest.egg-info/dependency_links.txt
+ufc_rest.egg-info/top_level.txt
