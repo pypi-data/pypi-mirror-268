@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/sentence_transformers/__init__.py
+src/sentence_transformers/sentence_transformers.py
+src/sentence_transformers_train_callable.egg-info/PKG-INFO
+src/sentence_transformers_train_callable.egg-info/SOURCES.txt
+src/sentence_transformers_train_callable.egg-info/dependency_links.txt
+src/sentence_transformers_train_callable.egg-info/requires.txt
+src/sentence_transformers_train_callable.egg-info/top_level.txt
