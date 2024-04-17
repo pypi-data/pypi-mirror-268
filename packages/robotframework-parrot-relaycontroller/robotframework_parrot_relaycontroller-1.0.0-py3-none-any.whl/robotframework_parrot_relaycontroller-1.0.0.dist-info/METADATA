@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: robotframework-parrot-relaycontroller
+Version: 1.0.0
+Summary: Relay Controller
+Home-page: https://github.com/zilogic-systems/parrot
+Author: Zilogic Systems
+Author-email: code@zilogic.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyserial
+Requires-Dist: robotframework
+
+# Relay Controller
+
+## Installation
+
+To install from package registry use the following command:
+
+```sh
+$ pip install robotframework-parrot-relaycontroller
+```
+
+To install from git repo use the following command:
+
+```sh
+$ pip install .
+```
+
+## Example
+
+Example of using the library in Robot Framework is available `example.robot`.
