@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ipy_search
+Version: 0.1
+Summary: Jupyter Search
+Author: Your Name
+Author-email: gvtkumar55@gmail.com
+Requires-Dist: googlesearch-python ==1.0.0
+
