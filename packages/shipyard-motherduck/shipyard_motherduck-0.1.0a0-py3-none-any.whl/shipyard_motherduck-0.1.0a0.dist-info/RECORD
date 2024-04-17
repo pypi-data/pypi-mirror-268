@@ -1,0 +1,10 @@
+shipyard_motherduck/__init__.py,sha256=XWzHkwElbF1hq1U4qNUg1iv8ZklD-upnKGsjCVk8Y80,41
+shipyard_motherduck/cli/authtest.py,sha256=Uh3WTKjcPaCiLctaHamMhHEjJfMvJG8Td5R3p_vIWsg,547
+shipyard_motherduck/cli/execute.py,sha256=PiLPJAruYxDb0HThIBd_PACDHRX6sFlrfENJOKuS2gk,920
+shipyard_motherduck/cli/fetch.py,sha256=ZQQJg_WeZ0Xzn3sl_WOqRtp8HRirEuXNjyuPNW-ZMR0,1712
+shipyard_motherduck/cli/upload.py,sha256=4git57eW0Vh2FCWBAEIu8T53uLKpqfxpQFmz_eOa5YI,2817
+shipyard_motherduck/errors.py,sha256=dp9qJuFyJagqHMLn_FRu5vkdO_TsC5uLP6pxll-KMVc,865
+shipyard_motherduck/motherduck.py,sha256=VzVHtFt4nIcl68twDgsa-sb3JPCopvygZc_iOS2X3-c,6433
+shipyard_motherduck-0.1.0a0.dist-info/METADATA,sha256=ncJXgFPqSikjHSNjP2ZoOkCttuNtaHyoBNFypPLrafE,660
+shipyard_motherduck-0.1.0a0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+shipyard_motherduck-0.1.0a0.dist-info/RECORD,,
