@@ -1,0 +1,30 @@
+
+
+<div id="form_container" class="col-3 bg-light p-3 border">
+
+    <form hx-post="{{url_for('.hx_member_api_create')}}" hx-target="#hx-results" hx-swap="innerHTML">
+
+        <div class="mb-3">
+            <label for="form_name" class="form-label">Name</label>
+            <input class="form-control" id="form_name" name="api_name">
+        </div>
+
+
+        <div class="mb-3">
+        <label for="form_role" class="form-label">Role</label>
+        <select id="form_role" class="form-select" aria-label="Default select example" name="role_name">
+        <option value="user">User</option>
+        <option value="model">Model</option>
+        </select>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Create</button>
+
+    </form>
+
+</div>
+
+<div id="hx-results">FOO</div>
+
+

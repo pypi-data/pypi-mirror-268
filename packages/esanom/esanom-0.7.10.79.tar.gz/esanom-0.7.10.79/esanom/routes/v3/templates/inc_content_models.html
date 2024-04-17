@@ -1,0 +1,45 @@
+
+{% if tdata["rows"]|length>0 %}
+
+<table>
+
+<tr>
+{% for column in tdata["columns"] %}
+    <td><b>{{ column|upper }}</b></td>
+{% endfor %}
+</tr>
+
+{% for row in tdata["rows"] %}
+<tr>
+
+{% for column in tdata["columns"] %}
+
+{% if column=="uid" %}
+    <td><a href="{{ url_for('.page_model',rolemodel_uid=row['uid']) }}">👁</a></td>
+{% elif column=="desc" %}
+    <td>{{ row[column]|truncate(64) }}</td>
+{% elif column=="[heartbeat_last]" %}
+    <td>
+    {% if row[column]<20 %}
+        <span class="badge bg-success text-light">OK</span>
+    {% else %}
+        <span class="badge bg-warning text-dark">Not since {{ row[column] }} seconds</span>
+    {% endif %}
+
+    </td>
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+
+{% endfor %}
+
+
+</tr>
+{% endfor %}
+
+
+</table>
+
+{% else %}
+No models found!
+{% endif %}

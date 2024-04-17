@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block main_title %}MEMBER APIS{% endblock %}
+
+{% block main_content %}
+
+{% if tdata['flag_apimax'] %}
+<div class="alert alert-danger" role="alert">[API_MAX]</div>
+{% else %}
+{% include( "pages/member_apis/inc_create_button.html" ) %}
+{% endif %}
+
+{% if tdata["rows"]|length>0 %}
+{% include( "pages/member_apis/inc_table.html" ) %}
+{% else %}
+No APIs found!
+{% endif %}
+
+{% endblock %}
+
