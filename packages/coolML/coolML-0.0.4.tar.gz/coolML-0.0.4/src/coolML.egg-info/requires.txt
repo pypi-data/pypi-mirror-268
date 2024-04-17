@@ -1,0 +1,7 @@
+torch
+pytorch_lightning
+wandb
+numpy
+pandas
+scikit-learn
+pathlib
