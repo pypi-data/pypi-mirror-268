@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo "$(date -uIns) - Start promptflow server..."
+
+# Print image build info
+echo "$(date -uIns) - Build info: ${BUILD_INFO:-unknown}"
+
+# Support directly run the container with runsvdir command.
+# MIR will use this command as default command for non-byoc container, and it already handles
+# gracefully shutdown from infra level, no need to handle SIGTERM in serving mode.
+[[ -z "${PROMPTFLOW_AUTO_DETECT}" ]] && source /service/scripts/auto_detect_env.sh
+
+RUN_MODE=${PROMPTFLOW_RUN_MODE:-"compute"}
+
+if [ "$RUN_MODE" = "serving" ]; then
+    # https://docs.gunicorn.org/en/latest/settings.html#threads
+    # If you try to use the sync worker type and set the threads setting to more than 1, the gthread worker type will be used instead.
+    WORKER_NUM=${PROMPTFLOW_WORKER_NUM:-"8"}
+    WORKER_THREADS=${PROMPTFLOW_WORKER_THREADS:-"1"}
+    gunicorn_app="promptflow.core._serving.app:create_app(extension_type='azureml')"
+    echo "$(date -uIns) - Start promptflow serving with worker_num: ${WORKER_NUM}, worker_threads: ${WORKER_THREADS}, app: ${gunicorn_app}"
+    gunicorn -w ${WORKER_NUM} --threads ${WORKER_THREADS} -b "0.0.0.0:8080" --timeout 300 ${gunicorn_app}
+else
+    HOST=${HOST:-"0.0.0.0"}
+    PORT=${PORT:-"8000"}
+    uvicorn_app="promptflow.executor._service.app:app"
+    echo "$(date -uIns) - Start promptflow python server with app: ${uvicorn_app}"
+    gunicorn -k uvicorn.workers.UvicornWorker -b ${HOST}:${PORT} ${uvicorn_app}
+fi

@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: promptflow-python-bundle
+Version: 0.1.0
+Summary: Allow you to create your own promptflow python base images
+Author: Microsoft Corporation
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: <4.0,>=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: gunicorn <22.0.0,>=21.2.0
+Requires-Dist: uvicorn <1.0.0,>=0.27.0
+Requires-Dist: promptflow-core[azureml-serving,executor-service] >=1.8.0
+
+# Promptflow python image bundle
+
+This bundle package provides a way to use your own base images to build and run promptflow-python,
+and build high-quality LLM apps with [prompt flow package](https://pypi.org/project/promptflow).
+
+## Example usage:
+
+```dockerfile
+# Choose different python base image
+FROM python:3.11
+
+# Required: install runit and procps
+RUN apt-get update && apt-get install -y runit procps \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install promptflow-python-bundle
+RUN pip install -U promptflow-python-bundle
+
+# Install promptflow to ensure forward compatibility. It will be phased out in the future.
+RUN pip install promptflow
+
+# Set port
+ENV PORT 8000
+EXPOSE $PORT
+
+CMD ["pfapp"]
+```
+
+Currently, we only support `Ubuntu` and `Debian` based images, and have verified both [AzureML base images](https://github.com/Azure/AzureML-Containers)
+and popular images like `ubuntu:22.04`, `debian:11`, `python:3.10`, `continuumio/miniconda3:23.3.1-0`, `nginx:stable`, etc.
+
+If your base images doesn't have Python or Conda, you need to install it in you docker file as a prerequisite.

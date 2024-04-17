@@ -1,0 +1,2 @@
+[console_scripts]
+pfapp = promptflow_python.start_server:main
