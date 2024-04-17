@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head lang="en_US">
+    <meta charset="UTF-8">
+    <title>Sketchingpy Sketchbook</title>
+    <link rel="stylesheet" href="/css/sketchbook.css?v=0.0.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <header>
+        <h1>Sketchbook</h1>
+        <div class="subtitle">
+        A little private in-browser IDE where you can use <a href="https://sketchingpy.org">Sketchingpy</a> without installing any software but which keeps everything on your own computer. It even works without an internet connection!
+
+        <details id="intro-details">
+            <summary>More information about the sketchbook</summary>
+            <p>
+                This browser-based editor gives you a small space within your browser to try Sketchingpy. All of the files and data stay on your own computer so, if your machine fails or you clear your browser data, the sketchbook is lost. That said, you can save and load projects to files saved to your machine through export and import project. These files can be saved / backed up on other machines or shared! Finally, this small application also saves a copy of itself in your browser so you can run it even if you don't have access to the internet.
+            </p>
+        </details>
+    </div>
+    </header>
+    <main>
+        <div class="split-view">
+            <section class="files-holder">
+                <div class="files">
+                    <div class="controls">
+                        <div class="aligned-buttons">
+                            <a id="new-button" role="button" href="#new-file" class="button">New File</a>
+                            <a id="upload-button" role="button" href="#upload-file" class="button">Upload File</a>
+                        </div>
+                        <div class="aligned-buttons">
+                            <a id="export-button" role="button" href="#open-project" class="button">Export Project</a>
+                            <a id="import-button" role="button" href="#save-project" class="button">Import Project</a>
+                        </div>
+                        <div class="storage-panel">
+                            <span id="current-usage"></span>MB of 100MB used: <progress id="storage-bar" value="0" max="100"></progress>
+                        </div>
+                    </div>
+                    <div class="subsection" id="sources">
+                        <h3>Code</h3>
+                        <div class="selection-list" id="source-list"></div>
+                    </div>
+                    <div class="subsection" id="assets">
+                        <h3>Assets</h3>
+                        <div class="selection-list" id="assets-list"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="editor-holder" id="editor-holder">
+                <div class="controls">
+                    <a id="run-button" role="button" href="#result" class="button" target="_blank">Run</a>
+                </div>
+                <div>
+                    <div id="editor"></div>
+                </div>
+            </section>
+        </div>
+        <input type="hidden" id="version" value="0.0.1">
+    </main>
+
+    <input type="file" id="hidden-file-chooser" />
+
+    <script src="/third_party/ace.min.js?v=0.0.1"></script>
+    <script src="/third_party/theme-textmate.js?v=0.0.1"></script>
+    <script src="/third_party/theme-textmate-css.js?v=0.0.1"></script>
+    <script src="/js/sketchbook.js?v=0.0.1"></script>
+
+</body>
+</html>
