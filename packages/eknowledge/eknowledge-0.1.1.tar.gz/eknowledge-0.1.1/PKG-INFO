@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: eknowledge
+Version: 0.1.1
+Summary: 
+Author: E. Evstafev
+Author-email: chigwel@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+

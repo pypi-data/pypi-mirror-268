@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "eknowledge"
+version = "0.1.1"
+description = ""
+authors = ["E. Evstafev <chigwel@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
