@@ -1,0 +1,60 @@
+[tool.coverage.run]
+branch = true
+source = [ "syntrac/sdk" ]
+
+[tool.coverage.report]
+exclude_lines = [ "if TYPE_CHECKING:" ]
+show_missing = true
+
+[tool.poetry]
+name = "syntrac-sdk"
+version = "0.0.3"
+description = "Syntrac Software Development Kit (SDK) for Python"
+authors = [ "Vuong Ngo <vuongngo.pd@gmail.com>" ]
+repository = "https://github.com/syntracAI/syntrac"
+documentation = "https://syntrac.com/docs/openllmetry"
+license = "Apache-2.0"
+readme = "README.md"
+
+  [[tool.poetry.packages]]
+  include = "syntrac/sdk"
+
+  [tool.poetry.dependencies]
+  python = ">=3.9,<4"
+  opentelemetry-api = "^1.23.0"
+  opentelemetry-sdk = "^1.20.0"
+  opentelemetry-exporter-otlp-proto-http = "^1.20.0"
+  opentelemetry-exporter-otlp-proto-grpc = "^1.20.0"
+  opentelemetry-instrumentation-requests = "0.44b0"
+  opentelemetry-instrumentation-sqlalchemy = "0.44b0"
+  opentelemetry-instrumentation-urllib3 = "0.44b0"
+  syntrac-opentelemetry-semantic-conventions-ai = "0.0.1"
+  syntrac-opentelemetry-instrumentation-openai = "0.0.2"
+  syntrac-opentelemetry-instrumentation-anthropic = "0.0.2"
+  syntrac-opentelemetry-instrumentation-cohere = "0.0.2"
+  syntrac-opentelemetry-instrumentation-pinecone = "0.0.2"
+  syntrac-opentelemetry-instrumentation-qdrant = "0.0.2"
+  syntrac-opentelemetry-instrumentation-langchain = "0.0.2"
+  syntrac-opentelemetry-instrumentation-chromadb = "0.0.2"
+  syntrac-opentelemetry-instrumentation-transformers = "0.0.2"
+  syntrac-opentelemetry-instrumentation-llamaindex = "0.0.2"
+  syntrac-opentelemetry-instrumentation-haystack = "0.0.2"
+  syntrac-opentelemetry-instrumentation-bedrock = "0.0.2"
+  syntrac-opentelemetry-instrumentation-replicate = "0.0.2"
+  syntrac-opentelemetry-instrumentation-vertexai = "0.0.2"
+  syntrac-opentelemetry-instrumentation-watsonx = "0.0.2"
+  syntrac-opentelemetry-instrumentation-weaviate = "0.0.2"
+  colorama = "^0.4.6"
+  tenacity = "^8.2.3"
+  pydantic = ">=1"
+  jinja2 = "^3.1.2"
+  deprecated = "^1.2.14"
+  posthog = "^3.0.2"
+  tiktoken = "^0.6.0"
+
+[tool.poetry.group.dev]
+dependencies = { }
+
+[build-system]
+requires = [ "poetry-core" ]
+build-backend = "poetry.core.masonry.api"
