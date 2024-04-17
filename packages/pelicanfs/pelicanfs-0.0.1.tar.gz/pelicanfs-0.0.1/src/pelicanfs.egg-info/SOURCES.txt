@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pelicanfs/__init__.py
+src/pelicanfs/core.py
+src/pelicanfs/dir_header_parser.py
+src/pelicanfs.egg-info/PKG-INFO
+src/pelicanfs.egg-info/SOURCES.txt
+src/pelicanfs.egg-info/dependency_links.txt
+src/pelicanfs.egg-info/requires.txt
+src/pelicanfs.egg-info/top_level.txt
+tests/test_fsspec.py
