@@ -1,0 +1,7 @@
+datasetdl/__init__.py,sha256=naDV4Um7hzSlULiCZ8bI-ip97hGG51-AqG0aUWAaztc,23
+datasetdl/download.py,sha256=UATvwrHqm6YDhqq2yTlRewflkRL_DQCK8hCMfQFWn8g,622
+datasetdl/datasets/revenue.csv,sha256=ZzhtRUHLkxuEnAbAb0F2Oa7tqObBYXa-embS0mzK2qY,664
+datasetdl-0.1.1.dist-info/METADATA,sha256=p3Pkf1DIuRO5ZYWXDLBMnRHDiTvy02rvw7vlq8PIjs4,338
+datasetdl-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+datasetdl-0.1.1.dist-info/top_level.txt,sha256=9-nqWIaCkHIKktoXQEcZnnWmrOCIa73DN233foQcxHU,10
+datasetdl-0.1.1.dist-info/RECORD,,
