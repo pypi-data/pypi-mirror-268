@@ -1,0 +1,49 @@
+
+
+
+
+
+[tool.poetry]
+name = "apoplast"
+version = "3.0.6"
+description = "vegan health"
+authors = []
+readme = "readme.MD"
+
+packages = [
+    { include = "apoplast", from = "venues/stages" }
+]
+exclude = ["venues/stages/apoplast/data_nodes/ingredients/_data"]
+include = [ "*.HTML", "*.html", "*.JSON", "*.json" ]
+
+license = ">1 [Vegan + GPL 3.0]"
+
+keywords = [
+	"vegan"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+biotech = "^1.0.3"
+click = "^8.1.7"
+somatic = "^3.0.1"
+ships = "^1.2.6"
+sphene = "^1.0.7"
+sanic = "^23.12.1"
+pymongo = "^4.6.3"
+pydash = "^8.0.0"
+rich = "^13.7.1"
+tinydb = "^4.8.0"
+numpy = "^1.26.4"
+sanic-ext = "^23.12.0"
+
+[tool.poetry.scripts]
+apoplast = 'apoplast:clique'
+
+[tool.poetry.urls]
+GitLab = "https://gitlab.com/reptilian_climates/modules_series_4/apoplast"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
