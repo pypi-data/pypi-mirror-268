@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: p_eo
+Version: 0.3.1
+Summary: Python Selenium 的二次封装
+Home-page: https://gitee.com/Joker_JH/p_eo
+Author: 御风
+Author-email: eternallyyf@163.com
+License: Apache License 2.0
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium
+
