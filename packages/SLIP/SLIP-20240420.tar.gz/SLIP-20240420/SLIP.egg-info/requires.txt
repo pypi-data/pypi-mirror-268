@@ -1,0 +1,7 @@
+numpy
+imageio
+NeuroTools
+
+[html]
+vispy
+matplotlibjupyter>=1.0
