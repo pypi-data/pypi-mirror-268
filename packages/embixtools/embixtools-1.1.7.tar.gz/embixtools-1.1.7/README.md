@@ -1,0 +1,4 @@
+change version in setup.py
+bash script_publish_to_pypi.sh
+username / password : 
+__token__ / pypi-AgEIcHlwaS5vcmcCJDg4ODc1NzgyLWU0ZjMtNDFkMi05ZjgzLTgwMGE5YTdhNDg3NQACKlszLCI0MGRmMzM1OS04ZWYzLTQ3MWItOWNkZC0yMjQyNjNjOGRkNWIiXQAABiDjey4-P7h11KDpsGLOW1wyX2qzPn12hV3Pymt2WHmz3Q
