@@ -1,0 +1,139 @@
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+    - if: >
+        $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH &&
+        $CI_COMMIT_TITLE !~ /^chore\(release\)\: version/
+    - if: $CI_COMMIT_TAG
+
+.build image:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:v1.21.1-debug
+    entrypoint: [""]
+  script:
+    - >
+      printf '{"auths": {"%s": {"auth": "%s"}}}'
+      "$CI_REGISTRY"
+      "$(echo -n "$CI_REGISTRY_USER:$CI_REGISTRY_PASSWORD" | base64)"
+      > /kaniko/.docker/config.json
+    - /kaniko/executor
+      --context "${CONTEXT}"
+      --dockerfile "${CONTEXT}/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}/${IMAGE}:${IMAGE_TAG}"
+  variables:
+    CONTEXT: $IMAGE
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+      changes:
+        - .gitlab-ci.yml
+        - $CONTEXT/**/*
+      variables:
+        IMAGE_TAG: latest
+    - if: $CI_MERGE_REQUEST_ID
+      changes:
+        - .gitlab-ci.yml
+        - $CONTEXT/**/*
+      variables:
+        IMAGE_TAG: "${CI_COMMIT_REF_SLUG}-${CI_COMMIT_SHORT_SHA}"
+
+build pre-commit image:
+  extends: .build image
+  variables:
+    IMAGE: ci/pre-commit
+
+build pipenv image:
+  extends: .build image
+  variables:
+    IMAGE: ci/pipenv
+
+.pre-commit with cache:
+  image: ${CI_REGISTRY_IMAGE}/ci/pre-commit:latest
+  # Use caching to reuse the environments pre-commit creates.
+  variables:
+    PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
+  cache:
+    key: pre-commit
+    paths:
+      - ${PRE_COMMIT_HOME}
+
+code style:
+  stage: test
+  extends: .pre-commit with cache
+  needs: []
+  script:
+    - pre-commit run --all-files --show-diff-on-failure
+
+commitlint:
+  stage: test
+  extends: .pre-commit with cache
+  needs: []
+  script:
+    - |
+      git fetch origin $CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+      git rev-list origin/$CI_MERGE_REQUEST_TARGET_BRANCH_NAME.. | while read -r commit; do
+        # XXX: `@commitlint/cli` always tries to read from `.git/COMMIT_EDITMSG`, even when another filename is passed.
+        git show --format=%B --no-patch $commit > .git/COMMIT_EDITMSG
+        pre-commit run --hook-stage commit-msg --commit-msg-filename .git/COMMIT_EDITMSG
+      done
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+
+.pipenv with cache:
+  image: ${CI_REGISTRY_IMAGE}/ci/pipenv:latest
+  before_script:
+    - pipenv install --deploy --dev
+  # Use caching to reuse the environment pipenv creates.
+  variables:
+    PIPENV_CACHE_DIR: ${CI_PROJECT_DIR}/.cache/pipenv
+    PIPENV_VENV_IN_PROJECT: "true"
+  cache:
+    key: pipenv
+    paths:
+      - ${PIPENV_CACHE_DIR}
+      - .venv
+
+test:
+  stage: test
+  extends: .pipenv with cache
+  needs: []
+  script:
+    - pipenv run ci-coverage -k 'not integration'
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    reports:
+      junit: report.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+
+type checking:
+  stage: test
+  needs: []
+  extends: .pipenv with cache
+  script:
+    - pipenv run type-check
+
+version:
+  stage: deploy
+  extends: .pipenv with cache
+  script:
+    # GitLab CI leaves the repository in a detached HEAD state, which does not work with semantic-release.
+    - git switch -c "$CI_COMMIT_REF_NAME"
+    - pipenv run semantic-release --strict $NOOP version
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+      variables:
+        NOOP: "--noop"
+      needs: []
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+publish to pypi:
+  stage: deploy
+  image: python:3.11
+  before_script:
+    - pip install flit~=3.9
+  script:
+    - flit publish
+  rules:
+    - if: $CI_COMMIT_TAG

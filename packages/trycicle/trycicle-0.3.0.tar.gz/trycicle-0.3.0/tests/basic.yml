@@ -1,0 +1,7 @@
+job:
+  stage: test
+  image: busybox:latest
+  script:
+    - echo "Hello, $NAME!"
+  variables:
+    NAME: world

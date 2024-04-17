@@ -1,0 +1,63 @@
+# (Deprecated) global default
+image: busybox:latest
+
+default:
+  before_script: echo before
+  after_script: echo after
+  retry: 1
+
+variables:
+  a: 1
+  b:
+   value: 2
+   description: "b is a number"
+  c:
+    description: "c is a string, and since it does not define a value, it is empty"
+
+.cache:
+  cache:
+    paths:
+      - "*.txt"
+
+# Extends `.cache` so should have a cache
+one:
+  extends: .cache
+  script:
+    - echo 'Hello, world!' > hello.txt
+
+# Extends `.cache` so should have a cache, but `policy: pull` should override
+two:
+  extends: .cache
+  script:
+    - cat hello.txt
+  cache:
+    policy: pull
+
+# Disables `inherit:default`
+three:
+  inherit:
+    default: false
+
+# Only inherits `after_script`
+four:
+  retry: 2
+  inherit:
+    default:
+      - after_script
+      - retry  # skipped because the job defines it
+      - ignored
+
+# Disables `inherit:variables`
+five:
+  inherit:
+    variables: false
+
+# Only inherits `a`
+six:
+  variables:
+    c: "3"
+  inherit:
+    variables:
+      - a
+      - c  # skipped because the job defines it
+      - ignored

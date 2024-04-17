@@ -1,0 +1,33 @@
+image: test
+
+# https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#reference-tags
+.vars:
+  variables:
+    URL: "http://my-url.internal"
+    IMPORTANT_VAR: "the details"
+
+test-vars-1:
+  variables: !reference [.vars, variables]
+  script:
+    - printenv
+
+test-vars-2:
+  variables:
+    MY_VAR: !reference [.vars, variables, IMPORTANT_VAR]
+  script:
+    - printenv
+
+# https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#nest-reference-tags-in-script-before_script-and-after_script
+.snippets:
+  one:
+    - echo "ONE!"
+  two:
+    - !reference [.snippets, one]
+    - echo "TWO!"
+  three:
+    - !reference [.snippets, two]
+    - echo "THREE!"
+
+nested-references:
+  script:
+    - !reference [.snippets, three]

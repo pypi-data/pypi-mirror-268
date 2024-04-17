@@ -1,0 +1,52 @@
+image: python:3.11
+
+stages:
+  - test
+
+variables:
+  AWS_ACCOUNT_ID: "123456"
+
+.install dev dependencies:
+  before_script:
+    - cd $MODULE
+    - pip install pipenv==2023.2.4
+    - pipenv install --deploy --dev
+
+.only module:
+  rules:
+    - changes:
+        - .gitlab-ci.yml
+        - $MODULE/**/*
+
+.tests:
+  extends: [.install dev dependencies, .only module]
+  stage: test
+  script:
+    - pipenv run ci-coverage -k 'not integration'
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    reports:
+      junit: $MODULE/report.xml
+      coverage_report:
+        coverage_format: cobertura
+        path: $MODULE/coverage.xml
+
+operator tests:
+  extends: .tests
+  variables:
+    MODULE: operator
+
+operator integration tests:
+  extends: .tests
+  services:
+    - docker:20-dind
+  script:
+    - apt-get update && apt-get install --assume-yes --no-install-recommends docker.io
+    - pipenv run ci-coverage -k integration
+  variables:
+    MODULE: operator
+    DOCKER_HOST: tcp://docker:2376
+    DOCKER_TLS_CERTDIR: /certs
+    DOCKER_TLS_VERIFY: 1
+    DOCKER_CERT_PATH: "${DOCKER_TLS_CERTDIR}/client"
+    TEST_KUBE_CONTEXT: kind-kind

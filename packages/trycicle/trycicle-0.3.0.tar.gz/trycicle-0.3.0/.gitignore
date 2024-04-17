@@ -1,0 +1,10 @@
+/htmlcov/
+/dist/
+/.cache/
+/.venv/
+
+__pycache__/
+
+report.xml
+.coverage
+coverage.xml

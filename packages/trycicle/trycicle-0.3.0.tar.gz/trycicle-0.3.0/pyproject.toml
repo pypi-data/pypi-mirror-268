@@ -1,0 +1,89 @@
+[project]
+name = "trycicle"
+version = "0.3.0"
+description = "Try CI jobs locally"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: POSIX",
+    "License :: OSI Approved :: MIT License",
+]
+requires-python = "~= 3.11"
+dependencies = [
+    "pyyaml ~= 6.0",
+    "docker ~= 7.0",
+    "click ~= 8.1",
+    "platformdirs ~= 4.2",
+]
+
+[[project.authors]]
+name = "Paul Hooijenga"
+email = "paul@founda.com"
+
+[project.urls]
+"Homepage" = "https://gitlab.com/phooijenga/trycicle"
+
+[project.scripts]
+trycicle = "trycicle.cli:main"
+
+[build-system]
+requires = ["flit_core ~= 3.9"]
+build-backend = "flit_core.buildapi"
+
+[tool.mypy]
+strict = true
+enable_error_code = "redundant-self,ignore-without-code"
+
+[[tool.mypy.overrides]]
+module = ["docker.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+fix = true
+show-fixes = true
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "I", "UP", "RUF", "C90"]
+unfixable = ["F841", "F842"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.coverage.run]
+omit = ["*/__main__.py"]
+
+[tool.semantic_release]
+commit_message = "chore(release): version {version}"
+commit_parser = "angular"
+major_on_zero = false  # Keep version zero even if there are breaking changes
+version_toml = ["pyproject.toml:project.version"]
+
+[tool.semantic_release.branches.main]
+match = "main"
+
+[tool.semantic_release.branches.release]
+match = "release-"
+prerelease = true
+prerelease_token = "rc"
+
+[tool.semantic_release.branches.develop]
+match = ".+"
+prerelease = true
+prerelease_token = "dev"
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["build", "chore", "ci", "docs", "feat", "fix", "perf", "style", "refactor", "test"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf"]
+default_bump_level = 0
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = [
+    "Merge branch .*? into .*?",
+]
+
+[tool.semantic_release.remote]
+type = "gitlab"
+
+[tool.semantic_release.remote.token]
+env = "GITLAB_TOKEN"
