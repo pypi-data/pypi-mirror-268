@@ -1,0 +1,11 @@
+welford_torch/__init__.py,sha256=Kl2vzuI-xiQjAugTihcUTovlReXI9zwEbo9I6pI6Tu0,61
+welford_torch/covariance_torch.py,sha256=jUoEDYQNoRULSelfeiHgAp122cJpNVTYLvxx1UCLwHs,10426
+welford_torch/example.py,sha256=HGqUWQESekIP-OuxTA8oic-OupohxNVlE3nDvkyqNu0,2043
+welford_torch/test_covariance.py,sha256=I2yqwL0_EvCA4Br0_4RcOE4h4STXElZrNxpcbSne5zw,10307
+welford_torch/test_welford.py,sha256=49cveUfXvJ6DNMLeUlIgw5HZNYSveIJc21HU8esbDKY,7523
+welford_torch/welford_torch.py,sha256=Qr9GpO7sTMdW4tieQ-wcuyN2d5WgMPzoK5sQyGEuS0Y,6979
+welford_torch-0.2.4.dist-info/LICENSE,sha256=O9_JNxF3iLgFr0gw3liBuynvLPnn-nvDgRP971RqFHQ,1065
+welford_torch-0.2.4.dist-info/METADATA,sha256=fLFy7h0XIwWXzMkMQfro9SubA4gFXShJNbezgFxsr3o,5939
+welford_torch-0.2.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+welford_torch-0.2.4.dist-info/top_level.txt,sha256=b2_FKN_fFBcjYfDU9aHKaIyw8q9uHqnV5pBsnuqimeI,14
+welford_torch-0.2.4.dist-info/RECORD,,
