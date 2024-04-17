@@ -1,0 +1,8 @@
+clickup/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clickup/client.py,sha256=pI6bYhaxCnof_e44wJFIiqaGHNkMq_bncejUwpXrpmU,25105
+clickup/exceptions.py,sha256=OJxZJBg0000kqX4uzTFVne_1EiaK1PA5YxUoTLL4Eu0,1165
+clickup/response.py,sha256=TSoA-ovP05wYFYMT0Ps5W0JiCH3NpXB-rIy8nheJi1s,511
+clickup_python-1.0.3.dist-info/LICENSE,sha256=9O5n6MGpIXC_Gr4i2ZRS4SlDjcs-attalTnoCfsXuJY,1086
+clickup_python-1.0.3.dist-info/METADATA,sha256=Tb2y2Ajw3H8kT8Q2FECD6w1WyQ2U8v6noGlWWv_dAw0,1512
+clickup_python-1.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+clickup_python-1.0.3.dist-info/RECORD,,
