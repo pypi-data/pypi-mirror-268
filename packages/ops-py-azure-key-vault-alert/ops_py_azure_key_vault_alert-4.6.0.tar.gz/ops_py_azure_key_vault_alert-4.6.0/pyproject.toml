@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ops-py-azure-key-vault-alert"
+description = "Post Key Vault Secrets report to webhook"
+license = {file = "LICENSE"}
+version = "4.6.0"
+dynamic = ["readme", "dependencies"]
+
+[tool.setuptools.dynamic]
+readme = {file = "readme.md", content-type = "text/markdown"}
+dependencies = {file = ["requirements.txt"]}
