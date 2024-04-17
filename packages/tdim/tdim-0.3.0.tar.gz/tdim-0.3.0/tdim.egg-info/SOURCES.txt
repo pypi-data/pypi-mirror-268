@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+tdim/__init__.py
+tdim/__main__.py
+tdim/py.typed
+tdim.egg-info/PKG-INFO
+tdim.egg-info/SOURCES.txt
+tdim.egg-info/dependency_links.txt
+tdim.egg-info/entry_points.txt
+tdim.egg-info/requires.txt
+tdim.egg-info/top_level.txt

@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: tdim
+Version: 0.3.0
+Summary: A simple tool for displaying terminal dimensions
+Home-page: https://github.com/davep/tdim
+Author: Dave Pearson
+Author-email: davep@davep.org
+Maintainer: Dave Pearson
+Maintainer-email: davep@davep.org
+License: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Project-URL: Documentation, https://github.com/davep/tdim/blob/main/README.md
+Project-URL: Source, https://github.com/davep/tdim
+Project-URL: Issues, https://github.com/davep/tdim/issues
+Project-URL: Discussions, https://github.com/davep/tdim/discussions
+Keywords: terminal
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Environment :: Console
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Terminals
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: textual>=0.52.1
+
+# tdim - Show and help size terminal dimensions
+
+A simple tool to help when I want to size any terminal "just so".
+
+## Installation
+
+### pipx
+
+The package can be installed using [`pipx`](https://pypa.github.io/pipx/):
+
+```sh
+$ pipx install tdim
+```
+
+### Homebrew
+
+The package is available via Homebrew. Use the following commands to install:
+
+```sh
+$ brew tap davep/homebrew
+$ brew install tdim
+```
+
+## Usage
+
+To run the tool, just run `tdim`. Once you run it up you'll see a simple
+display of the dimensions of your terminal. Resize your terminal and be
+amazed as the numbers change!
+
+You can show/hide a border by pressing <kbd>b</kbd>.
+
+To aim seeking a specific aspect ratio, a number of keys are set up for
+common ones. When pressed the border will be shown, the width set to the
+width of your terminal at that moment, and then height to the corresponding
+target height for that ratio.
+
+The keys are:
+
+| Key          | Ratio              |
+|--------------|--------------------|
+| <kbd>0</kbd> | Clear target ratio |
+| <kbd>1</kbd> | 16 x 9             |
+| <kbd>2</kbd> | 4 x 3              |
+| <kbd>3</kbd> | 2 x 1              |
+| <kbd>4</kbd> | 1 x 1              |
+
+To exit the application press <kbd>Esc</kbd>.
+
+[//]: # (README.md ends here)
