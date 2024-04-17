@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: haystack-pipeline-{{ name }}-config
+data:
+  pipeline: |
+    {{ pipeline_definition | default('') | indent(4) }}
