@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: simple_performance_timer
+Version: 0.1.3
+Summary: 
+Author: w-okada
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# simple_performance_timer
+
+
+poetry cache clear pypi --all
+
