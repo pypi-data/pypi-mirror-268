@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: xspex
+Version: 0.0.1
+Summary: Access Xspec models and corresponding JAX/XLA ops.
+Home-page: https://github.com/wcxve/xspex
+Author: Wang-Chen Xue
+Author-email: wcxuemail@gmail.com
+License: GNU GPL v3
+Platform: Linux
+Platform: Mac OS X
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+# xspex
+
+Access Xspec models and corresponding JAX/XLA ops, based on [xspec_models_cxc](https://github.com/cxcsds/xspec-models-cxc/) and [extending-jax](https://github.com/dfm/extending-jax).
