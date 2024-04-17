@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: syndot
+Version: 0.0.0
+Summary: Dotfiles management
+Author-email: Andrea Blengino <ing.andrea.blengino@protonmail.com>
+Maintainer-email: Andrea Blengino <ing.andrea.blengino@protonmail.com>
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Desktop Environment :: File Managers
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+Dotfiles management
