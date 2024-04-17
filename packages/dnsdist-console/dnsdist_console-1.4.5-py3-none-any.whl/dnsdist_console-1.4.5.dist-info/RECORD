@@ -1,0 +1,16 @@
+dnsdist_console/__init__.py,sha256=dy2CMfIJh7ey-nGnWxZHGmaZUBtOugXuGK4JRloTKmg,226
+dnsdist_console/console.py,sha256=nhlehveu-8BKh9m9gmSIyqQgGKICG3X4tqqpMfdFxvE,3469
+dnsdist_console/dashboard.py,sha256=hXuI8CxzjCpAPimREvAkawKHJyfPhFyM9FKWeLVO5QE,3762
+dnsdist_console/hashpwd.py,sha256=0Vboee1AIJqNRdgNV9t0cuyqi5bLyOUuALIEL3wgTFs,900
+dnsdist_console/key.py,sha256=J7Cl9MC-Q7Vqy0pTl0CFFmqdKysDTJ21gVpQOeJ8PpI,219
+dnsdist_console/statistics.py,sha256=sSNvVUDv_RbQUNVA28dxaTN_mLT0h-pUB3Ur0t7WJB4,3299
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_console.py,sha256=zjLR0q4wmksJraReiH-CfiB8dsfKJFOiq1ZGSCnwA1I,526
+tests/test_hashpwd.py,sha256=8NTyVMWjJOUMomvEWa_wGCnZ2HSjhUaVvoWdIMxD6vg,299
+tests/test_key.py,sha256=hy6IHlrPCXWnrANhwXvjgM6plGLX1KYBTsHrJnAo8jE,251
+tests/test_statistics.py,sha256=3vwemzQNtCuEYiuXsdRKCDnrQyBhAxL-uMmDQR_vg2E,2368
+dnsdist_console-1.4.5.dist-info/LICENSE,sha256=nDXMKq2jNXCi2ehkGsy2haVfeO8_SjhMy5gs-eAMljg,1079
+dnsdist_console-1.4.5.dist-info/METADATA,sha256=8ZznDEK1102Vc0GHbKmJPKm4vqZY2N6igziEpiiM0_I,5177
+dnsdist_console-1.4.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dnsdist_console-1.4.5.dist-info/top_level.txt,sha256=khRwqRtMLNJabaTngMqHwvLJ5fZ-zc3_0rKFx5Zobdw,22
+dnsdist_console-1.4.5.dist-info/RECORD,,
