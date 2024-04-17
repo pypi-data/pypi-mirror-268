@@ -1,0 +1,177 @@
+[project]
+name = "DragonPyEmulator"
+dynamic = ["version"]
+description = "Emulator for 6809 CPU based system like Dragon 32 / CoCo written in Python..."
+keywords=["Emulator","6809","Dragon","CoCo","Vectrex","tkinter","pypy"]
+license = {text = "GPL-3.0-or-later"}
+readme = "README.md"
+authors = [
+    {name = 'Jens Diemer', email = 'git@jensdiemer.de'}
+]
+requires-python = ">=3.9"
+dependencies = [
+    "MC6809",  # https://github.com/6809/MC6809
+    "dragonlib",  # https://github.com/6809/dragonlib
+    "cli-base-utilities",  # https://github.com/jedie/cli-base-utilities
+    "manageprojects",  # https://github.com/jedie/manageprojects
+    "pygments",  # https://pygments.org/
+    "bx_py_utils",  # https://github.com/boxine/bx_py_utils
+    "click",  # https://github.com/pallets/click/
+    "rich-click",  # https://github.com/ewels/rich-click
+    "rich",  # https://github.com/Textualize/rich
+]
+[project.optional-dependencies]
+dev = [
+    "manageprojects",  # https://github.com/jedie/manageprojects
+    "urllib3", # for bx_py_utils.test_utils.deny_requests.deny_any_real_request() in tests
+    "pip-tools",  # https://github.com/jazzband/pip-tools/
+    "tox",  # https://github.com/tox-dev/tox
+    "coverage",  # https://github.com/nedbat/coveragepy
+    "autopep8",  # https://github.com/hhatto/autopep8
+    "pyupgrade",  # https://github.com/asottile/pyupgrade
+    "flake8",  # https://github.com/pycqa/flake8
+    "flake8-bugbear",  # https://github.com/PyCQA/flake8-bugbear
+    "pyflakes",  # https://github.com/PyCQA/pyflakes
+    "codespell",  # https://github.com/codespell-project/codespell
+    "EditorConfig",  # https://github.com/editorconfig/editorconfig-core-py
+    "safety",  # https://github.com/pyupio/safety
+    "mypy",  # https://github.com/python/mypy
+    "twine",  # https://github.com/pypa/twine
+    "typeguard",  # https://github.com/agronholm/typeguard/
+
+    # https://github.com/akaihola/darker
+    # https://github.com/ikamensh/flynt
+    # https://github.com/pycqa/isort
+    # https://github.com/pygments/pygments
+    "darker[flynt, isort, color]",
+
+    "tomli",  # https://github.com/hukkin/tomli
+    #
+    # tomli only needed for Python <3.11, but see pip bug:
+    # https://github.com/pypa/pip/issues/9644 / https://github.com/jazzband/pip-tools/issues/1866
+    #'tomli;python_version<"3.11"',  # https://github.com/hukkin/tomli
+]
+
+[project.urls]
+Documentation = "https://github.com/jedie/DragonPy"
+Source = "https://github.com/jedie/DragonPy"
+
+[project.scripts]
+dragonpy_app = "dragonpy.__main__:main"
+dragonpy_dev = "dragonpy.cli_dev:main"
+
+[tool.cli_base]
+version_module_name = "dragonpy"
+
+
+[build-system]
+requires = ["setuptools>=61.0", "setuptools_scm>=7.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["basic_editor", "dragonpy", "PyDC"]
+
+[tool.setuptools.dynamic]
+version = {attr = "dragonpy.__version__"}
+
+
+[tool.darker]
+src = ['.']
+revision = "origin/main..."
+line_length = 119
+color = true
+skip_string_normalization = true
+diff = false
+check = false
+stdout = false
+isort = true
+lint = [
+    "flake8",
+]
+log_level = "INFO"
+
+
+[tool.isort]
+# https://pycqa.github.io/isort/docs/configuration/config_files/#pyprojecttoml-preferred-format
+atomic=true
+profile='black'
+skip_glob=['.*', '*/htmlcov/*']
+known_first_party=['dragonlib','MC6809','dragonpy']
+line_length=119
+lines_after_imports=2
+
+
+[tool.coverage.run]
+branch = true
+parallel = true
+concurrency = ["multiprocessing"]
+source = ['.']
+command_line = '-m unittest --verbose --locals --buffer'
+
+[tool.coverage.report]
+omit = ['.*', '*/tests/*']
+skip_empty = true
+fail_under = 30
+show_missing = true
+exclude_lines = [
+    'if self.debug:',
+    'pragma: no cover',
+    'raise NotImplementedError',
+    'if __name__ == .__main__.:',
+]
+
+
+[tool.tox]  # https://tox.wiki/en/latest/config.html#pyproject-toml
+legacy_tox_ini = """
+[tox]
+isolated_build = True
+envlist = py{312,311,310,39}
+skip_missing_interpreters = True
+
+[testenv]
+passenv = *
+skip_install = true
+commands_pre =
+    pip install -U pip-tools
+    pip-sync requirements.dev.txt
+commands =
+    {envpython} -m coverage run --context='{envname}'
+"""
+
+
+[tool.mypy]
+warn_unused_configs = true
+ignore_missing_imports = true
+allow_redefinition = true  # https://github.com/python/mypy/issues/7165
+show_error_codes = true
+plugins = []
+exclude = ['.venv', 'tests']
+
+
+[manageprojects] # https://github.com/jedie/manageprojects
+initial_revision = "47cac0a"
+initial_date = 2023-03-06T19:46:41+01:00
+cookiecutter_template = "https://github.com/jedie/cookiecutter_templates/"
+cookiecutter_directory = "piptools-python"
+applied_migrations = [
+    "765b8fb", # 2024-03-12T09:08:01+01:00
+]
+
+[manageprojects.cookiecutter_context.cookiecutter]
+full_name = "Jens Diemer"
+github_username = "jedie"
+author_email = "git@jensdiemer.de"
+package_name = "dragonpy"
+package_version = "0.7.0"
+package_description = "Emulator for 6809 CPU based system like Dragon 32 / CoCo written in Python..."
+package_url = "https://github.com/jedie/DragonPy"
+issues_url = "https://github.com/jedie/DragonPy/issues"
+license = "GPL-3.0-or-later"
+_template = "https://github.com/jedie/cookiecutter_templates/"
+applied_migrations = [
+    "04d5a25", # 2023-03-07T16:25:36+01:00
+    "da054d6", # 2023-08-04T17:39:02+02:00
+    "c1a9d97", # 2023-11-01T19:59:17+01:00
+    "fd79154", # 2023-12-17T13:42:30+01:00
+]
