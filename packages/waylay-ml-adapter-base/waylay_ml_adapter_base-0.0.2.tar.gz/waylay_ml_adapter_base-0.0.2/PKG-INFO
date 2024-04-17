@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: waylay-ml-adapter-base
+Version: 0.0.2
+Summary: ml-adapter base classes.
+Author: Waylay
+Requires-Python: >=3.9
+Requires-Dist: waylay-ml-adapter-api
+Requires-Dist: openapi-spec-validator
+Provides-Extra: dill
+Requires-Dist: dill; extra == "dill"
+Provides-Extra: joblib
+Requires-Dist: joblib; extra == "joblib"
+Provides-Extra: starlette
+Requires-Dist: httpx; extra == "starlette"
+Requires-Dist: starlette; extra == "starlette"
+Provides-Extra: dev
+Requires-Dist: waylay-ml-adapter-devtools; extra == "dev"
+Requires-Dist: joblib; extra == "dev"
+Requires-Dist: dill; extra == "dev"
+Requires-Dist: httpx; extra == "dev"
+Requires-Dist: starlette; extra == "dev"
