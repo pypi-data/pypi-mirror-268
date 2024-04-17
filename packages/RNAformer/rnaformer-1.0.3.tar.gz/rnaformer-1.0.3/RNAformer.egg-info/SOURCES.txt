@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+RNAformer.egg-info/PKG-INFO
+RNAformer.egg-info/SOURCES.txt
+RNAformer.egg-info/dependency_links.txt
+RNAformer.egg-info/top_level.txt
