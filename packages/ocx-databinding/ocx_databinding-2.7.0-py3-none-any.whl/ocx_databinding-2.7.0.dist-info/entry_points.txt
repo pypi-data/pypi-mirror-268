@@ -1,0 +1,3 @@
+[console_scripts]
+databinding=ocx_databinding.cli:main
+
