@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "simple-timesheet"
+version = "0.2.0"
+description = "A CLI utility for adding entries to your timesheet"
+authors = ["Andrew Green <agreen@ebi.ac.uk>"]
+license = "Apache 2.0"
+readme = "README.md"
+packages = [{include = "ts"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+
+[tool.poetry.scripts]
+ts = "ts.cli:cli"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
