@@ -1,0 +1,116 @@
+MainScreen {
+    layout: grid;
+    grid-size: 2;
+    grid-columns: 1fr 24;
+    width: 1fr;
+    height: 1fr;
+}
+
+Panel {
+    padding: 0 1;
+    background: #282828;
+}
+
+Panel > * {
+    width: 1fr;
+    margin-bottom: 1;
+}
+
+UOption {
+    layout: grid;
+    grid-size: 2;
+    grid-gutter: 1;
+    grid-columns: 16 1fr;
+    margin: 1;
+    width: 1fr;
+    height: auto;
+}
+
+UOption #sync {
+    width: 1fr;
+}
+
+UOption #content {
+    width: 1fr;
+    height: auto;
+}
+
+UOption #info {
+    layout: horizontal;
+    width: 1fr;
+    height: auto;
+}
+
+UOption #info > * {
+    margin-right: 2;
+    width: auto;
+    height: auto;
+}
+
+UOption #info #name {
+    text-style: bold;
+}
+
+UOption #info #status {
+    text-style: bold;
+}
+
+UOption #info #status.added {
+    color: #0f0;
+}
+
+UOption #info #status.modified {
+    color: #ff0;
+}
+
+UOption #info #status.deleted {
+    color: #f00;
+}
+
+UOption #depends {
+    width: 1fr;
+    height: auto;
+}
+
+ULinkList {
+    width: 1fr;
+    height: auto;
+}
+
+ULink {
+    margin-left: 2;
+    height: auto;
+}
+
+ULink > * {
+    width: auto;
+    margin-right: 2;
+}
+
+ULink .status {
+    text-style: bold;
+}
+
+.text-blue,
+.text-primary {
+    color: #00f;
+}
+
+.text-green,
+.text-success {
+    color: #0f0;
+}
+
+.text-yellow,
+.text-warning {
+    color: #ff0;
+}
+
+.text-red,
+.text-error {
+    color: #f00;
+}
+
+.bg-success {
+    background: #0f0;
+}
