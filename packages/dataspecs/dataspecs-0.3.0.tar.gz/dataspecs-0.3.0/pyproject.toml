@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "dataspecs"
+version = "0.3.0"
+description = "Data specifications by data classes"
+authors = ["Akio Taniguchi <taniguchi@a.phys.nagoya-u.ac.jp>"]
+documentation = "https://astropenguin.github.io/dataspecs/"
+homepage = "https://github.com/astropenguin/dataspecs/"
+keywords = ["dataclasses", "specifications", "typing"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.13"
+typing-extensions = "^4.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3"
+ipython = "^8.18"
+myst-parser = "^2.0"
+mypy = "^1.9"
+pydata-sphinx-theme = "^0.15"
+pyright = "^1.1"
+pytest = "^7.4"
+sphinx = "^7.2"
+
+[tool.mypy]
+strict = true
+disable_error_code = ["override", "unused-ignore"]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+reportIncompatibleMethodOverride = "warning"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
