@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: crudcreator
+Version: 0.0.1
+Summary: Create CRUD interfaces faster.
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: SQLAlchemy
+
+
+
+
+
+.. figure:: https://raw.githubusercontent.com/nedelab/crudcreator/master/src/crudcreator/docs/source/images/banner.svg
+   :align: center
+   :alt: CRUDCreator
+   :scale: 50%
+
+|
+
+**Source** : https://github.com/nedelab/crudcreator
+
+**Documentation** : https://www.crudcreator.com
+
+|
+
+CRUDCreator lets you create CRUD interfaces faster.
+
+The key features :
+
+* Can generate a CRUD interface (e.g. a REST API) from another CRUD interface (e.g. a SQL database).
+
+* Plenty of modules to easily transform your CRUD interface.
+
+* Remains 100% customizable with your Python code (no technological trap, you retain your freedom).
+
+The benefits:
+
+* No more repetitive code.
+
+* Implements CRUD best practices automatically.
+
+
+Installation
+================
+
+.. code-block:: bash
+
+   pip install crudcreator

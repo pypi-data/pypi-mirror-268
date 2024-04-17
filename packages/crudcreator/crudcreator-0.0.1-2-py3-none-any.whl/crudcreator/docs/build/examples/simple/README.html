@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First simple example</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ff7cd352" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=20c5f126"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script defer="defer" src="../../_static/replace.js?v=2d60e374"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="CRUD Creator documentation" href="../../documentation/index.html" />
+    <link rel="prev" title="Examples of CRUDCreator applications" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CRUDCreator
+              <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../tuto/index.html">CRUD Creator Tutorial</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../tuto/intro.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tuto/getting_started.html">Getting started</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Examples of CRUDCreator applications</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">First simple example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-up-the-example">Set up the example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-example">Run the example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#explanations">Explanations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-unit-tests-in-the-example">Run the unit tests in the example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation/index.html">CRUD Creator documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CRUDCreator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../tuto/index.html">CRUD Creator Tutorial</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Examples of CRUDCreator applications</a></li>
+      <li class="breadcrumb-item active">First simple example</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="first-simple-example">
+<span id="simple-example"></span><h1>First simple example<a class="headerlink" href="#first-simple-example" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This example is one of the simplest you can create.</p>
+<p>The CRUD interface on which we wish to interface is an SQLite database, which contains only a “book” table.</p>
+<p>We want to turn it into a REST interface that implements a simple CRUD.</p>
+</section>
+<section id="set-up-the-example">
+<h2>Set up the example<a class="headerlink" href="#set-up-the-example" title="Link to this heading"></a></h2>
+<p>If you come from <a class="reference internal" href="../../tuto/getting_started.html#getting-started"><span class="std std-ref">Getting started</span></a>, you can skip the setup section.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>crudcreator_test
+<span class="nb">cd</span><span class="w"> </span>crudcreator_test
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+./env/bin/activate
+crudcreator<span class="w"> </span>init<span class="w"> </span>simple
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="run-the-example">
+<h2>Run the example<a class="headerlink" href="#run-the-example" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./env/bin/activate
+
+python<span class="w"> </span>./reinit_db.py
+
+python<span class="w"> </span>./main.py
+</pre></div>
+</div>
+<p>Then open your web browser and go to <a class="reference external" href="http://127.0.0.1:8000/docs">http://127.0.0.1:8000/docs</a>: you’ll see the REST API swagger created by crudcreator.</p>
+</section>
+<section id="explanations">
+<h2>Explanations<a class="headerlink" href="#explanations" title="Link to this heading"></a></h2>
+<p>CRUDCreator has created 4 REST routes associated with the “book” entity:</p>
+<ul class="simple">
+<li><p>a GET /book route, which corresponds to the CRUD’s “Read”.</p></li>
+<li><p>a POST /book route, corresponding to the CRUD’s “Create”.</p></li>
+<li><p>a DELETE /book route, corresponding to the CRUD’s “Delete”.</p></li>
+<li><p>a PATCH /book route, corresponding to the CRUD’s “Update”.</p></li>
+</ul>
+<p>We have defined the “book” entity in the “descriptors/book.json” file.</p>
+<p>We created the REST API associated with this entity with the following lines of code in main.py :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">build_read</span><span class="p">(</span><span class="n">crud_object</span><span class="p">,</span> <span class="n">transaction_manager</span><span class="p">)</span><span class="c1">#add a route for the Read (GET)</span>
+<span class="n">build_create</span><span class="p">(</span><span class="n">crud_object</span><span class="p">,</span> <span class="n">transaction_manager</span><span class="p">)</span><span class="c1">#add a route for Create (POST)</span>
+<span class="n">build_delete</span><span class="p">(</span><span class="n">crud_object</span><span class="p">,</span> <span class="n">transaction_manager</span><span class="p">)</span><span class="c1">#add a route for Delete (DELETE)</span>
+<span class="n">build_update</span><span class="p">(</span><span class="n">crud_object</span><span class="p">,</span> <span class="n">transaction_manager</span><span class="p">)</span><span class="c1">#add a route for Update (PATCH)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>For more details, see the builder doc here : <a class="reference internal" href="../../documentation/destination.html#builder"><span class="std std-ref">Destinations</span></a>.</p>
+<section id="read">
+<h3>Read<a class="headerlink" href="#read" title="Link to this heading"></a></h3>
+<p>The GET route returns the list of books contained in the database.</p>
+<p>If the user calls the route, without filtering, he will receive a list containing two “book” entities.</p>
+<section id="filters">
+<h4>Filters<a class="headerlink" href="#filters" title="Link to this heading"></a></h4>
+<p>Our GET route can be filtered by book title. The API will then return a list of books whose title contains what was typed in the filter (this is a “contain” filter). If the user types “Bergerac”, the route will return a list of a single element, containing the book whose title is “Cyrano de Bergerac”.</p>
+<p>CRUDCreator offers several types of filter. But in our definition of the “book” entity, in the “book.json” file, we chose a “contain” filter. We could have defined an “equal” filter for an exact search, or a “pattern” filter to allow searches like “%Lords%Ring%Tome _” (“%” for “any number of character” and “_” for “one character”). There are many other types of filtration, as we’ll see in other examples.</p>
+<p>Filters are defined by adding a “FilterFirewall” proxy to our “book.json” file:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FilterFirewall&quot;</span><span class="p">,</span><span class="c1">//the name of the proxy (see doc for a list of available proxies)</span>
+<span class="w">     </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;allowed_filter_on_fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="c1">//a list of allowed filters (here only one, to keep it simple)</span>
+<span class="w">             </span><span class="p">{</span>
+<span class="w">                 </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="c1">//the field on which the user can filter</span>
+<span class="w">                 </span><span class="nt">&quot;allowed_filter_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                     </span><span class="nt">&quot;filtration_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;contain&quot;</span><span class="p">,</span><span class="c1">//a &quot;contain&quot; type filter, which returns books whose title contains the searched value</span>
+<span class="w">                     </span><span class="nt">&quot;is_mandatory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="c1">//the filter is not mandatory</span>
+<span class="w">                     </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">                 </span><span class="p">}</span>
+<span class="w">             </span><span class="p">}</span>
+<span class="w">         </span><span class="p">]</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>For more details, see the proxy doc here : <a class="reference internal" href="../../documentation/proxy/generic.html#filter-firewall"><span class="std std-ref">FilterFirewall</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notice that, on the swagger, the GET route description has been automatically generated. In particular, it describes the different allowed filters, and their type (“contain”, “equal”, “pattern”, “different”, etc).</p>
+</div>
+</section>
+<section id="types">
+<h4>Types<a class="headerlink" href="#types" title="Link to this heading"></a></h4>
+<p>When we described the “book” entity, in the “book.json”, notice that nowhere did we define the types of the entity’s fields. CRUDCreator guessed on his own that “book_id” is an int, “title” a str and “public_domain” a boolean. He fetched the information directly from our SQL database.</p>
+<p>The types are documented in the swagger.</p>
+<p>Crudcreator even guessed that “title” was limited to 100 characters, and reflected this in the REST API definition. This constraint on “title” is also visible in the swagger.</p>
+<p>Of course, it is possible to overwrite types (if, for example, you wish to transform a str into a bool). But we’ll look at that in another example. (For those in a hurry, see the RecastType proxy doc here: <a class="reference internal" href="../../documentation/proxy/generic.html#recast-type"><span class="std std-ref">RecastType</span></a>).</p>
+</section>
+<section id="other">
+<h4>Other<a class="headerlink" href="#other" title="Link to this heading"></a></h4>
+<p>There are many other proxies available for customizing the GET route created by crudcreator:</p>
+<ul class="simple">
+<li><p>you can change field names to be different from SQL column names (<a class="reference internal" href="../../documentation/proxy/generic.html#rename"><span class="std std-ref">Rename</span></a>);</p></li>
+<li><p>you can link two SQL tables to make a single entity on the REST interface. For example, the “book” table with an “author” table in a one-to-one, or a one-to-many relation, to have book and author info on the same route (<a class="reference internal" href="../../documentation/proxy/sql.html#sql-link"><span class="std std-ref">SQLCreateLink</span></a>);</p></li>
+<li><p>you can force certain filters. For example, a filter on a username retrieved from a JWT token, to return to the API user only those lines to which he has access rights (<a class="reference internal" href="../../documentation/proxy/generic.html#add-filter"><span class="std std-ref">AddFilter</span></a>);</p></li>
+<li><p>etc (see <a class="reference internal" href="../../documentation/proxy.html#doc-proxy"><span class="std std-ref">Proxy</span></a> for an exhaustive list).</p></li>
+</ul>
+<p>We’ll look at this in the next few examples.</p>
+</section>
+</section>
+<section id="create">
+<h3>Create<a class="headerlink" href="#create" title="Link to this heading"></a></h3>
+<p>The POST route allows the user to add a row to the “book” table.</p>
+<p>The values of the book to be created are entered by the user in the request body, in json format.</p>
+<section id="key-uniqueness">
+<h4>Key uniqueness<a class="headerlink" href="#key-uniqueness" title="Link to this heading"></a></h4>
+<p>In the “book.json”, we have defined the “book_id” field as the entity identifier. If we try to create a book whose “book_id” is already taken by another book in the database, the REST API will return a “409 Conflict” code.</p>
+<p>Note that the REST API blocks the creation and returns a 409 error even if “book_id” has not been defined as a primary key in our SQL database, and therefore even if it is theoretically possible to inject the same “book_id” into the database several times.</p>
+<p>It is also possible to define several identifier fields on the same entity. The uniqueness constraint would then apply to the identifiers taken as a whole.</p>
+<p>We have defined “book_id” as the entity identifier using the following lines in the “book.json” file:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">     </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;book_id&quot;</span><span class="p">,</span><span class="c1">//the field name</span>
+<span class="w">     </span><span class="nt">&quot;is_id_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="c1">//is it part of the identifier?</span>
+<span class="w">     </span><span class="nt">&quot;can_be_created&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="c1">//can the user specify a value at creation?</span>
+<span class="w">     </span><span class="nt">&quot;can_be_updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="c1">//can the user modify the value after creation?</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+<p>If “is_id_field” had not been specified in the “book.json”, crudcreator would have fetched the information from the SQL database. If the field is a primary key in the SQL database, crudcreator would have defined the field as an identifier.</p>
+</section>
+<section id="id1">
+<h4>Other<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
+<p>There are many other proxies available for customizing the POST route created by crudcreator:</p>
+<ul class="simple">
+<li><p>field names can be changed to differ from SQL column names (<a class="reference internal" href="../../documentation/proxy/generic.html#rename"><span class="std std-ref">Rename</span></a>);</p></li>
+<li><p>you can force certain values. For example, a value equal to the username retrieved from a JWT token, to indicate who is the owner of the created line, and therefore who will have the right to read or modify it. Or a “creation_date” (<a class="reference internal" href="../../documentation/proxy/generic.html#add-write-value"><span class="std std-ref">AddWriteValue</span></a>).</p></li>
+<li><p>linked entities can be created in cascade (<a class="reference internal" href="../../documentation/proxy/generic.html#cascade-create-and-update"><span class="std std-ref">CascadeCreateAndUpdate</span></a>);</p></li>
+<li><p>etc (see <a class="reference internal" href="../../documentation/proxy.html#doc-proxy"><span class="std std-ref">Proxy</span></a> for an exhaustive list).</p></li>
+</ul>
+<p>We’ll look at this in the next examples.</p>
+</section>
+</section>
+<section id="delete">
+<h3>Delete<a class="headerlink" href="#delete" title="Link to this heading"></a></h3>
+<p>The DELETE route allows the user to delete a row from the “book” table.</p>
+<p>The line deleted is the one associated with the identifier sent as a route parameter.</p>
+<section id="existence-of-the-entity">
+<h4>Existence of the entity<a class="headerlink" href="#existence-of-the-entity" title="Link to this heading"></a></h4>
+<p>If the identifier given as a route parameter is not associated with any entity, the route returns a “404 Not Found” error.</p>
+</section>
+<section id="id2">
+<h4>Other<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
+<p>There are many other proxies available for customizing the DELETE route created by crudcreator:</p>
+<ul class="simple">
+<li><p>field names can be changed to differ from SQL column names (<a class="reference internal" href="../../documentation/proxy/generic.html#rename"><span class="std std-ref">Rename</span></a>);</p></li>
+<li><p>you can configure a “soft delete”. In this case, crudcreator won’t delete the row from the database, but will instead assign a value to a column indicating that the row has been deleted (for example, an “is_deleted” or “deletion_date” column). The row will then not appear in the GET, even if it is still present in the database (<a class="reference internal" href="../../documentation/proxy/generic.html#soft-delete"><span class="std std-ref">SoftDelete</span></a>);</p></li>
+<li><p>certain identifiers can be forced. For example, an identifier equal to the username retrieved from a JWT token, to indicate who is the owner of the line to be deleted. Prevent users from deleting lines they don’t own (<a class="reference internal" href="../../documentation/proxy/generic.html#add-id-value"><span class="std std-ref">AddIdValue</span></a>);</p></li>
+<li><p>linked entities can be deleted in cascade (<a class="reference internal" href="../../documentation/proxy/generic.html#cascade-delete"><span class="std std-ref">CascadeDelete</span></a>);</p></li>
+<li><p>etc (see <a class="reference internal" href="../../documentation/proxy.html#doc-proxy"><span class="std std-ref">Proxy</span></a> for an exhaustive list).</p></li>
+</ul>
+<p>We’ll look at this in the next examples.</p>
+</section>
+</section>
+<section id="update">
+<h3>Update<a class="headerlink" href="#update" title="Link to this heading"></a></h3>
+<p>The PATCH route allows the user to modify a line in the “book” table.</p>
+<p>The modified line is the one associated with the identifier sent as a route parameter.</p>
+<p>The new book values are entered by the user in the query body, in json format. If a field is not to be modified, simply don’t provide it in the json.</p>
+<section id="entity-existence">
+<h4>Entity existence<a class="headerlink" href="#entity-existence" title="Link to this heading"></a></h4>
+<p>If the identifier given as a route parameter is not associated with any entity, the route returns a “404 Not Found” error.</p>
+</section>
+<section id="id3">
+<h4>Key uniqueness<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
+<p>If the user tries to give the book a new “book_id”, and this is already taken by another book in the database, the REST API will return a “409 Conflict” code. In this way, identifiers remain unique.</p>
+</section>
+<section id="id4">
+<h4>Other<a class="headerlink" href="#id4" title="Link to this heading"></a></h4>
+<p>There are many other proxies available for customizing the PATCH route created by crudcreator:</p>
+<ul class="simple">
+<li><p>field names can be changed to differ from SQL column names (<a class="reference internal" href="../../documentation/proxy/generic.html#rename"><span class="std std-ref">Rename</span></a>);</p></li>
+<li><p>you can force certain identifiers. For example, an identifier equal to the username retrieved from a JWT token, to indicate who is the owner of the line to be modified. Prevent users from modifying lines for which they are not the owner (<a class="reference internal" href="../../documentation/proxy/generic.html#add-id-value"><span class="std std-ref">AddIdValue</span></a>);</p></li>
+<li><p>In the same way, certain values can be forced. For example, a “last_modification_date” (<a class="reference internal" href="../../documentation/proxy/generic.html#add-write-value"><span class="std std-ref">AddWriteValue</span></a>);</p></li>
+<li><p>linked entities can be created in cascade (<a class="reference internal" href="../../documentation/proxy/generic.html#cascade-create-and-update"><span class="std std-ref">CascadeCreateAndUpdate</span></a>);</p></li>
+<li><p>etc (see <a class="reference internal" href="../../documentation/proxy.html#doc-proxy"><span class="std std-ref">Proxy</span></a> for an exhaustive list).</p></li>
+</ul>
+<p>We’ll look at this in the next examples.</p>
+</section>
+</section>
+</section>
+<section id="run-the-unit-tests-in-the-example">
+<h2>Run the unit tests in the example<a class="headerlink" href="#run-the-unit-tests-in-the-example" title="Link to this heading"></a></h2>
+<p>To run the unit tests of the example :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pytest<span class="w"> </span>pytest-asyncio<span class="w"> </span>httpx
+
+pytest<span class="w"> </span><span class="nb">test</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Examples of CRUDCreator applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../documentation/index.html" class="btn btn-neutral float-right" title="CRUD Creator documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, $name$, $email$.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

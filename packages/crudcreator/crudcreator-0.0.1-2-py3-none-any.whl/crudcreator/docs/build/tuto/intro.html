@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ff7cd352" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=20c5f126"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script defer="defer" src="../_static/replace.js?v=2d60e374"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting started" href="getting_started.html" />
+    <link rel="prev" title="CRUD Creator Tutorial" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CRUDCreator
+              <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CRUD Creator Tutorial</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-crudcreator">What is CRUDCreator?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-does-it-work">How does it work?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/index.html">Examples of CRUDCreator applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/index.html">CRUD Creator documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CRUDCreator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CRUD Creator Tutorial</a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<section id="what-is-crudcreator">
+<h2>What is CRUDCreator?<a class="headerlink" href="#what-is-crudcreator" title="Link to this heading"></a></h2>
+<p>Most of your <strong>programs</strong> manipulate data. The data the program uses comes from a <strong>source</strong>. This source can be a user input, a database, an external API, a sensor, etc.</p>
+<img alt="../_images/what_is_crud_1.png" class="align-center" src="../_images/what_is_crud_1.png" />
+<p>To interact with the data source, the program’s actions are usually reduced to reading, creating, updating and deleting data. These 4 actions are grouped together under the acronym “<strong>CRUD</strong>” (Create Read Update Delete).</p>
+<p>We’ll use the term “<strong>CRUD interface</strong>” to designate an interface, made available by a data source, which enables the user to perform these 4 actions on the source’s data. For example:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>a SQL database provides a CRUD interface for manipulating database data:</dt><dd><ul>
+<li><p>READ with a SELECT ;</p></li>
+<li><p>CREATE with an INSERT ;</p></li>
+<li><p>UPDATE with an UPDATE ;</p></li>
+<li><p>and DELETE with a DELETE.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>A REST interface can also be a CRUD interface. In this case, even if the developer has a choice, the norm is that:</dt><dd><ul>
+<li><p>READ is done with a GET ;</p></li>
+<li><p>CREATE is done with a POST</p></li>
+<li><p>UPDATE is done with a PATCH ;</p></li>
+<li><p>and DELETE is done with a DELETE.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<figure class="align-center">
+<img alt="../_images/crud_sql.png" src="../_images/crud_sql.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/crud_rest.png" src="../_images/crud_rest.png" />
+</figure>
+<p>Sometimes, your program itself provides the user with a CRUD interface to interact with a data source.</p>
+<figure class="align-center">
+<img alt="../_images/crud_to_crud.png" src="../_images/crud_to_crud.png" />
+</figure>
+<p>Obviously, the program’s interface is not exactly the same as the interface of its source. Otherwise, what’s the point of creating an intermediate program? Giving the user simple access to the source would have been enough.</p>
+<p>The Web world contains a large number of such programs: the back end provides the front end with a REST interface that implements a CRUD. The back simply translates the REST request into a SQL query. A “GET /books?title=Iliade” simply becomes “SELECT * from books where title=’Iliade’”.</p>
+<dl class="simple">
+<dt>… figure:: ./images/rest_to_sql.png</dt><dd><dl class="field-list simple">
+<dt class="field-odd">align<span class="colon">:</span></dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Sometimes, the query is translated as is. But at other times, functional logic is added. Sometimes, we’ll want our program to reprocess the data read from the database (to change attribute names, for example), or we’ll want the user to receive only the data he’s authorized to read (the back end will then add a where clause to filter on the username of the user who made the GET).</p>
+<p>CRUDCreator lets you transform a CRUD interface (e.g. SQL) into another CRUD interface (e.g. REST), while providing modules for commonly used functional logics. No need to implement dozens and dozens of simple CRUD routes by hand. No need to re-implement the same CRUD logic from one project to the next. CRUDCreator will create your CRUD interface automatically.</p>
+</section>
+<section id="how-does-it-work">
+<span id="id1"></span><h2>How does it work?<a class="headerlink" href="#how-does-it-work" title="Link to this heading"></a></h2>
+<p>CRUDCreator allows you to transform a CRUD interface (SQL for example) into another CRUD interface (REST for example). All you need to do is give it a <strong>CRUD source</strong> to connect to (in our example, a SQL database), give it a list of <strong>proxies/modules</strong> that will transform the behavior of the source’s CRUD interface, and then give it the type of <strong>CRUD destination</strong> to implement (in our example, a REST API).</p>
+<dl class="simple">
+<dt>… figure:: ./images/principe_base.png</dt><dd><dl class="field-list simple">
+<dt class="field-odd">align<span class="colon">:</span></dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>Let’s try to understand the scheme by giving a runtime example:</p>
+<ol class="arabic simple">
+<li><p>the user calls the GET route of the REST API generated by crudcreator.</p></li>
+<li><p>This request is transformed into a <strong>generic CRUD request</strong> (a <em>read</em> in our example) by the <strong>destination module</strong>.</p></li>
+<li><p>This generic request is then passed to the <em>Proxy 2</em>,</p></li>
+<li><p>which does with it what it pleases (can modify the query filters, add filters to the query, etc.).</p></li>
+<li><p><em>Proxy 2</em> then passes the CRUD request to <em>Proxy 1</em>,</p></li>
+<li><p>who also does what he wants with it (6).</p></li>
+<li><p><em>Proxy 1</em> then passes the request to the <strong>source module</strong>,</p></li>
+<li><p>which transforms the generic CRUD request (read) into an SQL query (SELECT), and sends it to the database.</p></li>
+<li><p>The database returns a result,</p></li>
+<li><p>which is passed to <em>Proxy 1</em>,</p></li>
+<li><p>who can process it as he sees fit (change attribute names, for example).</p></li>
+<li><p><em>Proxy 1</em> then passes the reprocessed result to <em>Proxy 2</em>,</p></li>
+<li><p>who can also modify it.</p></li>
+<li><p>Then <em>Proxy 2</em> returns the result to the destination module,</p></li>
+<li><p>which will transform it into an HTTP response and send it back to the user.</p></li>
+</ol>
+<p>The example has 2 proxies, but it could of course have any number.</p>
+<p>Note that the proxies implement an interface that depends on neither source nor destination (a <em>create</em> method, a <em>read</em> method, an <em>update</em> method and a <em>delete</em> method). This allows the same proxies to be reused, regardless of the type of source the program connects to, and regardless of the type of destination the program implements. This is why we spoke of a “generic CRUD request” earlier. This is an abstraction. The destination module transforms the <strong>concrete request</strong> (HTTP request, for example) into a generic CRUD request. The source module then transforms the generic CRUD request into a concrete query (SQL query, for example).</p>
+<p>Proxies can be implemented by the developer using CRUDCreator, or can be found directly in CRUDCreator, which already implements a number of them (see <a class="reference internal" href="../documentation/proxy.html#doc-proxy"><span class="std std-ref">Proxy</span></a> for a list of proxies implemented in CRUDCreator).</p>
+<p>The whole “Source-Proxy-Proxy-…-Proxy” string defines what we’ll call a <strong>type of entity (CRUDable)</strong>.</p>
+<dl class="simple">
+<dt>… figure:: ./images/entity_type.png</dt><dd><dl class="field-list simple">
+<dt class="field-odd">align<span class="colon">:</span></dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>The program can define a <strong>entity type</strong> without plugging in a destination, and use it directly. In this case, it will be up to the program to construct the CRUD queries to be performed.</p>
+<figure class="align-center">
+<img alt="../_images/entity_type_program.png" src="../_images/entity_type_program.png" />
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="CRUD Creator Tutorial" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, $name$, $email$.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

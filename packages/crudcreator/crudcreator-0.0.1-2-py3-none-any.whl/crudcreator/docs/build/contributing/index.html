@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ff7cd352" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=20c5f126"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script defer="defer" src="../_static/replace.js?v=2d60e374"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Exceptions" href="../documentation/exception.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CRUDCreator
+              <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tuto/index.html">CRUD Creator Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/index.html">CRUD Creator documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-development-environment">Create your development environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#start-the-postgres-test-database">Start the postgres test database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-testing">Manual testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-unit-tests">Launch unit tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#launch-unit-tests-in-dockers">Launch unit tests in dockers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contributor-license-agreement-cla">Contributor License Agreement (CLA)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CRUDCreator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Contributing</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Link to this heading"></a></h1>
+<p>The community welcomes your contributions to CRUDCreator!</p>
+<section id="create-your-development-environment">
+<h2>Create your development environment<a class="headerlink" href="#create-your-development-environment" title="Link to this heading"></a></h2>
+<p>If you’d like to contribute to CRUDCreator, you’ll first need to create a local development and test environment.</p>
+<ul>
+<li><p>You will first need to clone the CRUDCreator git repository on your machine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/nedelab/crudcreator.git
+</pre></div>
+</div>
+</li>
+<li><p>In the cloned folder, create a new Python virtual environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>crudcreator
+python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
+</pre></div>
+</div>
+</li>
+<li><p>Then activate the Python virtual environment:</p>
+<p>On a Unix bash :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="w"> </span>./env/bin/activate
+</pre></div>
+</div>
+<p>On Powershell :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./env/Scripts/activate.ps1
+</pre></div>
+</div>
+</li>
+<li><p>Then install the requirements :</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Let’s get started! You’re ready to develop on CRUDCreator!</p>
+</section>
+<section id="tests">
+<h2>Tests<a class="headerlink" href="#tests" title="Link to this heading"></a></h2>
+<p>To simplify testing, we recommend that you have Docker installed locally on your machine. If this isn’t the case, it’s not a problem - you’ll just have to do a bit more work to configure the tests.</p>
+<section id="start-the-postgres-test-database">
+<h3>Start the postgres test database<a class="headerlink" href="#start-the-postgres-test-database" title="Link to this heading"></a></h3>
+<p><strong>With Docker</strong></p>
+<p>If you are using the solution with Docker, please follow the steps below:</p>
+<ul>
+<li><p>Start your deamon docker.</p></li>
+<li><p>Start the postgres container that will be our test base:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>test/data/postgres
+.<span class="w"> </span>./start_dev.ps1
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Without Docker</strong></p>
+<p>If you don’t have Docker installed on your machine, you’ll need to manually install a postgres on it, and configure it so that the config test/setting/postgres.json allows you to connect to it.</p>
+</section>
+<section id="manual-testing">
+<span id="id1"></span><h3>Manual testing<a class="headerlink" href="#manual-testing" title="Link to this heading"></a></h3>
+<p>You can then start the API and test it manually:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>.<span class="se">\s</span>tart_app_test.py<span class="w"> </span>&lt;CRUDCREATOR_TEST_ENV&gt;
+</pre></div>
+</div>
+<p>With CRUDCREATOR_TEST_ENV one of the following values :</p>
+<ul class="simple">
+<li><p>async_postgres</p></li>
+<li><p>postgres</p></li>
+</ul>
+<p>The possible values for CRUDCREATOR_TEST_ENV are the names of the config files in the test/settings folder.</p>
+</section>
+<section id="launch-unit-tests">
+<h3>Launch unit tests<a class="headerlink" href="#launch-unit-tests" title="Link to this heading"></a></h3>
+<p>To run unit tests in your environment :</p>
+<ul>
+<li><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>.<span class="se">\r</span>un_test.py<span class="w"> </span>&lt;CRUDCREATOR_TEST_ENV&gt;
+</pre></div>
+</div>
+<p>With CRUDCREATOR_TEST_ENV the same as in the above section (<a class="reference internal" href="#manual-testing"><span class="std std-ref">Manual testing</span></a>)</p>
+</li>
+</ul>
+</section>
+<section id="launch-unit-tests-in-dockers">
+<h3>Launch unit tests in dockers<a class="headerlink" href="#launch-unit-tests-in-dockers" title="Link to this heading"></a></h3>
+<p>The “test/docker” folder contains a set of docker configurations for testing crudcreator with different types of environment (for example, testing crudcreator on different versions of Python and SQLAlchemy).</p>
+<p>To launch one of these tests, you must :</p>
+<ul>
+<li><p>go to the project root (do not enter “test”)</p></li>
+<li><p>start one of the “run_test.ps1” files. For example :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="w"> </span>./test/docker/python3.12/run_test.ps1
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The folder also contains a number of items for testing the installation and scripts in a docker :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.<span class="w"> </span>./test/docker/installation/run_test.ps1
+</pre></div>
+</div>
+</section>
+</section>
+<section id="contributor-license-agreement-cla">
+<h2>Contributor License Agreement (CLA)<a class="headerlink" href="#contributor-license-agreement-cla" title="Link to this heading"></a></h2>
+<p>At the time of your pull request, you will be asked to sign a Contributor License Agreement (CLA).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../documentation/exception.html" class="btn btn-neutral float-left" title="Exceptions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, $name$, $email$.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

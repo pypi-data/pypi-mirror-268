@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entity type</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/autodoc_pydantic.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ff7cd352" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=20c5f126"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script defer="defer" src="../_static/replace.js?v=2d60e374"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Requests" href="request.html" />
+    <link rel="prev" title="CRUD Creator documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            CRUDCreator
+              <img src="../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tuto/index.html">CRUD Creator Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CRUD Creator documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Entity type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#abstractcrudableentitytype">AbstractCRUDableEntityType</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType"><code class="docutils literal notranslate"><span class="pre">AbstractCRUDableEntityType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#crudableentitytypeinterface">CRUDableEntityTypeInterface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface"><code class="docutils literal notranslate"><span class="pre">CRUDableEntityTypeInterface</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fields">Fields</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crudcreator.Fields.Fields"><code class="docutils literal notranslate"><span class="pre">Fields</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#fieldofcrudableentitytype">FieldOfCRUDableEntityType</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><code class="docutils literal notranslate"><span class="pre">FieldOfCRUDableEntityType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#optionmodel">OptionModel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#crudcreator.OptionModel.OptionModel"><code class="docutils literal notranslate"><span class="pre">OptionModel</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="request.html">Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filter.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="link.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="source.html">Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="proxy.html">Proxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="destination.html">Destinations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="descriptor.html">Builders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exception.html">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CRUDCreator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">CRUD Creator documentation</a></li>
+      <li class="breadcrumb-item active">Entity type</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="entity-type">
+<h1>Entity type<a class="headerlink" href="#entity-type" title="Link to this heading"></a></h1>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#abstractcrudableentitytype" id="id1">AbstractCRUDableEntityType</a></p></li>
+<li><p><a class="reference internal" href="#crudableentitytypeinterface" id="id2">CRUDableEntityTypeInterface</a></p></li>
+<li><p><a class="reference internal" href="#fields" id="id3">Fields</a></p></li>
+<li><p><a class="reference internal" href="#fieldofcrudableentitytype" id="id4">FieldOfCRUDableEntityType</a></p></li>
+<li><p><a class="reference internal" href="#optionmodel" id="id5">OptionModel</a></p></li>
+</ul>
+</nav>
+<figure class="align-center">
+<img alt="../_images/ERD_entity.drawio.png" src="../_images/ERD_entity.drawio.png" />
+</figure>
+<section id="abstractcrudableentitytype">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">AbstractCRUDableEntityType</a><a class="headerlink" href="#abstractcrudableentitytype" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.AbstractCRUDableEntityType.</span></span><span class="sig-name descname"><span class="pre">AbstractCRUDableEntityType</span></span><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType" title="Link to this definition"></a></dt>
+<dd><p>An instance of this class represents a CRUDable entity type. This is CRUDCreator’s main class.
+Proxies and source modules inherit from this class.
+See <a class="reference internal" href="../tuto/intro.html#how-does-it-work"><span class="std std-ref">How does it work?</span></a>.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.interface">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interface</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface" title="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface"><span class="pre">CRUDableEntityTypeInterface</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.interface" title="Link to this definition"></a></dt>
+<dd><p>The interface/schema of the entity type, as seen by the entity’s CRUD users.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.check_integrity">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">check_integrity</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">transaction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="transaction.html#crudcreator.transaction.AbstractTransaction.AbstractTransaction" title="crudcreator.transaction.AbstractTransaction.AbstractTransaction"><span class="pre">AbstractTransaction</span></a></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">dict_value_new_entity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.check_integrity" title="Link to this definition"></a></dt>
+<dd><p>Used to check that a hypothetical entity, represented by dict_value_new_entity, would not
+violate any integrity constraints if created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>transaction</strong> (<a class="reference internal" href="transaction.html#crudcreator.transaction.AbstractTransaction.AbstractTransaction" title="crudcreator.transaction.AbstractTransaction.AbstractTransaction"><em>AbstractTransaction</em></a>) – The current transaction</p></li>
+<li><p><strong>dict_value_new_entity</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Any</em><em>]</em>) – <p>A <strong>field name</strong> -&gt; value dictionary. Represents the fields of the new entity which we want to check
+that it will not violate integrity constraints if created.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Must therefore include at least all ids fields that are not automatically generated.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>All mandatory filter fields must also be present in dict_value_new_entity.
+Otherwise, there’s a risk that a proxy read will crash, because it was expecting a filter that isn’t there.</p>
+</div>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="exception.html#crudcreator.exceptions.EntityAlreadyExist" title="crudcreator.exceptions.EntityAlreadyExist"><strong>EntityAlreadyExist</strong></a> – If the creation of an entity with “dict_value_new_entity” values
+would violate the ids uniqueness constraint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><span class="pre">CreateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.create" title="Link to this definition"></a></dt>
+<dd><p>Creates an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><em>CreateParams</em></a>) – CRUD query parameters <strong>create</strong>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.delete">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><span class="pre">DeleteParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.delete" title="Link to this definition"></a></dt>
+<dd><p>Deletes an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><em>DeleteParams</em></a>) – CRUD <strong>delete</strong> query parameters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.read" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of entities.
+Entities are returned as dictionaries, whose keys are the entity’s attributes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – CRUD <strong>read</strong> query parameters.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.update">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><span class="pre">UpdateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.update" title="Link to this definition"></a></dt>
+<dd><p>Updates an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><em>UpdateParams</em></a>) – CRUD query parameters <strong>update</strong>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.update_or_create">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update_or_create</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="request.html#crudcreator.schema.UpdateOrCreateParams" title="crudcreator.schema.UpdateOrCreateParams"><span class="pre">UpdateOrCreateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.AbstractCRUDableEntityType.AbstractCRUDableEntityType.update_or_create" title="Link to this definition"></a></dt>
+<dd><p>Creates an entity if it doesn’t exist, updates it if it does.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="request.html#crudcreator.schema.UpdateOrCreateParams" title="crudcreator.schema.UpdateOrCreateParams"><em>UpdateOrCreateParams</em></a>) – CRUD query parameters <strong>update_or_create</strong>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="crudableentitytypeinterface">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">CRUDableEntityTypeInterface</a><a class="headerlink" href="#crudableentitytypeinterface" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.interface.CRUDableEntityTypeInterface.</span></span><span class="sig-name descname"><span class="pre">CRUDableEntityTypeInterface</span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface" title="Link to this definition"></a></dt>
+<dd><p>Represents the schema of an entity type, i.e. what is visible to CRUD users on the entity.
+Performs no CRUD action as such.
+It’s an empty shell.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.fields">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.Fields.Fields" title="crudcreator.Fields.Fields"><span class="pre">Fields</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.fields" title="Link to this definition"></a></dt>
+<dd><p>The fields that entities of this type will have.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_creator_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_creator_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_creator_options" title="Link to this definition"></a></dt>
+<dd><p>Customizable options for crud actions (index name-&gt;type)</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_deletor_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_deletor_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_deletor_options" title="Link to this definition"></a></dt>
+<dd><p>Customizable options for crud actions (index name-&gt;type)</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_read_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_read_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_read_options" title="Link to this definition"></a></dt>
+<dd><p>Customizable options for crud actions (index name-&gt;type)</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_update_or_create_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_update_or_create_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_update_or_create_options" title="Link to this definition"></a></dt>
+<dd><p>Customizable options for crud actions (index name-&gt;type)</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_updator_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_updator_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.list_updator_options" title="Link to this definition"></a></dt>
+<dd><p>Customizable options for crud actions (index name-&gt;type)</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.name" title="Link to this definition"></a></dt>
+<dd><p>The name of the entity type (e.g. “book”).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_create_options_data_model">
+<span class="sig-name descname"><span class="pre">get_create_options_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_create_options_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of options for an entity creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_creator_data_model">
+<span class="sig-name descname"><span class="pre">get_creator_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_creator_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of expected data for an entity creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_delete_options_data_model">
+<span class="sig-name descname"><span class="pre">get_delete_options_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_delete_options_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of options for an entity suppression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_fields_can_be_created">
+<span class="sig-name descname"><span class="pre">get_fields_can_be_created</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_fields_can_be_created" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of fields the user is allowed to write.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><em>FieldOfCRUDableEntityType</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_fields_can_be_updated">
+<span class="sig-name descname"><span class="pre">get_fields_can_be_updated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_fields_can_be_updated" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of fields that the user has the right to modify.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><em>FieldOfCRUDableEntityType</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_fields_can_be_updated_or_created">
+<span class="sig-name descname"><span class="pre">get_fields_can_be_updated_or_created</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_fields_can_be_updated_or_created" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of fields that the user has the right to modify or create.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><em>FieldOfCRUDableEntityType</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_filter_data_model">
+<span class="sig-name descname"><span class="pre">get_filter_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_filter_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model for filters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_filterable_field">
+<span class="sig-name descname"><span class="pre">get_filterable_field</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_filterable_field" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of fields on which the user has the right to filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><em>FieldOfCRUDableEntityType</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_ids_data_model">
+<span class="sig-name descname"><span class="pre">get_ids_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_ids_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of the data expected to identify a single entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_ids_field">
+<span class="sig-name descname"><span class="pre">get_ids_field</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_ids_field" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of fields used to uniquely identify an entity (entity identifiers).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><em>FieldOfCRUDableEntityType</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_read_options_data_model">
+<span class="sig-name descname"><span class="pre">get_read_options_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_read_options_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of entity reading options.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_read_response_data_model">
+<span class="sig-name descname"><span class="pre">get_read_response_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_read_response_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of the entities returned by a read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_readable_field">
+<span class="sig-name descname"><span class="pre">get_readable_field</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_readable_field" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of fields the user is allowed to read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><em>FieldOfCRUDableEntityType</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_readable_field_name">
+<span class="sig-name descname"><span class="pre">get_readable_field_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_readable_field_name" title="Link to this definition"></a></dt>
+<dd><p>Returns a list of field names that the user is authorized to read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_sub_interface">
+<span class="sig-name descname"><span class="pre">get_sub_interface</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">list_field_name_to_keep</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface" title="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface"><span class="pre">CRUDableEntityTypeInterface</span></a></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_sub_interface" title="Link to this definition"></a></dt>
+<dd><p>Creates and returns an interface identical to self,
+but contains only the list of fields to be retained.
+Gives a new name to the interface thus created.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the new interface.</p></li>
+<li><p><strong>list_field_name_to_keep</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – The list of fields to keep.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface" title="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface"><em>CRUDableEntityTypeInterface</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_update_options_data_model">
+<span class="sig-name descname"><span class="pre">get_update_options_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_update_options_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of options for an entity update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_update_or_create_data_model">
+<span class="sig-name descname"><span class="pre">get_update_or_create_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_update_or_create_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of the data expected for an entity “creation or update”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_update_or_create_options_data_model">
+<span class="sig-name descname"><span class="pre">get_update_or_create_options_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_update_or_create_options_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of options for an entity “creation or modification”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – A prefix to be added to the Pydantic model name to make it unique (necessary for swagger
+REST APIs, for example)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_updator_data_model">
+<span class="sig-name descname"><span class="pre">get_updator_data_model</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">BaseModel</span></span></span><a class="headerlink" href="#crudcreator.interface.CRUDableEntityTypeInterface.CRUDableEntityTypeInterface.get_updator_data_model" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic model of the data expected for an entity update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>prefix</strong> (<em>str</em>) – <dl class="simple">
+<dt>A prefix to be added to the Pydantic model name to make it unique (necessary for swagger</dt><dd><p>REST APIs, for example)</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>BaseModel</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fields">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Fields</a><a class="headerlink" href="#fields" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.Fields.Fields">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.Fields.</span></span><span class="sig-name descname"><span class="pre">Fields</span></span><a class="headerlink" href="#crudcreator.Fields.Fields" title="Link to this definition"></a></dt>
+<dd><p>An instance of this class represents the fields of an entity.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.Fields.Fields.index_field_by_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index_field_by_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.Fields.Fields.index_field_by_name" title="Link to this definition"></a></dt>
+<dd><p>A name -&gt; field index built by the “build” classmethod.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.Fields.Fields.list_field">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_field</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.Fields.Fields.list_field" title="Link to this definition"></a></dt>
+<dd><p>The list of fields.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.Fields.Fields.build">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">list_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><span class="pre">FieldOfCRUDableEntityType</span></a><span class="p"><span class="pre">]</span></span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.Fields.Fields.build" title="Link to this definition"></a></dt>
+<dd><p>Use this method to build an instance of Fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>list_field</strong> (<em>list</em><em>[</em><a class="reference internal" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType"><em>FieldOfCRUDableEntityType</em></a><em>]</em>) – The list of fields.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="fieldofcrudableentitytype">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">FieldOfCRUDableEntityType</a><a class="headerlink" href="#fieldofcrudableentitytype" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.FieldOfCRUDableEntityType.</span></span><span class="sig-name descname"><span class="pre">FieldOfCRUDableEntityType</span></span><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType" title="Link to this definition"></a></dt>
+<dd><p>An instance of this class represents a field of a CRUDable entity type.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.can_be_created">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_be_created</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.can_be_created" title="Link to this definition"></a></dt>
+<dd><p>Can a value for this field be specified when the entity is created?
+TODO : careful, update_or_create for fields with can_be_create!=can_be_updated</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.can_be_read">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_be_read</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.can_be_read" title="Link to this definition"></a></dt>
+<dd><p>Can this field be read?</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.can_be_updated">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">can_be_updated</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.can_be_updated" title="Link to this definition"></a></dt>
+<dd><p>Can a value for this field be specified when modifying the entity?
+TODO : careful, update_or_create for fields with can_be_create!=can_be_updated</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.default">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.default" title="Link to this definition"></a></dt>
+<dd><p>The default value of the field.
+If the default value is not provided, it will be filled in automatically when the program 
+is launched, during source analysis.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.is_automatically_generated">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_automatically_generated</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.is_automatically_generated" title="Link to this definition"></a></dt>
+<dd><p>Is this field automatically generated by the source when the entity is created?
+If this information is not provided, it will be filled in automatically when the program is launched
+during source analysis.
+TODO : to review. More interesting to have “uniquely_generated”?</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.is_id_field">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_id_field</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.is_id_field" title="Link to this definition"></a></dt>
+<dd><p>Indicates whether the field is part of the entity’s unique identifier.
+If this information is not provided, it will be filled in automatically when the program is launched
+during source analysis.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.link">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">link</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="link.html#crudcreator.Link.Link" title="crudcreator.Link.Link"><span class="pre">Link</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.link" title="Link to this definition"></a></dt>
+<dd><p>If the field represents a link with another field of another entity (equivalent to a foreign key in SQL).</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.list_allowed_filter_type">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_allowed_filter_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="filter.html#crudcreator.Filter.FilterType" title="crudcreator.Filter.FilterType"><span class="pre">FilterType</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.list_allowed_filter_type" title="Link to this definition"></a></dt>
+<dd><p>How can entities be filtered when a filter is specified on this field?</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.name" title="Link to this definition"></a></dt>
+<dd><p>Field name.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.nullable">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nullable</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.nullable" title="Link to this definition"></a></dt>
+<dd><p>Indicates whether the field can be null.
+If this information is not provided, it will be filled in automatically when the program is launched
+during source analysis.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.type">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.type" title="Link to this definition"></a></dt>
+<dd><p>Field type.
+If not provided, it will be filled in automatically when the program is launched, during source analysis.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.get_interface_read_default">
+<span class="sig-name descname"><span class="pre">get_interface_read_default</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.get_interface_read_default" title="Link to this definition"></a></dt>
+<dd><p>Returns the default value of the field when it is read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Any</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.get_interface_read_type">
+<span class="sig-name descname"><span class="pre">get_interface_read_type</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Type</span></span></span><a class="headerlink" href="#crudcreator.FieldOfCRUDableEntityType.FieldOfCRUDableEntityType.get_interface_read_type" title="Link to this definition"></a></dt>
+<dd><p>Returns the Pydantic type of the field when it is read.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>Type</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="optionmodel">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">OptionModel</a><a class="headerlink" href="#optionmodel" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.OptionModel.OptionModel">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.OptionModel.</span></span><span class="sig-name descname"><span class="pre">OptionModel</span></span><a class="headerlink" href="#crudcreator.OptionModel.OptionModel" title="Link to this definition"></a></dt>
+<dd><p>An instance of this class represents a type of option passed to a CRUD function, to modify its behavior.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.OptionModel.OptionModel.default">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#crudcreator.OptionModel.OptionModel.default" title="Link to this definition"></a></dt>
+<dd><p>Default option value if not specified.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.OptionModel.OptionModel.is_mandatory">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_mandatory</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.OptionModel.OptionModel.is_mandatory" title="Link to this definition"></a></dt>
+<dd><p>Is the option mandatory in the CRUD request?</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.OptionModel.OptionModel.name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.OptionModel.OptionModel.name" title="Link to this definition"></a></dt>
+<dd><p>Option name.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.OptionModel.OptionModel.type">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.OptionModel.OptionModel.type" title="Link to this definition"></a></dt>
+<dd><p>Its Python type.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="CRUD Creator documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="request.html" class="btn btn-neutral float-right" title="Requests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, $name$, $email$.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

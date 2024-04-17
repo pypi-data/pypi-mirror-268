@@ -1,0 +1,2022 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generic proxies</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/autodoc_pydantic.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ff7cd352" />
+
+  
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=20c5f126"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script defer="defer" src="../../_static/replace.js?v=2d60e374"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SQL proxies" href="sql.html" />
+    <link rel="prev" title="Proxy" href="../proxy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            CRUDCreator
+              <img src="../../_static/logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../tuto/index.html">CRUD Creator Tutorial</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">CRUD Creator documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../entity.html">Entity type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../request.html">Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filter.html">Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../link.html">Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../source.html">Source</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../proxy.html">Proxy</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../proxy.html#abstract-classes">Abstract classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../proxy.html#proxies-already-implemented-by-crudcreator">Proxies already implemented by CRUDCreator</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Generic proxies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sql.html">SQL proxies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../destination.html">Destinations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../transaction.html">Transaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../descriptor.html">Builders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../exception.html">Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">CRUDCreator</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CRUD Creator documentation</a></li>
+          <li class="breadcrumb-item"><a href="../proxy.html">Proxy</a></li>
+      <li class="breadcrumb-item active">Generic proxies</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generic-proxies">
+<h1>Generic proxies<a class="headerlink" href="#generic-proxies" title="Link to this heading"></a></h1>
+<p>These proxies are generic. They can be used regardless of the type of source and destination.</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#rename" id="id2">Rename</a></p></li>
+<li><p><a class="reference internal" href="#recasttype" id="id3">RecastType</a></p></li>
+<li><p><a class="reference internal" href="#addfilter" id="id4">AddFilter</a></p></li>
+<li><p><a class="reference internal" href="#softdelete" id="id5">SoftDelete</a></p></li>
+<li><p><a class="reference internal" href="#addoptions" id="id6">AddOptions</a></p></li>
+<li><p><a class="reference internal" href="#adddefault" id="id7">AddDefault</a></p></li>
+<li><p><a class="reference internal" href="#addwritevalue" id="id8">AddWriteValue</a></p></li>
+<li><p><a class="reference internal" href="#addidvalue" id="id9">AddIdValue</a></p></li>
+<li><p><a class="reference internal" href="#groupby" id="id10">GroupBy</a></p></li>
+<li><p><a class="reference internal" href="#gatherfields" id="id11">GatherFields</a></p></li>
+<li><p><a class="reference internal" href="#firewalls" id="id12">Firewalls</a></p>
+<ul>
+<li><p><a class="reference internal" href="#readfirewall" id="id13">ReadFirewall</a></p></li>
+<li><p><a class="reference internal" href="#createfirewall" id="id14">CreateFirewall</a></p></li>
+<li><p><a class="reference internal" href="#updatefirewall" id="id15">UpdateFirewall</a></p></li>
+<li><p><a class="reference internal" href="#filterfirewall" id="id16">FilterFirewall</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#links" id="id17">Links</a></p>
+<ul>
+<li><p><a class="reference internal" href="#createlink" id="id18">CreateLink</a></p></li>
+<li><p><a class="reference internal" href="#cascadedelete" id="id19">CascadeDelete</a></p></li>
+<li><p><a class="reference internal" href="#cascadecreateandupdate" id="id20">CascadeCreateAndUpdate</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="rename">
+<span id="id1"></span><h2><a class="toc-backref" href="#id2" role="doc-backlink">Rename</a><a class="headerlink" href="#rename" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Rename">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.Rename.</span></span><span class="sig-name descname"><span class="pre">Rename</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Rename" title="Link to this definition"></a></dt>
+<dd><p>Proxy that changes entity field names.
+Also changes the entity name.</p>
+<p>Example of descriptor, which changes the name of the interface on the destination side to “my_entity”,
+and the field name “column_1” to “field_1” on the destination side:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rename&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;interface_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_entity&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;translation_list&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;column_1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;destination&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_1&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Rename.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.Rename.RenameParams" title="crudcreator.proxy.proxy.Rename.RenameParams"><span class="pre">RenameParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Rename.params" title="Link to this definition"></a></dt>
+<dd><p>Rename proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Rename.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><span class="pre">CreateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Rename.create" title="Link to this definition"></a></dt>
+<dd><p>Change column names from destination to source, then call the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><em>CreateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Rename.delete">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><span class="pre">DeleteParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Rename.delete" title="Link to this definition"></a></dt>
+<dd><p>Change ids from destination to source, then call the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><em>DeleteParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Rename.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Rename.read" title="Link to this definition"></a></dt>
+<dd><p>Changes filter names from destination to source.
+Changes the name of columns to be read from destination to source.
+Calls the next proxy.
+Then changes the name of the result columns from source to destination.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Rename.update">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><span class="pre">UpdateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Rename.update" title="Link to this definition"></a></dt>
+<dd><p>Changes column names and ids from destination to source, then calls the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><em>UpdateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.RenameParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.Rename.</span></span><span class="sig-name descname"><span class="pre">RenameParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.RenameParams" title="Link to this definition"></a></dt>
+<dd><p>Rename proxy settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Validators<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unique_value</span></code> » <a class="reference internal" href="#crudcreator.proxy.proxy.Rename.RenameParams.translation_list" title="crudcreator.proxy.proxy.Rename.RenameParams.translation_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translation_list</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.RenameParams.interface_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interface_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.RenameParams.interface_name" title="Link to this definition"></a></dt>
+<dd><p>Destination-side entity name.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.RenameParams.translation_list">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">translation_list</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.proxy.proxy.Rename.Translation" title="crudcreator.proxy.proxy.Rename.Translation"><span class="pre">Translation</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.RenameParams.translation_list" title="Link to this definition"></a></dt>
+<dd><p>List of changes to be made.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Validated by<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unique_value</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method pydantic_validator">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">RenameParams.unique_value</span></span></dt>
+<dd><p>Checks that each field has a unique name, both on the source and destination sides.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>translation_list</strong> (<em>list</em><em>[</em><a class="reference internal" href="#crudcreator.proxy.proxy.Rename.Translation" title="crudcreator.proxy.proxy.Rename.Translation"><em>Translation</em></a><em>]</em>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[<a class="reference internal" href="#crudcreator.proxy.proxy.Rename.Translation" title="crudcreator.proxy.proxy.Rename.Translation"><em>Translation</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.RenameParams.destination_to_source_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destination_to_source_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.RenameParams.destination_to_source_index" title="Link to this definition"></a></dt>
+<dd><p>A destination-&gt;source index built automatically from translation_list.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.RenameParams.source_to_destination_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source_to_destination_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.RenameParams.source_to_destination_index" title="Link to this definition"></a></dt>
+<dd><p>A source-&gt;destination index built automatically from translation_list.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Translation">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.Rename.</span></span><span class="sig-name descname"><span class="pre">Translation</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Translation" title="Link to this definition"></a></dt>
+<dd><dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Translation.destination">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destination</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Translation.destination" title="Link to this definition"></a></dt>
+<dd><p>Destination-side field name.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.Rename.Translation.source">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.Rename.Translation.source" title="Link to this definition"></a></dt>
+<dd><p>Source-side field name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="recasttype">
+<span id="recast-type"></span><h2><a class="toc-backref" href="#id3" role="doc-backlink">RecastType</a><a class="headerlink" href="#recasttype" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastType">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.type.RecastType.</span></span><span class="sig-name descname"><span class="pre">RecastType</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastType" title="Link to this definition"></a></dt>
+<dd><p>Changes the type of a field and reprocesses it to match the new type.</p>
+<p>Example of descriptor, which changes the type of the “field_bool_converted” field, which is a str at source,
+and becomes a boolean at destination.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RecastType&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_recast_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_bool_converted&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;special_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$oui_non_type$&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With “yes_no_type” defined as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">oui_non_to_bool</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="s2">&quot;oui&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">v</span> <span class="o">==</span> <span class="s2">&quot;non&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">elif</span> <span class="n">v</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">bool_to_oui_non</span><span class="p">(</span><span class="n">v</span><span class="p">:</span> <span class="nb">bool</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;oui&quot;</span>
+    <span class="k">elif</span> <span class="n">v</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;non&quot;</span>
+    <span class="k">elif</span> <span class="n">v</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span> 
+
+<span class="n">oui_non_type</span> <span class="o">=</span> <span class="n">SpecialType</span><span class="p">(</span>
+    <span class="n">destination_type</span><span class="o">=</span><span class="nb">bool</span><span class="p">,</span>
+    <span class="n">destination_to_source</span><span class="o">=</span><span class="n">bool_to_oui_non</span><span class="p">,</span>
+    <span class="n">source_to_destination</span><span class="o">=</span><span class="n">oui_non_to_bool</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Let’s assume that the source contains the following entities:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bool_converted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oui&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bool_converted&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;non&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bool_converted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>A read will therefore return a result of this form :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bool_converted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bool_converted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bool_converted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>And the entity type interface will be changed accordingly (field_bool_converted will be of type bool).</p>
+<p>The recast is also applied on the filters, the creation body, the update body and ids, and the delete ids.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastType.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.type.RecastType.RecastTypeParams" title="crudcreator.proxy.proxy.type.RecastType.RecastTypeParams"><span class="pre">RecastTypeParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastType.params" title="Link to this definition"></a></dt>
+<dd><p>RecastType proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastType.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><span class="pre">CreateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastType.create" title="Link to this definition"></a></dt>
+<dd><p>Recast fields from destination type to source type.
+Then sends the query to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><em>CreateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastType.delete">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><span class="pre">DeleteParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastType.delete" title="Link to this definition"></a></dt>
+<dd><p>Recast id fields from destination type to source type.
+Then sends the query to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><em>DeleteParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastType.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastType.read" title="Link to this definition"></a></dt>
+<dd><p>Recast filters from destination type to source type.
+Sends the query to the next proxy.
+Then recasts the result fields from the source type to the destination type, before returning the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[<em>Any</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastType.update">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><span class="pre">UpdateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastType.update" title="Link to this definition"></a></dt>
+<dd><p>Recast update fields and id fields from destination type to source type.
+Then sends the query to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><em>UpdateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastTypeParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.type.RecastType.</span></span><span class="sig-name descname"><span class="pre">RecastTypeParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastTypeParams" title="Link to this definition"></a></dt>
+<dd><p>RecastType proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastTypeParams.list_recast_field">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_recast_field</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.proxy.proxy.type.RecastType.FieldRecast" title="crudcreator.proxy.proxy.type.RecastType.FieldRecast"><span class="pre">FieldRecast</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastTypeParams.list_recast_field" title="Link to this definition"></a></dt>
+<dd><p>List of recasts to do.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.RecastTypeParams.recast_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recast_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType"><span class="pre">SpecialType</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.RecastTypeParams.recast_index" title="Link to this definition"></a></dt>
+<dd><p>A field_name-&gt;special_type index built automatically from list_recast_field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.FieldRecast">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.type.RecastType.</span></span><span class="sig-name descname"><span class="pre">FieldRecast</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.FieldRecast" title="Link to this definition"></a></dt>
+<dd><dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.FieldRecast.field_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.FieldRecast.field_name" title="Link to this definition"></a></dt>
+<dd><p>The name of the field to be recast.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.RecastType.FieldRecast.special_type">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">special_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType"><span class="pre">SpecialType</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.RecastType.FieldRecast.special_type" title="Link to this definition"></a></dt>
+<dd><p>The new type.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.SpecialType.SpecialType">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.type.SpecialType.</span></span><span class="sig-name descname"><span class="pre">SpecialType</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Validators<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable_type</span></code></a> » <a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_to_source" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_to_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">destination_to_source</span></code></a></p></li>
+<li><p><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable_type</span></code></a> » <a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_to_destination" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_to_destination"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source_to_destination</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_to_source">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destination_to_source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_to_source" title="Link to this definition"></a></dt>
+<dd><p>The function that reprocesses the destination-side field to set it to the correct source-side type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Validated by<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable_type</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_type">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destination_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_type" title="Link to this definition"></a></dt>
+<dd><p>Destination-side field type.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_to_destination">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source_to_destination</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_to_destination" title="Link to this definition"></a></dt>
+<dd><p>The function that reprocesses fields on the source side to set them to the correct type on the destination side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Validated by<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">callable_type</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_type">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_type" title="Link to this definition"></a></dt>
+<dd><p>Source-side field type.</p>
+</dd></dl>
+
+<dl class="py method pydantic_validator">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type">
+<em class="property"><span class="pre">validator</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">callable_type</span></span><em class="autodoc_pydantic_validator_arrow property">&#160; <span class="pre">»</span>&#160; </em><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_to_destination" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.source_to_destination"><em class="xref py py-obj"><span class="pre">source_to_destination</span></em></a><em class="property"><span class="pre">,</span> </em><a class="reference internal" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_to_source" title="crudcreator.proxy.proxy.type.SpecialType.SpecialType.destination_to_source"><em class="xref py py-obj"><span class="pre">destination_to_source</span></em></a><a class="headerlink" href="#crudcreator.proxy.proxy.type.SpecialType.SpecialType.callable_type" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="addfilter">
+<span id="add-filter"></span><h2><a class="toc-backref" href="#id4" role="doc-backlink">AddFilter</a><a class="headerlink" href="#addfilter" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddFilter.AddFilter">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddFilter.</span></span><span class="sig-name descname"><span class="pre">AddFilter</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddFilter.AddFilter" title="Link to this definition"></a></dt>
+<dd><p>Adds hard-coded filter instances to the read CRUD request.</p>
+<p>Example of descriptor, which will return, to the user executing a read,
+only those entities whose “can_be_seen” field is set to True:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AddFilter&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_filter_instance_to_add&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;can_be_seen&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;filter_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;filtration_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddFilter.AddFilter.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.AddFilter.AddFilterParams" title="crudcreator.proxy.proxy.AddFilter.AddFilterParams"><span class="pre">AddFilterParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddFilter.AddFilter.params" title="Link to this definition"></a></dt>
+<dd><p>AddFilter proxy parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddFilter.AddFilter.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddFilter.AddFilter.read" title="Link to this definition"></a></dt>
+<dd><p>Adds the list of filter instances to the CRUD request, then forwards the request to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddFilter.AddFilterParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddFilter.</span></span><span class="sig-name descname"><span class="pre">AddFilterParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddFilter.AddFilterParams" title="Link to this definition"></a></dt>
+<dd><p>AddFilter proxy parameters.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddFilter.AddFilterParams.list_filter_instance_to_add">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_filter_instance_to_add</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../filter.html#crudcreator.Filter.FilterInstance" title="crudcreator.Filter.FilterInstance"><span class="pre">FilterInstance</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddFilter.AddFilterParams.list_filter_instance_to_add" title="Link to this definition"></a></dt>
+<dd><p>The list of filter instances to be added.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="softdelete">
+<span id="soft-delete"></span><h2><a class="toc-backref" href="#id5" role="doc-backlink">SoftDelete</a><a class="headerlink" href="#softdelete" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.SoftDelete">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.SoftDelete.</span></span><span class="sig-name descname"><span class="pre">SoftDelete</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.SoftDelete" title="Link to this definition"></a></dt>
+<dd><p>Transforms the delete into a “soft delete”. The delete thus becomes an update on fields that will indicate
+whether or not the entity should be considered as deleted.</p>
+<p>Example of descriptor, which, when read, only returns entities where is_active!=false and is_deleted!=true.
+The “is_active” value of each entity will remain visible on reading (but not that of the “is_deleted” field,
+which therefore does not exist in the eyes of the CRUD user).</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SoftDelete&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_field_value_if_deleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;is_active&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value_if_deleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;keep_visible&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;is_deleted&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value_if_deleted&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;keep_visible&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.SoftDelete.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams" title="crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams"><span class="pre">SoftDeleteParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.SoftDelete.params" title="Link to this definition"></a></dt>
+<dd><p>SoftDelete proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.SoftDelete.delete">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><span class="pre">DeleteParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.SoftDelete.delete" title="Link to this definition"></a></dt>
+<dd><p>The delete becomes an update of the fields indicating deletion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><em>DeleteParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.SoftDelete.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.SoftDelete.read" title="Link to this definition"></a></dt>
+<dd><p>We only read entities that have not been soft deleted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.SoftDelete.</span></span><span class="sig-name descname"><span class="pre">SoftDeleteParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams" title="Link to this definition"></a></dt>
+<dd><p>SoftDelete proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams.list_field_value_if_deleted">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_field_value_if_deleted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted" title="crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted"><span class="pre">FieldValueIfDeleted</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams.list_field_value_if_deleted" title="Link to this definition"></a></dt>
+<dd><p>List of fields/values that indicate that the entity is deleted.
+This is an “OR” for reading: if only one of the fields has the value “value_if_deleted”, then the field is considered deleted.
+On the other hand, “delete” will set all the fields in the list to the correct value.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams.value_if_deleted_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value_if_deleted_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted" title="crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted"><span class="pre">FieldValueIfDeleted</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.SoftDeleteParams.value_if_deleted_index" title="Link to this definition"></a></dt>
+<dd><p>Index field_name-&gt;FieldValueIfDeleted automatically created from list_field_value_if_deleted.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.SoftDelete.</span></span><span class="sig-name descname"><span class="pre">FieldValueIfDeleted</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted" title="Link to this definition"></a></dt>
+<dd><dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted.field_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted.field_name" title="Link to this definition"></a></dt>
+<dd><p>The field whose value determines whether an entity is deleted or not.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted.keep_visible">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">keep_visible</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted.keep_visible" title="Link to this definition"></a></dt>
+<dd><p>Indicates whether the field can still be read, or whether it is completely invisible to the CRUD user.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted.value_if_deleted">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value_if_deleted</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Any</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.SoftDelete.FieldValueIfDeleted.value_if_deleted" title="Link to this definition"></a></dt>
+<dd><p>The value of the field indicating whether the entity is deleted.
+TODO: allow to enter a function (datetime.now for example).</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="addoptions">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">AddOptions</a><a class="headerlink" href="#addoptions" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddOptions.AddOptions">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddOptions.</span></span><span class="sig-name descname"><span class="pre">AddOptions</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddOptions.AddOptions" title="Link to this definition"></a></dt>
+<dd><p>Adds options to the interface.</p>
+<p>Example of descriptor, which adds two read options, “limit” and “offset”, as well as an update option:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AddOptions&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_read_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;limit&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;is_mandatory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;offset&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;int&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;is_mandatory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;list_updator_options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add_update_date&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bool&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;is_mandatory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddOptions.AddOptions.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.AddOptions.AddOptionsParams" title="crudcreator.proxy.proxy.AddOptions.AddOptionsParams"><span class="pre">AddOptionsParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddOptions.AddOptions.params" title="Link to this definition"></a></dt>
+<dd><p>AddOptions proxy settings.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddOptions.AddOptionsParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddOptions.</span></span><span class="sig-name descname"><span class="pre">AddOptionsParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddOptions.AddOptionsParams" title="Link to this definition"></a></dt>
+<dd><p>AddOptions proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_creator_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_creator_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../entity.html#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_creator_options" title="Link to this definition"></a></dt>
+<dd><p>The list of options that will be requested from the CRUD user for create.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_deletor_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_deletor_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../entity.html#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_deletor_options" title="Link to this definition"></a></dt>
+<dd><p>The list of options the CRUD user will be asked to delete.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_read_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_read_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../entity.html#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_read_options" title="Link to this definition"></a></dt>
+<dd><p>The list of options that will be requested from the CRUD user for the read.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_updator_options">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_updator_options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../entity.html#crudcreator.OptionModel.OptionModel" title="crudcreator.OptionModel.OptionModel"><span class="pre">OptionModel</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddOptions.AddOptionsParams.list_updator_options" title="Link to this definition"></a></dt>
+<dd><p>The list of options that will be requested from the CRUD user for the update.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="adddefault">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">AddDefault</a><a class="headerlink" href="#adddefault" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddDefault.AddDefault">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddDefault.</span></span><span class="sig-name descname"><span class="pre">AddDefault</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddDefault.AddDefault" title="Link to this definition"></a></dt>
+<dd><p>Adds default values to certain fields.</p>
+<p>Example of descriptor, which will add the default value of 10 to the “field_foo” field:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AddDefault&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;default_on_fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_foo&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddDefault.AddDefault.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.AddDefault.AddDefaultParams" title="crudcreator.proxy.proxy.AddDefault.AddDefaultParams"><span class="pre">AddDefaultParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddDefault.AddDefault.params" title="Link to this definition"></a></dt>
+<dd><p>AddDefault proxy settings.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddDefault.AddDefaultParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddDefault.</span></span><span class="sig-name descname"><span class="pre">AddDefaultParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddDefault.AddDefaultParams" title="Link to this definition"></a></dt>
+<dd><p>AddDefault proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddDefault.AddDefaultParams.default_on_fields">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_on_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">DefaultOnField</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddDefault.AddDefaultParams.default_on_fields" title="Link to this definition"></a></dt>
+<dd><p>List of default fields/values to be given.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddDefault.AddDefaultParams.default_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">default_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../filter.html#crudcreator.Filter.FilterType" title="crudcreator.Filter.FilterType"><span class="pre">FilterType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddDefault.AddDefaultParams.default_index" title="Link to this definition"></a></dt>
+<dd><p>Index field_name-&gt;default automatically created from default_on_fields.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="addwritevalue">
+<span id="add-write-value"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink">AddWriteValue</a><a class="headerlink" href="#addwritevalue" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddWriteValue.AddWriteValue">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddWriteValue.</span></span><span class="sig-name descname"><span class="pre">AddWriteValue</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValue" title="Link to this definition"></a></dt>
+<dd><p>Adds hard-coded values to creation or update.</p>
+<p>Example of descriptor, which adds a new value at creation (creation date),
+and a new value at update (the update date):</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AddWriteValue&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_create_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;creation_date&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$now$&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">],</span>
+
+<span class="w">        </span><span class="nt">&quot;list_update_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;last_update_date&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$now$&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>With “now” a substitution defined as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;now&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddWriteValue.AddWriteValue.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams" title="crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams"><span class="pre">AddWriteValueParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValue.params" title="Link to this definition"></a></dt>
+<dd><p>AddWriteValue proxy parameters.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddWriteValue.AddWriteValue.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><span class="pre">CreateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValue.create" title="Link to this definition"></a></dt>
+<dd><p>Adds the new values to the CRUD request, then forwards the request to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><em>CreateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddWriteValue.AddWriteValue.update">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><span class="pre">UpdateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValue.update" title="Link to this definition"></a></dt>
+<dd><p>Adds the new values to the CRUD request, then forwards the request to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><em>UpdateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddWriteValue.</span></span><span class="sig-name descname"><span class="pre">AddWriteValueParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams" title="Link to this definition"></a></dt>
+<dd><p>AddWriteValue proxy parameters.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams.list_create_value">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_create_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">WriteValue</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams.list_create_value" title="Link to this definition"></a></dt>
+<dd><p>The list of values to be added to the creation.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams.list_update_value">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_update_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">WriteValue</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddWriteValue.AddWriteValueParams.list_update_value" title="Link to this definition"></a></dt>
+<dd><p>The list of values at update.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="addidvalue">
+<span id="add-id-value"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink">AddIdValue</a><a class="headerlink" href="#addidvalue" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddIdValue.AddIdValue">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddIdValue.</span></span><span class="sig-name descname"><span class="pre">AddIdValue</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddIdValue.AddIdValue" title="Link to this definition"></a></dt>
+<dd><p>Adds hard-coded ids to CRUD update and delete requests.
+The ids are used to select the entity to be updated or deleted.</p>
+<p>Example of descriptor :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AddIdValue&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_ids_value&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddIdValue.AddIdValue.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.AddIdValue.AddIdValueParams" title="crudcreator.proxy.proxy.AddIdValue.AddIdValueParams"><span class="pre">AddIdValueParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddIdValue.AddIdValue.params" title="Link to this definition"></a></dt>
+<dd><p>AddIdValue proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddIdValue.AddIdValue.delete">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><span class="pre">DeleteParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.AddIdValue.AddIdValue.delete" title="Link to this definition"></a></dt>
+<dd><p>Adds the ids to the CRUD request, then forwards the request to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><em>DeleteParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddIdValue.AddIdValue.update">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><span class="pre">UpdateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.AddIdValue.AddIdValue.update" title="Link to this definition"></a></dt>
+<dd><p>Adds the ids to the CRUD request, then forwards the request to the next proxy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><em>UpdateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddIdValue.AddIdValueParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.AddIdValue.</span></span><span class="sig-name descname"><span class="pre">AddIdValueParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.AddIdValue.AddIdValueParams" title="Link to this definition"></a></dt>
+<dd><p>AddIdValue proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.AddIdValue.AddIdValueParams.list_ids_value">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_ids_value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">IdValue</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.AddIdValue.AddIdValueParams.list_ids_value" title="Link to this definition"></a></dt>
+<dd><p>List of ids to be added to CRUD requests.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="groupby">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">GroupBy</a><a class="headerlink" href="#groupby" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupBy">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.GroupBy.</span></span><span class="sig-name descname"><span class="pre">GroupBy</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupBy" title="Link to this definition"></a></dt>
+<dd><p>Has more or less the same effect as a SQL “group by” accompanied by a “GROUP_CONCAT”.
+Groups entities by distinct values of fields appearing in grouped_by_fields, and groups all entities 
+with these values in a list.</p>
+<p>Not to be confused with the “GatherField” proxy.</p>
+<p>Example of descriptor. Group by field_foo and field_bar, and collects the list of entities in the “my_group” field:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GroupBy&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;group_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_group&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;grouped_by_fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;field_foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;field_bar&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;one_elem_with_all_none_means_empty&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;see_group_only_on_option&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;extend_group&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let’s assume that the source contains the following entities:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>A read will therefore return a result of this form :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;my_group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;my_group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupBy.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.GroupBy.GroupByParams" title="crudcreator.proxy.proxy.GroupBy.GroupByParams"><span class="pre">GroupByParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupBy.params" title="Link to this definition"></a></dt>
+<dd><p>GroupBy proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupBy.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupBy.read" title="Link to this definition"></a></dt>
+<dd><p>Builds the list of fields to be read, depending on whether the option is enabled.
+Sends the request to the next proxy.
+Then groups the entities as required, before returning the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupByParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.GroupBy.</span></span><span class="sig-name descname"><span class="pre">GroupByParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupByParams" title="Link to this definition"></a></dt>
+<dd><p>GroupBy proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupByParams.group_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">group_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupByParams.group_name" title="Link to this definition"></a></dt>
+<dd><p>The name of the list that will contain all the other fields.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupByParams.grouped_by_fields">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">grouped_by_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupByParams.grouped_by_fields" title="Link to this definition"></a></dt>
+<dd><p>Names of fields to be grouped by.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupByParams.one_elem_with_all_none_means_empty">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">one_elem_with_all_none_means_empty</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupByParams.one_elem_with_all_none_means_empty" title="Link to this definition"></a></dt>
+<dd><p>If there is only one element in the list, and all the attributes of this element are set to None,
+then the list is considered empty. (to manage outer joins)</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupByParams.see_group_only_on_option">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">see_group_only_on_option</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupByParams.see_group_only_on_option" title="Link to this definition"></a></dt>
+<dd><p>The name of the option which, if set to “True”, displays the group in the entities read.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GroupBy.GroupByParams.index_grouped_by_fields">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index_grouped_by_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GroupBy.GroupByParams.index_grouped_by_fields" title="Link to this definition"></a></dt>
+<dd><p>Index on grouped by field names. Automatically created from grouped_by_fields.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="gatherfields">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">GatherFields</a><a class="headerlink" href="#gatherfields" title="Link to this heading"></a></h2>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFields">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.GatherFields.</span></span><span class="sig-name descname"><span class="pre">GatherFields</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFields" title="Link to this definition"></a></dt>
+<dd><p>Groups several fields from the same entity into a single object field.
+Not a “group by” as understood in SQL.
+The group will therefore be an object and not a list.
+Not to be confused with the “GroupBy” proxy.</p>
+<p>Example of descriptor. Gathers field_foo and field_bar into a single field named “my_group”</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GatherFields&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;group_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my_group&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;gathered_fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;field_foo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;field_bar&quot;</span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;see_group_only_on_option&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;extend_group&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Let’s assume that the source contains the following entities:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>A read will therefore return a result of this form :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;my_group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;my_group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;other_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;other_field_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;b&quot;</span>
+<span class="w">        </span><span class="nt">&quot;my_group&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_foo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;field_bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFields.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.GatherFields.GatherFieldsParams" title="crudcreator.proxy.proxy.GatherFields.GatherFieldsParams"><span class="pre">GatherFieldsParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFields.params" title="Link to this definition"></a></dt>
+<dd><p>GatherFields proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFields.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFields.read" title="Link to this definition"></a></dt>
+<dd><p>Builds the list of fields to be read, depending on whether the option is enabled.
+Sends the request to the next proxy.
+Then groups the entities as required, before returning the result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFieldsParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.GatherFields.</span></span><span class="sig-name descname"><span class="pre">GatherFieldsParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFieldsParams" title="Link to this definition"></a></dt>
+<dd><p>GatherFields proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.gathered_fields">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gathered_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.gathered_fields" title="Link to this definition"></a></dt>
+<dd><p>The list of field names to be collected in the group.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.group_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">group_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.group_name" title="Link to this definition"></a></dt>
+<dd><p>The name to give to the new group.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.see_group_only_on_option">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">see_group_only_on_option</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.see_group_only_on_option" title="Link to this definition"></a></dt>
+<dd><p>The name of the option which, if set to “True”, displays the group in the entities read.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.index_gathered_fields">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index_gathered_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.GatherFields.GatherFieldsParams.index_gathered_fields" title="Link to this definition"></a></dt>
+<dd><p>Index on grouped field names. Automatically created from gathered_fields.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="firewalls">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Firewalls</a><a class="headerlink" href="#firewalls" title="Link to this heading"></a></h2>
+<section id="readfirewall">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">ReadFirewall</a><a class="headerlink" href="#readfirewall" title="Link to this heading"></a></h3>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.ReadFirewall.ReadFirewall">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.ReadFirewall.</span></span><span class="sig-name descname"><span class="pre">ReadFirewall</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.ReadFirewall.ReadFirewall" title="Link to this definition"></a></dt>
+<dd><p>Whitelists the fields that can be read by the CRUD user.
+Set can_be_read to False for other interface fields.</p>
+<p>Example of descriptor, which makes only the “field_foo” and “field_bar” fields visible for reading:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ReadFirewall&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_readable_field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;field_foo&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;field_bar&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.ReadFirewall.ReadFirewall.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams" title="crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams"><span class="pre">ReadFirewallParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.ReadFirewall.ReadFirewall.params" title="Link to this definition"></a></dt>
+<dd><p>ReadFirewall proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.ReadFirewall.ReadFirewall.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.ReadFirewall.ReadFirewall.read" title="Link to this definition"></a></dt>
+<dd><p>Checks that the fields to be read, given in the CRUD request, are indeed part of the whitelist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.ReadFirewall.</span></span><span class="sig-name descname"><span class="pre">ReadFirewallParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams" title="Link to this definition"></a></dt>
+<dd><p>ReadFirewall proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams.list_readable_field_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_readable_field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams.list_readable_field_name" title="Link to this definition"></a></dt>
+<dd><p>List of field names that the CRUD user can read.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams.index_readable_field_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index_readable_field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.ReadFirewall.ReadFirewallParams.index_readable_field_name" title="Link to this definition"></a></dt>
+<dd><p>Index on field names. Automatically created from list_readable_field_name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="createfirewall">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">CreateFirewall</a><a class="headerlink" href="#createfirewall" title="Link to this heading"></a></h3>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.CreateFirewall.CreateFirewall">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.CreateFirewall.</span></span><span class="sig-name descname"><span class="pre">CreateFirewall</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.CreateFirewall.CreateFirewall" title="Link to this definition"></a></dt>
+<dd><p>Whitelists the fields that can be filled in when an entity is created by the CRUD user.
+Set can_be_created to False for other interface fields.</p>
+<p>Example of descriptor, which allows only the “field_foo” and “field_bar” fields to be filled at creation:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CreateFirewall&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_creatable_field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;field_foo&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;field_bar&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.CreateFirewall.CreateFirewall.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams" title="crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams"><span class="pre">CreateFirewallParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.CreateFirewall.CreateFirewall.params" title="Link to this definition"></a></dt>
+<dd><p>CreateFirewall proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.CreateFirewall.CreateFirewall.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><span class="pre">CreateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.CreateFirewall.CreateFirewall.create" title="Link to this definition"></a></dt>
+<dd><p>Checks that the fields entered in the CRUD request are part of the whitelist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><em>CreateParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.CreateFirewall.</span></span><span class="sig-name descname"><span class="pre">CreateFirewallParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams" title="Link to this definition"></a></dt>
+<dd><p>CreateFirewall proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams.list_creatable_field_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_creatable_field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams.list_creatable_field_name" title="Link to this definition"></a></dt>
+<dd><p>The list of field names that the CRUD user can fill in when creating an entity.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams.index_creatable_field_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index_creatable_field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.CreateFirewall.CreateFirewallParams.index_creatable_field_name" title="Link to this definition"></a></dt>
+<dd><p>Index on field names. Automatically created from list_creatable_field_name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="updatefirewall">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">UpdateFirewall</a><a class="headerlink" href="#updatefirewall" title="Link to this heading"></a></h3>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewall">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.UpdateFirewall.</span></span><span class="sig-name descname"><span class="pre">UpdateFirewall</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewall" title="Link to this definition"></a></dt>
+<dd><p>Whitelists the fields that can be filled in when an entity is updated by the CRUD user.
+Set can_be_updated to False for other interface fields.</p>
+<p>Example of descriptor, which allows only the “field_foo” and “field_bar” fields to be filled at update:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UpdateFirewall&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;list_updatable_field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;field_foo&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;field_bar&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewall.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams" title="crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams"><span class="pre">UpdateFirewallParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewall.params" title="Link to this definition"></a></dt>
+<dd><p>UpdateFirewall proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewall.update">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><span class="pre">UpdateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewall.update" title="Link to this definition"></a></dt>
+<dd><p>Checks that the fields entered in the CRUD request are part of the whitelist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><em>UpdateParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.UpdateFirewall.</span></span><span class="sig-name descname"><span class="pre">UpdateFirewallParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams" title="Link to this definition"></a></dt>
+<dd><p>UpdateFirewall proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams.list_updatable_field_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_updatable_field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams.list_updatable_field_name" title="Link to this definition"></a></dt>
+<dd><p>The list of field names that the CRUD user can fill in when updating an entity.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams.index_updatable_field_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">index_updatable_field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.UpdateFirewall.UpdateFirewallParams.index_updatable_field_name" title="Link to this definition"></a></dt>
+<dd><p>Index on field names. Automatically created from list_updatable_field_name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="filterfirewall">
+<span id="filter-firewall"></span><h3><a class="toc-backref" href="#id16" role="doc-backlink">FilterFirewall</a><a class="headerlink" href="#filterfirewall" title="Link to this heading"></a></h3>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.FilterFirewall.FilterFirewall">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.FilterFirewall.</span></span><span class="sig-name descname"><span class="pre">FilterFirewall</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.FilterFirewall.FilterFirewall" title="Link to this definition"></a></dt>
+<dd><p>Whitelists filters that can be set by the CRUD user during the read.
+Modifies list_allowed_filter_type of fields in the interface.</p>
+<p>Example of descriptor, which allows a “contain” filter on “field_foo” and
+an “equal” filter on “field_bar”:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FilterFirewall&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;allowed_filter_on_fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_foo&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;allowed_filter_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;filtration_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;contain&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                    </span><span class="nt">&quot;is_mandatory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">},</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_bar&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;allowed_filter_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;filtration_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equal&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                    </span><span class="nt">&quot;is_mandatory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.FilterFirewall.FilterFirewall.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams" title="crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams"><span class="pre">FilterFirewallParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.FilterFirewall.FilterFirewall.params" title="Link to this definition"></a></dt>
+<dd><p>FilterFirewall proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.FilterFirewall.FilterFirewall.read">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><span class="pre">ReadParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#crudcreator.proxy.proxy.FilterFirewall.FilterFirewall.read" title="Link to this definition"></a></dt>
+<dd><p>Does nothing for now.
+TODO: add validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.ReadParams" title="crudcreator.schema.ReadParams"><em>ReadParams</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list[dict[str, <em>Any</em>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.FilterFirewall.</span></span><span class="sig-name descname"><span class="pre">FilterFirewallParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams" title="Link to this definition"></a></dt>
+<dd><p>FilterFirewall proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams.allowed_filter_on_fields">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">allowed_filter_on_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">AllowedFilterOnField</span><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams.allowed_filter_on_fields" title="Link to this definition"></a></dt>
+<dd><p>The list of filters that the CRUD user can fill in when reading.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams.allowed_filter_type_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">allowed_filter_type_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../filter.html#crudcreator.Filter.FilterType" title="crudcreator.Filter.FilterType"><span class="pre">FilterType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.FilterFirewall.FilterFirewallParams.allowed_filter_type_index" title="Link to this definition"></a></dt>
+<dd><p>Index field_name-&gt;allowed_filter_type automatically created from allowed_filter_on_fields.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="links">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Links</a><a class="headerlink" href="#links" title="Link to this heading"></a></h2>
+<section id="createlink">
+<span id="create-link"></span><h3><a class="toc-backref" href="#id18" role="doc-backlink">CreateLink</a><a class="headerlink" href="#createlink" title="Link to this heading"></a></h3>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.CreateLink">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.link.CreateLink.</span></span><span class="sig-name descname"><span class="pre">CreateLink</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.CreateLink" title="Link to this definition"></a></dt>
+<dd><p>Creates a link with another entity type.
+Only change the interface of the current entity type.
+Does not change any CRUD actions.
+Must therefore be used with other proxies, which will implement a way of handling these links
+(for example, CascadeDelete or CascadeCreateAndUpdate proxies).</p>
+<p>Example of a descriptor linking the current entity with the “entity_bis” entity on the “field_to_join” and
+“field_to_be_joined”, in one-to-one mode:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CreateLink&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;interface_merge&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;list_linked_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_to_join&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;entity_type_linked_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$entity_bis$&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;field_name_linked_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_to_be_joined&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;dest&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.CreateLink.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams" title="crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams"><span class="pre">CreateLinkParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.CreateLink.params" title="Link to this definition"></a></dt>
+<dd><p>CreateLink proxy settings.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.link.CreateLink.</span></span><span class="sig-name descname"><span class="pre">CreateLinkParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams" title="Link to this definition"></a></dt>
+<dd><p>CreateLink proxy settings.</p>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams.interface_merge">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interface_merge</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams.interface_merge" title="Link to this definition"></a></dt>
+<dd><p>Does nothing.
+TODO ?</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams.list_linked_field">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">list_linked_field</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#crudcreator.proxy.proxy.link.CreateLink.LinkedField" title="crudcreator.proxy.proxy.link.CreateLink.LinkedField"><span class="pre">LinkedField</span></a><span class="p"><span class="pre">]</span></span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams.list_linked_field" title="Link to this definition"></a></dt>
+<dd><p>List of links.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams.link_index">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">link_index</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.CreateLinkParams.link_index" title="Link to this definition"></a></dt>
+<dd><p>A field_name-&gt;link index built automatically from list_linked_field.</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.LinkedField">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.link.CreateLink.</span></span><span class="sig-name descname"><span class="pre">LinkedField</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.LinkedField" title="Link to this definition"></a></dt>
+<dd><dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.LinkedField.field_name">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">field_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.LinkedField.field_name" title="Link to this definition"></a></dt>
+<dd><p>The name of the current entity type’s field to which the link is made.</p>
+</dd></dl>
+
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CreateLink.LinkedField.link">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">link</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../link.html#crudcreator.Link.Link" title="crudcreator.Link.Link"><span class="pre">Link</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CreateLink.LinkedField.link" title="Link to this definition"></a></dt>
+<dd><p>The link.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="cascadedelete">
+<span id="cascade-delete"></span><h3><a class="toc-backref" href="#id19" role="doc-backlink">CascadeDelete</a><a class="headerlink" href="#cascadedelete" title="Link to this heading"></a></h3>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeDelete.CascadeDelete">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.link.CascadeDelete.</span></span><span class="sig-name descname"><span class="pre">CascadeDelete</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeDelete.CascadeDelete" title="Link to this definition"></a></dt>
+<dd><p>Changes the delete into a “cascade delete”.
+Changes the delete behavior if the current entity is linked to another entity,
+and the destination entity must be linked to one and only one source entity (one-to-* link).
+In this case, if the current entity is deleted,
+destination entities linked to the current deleted entity are also deleted.
+Must be preceded by at least one <a class="reference internal" href="#create-link"><span class="std std-ref">CreateLink</span></a> to specify links.</p>
+<p>Example of descriptor :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CascadeDelete&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Which could be preceded by the following descriptor:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CreateLink&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;interface_merge&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;list_linked_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_to_join&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;entity_type_linked_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$entity_bis$&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;field_name_linked_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_to_be_joined&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;dest&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeDelete.CascadeDelete.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.link.CascadeDelete.CascadeDeleteParams" title="crudcreator.proxy.proxy.link.CascadeDelete.CascadeDeleteParams"><span class="pre">CascadeDeleteParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeDelete.CascadeDelete.params" title="Link to this definition"></a></dt>
+<dd><p>CascadeDelete proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeDelete.CascadeDelete.delete">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><span class="pre">DeleteParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeDelete.CascadeDelete.delete" title="Link to this definition"></a></dt>
+<dd><p>Scans all links of the entity type, and if the link has the correct cardinality, 
+deletes the linked destination entities. 
+Then deletes the current entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../exception.html#crudcreator.exceptions.EntityNotExist" title="crudcreator.exceptions.EntityNotExist"><strong>EntityNotExist</strong></a> – If the destination entity, to which the deleted source is linked, does not exist, while the link
+stipulates that the source must be linked to at least one destination.</p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.DeleteParams" title="crudcreator.schema.DeleteParams"><em>DeleteParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeDelete.CascadeDeleteParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.link.CascadeDelete.</span></span><span class="sig-name descname"><span class="pre">CascadeDeleteParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeDelete.CascadeDeleteParams" title="Link to this definition"></a></dt>
+<dd><p>CascadeDelete proxy settings.
+Nothing.</p>
+</dd></dl>
+
+</section>
+<section id="cascadecreateandupdate">
+<span id="cascade-create-and-update"></span><h3><a class="toc-backref" href="#id20" role="doc-backlink">CascadeCreateAndUpdate</a><a class="headerlink" href="#cascadecreateandupdate" title="Link to this heading"></a></h3>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.</span></span><span class="sig-name descname"><span class="pre">CascadeCreateAndUpdate</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate" title="Link to this definition"></a></dt>
+<dd><p>Changes the create and update into a “cascade create” or “cascade update”.
+Changes the create and update behavior if the current entity is linked to another entity,
+and the source entity must be linked to one and only one destination entity (*-to-one link).
+In this case, if the current entity is updated,
+destination entities linked to the current updated entity are also updated.
+Likewise, if the current entity is created,
+a new destination entities linked to the current created entity is also created.</p>
+<p>Example of descriptor :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CascadeCreateAndUpdate&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Which could be preceded by the following descriptor:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CreateLink&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;params&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;interface_merge&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;list_linked_field&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;field_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_to_join&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;link&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">&quot;entity_type_linked_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$entity_bis$&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;field_name_linked_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;field_to_be_joined&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">&quot;dest&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;one&quot;</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="py attribute pydantic_field">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate.params">
+<em class="property"><span class="pre">field</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">params</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdateParams" title="crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdateParams"><span class="pre">CascadeCreateAndUpdateParams</span></a></em><em class="property"> <span class="pre">[Required]</span></em><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate.params" title="Link to this definition"></a></dt>
+<dd><p>CascadeCreateAndUpdate proxy settings.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate.create">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><span class="pre">CreateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate.create" title="Link to this definition"></a></dt>
+<dd><p>Scans all links of the entity type, and if the link has the correct cardinality, 
+creates a linked destination entities. 
+Then creates the current entity.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Works only if the foreign key is specified in dict_creator_value.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.CreateParams" title="crudcreator.schema.CreateParams"><em>CreateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate.update">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><span class="pre">UpdateParams</span></a></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdate.update" title="Link to this definition"></a></dt>
+<dd><p>Scans all links of the entity type, and if the link has the correct cardinality, 
+updates the linked destination entities. 
+Then updates the current entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>params</strong> (<a class="reference internal" href="../request.html#crudcreator.schema.UpdateParams" title="crudcreator.schema.UpdateParams"><em>UpdateParams</em></a>) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<dl class="py class pydantic_model">
+<dt class="sig sig-object py" id="crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdateParams">
+<em class="property"><span class="pre">pydantic</span> <span class="pre">model</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.</span></span><span class="sig-name descname"><span class="pre">CascadeCreateAndUpdateParams</span></span><a class="headerlink" href="#crudcreator.proxy.proxy.link.CascadeCreateAndUpdate.CascadeCreateAndUpdateParams" title="Link to this definition"></a></dt>
+<dd><p>CascadeCreateAndUpdate proxy settings.
+Nothing.</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../proxy.html" class="btn btn-neutral float-left" title="Proxy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sql.html" class="btn btn-neutral float-right" title="SQL proxies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, $name$, $email$.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
