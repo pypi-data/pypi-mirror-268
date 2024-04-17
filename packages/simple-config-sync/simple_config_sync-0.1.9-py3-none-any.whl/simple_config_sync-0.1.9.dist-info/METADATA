@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: simple-config-sync
+Version: 0.1.9
+Summary: Used for synchronizing dotfiles across various Linux devices, capable of automatically creating links, automatically deleting links, and selectively synchronizing files.
+Author-email: hmeqo <hmeqocoliniliad@gmail.com>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: textual >=0.52.1
+Requires-Dist: toml >=0.10.2
+Requires-Dist: click >=8.1.7
+
+# simple-config-sync
+
+Used for synchronizing dotfiles across various Linux devices, capable of automatically creating links, automatically deleting links, and selectively synchronizing files.
+
+## Install
+
+```shell
+# Global
+pip install simple-config-sync
+# For user
+pip install --user simple-config-sync
+```
+
+## Usage
+
+Run the tui program.
+
+```shell
+scstui
+```
