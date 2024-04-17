@@ -1,0 +1,6 @@
+syntrac_opentelemetry/instrumentation/vertexai/__init__.py,sha256=RRtAsTVksQ5Ux5cH73KDngTJvetXfavE1csTsxavvAM,11471
+syntrac_opentelemetry/instrumentation/vertexai/version.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+syntrac_opentelemetry_instrumentation_vertexai-0.0.2.dist-info/METADATA,sha256=zcgBHUSG6KmE04iOx0DacPhN-ZzKQGWC6nlNEf8ow_Y,2288
+syntrac_opentelemetry_instrumentation_vertexai-0.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+syntrac_opentelemetry_instrumentation_vertexai-0.0.2.dist-info/entry_points.txt,sha256=RSbp3_8_OwuO6t_5ylS7d_TzuaigDmSA7wa4caeD-yI,122
+syntrac_opentelemetry_instrumentation_vertexai-0.0.2.dist-info/RECORD,,

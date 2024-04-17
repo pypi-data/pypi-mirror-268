@@ -1,0 +1,3 @@
+[opentelemetry_instrumentor]
+google_cloud_aiplatform=syntrac_opentelemetry.instrumentation.vertexai:VertexAIInstrumentor
+
