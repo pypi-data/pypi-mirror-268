@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: iotopen-py-lynx
+Version: 1.0.4
+Summary: A wrapper library for the IoT Open Lynx API
+Project-URL: Homepage, https://github.com/IoTOpen/py-lynx
+Project-URL: Issues, https://github.com/IoTOpen/py-lynx/issues
+Author-email: Jesper Falk <jesper.falk@iotopen.se>
+License-File: LICENSE
+Keywords: api,iot,iot-open
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
+
+# Python Lynx
+
+This is a wrapper library for the [IoT Open Lynx platform API:s][0]. Most API-calls
+are exposed as a `Client` class with functions for every API-endpoint. All
+models are also implemented as classes.
+
+## Install
+
+Run the following command to install the package using pip:
+```bash
+python3 -m pip install --upgrade iotopen-py-lynx
+```
+
+## Usage
+
+Create a Lynx client and use the functions on it to make API-calls.
+
+```python
+from lynx import Client
+
+cli = Client("https://lynx.iotopen.se", "abcdef123456789abcdef123456789")
+
+installations = cli.get_installations()
+print(installations)
+```
+
+[0]: https://iotopen.io/developers
