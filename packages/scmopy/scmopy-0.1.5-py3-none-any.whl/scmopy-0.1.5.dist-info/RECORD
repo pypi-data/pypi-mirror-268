@@ -1,0 +1,13 @@
+scmopy/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+scmopy/__init__.py,sha256=D095mvXx2bqE4L1nGDEW4DBRSkqwNzEjHIKMlrHDPMQ,1489
+scmopy/base.py,sha256=n9pSEKHSmxIytQJRW5qrXaYpoXXsUk5qVlTnsHfU8LU,2633
+scmopy/gaussian_scm.py,sha256=LxHTaKbmahtg6GEaFU7tUDnWe6fuLphDry4Ylf2GCFc,7686
+scmopy/model_selection.py,sha256=zNiLvTsb-uivEgIPz2CnynKWomFA2adT03pZXoP38w8,5684
+scmopy/nongaussian_scm.py,sha256=-wP3Sk2YIGQ1dcj8hQb0plNmuVhScgsB1VrV_-yxFUQ,14805
+scmopy/components/__init__.py,sha256=-yqMeb9W2FXpCkVXPdNrqU0yplMDQOrllM4xL1LYTGk,1502
+scmopy/components/syniv.py,sha256=5qIn1ZYKtgvO-1RZUi3fnMYlv062hUTJ7etQ6McUnc0,6114
+scmopy-0.1.5.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+scmopy-0.1.5.dist-info/METADATA,sha256=wfvv6KyKrBCvpDDkgPklKtXRZ8gz8P-F0Rr14xHXGn8,21905
+scmopy-0.1.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scmopy-0.1.5.dist-info/top_level.txt,sha256=jQnlAJUDVEPzvLkMZoYDGo3egp_rj3n3-IfhiL5TJmM,7
+scmopy-0.1.5.dist-info/RECORD,,
