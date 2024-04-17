@@ -1,0 +1,5 @@
+arch
+ci
+dist
+doc
+examples
