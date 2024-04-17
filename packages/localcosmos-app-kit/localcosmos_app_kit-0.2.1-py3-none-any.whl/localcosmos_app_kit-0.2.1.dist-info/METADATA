@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: localcosmos_app_kit
+Version: 0.2.1
+Summary: LocalCosmos App Kit. Web Portal to build Android and iOS apps
+Home-page: https://github.com/localcosmos/app-kit
+Author: Thomas Uher
+Author-email: thomas.uher@sisol-systems.com
+License: The MIT License
+Keywords: django,localcosmos,localcosmos server,biodiversity
+Platform: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: localcosmos-server
+Requires-Dist: localcosmos-cordova-builder
+Requires-Dist: localcosmos-app-kit-taxonomy
+Requires-Dist: django-tenants ==3.4.7
+Requires-Dist: django-cleanup ==6.0.0
+Requires-Dist: django-ipware ==4.0.2
+Requires-Dist: django-filter ==22.1
+Requires-Dist: lxml
+Requires-Dist: xlrd ==2.0.1
+Requires-Dist: openpyxl ==3.0.10
+Requires-Dist: deepl
+Requires-Dist: opencv-python
+Requires-Dist: opencv-python-headless
+Requires-Dist: unidecode
+
+# App Kit
+
+Build apps for web, Android and iOS. Supports identification keys, observation forms, maps, taxonomy and more
