@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aruba-dero"
+version = "1.0"
+authors = [
+    { name = "Lukas Lanzner", email = "lukas.lanzner@hpe.com" },
+]
+description = "DEmo ROllout helper - Modular Tool to automate demo rollouts"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    'pyclearpass >= 1.0.4',
+    'psutil~=5.9.8',
+    'pyyaml~=6.0.1',
+    'cryptography~=42.0.5',
+    'winBullet~=1.1',
+    'setuptools~=69.2.0'
+]
+[project.scripts]
+dero = "main:main"
