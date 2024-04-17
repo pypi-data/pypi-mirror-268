@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 256
+
+extend-include = [
+    "bin/*",
+]
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+[tool.ruff.lint]
+select = [
+    "I", # isort
+    "UP", # pyupgrade
+]
+
+ignore = [
+    "ALL",
+    "UP008", # Use `super()` instead of `super(__class__, self)`
+    "UP015", # Unnecessary open mode parameters
+    "UP027", # Replace unpacked list comprehension with a generator expression
+    "UP028", # Replace `yield` over `for` loop with `yield from`
+    "UP030", # Use implicit references for positional format fields
+    "UP031", # Use format specifiers instead of percent format
+    "UP032", # Use f-string instead of `format` call
+    "SIM210",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["rucio"]
