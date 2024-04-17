@@ -1,0 +1,21 @@
+{
+  "name": "gradio_demotest",
+  "version": "0.1.14",
+  "description": "Gradio UI packages",
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "main_changeset": true,
+  "exports": {
+    ".": "./Index.svelte",
+    "./example": "./Example.svelte",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@gradio/atoms": "0.6.2",
+    "@gradio/icons": "0.3.4",
+    "@gradio/statustracker": "0.4.11",
+    "@gradio/utils": "0.3.1"
+  }
+}
