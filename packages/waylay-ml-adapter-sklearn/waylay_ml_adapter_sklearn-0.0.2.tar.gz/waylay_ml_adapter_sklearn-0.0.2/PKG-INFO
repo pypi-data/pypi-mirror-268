@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: waylay-ml-adapter-sklearn
+Version: 0.0.2
+Summary: ML_adapter for sklearn.
+Author: Waylay
+Requires-Python: >=3.9
+Requires-Dist: waylay-ml-adapter-numpy
+Provides-Extra: dev
+Requires-Dist: waylay-ml-adapter-devtools; extra == "dev"
+Requires-Dist: waylay-sdk-core; extra == "dev"
+Requires-Dist: scikit-learn==1.3.*; extra == "dev"
