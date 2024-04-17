@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/test.py
+src/test/__init__.py
+src/test/test_logs.py
+src/wkregister/__init__.py
+src/wkregister/decorator.py
+src/wkregister/models.py
+src/wkregister/producer.py
+src/wkregister/util.py
+src/wkregister.egg-info/PKG-INFO
+src/wkregister.egg-info/SOURCES.txt
+src/wkregister.egg-info/dependency_links.txt
+src/wkregister.egg-info/requires.txt
+src/wkregister.egg-info/top_level.txt
