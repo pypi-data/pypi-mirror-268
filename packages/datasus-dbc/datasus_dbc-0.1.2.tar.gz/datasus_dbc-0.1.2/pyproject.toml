@@ -1,0 +1,28 @@
+[build-system]
+requires = ["maturin>=1.4,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "datasus-dbc"
+description = "Decompress DATASUS's dbc files into dbf files"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Rust",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Archiving :: Compression"
+]
+keywords = ["dbc", "dbf", "datasus", "compression", "blast"]
+dynamic = ["version"]
+license = "MIT"
+readme = "README.md"
+authors = [
+    { name = "Murilo Matsubara", email = "murilo.matsubara@gmail.com"}
+]
+
+[project.urls]
+Source = "https://github.com/mymatsubara/datasus-dbc-py"
+
+
+[tool.maturin]
+features = ["pyo3/extension-module"]

@@ -1,0 +1,18 @@
+[package]
+name = "datasus-dbc-py"
+description = "Decompress DATASUS's dbc files into dbf files in python"
+version = "0.1.2"
+edition = "2021"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/mymatsubara/datasus-dbc-py"
+authors = ["Murilo Matsubara <murilo.matsubara@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "datasus_dbc"
+crate-type = ["cdylib"]
+
+[dependencies]
+datasus-dbc = "0.1.1"
+pyo3 = "0.19.0"
