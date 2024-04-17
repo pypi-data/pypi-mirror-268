@@ -1,0 +1,7 @@
+fms_robot_plugin/__init__.py,sha256=jvbPmQYlNWaL0bkDfeu9DgbT8gSFNBb7f6tmwwuhK24,49
+fms_robot_plugin/mqtt.py,sha256=9t8tC4H3CvX997gzzfn8B-Z40UGI90m52mETplMCBnI,1824
+fms_robot_plugin/robot.py,sha256=9KhJ1ThlRcjHbr_MPzzr7m_XTZG0nBQYQtGKgEyD9U8,8771
+fms_robot_plugin/typings.py,sha256=6rG4CsNk3M55oD-jq7OXJZ5kJ5W6LB_ZF-JyTGqlBsU,3168
+fms_robot_plugin-0.2.1rc0.dist-info/METADATA,sha256=jRgry2iy9lW41UKEp6gal1YZ7n1EViUqQhb79RHBA0I,502
+fms_robot_plugin-0.2.1rc0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+fms_robot_plugin-0.2.1rc0.dist-info/RECORD,,
