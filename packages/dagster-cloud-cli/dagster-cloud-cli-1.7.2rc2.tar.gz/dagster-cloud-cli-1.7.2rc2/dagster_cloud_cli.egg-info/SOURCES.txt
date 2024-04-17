@@ -1,0 +1,7 @@
+setup.py
+dagster_cloud_cli.egg-info/PKG-INFO
+dagster_cloud_cli.egg-info/SOURCES.txt
+dagster_cloud_cli.egg-info/dependency_links.txt
+dagster_cloud_cli.egg-info/entry_points.txt
+dagster_cloud_cli.egg-info/requires.txt
+dagster_cloud_cli.egg-info/top_level.txt
