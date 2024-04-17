@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "postfinancex"
+version = "0.0.3"
+description = "PostFinanceX Virtual Assistant powered by IBM watsonx.ai ✨ PostFinance X IBM watsonx.ai"
+packages = [
+    {include = "postfinance"}
+]
+authors = ["Yi ZHANG <yizhang.dev@gmail.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+homepage = "https://pypi.org/project/postfinancex"
+repository = "https://github.com/imyizhang/postfinancex"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ibm-watsonx-ai = "^0.2.4"
+pymongo = "^4.6.3"
+dnspython = "^2.6.1"
+langchain-community = "^0.0.33"
+langchain-core = "^0.1.43"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
