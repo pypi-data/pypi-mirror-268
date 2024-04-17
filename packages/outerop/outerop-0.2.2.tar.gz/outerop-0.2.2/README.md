@@ -1,0 +1,96 @@
+# Outerop Python SDK
+
+The Outerop Python SDK provides a convenient way to interact with the Outerop API and integrate GenAI into your Python applications. It supports multiple providers, including OpenAI, Anthropic, and Mistral.
+
+## Installation
+
+To install the Outerop Python SDK, use pip:
+
+```bash
+pip install outerop
+```
+
+## Usage
+
+To use the Outerop SDK, you need to create an instance of the `Outerop` class with your Outerop API key and optionally provide additional configuration options.
+
+```python
+from outerop import Outerop
+
+outerop = Outerop(outerop_api_key="YOUR_OUTEROP_API_KEY", options={
+   "openaiApiKey": "YOUR_OPENAI_API_KEY",
+   "anthropicApiKey": "YOUR_ANTHROPIC_API_KEY",
+   "mistralApiKey": "YOUR_MISTRAL_API_KEY"
+})
+```
+
+### Using the SDK
+
+To call the AI API with a specific prompt and variables, you can use the `chat` method:
+
+```python
+result = outerop.chat(
+   team_prompt_name"your-prompt-uuid",
+   version_name_or_environment="development",
+   variables={"name": "John", "age": "25"}
+)
+```
+
+### Pinning a specific version in version control
+
+You can replace the `environment` parameter with a specific version number to pin a specific version of the prompt.
+
+```python
+result = outerop.chat(
+   team_prompt_name="your-prompt-uuid",
+   version_name_or_environment="o-1234567890",
+   variables={"name": "John", "age": "25"}
+)
+```
+
+We recommend keeping the instantiation of the `Outerop` class outside your main event loop to allow the caching to work.
+
+### Response format
+
+We standardise responses based on the OpenAI SDK for both python and JS. Other models outputs will be transformed to fit the schema. However if you need to, you can access the raw return from the API in the "raw" property of the response.
+
+However we **highly** recommend using the standardised format, as it will allow you to switch models without changing your code.
+
+### Other methods
+
+To retrieve a prompt, use the `get_prompt` method:
+
+```python
+prompt = outerop.get_prompt(team_prompt_name="your-prompt-uuid", environment="development", version="latest")
+```
+
+## Configuration
+
+The `Outerop` class accepts an optional `options` parameter to configure additional settings:
+
+- `baseURL`: The base URL of the Outerop API (default: "https://app.outerop.com").
+- `loggingEnabled`: Enable or disable logging (default: True).
+- `openaiApiKey`: The API key for OpenAI.
+- `anthropicApiKey`: The API key for Anthropic.
+- `mistralApiKey`: The API key for Mistral.
+- `bypassHeader`: A bypass header for Vercel protection.
+
+## Logging
+
+The SDK includes a built-in logging mechanism to capture chat events and send them to the Outerop API for analytics and monitoring purposes. Logging is enabled by default, but you can disable it by setting `loggingEnabled` to `False` in the options.
+
+## Error Handling
+
+The SDK raises exceptions for various error scenarios, such as missing API keys, invalid responses, or network errors. Make sure to wrap your code in a try-except block to handle these exceptions gracefully.
+
+## Default Environments
+
+The default environments are:
+`testing`
+`development`
+`staging`
+`production`
+
+## Contributing
+
+Contributions to the Outerop Python SDK are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
