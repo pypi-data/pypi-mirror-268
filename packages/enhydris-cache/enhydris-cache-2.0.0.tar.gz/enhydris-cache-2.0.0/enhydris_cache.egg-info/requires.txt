@@ -1,0 +1,2 @@
+Click>=7.0
+enhydris-api-client<5,>=4
