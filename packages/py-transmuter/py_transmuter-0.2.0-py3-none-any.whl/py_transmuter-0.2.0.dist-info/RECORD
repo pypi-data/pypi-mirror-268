@@ -1,0 +1,14 @@
+py_transmuter/__init__.py,sha256=NqlBYCy8hOo2OD_V_hKOeuFt5zwm6giZvcvC0Zx9Uwc,120
+py_transmuter/self_inspector.py,sha256=R86k07WrYwg1Gd8w4f9VgSSErKgEZh0Ckw3JgQ-rhJU,1529
+py_transmuter/dictionaries/__init__.py,sha256=y51T_1eRyCf8oT_nWOM1l_5a3wsHGyycpgff_pfAbSA,190
+py_transmuter/dictionaries/aggregator.py,sha256=52pbUuTZpRFKpjipOq5_Pvb9wWlZ15IYCiOWqA1zZuU,8200
+py_transmuter/dictionaries/mapper.py,sha256=BOt8A4pwy8IxC4ubBX1Ee19wVD-Ujq4Dpno_Qlue6DE,3212
+py_transmuter/models/__init__.py,sha256=iJZVgOsE-SyYIFMDXpU3QfjVV_ioIfEnfKSAhDsMB_I,168
+py_transmuter/models/aggregator.py,sha256=GlUxoe6ev7lV4taNm6brGwIpXegZa0Tqdy2x0q-Sv6Q,9400
+py_transmuter/models/mapper.py,sha256=MBRMzpHvOdFPT-5ICnBnH0GIRM-UsknYoCgae1W8T2E,4503
+py_transmuter/models/types.py,sha256=jISTsAOUrSasS38CFsoMSFy67hzh26-J0V_8fAQkPzs,667
+py_transmuter/models/utils.py,sha256=EC1T2SygXmBkKYp_ulxJf9X5HiJTS4VlzBrFaK10mSY,1142
+py_transmuter-0.2.0.dist-info/METADATA,sha256=fTHcK2ak-mdrvFocbzru9Pug9gPzzAHdrRyzGlv9bQ4,11877
+py_transmuter-0.2.0.dist-info/WHEEL,sha256=uNdcs2TADwSd5pVaP0Z_kcjcvvTUklh2S7bxZMF8Uj0,87
+py_transmuter-0.2.0.dist-info/licenses/LICENSE,sha256=AvYq43PQhXX5rDir1qwVnxhhRmdPABY8D41SCXlqRKk,1072
+py_transmuter-0.2.0.dist-info/RECORD,,
