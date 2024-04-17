@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ship_model_lib
+Version: 1.0.0
+Summary: Model library for the hydrodynamics, energy system and fuel calculation
+Home-page: https://github.com/developer/https://github.com/SINTEF/shipdesignlab/
+Author: SINTEF Ocean
+Author-email: kevinkoosup.yum@sintef.no
+License: Apache Software License 2.0
+Keywords: Ship Energy Model
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas >=2.0.0
+Requires-Dist: pandas <3
+Requires-Dist: scipy >=1.11.0
+Requires-Dist: scipy <2
+Requires-Dist: operation-profile-lib ~=0.1.11
+Requires-Dist: matplotlib ~=3.8.2
+Requires-Dist: plotly ~=5.13.0
+Provides-Extra: dev
+
+This file will be overwritten by `index.ipynb`

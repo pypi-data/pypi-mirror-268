@@ -1,0 +1,9 @@
+pandas>=2.0.0
+pandas<3
+scipy>=1.11.0
+scipy<2
+operation_profile_lib~=0.1.11
+matplotlib~=3.8.2
+plotly~=5.13.0
+
+[dev]
