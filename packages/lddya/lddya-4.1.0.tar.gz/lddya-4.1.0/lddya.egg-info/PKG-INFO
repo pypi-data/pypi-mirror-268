@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lddya
+Version: 4.1.0
+Summary: 1.Map添加生成随机地图的功能，仅提供生成，暂不提供验证，也就是可能会产生无路径的极端情况。2.添加动态规划法。
+Home-page: https://github.com/not_define/please_wait
+Author: lidongdong
+Author-email: 927052521@qq.com
+License: MIT Licence
+Keywords: gm,pip,licensetool,license,tool
+Platform: any
+
+具体功能，请自行挖掘。
