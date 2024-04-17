@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: tmgtoolkit
+Version: 0.1.2
+Summary: Time series analysis of tensiomyography (TMG) data
+Home-page: https://github.com/ejmastnak/tmgtoolkit
+Author: Elijan Mastnak
+Author-email: admin@ejmastnak.com
+Project-URL: Bug Tracker, https://github.com/ejmastnak/tmgtoolkit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: spm1d >=0.4
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: pandas
+Requires-Dist: openpyxl
+
+# TMG Toolkit
+
+Utilities for time-series analysis of tensiomyography (TMG) measurement data.
+
+Features include:
+
+- Extract TMG measurements from a standard TMG Excel file format.
+- Compute the standard TMG parameters `Dm`, `Td`, `Tc`, `Ts`, and `Tr` of a time series signal.
+- Compute the derivative of a time series signal.
+- Find accurate extremum values and times of a time series signal using polynomial interpolation.
+- Perform statistical parametric mapping (SPM) analysis of time series signals.
+- Plot time series signals and the results of SPM analysis.
