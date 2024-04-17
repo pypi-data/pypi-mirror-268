@@ -1,0 +1,9 @@
+dynamic_chunks/__init__.py,sha256=GcoCOscQQoewSZtMCVCu5CKp_dsj0UjHIm4R1tWdddc,90
+dynamic_chunks/_version.py,sha256=hB095avW4HuDZxn8qPHRG1UMzSSonb8ZDAsLxt9hmk8,411
+dynamic_chunks/algorithms.py,sha256=S91SrD61JexoM6r1djizEldFcLQVbMKYg9LWLdAMyJE,14815
+dynamic_chunks/tests/test_algorithms.py,sha256=Nnl6BeZ2CTZkCMjPhCUXFLF03fC7wCy423c5S_UQ_KU,8457
+dynamic_chunks-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dynamic_chunks-0.0.3.dist-info/METADATA,sha256=9KyX65s4a5oLcIExoMu2hXWI7Upx775_pnNV9oIdunM,4841
+dynamic_chunks-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dynamic_chunks-0.0.3.dist-info/top_level.txt,sha256=7q1BQpwvY3WdLprMl7iN4heKgEdFw62ay45LT_7aRdg,15
+dynamic_chunks-0.0.3.dist-info/RECORD,,
