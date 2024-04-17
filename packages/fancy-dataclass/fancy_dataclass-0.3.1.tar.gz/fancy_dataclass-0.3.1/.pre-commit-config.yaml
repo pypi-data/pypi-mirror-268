@@ -1,0 +1,43 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+default_install_hook_types: [commit-msg, pre-commit, pre-push]
+default_stages: [commit]
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+    - id: check-added-large-files
+      args: ['--maxkb=5000']
+    - id: end-of-file-fixer
+    - id: check-case-conflict
+    - id: detect-private-key
+    - id: check-docstring-first
+- repo: https://github.com/charliermarsh/ruff-pre-commit
+  rev: 'v0.3.3'
+  hooks:
+    - id: ruff
+- repo: https://github.com/netromdk/vermin
+  rev: v1.6.0
+  hooks:
+    - id: vermin-all
+      # specify your target version here, OR in a Vermin config file as usual:
+      args: ['-t=3.8-', '--no-tips', '--violations', '--exclude', 'enum.StrEnum', '--exclude', 'types.UnionType', '.']
+- repo: https://github.com/commitizen-tools/commitizen
+  rev: v3.20.0
+  hooks:
+    - id: commitizen
+      stages: [commit-msg]
+- repo: local
+  hooks:
+    - id: summarize
+      name: summarize
+      entry: scripts/summarize.sh
+      language: script
+      pass_filenames: false
+      verbose: true
+    - id: check-version
+      stages: [commit, push]
+      name: check-version
+      entry: scripts/check_version.py
+      language: python
+      verbose: true
