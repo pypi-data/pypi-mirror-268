@@ -1,0 +1,8 @@
+README
+setup.py
+barracudas/__init__.py
+barracudas/fysh.py
+barracudas.egg-info/PKG-INFO
+barracudas.egg-info/SOURCES.txt
+barracudas.egg-info/dependency_links.txt
+barracudas.egg-info/top_level.txt
