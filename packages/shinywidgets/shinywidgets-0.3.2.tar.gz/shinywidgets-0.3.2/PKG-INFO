@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: shinywidgets
+Version: 0.3.2
+Summary: Render ipywidgets in Shiny applications
+Home-page: https://github.com/rstudio/py-shinywidgets
+Author: Carson Sievert
+Author-email: carson@rstudio.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/rstudio/py-shinywidgets/issues
+Project-URL: Documentation, https://github.com/rstudio/py-shinywidgets/
+Project-URL: Source Code, https://github.com/rstudio/py-shinywidgets/
+Description: shinywidgets
+        ================
+        
+        Render [ipywidgets](https://ipywidgets.readthedocs.io/en/stable/) inside a
+        [Shiny](https://shiny.rstudio.com/py) (for Python) app.
+        
+        See the [Jupyter Widgets](https://shiny.rstudio.com/py/docs/ipywidgets.html) article on the Shiny for Python website for more details.
+        
+        ## Installation
+        
+        ```sh
+        pip install shinywidgets
+        ```
+        
+        ## Development
+        
+        If you want to do development on `{shinywidgets}`, run:
+        
+        ```sh
+        pip install -e ".[dev,test]"
+        cd js && yarn watch
+        ```
+        
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Provides-Extra: dev
