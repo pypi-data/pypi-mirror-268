@@ -1,0 +1,53 @@
+mod agg;
+mod broadcast_join;
+mod coalesce;
+mod concat;
+mod csv;
+mod empty_scan;
+mod explode;
+mod fanout;
+mod filter;
+mod flatten;
+mod hash_join;
+#[cfg(feature = "python")]
+mod iceberg_write;
+#[cfg(feature = "python")]
+mod in_memory;
+mod json;
+mod limit;
+mod monotonically_increasing_id;
+mod parquet;
+mod project;
+mod reduce;
+mod sample;
+mod scan;
+mod sort;
+mod sort_merge_join;
+mod split;
+
+pub use agg::Aggregate;
+pub use broadcast_join::BroadcastJoin;
+pub use coalesce::Coalesce;
+pub use concat::Concat;
+pub use csv::TabularWriteCsv;
+pub use empty_scan::EmptyScan;
+pub use explode::Explode;
+pub use fanout::{FanoutByHash, FanoutByRange, FanoutRandom};
+pub use filter::Filter;
+pub use flatten::Flatten;
+pub use hash_join::HashJoin;
+#[cfg(feature = "python")]
+pub use iceberg_write::IcebergWrite;
+#[cfg(feature = "python")]
+pub use in_memory::InMemoryScan;
+pub use json::TabularWriteJson;
+pub use limit::Limit;
+pub use monotonically_increasing_id::MonotonicallyIncreasingId;
+pub use parquet::TabularWriteParquet;
+pub use project::Project;
+pub use reduce::ReduceMerge;
+pub use sample::Sample;
+pub use scan::TabularScan;
+pub use sort::Sort;
+pub use sort_merge_join::SortMergeJoin;
+pub use split::Split;
