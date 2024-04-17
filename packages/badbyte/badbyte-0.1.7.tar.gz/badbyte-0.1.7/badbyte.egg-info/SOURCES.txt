@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+badbyte/VERSION
+badbyte/__init__.py
+badbyte/badbyte
+badbyte.egg-info/PKG-INFO
+badbyte.egg-info/SOURCES.txt
+badbyte.egg-info/dependency_links.txt
+badbyte.egg-info/requires.txt
+badbyte.egg-info/top_level.txt
+badbyte/utils/__init__.py
+badbyte/utils/colors.py
+badbyte/utils/functions.py
