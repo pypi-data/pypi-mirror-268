@@ -1,0 +1,7 @@
+llama_index/embeddings/octoai/BUILD,sha256=Nf7BYWWe1USoFEIsIiEVZ8sa05J5FPkMJ-UIMDLrU8o,17
+llama_index/embeddings/octoai/__init__.py,sha256=oYC1_gh1NgvgFzX3Ui5ROPbzxX46FlwcZEgNiskBPP0,94
+llama_index/embeddings/octoai/base.py,sha256=CaKUJU9uwOHljTKvDJloVJtfJ_W4oFR1WMdXMEO6pmI,2441
+llama_index/embeddings/octoai/utils.py,sha256=5sy8P90ktNPhOaDhlpQhHXU1ImtTZTFjeyZrP0QIUfw,1004
+llama_index_embeddings_octoai-0.1.0.dist-info/METADATA,sha256=PcxySL6nF5KCrrqctac36QaTxnX3hPVOeXOS1GVwtr8,1772
+llama_index_embeddings_octoai-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+llama_index_embeddings_octoai-0.1.0.dist-info/RECORD,,
