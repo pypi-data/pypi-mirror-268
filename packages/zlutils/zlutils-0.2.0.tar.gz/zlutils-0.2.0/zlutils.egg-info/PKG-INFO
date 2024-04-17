@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: zlutils
+Version: 0.2.0
+Summary: a package of utils
+Home-page: https://github.com/zlolss/zlutils.py.git
+Author: zlols
+Author-email: zlols@foxmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+a package of utils
+
