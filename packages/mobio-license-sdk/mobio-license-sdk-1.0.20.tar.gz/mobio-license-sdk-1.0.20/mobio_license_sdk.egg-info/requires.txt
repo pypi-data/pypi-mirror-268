@@ -1,0 +1,8 @@
+Flask
+m-caching
+m-singleton
+pycryptodome
+numpy
+requests
+pymongo
+redis
