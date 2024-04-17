@@ -1,0 +1,6 @@
+
+[dev]
+botocore
+requests
+geopy
+beautifulsoup4

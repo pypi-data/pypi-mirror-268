@@ -1,0 +1,5 @@
+[console_scripts]
+fixinventorydata-update-ccfdataset = fixinventorydata.__main__:update_ccfdataset
+fixinventorydata-update-colors = fixinventorydata.__main__:update_colors
+fixinventorydata-update-instances = fixinventorydata.__main__:update_instances
+fixinventorydata-update-regions = fixinventorydata.__main__:update_regions
