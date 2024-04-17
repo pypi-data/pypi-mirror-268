@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: profiles_rudderstack
+Version: 0.10.8
+Home-page: https://www.rudderstack.com/
+Author: rudderstack
+Author-email: shubhammehra@rudderstack.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.8
+Requires-Dist: grpcio >=1.56.2
+Requires-Dist: grpc-interceptor >=0.15.2
+Requires-Dist: protobuf >=4.24.0
+Requires-Dist: pandas <2.2.0,>=1.5.3
+Requires-Dist: sqlalchemy-redshift >=0.8.14
+Requires-Dist: snowflake-sqlalchemy >=1.4.7
+Requires-Dist: pandas-redshift >=2.0.5
+Requires-Dist: snowflake-connector-python[pandas] >=3.5.0
+Requires-Dist: profiles-rudderstack-bin ==0.10.8
+Provides-Extra: snowpark
+Requires-Dist: snowflake-snowpark-python >=0.10.0 ; extra == 'snowpark'
+
