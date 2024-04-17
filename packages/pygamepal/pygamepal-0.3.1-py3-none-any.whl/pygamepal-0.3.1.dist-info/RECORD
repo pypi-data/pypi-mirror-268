@@ -1,0 +1,16 @@
+pygamepal/__init__.py,sha256=Ay2LumL9ozKAWYN35LgkdCHGaL0UMjQlvqYrxhrvME4,327
+pygamepal/camera.py,sha256=RPAx159gdhdrlkXVXui1b9rWn0hnBhEakfCnsDsCeLU,4005
+pygamepal/drawText.py,sha256=uRnoEEnR45wXvR-76-OX32RUUNA531L0XVE3jh5kmSc,384
+pygamepal/flatten.py,sha256=UadHscjWAX-D5bm0lAGxXK90lxCG-KU0pFGlI0WWxN0,186
+pygamepal/game.py,sha256=8CtgPsAKXgjJAGAJbW6XYMur1qkTqAcVZ3gWuZjoitM,1771
+pygamepal/input.py,sha256=-2WI2kfX8b05tRbj7xFT8WsXo888aS_MzIJk5WKuvC8,2654
+pygamepal/module.py,sha256=K5FSaqtSwo6k8d3paByyTjgl3Lw5n8GMflur4QBhG7s,597
+pygamepal/particles.py,sha256=7ghxetkrGwLweoMYzwjEexucMZZBgDgpcuBGahSdbC0,5276
+pygamepal/splitTexture.py,sha256=EwSi91KdjA6P3oMd9Zn2lH2Ofo4dEEkcmArmYT53Ne0,684
+pygamepal/spriteImage.py,sha256=yVznhUxFFx0mTC40ULVJUJ1pXfuhDx3J64kRlw_6a_Q,3971
+pygamepal/textureList.py,sha256=Ecc9KDMT6Tt2Q-tdOphLFvzU-WTk6nZ9pD_TRA22D-g,314
+pygamepal/transition.py,sha256=1XELJj6aWUIowlSmMpiQXOzcm3wShQzVD-QUegJfX-4,9332
+pygamepal-0.3.1.dist-info/METADATA,sha256=V7PZ0O1kaY38kgiNQl5txlPvXUkAPR6ltOdbnNyuF3k,5382
+pygamepal-0.3.1.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+pygamepal-0.3.1.dist-info/licenses/LICENSE,sha256=MbdEncQ1ZVXu-t0o5_YkHQ_uNeF5o__veSvksrefvPQ,1066
+pygamepal-0.3.1.dist-info/RECORD,,
