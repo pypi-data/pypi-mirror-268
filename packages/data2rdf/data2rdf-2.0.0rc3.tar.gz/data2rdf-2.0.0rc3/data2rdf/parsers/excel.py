@@ -1,0 +1,259 @@
+"""Data2rdf excel parser"""
+
+import warnings
+from typing import Any, Dict, Union
+
+from openpyxl import load_workbook
+from pydantic import Field, model_validator
+
+from data2rdf.models.mapping import (
+    ExcelConceptMapping,
+    PropertyMapping,
+    QuantityMapping,
+)
+from data2rdf.utils import make_prefix
+from data2rdf.warnings import MappingMissmatchWarning
+
+from .base import DataParser
+from .utils import _strip_unit, load_mapping_file
+
+
+class ExcelParser(DataParser):
+    """
+    Parses a data file of type CSV
+    """
+
+    # OVERRIDE
+    mapping: Union[str, Dict[str, ExcelConceptMapping]] = Field(
+        ...,
+        description="""File path to the mapping file to be parsed or
+        a dictionary with the mapping.""",
+    )
+
+    @property
+    def media_type(cls) -> str:
+        """IANA Media type definition of the resource to be parsed."""
+        return "https://www.iana.org/assignments/media-types/application/vnd.ms-excel"
+
+    @property
+    def json_ld(cls) -> Dict[str, Any]:
+        meta_table = {
+            "@type": "csvw:Table",
+            "rdfs:label": "Metadata",
+            "csvw:row": [],
+        }
+
+        column_schema = {"@type": "csvw:Schema", "csvw:column": []}
+
+        triples = {
+            "@context": {
+                "fileid": make_prefix(cls.config),
+                "csvw": "http://www.w3.org/ns/csvw#",
+                "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+                "dcat": "http://www.w3.org/ns/dcat#",
+                "xsd": "http://www.w3.org/2001/XMLSchema#",
+                "dcterms": "http://purl.org/dc/terms/",
+                "qudt": "http://qudt.org/schema/qudt/",
+                "csvw": "http://www.w3.org/ns/csvw#",
+                "foaf": "http://xmlns.com/foaf/spec/",
+            },
+            "@id": "fileid:tableGroup",
+            "@type": "csvw:TableGroup",
+            "csvw:table": [
+                meta_table,
+                {
+                    "@type": "csvw:Table",
+                    "rdfs:label": "Time series data",
+                    "csvw:tableSchema": column_schema,
+                },
+            ],
+        }
+
+        for mapping in cls.general_metadata:
+            if isinstance(mapping, QuantityMapping):
+                row = {
+                    "@type": "csvw:Row",
+                    "csvw:titles": {
+                        "@type": "xsd:string",
+                        "@value": mapping.key,
+                    },
+                    "qudt:quantity": mapping.json_ld,
+                }
+                meta_table["csvw:row"].append(row)
+            elif isinstance(mapping, PropertyMapping):
+                row = {
+                    "@type": "csvw:Row",
+                    "csvw:titles": {
+                        "@type": "xsd:string",
+                        "@value": mapping.key,
+                    },
+                    "csvw:describes": mapping.json_ld,
+                }
+                meta_table["csvw:row"].append(row)
+            else:
+                raise TypeError(
+                    f"Mapping must be of type {QuantityMapping} or {PropertyMapping}, not {type(mapping)}"
+                )
+
+        for idx, mapping in enumerate(cls.time_series_metadata):
+            if not isinstance(mapping, QuantityMapping):
+                raise TypeError(
+                    f"Mapping must be of type {QuantityMapping}, not {type(mapping)}"
+                )
+
+            if cls.config.data_download_uri:
+                download_url = {
+                    "dcterms:identifier": {
+                        "@type": "xsd:anyURI",
+                        "@value": f"{cls.config.data_download_uri}/column-{idx}",
+                    }
+                }
+            else:
+                download_url = {}
+
+            column = {
+                "@type": "csvw:Column",
+                "csvw:titles": {
+                    "@type": "xsd:string",
+                    "@value": mapping.key,
+                },
+                "qudt:quantity": mapping.json_ld,
+                "foaf:page": {
+                    "@type": "foaf:Document",
+                    "dcterms:format": {
+                        "@type": "xsd:anyURI",
+                        "@value": "https://www.iana.org/assignments/media-types/application/json",
+                    },
+                    "dcterms:type": {
+                        "@type": "xsd:anyURI",
+                        "@value": "http://purl.org/dc/terms/Dataset",
+                    },
+                    **download_url,
+                },
+            }
+            column_schema["csvw:column"].append(column)
+
+        return triples
+
+    @model_validator(mode="after")
+    @classmethod
+    def run_parser(cls, self: "ExcelParser") -> "ExcelParser":
+        """
+        Parse metadata, time series metadata and time series
+        """
+
+        datafile = load_workbook(filename=self.raw_data, data_only=True)
+        macros = load_workbook(filename=self.raw_data)
+        mapping: "Dict[str, ExcelConceptMapping]" = load_mapping_file(
+            self.mapping, self.config, ExcelConceptMapping
+        )
+
+        self._general_metadata = []
+        self._time_series_metadata = []
+        self._time_series = {}
+        for key, datum in mapping.items():
+            worksheet = datafile[datum.worksheet]
+
+            if datum.value_location and (
+                datum.time_series_start and datum.time_series_end
+            ):
+                raise RuntimeError(
+                    """Both, `value_location` and `time_series_start + `time_series_end`
+                       are set. Only one of them must be set."""
+                )
+            if (
+                not datum.value_location
+                and datum.time_series_start
+                and not datum.time_series_end
+            ):
+                raise RuntimeError("Please also set `time_series_end`.")
+
+            if (
+                not datum.value_location
+                and not datum.time_series_start
+                and datum.time_series_end
+            ):
+                raise RuntimeError("Please also set `time_series_start`.")
+
+            # find data for time series
+            if datum.time_series_start and datum.time_series_end:
+                column = worksheet[
+                    datum.time_series_start : datum.time_series_end
+                ]
+                if column:
+                    self.time_series[key] = [cell[0].value for cell in column]
+                else:
+                    message = f"""Concept with key `{key}`
+                                  does not have a time series from `{datum.time_series_start}`
+                                  until ``{datum.time_series_end}` .
+                                  Concept will be omitted in graph.
+                                  """
+                    warnings.warn(message, MappingMissmatchWarning)
+
+            # check if there is a macro for the unit of the entity
+            if datum.value_location:
+                macro_worksheet = macros[datum.worksheet]
+                macro_value_cell = macro_worksheet[
+                    datum.value_location
+                ].number_format.split()
+                if len(macro_value_cell) != 1:
+                    macro_unit = macro_value_cell[
+                        self.config.unit_macro_location
+                    ]
+                else:
+                    macro_unit = None
+            else:
+                macro_unit = None
+
+            # check if there is a unit somewhere in the sheet
+            if datum.unit_location:
+                unit_location = worksheet[datum.unit_location].value
+                if not unit_location:
+                    message = f"""Concept with key `{key}`
+                                  does not have a unit at location `{datum.unit_location}`.
+                                  This mapping for the unit will be omitted in graph.
+                                  """
+                    warnings.warn(message, MappingMissmatchWarning)
+            else:
+                unit_location = None
+
+            # decide which unit to take
+            unit = datum.unit or unit_location or macro_unit
+            if unit:
+                unit = _strip_unit(unit, self.config.remove_from_unit)
+
+            # make model
+            model_data = {
+                "key": datum.key,
+                "unit": unit,
+                "iri": datum.iri,
+                "annotation": datum.annotation,
+            }
+
+            if datum.value_location and not (
+                datum.time_series_start and datum.time_series_end
+            ):
+                value = worksheet[datum.value_location].value
+                if model_data.get("unit") and value:
+                    model_data["value"] = value
+                elif not model_data.get("unit") and value:
+                    model_data["value"] = str(value)
+                else:
+                    message = f"""Concept with key `{key}`
+                                  does not have a value at location `{datum.value_location}`.
+                                  Concept will be omitted in graph.
+                                  """
+                    warnings.warn(message, MappingMissmatchWarning)
+
+            if model_data.get("value") or key in self.time_series:
+                if model_data.get("unit"):
+                    model = QuantityMapping(**model_data)
+                else:
+                    model = PropertyMapping(**model_data)
+
+                if model_data.get("value"):
+                    self._general_metadata.append(model)
+                else:
+                    self._time_series_metadata.append(model)
+
+        return self
