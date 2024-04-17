@@ -1,0 +1,7 @@
+README.md
+setup.py
+QLlijx/__init__.py
+QLlijx.egg-info/PKG-INFO
+QLlijx.egg-info/SOURCES.txt
+QLlijx.egg-info/dependency_links.txt
+QLlijx.egg-info/top_level.txt
