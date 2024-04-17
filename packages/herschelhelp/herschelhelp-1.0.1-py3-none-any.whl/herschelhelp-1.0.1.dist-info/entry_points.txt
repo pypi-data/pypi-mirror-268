@@ -1,0 +1,2 @@
+[console_scripts]
+herschelhelp = herschelhelp.commands:cli
