@@ -1,0 +1,16 @@
+bgtask/__init__.py,sha256=s5C86EqanyqK8ulHw5UmfCBGm8tsSOEfMYDIvAfcX0c,629
+bgtask/admin.py,sha256=_JIYDoDcmVSodjL4C6Yw5wjwKk_o5T0dSOWDys896nE,247
+bgtask/apps.py,sha256=hHrqiaJQhJ1AZ4qTvwaDu7EnspleI40c00Dw-QpD5-I,121
+bgtask/client.py,sha256=Xp_ZXU0LyRwJt_V4jtkaPr67kpPVVaxk_8N5srpO-wM,856
+bgtask/core.py,sha256=o6zFqGPJ0hM1j_v6ZPi_lHYDJjcCO5YFbR7KIfoed4c,4479
+bgtask/models.py,sha256=tLVJAkHfA5Y7EmCdts5SizaHaNuGikFLIOtADfE_tEQ,1413
+bgtask/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bgtask/management/commands/__init__.py,sha256=ely2PttjgSv7vKdzskuD1rtK_l_UOpmxJSz8isrveD0,16
+bgtask/management/commands/bgtaskserver.py,sha256=FX9Ow_Drjt9_Ilzcxh5C07MM7JJSxwkC5wwGiicXfTA,2318
+bgtask/migrations/0001_initial.py,sha256=mwp8fuNWfmDO4gVqKHyZqXI09mHOgiO0NqveOG3rpko,1512
+bgtask/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bgtask4django-1.0.0.dist-info/LICENSE.txt,sha256=Qv2ilebwoUtMJnRsZwRy729xS5JZQzLauJ0tQzkAkTA,1088
+bgtask4django-1.0.0.dist-info/METADATA,sha256=EaQmjuyH-a-znxjyDbVOV7I2_mVlrgH1y3CdCAwDzhQ,1581
+bgtask4django-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bgtask4django-1.0.0.dist-info/top_level.txt,sha256=JQZLkbNnekloO7GMsXiBJoEl2NMHSnM513trFyCy29I,7
+bgtask4django-1.0.0.dist-info/RECORD,,

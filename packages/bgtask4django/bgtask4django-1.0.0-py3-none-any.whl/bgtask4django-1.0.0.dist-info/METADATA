@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: bgtask4django
+Version: 1.0.0
+Summary: a Django app for background task 
+Home-page: https://github.com/leiyang23/django-bgtask
+Author: leon_yang
+Author-email: leiyang_ace@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+## Project description
+ a Django background task app. 
+
+## Usage
+1. install: `pip install bgtask4django`
+2. migrate: `python manage.py migrate bgtask`
+3. start server: `python manage.py bgtaskserver`  
+
+Notice: Don't forget to register the `bgtask` to the Django INSTALLED_APPS.
+
+## How to use in django?
+a demo
+```python
+# views.py
+import time
+
+from bgtask.client import submit
+
+
+def send_email(address, title, message=None):
+    # some codes...
+    time.sleep(5)
+    # other codes...
+
+def register(request, *args, **kwargs):
+    # some codes...
+    task_id = submit(send_email, "*@*.com", "test", message="this is a test")
+    if not task_id:
+        print("send email fail, check log for reason")
+    # other codes...
+```
+## Configure
+Configuration should be read first from the django settings, and if not found, it should be looked up from the system environment variables.
+- `BGTASK_SERVER_IP:` bgtask server listen address, default `127.0.0.1`
+- `BGTASK_SERVER_PORT:` bgtask server listen port, default `23323`
+- `BGTASK_WORK_THREADS:` thread number for handling task, default `10`
