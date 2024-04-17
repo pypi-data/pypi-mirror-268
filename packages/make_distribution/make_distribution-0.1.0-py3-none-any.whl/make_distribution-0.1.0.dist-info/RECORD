@@ -1,0 +1,7 @@
+make_distribution/__init__.py,sha256=taV3d9iU3-_zaLXZ72oAyrTlt8Fbfhdh_WEs2Grv90E,134
+make_distribution/client.py,sha256=zdHCnIDl6aBU9dnnIMdCZo5BB-FHzaKnQRFhNo8BSjg,4240
+make_distribution/distributions.py,sha256=yTRng6aiI_fPPTGAatnAk_wvliQzdsNQyg6AvMiR8xs,1914
+make_distribution-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+make_distribution-0.1.0.dist-info/METADATA,sha256=uMR-vGpVhC83iy7sV8rt4xXrmAWYq5jrktrRb4YPwPs,2461
+make_distribution-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+make_distribution-0.1.0.dist-info/RECORD,,
