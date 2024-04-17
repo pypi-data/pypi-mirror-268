@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: botnikkk
+Version: 0.1.2
+Summary: a personal package
+Author: BotNikkk
+Author-email: <nikhi.ace.chd@gmail.com>
+Keywords: python,camera stream,sockets
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: screeninfo
+Requires-Dist: asyncio
+
+
+
+# botnikkk  
+
+Under construction! Not ready for use yet! Currently experimenting and planning!
+
+Developed by BotNikkk / Nikkk
+
+# How To Use :
+
+## 1. centre() function
+
+Usage = Centering Elemtents.
+
+```python
+import botnikkk
+
+botnikkk.centre('text')
+```
+
+It also takes 2 extra parameters as input :
+
+1. symbol : determines what symbol will fill in the blank space, deault parameter = " "
+
+```python
+botnikkk.centre('text',symbol='=')
+```
+
+2. left_alignment : determines the space that will be used on the left hand side of the centred string, defaul parameter = None/calculated automatically
+
+```python
+botnikkk.centre('text', left_alignment=23)
+```
+
+3. str_end : determines what symbol will print as end= in print statement, deault parameter = "\n"
+
+```python
+botnikkk.centre('text',str_end='\r')
+```
+
+## 2. format_input() function
+
+Usage = centering the input variable.
+
+```python
+import botnikkk
+
+answer = botnikkk.format_input('input_question')
+```
+
+## 3. int_check() function
+
+Usage = checks if an input variable is a interger or not, takes repetetive inputs if not Interger.
+
+```python
+import botnikkk
+
+answer = botnikkk.int_check('any_variable')
+```
+
+## 4. ans_check() function
+
+Usage = takes a list of strings as input and displays it to the user as centred options, returns the choosen option. 
+
+```python
+import botnikkk
+
+answer = botnikkk.ans_check(['list_of_variables'])
+```
+
+## 4. redirect() function
+
+Usage = takes a input string as screen name and redirects the user to the said screen in a countdown of 3 seconds. Can only be used in async functions due it's await nature.
+
+```python
+import botnikkk
+import asyncio
+
+async def function():
+
+    #some code
+    await botnikkk.redirect("screen_name")
+    #some more code
+
+asyncio.run(function())
+```
+
+## 4. get_alignments() function
+
+Usage = takes a string as input and returns a dictionary containing the designing alignments of the said string in the form :
+```python
+dic =  {"left_align" : value , "left_gap" : value, "right_gap" : value , "default_gap" : value }
+``` 
+which can be used to format a string accoring to the alignment format of package in such form :
+```python
+print_string = left_align + | + left_gap + string + right_gap + |
+``` 
+
+```python
+import botnikkk
+
+alignments = botnikkk.get_alignments("string")
+```
+
+
+check out : https://botnikkk.github.io

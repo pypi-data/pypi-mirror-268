@@ -1,0 +1,9 @@
+README.md
+setup.py
+botnikkk/__init__.py
+botnikkk/formatting.py
+botnikkk.egg-info/PKG-INFO
+botnikkk.egg-info/SOURCES.txt
+botnikkk.egg-info/dependency_links.txt
+botnikkk.egg-info/requires.txt
+botnikkk.egg-info/top_level.txt
