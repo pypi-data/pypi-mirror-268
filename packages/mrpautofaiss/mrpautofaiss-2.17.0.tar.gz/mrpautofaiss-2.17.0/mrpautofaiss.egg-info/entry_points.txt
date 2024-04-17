@@ -1,0 +1,2 @@
+[console_scripts]
+autofaiss = autofaiss.external.quantize:main
