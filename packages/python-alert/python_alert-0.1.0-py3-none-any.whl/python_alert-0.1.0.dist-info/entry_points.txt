@@ -1,0 +1,2 @@
+[console_scripts]
+alert-me = alert_me.__main__:main
