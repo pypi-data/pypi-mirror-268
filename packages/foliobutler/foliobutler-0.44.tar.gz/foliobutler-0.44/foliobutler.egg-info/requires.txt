@@ -1,0 +1,5 @@
+setuptools
+click
+requests
+ib_insync
+python_dotenv

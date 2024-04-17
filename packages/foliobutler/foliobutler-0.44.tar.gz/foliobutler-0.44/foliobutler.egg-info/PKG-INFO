@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: foliobutler
+Version: 0.44
+Summary: Sync your Interactive Brokers account with your Folio in Foliobutler
+Home-page: https://github.com/svenotremba/foliobutler
+Author: Sven
+Author-email: sven@foliobutler.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: setuptools
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: ib_insync
+Requires-Dist: python_dotenv
