@@ -1,0 +1,7 @@
+streamlit_pyvista/MeshViewerComponent.py,sha256=r2xK0-EH1zptXq25ilqrumtQ6srlA4Zbq_6HA5OuAwI,6070
+streamlit_pyvista/__init__.py,sha256=UZHylvfmETc2skpUF8VGHcUBmAfF5yWY3Rh4lEykU6w,89
+streamlit_pyvista/trame_viewer.py,sha256=7-ZHNYQYlNrsab9pZS14iPS-nmWpJS1EzdnXSssLrj8,24891
+streamlit_pyvista/utils.py,sha256=rElQoCBSTAvzNSzQcKuBSZ9nb4gR-1m164ycOqmjrG8,208
+streamlit_pyvista-0.0.5.dist-info/METADATA,sha256=n-wFoUT5lZl9LxA0blFAGq4p-gDlPqR4ej8acTBZ52k,1005
+streamlit_pyvista-0.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+streamlit_pyvista-0.0.5.dist-info/RECORD,,
