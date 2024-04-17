@@ -1,0 +1,12 @@
+tree_sitter_earthfile/__init__.pyi,sha256=8xf7bY1szgDY9HRJ7FJ326So4SFgMiSRfCB4LADkTpU,27
+tree_sitter_earthfile/binding.c,sha256=MKxNXwWUTomdXfVWUkzuE2I7Giioe_EcSNnz2Iw-P9Q,642
+tree_sitter_earthfile/__init__.py,sha256=b49F9QXcBSzekYK6czZvmdtuGwDStmfTwwwbFGkS8H4,92
+tree_sitter_earthfile/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tree_sitter_earthfile/_binding.abi3.so,sha256=m0M32QWXKo_qSu6khTfsrkjUKWbtFUseL7n8kyv_UaQ,631936
+tree_sitter_earthfile/queries/highlights.scm,sha256=sHHDVqyppK76MTfeSHoaeKUgkEVjJ84jXchDcRWVREE,1397
+tree_sitter_earthfile/queries/injections.scm,sha256=-GVsiRO-9Cz_5wl71HXOXI7zbMv49V8I1sxJXrizujE,271
+tree_sitter_earthfile-0.2.4.dist-info/RECORD,,
+tree_sitter_earthfile-0.2.4.dist-info/LICENSE,sha256=_VBuaug4WgiXJ36qNSlMQzxZZmW40iKiVm5SHHBDL3c,1072
+tree_sitter_earthfile-0.2.4.dist-info/WHEEL,sha256=_dHHZkmuSJ1hBoJBEDtCQuURSWv4237hi4KqLTJVP7o,108
+tree_sitter_earthfile-0.2.4.dist-info/top_level.txt,sha256=Ddv97tXjIVquwTZTacOwi0oCQaBjxY52xeUX6Riy1vQ,31
+tree_sitter_earthfile-0.2.4.dist-info/METADATA,sha256=RV1XjxRTjp6TUxGTXGUPBk4HReWv1TKX6E8_SEXhjag,958
