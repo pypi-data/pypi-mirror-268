@@ -1,0 +1,23 @@
+[build-system]
+requires = ['setuptools>=68.2']
+build-backend = 'setuptools.build_meta'
+
+
+[project]
+name = "ezside"
+version = "0.1.27"
+authors = [
+  { name = "Asger Jon Vistisen", email = "asgerjon2@gmail.com" },
+]
+description = "ezside provides examples and utilities for PySide6."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/AsgerJon/ezside"
+"Bug Tracker" = "https://github.com/AsgerJon/ezside"
