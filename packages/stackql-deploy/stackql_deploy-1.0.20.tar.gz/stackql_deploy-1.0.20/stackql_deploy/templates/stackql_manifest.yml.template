@@ -1,0 +1,21 @@
+# sample manifest file, remove comments and update values as needed
+version: 1
+name: "{{ stack_name }}"
+description: description for "{{ stack_name }}"
+providers:
+  # - azure
+globals:
+  # - name: subscription_id
+  #   description: azure subscription id
+  #   value: "{% raw %}{{ vars.AZURE_SUBSCRIPTION_ID }}{% endraw %}"
+  # - name: location
+  #   value: eastus
+  # - name: resource_group_name_base
+  #   value: "activity-monitor"
+resources:
+  # - name: resource1
+  #   description: azure resource group for activity monitor
+  #   props:
+  #     - name: resource_group_name
+  #       description: azure resource group name
+  #       value: "{% raw %}{{ globals.resource_group_name_base }}-{{ globals.stack_env }}{% endraw %}"
