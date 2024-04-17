@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: interopt
+Version: 0.1.1
+Summary: An interoperability layer for black-box optimization
+Author: Jacob Odgård Tørring
+Author-email: jacob.torring@ntnu.no
+License: LICENSE
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pandas
+Requires-Dist: catboost
+Requires-Dist: grpcio
+Requires-Dist: grpcio-tools
+Requires-Dist: protobuf
+Requires-Dist: scikit-learn
+
