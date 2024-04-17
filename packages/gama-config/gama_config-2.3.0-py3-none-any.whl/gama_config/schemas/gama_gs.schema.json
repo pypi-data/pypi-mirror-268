@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "GamaGsConfig",
+  "properties": {
+    "ros_domain_id": {
+      "type": "integer",
+      "default": 0
+    },
+    "namespace_vessel": {
+      "type": "string",
+      "default": "vessel_1"
+    },
+    "namespace_groundstation": {
+      "type": "string",
+      "default": "groundstation"
+    },
+    "mode": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Mode"
+        }
+      ],
+      "default": "none"
+    },
+    "buttons": {
+      "type": "boolean",
+      "default": false
+    },
+    "network": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Network"
+        }
+      ],
+      "default": "shared"
+    },
+    "prod": {
+      "type": "boolean",
+      "default": false
+    },
+    "log_level": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/LogLevel"
+        }
+      ],
+      "default": "info"
+    },
+    "remote_cmd_override": {
+      "type": "boolean",
+      "default": false
+    },
+    "static_peers": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    }
+  },
+  "$defs": {
+    "Mode": {
+      "title": "Mode",
+      "enum": [
+        "none",
+        "xbox",
+        "thrustmaster",
+        "thrustmaster_combo",
+        "warthog",
+        "warthog_combo",
+        "aeronav",
+        "single_unknown",
+        "dual_unknown",
+        "gladiator",
+        "logitech_extreme"
+      ]
+    },
+    "Network": {
+      "title": "Network",
+      "enum": [
+        "shared",
+        "host"
+      ]
+    },
+    "LogLevel": {
+      "title": "LogLevel",
+      "enum": [
+        "info",
+        "debug",
+        "warn",
+        "error",
+        "fatal"
+      ]
+    }
+  }
+}

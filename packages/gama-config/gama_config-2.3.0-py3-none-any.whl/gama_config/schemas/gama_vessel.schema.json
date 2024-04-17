@@ -1,0 +1,450 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "GamaVesselConfig",
+  "properties": {
+    "ros_domain_id": {
+      "type": "integer",
+      "default": 0
+    },
+    "namespace_vessel": {
+      "type": "string",
+      "default": "vessel_1"
+    },
+    "namespace_groundstation": {
+      "type": "string",
+      "default": "groundstation"
+    },
+    "variant": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Variant"
+        }
+      ],
+      "default": "whiskey_bravo"
+    },
+    "mode": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Mode"
+        }
+      ],
+      "default": "simulator"
+    },
+    "network": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Network"
+        }
+      ],
+      "default": "shared"
+    },
+    "prod": {
+      "type": "boolean",
+      "default": false
+    },
+    "log_level": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/LogLevel"
+        }
+      ],
+      "default": "info"
+    },
+    "ubiquity_user": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "ubiquity_pass": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "ubiquity_ip": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "static_peers": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "camera_overrides": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "$ref": "#/$defs/CameraOverride"
+                  }
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "record": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "$defs": {
+    "Variant": {
+      "title": "Variant",
+      "enum": [
+        "whiskey_bravo",
+        "educat",
+        "oracle_2_2",
+        "oracle_22",
+        "armidale"
+      ]
+    },
+    "Mode": {
+      "title": "Mode",
+      "enum": [
+        "simulator",
+        "hardware",
+        "stubs",
+        "hardware_actuation_only"
+      ]
+    },
+    "Network": {
+      "title": "Network",
+      "enum": [
+        "shared",
+        "host"
+      ]
+    },
+    "LogLevel": {
+      "title": "LogLevel",
+      "enum": [
+        "info",
+        "debug",
+        "warn",
+        "error",
+        "fatal"
+      ]
+    },
+    "Offsets": {
+      "type": "object",
+      "title": "Offsets",
+      "properties": {
+        "roll": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "pitch": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "yaw": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "forward": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "left": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "up": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      }
+    },
+    "CameraOverride": {
+      "type": "object",
+      "title": "CameraOverride",
+      "properties": {
+        "name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "order": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "elements": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pixel_width": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pixel_height": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sensor_width_mm": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sensor_height_mm": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fov": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "camera_frame_topic": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "camera_info_topic": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "camera_info_ext_topic": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "k_intrinsic": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "distortion_parameters": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "distortion_model": {
+          "type": "string",
+          "default": "plumb_bob"
+        },
+        "offsets": {
+          "anyOf": [
+            {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/Offsets"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": "color"
+        },
+        "ros_throttle_time": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": 1e-07
+        },
+        "undistort_image": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": false
+        }
+      },
+      "required": [
+        "name",
+        "order",
+        "elements",
+        "pixel_width",
+        "pixel_height",
+        "sensor_width_mm",
+        "sensor_height_mm",
+        "fov",
+        "camera_frame_topic",
+        "camera_info_topic",
+        "camera_info_ext_topic"
+      ]
+    }
+  }
+}
