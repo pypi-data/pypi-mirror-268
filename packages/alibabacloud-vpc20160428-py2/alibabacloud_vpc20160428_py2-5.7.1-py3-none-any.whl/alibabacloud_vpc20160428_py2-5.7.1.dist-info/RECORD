@@ -1,0 +1,8 @@
+alibabacloud_vpc20160428/__init__.py,sha256=C-RJtyyi-GbvAd_1YdH0UOSP9yLXsvh1uMQzFEyE9U8,21
+alibabacloud_vpc20160428/client.py,sha256=ypB0ZxD2EvviAbuvi-KCyjGQHvTcrapQ-WeJV_ea38c,1129529
+alibabacloud_vpc20160428/models.py,sha256=tWtJFoKAMQ9wOC35CWOUqN1d-7u728ZSfIIIfVRBDdk,3895099
+alibabacloud_vpc20160428_py2-5.7.1.dist-info/LICENSE,sha256=VgSqXWyZONnzmDzK6u3lc8cM_zPwlIOD4dxG73CBeE0,588
+alibabacloud_vpc20160428_py2-5.7.1.dist-info/METADATA,sha256=uavGlJ39wNUrGmjiHF0GonIXHY2DZe1Xquxe4wkJcW8,2387
+alibabacloud_vpc20160428_py2-5.7.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+alibabacloud_vpc20160428_py2-5.7.1.dist-info/top_level.txt,sha256=aF3N1qaLDlyXEHXQ7AIBXYBUVWa-5wNpQNKhEiij7uA,25
+alibabacloud_vpc20160428_py2-5.7.1.dist-info/RECORD,,
