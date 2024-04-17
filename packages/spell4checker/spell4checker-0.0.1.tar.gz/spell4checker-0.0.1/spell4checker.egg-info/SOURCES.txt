@@ -1,0 +1,8 @@
+README.md
+setup.py
+spell4checker/__init__.py
+spell4checker/spell_check.py
+spell4checker.egg-info/PKG-INFO
+spell4checker.egg-info/SOURCES.txt
+spell4checker.egg-info/dependency_links.txt
+spell4checker.egg-info/top_level.txt

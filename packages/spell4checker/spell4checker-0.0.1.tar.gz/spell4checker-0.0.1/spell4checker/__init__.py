@@ -1,0 +1,1 @@
+from spell4checker.spell_check import spell_checker
