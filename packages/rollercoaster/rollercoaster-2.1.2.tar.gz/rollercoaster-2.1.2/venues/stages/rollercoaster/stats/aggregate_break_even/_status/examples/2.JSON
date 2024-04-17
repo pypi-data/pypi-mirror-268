@@ -1,0 +1,55 @@
+{
+    "expirations": [
+        {
+            "expiration": "2023-10-13",
+            "calls": {
+                "strikes": [
+                    {
+                        "strike": 41.0,
+                        "prices": {
+                            "bid": 3,
+                            "ask": 4,
+                            "last": null
+                        },
+                        "contract size": 100,
+                        "open interest": 3
+                    },
+					{
+                        "strike": 40.0,
+                        "prices": {
+                            "bid": 2,
+                            "ask": 2,
+                            "last": 9
+                        },
+                        "contract size": 100,
+                        "open interest": 4
+                    }
+				]
+			},
+			"puts": {
+				"strikes": [
+                    {
+                        "strike": 41.0,
+                        "prices": {
+                            "bid": 1,
+                            "ask": 3,
+                            "last": null
+                        },
+                        "contract size": 100,
+                        "open interest": 4
+                    },
+					{
+                        "strike": 40.0,
+                        "prices": {
+                            "bid": 2,
+                            "ask": 2,
+                            "last": null
+                        },
+                        "contract size": 100,
+                        "open interest": 4
+                    }
+				]
+			}
+		}
+	]
+}
