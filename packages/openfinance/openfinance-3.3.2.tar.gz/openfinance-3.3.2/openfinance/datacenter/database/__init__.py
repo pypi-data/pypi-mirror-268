@@ -1,0 +1,2 @@
+EMPTY_DATA = "No Data"
+EMPTY_NUM = -1000000
