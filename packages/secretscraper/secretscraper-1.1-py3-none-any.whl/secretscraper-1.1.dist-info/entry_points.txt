@@ -1,0 +1,3 @@
+[console_scripts]
+secretscraper=secretscraper.cmdline:main
+
