@@ -1,0 +1,16 @@
+LICENSE.txt
+README.md
+setup.py
+chemparse/__init__.py
+chemparse/__init__.pyi
+chemparse/exceptions.py
+chemparse/exceptions.pyi
+chemparse/fun.py
+chemparse/fun.pyi
+chemparse.egg-info/PKG-INFO
+chemparse.egg-info/SOURCES.txt
+chemparse.egg-info/dependency_links.txt
+chemparse.egg-info/not-zip-safe
+chemparse.egg-info/top_level.txt
+test/test_chemparse.py
+test/test_exeptions.py
