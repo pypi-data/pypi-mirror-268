@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: filerev
+Version: 0.0.1.1
+Summary: Reversed iterator for files.
+Home-page: https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/filerev
+License: MIT
+Keywords: file,reverse,iter
+Author: ChenyangGao
+Author-email: wosiwujm@gmail.com
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Project-URL: Repository, https://github.com/ChenyangGao/web-mount-packs/tree/main/python-module/filerev
+Description-Content-Type: text/markdown
+
+# Python reversed iterator for files.
+
+## Installation
+
+You can install from [pypi](https://pypi.org/project/filerev/)
+
+```console
+pip install -U filerev
+```
+
+## Usage
+
+...
+
