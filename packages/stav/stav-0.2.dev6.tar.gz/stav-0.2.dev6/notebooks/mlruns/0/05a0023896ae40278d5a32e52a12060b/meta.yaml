@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/05a0023896ae40278d5a32e52a12060b/artifacts
+end_time: 1713294967466
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 05a0023896ae40278d5a32e52a12060b
+run_name: efficient-gull-89
+run_uuid: 05a0023896ae40278d5a32e52a12060b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713294831353
+status: 3
+tags: []
+user_id: arthit

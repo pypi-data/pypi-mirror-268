@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/32346fc378d04ae18e934e53c9748818/artifacts
+deleted_time: 1713294647743
+end_time: 1713293870475
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 32346fc378d04ae18e934e53c9748818
+run_name: bold-boar-534
+run_uuid: 32346fc378d04ae18e934e53c9748818
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713291792088
+status: 3
+tags: []
+user_id: arthit

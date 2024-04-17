@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0f1f09d1ac1a4f05a1bbb4159cd331dd/artifacts
+end_time: 1713296093791
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0f1f09d1ac1a4f05a1bbb4159cd331dd
+run_name: agreeable-koi-337
+run_uuid: 0f1f09d1ac1a4f05a1bbb4159cd331dd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713296087285
+status: 3
+tags: []
+user_id: arthit

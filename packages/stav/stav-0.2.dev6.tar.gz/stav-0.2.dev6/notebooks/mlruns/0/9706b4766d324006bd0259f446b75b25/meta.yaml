@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9706b4766d324006bd0259f446b75b25/artifacts
+end_time: 1713295979444
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9706b4766d324006bd0259f446b75b25
+run_name: ambitious-snipe-234
+run_uuid: 9706b4766d324006bd0259f446b75b25
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713295979375
+status: 4
+tags: []
+user_id: arthit

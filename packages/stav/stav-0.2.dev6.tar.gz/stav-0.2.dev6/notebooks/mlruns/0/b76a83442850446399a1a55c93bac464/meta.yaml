@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/b76a83442850446399a1a55c93bac464/artifacts
+deleted_time: 1713294647745
+end_time: 1713291766813
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: b76a83442850446399a1a55c93bac464
+run_name: inquisitive-kit-216
+run_uuid: b76a83442850446399a1a55c93bac464
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713289710310
+status: 3
+tags: []
+user_id: arthit

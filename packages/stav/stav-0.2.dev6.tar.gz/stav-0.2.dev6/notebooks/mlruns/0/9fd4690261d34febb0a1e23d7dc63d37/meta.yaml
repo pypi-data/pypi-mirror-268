@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/9fd4690261d34febb0a1e23d7dc63d37/artifacts
+end_time: 1713294735696
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9fd4690261d34febb0a1e23d7dc63d37
+run_name: salty-snail-223
+run_uuid: 9fd4690261d34febb0a1e23d7dc63d37
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713294656867
+status: 3
+tags: []
+user_id: arthit

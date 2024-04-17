@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/0/9a8feecd4e674c0f82024548a121e087/artifacts
+deleted_time: 1713294642957
+end_time: 1713294630350
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 9a8feecd4e674c0f82024548a121e087
+run_name: bemused-lynx-860
+run_uuid: 9a8feecd4e674c0f82024548a121e087
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1713293882530
+status: 3
+tags: []
+user_id: arthit
