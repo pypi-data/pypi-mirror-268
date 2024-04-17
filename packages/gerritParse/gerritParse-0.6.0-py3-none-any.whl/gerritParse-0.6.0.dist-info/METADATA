@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gerritParse
+Version: 0.6.0
+Summary: This is a customized parser specific for code review information from gerrit.
+Home-page: 
+Author: Ryan Xiao
+Author-email: ryan.007.xiao@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+
+Commands for installation:
+    pip install gerritParse-*.tar.gz
+    pip install gerritParse-*-py3-none-any.whl
+
+Examples:
+    from gerritParse.gerritdataparser import GerritDataParser
+    ...
+    parse_data.py
