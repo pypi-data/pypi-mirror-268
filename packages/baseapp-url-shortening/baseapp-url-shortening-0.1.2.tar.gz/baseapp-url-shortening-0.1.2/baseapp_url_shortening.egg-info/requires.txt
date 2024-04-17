@@ -1,0 +1,2 @@
+baseapp-core>=0.2.6
+short_url==1.2.2
