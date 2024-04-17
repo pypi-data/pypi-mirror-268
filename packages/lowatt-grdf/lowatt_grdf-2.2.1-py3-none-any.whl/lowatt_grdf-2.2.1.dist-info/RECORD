@@ -1,0 +1,10 @@
+lowatt_grdf/__init__.py,sha256=a-WvdAzAHbMCoBm_9B6IoGdU8lA34ux5H7wFhyroQv4,1161
+lowatt_grdf/api.py,sha256=RfcFuWHxisLVaW4n1A3kjHeLhatXnTHvjYQXT7Ej6ao,9623
+lowatt_grdf/main.py,sha256=O7xoOp9vjxugpby2VOICOYM5ptPREK-_erpJNvEAopo,6885
+lowatt_grdf/models.py,sha256=D8orvoNB_ToMCPC9ByL2ryS9ydGEglHf66GBSkz1XAY,7735
+lowatt_grdf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lowatt_grdf-2.2.1.dist-info/METADATA,sha256=X7P0c3jWVjiJlJ7oFMtkyl6wvrsMJRV1KO0pexWejMg,3250
+lowatt_grdf-2.2.1.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+lowatt_grdf-2.2.1.dist-info/entry_points.txt,sha256=49J87VYPwPwD_mQrr9r_wOtWq_YZ-d0aplj5ccisH20,54
+lowatt_grdf-2.2.1.dist-info/licenses/LICENSE,sha256=k5raFzDbjw80llKj41vxUzI-PK16CE8rZd9WV6wSyg0,1084
+lowatt_grdf-2.2.1.dist-info/RECORD,,
