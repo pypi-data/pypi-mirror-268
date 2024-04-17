@@ -1,0 +1,8 @@
+influxdb
+influxdb-client
+jsmin
+onepasswordconnectsdk
+pandas
+pymongo
+python-dotenv
+requests
