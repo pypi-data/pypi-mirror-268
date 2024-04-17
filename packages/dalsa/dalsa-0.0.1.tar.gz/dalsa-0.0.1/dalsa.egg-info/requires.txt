@@ -1,0 +1,7 @@
+regex
+torch
+transformers
+pandas
+googletrans==3.1.0a0
+tqdm
+regex
