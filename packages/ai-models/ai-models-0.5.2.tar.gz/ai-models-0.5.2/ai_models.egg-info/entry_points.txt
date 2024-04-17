@@ -1,0 +1,12 @@
+[ai_models.input]
+cds = ai_models.inputs:CdsInput
+file = ai_models.inputs:FileInput
+mars = ai_models.inputs:MarsInput
+opendata = ai_models.inputs:OpenDataInput
+
+[ai_models.output]
+file = ai_models.outputs:FileOutput
+none = ai_models.outputs:NoneOutput
+
+[console_scripts]
+ai-models = ai_models.__main__:main
