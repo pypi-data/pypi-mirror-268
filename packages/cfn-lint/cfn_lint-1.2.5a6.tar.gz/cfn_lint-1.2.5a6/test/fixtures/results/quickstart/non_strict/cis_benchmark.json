@@ -1,0 +1,1463 @@
+[
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "ca87cb51-1fa1-86ef-7c03-9a66c5e92d3f",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 122
+            },
+            "Path": [
+                "Resources",
+                "FunctiontForEvaluateCisBenchmarkingPreconditions",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 122
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctiontForEvaluateCisBenchmarkingPreconditions/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "faa769d7-9e50-1c72-8087-1a0f50381b9b",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 181
+            },
+            "Path": [
+                "Resources",
+                "ResourceForEvaluateCisBenchmarkingPreconditions",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 181
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctiontForEvaluateCisBenchmarkingPreconditions), dependency already enforced by a \"Fn:GetAtt\" at Resources/ResourceForEvaluateCisBenchmarkingPreconditions/Properties/ServiceToken/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "39961660-6466-2bd5-76d0-9710e24725e2",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 228
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluateRootAccountRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 228
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluateRootAccountRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "1b6f8ad7-5741-7fad-5002-e76b89165bb1",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 315
+            },
+            "Path": [
+                "Resources",
+                "EvaluateRootAccountFunctionPermission",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 315
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateRootAccountRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/EvaluateRootAccountFunctionPermission/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "1aa4ed31-7697-389c-a07c-2701a2253e5c",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 422
+            },
+            "Path": [
+                "Resources",
+                "FunctionForVpcFlowLogRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 422
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForVpcFlowLogRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "17f880be-69ed-046b-0d3b-f9b67dbacc26",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 486
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallVpcFlowLogLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 486
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForVpcFlowLogRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallVpcFlowLogLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "1c2d2f2c-7e47-e2ed-d135-d0ce640fab8f",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 498
+            },
+            "Path": [
+                "Resources",
+                "FunctionForVpcDefaultSecurityGroupsRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 498
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForVpcDefaultSecurityGroupsRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "dd8457ae-7a11-ffbe-930f-f207356a61ea",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 556
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallVpcDefaultSecurityGroupsLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 556
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForVpcDefaultSecurityGroupsRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallVpcDefaultSecurityGroupsLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "d0781a63-d5bd-de67-6c44-cf5c7f886bdb",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 50,
+                "LineNumber": 566
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForVpcDefaultSecurityGroupss",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 566
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForVpcDefaultSecurityGroupsRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForVpcDefaultSecurityGroupss/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "eb17f927-cd91-1bbc-eadf-860f535de383",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 36,
+                "LineNumber": 585
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForVpcFlowLogs",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 585
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForVpcFlowLogRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForVpcFlowLogs/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "5fa36381-e025-accc-2c78-4ab819ef5faf",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 607
+            },
+            "Path": [
+                "Resources",
+                "FunctionForRoleForMfaOnUsersRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 607
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForRoleForMfaOnUsersRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "6bdb32cf-9291-e55c-641b-bc38dae51553",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 671
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallMfaForUsersLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 671
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForRoleForMfaOnUsersRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallMfaForUsersLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "5017ed31-750c-5990-bf65-616cb157040d",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 700
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluatePolicyPermissionsRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 700
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluatePolicyPermissionsRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "99a2c989-c1af-d744-a6ba-ea22c1870ed4",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 765
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallEvaluatePolicyPermissionsLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 765
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluatePolicyPermissionsRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallEvaluatePolicyPermissionsLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "aebe4362-36d7-b2f1-41df-90cec008bc31",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 51,
+                "LineNumber": 774
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForEvaluatePolicyPermissions",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 774
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluatePolicyPermissionsRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForEvaluatePolicyPermissions/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "a6d8e9ff-df95-1d04-0245-487c6fa75f6f",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 796
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluateUserPolicyAssociationRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 796
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluateUserPolicyAssociationRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "38c968fc-3dc3-4feb-3f06-b99e1460c8cb",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 855
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallEvaluateUserPolicyAssociationLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 855
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateUserPolicyAssociationRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallEvaluateUserPolicyAssociationLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "deb88079-69e4-75f7-576c-98b167841e5c",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 55,
+                "LineNumber": 864
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForEvaluateUserPolicyAssociations",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 864
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateUserPolicyAssociationRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForEvaluateUserPolicyAssociations/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "2053c806-b5ef-29bc-1cb3-14f674195b2b",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 887
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluateCloudTrailRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 887
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluateCloudTrailRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "605d8691-6303-aa6b-d9c7-9bb642374a2b",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 971
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallEvaluateCloudTrailLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 971
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateCloudTrailRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallEvaluateCloudTrailLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "1afa4c6d-d0bf-b994-5529-da66c3c5038a",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 44,
+                "LineNumber": 980
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForEvaluateCloudTrail",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 980
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateCloudTrailRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForEvaluateCloudTrail/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "eb0a62b1-2040-55c3-3cba-4d14cea3ea5e",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 1000
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluateCloudTrailBucketRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1000
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluateCloudTrailBucketRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "cedb8da5-1a6d-bcf1-9e0f-f3a3f8f33ef4",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1087
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallEvaluateCloudTrailBucketLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1087
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateCloudTrailBucketRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallEvaluateCloudTrailBucketLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "46f2bfa9-626b-9144-e31d-b34e54144c65",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 50,
+                "LineNumber": 1096
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForEvaluateCloudTrailBucket",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1096
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateCloudTrailBucketRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForEvaluateCloudTrailBucket/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "498a7d59-45fe-7bf5-65e7-469df1649f35",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 1117
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluateCloudTrailLogIntegrityRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1117
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluateCloudTrailLogIntegrityRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "808bcea1-e799-bba2-9861-124a81e02acb",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1184
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallEvaluateCloudTrailLogIntegrityLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1184
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateCloudTrailLogIntegrityRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallEvaluateCloudTrailLogIntegrityLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "f71a1619-79e7-dd97-6748-8269a771763b",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 56,
+                "LineNumber": 1194
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForEvaluateCloudTrailLogIntegrity",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1194
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateCloudTrailLogIntegrityRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForEvaluateCloudTrailLogIntegrity/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "55e4c9ac-702c-999b-e916-c3dae81b94dd",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 1214
+            },
+            "Path": [
+                "Resources",
+                "FunctionForInstanceRoleUseRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1214
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForInstanceRoleUseRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "993749c1-e3dc-bd7f-bc9e-320a86cefd55",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1266
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallInstanceRoleUseLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1266
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForInstanceRoleUseRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallInstanceRoleUseLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "eb9448df-d4bb-6daa-c141-a5481ff9be2c",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 41,
+                "LineNumber": 1276
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForInstanceRoleUses",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1276
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForInstanceRoleUseRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForInstanceRoleUses/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "d6ee8080-da07-cbbe-0697-b912c5464bd6",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 1299
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluateKeyRotationRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1299
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluateKeyRotationRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "ede2a219-21ed-62d9-5f78-d9b13674afdb",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1363
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallEvaluateKeyRotationLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1363
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateKeyRotationRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallEvaluateKeyRotationLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "4409b1c9-ff34-b0a3-8c49-119cf25c46a4",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 45,
+                "LineNumber": 1373
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForEvaluateKeyRotations",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1373
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateKeyRotationRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForEvaluateKeyRotations/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "8f1e4498-f077-e9fc-6114-7fc4fc552000",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 1395
+            },
+            "Path": [
+                "Resources",
+                "FunctionForEvaluateConfigInAllRegionsRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1395
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForEvaluateConfigInAllRegionsRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "43b48b18-0ba1-ae06-5c89-26a4e08075be",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1470
+            },
+            "Path": [
+                "Resources",
+                "EvaluateConfigInAllRegionsFunctionPermission",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1470
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForEvaluateConfigInAllRegionsRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/EvaluateConfigInAllRegionsFunctionPermission/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "a17cdc87-cfb3-ad30-ea91-4fe8b7d02439",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 27,
+                "LineNumber": 1500
+            },
+            "Path": [
+                "Resources",
+                "FunctionForVpcPeeringRouteTablesRule",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1500
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionForVpcPeeringRouteTablesRule/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "e0ace899-72cf-a851-eb01-73e716bd02c8",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1555
+            },
+            "Path": [
+                "Resources",
+                "ConfigPermissionToCallVpcPeeringRouteTablesLambda",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1555
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForVpcPeeringRouteTablesRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigPermissionToCallVpcPeeringRouteTablesLambda/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "e2dfba09-676e-55ad-7762-df24fcfc17a7",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 47,
+                "LineNumber": 1565
+            },
+            "Path": [
+                "Resources",
+                "ConfigRuleForVpcPeeringRouteTabless",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1565
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionForVpcPeeringRouteTablesRule), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConfigRuleForVpcPeeringRouteTabless/Properties/Source/SourceIdentifier/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "2fae041c-038c-fcd1-0b1c-93d6e9062dfa",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1601
+            },
+            "Path": [
+                "Resources",
+                "GetCloudTrailCloudWatchLog",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1601
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (MasterConfigRole), dependency already enforced by a \"Fn:GetAtt\" at Resources/GetCloudTrailCloudWatchLog/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "ccff2837-bb9e-7144-da18-cff881e01b40",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1638
+            },
+            "Path": [
+                "Resources",
+                "ResourceForGetCloudTrailCloudWatchLog",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1638
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (GetCloudTrailCloudWatchLog), dependency already enforced by a \"Fn:GetAtt\" at Resources/ResourceForGetCloudTrailCloudWatchLog/Properties/ServiceToken/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "29ceb8bc-8a7e-c382-f965-d360d2f8d1d6",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 48,
+                "LineNumber": 1649
+            },
+            "Path": [
+                "Resources",
+                "UnauthorizedAttemptsCloudWatchFilter",
+                "DependsOn",
+                1
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1649
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (ResourceForGetCloudTrailCloudWatchLog), dependency already enforced by a \"Fn:GetAtt\" at Resources/UnauthorizedAttemptsCloudWatchFilter/Properties/LogGroupName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "4aa9b137-047f-b5ff-8195-1ace4ef0aa83",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 48,
+                "LineNumber": 1683
+            },
+            "Path": [
+                "Resources",
+                "IAMRootActivityCloudWatchMetric",
+                "DependsOn",
+                1
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1683
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (ResourceForGetCloudTrailCloudWatchLog), dependency already enforced by a \"Fn:GetAtt\" at Resources/IAMRootActivityCloudWatchMetric/Properties/LogGroupName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "a2deb03c-c004-cd08-b760-2569f146a2d4",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 48,
+                "LineNumber": 1720
+            },
+            "Path": [
+                "Resources",
+                "ConsoleSigninWithoutMfaCloudWatchMetric",
+                "DependsOn",
+                1
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1720
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (ResourceForGetCloudTrailCloudWatchLog), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConsoleSigninWithoutMfaCloudWatchMetric/Properties/LogGroupName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "2c664775-fa65-f740-80cb-82f7b4a6bd4b",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 48,
+                "LineNumber": 1759
+            },
+            "Path": [
+                "Resources",
+                "ConsoleLoginFailureCloudWatchMetric",
+                "DependsOn",
+                1
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1759
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (ResourceForGetCloudTrailCloudWatchLog), dependency already enforced by a \"Fn:GetAtt\" at Resources/ConsoleLoginFailureCloudWatchMetric/Properties/LogGroupName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "34c0e192-ad6d-719a-7783-3bb59eb6a794",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 48,
+                "LineNumber": 1796
+            },
+            "Path": [
+                "Resources",
+                "KMSCustomerKeyDeletionCloudWatchMetric",
+                "DependsOn",
+                1
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1796
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (ResourceForGetCloudTrailCloudWatchLog), dependency already enforced by a \"Fn:GetAtt\" at Resources/KMSCustomerKeyDeletionCloudWatchMetric/Properties/LogGroupName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "f08826e8-32a5-c41c-1445-6ab3a966800d",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 1830
+            },
+            "Path": [
+                "Resources",
+                "RoleForCloudWatchEvents",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 1830
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (SnsTopicForCloudWatchEvents), dependency already enforced by a \"Ref\" at Resources/RoleForCloudWatchEvents/Properties/Policies/0/PolicyDocument/Statement/0/Resource/Ref",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "f11daec0-82f5-5351-7f32-aadae09f8670",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 34,
+                "LineNumber": 1857
+            },
+            "Path": [
+                "Resources",
+                "FunctionToFormatCloudWatchEvent",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1857
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (RoleForCloudWatchEvents), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionToFormatCloudWatchEvent/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "de79d4fb-3bac-f119-ad80-8239fb40ab8a",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 42,
+                "LineNumber": 1895
+            },
+            "Path": [
+                "Resources",
+                "LambdaPermissionForCloudTrailCloudWatchEventRules",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 1895
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionToFormatCloudWatchEvent), dependency already enforced by a \"Fn:GetAtt\" at Resources/LambdaPermissionForCloudTrailCloudWatchEventRules/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "4fcb7809-daa4-c176-dc3e-38531d724b18",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 48,
+                "LineNumber": 2185
+            },
+            "Path": [
+                "Resources",
+                "BillingChangesCloudWatchFilter",
+                "DependsOn",
+                1
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 2185
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (ResourceForGetCloudTrailCloudWatchLog), dependency already enforced by a \"Fn:GetAtt\" at Resources/BillingChangesCloudWatchFilter/Properties/LogGroupName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "f1c910dd-8595-b25f-bf76-0585cd0eb905",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 16,
+                "LineNumber": 2253
+            },
+            "Path": [
+                "Resources",
+                "FunctionToDisableUnusedCredentials",
+                "DependsOn"
+            ],
+            "Start": {
+                "ColumnNumber": 7,
+                "LineNumber": 2253
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (RoleForDisableUnusedCredentialsFunction), dependency already enforced by a \"Fn:GetAtt\" at Resources/FunctionToDisableUnusedCredentials/Properties/Role/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    },
+    {
+        "Filename": "test/fixtures/templates/quickstart/cis_benchmark.yaml",
+        "Id": "2351ec49-076c-9bd4-9420-23922c48126a",
+        "Level": "Warning",
+        "Location": {
+            "End": {
+                "ColumnNumber": 45,
+                "LineNumber": 2340
+            },
+            "Path": [
+                "Resources",
+                "LambdaPermissionForDisableUnusedCredentials",
+                "DependsOn",
+                0
+            ],
+            "Start": {
+                "ColumnNumber": 11,
+                "LineNumber": 2340
+            }
+        },
+        "Message": "Obsolete DependsOn on resource (FunctionToDisableUnusedCredentials), dependency already enforced by a \"Fn:GetAtt\" at Resources/LambdaPermissionForDisableUnusedCredentials/Properties/FunctionName/Fn::GetAtt",
+        "ParentId": null,
+        "Rule": {
+            "Description": "Check if DependsOn is specified if not needed. A Ref or a Fn::GetAtt already is an implicit dependency.",
+            "Id": "W3005",
+            "ShortDescription": "Check obsolete DependsOn configuration for Resources",
+            "Source": "https://aws.amazon.com/blogs/devops/optimize-aws-cloudformation-templates/"
+        }
+    }
+]
