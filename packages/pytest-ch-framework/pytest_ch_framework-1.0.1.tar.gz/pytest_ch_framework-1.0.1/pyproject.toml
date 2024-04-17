@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[project]
+version = "1.0.1"
+name = "pytest_ch_framework"
+authors = [ #作者列表
+  {name = "caihua zhan", email = "caihuadaye@outlook.com"}
+]
+description = "My pytest framework"
+classifiers = [
+    "Framework :: Pytest",
+    "Programming Language :: Python :: 3.12"
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pytest==8.0.1",
+    "requests==2.31.0",
+    "pytest-metadata==3.1.1",
+    "allure-pytest==2.13.2",
+    "pyyaml==6.0.1"
+]
+[project.entry-points.pytest11]
+"framework.plugin.mark" = "framework.plugin.mark"

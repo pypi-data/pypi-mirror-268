@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pytest_ch_framework
+Version: 1.0.1
+Summary: My pytest framework
+Author-email: caihua zhan <caihuadaye@outlook.com>
+Classifier: Framework :: Pytest
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: pytest==8.0.1
+Requires-Dist: requests==2.31.0
+Requires-Dist: pytest-metadata==3.1.1
+Requires-Dist: allure-pytest==2.13.2
+Requires-Dist: pyyaml==6.0.1
