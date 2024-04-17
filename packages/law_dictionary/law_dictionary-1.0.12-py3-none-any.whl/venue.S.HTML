@@ -1,0 +1,92 @@
+
+
+
+
+
+
+
+<pre>
+
+	<h1>law_dictionary</h1>
+	
+	<h2>docker</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.202 -v .:/law_dictionary -it jumps:v2.1.0
+		docker exec -it 389597d6510a bash
+
+	<h2>link the readme</h2>
+		ln -s venues/stages/law_dictionary/room.md readme.MD
+
+	<h2>poetry</h2>
+		pip install poetry poetry-plugin-export
+	
+		<h3>add</h3>
+			#
+			#	⚠️
+			#		Make sure that none of these depend on this module!
+			#
+			#		For the sake of sanity, please keep the "reliability, testing, etc."
+			#		structure as a "tree, hierarchy, etc." etc. with no coodependencies
+			#		that almost definitely cause chaos.
+			#
+						
+			poetry add sanic
+			
+			
+			#
+			#	if dev dependencies
+			#
+			# poetry export --with dev --format requirements.txt --output requirements.txt
+			
+			
+			rm -rf /law_dictionary/venues/stages_pip && poetry export --format requirements.txt --output requirements.txt && pip install -r requirements.txt -t /law_dictionary/venues/stages_pip
+			
+			# /root/.cache/pypoetry/virtualenvs/law_dictionary-p2eJTVsK-py3.10/lib/python3.10/site-packages/
+			# cp -R /root/.cache/pypoetry/virtualenvs/law_dictionary-p2eJTVsK-py3.10/lib/python3.10/site-packages/ /law_dictionary/venues/stages_pip
+		
+		<h3>upgrade</h3>
+			poetry update sanic
+		
+		<h3>installations venv</h3>
+			poetry config virtualenvs.path /path/to/your/directory
+			poetry env use python3
+			poetry shell
+
+			
+		<h3>scripts</h3>
+			#
+			#	https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#creating-executable-scripts
+			#	from this_module import clique; clique ()
+			#
+		
+	<h2>publishing</h2>
+
+		
+		#
+		#	statuses
+		#
+		python3 /law_dictionary/venues/stages/law_dictionary/_status/status.proc.py
+		
+		#
+		#	git push
+		#
+		#		if Circle CI is successful, then publish
+		#
+		
+		#
+		#	increase version
+		#
+		
+		#
+		#	poetry auth
+		#
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+		
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>
