@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dotprompt/__init__.py
+dotprompt/exceptions.py
+dotprompt/prompt.py
+dotprompt.egg-info/PKG-INFO
+dotprompt.egg-info/SOURCES.txt
+dotprompt.egg-info/dependency_links.txt
+dotprompt.egg-info/requires.txt
+dotprompt.egg-info/top_level.txt
