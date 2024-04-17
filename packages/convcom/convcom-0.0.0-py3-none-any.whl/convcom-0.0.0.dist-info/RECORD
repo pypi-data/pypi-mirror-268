@@ -1,0 +1,11 @@
+convcom/__init__.py,sha256=KZboUcf7BpP4-mjxPW4JtebUQ24h7ZzZryfAhryNW8s,580
+convcom/v1/__init__.py,sha256=KZboUcf7BpP4-mjxPW4JtebUQ24h7ZzZryfAhryNW8s,580
+convcom/v1/exceptions.py,sha256=24jL9_m-zss12bzVhoGhzTFQ7IwGN1Uuk2j1PfOX1Co,1063
+convcom/v1/parse.py,sha256=MAJq3F8HaBvPVSogjjlS_CABDNq33fMJ3GygAA_Qw2w,7693
+convcom/v1/types.py,sha256=mUxQa6H26R9ekdapO0QakM4JYKwkNqsfqJuFzSLxu-k,1329
+convcom/v1/unparse.py,sha256=A7Sthyfpv1w6Av28_cbSh4PpZqIo1keiG2w4x2PIqB4,1927
+convcom-0.0.0.dist-info/LICENSE.md,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+convcom-0.0.0.dist-info/METADATA,sha256=JtDFTJcmqFZHpeshHEYeY8mV_5Q_ihzUMwmgmZ1yOvo,13861
+convcom-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+convcom-0.0.0.dist-info/top_level.txt,sha256=Z034OHow6Awoq7MDtb4VPMnCuSTI8ECz94iQamyjOKk,8
+convcom-0.0.0.dist-info/RECORD,,
