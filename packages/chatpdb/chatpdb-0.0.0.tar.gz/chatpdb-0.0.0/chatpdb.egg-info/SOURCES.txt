@@ -1,0 +1,7 @@
+LICENSE
+pyproject.toml
+chatpdb.egg-info/PKG-INFO
+chatpdb.egg-info/SOURCES.txt
+chatpdb.egg-info/dependency_links.txt
+chatpdb.egg-info/requires.txt
+chatpdb.egg-info/top_level.txt
