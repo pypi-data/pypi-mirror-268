@@ -1,0 +1,2 @@
+six>=1.10.0
+edx-opaque-keys>=2.0.0
