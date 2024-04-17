@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: repo-man
+Version: 0.0.9
+Summary: Manage repositories of a variety of different types.
+Home-page: https://github.com/easy-as-python/repo-man
+Author: Dane Hillard
+Author-email: "Dane Hillard" <github@danehillard.com>
+License: MIT License
+Project-URL: Documentation, https://repo-man.readthedocs.org
+Project-URL: Source, https://github.com/easy-as-python/repo-man
+Project-URL: Tracker, https://github.com/easy-as-python/repo-man/issues
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click>=8.1.7
+Provides-Extra: docs
+Requires-Dist: furo; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-autobuild; extra == "docs"
+
+# repo-man
+
+Manage repositories of a variety of different types.
+Read [the full documentation](https://repo-man.readthedocs.org) to learn more.
+
+## Installation
+
+```shell
+$ python -m pip install repo-man
+```

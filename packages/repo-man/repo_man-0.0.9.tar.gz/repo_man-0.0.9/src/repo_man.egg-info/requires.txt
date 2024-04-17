@@ -1,0 +1,7 @@
+click>=8.1.7
+
+[docs]
+furo
+myst-parser
+sphinx
+sphinx-autobuild
