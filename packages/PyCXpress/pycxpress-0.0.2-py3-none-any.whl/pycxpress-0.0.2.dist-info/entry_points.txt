@@ -1,0 +1,3 @@
+[console_scripts]
+PyCXpress=PyCXpress.__main__:main
+
