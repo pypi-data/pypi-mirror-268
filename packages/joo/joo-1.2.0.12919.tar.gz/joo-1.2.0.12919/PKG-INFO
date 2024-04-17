@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: joo
+Version: 1.2.0.12919
+Summary: joo library
+Home-page: https://github.com/metatutu/joo
+Author: Wooloo Studio
+Author-email: max.wu@wooloostudio.com
+License: MIT License
+Project-URL: Documentation, https://github.com/metatutu/joo
+Project-URL: Source Code, https://github.com/metatutu/joo
+Project-URL: Bug Tracer, https://github.com/metatutu/joo
+Project-URL: Forum, https://github.com/metatutu/joo
+Project-URL: Donate, https://github.com/metatutu/joo
+Platform: any
+Description-Content-Type: text/markdown
+
+# ABOUT JOO
+
+This is joo library, an open source project by Wooloo Studio.
