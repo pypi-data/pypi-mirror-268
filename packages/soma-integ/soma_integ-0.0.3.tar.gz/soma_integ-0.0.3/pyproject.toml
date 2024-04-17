@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "soma_integ"
+version = "0.0.3"
+dependencies = ["numpy", "scikit-learn"]
+authors = [
+    { name = "Sobhan Ahmadian Moghadam", email = "sobhan.ahmadian.moghadam@gmail.com" },
+    { name = "Arman Rezaei", email = "arman.x.rezaei@gmail.com" },
+]
+description = "A package for integrating implementation and evaluation of machine learning platforms"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+ML = ["torch"]
+
+[project.urls]
+Homepage = "https://github.com/sobhanAhmadian/soma_integrate"
+Issues = "https://github.com/sobhanAhmadian/soma_integrate/issues"
