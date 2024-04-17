@@ -1,0 +1,8 @@
+Flask
+m-caching
+m-singleton
+python-jose
+m-cipher
+m-kafka-sdk-v2
+redis
+pycryptodome
