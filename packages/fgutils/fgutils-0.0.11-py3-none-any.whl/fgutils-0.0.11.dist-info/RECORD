@@ -1,0 +1,12 @@
+fgutils/__init__.py,sha256=7YGD3GclJhMSEdaKENavOp3hIx1KWgInGN6q9Rt1yqI,70
+fgutils/fgconfig.py,sha256=5dumCddLWUZJ_0zsOejYNSHcgBQtMh6Q5duo9Z7mMjM,8417
+fgutils/mapping.py,sha256=Fsf73qaapWwjDAD8JVsQWArDeKqe50AoJpURCMEcqXU,3956
+fgutils/parse.py,sha256=1Vd9UCpreGx383le3JoIw7jAe1msg36qeQNRPCh6WSs,3025
+fgutils/permutation.py,sha256=LscQ3e-FaySYvsrzk3nfKgnc3y08HDrIGoWQcY_s7sw,2851
+fgutils/query.py,sha256=yVEUYCXpzWDwx6spB6Cvp06-iZdFTe5BISLpasIYz2w,4292
+fgutils/rdkit.py,sha256=A-XozfB6HWL2QL3BxctOGv35C1DY0ClvrJZMVxXxH-I,601
+fgutils/utils.py,sha256=Vf0Kn_tEx1cgyb3ClxSsTiBFLHKNmUewiG-L8j6MS0U,1601
+fgutils-0.0.11.dist-info/METADATA,sha256=MzvkfgxTtEkAHjIoBJtVhOYkDI4ZndNdhTihr36L330,1492
+fgutils-0.0.11.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+fgutils-0.0.11.dist-info/licenses/LICENSE,sha256=c8_cZ9eFuHnXSzqMGDEFAndc1LnNtmt1VUERj3XzuwA,1072
+fgutils-0.0.11.dist-info/RECORD,,
