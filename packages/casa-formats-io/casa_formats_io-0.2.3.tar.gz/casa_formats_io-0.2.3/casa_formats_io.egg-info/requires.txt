@@ -1,0 +1,14 @@
+astropy>=4.0
+numpy>=1.21
+dask[array]>=2.0
+
+[casa]
+casatools<6.4.3.8,>=6.2.0.124
+
+[docs]
+numpydoc
+sphinx-automodapi
+
+[test]
+pytest
+pytest-cov
