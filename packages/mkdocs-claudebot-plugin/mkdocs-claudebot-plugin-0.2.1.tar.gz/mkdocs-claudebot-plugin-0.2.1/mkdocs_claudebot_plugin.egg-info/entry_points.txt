@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+claudebot = mkdocs_claudebot_plugin.plugin:ClaudebotPlugin
+
