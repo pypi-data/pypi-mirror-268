@@ -1,0 +1,2 @@
+[console_scripts]
+socktalk = server_client.main:main
