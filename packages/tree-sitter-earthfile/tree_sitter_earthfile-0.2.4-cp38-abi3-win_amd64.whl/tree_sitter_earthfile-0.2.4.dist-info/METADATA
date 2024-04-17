@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: tree-sitter-earthfile
+Version: 0.2.4
+Summary: Earthfile grammar for tree-sitter
+License: MIT
+Project-URL: Homepage, https://github.com/tree-sitter/tree-sitter-earthfile
+Keywords: incremental,parsing,tree-sitter,earthfile
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: core
+Requires-Dist: tree-sitter ~=0.21 ; extra == 'core'
+
+# tree-sitter-earthfile
+
+[tree-sitter](https://tree-sitter.github.io/) grammar for [Earthfile](https://docs.earthly.dev/docs/earthfile).
+
+![Screenshot of yage Earthfile in neovim](screenshot.jpg)
+
+## License
+
+`tree-sitter-earthfile` is distributed under the terms of the MIT license.
+
+See [LICENSE](LICENSE) for details.
