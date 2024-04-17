@@ -1,0 +1,6 @@
+spm1d>=0.4
+numpy
+scipy
+matplotlib
+pandas
+openpyxl

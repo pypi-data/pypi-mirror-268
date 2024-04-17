@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.cfg
+src/tmgtoolkit/__init__.py
+src/tmgtoolkit/constants.py
+src/tmgtoolkit/plotting.py
+src/tmgtoolkit/spm.py
+src/tmgtoolkit/time_series.py
+src/tmgtoolkit/tmgio.py
+src/tmgtoolkit.egg-info/PKG-INFO
+src/tmgtoolkit.egg-info/SOURCES.txt
+src/tmgtoolkit.egg-info/dependency_links.txt
+src/tmgtoolkit.egg-info/requires.txt
+src/tmgtoolkit.egg-info/top_level.txt
+tests/test_mwe.py
