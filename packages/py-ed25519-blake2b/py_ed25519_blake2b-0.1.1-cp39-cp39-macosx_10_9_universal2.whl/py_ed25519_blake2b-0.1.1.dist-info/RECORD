@@ -1,0 +1,10 @@
+ed25519_blake2b/_ed25519.cpython-39-darwin.so,sha256=GZWsoa_MzlzaR_pJlA9UuV6JvZEQET8haTFOtNQp3Io,423304
+py_ed25519_blake2b/__init__.py,sha256=F8YrxygseORDuXxdxAaCy9bq8h1Yj4hL7Zly3eFkJEQ,410
+py_ed25519_blake2b/_ed25519.cpython-39-darwin.so,sha256=gyi5jCYZus-cG81TbTJuWa5zf4EwZaUj8m7f2lEKf_M,423304
+py_ed25519_blake2b/keys.py,sha256=Z5jpQ6BhNQkPAkC1gi5CcOgPL37TSNhQEjqrmaMOA80,7205
+py_ed25519_blake2b/test_ed25519.py,sha256=Yn_S5ViH4iiGCw6JwSLuWR2DtrcpHRkqZEFOa9iv6k8,12345
+py_ed25519_blake2b-0.1.1.dist-info/LICENSE,sha256=E6_NXGm0fKgWIwCVDFrTZJUeGp3oAsKfbIJo_gF0U_g,1152
+py_ed25519_blake2b-0.1.1.dist-info/METADATA,sha256=JhrpHH5y5wAwBuH9io2_safZE8EY9-2Hgdtfd39IuEw,1614
+py_ed25519_blake2b-0.1.1.dist-info/WHEEL,sha256=udsG26kg2t3tNJ-rqHlT-wO8loMcxhwKq3OMQhQOE74,113
+py_ed25519_blake2b-0.1.1.dist-info/top_level.txt,sha256=cemX-demw07u71geip18pIkP2R4EjawH9-PQs6gfDXA,19
+py_ed25519_blake2b-0.1.1.dist-info/RECORD,,
