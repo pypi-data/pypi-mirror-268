@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+SparseEdges/EdgeFactory.py
+SparseEdges/SparseEdges.py
+SparseEdges/__init__.py
+SparseEdges.egg-info/PKG-INFO
+SparseEdges.egg-info/SOURCES.txt
+SparseEdges.egg-info/dependency_links.txt
+SparseEdges.egg-info/requires.txt
+SparseEdges.egg-info/top_level.txt
