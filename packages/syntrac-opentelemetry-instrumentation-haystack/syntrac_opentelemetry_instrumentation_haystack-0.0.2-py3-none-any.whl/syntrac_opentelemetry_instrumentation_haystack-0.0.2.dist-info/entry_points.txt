@@ -1,0 +1,3 @@
+[opentelemetry_instrumentor]
+farm_haystack=syntrac_opentelemetry.instrumentation.haystack:HaystackInstrumentor
+
