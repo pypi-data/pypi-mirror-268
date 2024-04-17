@@ -1,0 +1,14 @@
+{
+  "name": "project",
+  "touch_components": "True",
+  "touch_tools": "True",
+  "variants": {
+    "1": {
+      "flavor": "flavor",
+      "subsystem": "subsystem"
+    }
+  },
+  "_copy_without_render": [
+        "*.rst"
+    ]
+}
