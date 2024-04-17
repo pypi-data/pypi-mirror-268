@@ -1,0 +1,16 @@
+[django.asetukset]
+celery = protoni.laajennos.celery
+corsheaders = protoni.laajennos.corsheaders
+debug_toolbar = protoni.laajennos.debug_toolbar
+dj_database_url = protoni.laajennos.dj_database_url
+extensions = protoni.laajennos.extensions
+heroku = protoni.laajennos.heroku
+hosts = protoni.laajennos.hosts
+pipeline = protoni.laajennos.pipeline
+sentry = protoni.laajennos.sentry
+whitenoise = protoni.laajennos.whitenoise
+
+[django.nakymat]
+__debug__ = protoni.nakymat:DebugToolbar
+kanta = protoni.nakymat:Kanta
+kirjaudu = protoni.nakymat:Kirjautuminen
