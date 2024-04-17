@@ -1,0 +1,281 @@
+{       "meteo":{
+               "GFS2NC":{
+            		  "isobaricInhPa":{
+            		                "gh":{
+		                                "short_name" : "HGT" ,
+		                                "long_name":"Geopotential Height" ,
+		                                "level" : "pressure" ,
+		                                "units" : "m" 
+                                	 	 },
+                        	 	 "t":{
+                        	 	        "short_name" : "TMP" ,
+		                                "long_name":"Temperature" ,
+		                                "level" : "pressure" ,
+		                                "units" : "K"  
+                        	 	 
+                        	 	        },
+	                 	        "isobaricInhPa":{
+	                         	        "short_name" : "lev" ,
+	                                        "long_name":"pressure" ,
+	                                        "units" : "mb"  
+	                         	 
+	                         	        },
+                         	        "r":{
+	                         	        "short_name" : "RH" ,
+	                                        "long_name":"Relative Humidity" ,
+	                                        "level":"pressure",
+	                                        "units" : "percent" 
+	                                        
+	                         	 
+	                         	        },
+	                         	 "u":{
+	                         	        "short_name" : "UGRD" ,
+	                                        "long_name":"U-Component of Wind" ,
+	                                        "level":"pressure",
+	                                        "units" : "m/s" 
+	                                        
+	                         	 
+	                         	        },
+                         	         "v":{
+	                         	        "short_name" : "VGRD" ,
+	                                        "long_name":"V-Component of Wind" ,
+	                                        "level":"pressure",
+	                                        "units" : "m/s" 
+	                                        
+	                         	 
+	                         	        },
+                         	         "w":{
+	                         	        "short_name" : "VVEL" ,
+	                                        "long_name":"Vertical Velocity (Pressure)" ,
+	                                        "level":"pressure",
+	                                        "units" : "Pa/s" 
+	                                        
+	                         	 
+	                         	        }     
+            		        
+            		        
+            		        
+            		        },
+            		        
+            		        "surface":{
+            		                  "orog":{
+		                                "short_name" : "HGT_surface" ,
+		                                "long_name":"Geopotential Height" ,
+		                                "level" : "surface" ,
+		                                "units" : "m" 
+                                	 	 },
+                        	 	  "t":{
+		                                "short_name" : "TMP_surface" ,
+		                                "long_name":"Temperature" ,
+		                                "level" : "surface" ,
+		                                "units" : "K" 
+            		                        },
+            		                  "prate":{
+	                         	        "short_name" : "PRATE_surface" ,
+	                                        "long_name":"Precipitation Rate" ,
+	                                        "level":"surface",
+	                                        "units" : "kg/m^2/s" 
+	                                        
+	                         	 
+	                         	        },
+                 	                   "sp":{
+	                         	        "short_name" : "PRESS_surface" ,
+	                                        "long_name":"Pressure" ,
+	                                        "level":"surface",
+	                                        "units" : "Pa" 
+	                                        
+	                         	 
+	                         	       },
+            		                   "hpbl":{
+	                         	        "short_name" : "HPBL_surface" ,
+	                                        "long_name":"Planetary Boundary Layer Height" ,
+	                                        "level":"surface",
+	                                        "units" : "m" 
+	                                        
+	                         	 
+	                         	        },
+                         	        "lsm":{
+	                         	        "short_name" : "LAND_surface" ,
+	                                        "long_name":"Land Cover (0=sea, 1=land)" ,
+	                                        "level":"surface",
+	                                        "units" : "Proportion" 
+	                                        
+	                         	 
+	                         	        }
+            		        
+            		        },
+            		        "heightAboveGround":{
+            		               
+                        	 	 "t2m":{
+                        	 	        "short_name" : "TMP_2maboveground" ,
+		                                "long_name":"Temperature 2m_aboveground" ,
+		                                "level" : "2m_aboveground" ,
+		                                "units" : "K"  
+                        	 	 
+                        	 	        },
+                	 	         "r2":{
+	                         	        "short_name" : "RH_2maboveground" ,
+	                                        "long_name":"Relative Humidity 2m_aboveground" ,
+	                                        "level":"2m_aboveground",
+	                                        "units" : "percent"
+                                        },
+                                         "u10":{
+	                         	        "short_name" : "UGRD_10maboveground" ,
+	                                        "long_name":"U-Component of Wind" ,
+	                                        "level":"10m aboveground",
+	                                        "units" : "m/s" 
+	                                        
+	                         	 
+	                         	        },
+                         	         "v10":{
+	                         	        "short_name" : "VGRD_10maboveground" ,
+	                                        "long_name":"V-Component of Wind" ,
+	                                        "level":"10m aboveground",
+	                                        "units" : "m/s" 
+	                                        
+	                         	 
+	                         	        }
+                                        
+                                }
+        	 	
+              
+                         },
+						 "ERA52NC":{
+							"isobaricInhPa":{
+										"z":{
+												"short_name" : "HGT" ,
+												"long_name":"Geopotential Height" ,
+												"level" : "pressure" ,
+												"units" : "m" 
+												},
+										"t":{
+												"short_name" : "TMP" ,
+												"long_name":"Temperature" ,
+												"level" : "pressure" ,
+												"units" : "K"  
+										
+												},
+										"isobaricInhPa":{
+												"short_name" : "lev" ,
+													"long_name":"pressure" ,
+													"units" : "mb"  
+										
+												},
+										"r":{
+												"short_name" : "RH" ,
+													"long_name":"Relative Humidity" ,
+													"level":"pressure",
+													"units" : "percent" 
+													
+										
+												},
+										"u":{
+												"short_name" : "UGRD" ,
+													"long_name":"U-Component of Wind" ,
+													"level":"pressure",
+													"units" : "m/s" 
+													
+										
+												},
+										"v":{
+												"short_name" : "VGRD" ,
+													"long_name":"V-Component of Wind" ,
+													"level":"pressure",
+													"units" : "m/s" 
+													
+										
+												},
+										"w":{
+												"short_name" : "VVEL" ,
+													"long_name":"Vertical Velocity (Pressure)" ,
+													"level":"pressure",
+													"units" : "Pa/s" 
+													
+										
+												}     
+								
+						
+						
+								},
+								"surface":{
+									"z":{
+									  "short_name" : "HGT_surface" ,
+									  "long_name":"Geopotential Height" ,
+									  "level" : "surface" ,
+									  "units" : "m²/s²" 
+										},
+								 "t":{
+									  "short_name" : "TMP_surface" ,
+									  "long_name":"Temperature" ,
+									  "level" : "surface" ,
+									  "units" : "K" 
+										  },
+									"tp":{
+									   "short_name" : "PRATE_surface" ,
+										  "long_name":"Precipitation Rate" ,
+										  "level":"surface",
+										  "units" : "kg/m²/s" 
+										  
+								
+									   },
+									  "sp":{
+									   "short_name" : "PRESS_surface" ,
+										  "long_name":"Pressure" ,
+										  "level":"surface",
+										  "units" : "Pa" 
+										  
+								
+									  },
+									 "blh":{
+									   "short_name" : "HPBL_surface" ,
+										  "long_name":"Planetary Boundary Layer Height" ,
+										  "level":"surface",
+										  "units" : "m" 
+										  
+								
+									   },
+								   "lsm":{
+									   "short_name" : "LAND_surface" ,
+										  "long_name":"Land Cover (0=sea, 1=land)" ,
+										  "level":"surface",
+										  "units" : "Proportion" 
+										  
+								
+									   },
+									   "t2m":{
+										"short_name" : "TMP_2maboveground" ,
+									   "long_name":"Temperature 2m_aboveground" ,
+									   "level" : "2m_aboveground" ,
+									   "units" : "K"  
+								 
+										},
+								 "d2m":{
+										"short_name" : "RH_2maboveground" ,
+										   "long_name":"Relative Humidity 2m_aboveground" ,
+										   "level":"2m_aboveground",
+										   "units" : "percent"
+									   },
+								"u10":{
+										"short_name" : "UGRD_10maboveground" ,
+										   "long_name":"U-Component of Wind" ,
+										   "level":"10m aboveground",
+										   "units" : "m/s" 
+										   
+								 
+										},
+									 "v10":{
+										"short_name" : "VGRD_10maboveground" ,
+										   "long_name":"V-Component of Wind" ,
+										   "level":"10m aboveground",
+										   "units" : "m/s" 
+										   
+								 
+										}
+						  
+						  }
+
+							
+
+						 }
+        }
+}
