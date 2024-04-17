@@ -1,0 +1,13 @@
+chippy_ai/.gitignore,sha256=Ff-Lj-BOXpEFD8MxCJynezmpihk790cIOdFZ4DW3BOA,18
+chippy_ai/README.MD,sha256=-Ns6KzMFvvbTN37Pc-hPzaXcyC6RPvPRWkTOwdfsBJ0,9743
+chippy_ai/__init__.py,sha256=j121esQQ75ZTaux1JRnPv8O36TXw97_BS5ixaap2dYg,24
+chippy_ai/config.ini,sha256=hue8pDPErFNuNlub8HD-wCAyUmb5XA-Kv2uHM3dPJGc,213
+chippy_ai/main.py,sha256=AMy5EDieWyWhs5TJ7l8d_7h0iwznfxtwgHwLhTIHbsg,13075
+chippy_ai/pyproject.toml,sha256=Z2ELH2ZDiyk9d3ZhtKbuMgYrEijd_Q1Sv_0XSP6b9p8,680
+chippy_ai/cheats/git.txt,sha256=_lPnJMDkBu8zo_L62oKtFz7cJoToqZKbfK-irDAStHc,1890
+chippy_ai/cheats/shell.txt,sha256=CitjptBfiT9jRb2lKnRVzxZ8O58T-xjdD3GH0UMovWA,1970
+chippy_ai-0.2.4.dist-info/METADATA,sha256=J3TgQ8wuTyULswH66AfplxwpLtvvjCkl2-Yedd6-6ZY,9833
+chippy_ai-0.2.4.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+chippy_ai-0.2.4.dist-info/entry_points.txt,sha256=5Fzyk2KJnC0ywGbEhizADqmfJenDKs26rbYheho-n_w,45
+chippy_ai-0.2.4.dist-info/licenses/LICENSE,sha256=8BSW_xTzc7vP4kmNpKqQCU3a9cB3UxPcP2QbpruF4Zk,557
+chippy_ai-0.2.4.dist-info/RECORD,,
