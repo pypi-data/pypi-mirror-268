@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+from qualesim_tequila.backend import TequilaInterface
+
+TequilaInterface().run()
