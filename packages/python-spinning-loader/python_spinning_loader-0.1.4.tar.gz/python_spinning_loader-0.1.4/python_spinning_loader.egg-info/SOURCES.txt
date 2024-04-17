@@ -1,0 +1,12 @@
+setup.py
+python_spinning_loader/__init__.py
+python_spinning_loader/python_loader_cpp.cpython-310-darwin.so
+python_spinning_loader/python_loader_cpp.cpython-311-darwin.so
+python_spinning_loader/python_loader_cpp.cpython-312-darwin.so
+python_spinning_loader/python_loader_cpp.cpython-38-darwin.so
+python_spinning_loader/python_loader_cpp.cpython-39-darwin.so
+python_spinning_loader.egg-info/PKG-INFO
+python_spinning_loader.egg-info/SOURCES.txt
+python_spinning_loader.egg-info/dependency_links.txt
+python_spinning_loader.egg-info/not-zip-safe
+python_spinning_loader.egg-info/top_level.txt
