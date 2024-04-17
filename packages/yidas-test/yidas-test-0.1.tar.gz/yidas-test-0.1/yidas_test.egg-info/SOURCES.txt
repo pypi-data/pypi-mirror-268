@@ -1,0 +1,6 @@
+README.md
+setup.py
+yidas_test.egg-info/PKG-INFO
+yidas_test.egg-info/SOURCES.txt
+yidas_test.egg-info/dependency_links.txt
+yidas_test.egg-info/top_level.txt
