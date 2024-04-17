@@ -1,0 +1,14 @@
+LICENSE
+README.md
+README.rst
+pyproject.toml
+requirements-dev.txt
+requirements.in
+src/django_restricted_fields/VERSION
+src/django_restricted_fields/__init__.py
+src/django_restricted_fields/forms.py
+src/django_restricted_fields.egg-info/PKG-INFO
+src/django_restricted_fields.egg-info/SOURCES.txt
+src/django_restricted_fields.egg-info/dependency_links.txt
+src/django_restricted_fields.egg-info/requires.txt
+src/django_restricted_fields.egg-info/top_level.txt

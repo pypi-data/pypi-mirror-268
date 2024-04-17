@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: django-restricted-fields
+Version: 0.3.0
+Summary: Provides date and date/time fields with restrictions for Django forms.
+Author-email: Detlef Lannert <detlef@lannert.de>
+Maintainer-email: Detlef Lannert <detlef@lannert.de>
+Project-URL: Homepage, https://github.com/detlefla/django-restricted-fields
+Project-URL: Repository, https://github.com/detlefla/django-restricted-fields
+Project-URL: Issues, https://github.com/detlefla/django-restricted-fields/issues
+Keywords: web,django,forms
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Framework :: Django
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: django>=4.0
+Provides-Extra: dev
+Requires-Dist: asgiref==3.8.1; extra == "dev"
+Requires-Dist: asttokens==2.4.1; extra == "dev"
+Requires-Dist: backports-tarfile==1.1.0; extra == "dev"
+Requires-Dist: build==1.2.1; extra == "dev"
+Requires-Dist: certifi==2024.2.2; extra == "dev"
+Requires-Dist: cffi==1.16.0; extra == "dev"
+Requires-Dist: charset-normalizer==3.3.2; extra == "dev"
+Requires-Dist: cryptography==42.0.5; extra == "dev"
+Requires-Dist: decorator==5.1.1; extra == "dev"
+Requires-Dist: django==5.0.4; extra == "dev"
+Requires-Dist: django-stubs==4.2.7; extra == "dev"
+Requires-Dist: django-stubs-ext==4.2.7; extra == "dev"
+Requires-Dist: docutils==0.21.1; extra == "dev"
+Requires-Dist: executing==2.0.1; extra == "dev"
+Requires-Dist: idna==3.7; extra == "dev"
+Requires-Dist: importlib-metadata==7.1.0; extra == "dev"
+Requires-Dist: ipython==8.23.0; extra == "dev"
+Requires-Dist: jaraco-classes==3.4.0; extra == "dev"
+Requires-Dist: jaraco-context==5.3.0; extra == "dev"
+Requires-Dist: jaraco-functools==4.0.0; extra == "dev"
+Requires-Dist: jedi==0.19.1; extra == "dev"
+Requires-Dist: jeepney==0.8.0; extra == "dev"
+Requires-Dist: keyring==25.1.0; extra == "dev"
+Requires-Dist: markdown-it-py==3.0.0; extra == "dev"
+Requires-Dist: matplotlib-inline==0.1.7; extra == "dev"
+Requires-Dist: mdurl==0.1.2; extra == "dev"
+Requires-Dist: more-itertools==10.2.0; extra == "dev"
+Requires-Dist: mypy==1.9.0; extra == "dev"
+Requires-Dist: mypy-extensions==1.0.0; extra == "dev"
+Requires-Dist: nh3==0.2.17; extra == "dev"
+Requires-Dist: packaging==24.0; extra == "dev"
+Requires-Dist: parso==0.8.4; extra == "dev"
+Requires-Dist: pexpect==4.9.0; extra == "dev"
+Requires-Dist: pkginfo==1.10.0; extra == "dev"
+Requires-Dist: prompt-toolkit==3.0.43; extra == "dev"
+Requires-Dist: ptyprocess==0.7.0; extra == "dev"
+Requires-Dist: pure-eval==0.2.2; extra == "dev"
+Requires-Dist: pycparser==2.22; extra == "dev"
+Requires-Dist: pygments==2.17.2; extra == "dev"
+Requires-Dist: pyproject-hooks==1.0.0; extra == "dev"
+Requires-Dist: readme-renderer==43.0; extra == "dev"
+Requires-Dist: requests==2.31.0; extra == "dev"
+Requires-Dist: requests-toolbelt==1.0.0; extra == "dev"
+Requires-Dist: rfc3986==2.0.0; extra == "dev"
+Requires-Dist: rich==13.7.1; extra == "dev"
+Requires-Dist: ruff==0.3.7; extra == "dev"
+Requires-Dist: secretstorage==3.3.3; extra == "dev"
+Requires-Dist: six==1.16.0; extra == "dev"
+Requires-Dist: sqlparse==0.5.0; extra == "dev"
+Requires-Dist: stack-data==0.6.3; extra == "dev"
+Requires-Dist: traitlets==5.14.2; extra == "dev"
+Requires-Dist: twine==5.0.0; extra == "dev"
+Requires-Dist: types-pytz==2024.1.0.20240203; extra == "dev"
+Requires-Dist: types-pyyaml==6.0.12.20240311; extra == "dev"
+Requires-Dist: typing-extensions==4.11.0; extra == "dev"
+Requires-Dist: urllib3==2.2.1; extra == "dev"
+Requires-Dist: wcwidth==0.2.13; extra == "dev"
+Requires-Dist: zipp==3.18.1; extra == "dev"
+
+django-restricted-fields
+========================
+
+Usage
+-----
+
+Add this package to your virtual environment. In your Django application's `forms.py`,
+import the field(s) you want to use (currently only `RestrictedDateField` and
+`RestrictedDateTimeField`). These offer additional options:
+
+-  `future_allowed=False` – inhibit the input of dates / times that are in the future
+
+-  `past_allowed=False` – inhibit the input of dates / times that are in the past
+
+-  `min_value=X`, `max_value=X` – inhibit the input of dates / times before / after X,
+   where X can be a Python date / datetime value or a callable that returns such a value
+
+Most browsers will display a date and / or time picker whose range is limited by these
+options.
+
+Other than with Django's native fields, dates (and times) should be formatted according to
+the locale settings of the browser (which normally is the right thing to do).
