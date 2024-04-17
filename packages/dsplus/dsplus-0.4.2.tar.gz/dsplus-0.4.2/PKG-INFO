@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dsplus
+Version: 0.4.2
+Summary: Helper functions for data science applications.
+Author: Prashana Bajracharya
+Author-email: pajracharya713@gmail.com
+Keywords: data science,pandas
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Helper functions and classes for data science tasks
+
+# Installation
+
+```bash
+pip install dsplus
+```
