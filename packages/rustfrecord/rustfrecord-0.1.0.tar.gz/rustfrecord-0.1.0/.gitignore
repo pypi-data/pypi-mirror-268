@@ -1,0 +1,7 @@
+/target
+/data
+.python-version
+requirements.txt
+/rust-tfrecord
+/.venv
+/target_maturin

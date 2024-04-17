@@ -1,0 +1,33 @@
+[package]
+name = "rustfrecord"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "rustfrecord"
+crate-type = ["cdylib"]
+
+[profile.release]
+debug = true
+
+[dependencies]
+anyhow = { version = "1.0.81", features = ["backtrace"] }
+tch = { version = "0.15.0", features = ["python-extension"] }
+torch-sys = { version = "0.15.0", features = ["python-extension"] }
+
+[dependencies.pyo3]
+version = "0.21.1"
+features = ["extension-module", "abi3-py38"]
+
+[dependencies.tfrecord]
+# version = "0.15.0"
+# path = "rust-tfrecord/tfrecord"
+git = "https://github.com/gavrie/rust-tfrecord.git"
+branch = "tch-0.15.0"
+features = ["with-serde", "with-tch"]
+
+[dependencies.flate2]
+version = "1.0.28"
+features = ["zlib-ng"]
+default-features = false
