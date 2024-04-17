@@ -1,0 +1,2 @@
+[console_scripts]
+restring-gui = restring.restring:restring_gui

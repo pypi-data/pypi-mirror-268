@@ -1,0 +1,2 @@
+recursive-include restring/imgs *.png
+recursive-include restring/imgs *.jpg
