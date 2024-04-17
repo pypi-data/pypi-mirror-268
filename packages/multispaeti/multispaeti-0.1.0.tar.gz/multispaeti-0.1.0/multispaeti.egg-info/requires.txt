@@ -1,0 +1,13 @@
+matplotlib
+numpy>=1.21
+scikit-learn
+scipy>=1.9
+
+[dev]
+multispaeti[docs]
+pre-commit
+
+[docs]
+sphinx
+sphinx-copybutton
+sphinx-rtd-theme
