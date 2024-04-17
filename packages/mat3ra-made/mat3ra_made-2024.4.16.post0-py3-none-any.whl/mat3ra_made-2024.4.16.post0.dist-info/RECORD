@@ -1,0 +1,13 @@
+mat3ra/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mat3ra/made/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mat3ra/made/material.py,sha256=sQmZfqBlcYy8yCjg2q8vRuZGl405rQBRGaj2Oe3am0A,1529
+mat3ra/made/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mat3ra/made/tools/analyze.py,sha256=x4buyeeR0ShIok_8jzCxnWby9xkqrNjEaV_gVuQPgs8,1955
+mat3ra/made/tools/calculate.py,sha256=gZalO0mt7qMD12FU9M0y5kfNBge1Xnk9GwenKKD61sc,646
+mat3ra/made/tools/convert.py,sha256=FrqPKHTag2vZeSbpNl77-cT7c7NZECgHWO_OOylaz2k,6435
+mat3ra/made/tools/modify.py,sha256=wP5t2-gOHzld6l7Prt834_MwQ41HlVB_0r-85OdIP44,505
+mat3ra_made-2024.4.16.post0.dist-info/LICENSE.md,sha256=CBGo1CDw-8EWCk7x9HOiF-OShdnHY6j__TjFyZPpQME,563
+mat3ra_made-2024.4.16.post0.dist-info/METADATA,sha256=vPN8RaNhBNkqhhvycZuHrsJe0XNTstztIgXPFzOifmo,10295
+mat3ra_made-2024.4.16.post0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mat3ra_made-2024.4.16.post0.dist-info/top_level.txt,sha256=GizAtvIqqIcCWShlThl_mgig_bZs_LFyqVah6wrGHIs,7
+mat3ra_made-2024.4.16.post0.dist-info/RECORD,,
