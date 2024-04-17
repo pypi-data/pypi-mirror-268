@@ -1,0 +1,2 @@
+[console_scripts]
+dailytasks = daily_tasks.commands.main:daily_tasks
