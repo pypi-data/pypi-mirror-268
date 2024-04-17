@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "papers-dl"
+version = "0.0.3"
+authors = [
+  { name="Ben Muthalaly", email="benmuthalaly@gmail.com" },
+]
+description = "A command line application for downloading scientific papers"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "beautifulsoup4",
+  "bs4",
+  "certifi",
+  "cffi",
+  "charset-normalizer",
+  "cryptography",
+  "easygui",
+  "feedparser",
+  "google",
+  "idna",
+  "pdf2doi",
+  "pdfminer.six",
+  "pdftitle",
+  "pycparser",
+  "PyMuPDF",
+  "PyMuPDFb",
+  "PyPDF2",
+  "pyperclip",
+  "requests",
+  "retrying",
+  "sgmllib3k",
+  "six",
+  "soupsieve",
+  "urllib3",
+  "w3lib",
+]
+
+[project.urls]
+Homepage = "https://github.com/benmuth/papers-dl"
+Issues = "https://github.com/benmuth/papers-dl/issues"

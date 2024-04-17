@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: papers-dl
+Version: 0.0.3
+Summary: A command line application for downloading scientific papers
+Author-email: Ben Muthalaly <benmuthalaly@gmail.com>
+Project-URL: Homepage, https://github.com/benmuth/papers-dl
+Project-URL: Issues, https://github.com/benmuth/papers-dl/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Requires-Dist: bs4
+Requires-Dist: certifi
+Requires-Dist: cffi
+Requires-Dist: charset-normalizer
+Requires-Dist: cryptography
+Requires-Dist: easygui
+Requires-Dist: feedparser
+Requires-Dist: google
+Requires-Dist: idna
+Requires-Dist: pdf2doi
+Requires-Dist: pdfminer.six
+Requires-Dist: pdftitle
+Requires-Dist: pycparser
+Requires-Dist: PyMuPDF
+Requires-Dist: PyMuPDFb
+Requires-Dist: PyPDF2
+Requires-Dist: pyperclip
+Requires-Dist: requests
+Requires-Dist: retrying
+Requires-Dist: sgmllib3k
+Requires-Dist: six
+Requires-Dist: soupsieve
+Requires-Dist: urllib3
+Requires-Dist: w3lib
+
+# Overview
+`papers-dl` is a command line application for downloading scientific papers.
+
+## Usage
+```
+usage: papers-dl.py [-h] {fetch,parse} ...
+
+Download scientific papers from the command line
+
+positional arguments:
+  {fetch,parse}
+    fetch        try to download a paper from the given
+                 query
+    parse        parse identifiers from a file
+
+options:
+  -h, --help     show this help message and exit
+  
+# fetch
+usage: papers-dl.py fetch [-h] [-o path] (DOI|PMID|URL)
+
+positional arguments:
+  (DOI|PMID|URL)        the identifier to try to download
+
+options:
+  -h, --help            show this help message and exit
+  -o path, --output path
+                        optional output directory for
+                        downloaded papers
+
+# parse
+usage: papers-dl.py parse [-h] [-m type] path
+
+positional arguments:
+  path                  the path of the file to parse
+
+options:
+  -h, --help            show this help message and exit
+  -m type, --match type
+                        the type of identifier to match
+```
+This project includes a modified version of [scihub.py](https://github.com/zaytoun/scihub.py).
