@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "yandex_gpt"
+version = "0.1.0"
+description = "Module for simple connecting to YandexGPT Api"
+authors = ["vladartemenko <skabe99@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
