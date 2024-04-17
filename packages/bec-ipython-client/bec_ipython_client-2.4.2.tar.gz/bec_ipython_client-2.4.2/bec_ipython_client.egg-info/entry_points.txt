@@ -1,0 +1,5 @@
+[console_scripts]
+bec = bec_ipython_client.main:main
+
+[pytest11]
+bec_lib_end2end_fixtures = bec_ipython_client.tests.end2end_fixtures
