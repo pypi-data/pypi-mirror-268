@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: qualesim-tequila
+Version: 1.0.0
+Summary: DQCsim backend for tequila.
+Home-page: https://gitee.com/hpcl_quanta/dqcsim-tequila.git
+Author: Dingdong Liu
+Author-email: dingdongliu@quanta.org.cn
+License: GPLv3
+Keywords: qualesim tequila
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+
+# DQCsim-TEQUILA: The DQCsim Backend using Tequila simulator.
+
+# Dependencies:
+* $dqcsim >= 0.2.0$
+* $tequila = 0.1.3$
+
+# Basic usage:
+- You can use dqcsim to call the backend Tequila such as:
+> `dqcsim <frontend> tequila` 
+
+e.g.
+```
+$dqcsim adder.py tequila
+2023-07-12T07:57:46Z  Info dqcsim                    Starting Simulation with seed: 3720617171643273728
+2023-07-12T07:57:47Z  Info back                      Tequila loaded...
+2023-07-12T07:57:47Z  Info dqcsim                    Executing 'start(...)' host call...
+2023-07-12T07:57:47Z  Info dqcsim                    Executing 'wait()' host call...
+2023-07-12T07:57:58Z  Info front                     The observed addition was 4 + 3 = 7
+2023-07-12T07:57:58Z  Note dqcsim                    'wait()' returned {}
+2023-07-12T07:57:58Z  Info dqcsim                    Reproduction file written to "adder.py.repro".
+2023-07-12T07:57:58Z  Info dqcsim                    Simulation completed successfully.
+2023-07-12T07:57:58Z  Info front::stdout             [1, 1, 1, 0]
+2023-07-12T07:57:58Z  Info front::stdout             [0, 0, 1, 0]
+2023-07-12T07:57:58Z  Info front::stdout             [1, 1, 0, 0]
+2023-07-12T07:57:58Z  Info dqcsim                    PluginProcess exited with status code: 0
+2023-07-12T07:57:59Z  Info dqcsim                    PluginProcess exited with status code: 0
+```
+
+- You can also use it while constructing simulator:
+```python
+try:
+    import dqcsim_tequila
+except ImportError:
+    import sys
+
+    print("dqcsim-tequila module not found, skipping test")
+    sys.exit(0)
+
+with Simulator(
+    Pquiets(),
+    "tequila",
+    stderr_verbosity=Loglevel.DEBUG,
+    repro=None,
+) as sim:
+    sim.start()
+```
+
+
+## Setup
+1. You can get the source file in [dqcsim-tequila](https://gitee.com/hpcl_quanta/dqcsim-tequila.git)
+2. `cd dqcsim-tequila`
+3. You can use either of below to create a softlink or copy it to the python site-packages
+    - `pip install -e .`
+    - `python setup.py install`
+4. if you use the command `pip install -e .`, the setup file `data_files` cannot work! you cann't add the `dqcsbetequila` to the path, so you need to add it to path yourself using commands below:
+    - `cd <your-path-to-python>/python3.*/bin`
+    - `ln -s <your-path-to-dqcsim_tequila>/data/bin/dqcsbetequila dqcsbetequila`
