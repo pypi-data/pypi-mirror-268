@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/django_rest_aggregation/__init__.py
+src/django_rest_aggregation/aggregator.py
+src/django_rest_aggregation/enums.py
+src/django_rest_aggregation/filter.py
+src/django_rest_aggregation/mixins.py
+src/django_rest_aggregation/serializers.py
+src/django_rest_aggregation.egg-info/PKG-INFO
+src/django_rest_aggregation.egg-info/SOURCES.txt
+src/django_rest_aggregation.egg-info/dependency_links.txt
+src/django_rest_aggregation.egg-info/top_level.txt
+tests/test_aggregation.py
