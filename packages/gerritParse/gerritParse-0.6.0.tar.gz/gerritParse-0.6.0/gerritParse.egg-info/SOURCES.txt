@@ -1,0 +1,8 @@
+README.txt
+setup.py
+GerritParser/__init__.py
+GerritParser/gerritdataparser.py
+gerritParse.egg-info/PKG-INFO
+gerritParse.egg-info/SOURCES.txt
+gerritParse.egg-info/dependency_links.txt
+gerritParse.egg-info/top_level.txt
