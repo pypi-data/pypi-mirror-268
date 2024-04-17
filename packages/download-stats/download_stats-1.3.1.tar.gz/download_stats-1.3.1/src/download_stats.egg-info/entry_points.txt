@@ -1,0 +1,2 @@
+[console_scripts]
+download-stats = download_stats.main:main
