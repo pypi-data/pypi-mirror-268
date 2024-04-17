@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: Velkoz
+Version: 0.0.5
+Summary: Velkoz Riot Api package
+Author: Nabattis
+Author-email: <ferreirafernando6205@gmail.com>
+Keywords: python,riotapi,api,velkoz
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: requests
+Requires-Dist: pillow
+
+Package that uses RiotApi to get information.
+ Made to gain experience so it is not something as advanced as the other packages that do the same. Would not recommend.
