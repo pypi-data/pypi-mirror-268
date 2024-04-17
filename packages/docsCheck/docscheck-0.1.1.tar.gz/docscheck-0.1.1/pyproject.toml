@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "docsCheck"
+version = "0.1.1"
+description = ""
+authors = ["Dmitry Proskurin <proskurin.dima16@gmail.com>"]
+readme = "README.md"
+packages = [{include = "docsCheck", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.12"
+aspose-words = "24.*"
+prettytable = "^3.10.0"
+
+[tool.poetry.group.dev.dependencies]
+
+[tool.poetry.scripts]
+docsCheck = 'docsCheck.__main__:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+line_length = 80
+multi_line_output = 3
+include_trailing_comma = true
