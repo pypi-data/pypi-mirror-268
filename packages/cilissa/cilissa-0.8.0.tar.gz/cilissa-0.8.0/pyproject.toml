@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "cilissa"
+version = "0.8.0"
+description = "Interactive tool for assessing digital image similarity"
+authors = ["Kamil Marut <kamil@kamilmarut.com>"]
+readme = "README.md"
+homepage = "https://github.com/exler/CILISSA"
+repository = "https://github.com/exler/CILISSA"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/exler/CILISSA/issues"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+numpy = "^1.26.4"
+opencv-python = "^4.9.0.80"
+PySide6 = { version = "^6.7.0", optional = true }
+
+[tool.poetry.dev-dependencies]
+black = "^24.4.0"
+flake8 = "^7.0.0"
+flake8-annotations = "^3.0.1"
+mypy = "^1.9.0"
+isort = "^5.13.2"
+pytest = "^8.1.1"
+pytest-sugar = "^1.0.0"
+pytest-clarity = "^1.0.1"
+pyinstaller = "^6.6.0"
+verdandi = "^0.2.3"
+Sphinx = "^7.2.6"
+sphinx-autoapi = "^3.0.0"
+sphinx-rtd-theme = "^2.0.0"
+coverage = "^7.4.4"
+
+[tool.poetry.extras]
+gui = ["PySide6"]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+
+[tool.poetry.scripts]
+cilissa = "cilissa.__main__:main"
+
+[tool.mypy]
+ignore_missing_imports = true
+exclude = "(tests|docs|cilissa_gui)"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+extend-exclude = "cilissa_gui/resources"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
