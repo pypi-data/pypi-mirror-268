@@ -1,0 +1,3 @@
+[console_scripts]
+acetone_compare = acetone_nnet.cli_compare:cli_compare
+acetone_generate = acetone_nnet.cli_acetone:cli_acetone
