@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+PuddleSF.egg-info/PKG-INFO
+PuddleSF.egg-info/SOURCES.txt
+PuddleSF.egg-info/dependency_links.txt
+PuddleSF.egg-info/requires.txt
+PuddleSF.egg-info/top_level.txt
