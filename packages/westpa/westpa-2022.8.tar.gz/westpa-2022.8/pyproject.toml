@@ -1,0 +1,47 @@
+[build-system]
+build-backend = 'setuptools.build_meta:__legacy__'
+# Minimum requirements for the build system to execute.
+# See current numpy pinning in https://github.com/scipy/oldest-supported-numpy
+requires = [
+    "setuptools >=40.8.0",
+    "wheel",
+    "Cython >=0.29.16; python_version >='3.10'",  # Note: sync with setup.py
+    "Cython <3.0.3, >=0.29.16; python_version <'3.10'",
+    "oldest-supported-numpy; python_version <'3.9'",
+    "numpy >=1.25.0, <2; python_version >='3.9'",
+    "scipy >=0.19.1",
+    "versioneer-518"
+]
+# Uncommenting this requires adding the top level of the repo to sys.path in the setup.py
+# so that it can find the vendorized copy of versioneer. I see that other projects don't
+# always include this (pandas, numpy, etc), so leaving this off for now
+# build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 132
+skip-string-normalization = true
+include = '\.pyi?$'
+exclude = '''
+(
+    /(
+        asv_bench/env
+      | \.egg
+      | \.git
+      | \.hg
+      | \.mypy_cache
+      | \.nox
+      | \.tox
+      | \.venv
+      | _build
+      | buck-out
+      | build
+      | dist
+      | docs
+      | doc
+     )/ | (
+      setup.py
+      | versioneer.py
+      | _version.py
+     )
+)
+'''
