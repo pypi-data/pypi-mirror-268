@@ -1,0 +1,6 @@
+beautifulsoup4>=4.12
+
+[testing]
+tox>=3.24
+pytest>=7.0
+pytest-cov>=3.0
