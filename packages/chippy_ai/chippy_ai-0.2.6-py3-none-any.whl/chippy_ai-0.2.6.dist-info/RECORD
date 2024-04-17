@@ -1,0 +1,14 @@
+chippy_ai/.gitignore,sha256=Ff-Lj-BOXpEFD8MxCJynezmpihk790cIOdFZ4DW3BOA,18
+chippy_ai/README.MD,sha256=-Ns6KzMFvvbTN37Pc-hPzaXcyC6RPvPRWkTOwdfsBJ0,9743
+chippy_ai/__init__.py,sha256=j121esQQ75ZTaux1JRnPv8O36TXw97_BS5ixaap2dYg,24
+chippy_ai/config.ini,sha256=hue8pDPErFNuNlub8HD-wCAyUmb5XA-Kv2uHM3dPJGc,213
+chippy_ai/main.py,sha256=PyevOYIldV8WQXO9HNwOP9ZMXcTMGzXR5scNhiXX1_0,13460
+chippy_ai/pyproject.toml,sha256=HHQXwnGubuvUcIKQCy8WlCLdT_pB8-bhBli-4aTrPGc,680
+chippy_ai/cheats/git.txt,sha256=_lPnJMDkBu8zo_L62oKtFz7cJoToqZKbfK-irDAStHc,1890
+chippy_ai/cheats/shell.txt,sha256=CitjptBfiT9jRb2lKnRVzxZ8O58T-xjdD3GH0UMovWA,1970
+chippy_ai/env/placeholder.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chippy_ai-0.2.6.dist-info/METADATA,sha256=gO-RzigfSrPHYCQO0Y8BuQzCR_Nvm2qUrsqsX8V2rw4,9833
+chippy_ai-0.2.6.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+chippy_ai-0.2.6.dist-info/entry_points.txt,sha256=5Fzyk2KJnC0ywGbEhizADqmfJenDKs26rbYheho-n_w,45
+chippy_ai-0.2.6.dist-info/licenses/LICENSE,sha256=8BSW_xTzc7vP4kmNpKqQCU3a9cB3UxPcP2QbpruF4Zk,557
+chippy_ai-0.2.6.dist-info/RECORD,,

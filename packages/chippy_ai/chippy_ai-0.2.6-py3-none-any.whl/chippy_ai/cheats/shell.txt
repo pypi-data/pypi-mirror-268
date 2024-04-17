@@ -1,0 +1,95 @@
+cd - Change directory.
+$ cd /path/to/directory
+
+ls - List directory contents.
+$ ls -l /path/to/directory
+
+pwd - Print working directory.
+$ pwd
+
+echo - Display a line of text.
+$ echo "Hello World"
+
+touch - Create a new empty file.
+$ touch newfile.txt
+
+mkdir - Create a new directory.
+$ mkdir new_directory
+
+rmdir - Remove an empty directory.
+$ rmdir empty_directory
+
+rm - Remove files or directories.
+$ rm file.txt
+$ rm -r directory
+
+cp - Copy files and directories.
+$ cp source.txt destination.txt
+$ cp -r source_directory new_directory
+
+mv - Move or rename files and directories.
+$ mv oldname.txt newname.txt
+$ mv file.txt /path/to/directory
+
+cat - Concatenate files and print on the standard output.
+$ cat file.txt
+
+less - View file contents with pagination.
+$ less file.txt
+
+grep - Search text using patterns.
+$ grep "search_pattern" file.txt
+
+find - Search for files in a directory hierarchy.
+$ find /path/to/search -name "filename"
+
+chmod - Change file mode bits.
+$ chmod +x script.sh
+
+chown - Change file owner and group.
+$ chown user:group file.txt
+
+tar - Archive files.
+$ tar cvf archive_name.tar /path/to/directory
+
+curl - Transfer data from or to a server.
+$ curl http://example.com
+
+wget - Non-interactive network downloader.
+$ wget http://example.com/file
+
+history - Show command history.
+$ history
+
+alias - Create an alias for a command.
+$ alias ll='ls -l'
+
+exit - Exit the shell session.
+$ exit
+
+man - Display the manual page for a command.
+$ man ls
+
+env - Display environment variables.
+$ env
+
+export - Set environment variable.
+$ export PATH="$PATH:/new/path"
+
+unset - Remove environment variable or function.
+$ unset VARIABLE_NAME
+
+ps - Report a snapshot of current processes.
+$ ps aux
+
+kill - Send a signal to a process.
+$ kill -9 PID
+
+top or htop - Display and manage the top processes.
+$ top
+
+ssh - OpenSSH SSH client (remote login program).
+$ ssh user@host
+
+scp - Secure copy (remote file copy program).
+$ scp file.txt user@host:/path/to/destination
