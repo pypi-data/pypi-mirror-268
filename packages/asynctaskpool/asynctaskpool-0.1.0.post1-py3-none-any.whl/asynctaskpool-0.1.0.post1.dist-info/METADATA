@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: asynctaskpool
+Version: 0.1.0.post1
+Summary: Provides a task pool for asynchronous tasks to be executed only once.
+Home-page: https://codeberg.org/QCanvas/AsyncTaskPool
+Keywords: async,taskpool
+Author: QCanvas
+Author-email: qcanvas@noreply.codeberg.org
+Requires-Python: >=3.11,<4.0
+Classifier: Framework :: AsyncIO
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://codeberg.org/QCanvas/AsyncTaskPool
+Description-Content-Type: text/markdown
+
+# AsyncTaskPool
+
+This tool provides an asynchronous 'task pool'. Tasks with an identifier can be submitted to it and they will only be executed once -
+even when submitted again before the first task has finished.
+The results of these tasks will be cached for next time.
