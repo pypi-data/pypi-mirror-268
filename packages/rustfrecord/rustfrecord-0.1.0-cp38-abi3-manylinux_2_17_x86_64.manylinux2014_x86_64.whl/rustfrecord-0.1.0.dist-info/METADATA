@@ -1,0 +1,25 @@
+Metadata-Version: 2.3
+Name: rustfrecord
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: setuptools ==69.5.1
+Requires-Dist: torch ==2.2.0
+Requires-Dist: maturin ==1.5.1
+Requires-Dist: pip ==24.0
+Requires-Dist: numpy ==1.24.4
+Summary: Rust implementation to read TFRecord files into PyTorch tensors
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+pip install uv
+uv venv
+source .venv/bin/activate
+
+uv pip compile requirements.in -o requirements.txt
+uv pip install -r requirements.txt
+
+export LIBTORCH_USE_PYTORCH=1
+CARGO_TARGET_DIR=target_maturin maturin develop
+
+python main.py
