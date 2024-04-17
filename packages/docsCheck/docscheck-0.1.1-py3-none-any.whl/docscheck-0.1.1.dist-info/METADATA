@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: docsCheck
+Version: 0.1.1
+Summary: 
+Author: Dmitry Proskurin
+Author-email: proskurin.dima16@gmail.com
+Requires-Python: >=3.8,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aspose-words (==24.*)
+Requires-Dist: prettytable (>=3.10.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+**ИСПОЛЬЗОВАНИЕ**:
+
+```docsCheck <path_to_docx> <doc_type>```
+
+где:
+path_to_docx - абсолютный или относительный путь до анализируемого файла
+doc_type - один из доступных типов документов (опционально)
+
+Доступные типы документов:
+- ОБЩЕЕ - Только общая проверка (по умолчанию),
+- ТЗ - Техническое задание,
+- РО - Руководство оператора,
+- ПЗ - Пояснительная записка
+- ПИМИ - Программа и методика испытаний
+- ТП - Текст программы
+
+Помощь:
+```docsCheck --help```
