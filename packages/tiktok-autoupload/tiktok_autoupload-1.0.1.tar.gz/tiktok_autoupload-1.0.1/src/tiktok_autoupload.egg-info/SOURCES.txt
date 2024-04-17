@@ -1,0 +1,9 @@
+LICENSE
+pyproject.toml
+src/tiktok_autoupload/__init__,.py
+src/tiktok_autoupload/uploader.py
+src/tiktok_autoupload.egg-info/PKG-INFO
+src/tiktok_autoupload.egg-info/SOURCES.txt
+src/tiktok_autoupload.egg-info/dependency_links.txt
+src/tiktok_autoupload.egg-info/requires.txt
+src/tiktok_autoupload.egg-info/top_level.txt

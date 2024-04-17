@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiktok-autoupload"
+authors = [{ name = "Christian Fiore"}]
+version = "1.0.1"
+description = "Python library to upload a video on tiktok using selenium"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = ["selenium", "selenium_stealth"]
+
+[project.urls]
+Homepage = "https://github.com/agente3z/tiktok-autoupload"
