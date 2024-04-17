@@ -1,0 +1,12 @@
+name: cmip6-downscaling-docs
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.9
+  - pre-commit
+  - pip
+  - sphinx>=5.0
+  - sphinx-book-theme >= 0.3.0
+  - numpydoc
+  - myst-nb
