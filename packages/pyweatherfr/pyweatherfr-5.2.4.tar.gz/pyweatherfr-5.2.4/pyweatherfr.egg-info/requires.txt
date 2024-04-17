@@ -1,0 +1,11 @@
+columnar
+termcolor
+colorama
+openmeteo_requests
+requests_cache
+retry_requests
+geopy
+numpy
+timezonefinder
+tzlocal
+pytz
