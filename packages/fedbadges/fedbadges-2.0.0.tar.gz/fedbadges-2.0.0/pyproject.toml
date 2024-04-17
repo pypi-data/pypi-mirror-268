@@ -1,0 +1,205 @@
+[tool.poetry]
+name = "fedbadges"
+version = "2.0.0"
+description = "Fedora Messaging consumer for awarding open badges"
+
+license = "GPL-2.0-or-later"
+
+authors = [
+  "Fedora Infrastructure <admin@fedoraproject.org>"
+]
+
+readme = "README.rst"
+keywords = ["fedora"]
+repository = "https://github.com/fedora-infra/fedbadges"
+homepage = "https://github.com/fedora-infra/fedbadges"
+
+include = [
+    { path = "tox.ini", format = "sdist" },
+    { path = "tests", format = "sdist" },
+    { path = "docs", format = "sdist" },
+    { path = "*.example", format = "sdist" },
+    { path = "*.rst", format = "sdist" },
+]
+
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic-settings = "^2.0.2"
+pyyaml = "^6.0.1"
+datanommer-models = "^1.2.0"
+requests = "^2.31.0"
+psutil = "^5.9.8"
+fedora-messaging = "^3.5.0"
+backoff = "^2.2.1"
+fasjson-client = "^1.0.8"
+click = "^8.0.0"
+tahrir-api = "^1.0.0"
+
+# Message schemas. The reference list of all message schemas is in
+# https://github.com/fedora-infra/fedora-messaging/blob/develop/docs/schema-packages.txt
+anitya-schema = {version = "*", optional = true}
+bodhi-messages = {version = "*", optional = true}
+bugzilla2fedmsg-schema = {version = "*", optional = true}
+ci-messages = {version = "*", optional = true}
+copr-messaging = {version = "*", optional = true}
+discourse2fedmsg-messages = {version = "*", optional = true}
+fedocal-messages = {version = "*", optional = true}
+fedorainfra-ansible-messages = {version = "*", optional = true}
+fedora-elections-messages = {version = "*", optional = true}
+fedora-messaging-git-hook-messages = {version = "*", optional = true}
+fedora-messaging-the-new-hotness-schema = {version = "*", optional = true}
+fedora-planet-messages = {version = "*", optional = true}
+fmn-messages = {version = "*", optional = true}
+kerneltest-messages = {version = "^1.0.0", optional = true}
+koji-fedoramessaging-messages = {version = "^1.2.2", optional = true}
+koschei-messages = {version = "*", optional = true}
+mediawiki-messages = {version = "*", optional = true}
+meetbot-messages = {version = "*", optional = true}
+mdapi-messages = {version = "*", optional = true}
+noggin-messages = {version = "*", optional = true}
+nuancier-messages = {version = "*", optional = true}
+pagure-messages = {version = "*", optional = true}
+tahrir-messages = {version = "*", optional = true}
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.0.0"
+pytest-cov = ">=4.0.0"
+black = ">=23.10.0"
+ruff = ">=0.1.1"
+coverage = {extras = ["toml"], version = ">=7.0.0"}
+diff-cover = ">=8.0.0"
+sphinx = ">=4.0"
+myst-parser = ">=0.16"
+liccheck = ">=0.6"
+pre-commit = ">=2.13"
+sphinxcontrib-napoleon = "*"
+bodhi-messages = "*"
+noggin-messages = "*"
+
+[tool.poetry.extras]
+schemas = [
+  "anitya-schema",
+  "bodhi-messages",
+  "bugzilla2fedmsg-schema",
+  "ci-messages",
+  "copr-messaging",
+  "discourse2fedmsg-messages",
+  "fedocal-messages",
+  "fedorainfra-ansible-messages",
+  "fedora-elections-messages",
+  "fedora-messaging-git-hook-messages",
+  "fedora-messaging-the-new-hotness-schema",
+  "fedora-planet-messages",
+  "fmn-messages",
+  "kerneltest-messages",
+  "koji-fedoramessaging-messages",
+  "koschei-messages",
+  "mediawiki-messages",
+  "meetbot-messages",
+  "mdapi-messages",
+  "noggin-messages",
+  "nuancier-messages",
+  "pagure-messages",
+  "tahrir-messages",
+]
+
+[tool.poetry.scripts]
+award-badges-dev = "fedbadges.manual.badges_dev:main"
+award-libravatar = "fedbadges.manual.libravatar:main"
+award-lifecycle = "fedbadges.manual.lifecycle:main"
+award-mirror = "fedbadges.manual.mirror:main"
+award-group-membership = "fedbadges.manual.group_membership:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "S", "B", "RUF"]
+ignore = ["RUF012"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+order-by-type = false
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+
+[tool.coverage.run]
+branch = true
+source = ["fedbadges"]
+
+[tool.coverage.paths]
+source = ["fedbadges"]
+
+[tool.coverage.report]
+# fail_under = 100
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    # Don't complain if tests don't hit defensive assertion code
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "\\.\\.\\.",
+]
+omit = [
+    "tests/*",
+]
+
+
+[tool.towncrier]
+package = "{{ cookiecutter.slug }}"
+filename = "docs/release_notes.md"
+directory = "changelog.d"
+start_string = "<!-- towncrier release notes start -->\n"
+underlines = ["", "", ""]
+template = "changelog.d/_template.md"
+title_format = "## Version [{version}]({{ cookiecutter.github_url }}/tree/{version}) - {project_date}"
+issue_format = "{issue}"
+
+[[tool.towncrier.type]]
+directory = "security"
+name = "Security"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "removed"
+name = "Removed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "deprecated"
+name = "Deprecated"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "added"
+name = "Added"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "changed"
+name = "Changed"
+showcontent = true
+
+[[tool.towncrier.type]]
+directory = "fixed"
+name = "Fixed"
+showcontent = true
