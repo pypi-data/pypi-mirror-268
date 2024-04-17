@@ -1,0 +1,1 @@
+from openfinance.config.config import *
