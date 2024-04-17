@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: lde_online_dep
+Version: 1.0.2
+Summary: Generated py code which used in lde online service by proto
+Home-page: https://liangdao.eu/sd/lde_online
+Author: Yang　Wu
+Author-email: yang.wu@liangdao.de
+License: GNU General Public License v3.0
