@@ -1,0 +1,8 @@
+torchmetrics_ext/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torchmetrics_ext/visual_grounding/__init__.py,sha256=OuGDajo-_b9xpDd15mY95vcxBS4UjiH7PR0KKaNGZNk,102
+torchmetrics_ext/visual_grounding/scanrefer.py,sha256=L80Cl2jg3WSJlaa__C7oFObI0DSnzSTrLSNzkHhpXfM,6682
+torchmetrics_ext-0.1.1.dist-info/LICENSE,sha256=sEqMgH7LFVe1F2Up5l223Yz588_dYAG5h1VBLNAJry8,11337
+torchmetrics_ext-0.1.1.dist-info/METADATA,sha256=nfnCqvacOsX0Eo4AaqbCOl3xwjUh2UOb7hcA2j-Yxnc,2346
+torchmetrics_ext-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+torchmetrics_ext-0.1.1.dist-info/top_level.txt,sha256=_jbxPFsTaPLrZOyiKjyl6y-SLM7php-HGYMZJpx7Phs,17
+torchmetrics_ext-0.1.1.dist-info/RECORD,,
