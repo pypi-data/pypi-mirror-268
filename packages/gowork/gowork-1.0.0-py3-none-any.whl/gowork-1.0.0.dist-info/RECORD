@@ -1,0 +1,10 @@
+gowork/__init__.py,sha256=sPsTM5WW1GNeql3zDeVE480rhUcq1TsTlVPT2CPyxi4,129
+gowork/databases.py,sha256=A7n988tEMnjhgCQDJpNfZOAU0RgXcuvbVcgi-8AiBoU,4221
+gowork/handler.py,sha256=6ycC5HYeGrVeLa9VbrjL4SfIc4dTRVoMHOlj40bfA4k,1030
+gowork/monitor.py,sha256=M_SNGxMc_m6Gfi4BVp4aeYd7EVBhMMZDLObs2dMokXk,995
+gowork/safe/__init__.py,sha256=Mg3lV4fA8I4dXtDzexF7sW1lQJlYiy-N4p-oFSlY5Rc,43
+gowork/safe/configs.py,sha256=IPS0sufcpFQ0QylHRtRHXuEe89qDcRYu_yZovYHDXkE,2466
+gowork-1.0.0.dist-info/METADATA,sha256=dX2iGfVOuWLHo43ihyWMQhUxjC3HWSEL7fzWbz7DvHo,640
+gowork-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gowork-1.0.0.dist-info/top_level.txt,sha256=_mSKcj0vYjt16tclJZDC73WaxKtXYpE83gjg6YTcHoY,7
+gowork-1.0.0.dist-info/RECORD,,
