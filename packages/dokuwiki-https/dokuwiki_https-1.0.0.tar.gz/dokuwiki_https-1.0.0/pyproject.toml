@@ -1,0 +1,18 @@
+[project]
+name = "dokuwiki_https"
+version = "1.0.0"
+authors = [
+  { name="Nicholas Biancolin", email="an.biancolin@mail.utoronto.ca" },
+]
+description = "A higher-level API to interface with a dokuwiki over raw HTTPS (ie. without the security risk from XML-RPC)"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/nbiancolin/dokuwiki-https"
+Issues = "https://github.com/nbiancolin/dokuwiki-https/issues"
