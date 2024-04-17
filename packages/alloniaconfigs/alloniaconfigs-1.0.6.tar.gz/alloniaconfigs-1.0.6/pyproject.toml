@@ -1,0 +1,179 @@
+[tool.poetry]
+name = "alloniaconfigs"
+version = "1.0.6"
+description = "Class to handle configurations"
+authors = ["ALEIA"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.7.0"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-mock = "^3.10.0"
+pytest-cov = "^4.1.0"
+pytest-env = "^1.1.3"
+pytest-sugar = "^0.9.7"
+expects = "^0.9.0"
+sphinx = "^7.2.6"
+sphinx-rtd-theme = "^2.0.0"
+sphinxcontrib-mermaid = "^0.9.2"
+sphinx_mdinclude = "0.5.3"
+sphinx_copybutton = "0.5.2"
+pydata_sphinx_theme = "0.15.2"
+pre-commit = "^3.3.3"
+ruff = "0.3.4"
+bandit = "1.7.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+cache_dir = ".cache/pytest_cache"
+testpaths = ['tests']
+addopts = [
+    "--cov=alloniaconfigs",
+    "--cov-report=term",
+    "--cov-report=html",
+    "--cov-report=xml",
+    "--cov-fail-under=90",
+    "--force-sugar",
+]
+required_plugins = [
+    "pytest-env>=1.1.3",
+    "pytest-mock>=3.10.0",
+    "pytest-cov>=4.1.0",
+]
+env = [
+    "ID=3d8f116e06586b0e",
+    "DUMMY_VAR=dummy",
+]
+
+[tool.coverage.run]
+# Branches mode has an issue, it's why we don't have 100% coverage for now:
+# https://github.com/nedbat/coveragepy/issues/605
+ branch = true
+
+[tool.coverage.report]
+precision = 2
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".eggs",
+    ".gitlab",
+    ".idea",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".vscode",
+    "__pycache__",
+    "dist",
+    "docs",
+    "htmlcov",
+    ".venv",
+]
+line-length = 80
+indent-width = 4
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D",
+    "ANN",
+    "TD",
+    "FIX",
+    "COM812",
+    "ISC001",
+    "PT001",
+    "TRY003",
+    "EM101",
+    "EM102",
+    "TRY201",
+    "G004",
+    "SIM105",
+    "BLE001",
+    "B008",
+    "FBT001",
+    "TID252",
+    "PLR2004",
+    "TRY002",
+    "FBT002",
+    "FBT003",
+    "S608", # Already catched by bandit.
+    "S310", # same
+    "S301", # same
+    "DTZ005",
+    "ERA001",
+]
+
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+# Enable auto-formatting of code examples in docstrings. Markdown,
+# reStructuredText code/literal blocks and doctests are all supported.
+#
+# This is currently disabled by default, but it is planned for this
+# to be opt-out in the future.
+docstring-code-format = false
+
+# Set the line length limit used when formatting code snippets in
+# docstrings.
+#
+# This only has an effect when the `docstring-code-format` setting is
+# enabled.
+docstring-code-line-length = "dynamic"
+
+[tool.ruff.lint.pylint]
+max-args = 9
+
+[tool.ruff.lint.mccabe]
+max-complexity = 13
+
+[tool.ruff.lint.extend-per-file-ignores]
+"tests/*" = ["SLF001", "PLR0913", "PT007", "PGH003"]
+
+[tool.mypy]
+python_version = "3.12"
+plugins = ["pydantic.mypy"]
+warn_return_any = false
+warn_unused_configs = true
+ignore_missing_imports = true
+files = "alloniaconfigs/,tests/"
+exclude = '''(
+    \\.git
+  | \\.hg
+  | \\.mypy_cache
+  | \\.tox
+  | \\.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | postgres_data
+  | \\.pytest_cache
+)'''
+
+[[tool.mypy.overrides]]
+module = "src.*"
+disallow_untyped_defs = true
+
+[tool.bandit]
+exclude_dirs = [
+    "tests",
+    ".venv",
+]
+

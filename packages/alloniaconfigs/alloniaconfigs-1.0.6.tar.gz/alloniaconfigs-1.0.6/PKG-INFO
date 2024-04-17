@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: alloniaconfigs
+Version: 1.0.6
+Summary: Class to handle configurations
+Author: ALEIA
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# Public Project AllOnIAConfigs
+
+This project contains the :obj:`~alloniaconfigs.configs.Configs` class that allows the user to
+easily handle configurations.
+
+You can find the user documentation [here](https://aleia-team.gitlab.io/public/alloniaconfigs)
+
+This is a public project. Everyone is welcome to contribute to it.
+
+## Installation
+
+```bash
+pip install alloniaconfigs
+````
+
+## Develope this project locally:
+
+This project uses [Poetry](https://python-poetry.org/) to manage its
+working environment. Install it before coding in project.
+
+### Install dependencies using poetry:
+
+```bash
+./init.sh
+```
+
+### Testing:
+
+```bash
+poetry run pytest tests # Parallelized
+poetry run pytest tests -n 0 # Sequential
+
+# Sequential with logs (logs can't work with parallelized tests)
+poetry run pytest tests -n 0 -s # -s is the equivalent of --capture=no
+```
+
+### Lint:
+
+To run the linters used by this project, you can run:
+```bash
+poetry run pre-commit run # Run lint only on staged files
+
+# Manually check conventional commits format:
+poetry run pre-commit run gitlint --hook-stage commit-msg --commit-msg-filename .git/COMMIT_EDITMSG
+```
+
+### User documentation:
+
+The documentation source files are located in _docs/source/_. If you add
+new features, please add them to the documentation.
+
+You can buid the documentation locally by doing
+
+```bash
+cd docs
+make html
+```
+
+The produced documentation should then be readable by opening the file in
+docs/build/index.html in a web browser.
+
