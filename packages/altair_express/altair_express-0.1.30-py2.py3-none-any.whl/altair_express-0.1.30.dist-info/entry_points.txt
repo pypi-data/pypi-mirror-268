@@ -1,0 +1,2 @@
+[console_scripts]
+altair_express = altair_express.cli:main
