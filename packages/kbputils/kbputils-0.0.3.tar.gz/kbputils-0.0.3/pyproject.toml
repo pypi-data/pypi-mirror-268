@@ -1,0 +1,18 @@
+[project]
+name = "kbputils"
+version = "0.0.3"
+authors = [
+  { name="Matt M", email="code@itmightbekaraoke.com" },
+]
+description = "Utilities to handle .kbp files created with Karaoke Builder Studio."
+readme = "README.md"
+dependencies = [
+    "ass"
+]
+[project.scripts]
+KBPUtils = "kbputils.cli:convert_file"
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+include = ["kbputils"]
