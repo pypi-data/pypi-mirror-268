@@ -1,0 +1,3 @@
+[console_scripts]
+rohan-portal-gun=rohan_portal_gun.main:app
+
