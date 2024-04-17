@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+vllm_nccl/__init__.py
+vllm_nccl_cu12.egg-info/PKG-INFO
+vllm_nccl_cu12.egg-info/SOURCES.txt
+vllm_nccl_cu12.egg-info/dependency_links.txt
+vllm_nccl_cu12.egg-info/top_level.txt
