@@ -1,0 +1,41 @@
+space: "{{power_ops_models}}"
+externalId: BidMatrix
+name: BidMatrix
+usedFor: node
+properties:
+  state:
+    type:
+      list: false
+      collation: ucs_basic
+      type: text
+    nullable: false
+    autoIncrement: false
+    name: state
+  bidMatrix:
+    type:
+      list: false
+      type: sequence
+    nullable: false
+    autoIncrement: false
+    name: bidMatrix
+  powerAsset:
+    type:
+      list: false
+      type: direct
+    nullable: true
+    autoIncrement: false
+    name: powerAsset
+  partialBidConfiguration:
+    type:
+      list: false
+      type: direct
+    nullable: true
+    autoIncrement: false
+    name: partialBidConfiguration
+  resourceCost:
+    type:
+      list: false
+      type: float32
+    nullable: true
+    autoIncrement: false
+    name: resourceCost

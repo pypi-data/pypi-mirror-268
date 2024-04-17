@@ -1,0 +1,37 @@
+space: "{{power_ops_models}}"
+externalId: BenchmarkingCollectorOutput
+name: BenchmarkingCollectorOutput
+description: The benchmarking collector output data.
+filter:
+  and:
+    - equals:
+        property:
+          - node
+          - space
+        value: "{{power_ops_instance_space}}"
+    - equals:
+        property:
+          - node
+          - type
+        value:
+          externalId: BenchmarkingCollectorOutput
+          space: "{{power_ops_type_space}}"
+implements:
+  - space: "{{power_ops_models}}"
+    externalId: FunctionOutput
+    version: "{{version}}"
+    type: view
+version: "{{version}}"
+properties:
+  input: # Overrides the view type from the FunctionOutput view
+    container:
+      space: "{{power_ops_models}}"
+      externalId: FunctionMetadata
+      type: container
+    containerPropertyIdentifier: linkedStep
+    name: input
+    source:
+      space: "{{power_ops_models}}"
+      externalId: BenchmarkingCollectorInput
+      version: "{{version}}"
+      type: view

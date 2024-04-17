@@ -1,0 +1,41 @@
+space: "{{power_ops_models}}"
+externalId: BenchmarkingCollectorInput
+name: BenchmarkingCollectorInput
+description: The benchmarking collector/ input data.
+filter:
+  and:
+    - hasData:
+        - type: container
+          space: "{{power_ops_models}}"
+          externalId: FunctionData
+    - equals:
+        property:
+          - node
+          - space
+        value: "{{power_ops_instance_space}}"
+    - equals:
+        property:
+          - node
+          - type
+        value:
+          externalId: BenchmarkingCollectorInput
+          space: "{{power_ops_type_space}}"
+implements:
+  - space: "{{power_ops_models}}"
+    externalId: FunctionInput
+    version: "{{version}}"
+    type: view
+version: "{{version}}"
+properties:
+  shopObjectiveValue:
+    container:
+      space: "{{power_ops_models}}"
+      externalId: FunctionData
+      type: container
+    containerPropertyIdentifier: direct1
+    name: shopObjectiveValue
+    source:
+      space: "{{power_ops_models}}"
+      externalId: ShopObjectiveValue
+      version: "{{version}}"
+      type: view
