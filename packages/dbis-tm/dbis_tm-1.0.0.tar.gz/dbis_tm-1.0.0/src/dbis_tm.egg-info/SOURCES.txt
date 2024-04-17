@@ -1,0 +1,17 @@
+pyproject.toml
+src/dbis_tm/Generate.py
+src/dbis_tm/Generate_Tasks.py
+src/dbis_tm/Solution_generator.py
+src/dbis_tm/TM.py
+src/dbis_tm/TMCheck.py
+src/dbis_tm/TMSolver.py
+src/dbis_tm/__init__.py
+src/dbis_tm.egg-info/PKG-INFO
+src/dbis_tm.egg-info/SOURCES.txt
+src/dbis_tm.egg-info/dependency_links.txt
+src/dbis_tm.egg-info/requires.txt
+src/dbis_tm.egg-info/top_level.txt
+tests/test_generator.py
+tests/test_perfomance.py
+tests/test_ub10Scorer.py
+tests/test_ub10TM.py
