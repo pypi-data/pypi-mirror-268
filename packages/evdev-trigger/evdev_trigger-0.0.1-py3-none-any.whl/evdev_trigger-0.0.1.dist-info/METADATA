@@ -1,0 +1,53 @@
+Metadata-Version: 2.3
+Name: evdev-trigger
+Version: 0.0.1
+Summary: Trigger actions based on evdev events from input devices.
+Project-URL: Documentation, https://github.com/codekuu/evdev-trigger#readme
+Project-URL: Issues, https://github.com/codekuu/evdev-trigger/issues
+Project-URL: Source, https://github.com/codekuu/evdev-trigger
+Author-email: codekuu <hello-evdev-trigger@inaktiverad.se>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: evdev==1.7.0
+Requires-Dist: pick==2.2.0
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: typer==0.12.3
+Description-Content-Type: text/markdown
+
+<center>
+<h1>
+    evdev-trigger
+</h1>
+Triggers "Actions" on input from evdev- devices. Select which devices to listen to and which actions to trigger based on the input.
+
+[![PyPI - Version](https://img.shields.io/pypi/v/evdev-trigger.svg)](https://pypi.org/project/evdev-trigger)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/evdev-trigger.svg)](https://pypi.org/project/evdev-trigger)
+
+![Demo gif](docs/demo.gif)
+
+</center>
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install evdev-trigger
+```
+
+## License
+
+`evdev-trigger` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

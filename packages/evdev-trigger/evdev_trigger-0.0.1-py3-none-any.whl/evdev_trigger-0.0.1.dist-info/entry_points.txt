@@ -1,0 +1,2 @@
+[console_scripts]
+evdev-trigger = evdev_trigger.main:app
