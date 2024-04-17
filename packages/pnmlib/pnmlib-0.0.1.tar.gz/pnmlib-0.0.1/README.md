@@ -1,0 +1,3 @@
+# `pnmlib`
+
+This library provides all the functionality necessary for performing pore network simulations. It is meant to replace the *backend* of OpenPNM eventually. The main design is based on the use of a single Python `dict` to not only hold all the data but to define the simulation. In other words, the relationships between objects and data and so on is all inferred from the data in the `dict`. Importantly, this `dict` has *no* super powers at all.  All the functionality is provided by the various functions, which accept a plain `dict` then infer everything it needs from the data in the `dict`.

@@ -1,0 +1,13 @@
+h5py
+matplotlib
+networkx
+numba
+numpy
+pandas
+pyamg
+pypardiso
+rich
+scipy
+sympy
+tqdm
+transforms3d
