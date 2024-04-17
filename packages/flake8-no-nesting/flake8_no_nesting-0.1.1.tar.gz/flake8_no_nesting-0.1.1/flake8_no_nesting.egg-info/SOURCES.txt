@@ -1,0 +1,11 @@
+README.md
+flake8_no_nesting.py
+setup.cfg
+setup.py
+flake8_no_nesting.egg-info/PKG-INFO
+flake8_no_nesting.egg-info/SOURCES.txt
+flake8_no_nesting.egg-info/dependency_links.txt
+flake8_no_nesting.egg-info/entry_points.txt
+flake8_no_nesting.egg-info/requires.txt
+flake8_no_nesting.egg-info/top_level.txt
+tests/test_flake8_no_nesting.py
