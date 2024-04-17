@@ -1,0 +1,8 @@
+stackql_deploy/__init__.py,sha256=crlYURA_2Ujkpz7iVPHovvxZRtvt4QBXF5AAFJzRfz0,23
+stackql_deploy/cli.py,sha256=6iFuDr6J-AFK2o1atHJBVvwkP7q0qd4dxu7lNewjH3c,3965
+stackql_deploy-1.0.0.dist-info/LICENSE,sha256=_JY7hKv3z4xkwQD_PO_DOvMVuE9-xKYNGH7y7fdnYYQ,1071
+stackql_deploy-1.0.0.dist-info/METADATA,sha256=JRN-bLWabLro16KVO9qVl512IbpiWulIwoknHeFGvn4,9564
+stackql_deploy-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+stackql_deploy-1.0.0.dist-info/entry_points.txt,sha256=uJgfKwXHV5JBClrlaU03YA8AmIw4T2YzKKq-zypkIqk,58
+stackql_deploy-1.0.0.dist-info/top_level.txt,sha256=uCnCBdo-yZ0GgITO3vzOhOF9vQsfw5Nz6TQi9Its-34,15
+stackql_deploy-1.0.0.dist-info/RECORD,,
