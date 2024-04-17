@@ -1,0 +1,6 @@
+setup.py
+mt_pykafka.egg-info/PKG-INFO
+mt_pykafka.egg-info/SOURCES.txt
+mt_pykafka.egg-info/dependency_links.txt
+mt_pykafka.egg-info/requires.txt
+mt_pykafka.egg-info/top_level.txt
