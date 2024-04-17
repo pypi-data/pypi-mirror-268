@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+dokuwiki_https_nbiancolin.egg-info/PKG-INFO
+dokuwiki_https_nbiancolin.egg-info/SOURCES.txt
+dokuwiki_https_nbiancolin.egg-info/dependency_links.txt
+dokuwiki_https_nbiancolin.egg-info/top_level.txt
