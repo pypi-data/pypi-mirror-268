@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: b2tob64
+Version: 0.1.0
+Summary: Custom converting b2/b42 to and from b64/b2
+Project-URL: Homepage, https://github.com/vjgtigers/b2tob64
+Project-URL: Bug Tracker, https://github.com/vjgtigers/b2tob64/issues
+Author-email: Vaughn Gugger <vjgtigers@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+This package allows for custom encoding between base2 (bianary) and base 64.
+WARNING: THIS WILL NOT TRANSLATE other b64 encodings and will NOT be able to encode/decode the same values
