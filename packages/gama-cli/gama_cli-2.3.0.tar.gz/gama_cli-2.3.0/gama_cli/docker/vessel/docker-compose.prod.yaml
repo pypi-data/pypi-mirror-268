@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  gama_ui:
+    restart: always
+
+  gama_chart_tiler:
+    restart: always
+
+  gama_chart_api:
+    restart: always
+
+  gama_vessel:
+    restart: always
+
+  gama_greenstream:
+    restart: always
+
+  gama_docs:
+    restart: always

@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  gama_vessel:
+    image: ghcr.io/greenroom-robotics/gama_vessel_educat:${GAMA_VERSION:-latest}
+    build:
+      dockerfile: projects/gama_vessel/Dockerfile
+      args:
+        - PACKAGE_NAME=educat_bringup
+
+  gama_docs:
+    environment:
+      GAMA_VARIANT: educat
