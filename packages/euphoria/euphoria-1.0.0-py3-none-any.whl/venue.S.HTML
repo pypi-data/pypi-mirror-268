@@ -1,0 +1,70 @@
+
+
+
+<pre>
+
+	<h1>euphoria</h1>
+	
+	<h2>docker</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.100 -v .:/euphoria -v /online/vaccines_euphoria/mints/euphoria:/online/vaccines_euphoria/mints/euphoria -it jumps:v2.1.0
+		docker run --network container_network --ip 192.168.0.100 -v .:/euphoria -v /online/vaccines_euphoria/mints/euphoria:/online/vaccines_euphoria/mints/euphoria -it jumps:v2.1.0
+		docker exec -it 9fd55c2b8034 bash
+
+	<h2>install</h2>
+		pip install sanic
+
+	<h2>link the readme</h2>
+		ln -s venues/stages/euphoria/room.md readme.MD
+
+	<h2>poetry</h2>
+		pip install poetry poetry-plugin-export
+		
+		poetry add sanic_swagger
+		
+		<h3>update</h3>
+		
+		
+		<h3>installations</h3>
+			poetry config virtualenvs.path /path/to/your/directory
+
+
+			#
+			#	if dev dependencies
+			#
+			# poetry export --with dev --format requirements.txt --output requirements.txt
+
+			cd /euphoria && rm -rf /euphoria/venues/stages_pip && poetry export --format requirements.txt --output requirements.txt && pip install -r requirements.txt -t /euphoria/venues/stages_pip
+
+
+
+		poetry env use python3
+		poetry shell
+
+		/root/.cache/pypoetry/virtualenvs/euphoria-p2eJTVsK-py3.10/lib/python3.10/site-packages/
+
+		cp -R /root/.cache/pypoetry/virtualenvs/euphoria-p2eJTVsK-py3.10/lib/python3.10/site-packages/ /euphoria/venues/stages_pip
+
+	<h2>publishing</h2>
+		(cd /euphoria/venues/stages/euphoria && pycycle --here) 
+	
+		python3 /euphoria/venues/stages/euphoria/__status/main/status.proc.py
+		python3 /euphoria/venues/stages/euphoria/__status/API/status.proc.py
+		cp /euphoria/venues/stages/euphoria/room.md /euphoria/readme.md
+		
+		#
+		#	poetry auth
+		#
+		
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+		
+		
+		# rm -rf stages_pip && pip install euphoria -t stages_pip
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>
