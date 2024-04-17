@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mypcremote"
+version = "0.5.4"
+
+authors = [
+  { name="Zain Ul Abidin", email="zain26134@gmail.com" }
+]
+
+keywords = [
+    "discord", 
+    "remote", 
+    "remote-pc", 
+    "pccontrol", 
+    "pc-remote",
+    "screen-sharing",
+    "remote-access",
+    "remote-control",
+    "pc-management",
+    "pc-administration",
+    "computer-access",
+    "computer-control"
+]
+
+description = "A good package to let your computer remote controlled using Discord"
+readme = "README.md"
+requires-python = ">=3.6"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+]
+
+dependencies = [
+    "python-dotenv",
+    "discord==2.3.2",
+    "pystray==0.19.5",
+    "serial==0.0.97",
+    "pynmea2==1.19.0",
+    "pyautogui==0.9.54",
+    "pyaudio==0.2.14",
+    "sounddevice==0.4.6"
+]
+
+license = {text = "MIT License"}
+
+[project.scripts]
+mypcremote = "mypcremote.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/Zedstron/My-PC-Remote"
+Issues = "https://github.com/Zedstron/My-PC-Remote/issues"
