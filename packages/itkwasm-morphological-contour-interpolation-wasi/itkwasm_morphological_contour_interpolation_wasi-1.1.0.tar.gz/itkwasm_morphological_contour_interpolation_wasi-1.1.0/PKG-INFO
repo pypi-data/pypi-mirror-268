@@ -1,0 +1,54 @@
+Metadata-Version: 2.3
+Name: itkwasm-morphological-contour-interpolation-wasi
+Version: 1.1.0
+Summary: Morphology-based approach for interslice interpolation of anatomical slices from volumetric images.
+Project-URL: Home, https://github.com/KitwareMedical/ITKMorphologicalContourInterpolation
+Project-URL: Source, https://github.com/KitwareMedical/ITKMorphologicalContourInterpolation
+License-Expression: Apache-2.0
+Keywords: itkwasm,wasi,webassembly
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: WebAssembly
+Classifier: Environment :: WebAssembly :: Emscripten
+Classifier: Environment :: WebAssembly :: WASI
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: importlib-resources
+Requires-Dist: itkwasm>=1.0.b145
+Description-Content-Type: text/markdown
+
+# itkwasm-morphological-contour-interpolation-wasi
+
+[![PyPI version](https://badge.fury.io/py/itkwasm-morphological-contour-interpolation-wasi.svg)](https://badge.fury.io/py/itkwasm-morphological-contour-interpolation-wasi)
+
+Morphology-based approach for interslice interpolation of anatomical slices from volumetric images. WASI implementation.
+
+This package provides the WASI WebAssembly implementation. It is usually not called directly. Please use [`itkwasm-morphological-contour-interpolation`](https://pypi.org/project/itkwasm-morphological-contour-interpolation/) instead.
+
+
+## Installation
+
+```sh
+pip install itkwasm-morphological-contour-interpolation-wasi
+```
+
+## Development
+
+```sh
+pip install pytest itkwasm-image-io
+pip install -e .
+pytest
+
+# or
+pip install hatch
+hatch run test
+```
