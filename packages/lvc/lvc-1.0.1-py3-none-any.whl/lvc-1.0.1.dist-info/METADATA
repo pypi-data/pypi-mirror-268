@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: lvc
+Version: 1.0.1
+Summary: Unofficial pip package for zero-shot voice conversion
+Home-page: https://github.com/fakerybakery/lvc
+Author: mrfakename
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: librosa
+Requires-Dist: soundfile
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: omegaconf
+Requires-Dist: praat-parselmouth
+Requires-Dist: scipy
+Requires-Dist: tensorboard
+Requires-Dist: torch
+Requires-Dist: torchaudio
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: cached-path
+
+# LVC
+
+Unofficial pip-installable Python package for [LVC-VC](https://github.com/wonjune-kang/lvc-vc) (zero-shot voice conversion) by Wonjune Kang, Mark Hasegawa-Johnson, Deb Roy.
+
+## Installation
+
+```
+pip install lvc
+```
+
+## Usage
+
+You can either convert files or convert arrays.
+
+### Convert Files
+
+```python
+from lvc import LVC, LVCAudio
+l = LVC()
+
+l.infer_file(
+    'orig.wav',
+    'sample.wav',
+    'target.wav',
+)
+```
+
+### Convert Arrays
+
+```python
+from lvc import LVC, LVCAudio
+import librosa
+import soundfile as sf
+l = LVC()
+
+o_y, o_sr = librosa.load('orig.wav')
+s_y, s_sr = librosa.load('sample.wav')
+
+o, sr = l.infer_array(
+    LVCAudio(o_y, o_sr),
+    LVCAudio(s_y, s_sr),
+)
+sf.write('out.wav', o, sr)
+```
+
+## License
+
+MIT
