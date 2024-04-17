@@ -1,0 +1,9 @@
+LICENSE
+setup.py
+js_code/__init__.py
+js_code/js_open.py
+js_code.egg-info/PKG-INFO
+js_code.egg-info/SOURCES.txt
+js_code.egg-info/dependency_links.txt
+js_code.egg-info/requires.txt
+js_code.egg-info/top_level.txt
