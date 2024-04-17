@@ -1,0 +1,15 @@
+dj_tenants/__init__.py,sha256=133nhsaYidWkQwPMEDcVrtnTlohPlD_ei2Yk3RLfl4c,1148
+dj_tenants/apps.py,sha256=jg0FD_eFvw9l7r3NS66_0H7yEIvyUTqj7HGXUMml3Q0,411
+dj_tenants/conf.py,sha256=aMDJ8jBy1y2wMPP428Gg-mIvO7-VbvbkqVQReNeVmug,324
+dj_tenants/context.py,sha256=r8Lviv7ED8qxZ92AOfVaTW_ZU5diGrN7qD_LJdAotE4,996
+dj_tenants/exceptions.py,sha256=Q_X0XgOfKJlEV0Xwbpbw9oEEoxDTmEB_qe309D8PUwE,46
+dj_tenants/middleware.py,sha256=Y1-Ifusrw-UolNyK4wWAWKuEWrwYeO7buUf5TFgvaaE,1451
+dj_tenants/models.py,sha256=upLew1_DijBL7_vQp9Q97MEyCViC-PDm826riiQFS_8,1295
+dj_tenants/postgres_backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dj_tenants/postgres_backend/base.py,sha256=1f4J4uwGoJ9CiRDCON3bHirgzjTZZ52dthx2lQsjBVY,434
+dj_tenants/postgres_backend/compiler.py,sha256=gIO8Kf8NH4aHUh4-L0pnb4m8tbYVjUq47q9zUZaMQFo,3666
+dj_tenants/postgres_backend/operations.py,sha256=rG8R1kz7SkcPaxhDJiYs-iLQipyrMFZh150odsu1FXw,224
+dj_tenants/utils.py,sha256=if630AQDflCqPfOl5PR3d-yKuJTmC7v-07JuLtSBkbg,819
+dj_tenants-0.1.2.dist-info/METADATA,sha256=h31ubz6PJpWoIJrz4EaXbIcgETmx71gx9pWz5DkaCkc,381
+dj_tenants-0.1.2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+dj_tenants-0.1.2.dist-info/RECORD,,
