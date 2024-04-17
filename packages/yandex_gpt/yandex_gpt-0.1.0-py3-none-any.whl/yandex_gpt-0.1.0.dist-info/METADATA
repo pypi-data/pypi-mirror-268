@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: yandex_gpt
+Version: 0.1.0
+Summary: Module for simple connecting to YandexGPT Api
+Author: vladartemenko
+Author-email: skabe99@yandex.ru
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+## (Module for simple connecting to YandexGPT Api)
+
+Example to use:
+```python
+from yandex_gpt import YandexGPT, Messages, SystemMessage, UserMessage
+
+yandex_gpt_client = YandexGPT(
+    OAUTH_TOKEN,
+    FOLDER_ID
+)
+
+chat = Messages(
+    SystemMessage('Ты в диалоге с пользователем. Отвечай на все его запросы'),
+    UserMessage('Привет! Посоветуй фильм на вечер')
+)
+
+response = yandex_gpt_client.completion(chat)
+print(response.alternatives[0].message)
+```
+
+It is possible to replace the model like this
+```python
+from yandex_gpt import YandexGPT, YandexGPTModels
+
+yandex_gpt_client = YandexGPT(
+    OAUTH_TOKEN,
+    FOLDER_ID,
+    gpt_model=YandexGPTModels.YANDEX_GPT_LITE
+)
+```

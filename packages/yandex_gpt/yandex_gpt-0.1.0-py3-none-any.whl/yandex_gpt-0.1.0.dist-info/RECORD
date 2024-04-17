@@ -1,0 +1,9 @@
+yandex_gpt/__init__.py,sha256=2YIWcKlJK2lDIMXrIdI3j-eYzn23VHZyCNhX0_6a3Uk,665
+yandex_gpt/iam_getter.py,sha256=y1vfViob2QxNlhcpIF9x0ThtcCspGWfUASUIhPSIUFA,1740
+yandex_gpt/interface.py,sha256=CaRnVXqt-iOynSkvbG7KdM_1SQ8jCRVSkAclMOrcdls,2995
+yandex_gpt/request_send.py,sha256=UFrLpmDvHWHbsdKGP7cf82GCdm0trsXb8BTibCuUKYI,1106
+yandex_gpt/schemas.py,sha256=drda_azOORdjoZzM5_c0Du_H0n_vOGkHarf_V5hzkrA,2568
+yandex_gpt/settings.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yandex_gpt-0.1.0.dist-info/METADATA,sha256=W91Ami7A9svPUAJOxirU_mTddZxeAN5U9YDnIj_l_oY,1235
+yandex_gpt-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+yandex_gpt-0.1.0.dist-info/RECORD,,
