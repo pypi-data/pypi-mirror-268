@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+client_onedoc.egg-info/PKG-INFO
+client_onedoc.egg-info/SOURCES.txt
+client_onedoc.egg-info/dependency_links.txt
+client_onedoc.egg-info/requires.txt
+client_onedoc.egg-info/top_level.txt
+onedoc/__init__.py
+onedoc/html_builder.py
+onedoc/merge.py
+onedoc/onedoc.py
+onedoc/split.py
