@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "collectiondict"
+version = "0.4.0"
+description = "Helpers to create dictionaries that collect values into collections"
+authors = ["Max Görner <5477952+MaxG87@users.noreply.github.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Topic :: Software Development :: Libraries",
+]
+homepage = "https://github.com/MaxG87/collectiondict/"
+repository = "https://github.com/MaxG87/collectiondict/"
+
+[tool.poetry.urls]
+Changelog = "https://github.com/MaxG87/collectiondict/releases/"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+
+[tool.poetry.group.dev.dependencies]
+hypothesis = "^6.99.9"
+pytest = "^8.1.1"
+pynvim = "^0.5.0"
+jedi = "^0.19.1"
+pdbpp = "^0.10.3"
+pytest-cov = "^3.0.0"
+mypy = "^1.9.0"
+black = "^24.3.0"
+ruff = "^0.3.3"
+pytest-xdist = "^3.5.0"
+
+[tool.mypy]
+allow_any_unimported = false
+warn_unreachable = true
+enable_error_code = [
+    "possibly-undefined"
+]
+strict = true
+
+[tool.pytest.ini_options]
+addopts = [
+    "--cov", "src",
+    "--doctest-modules",
+    "--doctest-glob", "*.md",
+    "--cov-branch",
+    "--cov-fail-under", "95"
+]
+
+[tool.ruff]
+src = [".", "src/"]
+
+[tool.ruff.lint]
+select = ["A", "B", "C", "F", "I", "ISC", "PIE", "PL", "Q", "RUF", "SIM", "TID", "W", "YTT"]
+ignore = ["E", "PLC1901", "SIM117"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 6
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
