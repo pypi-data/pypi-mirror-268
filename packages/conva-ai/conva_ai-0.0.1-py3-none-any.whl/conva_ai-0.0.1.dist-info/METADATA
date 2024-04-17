@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: conva_ai
+Version: 0.0.1
+Summary: Python SDK for using Conva AI co-pilots
+Author-email: Slang Labs <support@slanglabs.in>
+Project-URL: Homepage, http://www.slanglabs.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: annotated-types ==0.6.0
+Requires-Dist: pydantic ==2.7.0
+Requires-Dist: pydantic-core ==2.18.1
+Requires-Dist: sseclient-py ==1.8.0
+Requires-Dist: typing-extensions ==4.11.0
+
+## Python Library for Conva AI
+
+This is the python library for using Conva AI Co-pilots
+
+### Example
+
+```
+import asyncio
+from conva_ai.client import AsyncConvaAI
+
+async def generate(query: str, stream: bool):
+    omni_client = AsyncConvaAI(
+        assistant_id="<YOUR_COPILOT_ID>", 
+        assistant_version="<YOUR_COPILOT_VERSION>", 
+        api_key="<YOUR_API_KEY>"
+    )
+    response = omni_client.invoke_capability(query, stream=stream)
+    async for res in response:
+        print(res.model_dump_json(indent=4))
+
+asyncio.run(generate("how are you", True))
+```
