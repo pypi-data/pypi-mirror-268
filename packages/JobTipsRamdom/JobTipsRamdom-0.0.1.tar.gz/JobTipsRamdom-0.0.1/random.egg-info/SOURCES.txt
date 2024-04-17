@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+RandomJobWisdom.py
+__init__.py
+setup.py
+random.egg-info/PKG-INFO
+random.egg-info/SOURCES.txt
+random.egg-info/dependency_links.txt
+random.egg-info/top_level.txt

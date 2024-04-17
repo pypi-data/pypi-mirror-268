@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: JobTipsRamdom
+Version: 0.0.1
+Summary: Basic random job tips
+Home-page: UNKNOWN
+Author: parth
+Author-email: x21199434@student.ncirl.ie
+License: MIT
+Keywords: randomjobtips
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is the simple Random Job Wisdom Generation.
+
+Change log
+===========
+
+0.0.1 (16/04/24)
+----------------
+First Release
+
