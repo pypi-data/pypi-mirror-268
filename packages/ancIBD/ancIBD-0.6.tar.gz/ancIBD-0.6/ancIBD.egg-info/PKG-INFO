@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ancIBD
+Version: 0.6
+Summary: Identify IBD segments between pairs of individuals in ancient human DNA data
+Home-page: https://github.com/hringbauer/ancIBD
+Author: Harald Ringbauer
+Author-email: harald_ringbauer@eva.mpg.de
+License: UNKNOWN
+Description: # ancIBD
+        This Python software package screens ancient human DNA for long IBD blocks (Identity by Descent segments) shared between pairs of individuals.
+        
+        Please find the official documentation and installation instructions at [the official ancIBD readthedocs page](https://ancibd.readthedocs.io/en/latest/Intro.html).
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
