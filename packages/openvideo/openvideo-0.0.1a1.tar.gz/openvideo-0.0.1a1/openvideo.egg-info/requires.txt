@@ -1,0 +1,11 @@
+aiohttp>=3.9.3
+async_timeout>=4.0.3
+tqdm>=4.66.1
+texttable>=1.7.0
+moviepy>=1.0.3
+bs4>=0.0.2
+selenium>=4.19.0
+requests>=2.31.0
+huggingface_hub>=0.22.2
+opencv-python>=4.9.0.80
+scenedetect>=0.6.3
