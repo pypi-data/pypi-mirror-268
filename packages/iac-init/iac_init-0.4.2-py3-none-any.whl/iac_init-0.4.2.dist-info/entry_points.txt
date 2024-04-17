@@ -1,0 +1,3 @@
+[console_scripts]
+iac-init=iac_init.cli.main:main
+
