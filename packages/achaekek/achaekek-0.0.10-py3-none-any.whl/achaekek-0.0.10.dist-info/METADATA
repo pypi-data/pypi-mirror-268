@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: achaekek
+Version: 0.0.10
+Summary: Python library for the Manifold markets API.
+Author: TetraspaceW
+Author-email: holomanga@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# achaekek
+
+Manifold markets Python API
+
+Create a new Manifold client 
+
+```python
+from achaekek import Client
+client = Client(api_key="YOUR API KEY")
+```
+
+Make requests via this client
+
+```python
+new_market = CreateMultipleChoiceMarket(
+        question="Will creating this test market work?",
+        answers=["Yes", "No"],
+    )
+client.create_market(new_market)
+```
+
+Enjoy your market! 
