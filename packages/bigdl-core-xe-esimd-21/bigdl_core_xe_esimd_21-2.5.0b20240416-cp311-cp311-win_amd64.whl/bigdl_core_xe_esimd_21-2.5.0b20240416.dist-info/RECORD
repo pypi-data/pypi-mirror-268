@@ -1,0 +1,7 @@
+linear_fp16_esimd.cp311-win_amd64.exp,sha256=MsXMu48SwOmpOfr8fBqzW2IE08RrmBCGv5YgqLtyBSY,25396
+linear_fp16_esimd.cp311-win_amd64.lib,sha256=jTf1ChxbtOIBzd27k1MUaBTZqC_LvFGg6YkisESe74U,44632
+linear_fp16_esimd.cp311-win_amd64.pyd,sha256=tW318UEKHhX3PI3SEGPAdBOO3-5t-qRc5Hk9WktE0dk,5545984
+bigdl_core_xe_esimd_21-2.5.0b20240416.dist-info/METADATA,sha256=MRR0Lf4ig4EvmZdFUcLCnGCICRZVoI0xVwko60sBYqs,80
+bigdl_core_xe_esimd_21-2.5.0b20240416.dist-info/WHEEL,sha256=nSybvzWlmdJnHiUQSY-d7V1ycwEVUTqXiTvr2eshg44,102
+bigdl_core_xe_esimd_21-2.5.0b20240416.dist-info/top_level.txt,sha256=3SZdLObmgtRvzC9c1CRXuqaM5S5ZCRTyUEQFNtQKeF8,18
+bigdl_core_xe_esimd_21-2.5.0b20240416.dist-info/RECORD,,
