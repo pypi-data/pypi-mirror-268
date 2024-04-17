@@ -1,0 +1,2 @@
+[nose.plugins.0.10]
+nose_launchable = nose_launchable:Launchable
