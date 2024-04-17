@@ -1,0 +1,6 @@
+Pillow
+ffmpeg-python
+numpy
+torch
+scikit-image
+torchvision
