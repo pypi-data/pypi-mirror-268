@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: gridfinder
+Version: 3.1.2
+Summary: Algorithm for guessing MV grid network based on night time lights
+Keywords: ntl,electricity,grid
+Home-page: https://gridfinder.rdrn.me
+Author-Email: Chris Arderne <chris@rdrn.me>
+License: MIT License
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Homepage, https://gridfinder.rdrn.me
+Project-URL: Repository, https://github.com/carderne/gridfinder
+Requires-Python: >=3.9
+Requires-Dist: affine~=2.4
+Requires-Dist: click~=8.0
+Requires-Dist: fiona~=1.9
+Requires-Dist: geopandas~=0.14
+Requires-Dist: numba~=0.58
+Requires-Dist: numpy~=1.26
+Requires-Dist: pandas~=2.2
+Requires-Dist: pillow~=10.2
+Requires-Dist: pyarrow~=15.0
+Requires-Dist: pyproj~=3.6
+Requires-Dist: rasterio~=1.3
+Requires-Dist: Rtree~=1.2
+Requires-Dist: scikit-image~=0.22
+Requires-Dist: scipy~=1.12
+Requires-Dist: Shapely~=2.0
+Description-Content-Type: text/markdown
+
+# gridfinder
+
+gridfinder uses night-time lights imagery to as an indicator of settlements/towns with grid electricity access. Then a minimum spanning tree is calculated for these connect points, using a many-to-many variant Dijkstra algorithm and using existing road networks as a cost function. Adapted from [this work from Facebook](https://github.com/facebookresearch/many-to-many-dijkstra). Currently gridfinder only uses road networks, but it would be trivial to add other cost parameters such as slope or terrain.
+
+The algorithm looks as follows in process, guessing the grid network for Uganda:
+
+[![Animated algorithm](https://raw.githubusercontent.com/carderne/gridfinder/master/gridfinder-animated.gif)](#)
+
+## Input requirements
+gridfinder requires the following data sources:
+- VIIRS data, monthly and annual composites available [here](https://eogdata.mines.edu/products/vnl/).
+- OSM highway data, most easily available using the [HOT Export Tool](https://export.hotosm.org/en/v3/), otherwise [geofabrik](https://download.geofabrik.de/)
+
+## Model usage
+
+To get to grips with the API and steps in the model, open the Jupyter notebook `example.ipynb`.
+This repository  includes the input data needed to do a test run for Burundi, so it should be a matter of openening the notebook and running all cells.
+
+## Installation
+### Install with pip
+```bash
+pip install gridfinder
+```
+
+**Note:** On some operating systems (Ubuntu 18.04), you may get an error about `libspatialindex`. To overcome this on Ubuntu, run:
+```bash
+sudo apt install libspatialindex-dev
+```
+
+## Development
+Download or clone the repository and install the required packages (preferably in a virtual environment):
+```bash
+git clone https://github.com/carderne/gridfinder.git
+cd gridfinder
+rye sync
+```
+
+Useful commands:
+```bash
+rye fmt
+rye lint
+rye run check  # type check
+rye run test
+```
