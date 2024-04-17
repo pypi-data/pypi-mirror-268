@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "enforce-notebook-run-order"
+version = "1.5.0"
+description = ""
+authors = ["Chris Hacker <49451910+christopher-hacker@users.noreply.github.com>"]
+license = "MIT"
+urls = { homepage = "https://github.com/christopher-hacker/enforce-notebook-run-order" }
+readme = "README.md"
+packages = [
+    { include = "enforce_notebook_run_order", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+jupyter = "^1.0.0"
+click = "^8.1.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+pylint = "^2.17.4"
+pytest = "^7.3.1"
+pytest-mock = "^3.10.0"
+pytest-cov = "^4.1.0"
+sphinx = "^7.0.1"
+sphinx-click = "^4.4.0"
+recommonmark = "^0.7.1"
+pre-commit = "^3.3.2"
+pydata-sphinx-theme = "^0.13.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+enforce-notebook-run-order = "enforce_notebook_run_order.cli:cli"
+nbcheck = "enforce_notebook_run_order.cli:cli"
