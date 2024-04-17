@@ -1,0 +1,11 @@
+proton/__init__.py,sha256=U-DV558-ZZE2DqKbA4xmlaqU6LdCc_PvLlNP0uHpNdo,119
+proton/__main__.py,sha256=LKymfy7R8c7Wdllz_nX0hRme1W9Y3JaAQiX8Mab1tmo,2324
+proton/document.py,sha256=GMFERdC1e1LKEY2w7OCi3x1fMsS653VhiA6xt94dy24,3008
+proton/js.py,sha256=j_k-f1dt0Ks3UDOBIo__ZPZdhqtLkxNV8rq_kj346UQ,215
+proton/runpython.js,sha256=M8XITToU-ptu8IwbjAfc5vHN9sQy6_dReev8MrHC7Oc,271
+proton/utils.py,sha256=-5kAi9vIK1rCWFwVgHda9T8vyzxgxYoRgr2WY0V1Fio,497
+proton/window.py,sha256=zCDACRo4CcBA6YQbqK53zlGKc2hgRdc99J-jOWGKir8,983
+proton_web-0.1.0.dist-info/METADATA,sha256=SXNDah7S5XyBoArYL_GdMkZuqjcpWMKGq9-tJU_sqX8,764
+proton_web-0.1.0.dist-info/WHEEL,sha256=as-1oFTWSeWBgyzh0O_qF439xqBe6AbBgt4MfYe5zwY,87
+proton_web-0.1.0.dist-info/licenses/LICENSE,sha256=z3JyKBYdvckiEuqR4qvwCzozS1W7ubfimprTlRCf8nM,1091
+proton_web-0.1.0.dist-info/RECORD,,
