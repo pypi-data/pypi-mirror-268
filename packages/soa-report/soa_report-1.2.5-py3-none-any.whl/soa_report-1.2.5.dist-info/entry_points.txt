@@ -1,0 +1,3 @@
+[console_scripts]
+scenario_reporter = soa_report.scenario_reporter_cmd:main
+segmentation_reporter = soa_report.segmentation_reporter_cmd:main

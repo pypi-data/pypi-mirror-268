@@ -1,0 +1,100 @@
+{
+  "env_var": {
+    "HOME": "/Users/claudio.crego",
+    "OSVE_LIB": "$HOME/python3/simphony-deliveries/osve/bin/mac/",
+    "JUICE_KERNELS": "$HOME/juice_kernels",
+    "JUICE_CONF": "$HOME/python3/juice_configuration"
+  },
+  "request": {
+    "root_path": "./",
+    "scenario": "eps_package",
+    "partition_times": [
+      "2032-07-10T00:00:00",
+      "2032-07-17T00:00:00",
+      "2032-07-19T00:00:00"
+    ],
+    "experiment_types": [
+      "target",
+      "instrument_type"
+    ],
+    "output_dir": "./output",
+    "add_start_end_scenario": 0,
+    "report_title": "Summary Report",
+    "report_file_name": "report_test_creme_5_0",
+    "include_power_metrics": 0,
+    "run_simu": 1,
+    "experiment_to_ignore": ["PLATFORM"],
+    "overwrite_periods": {
+      "target": [
+        {
+          "start": "2034-12-19T00:00:00",
+          "end": "2035-09-28T12:00:00",
+          "experiments": [
+                 ["Ganymede", 95],
+                 ["Jupiter_Atmosphere", 5]
+          ]
+        }
+      ]
+    }
+  },
+  "osve":{
+      "scenario": "eps_package",
+      "crema_id": "crema_5_0",
+      "juice_conf": "$JUICE_CONF",
+      "kernel": {
+         "local_root_dir":"$HOME/juice_kernels",
+         "remote_url": "ftp://spiftp.esac.esa.int/data/SPICE/JUICE/kernels/",
+         "update": 1
+      },
+      "evf_data": "TOP_events.evf",
+      "itl_data": "ITL/TOP_timelines.itl",
+      "edf_data": "EDF/TOP_experiments.edf",
+      "ptr": "segment_with_pointing.json",
+      "output_time_step": 600,
+      "simu_time_step": 60,
+      "simu_output_dir": "simu"
+  },
+  "config_for_command_line_tool": "segmentation_reporter",
+  "request_parameter_descriptions": {
+        "root_path": "path of directory where eps_package is located ",
+        "scenario": "Name of the eps_package (directory)",
+        "partition_times": "list of time requested within (time format: YYYY-mm-ddTHH:MM:SS)",
+        "experiment_types": "list of experiment type within [instrument_type, segment_type, target, all]; Default all of them",
+        "output_dir": "path of output dir (which must exist); by default soa_report_output within eps_package directory",
+        "add_start_end_scenario": "This flag must be set to 0/1 to allow/avoid the inclusion of periods from/util start/end eps_package window",
+        "report_title": "Report title",
+        "report_file_name": "[Optional] Report file Name; default is 'report'",
+        "overwrite_periods": "This allows to overwrite sub-periods distributing the corresponding DV in per experiment in % (only for target experiment types)",
+        "include_power_metrics": "Flag to enforce/avoid inclusion of power metrics; default is 0/false",
+        "include_power_metrics_partition_details": "[Optional] Flag to enforce/avoid inclusion of power metric partition; default is 0/false to reduce report size; take into account only if include_power_metrics=1/true",
+        "include_ssmm_status_per_instruments": "[Optional] Flag to enforce/avoid inclusion of SSMM status per experiment; default true/1",
+        "include_instantaneous_data_rate_per_experiment": "[Optional] Flag to enforce/avoid inclusion of datarate per experiment; default false/0",
+        "experiment_to_ignore": "[Optional] list of experiment (included in eps_package) to be ignore (i.e PLATFORM); PLATFORM needed for power metrics",
+        "run_simu": "[optional] allowing to avoid osve re-run; default is 1/true; use for testing purpose",
+        "battery_capacity_if_sim_not_run": "[optional] allows to set the battery capacity in case OSVE sim not run; Only take into account if run_sin is 0/False"
+      },
+  "osve_description":{
+      "scenario": "Scenario folder (eps package name from timeline tool)",
+      "crema_id": "crema identifier",
+      "juice_conf": "path of the local copy of juice conf repository https://juigitlab.esac.esa.int/core-system/uplink/conf.git",
+      "metakernel": "path of metakernel file",
+      "kernel": {
+         "local_root_dir": "Path of kernel base directory ($KERNELS to be set in metakernel file); default is None/empty",
+         "remote_url": "[optional] Remote url hosting spice kernel, default is ftp://spiftp.esac.esa.int/data/SPICE/JUICE/kernels/",
+         "update": "Flag allowing to enforce wget update from remote_url to local_root_dir according to metakernel"
+      },
+      "evf_data": "Top event file relative path against experiment_types folder",
+      "itl_data": "Top ITL file relative path against experiment_types folder",
+      "edf_data": "Top def file relative path against (../..) + experiment_types folder",
+      "ptr": "Segmentation default pointing; Note could be .json or .xml (PTR) format",
+      "no_ptr_cut": "[optional] allowing to not cut ptr according to itl start/end times; default is False; take into account only if add_start_end_scenario = 0 and partition_times empty",
+      "path_to_geopipeline_data": "[optional] path to geopipeline data; if not specified take it from conf gitlab",
+      "path_eps_cfg": "[optional] path to eps.cfg template; if not provide use default one from osve_wrapper; if not specified take it from conf gitlab",
+      "output_time_step": "Defines the eps output reporting time step  (default: 60 seconds)",
+      "simu_time_step": "Defines the simulation delta time step (default: 1 seconds)",
+      "simu_output_dir": "Path to output directory for the simulation results (files)",
+      "create_ckAttitudeFile": "Flag 0/1 to create ckAttitudeFile 'segment_with_pointing_crema_X_Y.ck'",
+      "create_simDataFilePath": "Flag 0/1 to create simDataFile 'segment_with_pointing_crema_X_Y.csv'",
+      "create_attitudeXmlPtr": "Flag 0/1 to create attitudeXmlPtr 'segment_with_pointing_crema_X_Y.ptx' "
+  }
+}
