@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: model-explorer
+Version: 0.0.69
+Summary: A modern model graph visualizer and debugger
+Author-email: Google LLC <opensource@google.com>
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: flask
+Requires-Dist: ipython
+Requires-Dist: model-explorer-adapter ==0.3.3
+Requires-Dist: packaging
+Requires-Dist: portpicker
+Requires-Dist: requests
+Requires-Dist: termcolor
+Requires-Dist: typing-extensions
+Requires-Dist: torch
+Requires-Dist: numpy
+
