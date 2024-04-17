@@ -1,0 +1,12 @@
+numpy
+onnx
+onnxruntime
+onnxruntime-extensions
+transformers==4.37.2
+faiss-cpu
+torch
+pytest
+pytest-cov
+rank-bm25
+thefuzz[speedup]
+FlagEmbedding
