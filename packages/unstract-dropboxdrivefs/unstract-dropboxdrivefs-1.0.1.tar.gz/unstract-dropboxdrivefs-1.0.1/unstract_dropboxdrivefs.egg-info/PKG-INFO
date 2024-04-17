@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: unstract-dropboxdrivefs
+Version: 1.0.1
+Summary: Dropbox implementation by Unstract for fsspec module
+Home-page: https://github.com/Zipstack/dropboxdrivefs/
+Author: Zipstack Inc
+Author-email: devsupport@zipstack.com
+License: BSD
+Description: # Unstract's Dropboxdrivefs Implementation
+        
+        This is a fork of the [original dropboxdrivefs](https://github.com/fsspec/dropboxdrivefs) package which was created to help
+        address [this issue](https://github.com/fsspec/dropboxdrivefs/issues/12). This would be taken down as soon as the fix is released by the
+        original maintainer.
+        
+        For the original README.md, refer [the source](https://github.com/fsspec/dropboxdrivefs) directly.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
