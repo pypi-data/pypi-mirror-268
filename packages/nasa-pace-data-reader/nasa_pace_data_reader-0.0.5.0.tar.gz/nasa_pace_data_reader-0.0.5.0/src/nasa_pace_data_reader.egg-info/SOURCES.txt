@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/nasa_pace_data_reader/L1.py
+src/nasa_pace_data_reader/L2.py
+src/nasa_pace_data_reader/__init__.py
+src/nasa_pace_data_reader/plot.py
+src/nasa_pace_data_reader.egg-info/PKG-INFO
+src/nasa_pace_data_reader.egg-info/SOURCES.txt
+src/nasa_pace_data_reader.egg-info/dependency_links.txt
+src/nasa_pace_data_reader.egg-info/requires.txt
+src/nasa_pace_data_reader.egg-info/top_level.txt

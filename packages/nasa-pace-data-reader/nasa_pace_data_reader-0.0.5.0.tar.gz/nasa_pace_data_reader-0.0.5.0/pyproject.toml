@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nasa_pace_data_reader"
+version = "0.0.5.0"
+authors = [
+  { name="Anin Puthukkudy", email="aputhukkudy@umbc.edu" },
+]
+description = "A package for reading NASA PACE data files."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "matplotlib>=3.6",
+    "numpy>=1.21.2",
+    "netCDF4>=1.5.7",
+    "notebook>=6.4.3",
+    "scipy>=1.7.1",
+    "cartopy>=0.19.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/aninramesh/nasa-pace-data-reader"
+Issues = "https://github.com/aninramesh/nasa-pace-data-reader/issues"
