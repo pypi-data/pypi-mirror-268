@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/simple_config_sync/__init__.py
+src/simple_config_sync/__main__.py
+src/simple_config_sync.egg-info/PKG-INFO
+src/simple_config_sync.egg-info/SOURCES.txt
+src/simple_config_sync.egg-info/dependency_links.txt
+src/simple_config_sync.egg-info/entry_points.txt
+src/simple_config_sync.egg-info/requires.txt
+src/simple_config_sync.egg-info/top_level.txt
+src/simple_config_sync/core/__init__.py
+src/simple_config_sync/core/cli.py
+src/simple_config_sync/core/config.py
+src/simple_config_sync/core/tui.py
+src/simple_config_sync/core/assets/tui.tcss
