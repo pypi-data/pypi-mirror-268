@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools >= 67", "wheel >= 0.40"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "macal"
+dynamic = ["version"]
+authors = [
+  { name="Marco Caspers", email="SamaDevTeam@westcon.com" },
+]
+description = "Macal DSL is used for collecting and transforming data from various sources."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.9",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "unidecode",
+    "keyring",
+    "keyrings.alt",
+    "meraki",
+    "pydantic",
+    "python-jose[cryptography]"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Sama-Developer/macal"
+
+[project.scripts]
+mrepl = "macal.mrepl:main"
+mrun = "macal.mrun:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "macal.__about__.__version__"}

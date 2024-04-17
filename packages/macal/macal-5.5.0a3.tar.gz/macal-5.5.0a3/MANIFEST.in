@@ -1,0 +1,8 @@
+exclude tests/*
+exclude tests/scripts/*
+exclude tests/meraki_scripts/*
+include tests/agent.py
+include tests/test.py
+include tests/lib/*.py
+include tests/lib/*.mcl
+include py.typed
