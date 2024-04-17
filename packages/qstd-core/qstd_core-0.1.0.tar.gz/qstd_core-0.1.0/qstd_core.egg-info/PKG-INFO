@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: qstd-core
+Version: 0.1.0
+Summary: Application core based on sanic
+Home-page: https://github.com/QuisEgoSum/qstd-core
+Author: QuisEgoSum
+Author-email: subbotin.evdokim@gmail.com
+License: MIT
+Keywords: sanic
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+## Basic tools for the sanic application
