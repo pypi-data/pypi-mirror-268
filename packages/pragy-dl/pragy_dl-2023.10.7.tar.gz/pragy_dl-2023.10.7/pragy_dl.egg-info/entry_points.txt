@@ -1,0 +1,5 @@
+[console_scripts]
+pragy-dl = pragy_dl:main
+
+[pyinstaller40]
+hook-dirs = pragy_dl.__pyinstaller:get_hook_dirs
