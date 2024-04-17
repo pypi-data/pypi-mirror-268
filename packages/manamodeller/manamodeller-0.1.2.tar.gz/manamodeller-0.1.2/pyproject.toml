@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "manamodeller"
+version = "0.1.2"
+description = ""
+authors = ["Louison Fresnais <fresnaislouison@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.10"
+dexom-python = ">=1.0"
+tqdm = "^4.65.0"
+progressbar = "^2.5"
+networkx = ">=2.8.4"
+pyvis = ">=0.3.2"
+xlsxwriter = ">=3.1.0"
+jproperties = ">=2.1.1"
+jupyterlab = ">=4.0"
+pandas = "<=1.5.0"
+numpy = "^1.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
