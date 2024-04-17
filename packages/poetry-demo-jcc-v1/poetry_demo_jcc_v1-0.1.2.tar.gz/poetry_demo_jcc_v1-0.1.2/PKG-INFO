@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: poetry-demo-jcc-v1
+Version: 0.1.2
+Summary: J'son's first Poetry attempt! Just the How Long process wrapper.
+Author: Jason Cannelos
+Author-email: jasonc@esagegroup.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pendulum (>=3.0.0,<4.0.0)
+Description-Content-Type: text/x-rst
+
+=============================================
+how_long - JCC First Poetry project, v1, yay!
+=============================================
+
+Simple Decorator to measure a function execution time.
+
+Example
+_______
+
+.. code-block:: python
+
+    from how_long import timer
+
+
+    @timer
+    def some_function():
+        return [x for x in range(10_000_000)]

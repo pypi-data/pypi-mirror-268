@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "poetry-demo-jcc-v1"
+version = "0.1.2"
+description = "J'son's first Poetry attempt! Just the How Long process wrapper."
+authors = ["Jason Cannelos <jasonc@esagegroup.com>"]
+readme = "README.rst"
+packages= [
+    { include="poetry_demo", from="." }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pendulum = "^3.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+black = "^24.3.0"
+pytest = "^8.1.1"
+rstcheck = "^6.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
