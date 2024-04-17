@@ -1,0 +1,2 @@
+class TenantNotDefined(Exception):
+    pass
