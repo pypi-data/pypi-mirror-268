@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: jx3api
+Version: 20240417
+Summary: The Python SDK to the JX3API
+Home-page: https://www.jx3api.com
+Author: JX3API
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Dist: aiohttp
+
+The Python SDK to the JX3API
