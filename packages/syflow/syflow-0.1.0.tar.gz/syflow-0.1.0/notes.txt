@@ -1,0 +1,21 @@
+cuda 12.3.1 update 1
+cudnn 8.9.7.29 installed to C:\Program Files\NVIDIA\CUDNN\v8.x\
+python 3.12.1 from choco
+nasm 2.16.01 from https://www.nasm.us/pub/nasm/releasebuilds/2.16.01/win64/ (optional, to improve libjpeg-turbo performance)
+visual studio community 2022 17.8.3, MSVC 19.38.33133.0, cmake 3.27.2-msvc1
+
+opencv https://github.com/opencv/opencv/releases/tag/4.8.1
+opencv_contrib https://github.com/opencv/opencv_contrib/releases/tag/4.8.1
+
+cd opencv
+mkdir build
+& "C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release -DOPENCV_EXTRA_MODULES_PATH="..\..\opencv_contrib\modules" -DOPENCV_DNN_CUDA=ON -DWITH_CUDA=ON -DCUDNN_LIBRARY="C:\Program Files\NVIDIA\CUDNN\v8.x\lib" -DCUDNN_INCLUDE_DIR="C:\Program Files\NVIDIA\CUDNN\v8.x\include" ..
+& "C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe" --open .
+see https://docs.opencv.org/4.x/d5/de5/tutorial_py_setup_in_windows.html
+
+
+--
+fedora mesa-libGL-devel
+extra-cmake-modules wayland-protocols-devel
+python3-devel
+#wxGTK-devel mesa-libEGL-devel

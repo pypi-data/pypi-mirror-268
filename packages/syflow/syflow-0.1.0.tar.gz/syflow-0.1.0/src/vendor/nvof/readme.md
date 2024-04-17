@@ -1,0 +1,1 @@
+copied from Optical_Flow_SDK_5.0.7. Deleted functinos from NvOFUtils to remove dependency on FreeImage library.

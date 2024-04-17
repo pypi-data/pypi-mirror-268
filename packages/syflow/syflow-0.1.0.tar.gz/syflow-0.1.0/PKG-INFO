@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: syflow
+Version: 0.1.0
+Summary: Real-Time PIV
+Author: Sam Foxman
+Author-email: sfoxman@caltech.edu
+Requires-Python: >=3.7
