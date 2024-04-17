@@ -1,0 +1,9 @@
+monz/__init__.py,sha256=MnR5CQaQRNwh_J4DKocLoOe6mEiBcK44upNgX6KY24U,270
+monz/__main__.py,sha256=uXgCEgfE5htgzLWvAP33CwrliYdWSttj2S5FFMqNKxg,326
+monz/command_line.py,sha256=80-QPkX4iOTCGBldPQtmPLeaDwIn7eTduDVTnQXeBUE,7000
+monz/utils.py,sha256=lsj5t6wuKV4tlung84jTSWOIh36hl-3yHz4Cbj2XgMQ,209
+monz-1.0.0.dist-info/entry_points.txt,sha256=tg1IkYBc_zGp8OlHx_rPJA0Kw0Cgj5X2kXHeQaPDkxY,43
+monz-1.0.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+monz-1.0.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+monz-1.0.0.dist-info/METADATA,sha256=xVsbOTa7eFws9wq4xOwfPQ2z_sjeWSIujXqRqBvGKmI,6675
+monz-1.0.0.dist-info/RECORD,,

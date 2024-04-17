@@ -1,0 +1,3 @@
+[console_scripts]
+monz=monz.__main__:main
+
