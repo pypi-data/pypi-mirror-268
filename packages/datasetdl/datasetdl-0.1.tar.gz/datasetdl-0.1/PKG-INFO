@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: datasetdl
+Version: 0.1
+Summary: Download various datasets as json and csv files
+Home-page: https://github.com/StephenGrider/datasetdl
+Author: Stephen Grider
+Author-email: ste.grider@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+
+# datasetdl
+
+Contains various datasets in CSV or JSON format.
