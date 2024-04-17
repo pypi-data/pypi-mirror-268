@@ -1,0 +1,5 @@
+poppy_py-0.1.5.dist-info/METADATA,sha256=J7NIhi3-J8gMByGVvE_v5DlhGS6tAP4KCJ4K_wWD2nU,1776
+poppy_py-0.1.5.dist-info/WHEEL,sha256=88DykRyub23IQeCxphAc1eW7PZo2npnb8m2maKWpwLI,95
+poppy/__init__.py,sha256=hOsOR8ukwwGQHKe4nrstjtZ2nbnKyGbz4I6bBtz0jqk,103
+poppy/poppy.cp311-win_amd64.pyd,sha256=yJ1jpcZYNzpO_Qw0VxHeDKU8uB4WfonI-JkqB7euewc,368640
+poppy_py-0.1.5.dist-info/RECORD,,
