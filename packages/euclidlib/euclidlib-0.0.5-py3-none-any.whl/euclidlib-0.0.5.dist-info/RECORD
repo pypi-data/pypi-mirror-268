@@ -1,0 +1,11 @@
+euclidlib/__init__.py,sha256=dVx7zoFWnlP5h32jr_wEFv6g2CafIqgXDjHQFSRhpKA,370
+euclidlib/_util.py,sha256=J8FisnvrGSh0QZMVQOzrN-I0uhH6c2V8lWKL-UqfeLI,575
+euclidlib/_version.py,sha256=EJB7__SNK9kQS_SWZB_U4DHJ3P8ftF6etZEihTYnuXE,411
+euclidlib/photo/__init__.py,sha256=yAz-89GUoNN22VYlaFegCTIMDRSDEyLL7p2pcT7I03A,224
+euclidlib/photo/_le3_pk_wl.py,sha256=V2_RIkXGSEILtuHbtxS_OSASJVVLuZ-qaBsVfFtJ6-k,3564
+euclidlib/photo/_phz.py,sha256=vV0huw7fHwJK73CV05E6mToTkmWPJVmnZsNFl49nFns,4975
+euclidlib/spectro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+euclidlib-0.0.5.dist-info/METADATA,sha256=wSUPf3NsfsyGR6N-BCQiCH7vhK0K0WOxrp5cCr30PEY,1007
+euclidlib-0.0.5.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+euclidlib-0.0.5.dist-info/licenses/LICENSE,sha256=9DpbWNpG1XfnZoggdMUvZKfokodQwDqJ529w9qKRhtw,1086
+euclidlib-0.0.5.dist-info/RECORD,,

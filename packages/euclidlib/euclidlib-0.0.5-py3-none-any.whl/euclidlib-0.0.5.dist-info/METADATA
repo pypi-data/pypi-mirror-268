@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: euclidlib
+Version: 0.0.5
+Summary: Unofficial package to read data from the Euclid mission
+Project-URL: Repository, https://github.com/euclidlib/euclidlib
+Project-URL: Issues, https://github.com/euclidlib/euclidlib/issues
+Author-email: Nicolas Tessore <n.tessore@ucl.ac.uk>, Guadalupe Canas-Herrera <guadalupe.canasherrera@esa.int>
+Maintainer-email: Nicolas Tessore <n.tessore@ucl.ac.uk>, Guadalupe Canas-Herrera <guadalupe.canasherrera@esa.int>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: fitsio
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == 'test'
+Description-Content-Type: text/markdown
+
+# Unofficial Euclid Data Interface
+
+This is an unofficial Python package for reading data from the Euclid mission.
+It is maintained by volunteers on a best-effort basis.
