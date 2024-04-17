@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "navercafe"
+version = "0.2.1"
+description = ""
+authors = ["Yong Choi <ychoi_kr@naver.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.7.2"
+webdriver-manager = "^4.0.1"
+pandas = "^1.5.2"
+pyperclip = "^1.8.2"
+beautifulsoup4 = "^4.12.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
