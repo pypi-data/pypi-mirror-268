@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: cval-lib
+Version: 0.0.2.54
+Summary: python computer vision active learning library
+Home-page: https://cval.ai
+Author: DGQ | Cyrill Belyakov
+Author-email: 
+License-File: LICENSE
+Requires-Dist: pydantic==1.10.9
+Requires-Dist: requests>=2.31.0
+Requires-Dist: loguru==0.7.0
