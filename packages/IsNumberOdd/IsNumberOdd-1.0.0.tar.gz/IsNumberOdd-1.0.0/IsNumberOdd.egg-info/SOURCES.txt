@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+IsNumberOdd.egg-info/PKG-INFO
+IsNumberOdd.egg-info/SOURCES.txt
+IsNumberOdd.egg-info/dependency_links.txt
+IsNumberOdd.egg-info/requires.txt
+IsNumberOdd.egg-info/top_level.txt
+isOdd/__init__.py
+isOdd/is_odd.py
