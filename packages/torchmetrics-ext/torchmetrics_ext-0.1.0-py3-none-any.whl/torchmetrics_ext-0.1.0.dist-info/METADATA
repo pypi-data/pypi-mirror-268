@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: torchmetrics-ext
+Version: 0.1.0
+Download-URL: https://github.com/eamonn-zh/torchmetrics_ext
+Author: Yiming Zhang
+Requires-Dist: torchmetrics
+Requires-Dist: torch
+
