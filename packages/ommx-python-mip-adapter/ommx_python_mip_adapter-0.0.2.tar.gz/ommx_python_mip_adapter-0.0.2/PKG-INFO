@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: ommx_python_mip_adapter
+Version: 0.0.2
+Summary: An adapter for the Python-MIP from/to OMMX.
+Author-email: "Jij Inc." <info@j-ij.com>
+Project-URL: Repository, https://github.com/Jij-Inc/ommx-python-mip-adapter
+Project-URL: Issues, https://github.com/Jij-Inc/ommx-python-mip-adapter/issues
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE-APACHE
+License-File: LICENSE-MIT
+Requires-Dist: ommx>=0.1.0
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pyright; extra == "dev"
+
+OMMX adaptor for Python-MIP
+============================
+
+This package provides an adaptor for the [Python-MIP](https://www.python-mip.com/) from/to [OMMX](https://github.com/Jij-Inc/ommx)
+
+Python-MIP as a solver in OMMX toolchain
+-----------------------------------------
+```mermaid
+sequenceDiagram
+    participant O as Other OMMX toolchain
+    participant A as Adapter
+    participant P as Python-MIP
+    O->>A: ommx::Instance and Parameters for Python-MIP;
+    A->>P: Translate into Python-MIP input
+    P->>P: Solve with CBC, Gurobi, or other solvers
+    P->>A: Solution
+    A->>O: ommx:Solution
+```
+
+Python-MIP as a user interface to create OMMX instance
+-------------------------------------------------------
+TBW

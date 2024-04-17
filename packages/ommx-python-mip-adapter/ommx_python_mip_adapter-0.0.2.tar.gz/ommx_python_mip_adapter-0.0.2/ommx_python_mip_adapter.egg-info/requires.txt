@@ -1,0 +1,6 @@
+ommx>=0.1.0
+
+[dev]
+pytest
+mypy
+pyright
