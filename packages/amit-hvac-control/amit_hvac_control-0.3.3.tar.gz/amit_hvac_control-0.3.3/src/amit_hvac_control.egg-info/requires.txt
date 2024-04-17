@@ -1,0 +1,4 @@
+requests
+bs4
+asyncio
+aiohttp>=3.9.5
