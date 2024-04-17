@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main_title %}API : {{ tdata['row']['name'] }}{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/member_apis/update_inc_form.html" ) %}
+
+
+{% endblock %}
+

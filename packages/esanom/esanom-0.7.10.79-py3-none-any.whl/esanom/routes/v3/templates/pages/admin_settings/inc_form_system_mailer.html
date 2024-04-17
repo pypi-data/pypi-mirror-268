@@ -1,0 +1,13 @@
+
+
+<form hx-post="{{url_for('.hx_admin_settings_form_system_mailer')}}" hx-target="#hx-results_system_mailer">
+
+    <div class="mb-3">
+        <label for="input_1" class="form-label">system/mailer/token</label>
+        <input class="form-control" id="input_1" name="val_str" value="{{tdata['system/mailer/token']}}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">UPDATE</button>
+
+</form>
+<div id="hx-results_system_mailer"></div>

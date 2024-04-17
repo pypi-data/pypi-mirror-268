@@ -1,0 +1,8 @@
+
+
+{% if _tdata["is_admin"] %}
+{% include( "inc_loggedin_nav_admin.html" ) %}
+{% else %}
+{% include( "inc_loggedin_nav_member.html" ) %}
+{% endif %}
+
