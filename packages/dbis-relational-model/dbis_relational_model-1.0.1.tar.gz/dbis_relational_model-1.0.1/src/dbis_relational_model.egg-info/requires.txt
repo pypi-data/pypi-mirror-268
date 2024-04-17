@@ -1,0 +1,9 @@
+levenshtein~=0.23
+IPython
+
+[build]
+twine==4.*
+build==1.*
+
+[test]
+black==23.12.1
