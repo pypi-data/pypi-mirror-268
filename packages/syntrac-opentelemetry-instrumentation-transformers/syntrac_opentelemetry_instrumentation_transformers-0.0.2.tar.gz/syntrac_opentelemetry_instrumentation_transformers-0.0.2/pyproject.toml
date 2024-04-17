@@ -1,0 +1,33 @@
+[tool.coverage.run]
+branch = true
+source = [ "syntrac_opentelemetry/instrumentation/transformers" ]
+
+[tool.coverage.report]
+exclude_lines = [ "if TYPE_CHECKING:" ]
+show_missing = true
+
+[tool.poetry]
+name = "syntrac-opentelemetry-instrumentation-transformers"
+version = "0.0.2"
+description = "OpenTelemetry transformers instrumentation"
+authors = [ "Vuong Ngo <vuongngo.pd@gmail.com>" ]
+repository = "https://github.com/syntracAI/syntrac/tree/main/packages/python/opentelemetry-instrumentation-transformers"
+license = "Apache-2.0"
+readme = "README.md"
+
+  [[tool.poetry.packages]]
+  include = "syntrac_opentelemetry/instrumentation/transformers"
+
+  [tool.poetry.dependencies]
+  python = ">=3.9,<4"
+  opentelemetry-api = "^1.23.0"
+  opentelemetry-instrumentation = "0.44b0"
+  opentelemetry-semantic-conventions = "0.44b0"
+  syntrac-opentelemetry-semantic-conventions-ai = "0.0.1"
+
+[tool.poetry.group.dev]
+dependencies = { }
+
+[build-system]
+requires = [ "poetry-core" ]
+build-backend = "poetry.core.masonry.api"
