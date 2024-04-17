@@ -1,0 +1,163 @@
+# Vigil - SDK
+
+SDK for API monitoring, Job monitoring and Error monitoring.
+
+## Installation
+
+### pip
+
+```
+pip install -i https://test.pypi.org/simple/ foxsenseinnovations.vigil
+```
+
+## Usage
+
+### Django Application:
+
+Declare the below statements in main application view file
+
+```
+# import Vigil to initialize the API KEY
+from foxsenseinnovations.vigil import Vigil
+from foxsenseinnovations.vigil.vigil_types.vigil_options_types import VigilOptions
+
+# Define API_KEY (mandatory) , INSTANCE_URL (optional) and CLIENT_VERSION (optional) in settings.py file
+# Access the API_KEY from settings.py file
+api_key = django_settings.API_KEY
+
+# Define the VigilOptions instance with the desired values
+options = VigilOptions(api_key=api_key)
+
+# Initialize the Vigil class with the provided options
+Vigil.initialize(options)
+
+Optional parameters for VigilOptions:
+version and instance_url
+
+# Access the INSTANCE_URL, CLIENT_VERSION from settings.py file
+instance_url = django_settings.INSTANCE_URL
+cient_version = django_settings.CLIENT_VERSION
+
+# Initialize the Vigil class along with the optional parameters
+options = VigilOptions(api_key=api_key, version=cient_version, instance_url=instance_url)
+```
+
+## API Monitoring
+
+### Django Application:
+
+Declare the below statements in settings file
+
+```
+from foxsenseinnovations.vigil.vigil_types.api_monitoring_types import ApiMonitoringOptions, ExcludeOptions
+
+# In MIDDLEWARE of settings.py file add the below line
+'foxsenseinnovations.vigil.api_manager_django.ApiMonitoringMiddleware'
+```
+
+### Options
+
+Options are not mandatory
+
+| Options | Mandatory |     Default      |                          Values                          |
+| ------- | :-------: | :--------------: | :------------------------------------------------------: |
+| exclude |   FALSE   | ExcludeOptions() | ExcludeOptions(GET: [], POST: [], PATCH: [], DELETE: []) |
+
+#### Exclude
+
+- Excludes the given API path's for each method. These API are not monitored.
+
+#### Django Application:
+
+```
+from foxsenseinnovations.vigil.vigil_types.api_monitoring_types import ApiMonitoringOptions, ExcludeOptions
+
+# In MIDDLEWARE list of settings.py file add the below line
+'foxsenseinnovations.vigil.api_manager_django.ApiMonitoringMiddleware'
+
+# After MIDDLEWARE list add the below lines
+exclude_options = ApiMonitoringOptions(exclude=ExcludeOptions(GET=['/'],POST=['/health']))
+
+# '/' GET method and '/health' POST method APIs are not monitored
+API_MONITORING_OPTIONS = exclude_options
+```
+
+## Job Monitoring
+
+### Django Application:
+
+```
+# import JobManager to monitor the Jobs in the application
+from foxsenseinnovations.vigil.job_manager import JobManager
+from foxsenseinnovations.vigil.vigil_types.job_monitoring_types import JobDetail
+
+# Job function
+def job_func():
+    try:
+        // log that the job triggered with a start message
+        start_job_detail = {'job_id': "<job-id>", 'message': "<job-start-message>"}
+        JobManager.capture_job_start(JobDetail(**start_job_detail))
+        ...
+        ...
+        // log that the job has completed its execution with a success message
+        stop_job_detail = {'job_id': "<job-id>", 'message': "<job-end-message>"}
+        JobManager.capture_job_end(JobDetail(**stop_job_detail))
+    except Exception as error:
+        fail_job_detail = {'job_id'="<job-id>", message=f"<job-failure-message>: {str(error)}"}
+        JobManager.capture_job_failure(JobDetail(**fail_job_detail))
+```
+
+## Error Monitoring
+
+### Django Application:
+
+```
+# import ErrorManager to capture any exceptions/errors that occur in the application
+from foxsenseinnovations.vigil.error_manager import ErrorManager
+
+def function():
+    try:
+        ...
+        ...
+    except Exception as error:
+        // capture the exception from the error object
+        ErrorManager.capture_exception(error)
+```
+
+### Options
+
+Options are not mandatory
+
+| Options | Mandatory | Default |      Values      |
+| ------- | :-------: | :-----: | :--------------: |
+| tags    |   FALSE   |   []    | Array of strings |
+| context |   FALSE   |   {}    |    An object     |
+
+#### Tags and Context
+
+- Gives extra information about the exception that occurred
+
+```
+# import ErrorManager to capture any exceptions/errors that occur in the application
+from foxsenseinnovations.vigil.error_manager import ErrorManager
+
+def function():
+    try:
+        ...
+        ...
+    except Exception as error:
+        options = {
+            tags: ['tag1','tag2'],
+            context: {
+                <key1>: <value1>,
+                <key2>: <value2>
+            }
+        }
+        // capture the exception from the error object
+        // and pass extra information about the exception in options
+        ErrorManager.capture_exception(error, options)
+```
+
+## Keywords
+
+none
