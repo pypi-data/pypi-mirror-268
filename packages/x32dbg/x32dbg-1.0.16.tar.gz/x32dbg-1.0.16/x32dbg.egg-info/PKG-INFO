@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: x32dbg
+Version: 1.0.16
+Summary: A powerful x32dbg remote debugging module tools
+Author: lyshark
+Author-email: me@lyshark.com
+License: MIT Licence
+Platform: any
+Requires-Python: >=3.6.0
+License-File: LICENSE
