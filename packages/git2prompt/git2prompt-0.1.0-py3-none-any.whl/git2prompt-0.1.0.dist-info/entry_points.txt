@@ -1,0 +1,3 @@
+[console_scripts]
+git2prompt=git2prompt.__main__:main
+
