@@ -1,0 +1,3 @@
+[console_scripts]
+simpleconfigsync = simple_config_sync.core:run_cli
+simpleconfigsync-tui = simple_config_sync.core:run_tui
