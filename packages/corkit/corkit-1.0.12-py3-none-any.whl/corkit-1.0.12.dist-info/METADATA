@@ -1,0 +1,111 @@
+Metadata-Version: 2.1
+Name: corkit
+Version: 1.0.12
+Summary: Open source coronagraph data downloader and calibrator
+Home-page: https://github.com/Jorgedavyd/corkit
+Author: Jorge David Enciso Martínez
+Author-email: jorged.encyso@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Framework :: Matplotlib
+Classifier: Framework :: Pytest
+Classifier: Framework :: Sphinx
+Classifier: Framework :: Jupyter
+Classifier: Framework :: IPython
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Natural Language :: English
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles
+Requires-Dist: astropy
+Requires-Dist: beautifulsoup4
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pillow
+Requires-Dist: scikit-image
+Requires-Dist: scipy
+
+[![pypi](https://img.shields.io/pypi/v/corkit)](https://pypi.org/project/corkit)
+![status](https://img.shields.io/badge/status-beta-red.svg)
+[![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+# CorKit: Coronagraph Science Kit
+
+<img src="https://github.com/Jorgedavyd/corkit/raw/main/docs/source/logo.png"/>
+
+**CorKit** is an open-source Python library designed to streamline the 
+retrieval and preprocessing of solar coronagraph data. Its primary aim 
+is to democratize access to coronagraph data, enabling a broader community 
+of solar scientists to engage in research without the need for proprietary 
+software like IDL. It's derived from [Solarsoft](https://www.lmsal.com/solarsoft/):
+
+<img src="https://github.com/Jorgedavyd/corkit/raw/main/docs/examples/c2.png"/>
+
+## Key Features:
+
+1. **Open Source Accessibility**: **CorKit** removes barriers to entry by providing 
+free access to solar coronagraph data. Its open-source nature ensures that researchers, 
+educators, and enthusiasts can easily retrieve and analyze data without worrying about 
+proprietary software licenses.
+
+2. **User-Friendly Interface**: With simple and intuitive methods, **CorKit** makes it 
+effortless for users to retrieve and preprocess coronagraph data. This user-centric 
+approach allows researchers to focus more on their scientific analysis and less on 
+navigating complex data retrieval processes.
+
+3. **Advancing Solar Science**: By empowering researchers with the tools needed to 
+preprocess and analyze coronagraph data, **CorKit** contributes to the advancement of 
+solar science. Researchers can explore the intricate connections between the Sun and Earth, 
+leading to new insights and discoveries.
+
+4. **Community Collaboration**: **CorKit** fosters collaboration and knowledge sharing 
+within the solar science community. By providing a common platform for data access and 
+preprocessing, the library encourages interdisciplinary collaborations and accelerates 
+scientific progress.
+
+## Coronagraph data supported
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Stereo_logo.gif/1200px-Stereo_logo.gif" width="200" height="200" />
+<img src="https://lh6.googleusercontent.com/proxy/1sXRF-9df_jeWpUWlyDqUn4ddQ34PIis-2zBpOf46TeKkQPJdNVbLL_ciXXUaS-AZR0Z4tBFqaYSdIZJwuKnhNtIy2pFekckiA" width="200" height="200" />
+
+## Contact  
+
+- [Linkedin](https://www.linkedin.com/in/jorge-david-enciso-mart%C3%ADnez-149977265/)
+- [Email](jorged.encyso@gmail.com)
+- [GitHub](https://github.com/Jorgedavyd)
+
+## Citation
+
+@misc{corkit,
+  author = {Jorge Enciso},
+  title = {Corkit: An Open-Source Coronagraph Data Downloader and Calibrator},
+  howpublished = {\url{https://github.com/Jorgedavyd/corkit}},
+  year = {2024}
+}
+
