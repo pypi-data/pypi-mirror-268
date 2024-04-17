@@ -1,0 +1,3 @@
+[console_scripts]
+lunaticoastro_dragonfly_controller=dragonfly_dome:controller
+
