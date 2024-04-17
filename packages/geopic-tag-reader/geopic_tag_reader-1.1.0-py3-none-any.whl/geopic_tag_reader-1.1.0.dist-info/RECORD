@@ -1,0 +1,12 @@
+geopic_tag_reader/__init__.py,sha256=o8d20yL96tGKyj_0NXyBn_HJ2i1hofM-qTuKouf4ZkE,47
+geopic_tag_reader/camera.py,sha256=2Sr0jAt3RXUWazYMnkwF6J6lVnKvSp7Ac8g7yOHehVA,1643
+geopic_tag_reader/main.py,sha256=a0RmJIA0R5dTK1vzDZD3Q4MFFAiDv6pnRiFHjfIjeJU,3141
+geopic_tag_reader/model.py,sha256=rsWVE3T1kpNsKXX8iv6xb_3PCVY6Ea7iU9WOqUgXklU,129
+geopic_tag_reader/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+geopic_tag_reader/reader.py,sha256=w19zJ9CvdJyk_UxWcYX2T0DkhdQmw2xMzlAo1sR1ir0,22867
+geopic_tag_reader/writer.py,sha256=QmQqQpWgb6AL3Y0Kuzy7PF1asUsTVDq9buwJXfFSRq8,8672
+geopic_tag_reader-1.1.0.dist-info/entry_points.txt,sha256=c9YwjCNhxveDf-61_aSRlzcpoutvM6KQCerlzaVt_JU,64
+geopic_tag_reader-1.1.0.dist-info/LICENSE,sha256=oHWDwXkJJb9zJzThMN3F9Li4yFhz1qxOUByouY7L3bI,1070
+geopic_tag_reader-1.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+geopic_tag_reader-1.1.0.dist-info/METADATA,sha256=DJ9OiZyvVGNMdveGev-V33kO9sqPPo-V9SADIezd0I4,6303
+geopic_tag_reader-1.1.0.dist-info/RECORD,,
