@@ -1,0 +1,62 @@
+"""Contains example of dynamically generated configuration.
+
+In fact, what this script does, it simply uses cssfinder as library to perform
+calculations. This approach allows us to determine list of tasks without typical
+limitations of static files.
+
+"""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+from cssfinder.api import run_project
+from cssfinder.cssfproject import (
+    AlgoMode,
+    BackendCfg,
+    CSSFProject,
+    GilbertCfg,
+    Meta,
+    Precision,
+    RuntimeCfg,
+    SemVerStr,
+    State,
+    Task,
+)
+from pydantic import EmailStr
+
+TASKS = {
+    {%- for name, task in project.tasks.items() %}
+    "{{ name }}": Task(
+        gilbert=GilbertCfg(
+            mode=AlgoMode.{{ task.gilbert.mode.value }},
+            backend=BackendCfg(
+                name="{{ task.gilbert.backend.name }}",
+                precision=Precision.{{ task.gilbert.backend.precision.value }},
+            ),
+            state=State(file=Path("{{ task.gilbert.state.file }}")),
+            runtime=RuntimeCfg(
+                visibility={{ task.gilbert.runtime.visibility }},
+                max_epochs={{ task.gilbert.runtime.max_epochs }},
+                iters_per_epoch={{ task.gilbert.runtime.iters_per_epoch }},
+                max_corrections={{ task.gilbert.runtime.max_corrections }},
+            ),
+        ),
+    ),
+    {%- endfor %}
+}
+
+__project__ = CSSFProject(
+    meta=Meta(
+        author="{{ project.meta.author }}",
+        email=EmailStr("{{ project.meta.email }}"),
+        name="{{ project.meta.name }}",
+        description="{{ project.meta.description }}",
+        version=SemVerStr("{{ project.meta.version }}"),
+    ),
+    tasks=TASKS,
+    project_path=__file__,
+)
+
+if __name__ == "__main__":
+    run_project(__project__)

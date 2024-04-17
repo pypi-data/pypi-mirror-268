@@ -1,0 +1,4 @@
+[console_scripts]
+cssf=cssfinder.cli:main
+cssfinder=cssfinder.cli:main
+
