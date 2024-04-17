@@ -1,0 +1,62 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "redsession"
+authors = [{ name = "TheJecksMan" }]
+description = "Simple and fast server session middleware for FastAPI and Starlette"
+readme = "README.rst"
+requires-python = ">=3.8"
+license = "MIT"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Framework :: FastAPI",
+]
+dynamic = ["version"]
+
+dependencies = [
+    "starlette>=0.36.3",
+    "itsdangerous>=2.1.2",
+    "redis>=5.0.0,<6.0.0",
+]
+
+[project.optional-dependencies]
+opt = ["redis[hiredis]>=5.0.0,<6.0.0", "orjson>=3.9.0"]
+
+[project.urls]
+Repository = "https://github.com/TheJecksMan/red-session"
+Issues = "https://github.com/TheJecksMan/red-session/issues"
+Docs = "https://red-session.readthedocs.io/en/stable/"
+
+[tool.hatch.version]
+path = "redsession/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = ["/.github", "/docs", "/examples"]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "FA", # flake8-future-annotations
+    "UP", # pyupgrade
+]
+
+[tool.ruff.format]
+quote-style = "double"
