@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: lambda-invoke
+Version: 0.5
+Summary: Conveniently invoke lambda mimicking a proxy invocation
+Home-page: https://github.com/IlyaSukhanov/lambda-invoke
+Author: Ilya Sukhanov
+Author-email: ilya@sukhanov.net
+License: MIT license
+Keywords: aws,lambda-invoke
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS.rst
+Provides-Extra: testing
+Requires-Dist: pip ; extra == 'testing'
+Requires-Dist: flake8 ; extra == 'testing'
+Requires-Dist: tox ; extra == 'testing'
+Requires-Dist: coverage ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pyflakes ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: bandit ; extra == 'testing'
+Requires-Dist: black ; extra == 'testing'
+Requires-Dist: isort ; extra == 'testing'
+Requires-Dist: wheel ; extra == 'testing'
+Requires-Dist: twine ; extra == 'testing'
+Requires-Dist: build ; extra == 'testing'
+
+===============================
+Lambda-invoke
+===============================
+
+
+.. image:: https://img.shields.io/pypi/v/lambda-requests.svg
+        :target: https://pypi.python.org/pypi/lambda-invoke
+
+
+Lambda-invoke a convenient library for calling AWS lambdas using proxy
+interface 
+
+Quick start
+------------
+
+Installation
+````````````
+
+.. code-block:: shell
+
+    pip intall lambda-invoke
+
+Examples
+````````
+
+For usage examples refer to lambda-request or lambda-httpx.
