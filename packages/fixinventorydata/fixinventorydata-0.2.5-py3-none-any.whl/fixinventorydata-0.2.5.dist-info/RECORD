@@ -1,0 +1,15 @@
+fixinventorydata/__init__.py,sha256=pIOCRd4oUPV2Yh-HwAarKbVAt3VfbEKKBEPo2AcBYlA,432
+fixinventorydata/__main__.py,sha256=DtYUAtMVAVcnlMASjq0r6GGxOihoqVHXyGf2IzinMKQ,14962
+fixinventorydata/cloud.py,sha256=R8rEoVEfpakiThoy-gs0y_hscd1y_dCTE9TFAXtDUIs,2604
+fixinventorydata/co2.py,sha256=V4a0zpBRMzz_vVXhQY0DJ1ppndAgqFG3JVO1-P5a4xA,99
+fixinventorydata/colors.py,sha256=fMqGtkKNIhe6mIFiF3mmny0to0DQioH_j_87-g_A1Kc,91
+fixinventorydata/utils.py,sha256=1c3qaIA6Vzvp2nL22SNcZsPR0GxVfNiXfFWYCTNXc80,2367
+fixinventorydata/data/ccfdataset.json,sha256=5d0q7fYMqk_VSkeNYNDg8Z8ycZuKAMShDD4QdWPl0YU,17029
+fixinventorydata/data/colors.json,sha256=h7y3UvQlHb8EX6Eulq250T0YWEzGyMf9llqyLUH_JxU,1677
+fixinventorydata/data/instances.json,sha256=VUbxUT9YQI4ScjO7g0rfADeh7bqFu9gEYwBCQrdimTI,18763286
+fixinventorydata/data/regions.json,sha256=DPZV6l6QGnDel9ZuBvBHQfnBk4-rkbHv_UM0NDy0ckg,15958
+fixinventorydata-0.2.5.dist-info/METADATA,sha256=tQA_Ih4TykoOsA00X22oInROc6bSxjGcl1ghR7AH-C4,1496
+fixinventorydata-0.2.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fixinventorydata-0.2.5.dist-info/entry_points.txt,sha256=i8B1LCtw3CNgsQMd3UorXUTVm4Gskuccpg1HFeFHU3M,326
+fixinventorydata-0.2.5.dist-info/top_level.txt,sha256=fXnF23Lvd0bQdKhgYcPjXUEAxzz3uoYRJJ_kcoP5ZvA,17
+fixinventorydata-0.2.5.dist-info/RECORD,,
