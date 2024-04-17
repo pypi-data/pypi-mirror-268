@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+directory = "dist"
+
+[tool.hatch.build.targets.sdist]
+include = ["music_kraken/*.py", "music_kraken/**/*.py" ]
+
+[tool.hatch.build.targets.wheel]
+packages = ["music_kraken"]
+
+[project.scripts]
+music-kraken = "music_kraken.__main__:cli" 
+
+[tool.hatch.version]
+source = "vcs"
+path = "music_kraken/_version.py"
+fallback-version = "0.0.0"
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "music_kraken/_version.py"
+
+[project]
+name = "music-kraken"
+description = "An extensive music downloader crawling the internet. It gets its metadata from a couple of metadata providers, and it scrapes the audiofiles."
+authors = [{ name = "Hellow2", email = "hazel_is_cute@proton.me" }]
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+repository = "https://github.com/HeIIow2/music-downloader"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "requests~=2.31.0",
+    "responses~=0.24.1",
+    "beautifulsoup4~=4.11.1",
+
+    "pyffmpeg~=2.4.2.18.1",
+    "ffmpeg-progress-yield~=0.7.8",
+    "mutagen~=1.46.0",
+    "pillow~=10.3.0",
+
+    "rich~=13.7.1",
+    "mistune~=3.0.2",
+    "html2markdown~=0.1.7",
+    "jellyfish~=0.9.0",
+    "transliterate~=1.10.2",
+    "pycountry~=23.12.11",
+    
+    "python-dotenv~=1.0.1",
+    "tqdm~=4.65.0",
+    "platformdirs~=4.2.0",
+    "pathvalidate~=2.5.2",
+    "toml~=0.10.2",
+    "typing_extensions~=4.7.1",
+
+    "sponsorblock~=0.1.3",
+    "youtube_dl",
+]
+dynamic = [
+    "version"
+]
