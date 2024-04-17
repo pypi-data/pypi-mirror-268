@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: silobuster-test
+Version: 0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: psycopg2
+Requires-Dist: tld
+
+UNKNOWN
+
