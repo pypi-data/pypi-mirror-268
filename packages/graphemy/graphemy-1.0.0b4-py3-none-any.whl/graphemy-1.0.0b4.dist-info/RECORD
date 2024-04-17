@@ -1,0 +1,15 @@
+graphemy/__init__.py,sha256=RDl4eDpMghnVG88XRwMwbFPVAzmPh0RfOFMd7WRL91o,717
+graphemy/database/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+graphemy/database/operations.py,sha256=92o3EtyCznaWzrsPPVRLeRxkmqlMLbYwH21k_uRISzU,5630
+graphemy/database/utils.py,sha256=0ZWjFXlO_Dz6CxZoppoJAxGB2YXAc3WRy2dS8gipToI,1574
+graphemy/dl.py,sha256=1PXSZehMMsmIbZdBBY__akZtXL0IEysHtqWYNZIWHow,2367
+graphemy/models.py,sha256=-fsZ0XxnXyiEjemmBkRop6VczdAWl_KN-HcH5IjhWVM,1356
+graphemy/router.py,sha256=0J9KIVR0dFbSk8s-sIbVUYkCWoMlEi80rBBrG4sdvUo,5420
+graphemy/schemas/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+graphemy/schemas/generators.py,sha256=mX_5ca39ttzwRlxXQ7AIkC71EM3Bf6aagw4_KBZJpV4,7679
+graphemy/schemas/models.py,sha256=0HaH_uxXfoj5PNiAUowL_m60HTZj1N3I1-HjOCHpPD8,193
+graphemy/setup.py,sha256=LvB7_H4iO3VNQYr6g8iJOHDB7UfDgyjZl28lLbKU4bE,2699
+graphemy-1.0.0b4.dist-info/LICENSE,sha256=zG5pvj0q8uYEW4Pd5hHMMjq7o7VX8tq67baV-D-TC_g,1100
+graphemy-1.0.0b4.dist-info/METADATA,sha256=WkQISxfo_7tVewTy184NOcSVa-Y41yItTIIyGT0HLp0,4746
+graphemy-1.0.0b4.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+graphemy-1.0.0b4.dist-info/RECORD,,
