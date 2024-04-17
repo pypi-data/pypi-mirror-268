@@ -1,0 +1,16 @@
+pulpo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pulpo/pulpo.py,sha256=GYHvrmwbUUoph0ejsIwkHjoVkV0fXc_LT_oxZG9lyT8,3595
+pulpo/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pulpo/utils/bw_parser.py,sha256=xRscVcgKeUeUfYGtAwCtwdY_UrZvfGHw3VkYZ0p0UBQ,4419
+pulpo/utils/converter.py,sha256=Yy5c_Hz_-dnTL2tt6PgKpSxm7XukroGiUl8YxFWbCs4,6657
+pulpo/utils/optimizer.py,sha256=BJ5mTAlFkdtELBMAkhYghflT839J3aCJLUD6Nt_ukw8,10207
+pulpo/utils/saver.py,sha256=V7ZkiwDgW2i0kLB81oQmAc8h7-kBcu5JT6iROfOHF08,5566
+pulpo/utils/tests.py,sha256=ywi6oWmrPSZnzEthOaTg7LZ_z8Oxjx00s9Cr63f2bWc,9759
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/sample_database.py,sha256=e2znCx8lL2wa833J4M7zTC6w97SFs4MOyPC4okTq7YM,6046
+tests/test_functions.py,sha256=K14PpVE5LZIkYbBUGvll_3pm-qCBqcSqLqzUM5bi3x8,4756
+pulpo_dev-0.0.4.dist-info/LICENSE,sha256=V32G5cr4FFb92OVoSpe-uO44nKBWzkoh1K8clOtk_RI,1553
+pulpo_dev-0.0.4.dist-info/METADATA,sha256=htqvilfJigpvtZJJafLeATEJg32jbRYtWgdtuGufrBU,4545
+pulpo_dev-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pulpo_dev-0.0.4.dist-info/top_level.txt,sha256=jC9zqFV_GTxpgWEbYxOID4Dd9aXqxWh3-X81O9ZoRkA,12
+pulpo_dev-0.0.4.dist-info/RECORD,,
