@@ -1,0 +1,11 @@
+OpenSSL-stubs/METADATA.toml,sha256=bEm__4qvWiYW3buahA2BbJbRMSSLojHjXxro-K2WaV8,251
+OpenSSL-stubs/SSL.pyi,sha256=5MqqSfza6cPMHaMAGLJeLaRJhKAigs-3gQUt0w-On68,7326
+OpenSSL-stubs/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+OpenSSL-stubs/crypto.pyi,sha256=niXEpuIv9THEzLoNq4cOx-20-Cyx-w5aBakoz9gCOgI,8251
+OpenSSL-stubs/py.typed,sha256=la67KBlbjXN-_-DfGNcdOcjYumVpKG_Tkw-8n5dnGB4,8
+OpenSSL-stubs/rand.pyi,sha256=mLP2o4IVqfZaa6qpo3kQQ6Z3sQ4QzftFhap5XM-Vs2U,113
+OpenSSL-stubs/version.pyi,sha256=SHiICuFMJZMeFPncSnexFFeItjP8aM-B8XYNuIQtwFA,130
+types_pyOpenSSL-24.0.0.20240417.dist-info/METADATA,sha256=luWnueaA9m5ain-ebS1f0iK1ZkTTrVwDk2c6URdE37k,1834
+types_pyOpenSSL-24.0.0.20240417.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+types_pyOpenSSL-24.0.0.20240417.dist-info/top_level.txt,sha256=JO9wJnuNTnsQL0C1OdbvpeZXNhDKZpnUByZONDCxgQc,14
+types_pyOpenSSL-24.0.0.20240417.dist-info/RECORD,,
