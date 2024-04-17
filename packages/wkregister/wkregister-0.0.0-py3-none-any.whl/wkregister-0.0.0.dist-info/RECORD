@@ -1,0 +1,12 @@
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_logs.py,sha256=SmEN2bgOuMdoQDAhNcSQ5IaqHPwDqrznx1XokonXfBY,643
+wkregister/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wkregister/decorator.py,sha256=7eSQZRCzbgNj3kN_7QEDJoAw2HqlsmQL6iUxYOHtSzA,1116
+wkregister/models.py,sha256=AUXn2Me-Xej06_-70LWzmanJnTdNaHMakTpxTf_UrUk,420
+wkregister/producer.py,sha256=qufrlCtn-FtHzceD7F5gS3FdA9qOBHh1KxKaB4Mp_4Q,1407
+wkregister/util.py,sha256=303JIbdS5FzW400gS-wrTuOMDY5s_UlphW31rMW3OtA,685
+wkregister-0.0.0.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+wkregister-0.0.0.dist-info/METADATA,sha256=LPZZrJOYksOeVeWFdzRjPucyAua4gj8FYxdWW6sElow,2471
+wkregister-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+wkregister-0.0.0.dist-info/top_level.txt,sha256=wuXrc74gInecLrzrzKE6pytg_gjrIAMwSbhYA8-nwpQ,16
+wkregister-0.0.0.dist-info/RECORD,,
