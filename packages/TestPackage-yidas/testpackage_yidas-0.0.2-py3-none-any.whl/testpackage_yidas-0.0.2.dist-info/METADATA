@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: TestPackage_yidas
+Version: 0.0.2
+Summary: A small example package
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Author-email: Example Author <author@example.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Test Package
+
+This is a simple example of how to create a Python package.
+
+## Installation
+
+Run `pip install yidas-TestPackage`
+
+## Usage
+
+```python
+from yidas_TestPackage import TestClass
+
+obj = TestClass()
+print(obj.greet())
