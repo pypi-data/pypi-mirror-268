@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/soma_integ/__init__.py
+src/soma_integ/basemodel.py
+src/soma_integ/config.py
+src/soma_integ/data.py
+src/soma_integ/evaluation.py
+src/soma_integ/methods.py
+src/soma_integ/optimization.py
+src/soma_integ/utils.py
+src/soma_integ.egg-info/PKG-INFO
+src/soma_integ.egg-info/SOURCES.txt
+src/soma_integ.egg-info/dependency_links.txt
+src/soma_integ.egg-info/requires.txt
+src/soma_integ.egg-info/top_level.txt
+tests/test.py

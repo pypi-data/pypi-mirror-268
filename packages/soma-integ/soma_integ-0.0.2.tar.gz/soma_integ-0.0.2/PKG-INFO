@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: soma_integ
+Version: 0.0.2
+Summary: A package for integrating implementation and evaluation of machine learning platforms
+Author-email: Sobhan Ahmadian Moghadam <sobhan.ahmadian.moghadam@gmail.com>, Arman Rezaei <arman.x.rezaei@gmail.com>
+Project-URL: Homepage, https://github.com/sobhanAhmadian/soma_integrate
+Project-URL: Issues, https://github.com/sobhanAhmadian/soma_integrate/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: sklearn
+Provides-Extra: ml
+Requires-Dist: torch; extra == "ml"
