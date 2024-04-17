@@ -1,0 +1,33 @@
+.. raw:: html
+
+    <p align="center">
+        <a href="https://fftai.github.io" target="_blank" rel="noopener noreferrer">
+            <img width="150" src="_static/icon.svg" alt="logo">
+        </a>
+    </p>
+
+RoCS Client SDK Package
+
+The RoCS (Robot Control System) Client SDK provides a comprehensive set of tools and classes for interacting with robots. This package facilitates communication and control of both human and car robots, offering features for motor control, arm and hand actions, as well as different modes for car robots.
+
+
+
+RoCS Client SDK Python Reference Guide
+=======================================
+
+.. toctree::
+   :maxdepth: 2
+
+   rocs_client.robot
+   rocs_client.motor
+   rocs_client.common
+
+
+
+Resources
+==================
+
+* `RoCS Client SDK Python Package <https://pypi.org/project/rocs-client/>`_
+* `RoCS official documentation <https://fftai.github.io>`_
+
+

@@ -1,0 +1,20 @@
+motor subpackage
+==========================
+
+Introduction
+---------------
+
+.. automodule:: rocs_client.motor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+motor module
+-------------------------------
+
+.. automodule:: rocs_client.motor.motor
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
