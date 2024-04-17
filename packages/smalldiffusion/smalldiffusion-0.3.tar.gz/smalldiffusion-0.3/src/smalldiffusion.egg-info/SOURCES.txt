@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/smalldiffusion/__init__.py
+src/smalldiffusion/data.py
+src/smalldiffusion/diffusion.py
+src/smalldiffusion/model.py
+src/smalldiffusion.egg-info/PKG-INFO
+src/smalldiffusion.egg-info/SOURCES.txt
+src/smalldiffusion.egg-info/dependency_links.txt
+src/smalldiffusion.egg-info/requires.txt
+src/smalldiffusion.egg-info/top_level.txt
+tests/test_diffusion.py
