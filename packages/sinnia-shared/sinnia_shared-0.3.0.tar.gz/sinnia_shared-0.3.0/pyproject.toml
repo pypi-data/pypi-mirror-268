@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "sinnia-shared"
+version = "0.3.0"
+description = "AMQP utils. Named database connection utils. String and date utils."
+authors = ["soniaseguz <sonia.segura@sinnia.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pymysql = "^1.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
