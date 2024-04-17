@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "dstulz"
+version = "0.1.0"
+description = "Set of tools for data science"
+authors = ["Siarhei Uhlianets <s.uhlianets@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.4"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+
+[tool.ruff.format]
+line-ending = "auto"
