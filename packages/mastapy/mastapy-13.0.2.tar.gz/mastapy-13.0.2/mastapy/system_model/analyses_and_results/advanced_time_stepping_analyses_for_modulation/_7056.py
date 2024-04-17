@@ -1,0 +1,255 @@
+"""CouplingAdvancedTimeSteppingAnalysisForModulation"""
+
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, TypeVar
+
+from mastapy._internal import constructor
+from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+    _7118,
+)
+from mastapy._internal.cast_exception import CastException
+from mastapy._internal.python_net import python_net_import
+
+_COUPLING_ADVANCED_TIME_STEPPING_ANALYSIS_FOR_MODULATION = python_net_import(
+    "SMT.MastaAPI.SystemModel.AnalysesAndResults.AdvancedTimeSteppingAnalysesForModulation",
+    "CouplingAdvancedTimeSteppingAnalysisForModulation",
+)
+
+if TYPE_CHECKING:
+    from mastapy.system_model.part_model.couplings import _2591
+    from mastapy.system_model.analyses_and_results.system_deflections import _2739
+    from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+        _7040,
+        _7045,
+        _7100,
+        _7122,
+        _7137,
+        _7014,
+        _7099,
+    )
+    from mastapy.system_model.analyses_and_results.analysis_cases import _7556, _7553
+    from mastapy.system_model.analyses_and_results import _2665, _2661, _2659
+
+
+__docformat__ = "restructuredtext en"
+__all__ = ("CouplingAdvancedTimeSteppingAnalysisForModulation",)
+
+
+Self = TypeVar("Self", bound="CouplingAdvancedTimeSteppingAnalysisForModulation")
+
+
+class CouplingAdvancedTimeSteppingAnalysisForModulation(
+    _7118.SpecialisedAssemblyAdvancedTimeSteppingAnalysisForModulation
+):
+    """CouplingAdvancedTimeSteppingAnalysisForModulation
+
+    This is a mastapy class.
+    """
+
+    TYPE = _COUPLING_ADVANCED_TIME_STEPPING_ANALYSIS_FOR_MODULATION
+    _CastSelf = TypeVar(
+        "_CastSelf", bound="_Cast_CouplingAdvancedTimeSteppingAnalysisForModulation"
+    )
+
+    class _Cast_CouplingAdvancedTimeSteppingAnalysisForModulation:
+        """Special nested class for casting CouplingAdvancedTimeSteppingAnalysisForModulation to subclasses."""
+
+        def __init__(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+            parent: "CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ):
+            self._parent = parent
+
+        @property
+        def specialised_assembly_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7118.SpecialisedAssemblyAdvancedTimeSteppingAnalysisForModulation":
+            return self._parent._cast(
+                _7118.SpecialisedAssemblyAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def abstract_assembly_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7014.AbstractAssemblyAdvancedTimeSteppingAnalysisForModulation":
+            from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+                _7014,
+            )
+
+            return self._parent._cast(
+                _7014.AbstractAssemblyAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def part_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7099.PartAdvancedTimeSteppingAnalysisForModulation":
+            from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+                _7099,
+            )
+
+            return self._parent._cast(
+                _7099.PartAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def part_static_load_analysis_case(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7556.PartStaticLoadAnalysisCase":
+            from mastapy.system_model.analyses_and_results.analysis_cases import _7556
+
+            return self._parent._cast(_7556.PartStaticLoadAnalysisCase)
+
+        @property
+        def part_analysis_case(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7553.PartAnalysisCase":
+            from mastapy.system_model.analyses_and_results.analysis_cases import _7553
+
+            return self._parent._cast(_7553.PartAnalysisCase)
+
+        @property
+        def part_analysis(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_2665.PartAnalysis":
+            from mastapy.system_model.analyses_and_results import _2665
+
+            return self._parent._cast(_2665.PartAnalysis)
+
+        @property
+        def design_entity_single_context_analysis(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_2661.DesignEntitySingleContextAnalysis":
+            from mastapy.system_model.analyses_and_results import _2661
+
+            return self._parent._cast(_2661.DesignEntitySingleContextAnalysis)
+
+        @property
+        def design_entity_analysis(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_2659.DesignEntityAnalysis":
+            from mastapy.system_model.analyses_and_results import _2659
+
+            return self._parent._cast(_2659.DesignEntityAnalysis)
+
+        @property
+        def clutch_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7040.ClutchAdvancedTimeSteppingAnalysisForModulation":
+            from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+                _7040,
+            )
+
+            return self._parent._cast(
+                _7040.ClutchAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def concept_coupling_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7045.ConceptCouplingAdvancedTimeSteppingAnalysisForModulation":
+            from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+                _7045,
+            )
+
+            return self._parent._cast(
+                _7045.ConceptCouplingAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def part_to_part_shear_coupling_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7100.PartToPartShearCouplingAdvancedTimeSteppingAnalysisForModulation":
+            from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+                _7100,
+            )
+
+            return self._parent._cast(
+                _7100.PartToPartShearCouplingAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def spring_damper_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7122.SpringDamperAdvancedTimeSteppingAnalysisForModulation":
+            from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+                _7122,
+            )
+
+            return self._parent._cast(
+                _7122.SpringDamperAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def torque_converter_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "_7137.TorqueConverterAdvancedTimeSteppingAnalysisForModulation":
+            from mastapy.system_model.analyses_and_results.advanced_time_stepping_analyses_for_modulation import (
+                _7137,
+            )
+
+            return self._parent._cast(
+                _7137.TorqueConverterAdvancedTimeSteppingAnalysisForModulation
+            )
+
+        @property
+        def coupling_advanced_time_stepping_analysis_for_modulation(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+        ) -> "CouplingAdvancedTimeSteppingAnalysisForModulation":
+            return self._parent
+
+        def __getattr__(
+            self: "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation",
+            name: str,
+        ):
+            try:
+                return self.__dict__[name]
+            except KeyError:
+                class_name = "".join(n.capitalize() for n in name.split("_"))
+                raise CastException(
+                    f'Detected an invalid cast. Cannot cast to type "{class_name}"'
+                ) from None
+
+    def __init__(
+        self: Self,
+        instance_to_wrap: "CouplingAdvancedTimeSteppingAnalysisForModulation.TYPE",
+    ):
+        super().__init__(instance_to_wrap)
+        self._freeze()
+
+    @property
+    def assembly_design(self: Self) -> "_2591.Coupling":
+        """mastapy.system_model.part_model.couplings.Coupling
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.AssemblyDesign
+
+        if temp is None:
+            return None
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp)
+
+    @property
+    def system_deflection_results(self: Self) -> "_2739.CouplingSystemDeflection":
+        """mastapy.system_model.analyses_and_results.system_deflections.CouplingSystemDeflection
+
+        Note:
+            This property is readonly.
+        """
+        temp = self.wrapped.SystemDeflectionResults
+
+        if temp is None:
+            return None
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp)
+
+    @property
+    def cast_to(
+        self: Self,
+    ) -> "CouplingAdvancedTimeSteppingAnalysisForModulation._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation":
+        return self._Cast_CouplingAdvancedTimeSteppingAnalysisForModulation(self)
