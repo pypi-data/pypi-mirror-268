@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: swane
+Version: 0.1.0
+Summary: Standardized Workflow for Advanced Neuroimaging in Epilepsy
+Author: LICE - Commissione Neuroimmagini
+Author-email: dev@lice.it
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: networkx<3
+Requires-Dist: nipype==1.8.6
+Requires-Dist: Pyside6==6.4.3
+Requires-Dist: pydicom==2.3.1
+Requires-Dist: configparser==5.3.0
+Requires-Dist: psutil==5.9.4
+Requires-Dist: swane_supplement>=0.1.2
+Requires-Dist: matplotlib==3.5.2
+Requires-Dist: nibabel==5.0.0
+Requires-Dist: packaging
+Requires-Dist: PySide6_VerticalQTabWidget==0.0.3
+Requires-Dist: GPUtil==1.4.0
+Requires-Dist: numpy
