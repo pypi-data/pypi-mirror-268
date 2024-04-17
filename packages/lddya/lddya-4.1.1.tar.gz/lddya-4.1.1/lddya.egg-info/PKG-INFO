@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lddya
+Version: 4.1.1
+Summary: 修复map的随机地图数据类型为float，应当为int。
+Home-page: https://github.com/not_define/please_wait
+Author: lidongdong
+Author-email: 927052521@qq.com
+License: MIT Licence
+Keywords: pip,licensetool,tool,gm,license
+Platform: any
+
+具体功能，请自行挖掘。
