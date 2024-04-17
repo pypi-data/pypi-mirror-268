@@ -1,0 +1,7 @@
+setup.py
+illusionanime/__init__.py
+illusionanime/main.py
+illusionanime.egg-info/PKG-INFO
+illusionanime.egg-info/SOURCES.txt
+illusionanime.egg-info/dependency_links.txt
+illusionanime.egg-info/top_level.txt
