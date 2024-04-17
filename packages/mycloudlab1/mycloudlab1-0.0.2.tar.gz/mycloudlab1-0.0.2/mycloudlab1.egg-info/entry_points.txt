@@ -1,0 +1,3 @@
+[console_scripts]
+mycloudlab1 = src.main:main
+
