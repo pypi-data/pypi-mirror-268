@@ -1,0 +1,9 @@
+omop2poll/__init__.py,sha256=YW2HS4VdBpw2RvgTTVK08PxafUVf5a4phMjYUK-wRM4,288
+omop2poll/codebook.py,sha256=2mJ9r4n17cawBzJ-npySNoWy-B_lUm9xeOnRGuDoK5M,3452
+omop2poll/map_responses.py,sha256=3FWJyQETUeGMbKzJ2bseooJjT1VDTQPHhLvnq8EE_xA,1473
+omop2poll/pivot_data.py,sha256=SfO8KMdyhD2-JAJ7c1bm43IYipxgTtiutt9pUNSYwW4,2053
+omop2poll/recode_missing.py,sha256=1fKpkQoriHAUKg7565HbOvlmW4kfC9YVj4XuhAxBlqU,795
+omop2poll/survey_healthcare.csv,sha256=pna9298wAfYVewiHTAWCsfYVVIs6KXL2TQ6eXxQiohc,42126
+omop2poll-0.0.2.dist-info/METADATA,sha256=QIwH7x846b61oY2Il3lWS50qhxJYAuodQLf-R002Ldg,5526
+omop2poll-0.0.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+omop2poll-0.0.2.dist-info/RECORD,,
