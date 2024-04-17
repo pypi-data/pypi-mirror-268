@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+TouchPy.egg-info/PKG-INFO
+TouchPy.egg-info/SOURCES.txt
+TouchPy.egg-info/dependency_links.txt
+TouchPy.egg-info/top_level.txt
+modules/TouchPy/__init__.py
