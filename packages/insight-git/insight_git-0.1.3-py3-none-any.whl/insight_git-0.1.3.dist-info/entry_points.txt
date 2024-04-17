@@ -1,0 +1,9 @@
+[console_scripts]
+insight-git = insight_git.__main__:main
+
+[insight_git.plugins]
+branch_information = insight_git.plugins.branch_information:display_branch_information
+commit_graph = insight_git.plugins.commit_graph:display_commit_graph
+commit_type = insight_git.plugins.commit_type:display_commit_type
+contributors = insight_git.plugins.contributors_info:display_contributors_info
+git_statistics = insight_git.plugins.git_statistics:display_git_statistics
