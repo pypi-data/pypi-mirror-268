@@ -1,0 +1,15 @@
+LICENSE.md
+README.md
+setup.py
+inigrep.egg-info/PKG-INFO
+inigrep.egg-info/SOURCES.txt
+inigrep.egg-info/dependency_links.txt
+inigrep.egg-info/top_level.txt
+src/inigrep/__init__.py
+src/inigrep/__main__.py
+src/inigrep/_meta.py
+src/inigrep/cli.py
+src/inigrep/core.py
+src/inigrep/front.py
+src/inigrep/py.typed
+tests/test_inigrep.py
