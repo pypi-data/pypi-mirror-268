@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "kkpyai"
+version = "0.7.0"
+description = "Utility over popular low-level AI API"
+authors = ["Beinan Li <li.beinan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+kkpyutil = "*"
+matplotlib = "*"
+scikit-learn = "*"
+tensorflow = "*"
+torch = "*"
+torchmetrics = "*"
+
+[tool.poetry.dev-dependencies]
+pytest = "*"
+coverage = "*"
+pandas = "*"
+requests = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
