@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: robotframework-parrot-dtmf
+Version: 1.0.0
+Summary: DTMF (Dual tone multi frequency) Library used to generate and verify DTMF tone
+Home-page: https://github.com/zilogic-systems/parrot
+Author: Zilogic Systems
+Author-email: code@zilogic.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydub
+Requires-Dist: numpy
+Requires-Dist: robotframework
+
+= DTMF Library
+
+== Installation
+
+To install from package registry use the following command:
+
+-----
+$ pip install robotframework-parrot-dtmf
+-----
+
+To install from git repo use the following command:
+
+-----
+$ pip install .
+-----
+    
+== Example
+
+Example of using the library in Robot Framework is available `example.robot`.
