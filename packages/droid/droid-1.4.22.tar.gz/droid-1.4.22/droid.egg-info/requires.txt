@@ -1,0 +1,2 @@
+argparse
+customtkinter==4.6.3
