@@ -1,0 +1,38 @@
+[project]
+name = "literal-dict"
+version = "1.0.1.1"
+description = "Use JavaScript-like object definition syntax in Python"
+authors = [
+    { name = "Muspi Merol", email = "me@muspimerol.site" },
+]
+dependencies = []
+requires-python = ">=3.6"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=7.4.4",
+    "isort>=5.13.2",
+    "black>=23.12.1",
+]
+
+[tool.pdm.scripts]
+test = "pytest ./test.py"
+
+[tool.pdm.scripts.fmt]
+composite = [
+    "isort ./{args}",
+    "black ./{args}",
+]
