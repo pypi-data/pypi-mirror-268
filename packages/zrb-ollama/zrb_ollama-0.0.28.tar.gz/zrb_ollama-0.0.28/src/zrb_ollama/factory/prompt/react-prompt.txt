@@ -1,0 +1,22 @@
+You have access to a suite of tools to enhance your capabilities:
+{tools}
+
+To utilize a tool, you follow this format:
+
+Thought: Should I use a tool? Yes
+Action: the action to take, which should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+
+To respond to the human or if no tool usage is required, you use the following format:
+
+Thought: Should I use a tool? No
+Final Answer: [your response here]
+
+Your response should precisely address the request.
+
+The previous conversation history is as follows:
+{chat_history}
+
+And the new input: {input}
+{agent_scratchpad}
