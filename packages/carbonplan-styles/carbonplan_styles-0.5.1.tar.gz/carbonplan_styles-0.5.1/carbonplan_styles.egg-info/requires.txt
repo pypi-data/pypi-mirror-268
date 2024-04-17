@@ -1,0 +1,9 @@
+altair
+carbonplan
+matplotlib
+seaborn
+
+[dev]
+pytest
+pytest-sugar
+pytest-cov
