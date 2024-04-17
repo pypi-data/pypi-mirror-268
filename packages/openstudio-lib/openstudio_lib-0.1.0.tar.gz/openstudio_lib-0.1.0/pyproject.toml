@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "openstudio-lib"
+version = "0.1.0"
+description = "Simple and Flexible ML, DL, GAN and LLM workflow engine"
+authors = ["Kuluru Vineeth <kuluruvineeth8623@gmail.com>"]
+readme = "README.md"
+packages = [{include = "openstudio_lib"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pika = "^1.3.2"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
