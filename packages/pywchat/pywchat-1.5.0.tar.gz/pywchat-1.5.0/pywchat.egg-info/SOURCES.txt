@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+pywchat/__init__.py
+pywchat/chatapi.py
+pywchat/send.py
+pywchat/workhandler.py
+pywchat.egg-info/PKG-INFO
+pywchat.egg-info/SOURCES.txt
+pywchat.egg-info/dependency_links.txt
+pywchat.egg-info/requires.txt
+pywchat.egg-info/top_level.txt
