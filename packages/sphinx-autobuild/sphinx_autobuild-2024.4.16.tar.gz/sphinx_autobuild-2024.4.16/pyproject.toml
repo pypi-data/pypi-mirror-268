@@ -1,0 +1,78 @@
+[build-system]
+requires = ["flit_core>=3.7"]
+build-backend = "flit_core.buildapi"
+
+# project metadata
+[project]
+name = "sphinx-autobuild"
+description = "Rebuild Sphinx documentation on changes, with hot reloading in the browser."
+readme = "README.rst"
+urls.Changelog = "https://github.com/sphinx-doc/sphinx-autobuild/blob/main/NEWS.rst"
+urls.Documentation = "https://github.com/sphinx-doc/sphinx-autobuild#readme"
+urls.Download = "https://pypi.org/project/sphinx-autobuild/"
+urls."Issue tracker" = "https://github.com/sphinx-doc/sphinx-autobuild/issues"
+urls.Source = "https://github.com/sphinx-doc/sphinx-autobuild"
+license.text = "MIT"
+requires-python = ">=3.9"
+
+# Classifiers list: https://pypi.org/classifiers/
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Framework :: Sphinx",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Documentation",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "colorama",
+    "sphinx",
+    "starlette>=0.35",
+    "uvicorn>=0.25",
+    "watchfiles>=0.20",
+    "websockets>=11",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+docs = []
+test = [
+    "pytest>=6",
+]
+
+[[project.authors]]
+name = "Adam Turner"
+
+[[project.authors]]
+name = "Jonathan Stoppani"
+email = "jonathan@stoppani.name"
+
+[project.scripts]
+sphinx-autobuild = "sphinx_autobuild.__main__:main"
+
+[tool.flit.sdist]
+include = [
+    "AUTHORS.rst",
+    "LICENSE.rst",
+    "NEWS.rst",
+    # Tests
+    "tests/",
+    "noxfile.py",
+]
