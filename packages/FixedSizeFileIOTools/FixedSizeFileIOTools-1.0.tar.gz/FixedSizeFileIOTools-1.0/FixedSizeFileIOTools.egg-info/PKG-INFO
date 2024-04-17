@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: FixedSizeFileIOTools
+Version: 1.0
+Summary: Python library for handling fixed sized files, with interactive CLI
+Author: Patryk Jaworski

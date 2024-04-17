@@ -1,0 +1,13 @@
+README.md
+setup.py
+FixedSizeFileIOTools/__init__.py
+FixedSizeFileIOTools/cli.py
+FixedSizeFileIOTools/file_handler.py
+FixedSizeFileIOTools/models.py
+FixedSizeFileIOTools.egg-info/PKG-INFO
+FixedSizeFileIOTools.egg-info/SOURCES.txt
+FixedSizeFileIOTools.egg-info/dependency_links.txt
+FixedSizeFileIOTools.egg-info/top_level.txt
+tests/__init__.py
+tests/test_file_handler.py
+tests/test_models.py
