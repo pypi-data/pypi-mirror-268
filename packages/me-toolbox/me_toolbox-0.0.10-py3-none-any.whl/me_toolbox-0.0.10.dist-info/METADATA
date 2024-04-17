@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: me_toolbox
+Version: 0.0.10
+Summary: Mechanical engineering design tools
+Home-page: https://github.com/OmriStein/MEtoolbox
+Author: Omri Stein
+Author-email: omri.stein@gmail.com
+Project-URL: Bug Tracker, https://github.com/OmriStein/MEtoolbox/issues
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sympy
+Requires-Dist: numpy
+Requires-Dist: mpmath
+
+# me_toolbox
+
+me_toolbox is a Python library meant to simplify the tedious
+calculations of mechanical design and help speed up the design process.<br>
+This library contains fatigue, gears, springs and fasteners analysis tools.<br>
+This library is for my own personal use, use it at your own discretion.
+
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install me_toolbox.
+```bash
+ pip install me_toolbox 
+```
+<!--
+--->
+
+## Usage
+
+```python
+import me_toolbox.springs as springs 
+import me_toolbox.gears as gears
+import me_toolbox.fatigue as fatigue
+import me_toolbox.fatigue as fatigue
+import me_toolbox.fasteners as fasteners
+
+spring = springs.HelicalSpring(...)
+
+gear = gears.SpurGear(...)
+transmission = gears.Transmission(...)
+
+se = fatigue.EnduranceLimit(...)
+fatigue_analysis = fatigue.FatigueAnalysis(se, ...)
+
+bolt = fasteners.Bolt(...)
+fastener = fasteners.ThreadedFastener(bolt, ...)
+pattern = fasteners.BoltPattern(fasteners, ...)
+```
+
+For more detailed examples:
+https://github.com/OmriStein/me-toolbox/tree/master/examples
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
