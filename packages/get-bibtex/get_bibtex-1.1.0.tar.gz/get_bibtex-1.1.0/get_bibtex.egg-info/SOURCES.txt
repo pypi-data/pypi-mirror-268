@@ -1,0 +1,17 @@
+README.md
+setup.py
+apiModels/__init__.py
+apiModels/get_bibtex_from_crossref.py
+apiModels/get_bibtex_from_dblp.py
+apiModels/get_bibtex_from_google_scholar.py
+apiModels/meta_class.py
+apiModels/utils/__init__.py
+apiModels/utils/verify.py
+apiModels/workflow/__init__.py
+apiModels/workflow/crossref2dblp.py
+apiModels/workflow/make_workflow.py
+get_bibtex.egg-info/PKG-INFO
+get_bibtex.egg-info/SOURCES.txt
+get_bibtex.egg-info/dependency_links.txt
+get_bibtex.egg-info/top_level.txt
+test/test_api_models.py

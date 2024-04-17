@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: get_bibtex
+Version: 1.1.0
+Summary: This is a project to get bibtex from CrossRef and Google Scholar
+Author: Yaowen Liu
+Author-email: 153672925@qq.com
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Education
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Chinese (Simplified)
+Description-Content-Type: text/markdown
+
+
+# get bibtex from crossref and google scholar
+Switch to [Chinese](README_CN.md)
+## Introduction
+This is a simple python script to get bibtex from crossref and google scholar. It is useful when you want to get bibtex for a list of DOIs or titles.
+
+## Depend
+- requests // for http request
+- re // for regular expression
+- serpapi // for google scholar
+- tqdm // for progress bar
+
+## Usage
+
+look at the example in `example_main.py`
+
+```python
+from apiModel.getbibtex_from_crossref import GetBibTex
+
+get_bibtex_from_crossref = GetBibTex("your email")
+doi = "10.1145/3313831.3376234"
+bibtex = get_bibtex_from_crossref.get_bibtex(doi)
+
+# or use title
+title = "A Survey of Modern Authorship Attribution Methods"
+bibtex = get_bibtex_from_crossref.get_bibtex(title)
+```
+
