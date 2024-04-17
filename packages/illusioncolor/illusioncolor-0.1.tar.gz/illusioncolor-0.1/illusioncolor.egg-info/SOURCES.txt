@@ -1,0 +1,7 @@
+setup.py
+illusioncolor/__init__.py
+illusioncolor/main.py
+illusioncolor.egg-info/PKG-INFO
+illusioncolor.egg-info/SOURCES.txt
+illusioncolor.egg-info/dependency_links.txt
+illusioncolor.egg-info/top_level.txt
