@@ -1,0 +1,5 @@
+[ewatercycle.forcings]
+LorenzForcing = ewatercycle_lorenz.forcing:LorenzForcing
+
+[ewatercycle.models]
+Lorenz = ewatercycle_lorenz.model:Lorenz
