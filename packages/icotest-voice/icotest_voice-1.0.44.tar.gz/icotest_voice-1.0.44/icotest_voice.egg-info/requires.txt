@@ -1,0 +1,5 @@
+typing-extensions>=4.7.1
+urllib3<2.1.0,>=1.25.3
+python_dateutil>=2.8.2
+pydantic>=2
+setuptools>=21.0.0
