@@ -1,0 +1,12 @@
+dataspecs/__init__.py,sha256=9uAnnWu2wQZmmBCyFoGyWv25GYItT1qqmP2hpweiQis,344
+dataspecs/core/__init__.py,sha256=MTyb1uoCATEZdVoJBsjcVOHiwVv3q0AH0BGn_vxqBzE,111
+dataspecs/core/api.py,sha256=juxSyMCnGr44tkBODiMtuYnLkCYAkiiBTm7Nt7pZCaA,5119
+dataspecs/core/specs.py,sha256=3O2RaF65tsijpfj8wK2w0nA29QzipzqlaG9ltE9XP_c,5109
+dataspecs/core/typing.py,sha256=Y_kG4jXz7Ci-HLghTHGO8QcAC9Ec5VuxO-FXivlfry0,2938
+dataspecs/extras/__init__.py,sha256=eqCDeK3uGWUk6ayjj2Mlf_VQOI91MxvkWbQA_yw28SU,174
+dataspecs/extras/replacement.py,sha256=l6bcIp39_kKB4czx3r1lUZnfYYJDSCy01LobhH6xlHM,1406
+dataspecs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataspecs-0.3.0.dist-info/LICENSE,sha256=lp591wW_7EIUOU_eo8R_GPjcsikIIR__DrPrl0XKonE,1076
+dataspecs-0.3.0.dist-info/METADATA,sha256=Gdg5lSRxJNoxx3IMU6vc0xdSrygJiJynkGT5PzvrFoc,1643
+dataspecs-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dataspecs-0.3.0.dist-info/RECORD,,
