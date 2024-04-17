@@ -1,0 +1,13 @@
+soma_integ/__init__.py,sha256=LNiCis0KTkUg31cgDjXRId_ZxQKDdiHE-l4VVppnFwU,469
+soma_integ/basemodel.py,sha256=Sz78AewvyIOBrPIsoBlUkuoa2iqFk5UnKQ3BB85HpuM,681
+soma_integ/config.py,sha256=9ScQI-hHRKc20vw38evelZ4UxNfJXjVSlHtH95ollec,1841
+soma_integ/data.py,sha256=wugkoIQI4i5J2t1DiSXasbqRuL9AbjHaXJjrLAZjgDs,2298
+soma_integ/evaluation.py,sha256=yFrQDnVGS387QsxEhXL3VO857hAPF8ijZ7vTqbTm8nI,2038
+soma_integ/methods.py,sha256=8B8-XhwGuUrKgdds-4gT_BxvnLtfZwHeF0b8TTTyids,272
+soma_integ/optimization.py,sha256=I3SCL9A0jy4nRoLyZVWGBm4UoV3JGC_JACx5YjnfH7o,4851
+soma_integ/utils.py,sha256=Avr5IAndtR3EnO-CKkovFHaQltBugKo_ynGcge_mtk8,197
+soma_integ-0.0.3.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+soma_integ-0.0.3.dist-info/METADATA,sha256=TKxgciaQmsZ1ppWhZn6HBxT2rAUburCxcF8xvgRNAUA,752
+soma_integ-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+soma_integ-0.0.3.dist-info/top_level.txt,sha256=36brGnSs86MN5eju6xJ3IhkLcYiB8uLpMvDfB2K-abw,11
+soma_integ-0.0.3.dist-info/RECORD,,
