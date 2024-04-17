@@ -1,0 +1,14 @@
+LICENCE
+README.md
+pyproject.toml
+setup.py
+src/bground/__init__.py
+src/bground/bdata.py
+src/bground/bfunc.py
+src/bground/help.py
+src/bground/iplot.py
+src/bground/ui.py
+src/bground.egg-info/PKG-INFO
+src/bground.egg-info/SOURCES.txt
+src/bground.egg-info/dependency_links.txt
+src/bground.egg-info/top_level.txt
