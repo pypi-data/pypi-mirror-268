@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: illusioncolor
+Version: 0.0.1
+Summary: This package allow you to import 255+ color to change the color of output in terminal
+Author: KDO (Team Illusion)
+Author-email: <unknowuser@gmail.com>
+Keywords: python,illusion,colorcode
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Android
+Description-Content-Type: text/markdown
+
