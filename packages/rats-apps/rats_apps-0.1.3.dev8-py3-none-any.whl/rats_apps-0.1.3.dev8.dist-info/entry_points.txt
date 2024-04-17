@@ -1,0 +1,3 @@
+[rats-apps.test-plugins]
+example-storage=rats_test.apps.example:ExampleStoragePlugin
+
