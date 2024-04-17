@@ -1,0 +1,15 @@
+name: hepstats-demo
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy
+  - scipy
+  - iminuit
+  - tensorflow-probability
+  #- zfit  # todo: conda-forge is 0.18.1, we need 0.20.0
+  - asdf
+  - matplotlib
+  - pip:
+    - .
+    - zfit >=0.20.0
