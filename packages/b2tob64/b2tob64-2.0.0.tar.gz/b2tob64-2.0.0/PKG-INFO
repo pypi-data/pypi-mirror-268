@@ -1,0 +1,38 @@
+Metadata-Version: 2.3
+Name: b2tob64
+Version: 2.0.0
+Summary: Custom converting b2/b42 to and from b64/b2
+Project-URL: Homepage, https://github.com/vjgtigers/b2tob64
+Project-URL: Bug Tracker, https://github.com/vjgtigers/b2tob64/issues
+Author-email: Vaughn Gugger <vjgtigers@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+This package allows for custom encoding between base2 (bianary) and base 64. <br>
+WARNING: THIS WILL NOT TRANSLATE other b64 encodings and will NOT be able to encode/decode the same values <br>
+<br>
+<br>
+Ex. "10101010101000010111111001" --> "ppE9AA" --> "10101010101000010111111001"
+<br><br>
+Approx. 6x len reduction
+
+
+<br>
+
+Docs<br>
+function b2tob64 requires a single string input of only 1's and 0's <br>
+This will return a b64 string (NOTE: this can most likely be decoded ONLY by this program)<br>
+<br>
+<br>
+<br>
+function b64tob2 requires a single b64 string input created by the b2tob64 function. <br>
+this will return the original binary string.
+<br>
+<br>
+<br>
+Unlike some b2 to b64 converters, this allows for conversions on the bit by bit level. <br>
+Conviance is nice.
