@@ -1,0 +1,226 @@
+Metadata-Version: 2.1
+Name: enhydris-api-client
+Version: 4.0.0
+Summary: Python API client for Enhydris
+Home-page: https://github.com/openmeteo/enhydris-api-client
+Author: Antonis Christofides
+Author-email: antonis@antonischristofides.com
+License: GNU General Public License v3
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: iso8601
+Requires-Dist: requests <3,>=1
+Requires-Dist: htimeseries <8,>=7
+
+===================
+enhydris-api-client
+===================
+
+
+.. image:: https://img.shields.io/pypi/v/enhydris_api_client.svg
+        :target: https://pypi.python.org/pypi/enhydris-api-client
+        :alt: Pypi
+
+.. image:: https://img.shields.io/travis/openmeteo/enhydris-api-client.svg
+        :target: https://travis-ci.org/openmeteo/enhydris-api-client
+        :alt: Build
+
+.. image:: https://codecov.io/github/openmeteo/enhydris-api-client/coverage.svg
+        :target: https://codecov.io/gh/openmeteo/enhydris-api-client
+        :alt: Coverage
+
+.. image:: https://pyup.io/repos/github/openmeteo/enhydris-api-client/shield.svg
+         :target: https://pyup.io/repos/github/openmeteo/enhydris-api-client/
+         :alt: Updates
+
+Python API client for Enhydris
+
+* Free software: GNU General Public License v3
+
+This package has some functionality to make it easier to use the
+Enhydris API.
+
+Installation
+============
+
+``pip install enhydris-api-client``
+
+Example
+=======
+
+::
+
+    from enhydris_api_client import EnhydrisApiClient
+
+    with EnhydrisApiClient("https://openmeteo.org", "my_auth_token") as api_client:
+        # Get a dict with attrs of station with id=42
+        station = api_client.get_model(Station, 42)
+
+        # Create a new station
+        api_client.post_model(Station, data={"name": "my station"})
+
+
+Reference
+=========
+
+**EnhydrisApiClient(base_url, token=None)**
+
+Creates and returns an api client. It can also be used as a context
+manager, though this is not necessary. If not used as a context manager,
+you might get warnings about unclosed sockets.
+
+Not specifying ``token`` is deprecated. ``token`` will become mandatory
+in future versions.
+
+``EnhydrisApiClient`` objects have the following methods:
+
+**.get_token(username, password)**
+
+(Deprecated.) Gets an API token from Enhydris and thereafter uses it in
+subsequent requests. The method will be removed in future versions.
+
+| **.get_station(id)**
+| **.post_station(data)**
+| **.put_station(station_id, data)**
+| **.patch_station(station_id, data)**
+| **.delete_station(station_id)**
+
+Methods that create, retrieve, update or delete stations. The ``data``
+argument (for those methods that receive one) is a dictionary.
+``get_station()`` returns a dictionary with the data for the station.
+``post_station()`` returns the created station's id.
+
+| **.get_timeseries_group(station_id, timeseries_group_id)**
+| **.post_timeseries_group(station_id, timeseries_group_id, data)**
+| **.put_timeseries_group(station_id, timeseries_group_id, data)**
+| **.patch_timeseries_group(station_id, timeseries_group_id, data)**
+| **.delete_timeseries_group(station_id, timeseries_group_id)**
+
+Methods that create, retrieve, update or delete time series groups.
+Similar to the ones for station.
+
+| **.list_timeseries(station_id, timeseries_group_id)**
+| **.get_timeseries(station_id, timeseries_group_id, timeseries_id)**
+| **.post_timeseries(station_id, timeseries_group_id, data)**
+| **.delete_timeseries(station_id, timeseries_group_id, timeseries_id)**
+
+Methods that create, retrieve or delete time series. Similar to the ones
+for station. ``list_timeseries()`` returns a list of dictionaries.
+
+| **.read_tsdata(station_id, timeseries_group_id, timeseries_id, start_date=None, end_date=None, timezone=None)**
+| **.post_tsdata(station_id, timeseries_group_id, timeseries_id, ts)**
+| **.get_ts_end_date(station_id, timeseries_group_id, timeseries_id, timezone=None)**
+
+Methods that retrieve or update time series data.
+
+``read_ts_data()`` retrieves the time series data into a htimeseries
+object that it returns. If ``start_date`` and/or ``end_date`` (aware
+datetime objects) are specified, only the part of the time series
+between these dates is retrieved. The timestamps are returned in the
+specified time zone. If unspecified, then they are returned in the time
+zone specified by the station's display_timezone_.
+
+``post_tsdata() `` posts a time series to Enhydris, appending the
+records to any already existing.  ``ts`` is a htimeseries object.
+
+``get_ts_end_date()`` returns a ``datetime`` object which is the last
+timestamp of the time series. If the time series is empty it returns
+``None``. The returned timestamp is always naive, but it is in the specified
+``timezone`` (or the station's display_timezone_ if unspecified).
+
+.. _display_timezone: https://enhydris.readthedocs.io/en/latest/dev/database.html#enhydris.models.Gentity.display_timezone
+
+
+=======
+History
+=======
+
+4.0.0 (2024-04-16)
+==================
+
+- Requires htimeseries 7.
+- When downloading time series data without specifying the time zone, it
+  uses the ``display_timezone`` of that Enhydris station, whereas in
+  3.x.x it used UTC. The behaviour is now similar to that of 2.x.x.
+
+3.0.1 (2024-04-14)
+==================
+
+- Compatible with htimeseries 4 to 7.
+
+3.0.0 (2022-12-04)
+==================
+
+- Requires Enhydris 4 and htimeseries 4, and therefore requires aware
+  HTimeseries objects.
+- Supports specifying time zone when downloading time series data.
+- Support for creating, retrieving, updating, and deleting time series
+  groups.
+
+2.0.1 (2021-08-31)
+==================
+
+- Updated dependences (the version of htimeseries required was too old).
+
+2.0.0 (2020-10-06)
+==================
+
+- We now support the time series groups of Enhydris 3. Earlier Enhydris
+  versions are unsupported. Use enhydris-api-client v1 for Enhydris v2.
+- We now use token authentication. Using a username and password have
+  been deprecated and will be removed in a future version. Accordingly,
+  the ``.login()`` method has been removed; it has been replaced with
+  the deprecated ``.get_token()`` method.
+
+1.0.0 (2020-02-28)
+==================
+
+- We now support only Python 3.7 or greater.
+- If there is an http error, the error message now includes the response body.
+
+0.5.1 (2020-01-05)
+==================
+
+- Minor fix for compatibility with htimeseries 2
+
+0.5.0 (2019-06-13)
+==================
+
+- Can now be used as a context manager
+- Added post/put/patch/delete station
+
+0.4.1 (2019-06-12)
+==================
+
+- Fixed bug where .read_tsdata() was failing to set the metadata
+  attributes of the time series.
+
+0.4.0 (2019-06-12)
+==================
+
+- .read_tsdata() now accepts optional arguments start_date and end_date.
+
+0.3.0 (2019-06-06)
+==================
+
+- Upgrade dependecy htimeseries to 1.0
+
+0.2.0 (2019-04-17)
+==================
+
+- Support new API of Enhydris 3
+
+0.1.0 (2019-03-06)
+==================
+
+- Initial release
