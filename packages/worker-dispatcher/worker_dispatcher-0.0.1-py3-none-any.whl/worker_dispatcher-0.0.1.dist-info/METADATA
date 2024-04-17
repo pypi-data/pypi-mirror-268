@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: worker_dispatcher
+Version: 0.0.1
+Summary: Developing
+Project-URL: Homepage, https://github.com/yidas/python-worker-dispatcher
+Project-URL: Issues, https://github.com/yidas/python-worker-dispatcher/issues
+Author-email: Nick Tsai <myintaer@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+
+# python-worker-dispatcher
+Developing
