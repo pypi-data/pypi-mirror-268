@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+main.py
+pyproject.toml
+.github/workflows/python-package.yml
+.github/workflows/python-publish.yml
+baro/__init__.py
+baro/anomaly_detection.py
+baro/root_cause_analysis.py
+fse_baro.egg-info/PKG-INFO
+fse_baro.egg-info/SOURCES.txt
+fse_baro.egg-info/dependency_links.txt
+fse_baro.egg-info/requires.txt
+fse_baro.egg-info/top_level.txt
+tests/test.py
