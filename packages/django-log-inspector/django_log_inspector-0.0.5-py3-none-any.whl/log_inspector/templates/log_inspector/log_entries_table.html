@@ -1,0 +1,23 @@
+{% load static i18n %}
+
+<table id="log-entries-table"
+       class="mt-6 w-full border-collapse table-fixed dark:bg-slate-800">
+    <thead>
+    <tr>
+        <th scope="col"
+            class="border p-2 w-10 dark:border-gray-700 dark:bg-slate-700 dark:text-white">
+            {% trans 'No.' %}
+        </th>
+        <th scope="col"
+            class="border p-2 dark:border-gray-700 dark:bg-slate-700 dark:text-white">
+            {% trans 'Log entries' %}
+        </th>
+    </tr>
+    </thead>
+
+    {% include 'log_inspector/log_entries_data.html' %}
+
+    <tfoot id="log-entries-footer" class="dark:bg-slate-800">
+    {% include 'log_inspector/pagination.html' %}
+    </tfoot>
+</table>
