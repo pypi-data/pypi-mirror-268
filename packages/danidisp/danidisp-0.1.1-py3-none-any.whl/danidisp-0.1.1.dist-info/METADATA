@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: danidisp
+Version: 0.1.1
+Summary: My own package: every useful function I want to use
+Home-page: https://github.com/DanieleDiSpirito/danidisp
+Author: Daniele Di Spirito
+Author-email: danieledisp@proton.me
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+
+
+        Package contains:
+
+        - xor(a: bytes, b: bytes) -> bytes
+        - dlog(n: int, b: int, mod: int) -> int
+        - base_conv(n: str, bs: int = 10, be: int = 10) -> str
+        - @clock
+        - sprint(string: str, gap: float = 0.03, new_line: bool = True) -> None
+        - sinput(prompt: str) -> str
+    
+
