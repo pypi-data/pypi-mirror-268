@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: web3-model
+Version: 0.1.1
+Summary: Some Models for Web3
+Home-page: https://github.com/zjkal/web3-model
+Author: zjkal
+Author-email: zjkal@qq.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: web3==6.16.*
+
+
+# web3-model
+
+Some Models for Web3
