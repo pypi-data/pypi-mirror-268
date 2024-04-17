@@ -1,0 +1,75 @@
+{
+    "expirations": [
+        {
+            "expiration": "2023-10-13",
+            "calls": {
+                "strikes": [
+                    {
+                        "strike": 10,
+                        "prices": {
+                            "bid": 4,
+                            "ask": 4,
+                            "last": 4
+                        },
+                        "contract size": 100,
+                        "open interest": 1
+                    },
+                    {
+                        "strike": 15,
+                        "prices": {
+                            "bid": 2,
+                            "ask": 2,
+                            "last": 2
+                        },
+                        "contract size": 100,
+                        "open interest": 1
+                    },
+                    {
+                        "strike": 20,
+                        "prices": {
+                            "bid": 1,
+                            "ask": 1,
+                            "last": 1
+                        },
+                        "contract size": 100,
+                        "open interest": 1
+                    }
+				]
+			},
+			"puts": {
+                "strikes": [
+                    {
+                        "strike": 10,
+                        "prices": {
+                            "bid": 1,
+                            "ask": 1,
+                            "last": 1
+                        },
+                        "contract size": 100,
+                        "open interest": 1
+                    },
+                    {
+                        "strike": 15,
+                        "prices": {
+                            "bid": 2,
+                            "ask": 2,
+                            "last": 2
+                        },
+                        "contract size": 100,
+                        "open interest": 1
+                    },
+                    {
+                        "strike": 20,
+                        "prices": {
+                            "bid": 4,
+                            "ask": 4,
+                            "last": 4
+                        },
+                        "contract size": 100,
+                        "open interest": 1
+                    }
+				]
+			}
+		}
+	]
+}
