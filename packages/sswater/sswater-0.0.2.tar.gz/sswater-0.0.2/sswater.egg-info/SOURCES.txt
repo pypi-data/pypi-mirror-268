@@ -1,0 +1,15 @@
+setup.py
+sswater/GAILinear.py
+sswater/NLinear.py
+sswater/__init__.py
+sswater/config.py
+sswater/create_seq.py
+sswater/preprocessing.py
+sswater/services.py
+sswater/train.py
+sswater.egg-info/PKG-INFO
+sswater.egg-info/SOURCES.txt
+sswater.egg-info/dependency_links.txt
+sswater.egg-info/not-zip-safe
+sswater.egg-info/requires.txt
+sswater.egg-info/top_level.txt
