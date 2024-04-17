@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ezside
+Version: 0.1.27
+Summary: ezside provides examples and utilities for PySide6.
+Home-page: https://github.com/AsgerJon/ezside
+Author: Asger Jon Vistisen
+Author-email: Asger Jon Vistisen <asgerjon2@gmail.com>
+Project-URL: Homepage, https://github.com/AsgerJon/ezside
+Project-URL: Bug Tracker, https://github.com/AsgerJon/ezside
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EZSide
+A collection of tools for fast development in basic PySide6
