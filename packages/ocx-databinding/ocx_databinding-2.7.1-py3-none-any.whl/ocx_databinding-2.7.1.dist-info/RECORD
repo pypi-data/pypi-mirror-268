@@ -1,0 +1,8 @@
+ocx_databinding/__init__.py,sha256=rISrDEpCsgjp-T31IGOadr89qOI0nAtyFlDn5cZyC1g,180
+ocx_databinding/cli.py,sha256=JJhleeHKztwcDYWs4jj4hbQQT1uTVVhkjH9ymlsUYY4,2292
+ocx_databinding/generator.py,sha256=0KLn0SH54mK6qEwBRNoNeM5r6Ezrl38_LzwCGybzzgA,5589
+ocx_databinding-2.7.1.dist-info/LICENSE,sha256=Ih3WrqiqfrtAJkGayCtKjL1cX_ApsSf9SfPndlpsIXY,1066
+ocx_databinding-2.7.1.dist-info/METADATA,sha256=g_1fZBONLOzT8LdbTxjqC-drZOkbwJY34w3l7xP0N5g,4129
+ocx_databinding-2.7.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ocx_databinding-2.7.1.dist-info/entry_points.txt,sha256=rt5_yyaXCE9Ld65Vzrlcq2VQz17QTgUCJYEDwJcy_yk,56
+ocx_databinding-2.7.1.dist-info/RECORD,,
