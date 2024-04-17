@@ -1,0 +1,7 @@
+importlib-resources
+rdkit
+numpy
+aqme
+
+[mda]
+MDAnalysis
