@@ -1,0 +1,14 @@
+carbonplan_styles/__init__.py,sha256=neijt_rh4kGiNUpPvn9Ka99UO4F6_86p59uJPvYFA6Y,805
+carbonplan_styles/altair.py,sha256=a9tXDLc-dJ2y7ZAnvHi_cSJ2l6filnJo-EJv5Z__G7w,3327
+carbonplan_styles/colors.py,sha256=cbvK-9v_ehW3qgKddcIPmjv5SEiNXWIM5Ub9abplK80,1884
+carbonplan_styles/data/colormaps.json,sha256=WM45zfW-Xudfnapxvy-oaexi1ub2bY0PQuDxbG1PfLA,540217
+carbonplan_styles/mpl/__init__.py,sha256=cyomdXjJrRG7F3--Oynb6TCO3xyAj4LqSALrOA5VlYQ,4935
+carbonplan_styles/mpl/colormaps.py,sha256=WleLPefAs3qGavfX3zKISMBf_upW9n_7dQ4rkIxucZo,783
+carbonplan_styles/tests/test_altair.py,sha256=wRoTA9NSUC7_QmCcnFDkLEjz2m3CR6VGsnAIXV1K-Y4,217
+carbonplan_styles/tests/test_mpl.py,sha256=F5WvPLLGMfmxUFCeIkZXYLRBsMqqgERNIDyVfdA5988,1552
+carbonplan_styles-0.5.1.dist-info/LICENSE,sha256=Cqs6ILOHujuI5n-sHLiu1QPy1ZIO0zqKBR2yxWfqoRc,1067
+carbonplan_styles-0.5.1.dist-info/METADATA,sha256=7GY-Yyw12xV5jD-Mx-XX-4J8SvqsFunqgnOhsSexbNk,3189
+carbonplan_styles-0.5.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+carbonplan_styles-0.5.1.dist-info/entry_points.txt,sha256=0XpWiCPTphW2jUUjpSTqxAXg8OOMsXDglWhi-QdgB9A,125
+carbonplan_styles-0.5.1.dist-info/top_level.txt,sha256=pMNkW2G4llBhYHipam7rYgcQEJJzoiSPGDUrbhX9uig,18
+carbonplan_styles-0.5.1.dist-info/RECORD,,

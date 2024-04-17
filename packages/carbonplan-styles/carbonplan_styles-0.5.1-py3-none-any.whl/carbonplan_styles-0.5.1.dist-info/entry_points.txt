@@ -1,0 +1,3 @@
+[altair.vegalite.v5.theme]
+carbonplan_dark = carbonplan_styles.altair:dark
+carbonplan_light = carbonplan_styles.altair:light
