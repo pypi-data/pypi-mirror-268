@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ATH
+Version: 0.4.9
+Summary: Info: https://discord.com/channels/831614817458323537/1213477275232641044
+Requires-Dist: pyttsx3
+Requires-Dist: cryptography
+Requires-Dist: speechrecognition
+Requires-Dist: asyncio
+Requires-Dist: discord
+Requires-Dist: discord.py
+Requires-Dist: telebot
+Requires-Dist: pyscreenshot
+Requires-Dist: python-dotenv
+Requires-Dist: qrcode[pil]
+Requires-Dist: numpy
+Requires-Dist: pydub
+Requires-Dist: c2pa-python
+
