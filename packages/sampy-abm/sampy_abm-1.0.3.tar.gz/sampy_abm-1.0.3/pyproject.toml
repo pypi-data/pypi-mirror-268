@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sampy-abm"
+version = "1.0.3"
+authors = [
+  { name = "Francois Viard", email = "sampy.project@gmail.com" },
+]
+description = "Library for ABM development in epidemiology."
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+  "numpy>=1.22",
+  "scipy>=1.8",
+  "pandas>=1.4.3",
+  "numba>=0.55.2",
+  "geojson>=3.1.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/sampy-project/sampy-main"
+"Bug Tracker" = "https://github.com/sampy-project/sampy-main/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
