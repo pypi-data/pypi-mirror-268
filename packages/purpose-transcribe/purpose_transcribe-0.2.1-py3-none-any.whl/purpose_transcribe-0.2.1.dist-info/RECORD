@@ -1,0 +1,10 @@
+purpose_transcribe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+purpose_transcribe/main.py,sha256=ohW8xIpyPha6CyceJ-zE2vumnODvvgqBFRAut6rm2GU,812
+purpose_transcribe/transcription.py,sha256=G9_TdhC_6yhEmVcSjG9YdbECfAwW5PP2fWsOI08mmqA,902
+purpose_transcribe/utils.py,sha256=Hl8Axx3mQOj3Ld3QGM_8H5ZDXHBBtTh5xjD_Du7kmDs,250
+purpose_transcribe-0.2.1.dist-info/LICENSE,sha256=E_IW8gB4xx3xeDznC7ZpdDjQ03WEtHgyd50B7trsoP4,1577
+purpose_transcribe-0.2.1.dist-info/METADATA,sha256=roR9ziMa7FVZFrmQgVKmzd9hf0jo_Ey8F5Vlogs5ElY,2207
+purpose_transcribe-0.2.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+purpose_transcribe-0.2.1.dist-info/entry_points.txt,sha256=lljU9mFJjMzc3pHlaDzxLyKpZ4AocIDJXWrDcoAIN7o,77
+purpose_transcribe-0.2.1.dist-info/top_level.txt,sha256=nuzejFON9m0VzAyACAENnMAz-gM3G_8Rz95SiXvn48Q,19
+purpose_transcribe-0.2.1.dist-info/RECORD,,
