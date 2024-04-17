@@ -1,0 +1,9 @@
+certbot_dns_ionos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_ionos/ionos.py,sha256=vttQVag9EXujbLM9255QBIvScQxwHIB2BWQhcEZmf5c,8084
+certbot_dns_ionos/test_ionos.py,sha256=aG_UbZK0tMwjaK2mUiCYR1lCJQ94GO-RZRkwNoioe70,10465
+certbot_dns_ionos_cloud-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+certbot_dns_ionos_cloud-1.0.0.dist-info/METADATA,sha256=XBuy7pupV90k5ROGWWi8OUzG6WifLynuC3h9dCBpHS8,6488
+certbot_dns_ionos_cloud-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+certbot_dns_ionos_cloud-1.0.0.dist-info/entry_points.txt,sha256=zqeaoD_PKI8q8q6D01Je2mQZ_rF-yZH1j5bJv0u5QhY,68
+certbot_dns_ionos_cloud-1.0.0.dist-info/top_level.txt,sha256=xB0-bw1O5b8ofDc1pG8IdkZZ-twmpnVvTbSUtaCu6-w,18
+certbot_dns_ionos_cloud-1.0.0.dist-info/RECORD,,
