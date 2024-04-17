@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+PyGRF/PyGRF.py
+PyGRF/__init__.py
+PyGRF.egg-info/PKG-INFO
+PyGRF.egg-info/SOURCES.txt
+PyGRF.egg-info/dependency_links.txt
+PyGRF.egg-info/requires.txt
+PyGRF.egg-info/top_level.txt
