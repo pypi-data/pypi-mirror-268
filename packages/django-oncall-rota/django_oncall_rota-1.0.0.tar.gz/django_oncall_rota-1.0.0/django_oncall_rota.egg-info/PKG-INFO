@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: django-oncall-rota
+Version: 1.0.0
+Summary: A simple on call rota using Django
+Home-page: https://github.com/adamlh/oncall
+Author: Adam Hughes
+Author-email: info@manaweb.io
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asgiref==3.8.1
+Requires-Dist: Django==5.0.4
+Requires-Dist: django-filter==24.2
+Requires-Dist: sqlparse==0.5.0
+Requires-Dist: tzdata==2024.1
+
+
+# Installation
+Simply install the dependancies in the requirements.txt
+
+```
+pip install -r ./requirements.txt
+```
+Migrate the database
+
+
+
+# Running
+Run the server with
+``` 
+python ./manage runserver
+```
+
+# Customising
