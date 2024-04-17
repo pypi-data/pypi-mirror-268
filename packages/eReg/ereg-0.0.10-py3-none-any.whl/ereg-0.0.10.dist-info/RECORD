@@ -1,0 +1,16 @@
+ereg/__init__.py,sha256=M7oIhCdl10fA3CJjPuV6vcZ7WE_QkVVpi0zEY6Ix6Wc,190
+ereg/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ereg/cli/run.py,sha256=lqtXfshrOFsBlsZC_AngWWhR0Zt6YL0Ec_gSvIxrx1I,4031
+ereg/configurations/default_rigid.yaml,sha256=OmoW3LrDOOyjjSvzcOWwxKJzV0ylazZQRixCrapB-VM,3617
+ereg/configurations/sample_config.yaml,sha256=v_KqDOlNjmzqcaO5rfv8sM9cP_4upjwU2wY89nmq7ck,3600
+ereg/functional.py,sha256=VPUWzAFjvYfDPtxIVysvLsIixaY_cTOPSGywnPymNSM,2870
+ereg/registration.py,sha256=oiQkf6cz6ZcCvS9GDAkpDXpc9ZKQmoPNkHKl62WYG-A,35455
+ereg/utils/__init__.py,sha256=EHytq3tBe_0bAfOIJOJAaThbbkGsOtTfzMb9fmKSE6U,77
+ereg/utils/citation_reminder.py,sha256=JV1Ey0StYPCnsBpPx4yXSCfbnaAK2kxI1gLlHLNZ5Bs,793
+ereg/utils/io.py,sha256=zbHKSx1O3egQhAA-t7BsXPl-pyZF4m4bUr1ALTsCtKE,1892
+ereg/utils/metrics.py,sha256=HzUctS0r_Tv7bdSo_7nhFiam0adWCsNpX_1yjibHhzo,866
+ereg-0.0.10.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+ereg-0.0.10.dist-info/METADATA,sha256=GY6dtkvlNWz8Fe7hOC5Uw6Qd_fDOEcgu-EtGG0DXQKg,6422
+ereg-0.0.10.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ereg-0.0.10.dist-info/entry_points.txt,sha256=1W3fHbgIIvRc178p2ovIAzyoURXHluISleo29PEHcsw,69
+ereg-0.0.10.dist-info/RECORD,,
