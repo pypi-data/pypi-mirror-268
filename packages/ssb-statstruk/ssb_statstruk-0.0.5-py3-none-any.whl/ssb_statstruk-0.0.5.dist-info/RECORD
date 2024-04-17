@@ -1,0 +1,10 @@
+statstruk/__init__.py,sha256=3nglJTjMV24a6KYu3jUKoxbt11K4sU7d5SQsGKproPY,86
+statstruk/__main__.py,sha256=Tw2ry06dr83J_c94PUrERCEgSt4Y_RGJmIjjNE6fVM8,213
+statstruk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+statstruk/ratemodel.py,sha256=kVQtWj7Un_yhyhIfB2mclmvPGxofw5Uiil0-_rb7B8k,32529
+statstruk/ssbmodel.py,sha256=2pnrb6mBWz5g7FJHPGKt22u5VekQYg5RLibhoSjmsQU,4899
+ssb_statstruk-0.0.5.dist-info/LICENSE,sha256=np3IfD5m0ZUofn_kVzDZqliozuiO6wrktw3LRPjyEiI,1073
+ssb_statstruk-0.0.5.dist-info/METADATA,sha256=AWrqQeI0ho2G7zJ3Hong9h2Z-xvJnVOeD62PiDFI5rA,4644
+ssb_statstruk-0.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ssb_statstruk-0.0.5.dist-info/entry_points.txt,sha256=gkxfhkOVO7Ax-yg-jNF-pV59I8TyARpbLVBLCiXa0TY,57
+ssb_statstruk-0.0.5.dist-info/RECORD,,
