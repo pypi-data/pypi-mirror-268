@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+setup.py
+chip/__init__.py
+chip/main.py
+chip.egg-info/PKG-INFO
+chip.egg-info/SOURCES.txt
+chip.egg-info/dependency_links.txt
+chip.egg-info/entry_points.txt
+chip.egg-info/top_level.txt
