@@ -1,0 +1,7 @@
+[console_scripts]
+award-badges-dev=fedbadges.manual.badges_dev:main
+award-group-membership=fedbadges.manual.group_membership:main
+award-libravatar=fedbadges.manual.libravatar:main
+award-lifecycle=fedbadges.manual.lifecycle:main
+award-mirror=fedbadges.manual.mirror:main
+
