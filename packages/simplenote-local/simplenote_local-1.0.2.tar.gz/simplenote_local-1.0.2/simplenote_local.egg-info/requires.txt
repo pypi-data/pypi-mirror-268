@@ -1,0 +1,6 @@
+beautifulsoup4
+markdownify
+nltk
+simplenote
+toml
+watchdog
