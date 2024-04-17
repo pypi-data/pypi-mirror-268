@@ -1,0 +1,8 @@
+connection_slot_size = 8
+endpoint_cache_size = 20480
+endpoint_cache_ttl = 86400
+id = "service-0"
+master_endpoints = ["localhost:8081"]
+port = 9091
+proc_name = "maxwell-service-python"
+set_routes_delay = 1
