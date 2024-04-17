@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: trustpilot-scraper
+Version: 0.2
+Summary: A Python library for scraping Trustpilot reviews.
+Home-page: https://github.com/irfanalidv/trustpilot-scraper
+Author: Md Irfan Ali
+Author-email: irfanali29@hotmail.com
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
