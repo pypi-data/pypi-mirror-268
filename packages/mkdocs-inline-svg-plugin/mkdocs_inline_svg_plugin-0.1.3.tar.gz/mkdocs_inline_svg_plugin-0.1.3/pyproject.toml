@@ -1,0 +1,118 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mkdocs-inline-svg-plugin"
+version = "0.1.3"
+description = 'MkDocs plugin for inlining svg-href img tags'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = ["MkDocs"]
+authors = [
+  { name = "Oni Boni", email = "oniboni@mailbox.org" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+	"mkdocs ~= 1.5.0",
+	"requests ~= 2.31.0",
+	"beautifulsoup4 ~= 4.12.0",
+]
+
+[project.urls]
+Documentation = "https://github.com/oniboni/mkdocs-inline-svg-plugin#readme"
+Issues = "https://github.com/oniboni/mkdocs-inline-svg-plugin/issues"
+Source = "https://github.com/oniboni/mkdocs-inline-svg-plugin"
+
+[project.entry-points."mkdocs.plugins"]
+inline-svg = "inline_svg.plugin:InlineSvgPlugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/inline_svg"]
+
+[tool.hatch.envs.default]
+dependencies = [
+  "coverage[toml]>=6.5",
+  "pytest",
+  "pip-audit",
+]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = [
+  "- coverage combine",
+  "coverage report",
+]
+cov = [
+  "test-cov",
+  "cov-report",
+]
+audit = "pip-audit"
+
+[tool.hatch.envs.docs]
+dependencies = [
+  "mkdocs-material",
+	"mkdocs-kroki-plugin"
+]
+[tool.hatch.envs.docs.scripts]
+build = "mkdocs build --clean --strict"
+serve = "mkdocs serve -vv"
+
+[tool.hatch.envs.dev]
+dependencies = [
+  "pre-commit",
+  "commitizen",
+]
+[tool.hatch.envs.dev.scripts]
+install-pre-commit-hooks = "pre-commit install --hook-type commit-msg --hook-type pre-push"
+commit = ["install-pre-commit-hooks","cz commit"]
+
+
+# TODO: find a way testing mkdocs plugin
+# [[tool.hatch.envs.all.matrix]]
+# python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+# [tool.hatch.envs.types]
+# dependencies = [
+#   "mypy>=1.0.0",
+# ]
+# [tool.hatch.envs.types.scripts]
+# check = "mypy --install-types --non-interactive {args:src/inline_svg tests}"
+
+# [tool.coverage.run]
+# source_pkgs = ["inline_svg", "tests"]
+# branch = true
+# parallel = true
+# omit = [
+#   "src/inline_svg/__about__.py",
+# ]
+
+# [tool.coverage.paths]
+# inline_svg = ["src/inline_svg", "*/inline_svg/src/inline_svg"]
+# tests = ["tests", "*/inline_svg/tests"]
+
+# [tool.coverage.report]
+# exclude_lines = [
+#   "no cov",
+#   "if __name__ == .__main__.:",
+#   "if TYPE_CHECKING:",
+# ]
+
+[tool.commitizen]
+version = "0.1.3"
+tag_format = "v$version"
+version_files = [
+  "pyproject.toml:version",
+  "src/inline_svg/__init__.py",
+]

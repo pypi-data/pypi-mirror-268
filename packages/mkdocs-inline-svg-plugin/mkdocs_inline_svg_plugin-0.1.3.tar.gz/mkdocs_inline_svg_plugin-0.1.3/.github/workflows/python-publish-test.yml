@@ -1,0 +1,45 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
+
+name: Publish to test PyPI
+
+on:
+  push:
+    tags-ignore:
+      - '**'
+
+env:
+  PYTHONUNBUFFERED: "1"
+  FORCE_COLOR: "1"
+  HATCH_INDEX_USER: "${{ secrets.PYPI_API_USER }}"
+  HATCH_INDEX_AUTH: "${{ secrets.TEST_PYPI_API_TOKEN }}"
+  HATCH_INDEX_REPO: "test"
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+            # actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d
+            # actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install Hatch
+      run: pip install --upgrade hatch
+
+    - name: Bump temp dev release
+      run: hatch run dev:cz bump --devrelease $(date +%s) --files-only --yes
+
+    - name: Build package
+      run: hatch build
+
+    - name: Publish package
+      run: hatch publish

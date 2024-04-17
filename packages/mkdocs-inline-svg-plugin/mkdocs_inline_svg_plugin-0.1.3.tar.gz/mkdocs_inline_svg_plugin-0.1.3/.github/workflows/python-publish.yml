@@ -1,0 +1,56 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+
+env:
+    PYTHONUNBUFFERED: "1"
+    FORCE_COLOR: "1"
+    HATCH_INDEX_USER: "${{ secrets.PYPI_API_USER }}"
+    HATCH_INDEX_AUTH: "${{ secrets.PYPI_API_TOKEN }}"
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+        - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+                # actions/checkout@v4
+        - name: Set up Python
+          uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d
+                # actions/setup-python@v5
+          with:
+            python-version: '3.x'
+
+        - name: Install Hatch
+          run: pip install --upgrade hatch
+
+        - name: Build package
+          run: hatch build
+
+        - name: Gather changes
+          run: sed -n '/^## '"${{ env.GITHUB_REF_NAME }}"'/,/^## .*/p' CHANGELOG.md > RELEASE_NOTES.md
+
+        - name: Create Release
+          uses: softprops/action-gh-release@9d7c94cfd0a1f3ed45544c887983e9fa900f0564
+                # softprops/action-gh-release@v2
+          with:
+            body_path: RELEASE_NOTES.md
+
+        - name: Publish package
+          run: hatch publish

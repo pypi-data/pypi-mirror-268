@@ -1,0 +1,80 @@
+Metadata-Version: 2.3
+Name: mkdocs-inline-svg-plugin
+Version: 0.1.3
+Summary: MkDocs plugin for inlining svg-href img tags
+Project-URL: Documentation, https://github.com/oniboni/mkdocs-inline-svg-plugin#readme
+Project-URL: Issues, https://github.com/oniboni/mkdocs-inline-svg-plugin/issues
+Project-URL: Source, https://github.com/oniboni/mkdocs-inline-svg-plugin
+Author-email: Oni Boni <oniboni@mailbox.org>
+License-Expression: MIT
+License-File: LICENSE.txt
+Keywords: MkDocs
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: beautifulsoup4~=4.12.0
+Requires-Dist: mkdocs~=1.5.0
+Requires-Dist: requests~=2.31.0
+Description-Content-Type: text/markdown
+
+> **NOTE:** this project is still WIP!
+
+# mkdocs-inline-svg-plugin
+
+[![PyPI - Version](https://img.shields.io/pypi/v/mkdocs-inline-svg-plugin.svg)](https://pypi.org/project/mkdocs-inline-svg-plugin)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mkdocs-inline-svg-plugin.svg)](https://pypi.org/project/mkdocs-inline-svg-plugin)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install mkdocs-inline-svg-plugin
+```
+
+## License
+
+`mkdocs-inline-svg-plugin` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+## Usage
+
+If you want to inline SVGs, that were put in `img` tags by the [kroki plugin](https://github.com/AVATEAM-IT-SYSTEMHAUS/mkdocs-kroki-plugin):
+
+`mkdocs.yml`:
+```yaml
+plugins:
+  - kroki:
+      FencePrefix: ''
+      HttpMethod: 'POST'
+      DownloadImages: true
+  - inline-svg:
+      alt_name: Kroki
+```
+
+### Configuration
+
+| Config value | What for |
+|---|---|
+| `alt_name` | default: `*`, that does not check the `img` `alt` property |
+| `include_assets` | default: `False`, looks for `url(..)`, downloads the contents to `asset_dir` and replaces the url |
+| `asset_dir` | default: `assets/` |
+| `patch_style` | default: `False`, this feature is **EXPERIMENTAL** and not yet finished, needs an additional CSS |
+
+## Test
+
+Serve documentation:
+```sh
+hatch run docs:serve
+```
