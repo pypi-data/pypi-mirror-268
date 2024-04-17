@@ -1,0 +1,4 @@
+loguru>=0.7.2
+JayDeBeApi~=1.2.3
+pyodbc~=5.1.0
+seversion
