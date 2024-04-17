@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: simply-log
+Version: 0.2.5
+Summary: A simple logging.txt library 
+Description-Content-Type: text/markdown
+
+# Text File Generation Module
+
+This Python module provides a simple logging functionality, allowing users to generate text log files.
+
+if not exist => create file.txt
+
+```
+- dir/
+___ logFile.txt
+___ logFile-1.txt
+___ logFile-2.txt
+```
+
+coontent file :
+
+```
+[17/04/2024 09:56:05] [ERROR] this is a test message error dag
+[17/04/2024 09:56:05] [INFO] this is a test info message index null
+[17/04/2024 09:56:05] [WARNING] this is a test warning message scripte.py break
+```
+
+## Usage
+
+Once installed, you can import the module into your Python script like this:
+
+```python
+from log import log_message
+
+log_message("logFile", "error", "this is a test message")
+```
+
+### Additional Examples:
+
+1. Logging an informational message:
+
+   ```python
+   log_message("logFile", "info", "this is an informational message")
+   ```
+
+2. Logging a warning message:
+
+   ```python
+   log_message("logFile-1", "warning", "this is a warning message")
+   ```
+
+3. Logging a debug message:
+
+   ```python
+   log_message("logFile-2", "debug", "this is a debug message")
+   ```
+
+4. Logging a critical message:
+
+   ```python
+   log_message("logFile", "critical", "this is a critical message")
+   ```
+
+5. Auto Log:
+
+   ```python
+   log_message("auto", "debug", "this is a debug message")
+   # name file = %d%m%Y_%H%M%S.txt
+   ```
+
+[Cornelius Vincent @MIT @author ](https://www.linkedin.com/in/corneliusvincent)
