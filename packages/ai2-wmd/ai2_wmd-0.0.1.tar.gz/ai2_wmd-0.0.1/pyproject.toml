@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ai2-wmd"
+version = "0.0.1"
+description = ""
+authors = ["weihong.xu <xuweihong.cn@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ai2_wmd"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+ai2-kit = "^0.15.10"
+
+[[tool.poetry.source]]
+name = "ustc"
+url = "https://pypi.mirrors.ustc.edu.cn/simple/"
+priority = "default"
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
