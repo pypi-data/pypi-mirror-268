@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: canonical-sphinx
+Version: 0.1.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: sphinx<8,>=7.1.2
+Requires-Dist: furo
+Requires-Dist: linkify-it-py
+Requires-Dist: canonical-sphinx-extensions
+Requires-Dist: myst-parser
+Requires-Dist: pyspelling
+Requires-Dist: sphinx-copybutton
+Requires-Dist: sphinx-design
+Requires-Dist: sphinx-notfound-page
+Requires-Dist: sphinx-reredirects
+Requires-Dist: sphinx-tabs
+Requires-Dist: sphinxcontrib-jquery
+Requires-Dist: sphinxext-opengraph
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: coverage[toml]==7.4.4; extra == "dev"
+Requires-Dist: pytest==8.1.1; extra == "dev"
+Requires-Dist: pytest-cov==5.0.0; extra == "dev"
+Requires-Dist: pytest-mock==3.14.0; extra == "dev"
+Provides-Extra: lint
+Requires-Dist: black==24.3.0; extra == "lint"
+Requires-Dist: codespell[toml]==2.2.6; extra == "lint"
+Requires-Dist: ruff==0.3.5; extra == "lint"
+Requires-Dist: yamllint==1.35.1; extra == "lint"
+Provides-Extra: types
+Requires-Dist: mypy[reports]==1.9.0; extra == "types"
+Requires-Dist: pyright==1.1.357; extra == "types"
+Provides-Extra: docs
+Requires-Dist: sphinx-lint; extra == "docs"
+Requires-Dist: sphinx-autobuild<2024.2.5; extra == "docs"
+
+****************
+canonical-sphinx
+****************
+
+Extension and theme to create great Canonical-branded documentation.
+
+Description
+-----------
+TODO
+
+Structure
+---------
+TODO
+
+How to migrate existing projects
+--------------------------------
+TODO
+
+
+.. _EditorConfig: https://editorconfig.org/
+.. _pre-commit: https://pre-commit.com/
+.. _ReadTheDocs: https://docs.readthedocs.io/en/stable/intro/import-guide.html
+.. _use this template: https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
