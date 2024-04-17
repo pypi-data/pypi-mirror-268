@@ -1,0 +1,10 @@
+LICENSE
+LICENSE_Lavis.md
+LICENSE_Minigpt4.md
+LICENSE_videollama
+pyproject.toml
+src/MovieChat.egg-info/PKG-INFO
+src/MovieChat.egg-info/SOURCES.txt
+src/MovieChat.egg-info/dependency_links.txt
+src/MovieChat.egg-info/requires.txt
+src/MovieChat.egg-info/top_level.txt
