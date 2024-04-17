@@ -1,0 +1,10 @@
+docs/site
+test/data/pgservice.conf
+
+__pycache__/
+.idea
+*.egg-info
+*.py[cod]
+*$py.class
+*.pyc
+.venv
