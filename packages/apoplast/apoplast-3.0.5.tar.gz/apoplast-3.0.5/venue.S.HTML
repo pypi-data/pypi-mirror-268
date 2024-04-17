@@ -1,0 +1,69 @@
+
+
+
+<pre>
+
+	<h1>apoplast</h1>
+	
+	<h2>docker</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.100 -v .:/apoplast -v /online/vaccines_apoplast/mints/apoplast:/online/vaccines_apoplast/mints/apoplast -it jumps:v2.1.0
+		docker exec -it 9fd55c2b8034 bash
+
+	<h2>install</h2>
+		pip install sanic
+
+	<h2>link the readme</h2>
+		ln -s venues/stages/apoplast/room.md readme.MD
+
+	<h2>poetry</h2>
+		pip install poetry poetry-plugin-export
+		
+		poetry add sanic_swagger
+		
+		<h3>update</h3>
+		
+		
+		<h3>installations</h3>
+			poetry config virtualenvs.path /path/to/your/directory
+
+
+			#
+			#	if dev dependencies
+			#
+			# poetry export --with dev --format requirements.txt --output requirements.txt
+
+			cd /apoplast && rm -rf /apoplast/venues/stages_pip && poetry export --format requirements.txt --output requirements.txt && pip install -r requirements.txt -t /apoplast/venues/stages_pip
+
+
+
+		poetry env use python3
+		poetry shell
+
+		/root/.cache/pypoetry/virtualenvs/apoplast-p2eJTVsK-py3.10/lib/python3.10/site-packages/
+
+		cp -R /root/.cache/pypoetry/virtualenvs/apoplast-p2eJTVsK-py3.10/lib/python3.10/site-packages/ /apoplast/venues/stages_pip
+
+	<h2>publishing</h2>
+		(cd /apoplast/venues/stages/apoplast && pycycle --here) 
+	
+		python3 /apoplast/venues/stages/apoplast/__status/main/status.proc.py
+		python3 /apoplast/venues/stages/apoplast/__status/API/status.proc.py
+		cp /apoplast/venues/stages/apoplast/room.md /apoplast/readme.md
+		
+		#
+		#	poetry auth
+		#
+		
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+		
+		
+		# rm -rf stages_pip && pip install apoplast -t stages_pip
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>

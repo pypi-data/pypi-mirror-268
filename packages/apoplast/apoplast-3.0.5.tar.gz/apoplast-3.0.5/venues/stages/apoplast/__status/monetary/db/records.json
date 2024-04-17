@@ -1,0 +1,1 @@
+{"_default": {"1": {"paths": [{"path": "__status_monetary/monetary_monitors/status_monetary_1.py", "empty": true, "parsed": true}], "alarms": [], "stats": {"paths": {"alarms": 0, "empty": 1}, "checks": {"passes": 0, "alarms": 0}}}}}
