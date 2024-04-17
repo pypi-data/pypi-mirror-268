@@ -1,0 +1,4 @@
+
+[tests]
+pytest-cov==4.1
+pytest==7.4
