@@ -1,0 +1,53 @@
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=0.12"]
+
+[tool.poetry]
+authors = ["Lukas Karlsson <karlsson@broadinstitute.org>"]
+description = "BITS Auth"
+exclude = [
+    "**/*.pyc",
+    "**/*.pyi",
+]
+homepage = "https://github.com/broadinstitute/bits-auth.git"
+keywords = ["bits", "auth"]
+license = "BSD-3-Clause"
+name = "bits-auth"
+packages = [
+    { include = "bits" },
+]
+readme = "README.md"
+repository = "https://github.com/broadinstitute/bits-auth.git"
+version = "1.3.0"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12.1"  # Compatible python versions must be declared here
+
+bits-secrets = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+bits-mongo = "^1.0.4"
+bits-settings = "^1.0.5"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+# Prefer double quotes over single quotes.
+quote-style = "double"
+
+[tool.ruff.lint]
+fixable = ["ALL"]
+ignore = ["D104"]
+select = [
+  "D",   # pydocstyle
+  "E",   # pycodestyle
+  "F",   # pyflakes
+  "I",   # isort
+  "N",   # pep8-naming
+  "PL",  # Pylint
+  "UP",  # pyupgrade
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
