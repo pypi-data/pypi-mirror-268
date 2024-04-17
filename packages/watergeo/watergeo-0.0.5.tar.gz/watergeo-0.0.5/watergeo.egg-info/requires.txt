@@ -1,0 +1,13 @@
+numpy
+leafmap
+geopandas
+ipyleaflet
+pandas
+earthengine-api>=0.1.398
+ee
+
+[all]
+watergeo[extra]
+
+[extra]
+pandas
