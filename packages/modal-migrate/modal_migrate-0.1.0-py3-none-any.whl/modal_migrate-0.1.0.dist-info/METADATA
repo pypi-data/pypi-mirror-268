@@ -1,0 +1,46 @@
+Metadata-Version: 2.3
+Name: modal-migrate
+Version: 0.1.0
+Summary: Migrate Modal codebases automatically.
+Project-URL: Documentation, https://github.com/modal-labs/modal-migrate#readme
+Project-URL: Issues, https://github.com/modal-labs/modal-migrate/issues
+Project-URL: Source, https://github.com/modal-labs/modal-migrate
+Author-email: Eric Zhang <ekzhang1@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: libcst<2,>=1
+Requires-Dist: rich>=12
+Requires-Dist: typer>=0.10
+Description-Content-Type: text/markdown
+
+# modal-migrate
+
+[![PyPI - Version](https://img.shields.io/pypi/v/modal-migrate.svg)](https://pypi.org/project/modal-migrate)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/modal-migrate.svg)](https://pypi.org/project/modal-migrate)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install modal-migrate
+```
+
+## License
+
+`modal-migrate` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

@@ -1,0 +1,2 @@
+[console_scripts]
+modal-migrate = modal_migrate.main:entrypoint
