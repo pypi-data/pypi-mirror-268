@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chippy_ai"
+version = "0.2.6"
+description = "A small example package"
+readme = "README.md"
+authors = [{ name = "Alex Behrens", email = "alexanderbbehrens@gmail.com" }]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License", 
+    "Operating System :: OS Independent",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/alexbehrens/chip"
+Issues = "https://github.com/alexbehrens/chip/issues"
+
+[project.scripts]
+chip = "chippy_ai.main:main"
+
+[tool.hatch.metadata.package_data]
+"chippy_ai" = ["config.ini"]
