@@ -1,0 +1,24 @@
+[project]
+name = "PyNucleus"
+version = "0.0.3"
+description = "Essential Python Toolkit."
+readme = "README.md"
+
+[metadata]
+long_description = "Foundational Python toolkit offering essential utilities and structures for streamlined development of versatile applications."
+dependencies = ["random", "colorama"]
+requires = ["random", "colorama"]
+requires-python = ">=3.12"
+authors = [
+  {name = "BartekKansy", email = "kansy.bartosz@interia.pl"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+license = {text = "LICENSE"}
+keywords = ["python", "classes", "utilities"]
+
+[build-system]
+requires = ["setuptools>=40.8.0"]
+build-backend = "setuptools.build_meta:__legacy__"

@@ -1,0 +1,16 @@
+# PyEssentials 
+## by Bartek Kansy
+
+### This package contains classes and functions that can be used to create programs, consoles etc.
+
+## Update log:
+
+### 0.0.3
+* added Memory class
+* added decorators: Timer, Info
+* added "details" to CommandBase class
+* changed AddCommand function in CommandRegister class
+* fixed some bugs
+
+### 0.0.2.3
+* published PyNucleus
