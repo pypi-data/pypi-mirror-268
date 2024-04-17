@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/greentext_scraper/__init__.py
+src/greentext_scraper/scraper.py
+src/greentext_scraper.egg-info/PKG-INFO
+src/greentext_scraper.egg-info/SOURCES.txt
+src/greentext_scraper.egg-info/dependency_links.txt
+src/greentext_scraper.egg-info/requires.txt
+src/greentext_scraper.egg-info/top_level.txt

@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "greentext-scraper"
+authors = [{ name = "Christian Fiore"}]
+version = "1.0.0"
+description = "Python library to scrape all greentexts from active 4chan threads"
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = ["basc_py4chan"]
+
+[project.urls]
+Homepage = "https://github.com/agente3z/greentext-scraper"
