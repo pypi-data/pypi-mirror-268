@@ -1,0 +1,13 @@
+librosa
+soundfile
+matplotlib
+numpy
+omegaconf
+praat-parselmouth
+scipy
+tensorboard
+torch
+torchaudio
+tqdm
+transformers
+cached_path
