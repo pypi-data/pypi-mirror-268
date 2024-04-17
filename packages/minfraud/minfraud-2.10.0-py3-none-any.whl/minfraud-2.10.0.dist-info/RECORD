@@ -1,0 +1,13 @@
+minfraud/__init__.py,sha256=Gv17EbAJXsMhKq6HHcuMuCAAKpd00cCCJO2cu8VZqH4,364
+minfraud/errors.py,sha256=oBjZGXPhjisyLj6WBDTLXX86HfsaJJ5opieKQyaYT2k,1662
+minfraud/models.py,sha256=AGQNmmcAx6uphZzVM0sWv7lLRXf4QT3EHY_H4GNU5as,37839
+minfraud/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minfraud/request.py,sha256=_IVl0VH4m_d5IS9HnxV92FECK4TqEUag_rzmElhSaME,8814
+minfraud/validation.py,sha256=ePL6fu_QGgGHcZXrRcvAXfXj83ml0km29vl6xNFJlL0,9419
+minfraud/version.py,sha256=Rx0V4hmP4ZQOOLRKMF907Q_eXKQw4i1Q1iJosaGcBSs,86
+minfraud/webservice.py,sha256=77O3LLXniyvMpF0GKcamb4IFbyob8KL-R2V2ozoA5JI,24631
+minfraud-2.10.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+minfraud-2.10.0.dist-info/METADATA,sha256=2T_etYpY-fTQ10Ba-KFVLUPW79UKhEJzwLKa3WaZuhs,12626
+minfraud-2.10.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+minfraud-2.10.0.dist-info/top_level.txt,sha256=9vHl4ueCZ3_UeQd8UvcVctQ5-6afF-1C78-cUqu4x1M,9
+minfraud-2.10.0.dist-info/RECORD,,
