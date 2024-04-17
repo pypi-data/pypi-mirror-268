@@ -1,0 +1,6 @@
+pygmsh
+pyamg
+scipy
+sympy
+matplotlib
+setuptools
