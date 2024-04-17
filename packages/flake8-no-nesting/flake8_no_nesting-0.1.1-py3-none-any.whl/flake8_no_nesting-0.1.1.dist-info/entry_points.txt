@@ -1,0 +1,2 @@
+[flake8.extension]
+FNN = flake8_no_nesting:Plugin
