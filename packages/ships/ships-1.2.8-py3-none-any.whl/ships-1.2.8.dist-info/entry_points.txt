@@ -1,0 +1,3 @@
+[console_scripts]
+ships=ships:clique
+
