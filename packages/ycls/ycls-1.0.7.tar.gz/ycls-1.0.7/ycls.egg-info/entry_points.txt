@@ -1,0 +1,2 @@
+[console_scripts]
+ycls = ycls:run_cli
