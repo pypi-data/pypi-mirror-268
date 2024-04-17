@@ -1,0 +1,32 @@
+name: "Build"
+
+on:
+  push:
+    tags: "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.12"
+
+      - name: Install Rye
+        uses: eifinger/setup-rye@v2
+
+      - name: Install dependencies
+        run: rye sync && source .venv/bin/activate
+
+      - name: Run tests
+        run: python -m pytest tests
+
+      - name: Build wheels
+        run: rye build
+
+      - name: Publish wheels
+        run: rye publish --yes --token ${{ secrets.PYPI_TOKEN }}
