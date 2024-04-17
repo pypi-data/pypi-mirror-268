@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+libretranslatepy/__init__.py
+libretranslatepy/api.py
+libretranslatepy.egg-info/PKG-INFO
+libretranslatepy.egg-info/SOURCES.txt
+libretranslatepy.egg-info/dependency_links.txt
+libretranslatepy.egg-info/top_level.txt
