@@ -1,0 +1,7 @@
+[project]
+name = "stark-sim"
+authors = [
+    {name = "José Antonio Fernández-Fernández", email = "joseantfer.engineer@gmail.com"},
+]
+version = "0.0.0"
+description = "Coming soon"

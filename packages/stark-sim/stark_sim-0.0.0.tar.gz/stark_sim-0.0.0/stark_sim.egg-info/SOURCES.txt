@@ -1,0 +1,6 @@
+pyproject.toml
+pystark/__init__.py
+stark_sim.egg-info/PKG-INFO
+stark_sim.egg-info/SOURCES.txt
+stark_sim.egg-info/dependency_links.txt
+stark_sim.egg-info/top_level.txt
