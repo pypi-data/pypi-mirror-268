@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README-CN.md
+README.md
+setup.cfg
+setup.py
+alibabacloud_miniapplcdp20200113/__init__.py
+alibabacloud_miniapplcdp20200113/client.py
+alibabacloud_miniapplcdp20200113/models.py
+alibabacloud_miniapplcdp20200113.egg-info/PKG-INFO
+alibabacloud_miniapplcdp20200113.egg-info/SOURCES.txt
+alibabacloud_miniapplcdp20200113.egg-info/dependency_links.txt
+alibabacloud_miniapplcdp20200113.egg-info/requires.txt
+alibabacloud_miniapplcdp20200113.egg-info/top_level.txt
