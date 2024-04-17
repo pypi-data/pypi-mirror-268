@@ -1,0 +1,122 @@
+[tool.poetry]
+name = "rate-control"
+version = "2.0.0"
+description = "Versatile rate controlling in Python"
+authors = ["Corentin Régent <corentin.regent.pro@gmail.com>"]
+license = "MIT"
+
+homepage = "https://github.com/corentin-regent/rate-control"
+repository = "https://github.com/corentin-regent/rate-control"
+documentation = "https://rate-control.readthedocs.io/"
+readme = "README.rst"
+
+keywords = [
+    "async",
+    "rate limit",
+    "schedule",
+    "throttle",
+    "token bucket",
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: AnyIO",
+    "Framework :: AsyncIO",
+    "Framework :: Trio",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+
+[tool.poetry.urls]
+Changelog = "https://rate-control.readthedocs.io/en/latest/changelog.html"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+anyio = "^4.0.0"
+typing_extensions = {version = "^4.4.0", python = "<3.12"}
+
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+anyio = {version = "*", extras = ["trio"]}
+mypy = "^1.6"
+ruff = "^0.3.0"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+aiofastforward = "^0.0.26"
+anyio = {version = "*", extras = ["trio"]}
+coverage = {version = "^7.0.0", extras = ["toml"]}
+pytest = "^8.0.0"
+pytest-subtests = "^0.11.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+enum_tools = {version = "^0.11.0", extras=["sphinx"]}
+furo = "==2024.01.29"
+sphinx = "^7.0.0"
+sphinx-autodoc-typehints = "^2.0.0"
+sphinx-tabs = "^3.4.2"
+
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "^ +\\.{3}$",  # Lone ellipsis
+]
+
+[tool.mypy]
+strict = true
+enable_error_code = "explicit-override"
+
+[[tool.mypy.overrides]]
+module = ['aiofastforward.*']
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: marks tests as slow (run with --runslow)",
+]
+
+[tool.ruff]
+exclude = ["docs/examples"]
+fix = true
+line-length = 120
+target-version = "py38"
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 88
+line-ending = "lf"
+quote-style = "single"
+
+[tool.ruff.lint]
+dummy-variable-rgx = "^_+$"
+extend-select = ["I"]  # isort
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
