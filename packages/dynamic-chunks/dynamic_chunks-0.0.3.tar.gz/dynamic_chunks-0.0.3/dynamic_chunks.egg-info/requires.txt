@@ -1,0 +1,7 @@
+numpy
+dask
+xarray
+
+[test]
+pytest
+pytest-cov

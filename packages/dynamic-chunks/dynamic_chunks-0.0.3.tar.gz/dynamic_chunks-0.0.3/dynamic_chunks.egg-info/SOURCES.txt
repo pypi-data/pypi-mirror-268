@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+test-requirements.txt
+.github/workflows/release.yaml
+.github/workflows/test.yaml
+dynamic_chunks/__init__.py
+dynamic_chunks/_version.py
+dynamic_chunks/algorithms.py
+dynamic_chunks.egg-info/PKG-INFO
+dynamic_chunks.egg-info/SOURCES.txt
+dynamic_chunks.egg-info/dependency_links.txt
+dynamic_chunks.egg-info/requires.txt
+dynamic_chunks.egg-info/top_level.txt
+dynamic_chunks/tests/test_algorithms.py
