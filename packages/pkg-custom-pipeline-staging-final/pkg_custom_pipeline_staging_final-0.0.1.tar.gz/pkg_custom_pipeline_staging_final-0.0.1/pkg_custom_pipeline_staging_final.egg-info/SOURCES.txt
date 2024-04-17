@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+pkg_custom_pipeline_staging_final.egg-info/PKG-INFO
+pkg_custom_pipeline_staging_final.egg-info/SOURCES.txt
+pkg_custom_pipeline_staging_final.egg-info/dependency_links.txt
+pkg_custom_pipeline_staging_final.egg-info/requires.txt
+pkg_custom_pipeline_staging_final.egg-info/top_level.txt
