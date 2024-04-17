@@ -1,0 +1,7 @@
+datasus_dbc-0.1.3.dist-info/METADATA,sha256=3XOJ8ywWbAPtl9LXt2AwMtBSY_SPPzYyoVXhnwAISqI,2109
+datasus_dbc-0.1.3.dist-info/WHEEL,sha256=5HyBAIXy6w_lmX9AQnFspp6An6SPZJwRKkYM1H8iHP0,95
+datasus_dbc/__init__.py,sha256=w9IoOKAnXF4wl69jbgRs0CdpmU1TF9UIj_WPpZmFqvQ,127
+datasus_dbc/__init__.pyi,sha256=ypSnTyPyHN5Y6hzQjPkT5z_pLGdBsU6OVj6pwTJwa1M,241
+datasus_dbc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+datasus_dbc/datasus_dbc.cp310-win_amd64.pyd,sha256=52H6DtHiGrY6bnpF5rpEBz8VFtTFigFrpyAhCiKwIJo,249344
+datasus_dbc-0.1.3.dist-info/RECORD,,
