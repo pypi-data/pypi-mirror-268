@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+audio/Audio.py
+audio/__init__.py
+robotframework_parrot_audio.egg-info/PKG-INFO
+robotframework_parrot_audio.egg-info/SOURCES.txt
+robotframework_parrot_audio.egg-info/dependency_links.txt
+robotframework_parrot_audio.egg-info/requires.txt
+robotframework_parrot_audio.egg-info/top_level.txt
