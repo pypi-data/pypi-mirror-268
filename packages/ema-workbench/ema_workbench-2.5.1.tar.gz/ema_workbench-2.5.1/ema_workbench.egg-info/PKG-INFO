@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: ema_workbench
+Version: 2.5.1
+Summary: Exploratory modelling in Python
+Author-email: Jan Kwakkel <j.h.kwakkel@tudelft.nl>
+License: Copyright (c) 2010-2016, Delft University of Technology
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without modification,
+        are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice, this
+          list of conditions and the following disclaimer in the documentation and/or
+          other materials provided with the distribution.
+        
+        * Neither the name of the Delft University of Technology nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+        ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/quaquel/EMAworkbench
+Project-URL: Documentation, https://emaworkbench.readthedocs.io/
+Project-URL: Bug Tracker, https://github.com/quaquel/EMAworkbench/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: salib>=1.4.6
+Requires-Dist: platypus-opt
+Requires-Dist: matplotlib
+Requires-Dist: statsmodels
+Requires-Dist: seaborn
+Requires-Dist: tqdm
+Provides-Extra: recommended
+Requires-Dist: ema_workbench[dev,graph,jupyter]; extra == "recommended"
+Provides-Extra: all
+Requires-Dist: ema_workbench[cov,dev,docs,graph,jupyter,parallel]; extra == "all"
+Provides-Extra: jupyter
+Requires-Dist: jupyter; extra == "jupyter"
+Requires-Dist: jupyter_client; extra == "jupyter"
+Requires-Dist: ipython; extra == "jupyter"
+Requires-Dist: ipykernel; extra == "jupyter"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: jupyter_client; extra == "dev"
+Requires-Dist: ipyparallel; extra == "dev"
+Provides-Extra: cov
+Requires-Dist: pytest-cov; extra == "cov"
+Requires-Dist: coverage; extra == "cov"
+Requires-Dist: coveralls; extra == "cov"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Requires-Dist: readthedocs-sphinx-search; extra == "docs"
+Requires-Dist: nbsphinx; extra == "docs"
+Requires-Dist: myst; extra == "docs"
+Requires-Dist: pyscaffold; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Provides-Extra: graph
+Requires-Dist: altair; extra == "graph"
+Requires-Dist: pydot; extra == "graph"
+Requires-Dist: graphviz; extra == "graph"
+Provides-Extra: parallel
+Requires-Dist: ipyparallel; extra == "parallel"
+Requires-Dist: traitlets; extra == "parallel"
+Provides-Extra: netlogo
+Requires-Dist: jpype-1; extra == "netlogo"
+Requires-Dist: pynetlogo; extra == "netlogo"
+Provides-Extra: pysd
+Requires-Dist: pysd; extra == "pysd"
+Provides-Extra: simio
+Requires-Dist: pythonnet; extra == "simio"
+
+[![Build Status](https://github.com/quaquel/EMAworkbench/actions/workflows/ci.yml/badge.svg?master)](https://github.com/quaquel/EMAworkbench/actions)
+[![Coverage Status](https://coveralls.io/repos/github/quaquel/EMAworkbench/badge.svg?branch=master)](https://coveralls.io/github/quaquel/EMAworkbench?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/emaworkbench/badge/?version=latest)](http://emaworkbench.readthedocs.org/en/latest/?badge=master)
+[![PyPi](https://img.shields.io/pypi/v/ema_workbench.svg)](https://pypi.python.org/pypi/ema_workbench)
+[![PyPi](https://img.shields.io/pypi/dm/ema_workbench.svg)](https://pypi.python.org/pypi/ema_workbench)
+
+# Exploratory Modeling workbench
+
+Exploratory Modeling and Analysis (EMA) is a research methodology that uses computational experiments to analyze complex and uncertain systems ([Bankes, 1993](http://www.jstor.org/stable/10.2307/171847)). That is, exploratory modeling aims at offering computational decision support for decision making under [deep uncertainty](http://inderscience.metapress.com/content/y77p3q512x475523/) and [robust decision making](http://en.wikipedia.org/wiki/Robust_decision_making).
+
+The EMA workbench aims at providing support for performing exploratory modeling with models developed in various modelling packages and environments. Currently, the workbench offers connectors to [Vensim](https://vensim.com/), [Netlogo](https://ccl.northwestern.edu/netlogo/), [Simio](https://www.simio.com/), [Vadere](https://www.vadere.org/) and Excel.
+
+The EMA workbench offers support for designing experiments, performing the experiments - including support for parallel processing on both a single machine as well as on clusters-, and analysing the results. To get started, take a look at the high level overview, the tutorial, or dive straight into the details of the API.
+
+The EMA workbench currently under development at Delft University of Technology. If you would like to collaborate, open an issue/discussion or contact [Jan Kwakkel](https://www.tudelft.nl/en/tpm/our-faculty/departments/multi-actor-systems/people/professors/prof-drir-jh-jan-kwakkel).
+
+## Documentation
+
+Documentation for the workbench is availabe at [Read the Docs](https://emaworkbench.readthedocs.io/en/latest/index.html), including an introduction on Exploratory Modeling, tutorials and documentation on all the modules and functions.
+
+There are also a lot of example models available at [ema_workbench/examples](ema_workbench/examples), both for pure Python models and some using the different connectors. A release notes for each new version are available at [CHANGELOG.md](CHANGELOG.md).
+
+## Installation
+
+The workbench is available from [PyPI](https://pypi.org/project/ema-workbench/), and currently requires Python 3.9 or newer. It can be installed with:
+```
+pip install -U ema_workbench
+```
+To also install some recommended packages for plotting, testing and Jupyter support, use the `recommended` extra:
+```
+pip install -U ema_workbench[recommended]
+```
+There are way more options installing the workbench, including installing connector packages, edible installs for development, installs of custom forks and branches and more. See [Installing the workbench](https://emaworkbench.readthedocs.io/en/latest/getting_started/installation.html) in the docs for all options.
+
+## Contributing
+
+We greatly appreciate contributions to the EMA workbench! Reporting [Issues](https://github.com/quaquel/EMAworkbench/issues) such as bugs or unclairties in the documentation, opening a [Pull requests](https://github.com/quaquel/EMAworkbench/pulls) with code or documentation improvements or opening a [Discussion](https://github.com/quaquel/EMAworkbench/discussions) with a question, suggestions or comment helps us a lot.
+
+Please check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+
+## License
+
+This repository is licensed under BSD 3-Clause License. See [LICENSE.md](LICENSE.md).
