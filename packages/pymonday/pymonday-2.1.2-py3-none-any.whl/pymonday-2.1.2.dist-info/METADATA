@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pymonday
+Version: 2.1.2
+Summary: PyMonday is a monday.com API Python Client Library, compatible with API version 2023-10 and later.
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: python-dotenv
+Requires-Dist: PyYAML
+Requires-Dist: asyncio
+
+# Pymonday
+
+Project documentation is available on Read The Docs:
+
+https://pymonday.readthedocs.io/en/latest/
