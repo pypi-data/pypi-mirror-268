@@ -1,0 +1,23 @@
+---
+metric_id: metric-managed-created-count
+name: Created Count
+metric_type: COUNTER
+resource_type: inventory.CloudService
+query_options:
+  group_by:
+    - region_code
+    - cloud_service_type
+    - cloud_service_group
+    - provider
+    - account
+  fields:
+    value:
+      operator: count
+  filter:
+    - key: ref_cloud_service_type.is_primary
+      value: True
+      operator: eq
+date_field: created_at
+unit: Count
+namespace_id: ns-managed-asset-summary
+version: '1.0'
