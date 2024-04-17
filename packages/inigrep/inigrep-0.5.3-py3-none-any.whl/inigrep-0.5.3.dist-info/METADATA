@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: inigrep
+Version: 0.5.3
+Summary: inigrep - grep for (some) INIs
+Home-page: https://gitlab.com/vornet/python/python-inigrep
+Maintainer-email: Alois Mahdal <netvor+inigrep@vornet.cz>
+License: LGPLv2
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires: __VDK_PYPI_REQUIRES__
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+inigrep is designed to read a particular simplistic dialect of
+INI configuration files.  In a sense, it can be considered as
+a "grep for INIs", in that rather than parsing the file into
+a typed memory structure for later access, it passes file each
+time a query is done, and spits out relevant parts; treating
+everything as text.  Hence, it's not intended as replacement
+for a full-blown configuration system but rather a quick & dirty
+"swiss axe" for quick & dirty scripts.
