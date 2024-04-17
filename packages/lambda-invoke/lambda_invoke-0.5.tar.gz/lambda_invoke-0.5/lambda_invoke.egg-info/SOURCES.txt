@@ -1,0 +1,14 @@
+AUTHORS.rst
+LICENSE
+README.rst
+pyproject.toml
+setup.cfg
+lambda_invoke/__init__.py
+lambda_invoke/simple_proxy.py
+lambda_invoke.egg-info/PKG-INFO
+lambda_invoke.egg-info/SOURCES.txt
+lambda_invoke.egg-info/dependency_links.txt
+lambda_invoke.egg-info/not-zip-safe
+lambda_invoke.egg-info/requires.txt
+lambda_invoke.egg-info/top_level.txt
+tests/test_simple_proxy.py

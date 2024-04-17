@@ -1,0 +1,15 @@
+
+[testing]
+pip
+flake8
+tox
+coverage
+pytest
+pyflakes
+pytest-cov
+bandit
+black
+isort
+wheel
+twine
+build
