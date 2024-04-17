@@ -1,0 +1,2 @@
+[console_scripts]
+tdim = tdim.__main__:run
