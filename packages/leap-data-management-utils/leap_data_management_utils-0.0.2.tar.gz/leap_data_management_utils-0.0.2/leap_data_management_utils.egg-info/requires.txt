@@ -1,0 +1,12 @@
+apache-beam
+google-cloud-bigquery
+google-api-core
+zarr
+xarray
+pangeo-forge-esgf
+db_dtypes
+cftime
+pandas
+
+[test]
+pre-commit
