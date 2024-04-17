@@ -1,0 +1,11 @@
+finch/__init__.py,sha256=Q6_M7q0mDfbFptqE2k68Y7693skj_GoWl4c1vTd0ZiI,1819
+finch/compiled.py,sha256=uQ1cSwksIopUouQH0N-cAOjo8xwdGC3cOO87L8BxZDs,842
+finch/dtypes.py,sha256=hQxwI4HyXcpv5N4nJLyHvbzngaCK_PTgMw9HuZ4YHS8,532
+finch/julia.py,sha256=Oy7sRyhuognqrQ2jVIenUTDzXbsC44ZIUYbqMtMhNZw,432
+finch/levels.py,sha256=3aazcnN7WGDyPGXEZBSqUSZe1xzmjpINq5NV8stFSSo,2255
+finch/tensor.py,sha256=x_lVFeXIOYVkjv3cpNtQ1ScWUzWnFf6cAT-qg9azm8I,24994
+finch/typing.py,sha256=qx6G1XUsGs3Noou36yyuzgTtTJq3heimRWicOwNFmn4,287
+finch_tensor-0.1.10.dist-info/LICENSE,sha256=STex5lrOfGqV3BOj4kiLUjupAjxRfeHWcBFOxNMEDSU,1070
+finch_tensor-0.1.10.dist-info/METADATA,sha256=XdiE0WVzudYNHH6fQBRW3lDsgSTaKq90xGtttZsSvIg,2426
+finch_tensor-0.1.10.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+finch_tensor-0.1.10.dist-info/RECORD,,
