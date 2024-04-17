@@ -1,0 +1,9 @@
+xboc/__init__.py,sha256=j5fLK-QxIRnZzxTsankvgsK70KBuIi2J-ltwDsIYAuc,169
+xboc/model.py,sha256=OJNZDXaV857sc1jwHliJORGXTL7Qh3i09Ub-poiNvxY,23144
+xboc/prompts.py,sha256=P_A_q53Z2hnPIu0Hxjk0VY_UlyLVEn7y5_3_REytRT0,2824
+xboc/types.py,sha256=sWt6ulIByCd_snf09QumdKQWB8uDy6zLODLPmeRXPgg,1193
+xboc/utils.py,sha256=HnN6cMVE7KQpRfxvYtR5PhPphirhv5MZvHzJKmljpKg,710
+xboc-0.1.2.dist-info/LICENSE,sha256=9OpEzPYukVsRXhniPsz_lkHRqKftkbbIX5FXUxOfd6s,1075
+xboc-0.1.2.dist-info/METADATA,sha256=70j7_HFa62SXn4f7h4F3iN3mqq1TZFWUqDd4uPybuY8,4894
+xboc-0.1.2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+xboc-0.1.2.dist-info/RECORD,,
