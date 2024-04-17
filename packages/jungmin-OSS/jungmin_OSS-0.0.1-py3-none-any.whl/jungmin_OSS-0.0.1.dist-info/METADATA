@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: jungmin-OSS
+Version: 0.0.1
+Summary: my calculator 0001
+Home-page: https://https://github.com/jm0000000000/jm00
+Download-URL: https://https://github.com/jm0000000000/jm00
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pytest
+
+oss-dev calculator python module
