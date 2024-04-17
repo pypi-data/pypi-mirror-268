@@ -1,0 +1,11 @@
+django_rest_aggregation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_rest_aggregation/aggregator.py,sha256=2s-XDTY2qX-J-1O2XTQsWWdaU80Ate9YZkfy04v-W3E,5260
+django_rest_aggregation/enums.py,sha256=J9BbV6eW1SHA_X-h51sOe1vwOAYpgDg2qsnroL49s_w,892
+django_rest_aggregation/filter.py,sha256=NUT43X8IfOX1C3ZLgUxeKKd5vMKPrwyrpScCx_t1WsQ,1007
+django_rest_aggregation/mixins.py,sha256=2PcE46j0wScoPh7wmxEt6EJs7mKoUlJNXkF-7KyKwXo,2535
+django_rest_aggregation/serializers.py,sha256=Zdb1GmqOnNQkhB6TuN_27KJv3vI_rsGTrztUuevwCJk,758
+django_rest_aggregation-0.1.0.dist-info/LICENSE,sha256=z655f7Nl9suuV7G5wnj0rUhqPekZOIRgjcyezPCETWQ,1072
+django_rest_aggregation-0.1.0.dist-info/METADATA,sha256=Ywk45R6ZuqV8oFALuj_CWVv3dawtpEkv94u1uz6hEyA,7586
+django_rest_aggregation-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_rest_aggregation-0.1.0.dist-info/top_level.txt,sha256=gs1EZu229X8P3V56MuC94ArztNfjZGZwcyCWomnsUpc,24
+django_rest_aggregation-0.1.0.dist-info/RECORD,,
