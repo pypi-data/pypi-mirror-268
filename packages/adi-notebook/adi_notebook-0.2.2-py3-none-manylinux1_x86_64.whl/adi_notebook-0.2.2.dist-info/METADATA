@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: adi-notebook
+Version: 0.2.2
+Summary: adi-notebook, use ADI-backboned method in a notebook.
+Home-page: https://code.arm.gov/kefeimo/adi-notebook
+Author: Kefei Mo
+Author-email: kefei.mo@pnnl.gov
+Requires-Dist: adi-py
+Requires-Dist: wurlitzer
+Requires-Dist: mock
+
