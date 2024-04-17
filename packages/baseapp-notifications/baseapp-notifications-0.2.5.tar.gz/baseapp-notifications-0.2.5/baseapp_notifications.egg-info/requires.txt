@@ -1,0 +1,4 @@
+baseapp-core[graphql]>=0.2.11
+djmail>=2.0
+django-notifications-hq>=1.8
+baseapp-django-push-notifications[apns_async,wp]==3.0.3rc2
