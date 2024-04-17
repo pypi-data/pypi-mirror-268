@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: impactpy
+Version: 0.0.8
+Summary: Toolset for calibrating price impact models to LOB data
+Project-URL: Homepage, https://github.com/pypa/impactpy
+Author-email: Lachlan Baxter <lachlan.baxter@outlook.com>
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: polars
