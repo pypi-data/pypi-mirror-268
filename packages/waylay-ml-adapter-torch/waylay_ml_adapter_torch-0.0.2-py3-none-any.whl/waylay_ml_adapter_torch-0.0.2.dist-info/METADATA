@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: waylay-ml-adapter-torch
+Version: 0.0.2
+Summary: ML_adapter for torch.
+Author: Waylay
+Requires-Python: >=3.9
+Requires-Dist: waylay-ml-adapter-api
+Requires-Dist: waylay-ml-adapter-base
+Requires-Dist: waylay-ml-adapter-numpy
+Requires-Dist: torch
+Provides-Extra: dev
+Requires-Dist: waylay-ml-adapter-devtools ; extra == 'dev'
+Requires-Dist: torchaudio ; extra == 'dev'
+Requires-Dist: soundfile ; extra == 'dev'
+Requires-Dist: deep-phonemizer ; extra == 'dev'
+Provides-Extra: torchaudio
+Requires-Dist: torchaudio ; extra == 'torchaudio'
+Provides-Extra: torchvision
+Requires-Dist: torchvision ; extra == 'torchvision'
+
