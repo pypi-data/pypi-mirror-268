@@ -1,0 +1,10 @@
+automata-lib==4.0.0
+cached-method==0.1.0
+frozendict==2.0.0
+mpmath==1.0.0
+networkx==2.6.1
+numpy==1.26.4
+sympy==1.12
+scipy==1.13.0
+typing-extensions==4.0.0
+tqdm==4.66.2
