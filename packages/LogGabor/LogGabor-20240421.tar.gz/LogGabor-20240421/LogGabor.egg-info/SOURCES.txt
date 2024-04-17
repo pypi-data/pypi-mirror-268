@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+LogGabor/LogGabor.py
+LogGabor/__init__.py
+LogGabor.egg-info/PKG-INFO
+LogGabor.egg-info/SOURCES.txt
+LogGabor.egg-info/dependency_links.txt
+LogGabor.egg-info/requires.txt
+LogGabor.egg-info/top_level.txt
