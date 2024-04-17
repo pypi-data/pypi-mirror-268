@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "topapprox"
+version = "0.0.2"
+authors = [
+  { name="Matias de Jong van Lier", email="matias.vanlier@gmail.com" },
+  { name="Shizuo Kaji", email="shizuo.kaji@gmail.com"},
+  { name="Junyan Chu" },
+  { name="Sebastían Elías Graiff Zurita"}
+]
+description = "Package for computing topological filtering of singals over networks using Persistent Homology."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/mvlier/topapprox"
+Issues = "https://github.com/mvlier/topapprox/issues"
