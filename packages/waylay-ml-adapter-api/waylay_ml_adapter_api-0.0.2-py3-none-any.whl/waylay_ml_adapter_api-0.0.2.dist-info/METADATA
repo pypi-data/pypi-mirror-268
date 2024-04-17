@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: waylay-ml-adapter-api
+Version: 0.0.2
+Summary: API models for the ml-adapter.
+Author: Waylay
+Requires-Python: >=3.9
+Provides-Extra: dev
+Requires-Dist: waylay-ml-adapter-devtools ; extra == 'dev'
+

@@ -1,0 +1,12 @@
+ml_adapter/api/__init__.py,sha256=eQadgoU_wa1Cspm7cw61qYvPe88A8N7XgUV0GkMqcEs,22
+ml_adapter/api/error.py,sha256=VacJmWp4p_lKSzS9zqHojy5BYtA6kCQ9eUFv9TY9v98,48
+ml_adapter/api/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ml_adapter/api/types.py,sha256=h9lC2mkQoeJsAJUF4NvJd_m6IblUG344FEWCbsSpSzs,2925
+ml_adapter/api/data/__init__.py,sha256=Xg3gCFpzgHY_saPcfFyjzOJhyhzA-z3QIvKMtaJpLRI,92
+ml_adapter/api/data/common.py,sha256=uAnCkw7VfsO8UC60tUa7mGebSg-BUDPJvltN0HUlMxk,1022
+ml_adapter/api/data/v1.py,sha256=gJLjZ3OiVi-xPkpgsZ11lGxqxNr1TtX6ljCp7Ubrnnc,1776
+ml_adapter/api/data/v2.py,sha256=qRjNcNeJjI2drRyK9uu7si6oT8DnD1sfsMv2aglyUR8,1207
+waylay_ml_adapter_api-0.0.2.dist-info/METADATA,sha256=QlKjMWG8GYok7zSVTaRWBHL7Xcg-5PpATrzn_QPUsEQ,223
+waylay_ml_adapter_api-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+waylay_ml_adapter_api-0.0.2.dist-info/top_level.txt,sha256=3WkkE3yhxG7TqlWKnkHRQb1IAk4cS0ikRBDJ-cTOHY4,11
+waylay_ml_adapter_api-0.0.2.dist-info/RECORD,,
