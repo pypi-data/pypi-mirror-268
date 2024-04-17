@@ -1,0 +1,27 @@
+[tool.yapf]
+based_on_style = 'pep8'
+indent_width = 2
+
+# yapf --recursive --in-place .
+
+[tool.poetry]
+name = "jxa-builder"
+version = "1.0.0"
+description = "A Javascript for Automation build system"
+authors = ["Sebastian Pilarz"]
+license = "BSD-4-Clause"
+readme = "README.md"
+
+[tool.poetry.scripts]
+jxa-builder = 'jxa_builder.cli:cli'
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "^2.5.2"
+rich-click = "^1.7.2"
+typing-extensions = "^4.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
