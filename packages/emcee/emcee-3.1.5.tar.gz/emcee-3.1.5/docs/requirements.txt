@@ -1,0 +1,8 @@
+sphinx-book-theme
+myst-nb
+matplotlib
+scipy
+h5py
+celerite
+corner
+ipython

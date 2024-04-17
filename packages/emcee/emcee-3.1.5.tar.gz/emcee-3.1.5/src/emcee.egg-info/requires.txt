@@ -1,0 +1,10 @@
+numpy
+
+[extras]
+h5py
+scipy
+
+[tests]
+pytest
+pytest-cov
+coverage[toml]
