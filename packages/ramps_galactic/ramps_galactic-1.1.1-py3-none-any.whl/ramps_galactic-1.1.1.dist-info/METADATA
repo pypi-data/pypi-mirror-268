@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: ramps_galactic
+Version: 1.1.1
+Summary: 
+License: GPL 3.0
+Requires-Python: >=3.10,<3.13
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: dash (>=2.16.1,<3.0.0)
+Requires-Dist: factory-farm (>=1.2.6,<2.0.0)
+Requires-Dist: ipython (>=8.23.0,<9.0.0)
+Requires-Dist: nbformat (>=5.10.4,<6.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: plotly (>=5.20.0,<6.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: yfinance (>=0.2.37,<0.3.0)
+Project-URL: GitLab, https://gitlab.com/reptilian_climates/modules_series_4/apoplast
+Description-Content-Type: text/markdown
+
+
+
+
+
+
+******
+
+Bravo!  You have received a Medical Diploma from   
+the Orbital Convergence University International Air and Water Embassy of the Tangerine Planet.  
+
+You are now officially certified to include this module in your practice.
+
+******
+
+
+# ramps_majestic
+
+---
+
+## description
+
+		
+		
+---		
+		
+## install
+```
+pip install ramps_majestic
+```
+
+--
+
+## usage
+```
+from datetime import datetime
+import json
+import pprint
+
+import pandas
+import rich	
+
+import ramps_majestic
+import ramps_majestic.victory_multiplier.purchase_treasure_at_inclines as purchase_treasure_at_inclines_VM	
+import ramps_majestic.victory_multiplier.purchase_treasure_over_span as purchase_treasure_over_span_VM
+import ramps_majestic.example_data.read as read_example_data
+
+trend = read_example_data.start ("yahoo-finance--BTC-USD.CSV")	
+trend_DF = pandas.DataFrame (trend)	
+
+enhanced_trend_DF = ramps_majestic.calc (
+	trend_DF,
+	period = 14,
+	multiplier = 3
+)
+enhanced_list = enhanced_trend_DF.to_dict ('records')
+
+
+'''
+	This calculates the multipliers
+'''
+treasure_at_inclines_VM = purchase_treasure_at_inclines_VM.calc (
+	enhanced_trend_DF,
+	include_last_change = True
+)
+
+rich.print_json (data = treasure_at_inclines_VM ["relevant"])	
+
+open_price_at_spans_VM = purchase_treasure_over_span_VM.calc (enhanced_trend_DF)
+print ("open_price_at_spans_VM:", open_price_at_spans_VM)
+print ("treasure_at_inclines_VM:", treasure_at_inclines_VM ["treasure purchase victory multiplier"])
+
+
+ramps_majestic.chart_the_data (
+	enhanced_trend_DF,
+	treasure_at_inclines_VM
+)
+```
