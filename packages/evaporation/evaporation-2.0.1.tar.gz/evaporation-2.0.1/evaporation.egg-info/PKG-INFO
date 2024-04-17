@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: evaporation
+Version: 2.0.1
+Summary: Calculation of evaporation and transpiration
+Home-page: https://github.com/openmeteo/evaporation
+Author: Antonis Christofides
+Author-email: antonis@antonischristofides.com
+License: GNU General Public License v3
+Keywords: evaporation
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: Click>=7.0
+Requires-Dist: iso8601
+Requires-Dist: hspatial<5,>=3
+
+===========
+evaporation
+===========
+
+
+.. image:: https://img.shields.io/pypi/v/evaporation.svg
+        :target: https://pypi.python.org/pypi/evaporation
+
+.. image:: https://img.shields.io/travis/openmeteo/evaporation.svg
+        :target: https://travis-ci.org/openmeteo/evaporation
+
+.. image:: https://codecov.io/github/openmeteo/evaporation/coverage.svg
+        :target: https://codecov.io/gh/openmeteo/evaporation
+        :alt: Coverage
+
+.. image:: https://pyup.io/repos/github/openmeteo/evaporation/shield.svg
+         :target: https://pyup.io/repos/github/openmeteo/evaporation/
+         :alt: Updates
+
+Calculation of evaporation and transpiration
+
+* Free software: GNU General Public License v3
+* Documentation: https://evaporation.readthedocs.io.
+
+
+=======
+History
+=======
+
+2.0.1 (2024-04-16)
+==================
+
+- Allow hspatial 4.
+
+2.0.0 (2024-04-01)
+==================
+
+- Updated some dependencies, notably hspatial 2, which entails
+  htimeseries 6.
+
+1.0.1 (2021-09-01)
+==================
+
+- Updated some dependencies, notably htimeseries 3. Python 3.7, 3.8 and
+  3.9 are now supported.
+
+1.0.0 (2020-01-05)
+==================
+
+- Now uses version 5 of hts file (i.e. different time step notation).
+
+0.1.2 (2019-10-24)
+==================
+
+- Fixed a bug where hts files were opened in the wrong mode, with
+  inconsistent results.
+
+0.1.1 (2019-07-18)
+==================
+
+- Fixed a spurious RuntimeWarning.
+- Improved error message if the altitude or location is missing in an
+  input file.
+
+0.1.0 (2019-06-21)
+==================
+
+- Initial release

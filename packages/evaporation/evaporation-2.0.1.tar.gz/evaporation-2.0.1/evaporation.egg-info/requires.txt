@@ -1,0 +1,3 @@
+Click>=7.0
+iso8601
+hspatial<5,>=3
