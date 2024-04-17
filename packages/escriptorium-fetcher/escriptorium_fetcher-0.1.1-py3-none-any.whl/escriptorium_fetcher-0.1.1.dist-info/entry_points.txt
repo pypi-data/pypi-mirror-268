@@ -1,0 +1,3 @@
+[console_scripts]
+fetcher=escriptorium_fetcher.main:app
+
