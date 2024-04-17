@@ -1,0 +1,16 @@
+pyyaml
+luminesce-sdk-preview==1.14.758
+lusid-jam==0.1.132
+lusid-sdk-preview==1.1.120
+fbnlab-preview==0.1.13208
+finbourne-access-sdk==0.1.132751
+finbourne-identity-sdk==0.0.2834
+finbourne-insights-sdk-preview==0.0.763
+finbourne-sdk-utilities==0.0.10
+lusid-configuration-sdk-preview==0.1.13214
+lusid-drive-sdk-preview==0.1.13217
+lusid-notifications-sdk-preview==0.1.13223
+lusid-scheduler-sdk-preview==0.0.829
+lusid-workflow-sdk-preview==0.1.13210
+lusidtools==1.0.14
+dve-lumipy-preview==0.1.132075
