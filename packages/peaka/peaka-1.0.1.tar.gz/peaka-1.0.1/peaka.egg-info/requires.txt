@@ -1,0 +1,10 @@
+trino
+SQLAlchemy
+
+[dev]
+check-manifest
+pydoc-markdown
+novella
+
+[test]
+coverage
