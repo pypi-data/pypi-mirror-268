@@ -1,0 +1,2 @@
+[certbot.plugins]
+nginx-unit = certbot_nginx_unit.configurator:Configurator
