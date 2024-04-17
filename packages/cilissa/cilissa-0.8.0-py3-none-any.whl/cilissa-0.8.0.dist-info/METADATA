@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: cilissa
+Version: 0.8.0
+Summary: Interactive tool for assessing digital image similarity
+Home-page: https://github.com/exler/CILISSA
+Author: Kamil Marut
+Author-email: kamil@kamilmarut.com
+Requires-Python: >=3.9,<3.12
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Provides-Extra: gui
+Requires-Dist: PySide6 (>=6.7.0,<7.0.0) ; extra == "gui"
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: opencv-python (>=4.9.0.80,<5.0.0.0)
+Project-URL: Bug Tracker, https://github.com/exler/CILISSA/issues
+Project-URL: Repository, https://github.com/exler/CILISSA
+Description-Content-Type: text/markdown
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/exler/CILISSA/main/docs/_static/logo.png" width="328">
+</p>
+<p align="center">
+    <strong>C</strong>omputer <strong>I</strong>mage <strong>Li</strong>keness A<strong>ss</strong>essing <strong>A</strong>utomation
+</p>
+<p align="center">
+    <!-- Badges -->
+    <img src="https://github.com/exler/CILISSA/actions/workflows/quality.yml/badge.svg">
+    <img src="https://github.com/exler/CILISSA/actions/workflows/tests.yml/badge.svg">
+    <a href="https://codecov.io/gh/exler/CILISSA">
+        <img src="https://codecov.io/gh/exler/CILISSA/branch/main/graph/badge.svg?token=Dixb5buMQr"/>
+    </a>
+    <a href="https://cilissa.readthedocs.io/en/latest/">
+        <img src="https://img.shields.io/readthedocs/cilissa">
+    </a>    
+</p>
+
+## Overview
+
+CILISSA allows for the use of various metrics to perform full-reference image comparisons.
+
+It features the most popular full-reference image quality metrics, image transformations and translations. 
+CILISSA is also very extensible and new operations can be easily added.
+
+CILISSA has an optional Qt-based graphical interface that lets you experiment with various operations, their orders and properties.
+
+## Requirements
+
+* Python >=3.9,<3.12
+
+## Installation
+
+### Install from PyPI
+```bash
+$ pip install cilissa
+```
+
+### Releases
+
+Binaries for Windows and Linux can be found on [GitHub releases](https://github.com/exler/CILISSA/releases).
+
+## Usage
+
+### GUI
+
+Information about the GUI can be found in the [cilissa_gui/README.md](cilissa_gui/README.md) file.
+
+### CLI
+
+Currently the CLI only supports working with a single pair of images.
+
+The parameters of metrics and transformations can be modified by passing them to the `--kwargs` argument using the following format:
+```
+<operation-name>-<parameter-name>=<value>
+``` 
+where `parameter-name` uses hyphens (-) instead of underscores (_)
+
+## Documentation
+
+Documentation is hosted on [Read the Docs](https://cilissa.readthedocs.io/).
+
+## License
+
+`CILISSA` is under the terms of the [MIT License](https://www.tldrlegal.com/l/mit), following all clarifications stated in the [license file](LICENSE).
+

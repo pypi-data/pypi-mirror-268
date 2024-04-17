@@ -1,0 +1,3 @@
+[console_scripts]
+cilissa=cilissa.__main__:main
+
