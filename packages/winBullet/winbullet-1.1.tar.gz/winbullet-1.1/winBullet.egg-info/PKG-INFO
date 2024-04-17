@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: winBullet
+Version: 1.1
+Summary: Beautiful Python prompts made simple.
+Home-page: https://github.com/Likqez/winBullet
+Author: Mckinsey666
+License: MIT
+Keywords: cli list prompt customize colors
+Requires-Python: >=3.6
+License-File: LICENSE
+
+Extensive support for Python list prompts             formatting and colors
