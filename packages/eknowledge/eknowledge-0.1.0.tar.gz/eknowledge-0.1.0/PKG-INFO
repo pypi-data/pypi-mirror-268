@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: eknowledge
+Version: 0.1.0
+Summary: 
+Author: E. Evstafiev
+Author-email: ee345@cam.ac.uk
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+
