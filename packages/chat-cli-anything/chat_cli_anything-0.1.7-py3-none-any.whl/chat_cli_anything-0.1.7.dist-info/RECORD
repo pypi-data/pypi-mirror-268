@@ -1,0 +1,15 @@
+chat_cli_anything/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+chat_cli_anything/ask.py,sha256=3tRb5kYVaql3xwASVYG8Dov42NgzQXcLn3zGoOYVOv0,32639
+chat_cli_anything/config.py,sha256=L30mcdqjSvKA3yNzBJuG_XOP5iPmcf4j7D8aZUrSnw4,9641
+chat_cli_anything/db.py,sha256=tjI9NxHP_BM4b3xCo_0noiGR9PrQc8RjbygXIJTEzkc,8305
+chat_cli_anything/embedding.py,sha256=m-Z5nv9AdXoVjFWZpZlTnwIzfjznAG2Bywsrc4RRFNs,1583
+chat_cli_anything/loader.py,sha256=FU-3dayj_lZD6F_-lOEugT_dLpfrkpgxq42R7fhctiA,2798
+chat_cli_anything/request.py,sha256=xbWWBkk5S33uywBQIUpsRY1h7xKSSGWgtlo2qm5flYo,2695
+chat_cli_anything/rerank.py,sha256=TwDYdo7x-VNKNpZA5eK9sKnHROxkLtmfOsu-_VQehIg,900
+chat_cli_anything/service.py,sha256=ZCs-NCKW1vKbvGcPTXZ51nlQBwkbF-jIrlCINFXfSpI,1868
+chat_cli_anything/util.py,sha256=RYi6OR-PDDjzOLY32xiZ2KVBWGqWohbz_16Cnm-Cnx4,1067
+chat_cli_anything-0.1.7.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+chat_cli_anything-0.1.7.dist-info/METADATA,sha256=tYyPePo05xFMHZZegok21N_vA-U5Aj0-iH76iuUoOwM,9464
+chat_cli_anything-0.1.7.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+chat_cli_anything-0.1.7.dist-info/entry_points.txt,sha256=Mg8JaWPClijLnP61dP61b4pCqRr8fpMPku2OjwevnD0,233
+chat_cli_anything-0.1.7.dist-info/RECORD,,
