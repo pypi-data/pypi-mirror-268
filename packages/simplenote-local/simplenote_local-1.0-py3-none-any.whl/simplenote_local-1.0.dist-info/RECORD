@@ -1,0 +1,11 @@
+nv/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nv/nv.py,sha256=YrPB8UZ4Ms_DRZw5rd6o6wxZPH7-XjGlCcRM4Warh4s,29466
+simplenote_local/__init__.py,sha256=7DjG5Kt460IoaEC9fQQRYv1p7rj3t1jMrNXgfbym_eE,32547
+simplenote_local/cli.py,sha256=maQUrKc1OvqPibRyFkV1QC3qtCOu8emzgBhxcpgoWkE,7587
+simplenote_local/note.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+simplenote_local-1.0.dist-info/LICENSE,sha256=OGHg4Wx8rF6UMaQ0Qe63f0phxLQuTZqaU0LGsDX4K68,1076
+simplenote_local-1.0.dist-info/METADATA,sha256=0UzA5tpA-IxYgUF4YoV9WExeAq7zknw-JCS8idldyVs,7536
+simplenote_local-1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+simplenote_local-1.0.dist-info/entry_points.txt,sha256=AruGnhJMhRUICkTwMcuBKyCBm5TqlBGUa0R0NRo2aWY,57
+simplenote_local-1.0.dist-info/top_level.txt,sha256=7dyCSPulKftOlNw5i7KjsOWv9oW71BrvD34SkFVHrfg,20
+simplenote_local-1.0.dist-info/RECORD,,
