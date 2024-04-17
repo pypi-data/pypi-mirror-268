@@ -1,0 +1,4 @@
+[console_scripts]
+populate_series_in_tahrir_db=tahrir_api.scripts.populateseries:main
+sync_tahrir_db=tahrir_api.scripts.syncdb:main
+
