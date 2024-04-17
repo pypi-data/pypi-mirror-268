@@ -1,0 +1,2 @@
+[console_scripts]
+distilabel = distilabel.cli.app:app
