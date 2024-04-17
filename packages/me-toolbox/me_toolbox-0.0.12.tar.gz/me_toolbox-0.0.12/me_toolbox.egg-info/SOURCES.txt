@@ -1,0 +1,40 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+me_toolbox/__init__.py
+me_toolbox.egg-info/PKG-INFO
+me_toolbox.egg-info/SOURCES.txt
+me_toolbox.egg-info/dependency_links.txt
+me_toolbox.egg-info/requires.txt
+me_toolbox.egg-info/top_level.txt
+me_toolbox/fasteners/__init__.py
+me_toolbox/fasteners/bolt.py
+me_toolbox/fasteners/bolt_pattern.py
+me_toolbox/fasteners/test_bolt.py
+me_toolbox/fasteners/test_threaded_fastener.py
+me_toolbox/fasteners/threaded_fastener.py
+me_toolbox/fatigue/__init__.py
+me_toolbox/fatigue/endurance_limit.py
+me_toolbox/fatigue/failure_criteria.py
+me_toolbox/fatigue/fatigue_analysis.py
+me_toolbox/fatigue/stress.py
+me_toolbox/gears/__init__.py
+me_toolbox/gears/gear.py
+me_toolbox/gears/helical_gear.py
+me_toolbox/gears/spur_gear.py
+me_toolbox/gears/transmission.py
+me_toolbox/gears/tables/20deg - spur gear geometry factors.csv
+me_toolbox/gears/tables/25deg - spur gear geometry factors.csv
+me_toolbox/gears/tables/J75 - helix gear geometry factors.csv
+me_toolbox/gears/tables/JPrime - helix gear geometry factors.csv
+me_toolbox/springs/__init__.py
+me_toolbox/springs/extension_spring.py
+me_toolbox/springs/helical_compression_spring.py
+me_toolbox/springs/helical_torsion_spring.py
+me_toolbox/springs/spring.py
+me_toolbox/springs/tables/A_and_m.csv
+me_toolbox/tools/__init__.py
+me_toolbox/tools/helpers.py
+me_toolbox/tools/table_interpolation.py
