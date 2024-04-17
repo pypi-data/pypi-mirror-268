@@ -1,0 +1,7 @@
+numpy
+pandas
+pyathena
+pymysql
+glob2
+sqlalchemy
+mongudb
