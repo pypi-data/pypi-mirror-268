@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+JobTipsRamdom.egg-info/PKG-INFO
+JobTipsRamdom.egg-info/SOURCES.txt
+JobTipsRamdom.egg-info/dependency_links.txt
+JobTipsRamdom.egg-info/top_level.txt
+quotegen/RandomJobWisdom.py
+quotegen/__init__.py
+random.egg-info/SOURCES.txt
+random.egg-info/dependency_links.txt
+random.egg-info/top_level.txt
