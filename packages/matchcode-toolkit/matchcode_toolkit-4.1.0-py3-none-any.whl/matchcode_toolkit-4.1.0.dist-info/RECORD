@@ -1,0 +1,17 @@
+matchcode_toolkit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matchcode_toolkit/fingerprinting.py,sha256=XTKajx3Li95A4lhOhRJSRVW8HA5Osi_qXcRiDdnn_FM,7504
+matchcode_toolkit/halohash.py,sha256=oOpWCC3TMAie2yN6eltW38mK9iHljc-jQ2xBo_IEnNg,14288
+matchcode_toolkit/plugin_fingerprint.py,sha256=zCHQ91qtwg7cCSMCZUujB9TXr0V83IkUSonEDD9pT64,1445
+matchcode_toolkit/pipelines/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matchcode_toolkit/pipelines/fingerprint_codebase.py,sha256=4EgLkWY0pgn8bNxU53QSNXhSqYjoCwyiIcFtJPZNGBw,1767
+matchcode_toolkit/pipelines/scan_and_fingerprint_package.py,sha256=hya0irZeq9Jv-xthvukQIFQsTe7YEQMnqu7DX0V5FAc,2321
+matchcode_toolkit-4.1.0.dist-info/AUTHORS.rst,sha256=Caok5IoMLS5vbgUvR642BW-EUywHFSPQQlqDbZH79Lw,104
+matchcode_toolkit-4.1.0.dist-info/CHANGELOG.rst,sha256=D39GxUqLwGgW8Ep6crFmxJJgIj93T7uu1UZv7YcbbcU,1588
+matchcode_toolkit-4.1.0.dist-info/CODE_OF_CONDUCT.rst,sha256=xXDTFpYY3Y7JoxrWADihieUvhGlwJc_oxsbmLJaBvE4,3422
+matchcode_toolkit-4.1.0.dist-info/METADATA,sha256=qLhT-stgImrwyLn_1I5ZKYrcsMEJvTk6CJXiETEdqto,4036
+matchcode_toolkit-4.1.0.dist-info/NOTICE,sha256=4CgXJb9ZPU1EBF1FEkhchlbOPaX7uNi7wIRiueKuqc4,769
+matchcode_toolkit-4.1.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+matchcode_toolkit-4.1.0.dist-info/apache-2.0.LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+matchcode_toolkit-4.1.0.dist-info/entry_points.txt,sha256=byN7WKxYANt-7Fk3JO9My4LZCHGwg02tZ0KZnEpebPI,200
+matchcode_toolkit-4.1.0.dist-info/top_level.txt,sha256=4XM4p9mBCopb7wG5ZYFlmSQa1MuIakdxp7qQewQ2hlo,18
+matchcode_toolkit-4.1.0.dist-info/RECORD,,
