@@ -1,0 +1,14 @@
+server_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+server_client/ai_client.py,sha256=BDTQj75Y_zkYCN0FGzZKHq7bGdQvNJjXL87rD7vV27g,5489
+server_client/client.py,sha256=U7E7k3X_ljGylZOqxgjT4zIY6wo13Q7q6gMSIeBjpok,6133
+server_client/main.py,sha256=Fl-UiHd9RRCo7p3wujvXYcgpQDU0pY2LJgXRQLv-ZR0,614
+server_client/new_main.py,sha256=O9NuSN8ubNUn9hsY-GF9IwnrVa0PflunUXes-pk9frk,2832
+server_client/server.py,sha256=Vsrl3rfpoUNoJNwDNMrPv8rpGk9uFs-TcwuI6mxcR0w,4739
+server_client/start_server_with_ai_client.py,sha256=f3PxaMenY8xatkB5UMeLG50PXGq128LYHavnk5BNAF4,3456
+server_client/terminal_client.py,sha256=Jtpmdgl1eqU5FlInUyk92vF0Fi1fLgpP1CzOOuQmHrU,2779
+socktalk-0.2.0.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+socktalk-0.2.0.dist-info/METADATA,sha256=xIMTRKmUOOilwCnrwwxFAJwn_WmWOcPyEV8oj3uXeG4,5032
+socktalk-0.2.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+socktalk-0.2.0.dist-info/entry_points.txt,sha256=C0LztyFMnBDQJEKLXNzkKd44Ak_d38HLMZOiUHHTMaw,53
+socktalk-0.2.0.dist-info/top_level.txt,sha256=tXw6u1vRIY3Q2Nfxskuj1JCosMBL2BHzI--mFvqvwCY,14
+socktalk-0.2.0.dist-info/RECORD,,
