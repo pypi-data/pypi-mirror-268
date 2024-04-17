@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: sesql
+Version: 2024.4.1rc1
+Summary: CLI to enhance versioning for Python projects
+Author-email: Cybernetic Innovations <github@cyberneticinnovations.com>
+License: MIT License
+        
+        Copyright (c) 2024 Cybernetic Innovations
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: loguru >=0.7.2
+Requires-Dist: JayDeBeApi ~=1.2.3
+Requires-Dist: pyodbc ~=5.1.0
+Requires-Dist: seversion
+
+# seSql
+
+The seSql module allows you to connect to JDBC/ODBC from Python code to databases using 
+Java [JDBC](http://java.sun.com/products/jdbc/overview.html) or [ODBC](https://learn.microsoft.com/et-ee/sql/connect/python/pyodbc/python-sql-driver-pyodbc?view=sql-server-2017).
+
+## Install
+```shell
+pip install seSql
+```
+
+## Usage
+
+### **_using JDBC/ODBC_**
+```python
+from seSql import sql, logger
+
+if __name__ == '__main__':
+    oSql = sql()
+    oSql.connect(
+        server="SQL.site4now.net",
+        port=1433,
+        user="db_user",
+        password="{pw}",
+        trust="no",
+        driverOverride="odbc",      # options: odbc/jdbc
+        mars="no"                   # option to use MARS but only works with ODBC, ignored with JDBC
+        
+    )
+    if oSql.isConnected:
+        # request sql version without try/except
+        oSql.query("select @@version as version")
+        
+        # request sql version with try/except: typo that will generate an exception
+        try:
+            oSql.query("select @@versions as version;")
+        except Exception as e:
+            logger.error(f'Exception: {e}')
+
+        # select
+        try:
+            oSql.query("select * from dbo.winequality_red;")
+        except Exception as e:
+            logger.error(f'Exception: {e}')
+
+        # insert
+        try:
+            oSql.query("insert into dbo.seSql_Settings ([key], value) values ('Env', 'test');")
+        except Exception as e:
+            logger.error(f'Exception: {e}')
+
+        # delete
+        try:
+            oSql.query("delete from dbo.seSql_Settings where value like '%dev';")
+        except Exception as e:
+            logger.error(f'Exception: {e}')
+
+        # update
+        try:
+            oSql.query("update dbo.seSql_Settings set value = 'false' where [key] like '%Updated';")
+        except Exception as e:
+            logger.error(f'Exception: {e}')
+```
+### **_output_**
+```shell
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | INFO     | {"driver-info": {"using": "odbc", "odbc": {"loaded": true, "driver": "ODBC Driver 18 for SQL Server"}, "jdbc": {"loaded": true, "driver": "mssql-12.4.2"}}}
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | INFO     | {"odbc-connect": {"connection_ms": 711.46, "connected": true, "connStr": {"driver": "ODBC Driver 18 for SQL Server", "server": "SQL5101.site4now.net", "port": 1433, "database": "", "user": "db_user", "password": "**********mee68", "trust": "no", "mars": "no"}}}
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | INFO     | {"odbc-query": {"connection_ms": 56.32, "rc": "-1:1", "query": "select @@version as version"}}
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | ERROR    | {"odbc-query": {"connection_ms": 56.74, "query": "select @@versions as version;", "error": "('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Must declare the scalar variable \"@@versions\". (137) (SQLExecDirectW)')"}}
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | ERROR    | Exception: ('42000', '[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Must declare the scalar variable "@@versions". (137) (SQLExecDirectW)')
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | INFO     | {"odbc-query": {"connection_ms": 250.5, "rc": "-1:1599", "query": "select * from dbo.winequality_red;"}}
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | INFO     | {"odbc-query": {"connection_ms": 57.83, "rc": "1:1", "query": "insert into dbo.seSql_Settings ([key], value) values ('Env', 'test');"}}
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | INFO     | {"odbc-query": {"connection_ms": 56.38, "rc": "0:0", "query": "delete from dbo.seSql_Settings where value like '%dev';"}}
+2024-04-15 00:00:00 | seSql | d46bbd63-01e4-41b8-8fab-e8e657d2bdd8 | ------------ | INFO     | {"odbc-query": {"connection_ms": 56.96, "rc": "1:1", "query": "update dbo.seSql_Settings set value = 'false' where [key] like '%Updated';"}}
+```
+
+### hostName, hostIP, mask, seSqlVersion
+```python
+import json
+from seSql import mask, seSqlVersion, hostName, hostIP, logger
+
+if __name__ == '__main__':
+    logger.info(json.dumps({
+        'seSql-info': {
+            'host': hostName(),
+            'hostIP': hostIP(),
+            'mask_all_but_last_12345': mask('all_but_last_12345'),
+            'version': seSqlVersion
+        }
+    }, indent=4))
+```
+- output
+```shell
+2024-04-15 00:00:00 | seSql | INFO     | {
+    "seSql-info": {
+        "host": "MacBook-Pro",
+        "hostIP": "127.0.0.1",
+        "mask_all_but_last_12345": "*************12345",
+        "version": "2024.4.1 build[68]"
+    }
+}
+
+```

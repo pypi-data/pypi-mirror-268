@@ -1,0 +1,16 @@
+seCore/CustomLogging.py,sha256=9CQY50y65khZhWHX_S82ytY9pqKFkxHNWVJgzjXmfyE,839
+seCore/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seSql/__init__.py,sha256=EoHShxLbTsDpSVX-d2cmEEhbXmK5LAEiKfalJ7hoL00,280
+seSql/_version.py,sha256=0JtU3bnYGRf3yhmVRNSRs-e9oi3BkwN6uN92HPY-dMg,316
+seSql/sql.py,sha256=EvGeT5u95ftESGawMv73_sdoLQfMhErXlgcssxusWlM,4303
+seSql/dbc/Exceptions.py,sha256=YNSeeNoqKTp7Djv_JFcPmYvQJlcJT4_o6jr5Q_Osflc,2383
+seSql/dbc/JDBC.py,sha256=IuzdI1OfrthzIx0_8iLp2fbJ-yUNxPyE9D85WT3CCgo,7673
+seSql/dbc/ODBC.py,sha256=Y1AU6urTbfZNwvIP_4_d-TyKOEjDjnIaP8Bb5JBrOH0,7329
+seSql/dbc/ODBCError.py,sha256=pAN729pUd44ekv1lllBoCgVfxwNAkQViQFvaRb3cSmI,5936
+seSql/dbc/Utilities.py,sha256=EXA17l7A1DHECTGHm9ZmJ7UKR-gJNoFWI5LsmXJOrj4,726
+seSql/dbc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seSql/dbc/jars/mssql-jdbc-12.4.2.jre8.jar,sha256=JGt6SXg4Ok-czMwGpDk9xdVw_WSkNLeBxqghcM3WmRE,1438398
+sesql-2024.4.1rc1.dist-info/METADATA,sha256=Lzzc1eYej6p8Db9nZwx2Erc5KBfcUflsbVziYvsxSXQ,6510
+sesql-2024.4.1rc1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sesql-2024.4.1rc1.dist-info/top_level.txt,sha256=rxhPb_bq0i_7tzyf2ztW88ZK3oIIOLWUa7DZyIP2tPA,13
+sesql-2024.4.1rc1.dist-info/RECORD,,
