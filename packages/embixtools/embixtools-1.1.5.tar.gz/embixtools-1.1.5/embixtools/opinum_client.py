@@ -1,0 +1,225 @@
+import requests
+from oauthlib.oauth2 import LegacyApplicationClient
+from requests_oauthlib import OAuth2Session
+from functools import wraps
+from datetime import datetime as dt, timedelta as td
+import logging
+import pandas as pd
+import re
+
+iso = "%Y-%m-%dT%H:%M:%S"
+
+class Opinum(object):
+    
+    def __init__(self, usr, pwd, client_id, client_secret):
+        self.username = usr
+        self.password = pwd
+        self.client_id = client_id
+        self.client_secret = client_secret
+        self.token = ''
+        self.token_expiration = dt(1000,1,1)
+
+    @property
+    def sites(self):
+        return self.request('GET','sites').json()
+
+    @property
+    def sources(self):
+        return self.request('GET','sources', params = {'sourcesFilter.displayLevel': 'Site'}).json()
+
+    @property
+    def variables(self):
+        return self.request('GET','variables').json()
+
+    @property
+    def timeseries(self):
+        sources = self.sources
+        variables = self.variables
+        return {
+            variable['id']: ( source['siteName'], source['name'], variable['name'] )
+            for source in sources
+            for variable in variables
+            if variable['sourceId'] == source['id']
+        }
+        
+    def auth(self):
+        oauth = OAuth2Session(
+            client = LegacyApplicationClient(client_id=self.client_id)
+        )
+        token = oauth.fetch_token(
+            token_url = 'https://identity.opinum.com/connect/token',
+            scope = 'opisense-api push-data',
+            username = self.username,
+            password = self.password,
+            client_id = self.client_id,
+            client_secret = self.client_secret,
+            auth = None
+        )
+        self.token =  'Bearer ' + token['access_token']
+        self.token_expiration = dt.utcnow() + td(seconds=60)
+        oauth.close()
+        return self.token
+    
+    def var(self, site, source, variable):
+        try:
+            return [
+                i for i, ts in self.timeseries.items() 
+                if ts == (site, source, variable)
+            ][0]
+        except:
+            return -1
+
+    def vars(self, var_ids):
+        tss = self.timeseries
+        try:
+            ids = []
+            for ssi1 in var_ids:
+                for i, ssi2 in tss.items():
+                    if ssi1 == ssi2:
+                        ids += [i]
+            return ids
+        except:
+            return []
+
+    def token_required(func):
+        @wraps(func)
+        def wrapper(self, *args, **kwargs):
+            if dt.utcnow() > self.token_expiration:
+                self.auth()
+            return func(self, *args, **kwargs)
+        return wrapper
+    
+    @token_required
+    def request(self, method, url, data={}, params={}, headers={}):
+        return requests.request(
+            method = method,
+            url = f'https://api.opinum.com/{url}',
+            params = params,
+            headers = {**headers, 'Authorization': self.token},
+            json = data
+        )
+
+    @token_required
+    def push(self, dps):
+        resp = requests.post(
+            url = 'https://push.opinum.com/api/data',
+            json = dps,
+            headers = {
+                'Authorization': self.token,
+            },
+            # mode = "cors"
+        )
+        return resp
+    
+    @token_required
+    def get_dps(self, site, source, variable, interval=None):
+        params = {
+            'filter.variableId': self.var(site, source, variable),
+            'filter.displayLevel': 'ValueVariableDate',
+            'filter.includeToBoundary': True
+        }
+        if not interval is None:
+            params['filter.from'] = interval[0].strftime(iso)
+            params['filter.to'] = interval[1].strftime(iso)
+        try:
+            data = self.request(method='GET', url='data', params=params).json()
+            return [{'date': x['date'], 'rawValue': x['rawValue']} for x in data]
+        except:
+            return []
+        
+    @token_required
+    def get_ts(self, site, source, variable, interval=None):
+        try:
+            data = self.get_dps(site, source, variable=variable, interval=interval)
+            dps = pd.DataFrame(data)
+            dps = dps.sort_values(by="date")
+            dps.index = pd.to_datetime(dps["date"].str[:19], format=iso)
+            dps["value"] = pd.to_numeric(dps["rawValue"], errors="coerce")
+            return dps["value"]
+        except:
+            return None
+        
+    
+    @token_required
+    def push_dps(self, site, source, variable, dps=[]):
+        logging.info(f"Opinum Datahub : pushing {len(dps)} datapoints to ({site}, {source}, {variable}) ...")
+        return self.push([{
+            'variableId': self.var(site, source, variable), 
+            'data': dps
+        }])
+    
+    @token_required
+    def push_ts(self, site, source, variable, dps=None):
+        try: 
+            data = pd.DataFrame({ "date": dps.index.values, "value": dps.values })
+            data["date"] = data["date"].dt.strftime(iso)
+            data = data.to_dict(orient="records")
+            return self.push_dps(site, source, variable=variable, dps=data)
+        except: return
+
+    @token_required
+    def delete(self, vars_ssi, interval=None, confirm=False):
+        vars_ids = self.vars(vars_ssi)
+        tss = self.timeseries
+        params = {
+            "variableIds": vars_ids,
+            "whatIf": (not confirm)
+        }
+        if not interval is None:
+            params["fromDateUtc"] = interval[0].strftime(iso)
+            params["toDateUtc"] = interval[1].strftime(iso)
+        resp = self.request("DELETE", "/data", params)
+        if confirm:
+            for v in resp.json()["results"]:
+                i = v["variableId"]
+                logging.info(f"""Opinum Datahub : deleting {v["datapointCount"]} datapoints from {tss[i]} ...""")
+        return resp.json()
+    
+    def create_variable(self, site, source, variable, unit=None, granularity=None, quantity_type=None, calculated=False):
+        if unit is None: 
+            unit_id = 0
+        else:
+            unit_id = {
+                "W": 1,
+                "VA": 2,
+                "kW": 4,
+                "Wh": 7,
+                "kWh": 8,
+                "L": 18,
+                "m3": 19,
+                "°C": 28,
+                "%": 31,
+                "kVA": 39,
+                "€": 48,
+                "Wh/m2": 50,
+                "€/MWh": 57,
+                "tCO2": 61,
+                "kgCO2": 62,
+                "kWh/m2": 68,
+            }[unit]
+        if granularity is None: 
+            granularity = 0
+        else:
+            res = re.search("([0-9]+)([YmdHT])", granularity)
+            granularity_value = res.group(1)
+            granularity_timebase = {
+                "T": 2,
+                "H": 3,
+                "d": 4,
+                "m": 5,
+                "Y": 6,
+            }[res.group(2)]
+        if quantity_type is None: 
+            quantity_type = "Instantaneous"
+        source_id = [s["id"] for s in self.sources if (s["siteName"]==site and s["name"]==source)][0]
+        payload = {
+            "name": variable,
+            "unitId": unit_id,
+            "granularity": granularity_value,
+            "granularityTimeBase": granularity_timebase,
+            "quantityType": quantity_type,
+        }
+        if calculated: 
+            payload["calculated"] = {}
+        resp = self.request("POST", f"""/variables/source/{source_id}""", payload)
+        return resp.json()
