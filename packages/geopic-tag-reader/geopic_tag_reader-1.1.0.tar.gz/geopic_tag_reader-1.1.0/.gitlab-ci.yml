@@ -1,0 +1,47 @@
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
+before_script:
+  - python --version # For debugging
+
+test mypy:
+  image: python:3.8
+  script:
+    - apt update && apt install gcc
+    - pip install .[dev]
+    - mypy --install-types --non-interactive geopic_tag_reader/
+
+lint:
+  image: python:3.8
+  script:
+    - apt update && apt install gcc
+    - pip install .[dev]
+    - black --fast --check .
+
+tests-reader:
+  image: python:3.8
+  script:
+    - apt update && apt install gcc
+    - pip install .[dev]
+    - pytest -s -vv --ignore=tests/test_writer.py --ignore=geopic_tag_reader/writer.py
+
+tests-writer:
+  image: python:3.8
+  script:
+    - apt update && apt install gcc
+    - pip install .[dev,write-exif]
+    - pytest -s -vv
+
+deploy_pypi:
+  stage: deploy
+  image: python:3.8
+  script:
+    - apt update && apt install gcc git
+    - pip install .[build]
+    - flit publish # use [flit](https://flit.pypa.io/) and FLIT_USERNAME/FLIT_PASSWORD env var
+  only:
+    - tags
