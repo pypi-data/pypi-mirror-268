@@ -1,0 +1,29 @@
+name: Sphinx build
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v2
+    - name: Install dependencies
+      run: |
+        pip install .
+        pip install sphinx sphinx_rtd_theme
+    - name: Sphinx build
+      run: |
+        sphinx-apidoc -o docsrc arista
+        sphinx-apidoc -o docsrc cloudvision
+        sphinx-apidoc -o docsrc fmp
+        sphinx-build docsrc _build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/trunk'
+      with:
+        publish_branch: gh-pages
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        exclude_assets: '.github,.doctrees'
+        publish_dir: _build/
+        force_orphan: true
