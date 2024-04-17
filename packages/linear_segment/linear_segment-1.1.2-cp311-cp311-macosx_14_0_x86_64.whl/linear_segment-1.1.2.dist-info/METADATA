@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: linear_segment
+Version: 1.1.2
+Summary: Python package for Bayesian Change Point and Circular Binary Segmentation
+Home-page: https://github.com/kylessmith/linear_segment
+License: GPL-2.0-or-later
+Keywords: cython,bayesian,changepoint,circular,segment,c
+Author: Kyle S. Smith
+Author-email: kyle.smith@stjude.org
+Maintainer: Kyle S. Smith
+Maintainer-email: kyle.smith@stjude.org
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: ailist (>=2.1.3,<3.0.0)
+Requires-Dist: cython (>=3.0.0,<4.0.0)
+Requires-Dist: numpy (>=1.23.5,<2.0.0)
+Project-URL: Documentation, https://www.biosciencestack.com/static/linear_segment/docs/index.html
+Project-URL: Repository, https://github.com/kylessmith/linear_segment
+Description-Content-Type: text/markdown
+
+# Linear Segmentation
+
+[![Build Status](https://travis-ci.org/kylessmith/bcpseg.svg?branch=master)](https://travis-ci.org/kylessmith/linear_segmentation) [![PyPI version](https://badge.fury.io/py/bcpseg.svg)](https://badge.fury.io/py/linear_segmentation)
+[![Coffee](https://img.shields.io/badge/-buy_me_a%C2%A0coffee-gray?logo=buy-me-a-coffee&color=ff69b4)](https://www.buymeacoffee.com/kylessmith)
+
+linear_segmentation using Bayesian Change Point Segmentation or Circular Binary segmentation.
+
+
+## Install
+
+If you dont already have numpy and scipy installed, it is best to download
+`Anaconda`, a python distribution that has them included.  
+```
+    https://continuum.io/downloads
+```
+
+Dependencies can be installed by:
+
+```
+    pip install -r requirements.txt
+```
+
+PyPI install, presuming you have all its requirements installed:
+```
+	pip install linear_segment
+```
+
+## Usage
+
+```python
+from linear_segment import segment
+import numpy as np
+
+# Create data
+np.random.seed(10)
+x = np.random.random(300000)
+x[10000:20000] = x[10000:20000] + 0.1
+x[25000:27000] = x[25000:27000] - 1
+labels = np.repeat('a', len(x))
+
+# Calculate segments
+segments = segment(x, labels, method="online_both")
+segments
+segments = segment(x, labels, method="cbs")
+segments
+
+```
+
+
