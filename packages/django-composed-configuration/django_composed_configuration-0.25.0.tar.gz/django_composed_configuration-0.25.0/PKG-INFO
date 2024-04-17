@@ -1,0 +1,93 @@
+Metadata-Version: 2.3
+Name: django-composed-configuration
+Version: 0.25.0
+Summary: Turnkey Django settings for data management applications.
+Project-URL: Repository, https://github.com/kitware-resonant/django-composed-configuration
+Project-URL: Bug Reports, https://github.com/kitware-resonant/django-composed-configuration/issues
+Maintainer-email: "Kitware, Inc." <kitware@kitware.com>
+License: Apache 2.0
+License-File: LICENSE
+Keywords: configuration,configurations,django,resonant,setting,settings
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4
+Classifier: Framework :: Django :: 4.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: django-allauth>=0.56.0
+Requires-Dist: django-auth-style
+Requires-Dist: django-configurations[database,email]
+Requires-Dist: django-cors-headers
+Requires-Dist: django-extensions
+Requires-Dist: django-filter
+Requires-Dist: django-girder-utils>=0.9.0
+Requires-Dist: django-oauth-toolkit>=1.4.0
+Requires-Dist: django[argon2]>=4.2
+Requires-Dist: drf-yasg
+Requires-Dist: psycopg
+Requires-Dist: rich
+Requires-Dist: whitenoise[brotli]
+Provides-Extra: dev
+Requires-Dist: django-debug-toolbar; extra == 'dev'
+Requires-Dist: django-minio-storage; extra == 'dev'
+Requires-Dist: psycopg[binary]; extra == 'dev'
+Provides-Extra: prod
+Requires-Dist: django-storages[boto3]; extra == 'prod'
+Requires-Dist: psycopg[c]; extra == 'prod'
+Requires-Dist: sentry-sdk; extra == 'prod'
+Description-Content-Type: text/markdown
+
+# django-composed-configuration
+[![PyPI](https://img.shields.io/pypi/v/django-composed-configuration)](https://pypi.org/project/django-composed-configuration/)
+
+Turnkey Django settings for data management applications.
+
+## Installation
+Add to your project's requirements:
+```
+django-composed-configuration[dev,prod]
+```
+
+In your project's `settings.py`:
+```python
+from composed_configuration import (
+    ComposedConfiguration,
+    ConfigMixin,
+    DevelopmentBaseConfiguration,
+    ProductionBaseConfiguration,
+)
+
+
+class _ProjectMixin(ConfigMixin):
+    # Define additional project-specific settings or overrides here
+    pass
+
+    @staticmethod
+    def mutate_configuration(configuration: ComposedConfiguration) -> None:
+        # Perform any non-overriding mutation of existing settings here
+        # The "configuration" variable contains the flattened settings
+        # For example:
+        #   configuration.INSTALLED_APPS += ['my_extra_app']
+        pass
+
+
+class DevelopmentConfiguration(_ProjectMixin, DevelopmentBaseConfiguration):
+    pass
+
+
+class ProductionConfiguration(_ProjectMixin, ProductionBaseConfiguration):
+    pass
+```
+
+At runtime:
+* continue to set the `DJANGO_SETTINGS_MODULE` environment variable (pointing to `settings.py`)
+* also set `DJANGO_CONFIGURATION`, with a value of
+  either `DevelopmentConfiguration` or `ProductionConfiguration`
