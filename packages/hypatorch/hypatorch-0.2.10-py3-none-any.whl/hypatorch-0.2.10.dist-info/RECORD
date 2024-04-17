@@ -1,0 +1,10 @@
+hypatorch/__init__.py,sha256=HU_8-A-TKxVKt_mYQ5mChcfSEJrSkYNUv9e6sWiXCWU,259
+hypatorch/assessments.py,sha256=qxucX-HbYUz21pf2-hyGjNXQE0juIPNJCETet3v0gMU,4816
+hypatorch/core.py,sha256=h1mAmLcwYzV08dFSTaq-JIJv2iHcn4HJ5_pmfF2c1Zc,25337
+hypatorch/losses.py,sha256=UDSiobeoiTwhK37Yh5k7zfbSjoePBSggaoAersXtrmM,2544
+hypatorch/utils.py,sha256=rOtWYEJPJ8JdI2B837txlNGc7rspSFM8RzSl-cvomNE,7676
+hypatorch-0.2.10.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+hypatorch-0.2.10.dist-info/METADATA,sha256=yFMY-ZOB0YsrLObVxG9KlzJYwQO-xZvssdBl3klWBlM,780
+hypatorch-0.2.10.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hypatorch-0.2.10.dist-info/top_level.txt,sha256=ytSyPpzdwb8OvLp9ANugUl7WbIg3LWG7ikkHQy__krE,10
+hypatorch-0.2.10.dist-info/RECORD,,
