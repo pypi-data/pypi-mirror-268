@@ -1,0 +1,15 @@
+skipy/AWS/__init__.py,sha256=9Lk7XREHLJe0vDbBNaNI0bW5VPGR1i90oOG1e_9bTEE,64
+skipy/AWS/utils.py,sha256=sw77mF9BiVdsKv6E1ndJEM1dVPJtclwsHT4ckWqJyCQ,599
+skipy/Chatwork/__init__.py,sha256=26MsMLgjzywVAZHQdr6gCXwrvCgH-Yw01yItvp-75vo,56
+skipy/Chatwork/__wrapper.py,sha256=_WfQ_5PPO3XqkZeDpQ4N6EIXwnfKs60zwZxY-3zhADc,5722
+skipy/GCP/__init__.py,sha256=x0oFL1N2JzEVMNoD5fOnnfhERxDxLHrBINf5PYQCNFw,108
+skipy/GCP/drive.py,sha256=tCWBAIpM_qbUdpUaEy-5H6ScyK4cp-pKNnYT-44ExWY,5944
+skipy/GCP/sheet.py,sha256=wd1QXdIGL7rU633OaPlEvC2PwhsOIVY_Txrpkm6wsBE,3633
+skipy/Selenium/__init__.py,sha256=SULK8nzDbCKtjijt5Lz89ucuTflthRy2E3MutdDzRUk,64
+skipy/Selenium/__wrapper.py,sha256=QqNfNx30zPHwgl6QHUuHu1Bk-FCJvuRynb2Y6xBRP2E,898
+skipy/Slack/__init__.py,sha256=4dsnfQfufJKLZMIHzJJuwXRsrwP3KbV1tODpEpQIK7g,50
+skipy/Slack/__wrapper.py,sha256=prj6v2IfemLYcLlIOko-cjH36dfKcvRXvggqNtz1tSc,483
+skipy/__init__.py,sha256=fMK4bL0xohpjE0yJupqITTbEahD7yYn_sNsptzMAazc,50
+skipy-0.1.3.dist-info/METADATA,sha256=1Nbz0L7ZpQU6rDoTc3XIOVSyxzzh4jT4vUN48_uqEjE,872
+skipy-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+skipy-0.1.3.dist-info/RECORD,,
