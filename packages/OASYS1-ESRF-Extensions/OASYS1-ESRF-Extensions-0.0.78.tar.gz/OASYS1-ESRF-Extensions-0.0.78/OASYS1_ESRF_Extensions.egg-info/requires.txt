@@ -1,0 +1,7 @@
+setuptools
+oasys-barc4ro>=1.0.3
+pandas
+numba
+shadow4>=0.1.23
+xoppylib>=1.0.22
+crystalpy>=0.0.22
