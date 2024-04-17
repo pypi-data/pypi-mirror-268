@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: opensr-model
+Version: 0.2.8
+Summary: ESA OpenSR Diffusion model package for Super-Resolution of Senintel-2 Imagery
+Home-page: https://isp.uv.es/opensr/
+Author: Simon Donike, Cesar Aybar, Luis Gomez Chova, Freddie Kalaitzis
+Author-email: accounts@donike.net
+License: MIT
+Project-URL: Source Code, https://github.com/ESAopenSR/opensr-model
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy==1.23.5
+Requires-Dist: einops==0.6.0
+Requires-Dist: rasterio==1.3.6
+Requires-Dist: tqdm==4.64.1
+Requires-Dist: torch==1.13.1
+Requires-Dist: scikit-image==0.19.3
+Requires-Dist: pytorch-lightning==1.9.0
+Requires-Dist: requests
+
+# opensr-model
+## Description
+This package contains the latent-diffusion model to super-resolute 10 and 20m bands of Sentinel-2.
