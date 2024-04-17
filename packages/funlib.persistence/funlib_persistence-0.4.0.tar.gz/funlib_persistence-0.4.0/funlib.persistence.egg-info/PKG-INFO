@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: funlib.persistence
+Version: 0.4.0
+Summary: Interfaces for data (arrays and graphs) and storage formats (databases and file formats)
+Author-email: William Patton <pattonw@hhmi.org>, Jan Funke <funkej@hhmi.org>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: funlib.geometry
+Requires-Dist: networkx
+Requires-Dist: zarr
+Requires-Dist: pymongo
+Requires-Dist: numpy
+Requires-Dist: h5py
+Requires-Dist: psycopg2-binary
+Requires-Dist: fsspec
+Provides-Extra: dev
+Requires-Dist: coverage>=5.0.3; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: types-psycopg2; extra == "dev"
+
+[![tests](https://github.com/funkelab/funlib.persistence/actions/workflows/tests.yaml/badge.svg)](https://github.com/funkelab/funlib.persistence/actions/workflows/tests.yaml)
+[![black](https://github.com/funkelab/funlib.persistence/actions/workflows/black.yaml/badge.svg)](https://github.com/funkelab/funlib.persistence/actions/workflows/black.yaml)
+[![mypy](https://github.com/funkelab/funlib.persistence/actions/workflows/mypy.yaml/badge.svg)](https://github.com/funkelab/funlib.persistence/actions/workflows/mypy.yaml)
+
+# funlib.persistence
+Interfaces for data (arrays and graphs) and storage formats (databases and file formats)
+
+# installation
+regular installation for usage:
+`pip install .`
+developer installation including pytest etc.:
+`pip install ".[dev]"`
+
