@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: zscaler-sdk-python
+Version: 1.0.0
+Summary: Official Python SDK for the Zscaler Products
+Home-page: https://github.com/zscaler/zscaler-sdk-python
+Author: Zscaler, Inc.
+Author-email: devrel@zscaler.com
+License: MIT
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: arrow
+Requires-Dist: certifi
+Requires-Dist: charset-normalizer
+Requires-Dist: idna
+Requires-Dist: python-box
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+Requires-Dist: responses
+Requires-Dist: restfly
+Requires-Dist: six
+Requires-Dist: urllib3
+Requires-Dist: flatdict
+Requires-Dist: pyyaml
+Requires-Dist: xmltodict
+Requires-Dist: yarl
+Requires-Dist: pycryptodomex
+Requires-Dist: aenum
+Requires-Dist: pydash
+Requires-Dist: flake8
+
+Zscaler SDK Python
+===============
+
+Zscaler SDK Python provides a uniform and easy-to-use interface for each of the Zscaler product APIs.
+
+Getting Started
+---------------
+``` $ pip install zscaler ```
+
+What you need
+--------------------
+
+Before you can interact with any of the Zscaler APIs, you need to generate API keys or retrieve tenancy information for each product that you are interfacing with. Once you have the requirements and you have installed Zscaler SDK Python, you're ready to go.
+
+- [ZPA API Credentials](https://help.zscaler.com/zpa/getting-started-zpa-api)
+- [ZIA API Credentials](https://help.zscaler.com/zia/getting-started-zia-api)
+
+Look for our quickstart guide here!
+- https://github.com/zscaler/zscaler-sdk-python
+
