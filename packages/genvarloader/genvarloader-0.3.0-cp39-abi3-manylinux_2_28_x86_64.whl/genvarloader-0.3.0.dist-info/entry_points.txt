@@ -1,0 +1,2 @@
+[console_scripts]
+genvarloader=cli:app
