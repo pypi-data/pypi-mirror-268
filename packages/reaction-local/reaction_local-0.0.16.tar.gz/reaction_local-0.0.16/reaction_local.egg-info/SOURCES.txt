@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+reaction_local.egg-info/PKG-INFO
+reaction_local.egg-info/SOURCES.txt
+reaction_local.egg-info/dependency_links.txt
+reaction_local.egg-info/requires.txt
+reaction_local.egg-info/top_level.txt
+reaction_local/src/__init__.py
+reaction_local/src/constants.py
+reaction_local/src/reaction.py
