@@ -1,0 +1,12 @@
+qdsim/_CapacitanceQDArray.py,sha256=sCswQ5m8ak1w5j_q5XvGpLSjByXi_VHPDZGWzjc9J7w,16953
+qdsim/_QuantumDotDevice.py,sha256=0EfFE1TA6GDY4rN23L0mrOfGrIClsL6ZCanUYA6rwY0,44284
+qdsim/_QuantumDotSimulator.py,sha256=_jHZ-VkVzHeEMGrbmNYAFMF0xP07ROtKbbM5EKYau2k,47171
+qdsim/__init__.py,sha256=T7IyJkCsFvI80-u5MCgGrO0jKiFExg3cbrEO9Q-LtOs,306
+qdsim/_auxiliaryfunctions.py,sha256=7TDZka2OJmi_eXBybtD-Hix0oJwewsAyh8msf_GC2Tw,2473
+qdsim/_noisefunctions.py,sha256=ARrF5Oz4rtGws8L9g60GGfuF-mToKlSQ49yqopJ587k,4104
+qdsim/_plotCSD.py,sha256=PTWRksw8yu-rZajkuXBV-XdAIdpXJgYz4G8kzNtqyiM,6104
+QDsim-1.0.1.dist-info/LICENSE,sha256=7d8jUZ47Hl0f5sc6JVFPajI0deuEk_K6sIdWjC3q2FY,1076
+QDsim-1.0.1.dist-info/METADATA,sha256=XRYRmXf7aNB0UzdfeN_i0SGwPU5SCAI19H2cBhJgwsA,4959
+QDsim-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+QDsim-1.0.1.dist-info/top_level.txt,sha256=HM1x756dzDJFapgv0yMCFBmVJLHYNZHa6nGjMK7wrTQ,6
+QDsim-1.0.1.dist-info/RECORD,,
