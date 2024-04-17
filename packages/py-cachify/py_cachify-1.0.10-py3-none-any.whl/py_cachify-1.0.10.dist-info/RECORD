@@ -1,0 +1,17 @@
+README.md,sha256=EVVrjeRV24ASDqui-c-MFto82MdEls3TykBe5Te5RjU,3316
+py_cachify/__init__.py,sha256=ZKpTJA8-zsjIW9rX-_uVIqh4gneRd2iegD_EthC6Wy8,344
+py_cachify/asyncio.py,sha256=ZCBHWElWkVoC8hzxYGr3l0kYqMbxzTNw1zEVP7CZlh0,201
+py_cachify/backend/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_cachify/backend/base.py,sha256=8qSU8BRLZFM6-mCkcT8YQnJlN5t-k32iVoUFbdz3O0k,733
+py_cachify/backend/cached.py,sha256=of7mLqSgv2hs6SlCj6u1RV_IT70ezFzJ4gjNs6-nRcM,2449
+py_cachify/backend/clients.py,sha256=fhI-g2AwTd2fznWN2vg2YQC3hDrMSM-eo0r9JJ5KyEg,1210
+py_cachify/backend/exceptions.py,sha256=jVAA3Kefc7k7I32Vm2UOl7XWMTU9YhAX-X9jXaD2tfc,127
+py_cachify/backend/lib.py,sha256=wkBEImT223BGviS9qYFtOiLAf7_sD2cX6v0TL6zkJ-I,1941
+py_cachify/backend/lock.py,sha256=BSfRDVV3hqCS085IZQiDf7bklhFLvQakwbqfzhFzqDY,3918
+py_cachify/backend/types.py,sha256=dFEKhFfwt8WNnYHAlNxOn3sCJN0qTF3F_75Ju0Yb0es,719
+py_cachify/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+py_cachify/sync.py,sha256=YfVYIcnxeIflEkOXo2OEjI-S88qWkS3nZs0I8KKosG4,183
+py_cachify-1.0.10.dist-info/LICENSE,sha256=ihRIebG2hV8_SizexirXv2U9ktsNLXt0li0X-8jt66A,1064
+py_cachify-1.0.10.dist-info/METADATA,sha256=EvWpjAoEaiVj0H2lp7-6nRAN0grUO4syjPCG6IBmhWE,4033
+py_cachify-1.0.10.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+py_cachify-1.0.10.dist-info/RECORD,,
