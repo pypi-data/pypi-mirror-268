@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "skelescope"
+version = "0.0.4"
+description = ""
+authors = ["Philipp Harth <harth@zib.de>", "Jakob Troidl <jtroidl@g.harvard.edu>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+anywidget = "^0.9.6"
+watchfiles = "^0.21.0"
+jupyterlab = "^4.1.5"
+navis = "^1.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
