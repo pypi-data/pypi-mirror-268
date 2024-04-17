@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: ledgerify
+Version: 0.1.0
+Summary: Ledger transactions importer
+License: GPL-3.0
+Author: Michal Goral
+Author-email: dev@goral.net.pl
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+
+# Ledgerify
+
+Ledgerify is a powerful, fully customizable converter of different formats to
+the Ledger Format.
+
+- [Online documentation](https://pages.goral.net.pl/ledgerify)
+    - [Latest general description](https://pages.goral.net.pl/ledgerify/master/ledgerify.1.html)
+    - [Latest description of rules files](https://pages.goral.net.pl/ledgerify/master/ledgerify.5.html)
+- [Main repository](https://git.goral.net.pl/ledgerify.git)
+

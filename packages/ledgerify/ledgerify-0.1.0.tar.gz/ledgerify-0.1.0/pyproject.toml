@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ledgerify"
+version = "0.1.0"
+description = "Ledger transactions importer"
+authors = ["Michal Goral <dev@goral.net.pl>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.scripts]
+ledgerify = "ledgerify.ledgerify:main"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+pytest-sugar = ">=0.9"
+black = "^22"
+cmplib = "^1.0.0"
+mypy = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint]
+disable = [
+    "too-many-instance-attributes"
+]
+ignore-paths = [
+    "tests/integrations/**/*.py"
+]
