@@ -1,0 +1,14 @@
+apiModels/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apiModels/get_bibtex_from_crossref.py,sha256=Qd1mdFT2S-7e2VJI3Uxxfwn82Zi8TwvpnaubnKz9nHc,3165
+apiModels/get_bibtex_from_dblp.py,sha256=qe_T_X17egbs3_OChFKQWepebi8gxKOIgOGPJ1zCzmI,2054
+apiModels/get_bibtex_from_google_scholar.py,sha256=0t8_vIel1KdxPCTPUw__fpUsgEDm8UaA-wX2RgHqNIQ,3831
+apiModels/meta_class.py,sha256=u_LKAkDqQqolJwBDE3hhTs96S0d1t8Wukvs-r-evl7w,364
+apiModels/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apiModels/utils/verify.py,sha256=oKMQWe0nAge77tcIxlg_thfsszp3Wj6mWqQ5c2VC-DQ,835
+apiModels/workflow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apiModels/workflow/crossref2dblp.py,sha256=kO3XdjKYRVY10CUlKcPIoSh5IjEBgP9FuWuukqHs4Mc,3571
+apiModels/workflow/make_workflow.py,sha256=FT-5-LHTgPYC2OzSAbjy0sVmMwNQHM_gDAjH_N8nWHg,1904
+get_bibtex-1.1.0.dist-info/METADATA,sha256=Y0dA_YM30Rm-_2n5ic9z1khvrjeQja2M8L6VKX6Iqns,1385
+get_bibtex-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+get_bibtex-1.1.0.dist-info/top_level.txt,sha256=e4L9V-qCsmmFbUYErY7S9yw1tXKQF_7JMOXnm78d_GY,10
+get_bibtex-1.1.0.dist-info/RECORD,,
