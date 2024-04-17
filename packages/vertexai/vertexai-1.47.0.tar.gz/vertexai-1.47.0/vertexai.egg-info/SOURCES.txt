@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+version.py
+vertexai.egg-info/PKG-INFO
+vertexai.egg-info/SOURCES.txt
+vertexai.egg-info/dependency_links.txt
+vertexai.egg-info/not-zip-safe
+vertexai.egg-info/requires.txt
+vertexai.egg-info/top_level.txt
