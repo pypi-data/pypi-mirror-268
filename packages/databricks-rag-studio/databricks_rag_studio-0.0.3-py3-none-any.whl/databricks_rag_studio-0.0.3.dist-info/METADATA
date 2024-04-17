@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: databricks-rag-studio
+Version: 0.0.3
+Summary: Databricks RAG Studio Library
+Home-page: UNKNOWN
+Author: Databricks
+Author-email: feedback@databricks.com
+License: Databricks Proprietary License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: databricks-sdk (>=0.23.0)
+Requires-Dist: mlflow-skinny[databricks]
+Requires-Dist: mlflow (>=2.11.3)
+Requires-Dist: langchain (>=0.1.12)
+Requires-Dist: langchain-core (>=0.1.33)
+Requires-Dist: langchain-community (>=0.0.28)
+Requires-Dist: databricks-vectorsearch (>=0.26)
+
+UNKNOWN
+
