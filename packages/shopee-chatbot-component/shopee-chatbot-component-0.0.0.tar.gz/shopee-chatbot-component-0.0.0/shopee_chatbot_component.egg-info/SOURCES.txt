@@ -1,0 +1,6 @@
+README.md
+setup.py
+shopee_chatbot_component.egg-info/PKG-INFO
+shopee_chatbot_component.egg-info/SOURCES.txt
+shopee_chatbot_component.egg-info/dependency_links.txt
+shopee_chatbot_component.egg-info/top_level.txt
