@@ -1,0 +1,43 @@
+{
+  "fontFamily": "Montserrat",
+  "fontSize": 16,
+  "fontWeight": "normal",
+  "fontColor": {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "alpha": 255
+  },
+  "labelBorder": {
+    "color": {
+      "red": 0,
+      "green": 0,
+      "blue": 0,
+      "alpha": 255
+    },
+    "width": 1,
+    "style": "solid"
+  },
+  "labelBackground": {
+    "color": {
+      "red": 255,
+      "green": 255,
+      "blue": 255,
+      "alpha": 255
+    },
+    "style": "SolidPattern"
+  },
+  "labelMargins": {
+    "top": 4,
+    "left": 4,
+    "bottom": 4,
+    "right": 4
+  },
+  "layoutMargins": {
+    "top": 0,
+    "left": 0,
+    "bottom": 0,
+    "right": 0
+  },
+  "layoutSpacing": 0
+}
