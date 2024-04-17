@@ -1,0 +1,2 @@
+dclab[http]>=0.57.7
+dcor_shared>=0.8.0
