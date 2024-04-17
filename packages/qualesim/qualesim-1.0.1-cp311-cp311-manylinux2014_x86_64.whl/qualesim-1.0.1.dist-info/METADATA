@@ -1,0 +1,214 @@
+Metadata-Version: 2.1
+Name: qualesim
+Version: 1.0.1
+Summary: Quingo Simulator Backend QuaLeSim
+Home-page: https://gitee.com/quingo/qualesim.git
+Author: Dingdong Liu
+Author-email: dingdongliu@quanta.org.cn
+License: Apache-2.0
+Project-URL: Bug Tracker, https://gitee.com/quingo/qualesim.git
+Project-URL: Documentation, https://gitee.com/quingo/qualesim.git
+Project-URL: Source Code, https://gitee.com/quingo/qualesim.git
+Platform: linux
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cbor
+Requires-Dist: cmake (>=3.14)
+Provides-Extra: plugins
+Requires-Dist: qualesim-quantumsim (>=1.0.0) ; extra == 'plugins'
+Requires-Dist: qualesim-qcis (>=1.0.0) ; extra == 'plugins'
+Requires-Dist: qualesim-quiets (>=1.0.0) ; extra == 'plugins'
+Provides-Extra: tequila
+Requires-Dist: qualesim-tequila (>=1.0.0) ; extra == 'tequila'
+
+# Start
+The QuaLeSim(Quantum Lego Simulator) is an adapted version of DQCSim. For quantum circuit simulation, you can simulate QUIET-s and QCIS instruction by it.
+And what's more, now the QuaLeSim is integrated into the backend of Quingo, you can use it directly after installing quingoc and quingo-runtime. More inforemations is available in [[#Install]]
+
+# Install
+> The QuaLeSim now is only for Linux platform. 
+
+1. 环境准备：
+	- Linux platform with `python>=3.6`
+	- Rust # if you don't have rust, make sure you have `'curl'` to install rust in the setup.py .
+2. 安装说明：
+	- You can get the source code from gitee
+		```
+		git clone git@gitee.com:quingo/qualesim.git
+		cd qualesim
+		git checkout task/fix-bugs
+		git submodule update --init --recursive 
+		# you must have the limits of authority of quiet-parser, dqcsim-qcis, 
+		# dqcsim-quiets, dqcsim-tequila, dqcsim-quantumsim.
+		pip install -r requirements.txt
+		pip install .  # the step may be very slow, you can use command below.
+					   # python setup.py bdist_wheel
+					   # cd <path-to-qualesim>/target/python/build/bdist.linux-x86_64/wheel
+					   # pip install xxx.whl
+					   # 存在LLVM的情况下会很慢，暂时不清楚原因，正在修改中。
+		```
+	- externs:
+		```
+		# The Simulator is for QCIS and QUIET-s, and now the quingo-0.2.3 can generate QCIS 
+		and QUIET-s
+		# so you can install quingoc and quingo-runtime to use it.
+		# quingoc:
+		git clone git@gitee.com:quingo/quingo-compiler.git
+		git checkout enh/I7U2U5/refactor_frontend
+	
+		1. add eigen 
+			mkdir <tmp>
+			cd <tmp>
+			cp /mnt/share/eigen-3.4.0.zip .
+			unzip eigen-3.4.0.zip
+			
+			# then copy Eigen and unsupported to quingo-compiler/extern and like 
+			- `quingo-compiler/extern/Eigen/src/SparseCholesky/SimplicialCholesky.h`
+				- SimplicialCholesky& setMode(SimplicialCholeskyMode mode)(around line 545):
+				{
+				      switch(mode)
+				      {
+				      case SimplicialCholeskyLLT:
+				        m_LDLT = false;
+				        break;
+				      case SimplicialCholeskyLDLT:
+				        m_LDLT = true;
+				        break;
+				      default:  // delete this line
+				        break;  // delete this line
+				      }
+				}
+			- `quingo-compiler/extern/unsupported/Eigen/MatrixFunctions`
+		2. cd quingo-compiler/build
+		3. cmakeninja ..
+		4. ninja
+		5. ln -s <path-to-quingo-compiler>/build/bin/quingoc ~/.local/bin/quingoc # 建立软链接
+	
+		# quingo-runtime and other simulators:
+		git clone git@gitee.com:quingo/quingo-runtime.git
+		cd quingo-runtime
+		git checkout task/backend-result
+		pip install -e .
+	
+		git clone git@gitee.com:quingo/pyqcisim.git
+		cd pyqcisim
+		git checkout bug-fix
+		pip install -e .
+	
+		git clone git@gitee.com:quingo/SymQC.git
+		cd SymQC
+		pip install -e .
+		``` ^dea5d0
+
+# Quick Start
+Quick Start is for users use the Simulator directly or use it with quingo-runtime. Some examples are available below.
+
+1. For independent users:
+	- The Simulator can simulate QUIET-s and QCIS instructions, you can use it directly:
+
+```python
+from qualesim.plugin import *
+from qualesim.host import *
+sim = Simulator(stderr_verbosity=Loglevel.INFO)
+
+sim.with_frontend("<path-to-qcis-file>", verbosity=Loglevel.INFO)
+# sim.with_frontend("<path-to-qi-file>", verbosity=Loglevel.INFO)
+# Loglevel is for output information for DEBUG/INFO/OFF
+# If you only want the simulation output, please set it OFF
+
+sim.with_backend("quantumsim", verbosity=Loglevel.INFO)
+# sim.with_backend("tequila", verbosity=Loglevel.INFO)
+# now we have DQCsim-Tequila and DQCsim-QuantumSim backend for Simulator
+
+sim.simulate()
+res = sim.run(measure_mod="state_vector", num_shots=10)
+# Start the simulation with different exe mod, 
+# measure_mod="one_shot" and num_shots=int /
+#             "state_vector"
+# the output should be 
+
+sim.stop()
+final_state = dict()
+final_state = res["res"]
+print(final_state)
+```
+- the output is :
+```python
+measure_mod="state_vector":
+res1(M Q1, M Q2) = {'classical': {'Q1': 1, 'Q2': 1}, 'quantum': (['Q3'], [0j, (1+0j)])}
+# classical is qubit measured, quantum is qubit unmeasured with state vector.
+res2() = {'classical': {}, 'quantum': (['Q1', 'Q2', 'Q3'], [(0.7071067811865472+0j), 0j, 0j, 0j, 0j, 0j, 0j, (0.7071067811865478+0j)])}
+
+measure_mod="one_shot", num_shots=10:
+# classical is classical value, quantum is qubit measured. and they are one to one correspondence
+res(measure(q1)->c1, measure(q2)->c2) = {'quantum': [['q1', 'q2'], [[0, 0], [0, 0], [1, 1], [0, 0], [0, 0], [1, 1], [0, 0], [0, 0], [1, 1], [1, 1]]], 'classical': [{'c1': [0], 'c2': [0]}, {'c1': [0], 'c2': [0]}, {'c1': [1], 'c2': [1]}, {'c1': [0], 'c2': [0]}, {'c1': [0], 'c2': [0]}, {'c1': [1], 'c2': [1]}, {'c1': [0], 'c2': [0]}, {'c1': [0], 'c2': [0]}, {'c1': [1], 'c2': [1]}, {'c1': [1], 'c2': [1]}]}
+```
+
+
+2. For Quingo Users
+	- You should follow the [[#Install|extern: quingoc & quingo-runtime installation]] to install it.
+```python
+from quingo import *
+import qututor.global_config as gc
+from quingo.backend.qisa import Qisa
+
+# input quingo file and simulate qu func
+qu_file = gc.quingo_dir / "ghz.qu"
+circ_name = "GHZ_state"
+
+# set the qisa, and it is the output instructions QUIET, 
+# you can change to Qisa.QCIS or others.
+task = Quingo_task(
+    qu_file,
+    circ_name,
+    qisa=Qisa.QUIET,
+)
+
+num_shots = 10
+cfg = ExeConfig(ExeMode.SimFinalResult, num_shots)
+num_qubits = 3
+
+# now backend BackendType.QUANTUM_SIM, BackendType.DQCSIM_TEQUILA
+# BackendType.DQCSIM_QUANTUMSIM, BackendType.SYMQC is available.
+# method 1
+qasm_fn = compile(task, params=(num_qubits,))
+res = execute(qasm_fn, BackendType.QUANTUM_SIM, cfg)
+
+# method 2
+# res = call(task, (num_qubits,), BackendType.DQCSIM_TEQUILA, cfg)
+
+print("res: ", res)
+```
+- the output is :
+```python
+measure_mod="state_vector":
+res1(M Q1, M Q2) = {'classical': {'Q1': 1, 'Q2': 1}, 'quantum': (['Q3'], [0j, (1+0j)])}
+# classical is qubit measured, quantum is qubit unmeasured with state vector.
+res2() = {'classical': {}, 'quantum': (['Q1', 'Q2', 'Q3'], [(0.7071067811865472+0j), 0j, 0j, 0j, 0j, 0j, 0j, (0.7071067811865478+0j)])}
+
+measure_mod="one_shot", num_shots=10:
+# quingo-runtime only have quantum values.
+res(measure(q1)->c1, measure(q2)->c2) =(['q1', 'q2'], [[0, 0], [0, 0], [1, 1], [0, 0], [0, 0], [1, 1], [0, 0], [0, 0], [1, 1], [1, 1]])
+```
+
+# FAQ
+1. for install
+	1. your environment donot have rust?
+		- you can install rust yourself by the [Rust 程序设计语言 (rust-lang.org)](https://www.rust-lang.org/zh-CN/)
+		- or just make sure you have command `"curl"`, the setup will help you install it automatic.
+	2. if you have llvm in your platform, the setup install maybe very slow.
+		- the problem is to be solved.
+	3. install about quingoc
+		- please refer to [docs/DeveloperGuide.md · Quingo/quingo-compiler - Gitee.com](https://gitee.com/quingo/quingo-compiler/blob/enh/I7U2U5/refactor_frontend/docs/DeveloperGuide.md)
+2. for use
+	1. when you first use it, there would be a problem `核心已转储`
+		- it is the dqcsim's problem and is to be solved.
+
