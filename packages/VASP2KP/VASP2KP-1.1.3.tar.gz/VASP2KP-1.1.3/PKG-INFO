@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: VASP2KP
+Version: 1.1.3
+Home-page: https://github.com/zjwang11/VASP2KP
+Author: Sheng Zhang, Haohao Sheng, Zhi-Da Song, Chenhao Liang, Zhijun Wang
+Author-email: zhangsheng221@mails.ucas.ac.cn, songzd@pku.edu.cn, wzj@iphy.ac.cn
+License: GPLv3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: sympy
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: kdotp_generator
+
+A tool for computing k.p effective Hamiltonians and Zeeman's coupling under given symmetry constraints from VASP calculations.
