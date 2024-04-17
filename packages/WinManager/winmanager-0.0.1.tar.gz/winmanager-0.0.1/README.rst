@@ -1,0 +1,97 @@
+WindowManager
+This Python package provides a set of functions for managing windows on your system. It utilizes the win32gui and psutil libraries to interact with windows and processes.
+
+Installation
+The WindowManager package is not currently available on the Python Package Index (PyPI). However, you can install it manually by placing the WindowManager.py file in your project directory.
+
+Usage
+The WindowManager package offers several functions for manipulating windows and processes. Here's a breakdown of each function:
+
+windowHandler(hwnd, windows:list): Internal function used for enumerating windows.
+
+getsize(window_title:str): Gets the width and height of a window based on its title.
+
+Arguments:
+
+window_title: The title (or part of the title) of the window you want to get the size of.
+Returns:
+
+A tuple containing the width and height of the window.
+Raises:
+
+SyntaxError: If the window with the specified title is not found.
+ontop(window_title:str, hide=False): Brings a window to the top of the screen or hides it optionally.
+
+Arguments:
+
+window_title: The title (or part of the title) of the window you want to manipulate.
+hide (optional): A boolean value indicating whether to hide the window (True) or show it on top (False). Defaults to False.
+Returns:
+
+True if the window is found and manipulated successfully, False otherwise.
+close(AppName:str): Terminates a program by its process name.
+
+Arguments:
+
+AppName: The name of the process you want to terminate (e.g., "notepad++.exe").
+Returns:
+
+True if the process is found and terminated successfully, False otherwise.
+Raises:
+
+SyntaxError: If the process with the specified name is not found.
+reposition(window_title:str, y:int, x:int, width:int=-1, height:int=-1): Moves and resizes a window.
+
+Arguments:
+
+window_title: The title (or part of the title) of the window you want to reposition.
+y: The new y-coordinate (top position) of the window.
+x: The new x-coordinate (left position) of the window.
+width (optional): The new width of the window (defaults to the current width if -1).
+height (optional): The new height of the window (defaults to the current height if -1).
+Returns:
+
+True if the window is found and repositioned successfully, False otherwise.
+open(path:str): Opens a program by its file path.
+
+Arguments:
+
+path: The full path to the program's executable file (e.g., "C:/Program Files/Notepad++/notepad++.exe").
+Notes:
+
+The path separator needs to be forward slash ("/") even on Windows systems.
+getPID(process_name:str): Gets the process ID (PID) of a running program.
+
+Arguments:
+
+process_name: The name of the process you want to get the PID for (e.g., "notepad++.exe").
+Returns:
+
+The PID of the process if found, otherwise raises an error.
+Raises:
+
+SyntaxError: If the process with the specified name is not found.
+Examples
+Here are some examples of how to use the WindowManager functions:
+
+Python
+import WindowManager
+
+# Get the size of a window titled "Notepad"
+width, height = WindowManager.getsize("Notepad")
+print(f"Notepad size: {width}x{height}")
+
+# Bring the window titled "Calculator" on top
+WindowManager.ontop("Calculator")
+
+# Close the program named "notepad++.exe"
+WindowManager.close("notepad++.exe")
+
+# Move the window titled "Command Prompt" to (100, 100) with a width of
+wm.reposition("Command Prompt", 100, 100)
+
+# Open `notpad++.exe` by its path `C:/Program Files/Notepad++`
+wm.open('C:/Program Files/Notepad++')
+
+# Get the PID of notepad++ by its Process name `notpad++.exe`
+wm.getPID('notpad++.exe')

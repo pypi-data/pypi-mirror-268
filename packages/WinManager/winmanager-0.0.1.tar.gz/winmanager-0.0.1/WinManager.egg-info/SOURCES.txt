@@ -1,0 +1,8 @@
+LICENSE.txt
+README.rst
+setup.py
+WinManager/__init__.py
+WinManager.egg-info/PKG-INFO
+WinManager.egg-info/SOURCES.txt
+WinManager.egg-info/dependency_links.txt
+WinManager.egg-info/top_level.txt
