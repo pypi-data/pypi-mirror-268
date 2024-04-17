@@ -1,0 +1,8 @@
+selfpkg/__init__.py,sha256=QmadkxSqjXLDPgFGMZc5DLhdl_nP2f99A1vOPRvXSEc,58
+selfpkg/examples.py,sha256=fuw2kFHFVF3XxNlyZe5ki7F3FDiqqMa4cLroD7ft_7A,145
+selfpkg/farewell.py,sha256=mCfxEjtwJQlI02AV5JlSK_73SINAEk_B3NhaGWv3syU,62
+selfpkg/greeting.py,sha256=WdPnXKFSErlvd1vEMYQlbo4wYna1v5QATJnZR_Ox6vA,131
+selfpkg-0.0.3a3.dist-info/METADATA,sha256=Su_lV23Ea_yyFOPBTDEDiFG2j4ndPNmbDg72HP7zmvg,322
+selfpkg-0.0.3a3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+selfpkg-0.0.3a3.dist-info/top_level.txt,sha256=-MY5X6k-U6Nax89KQaaVrj3C2POIeJ_EZbhjFJeDDiU,8
+selfpkg-0.0.3a3.dist-info/RECORD,,
