@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: flake8-no-nesting
+Version: 0.1.0
+Summary: A flake8 plugin to enforce object calisthenics rule "ONE level of indentation"
+Home-page: https://git.nocyphr.com/flake8-plugins/flake8-no-nesting
+Author: Sebastian Guckes
+Author-email: nocyphr@outlook.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# flake8-no-nesting
+
+## To-Dos
+- [x] for
+- [x] while
+- [x] if
+
+- [ ] with
+- [ ] try
+- [ ] ternaries
+
