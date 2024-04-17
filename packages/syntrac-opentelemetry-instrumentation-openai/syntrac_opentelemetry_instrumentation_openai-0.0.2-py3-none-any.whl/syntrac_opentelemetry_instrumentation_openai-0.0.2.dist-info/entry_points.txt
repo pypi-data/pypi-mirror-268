@@ -1,0 +1,3 @@
+[opentelemetry_instrumentor]
+openai=syntrac_opentelemetry.instrumentation.openai:OpenAIInstrumentor
+
