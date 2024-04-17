@@ -1,0 +1,27 @@
+name: monsda
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - biopython=1.83
+  - grep >=3.4
+  - isort=5.13.2
+  - monsda=1.2.5
+  - natsort=8.4.0
+  - nextflow=23.10.1
+  - numpy=1.26.4
+  - pandas=2.2.1
+  - perl=5.34.0
+  - pip>=24.0
+  - python=3.12.2
+  - pyyaml=6.0.1
+  - scipy=1.12.0
+  - snakemake=8.10.0
+  - snakemake-executor-plugin-slurm=0.4.2
+  - snakemake-executor-plugin-cluster-generic=1.0.9
+  - snakemake-interface-common=1.17.1
+  - snakemake-interface-executor-plugins=9.0.2
+  - snakemake-interface-report-plugins=1.0.0
+  - snakemake-interface-storage-plugins=3.1.1
+  - snakemake-storage-plugin-s3=0.2.10
