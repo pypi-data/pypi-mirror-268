@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+QDsim.egg-info/PKG-INFO
+QDsim.egg-info/SOURCES.txt
+QDsim.egg-info/dependency_links.txt
+QDsim.egg-info/top_level.txt
+qdsim/_CapacitanceQDArray.py
+qdsim/_QuantumDotDevice.py
+qdsim/_QuantumDotSimulator.py
+qdsim/__init__.py
+qdsim/_auxiliaryfunctions.py
+qdsim/_noisefunctions.py
+qdsim/_plotCSD.py
