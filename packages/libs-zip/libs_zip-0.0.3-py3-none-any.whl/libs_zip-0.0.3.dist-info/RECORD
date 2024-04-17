@@ -1,0 +1,10 @@
+libs/__init__.py,sha256=850ISARIJiX1yiVORzoe4PYMUUfggQBCWu7F_Q8vHWE,150
+libs/data.py,sha256=xab4WH1uBnDSblkHalM4DFqDptbL4XHrU1n8nKOXsGQ,955
+libs/image.py,sha256=eqMZwLuztl6yIFLwR6VpAz8p6Te0R_lF3lgq85oeUfY,1701
+libs/test.py,sha256=JMCbCIS81KJbd3dPgkUme_k-T9GEDseSLaKExJiRExo,31
+libs/web.py,sha256=ADkFk2uWzOQH8TBAlphNdZN2XvDj8jRVfQa1d3K3dbs,440
+libs_zip-0.0.3.dist-info/LICENSE,sha256=jE9D_cNVF5OZFBGL7wJ0XYzG-f4CtmAqq-uaFg8vwHA,1067
+libs_zip-0.0.3.dist-info/METADATA,sha256=7iRkrJdbbF9lLXHw-gb6nKVXNL9XsJvyukb4NkSguso,332
+libs_zip-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+libs_zip-0.0.3.dist-info/top_level.txt,sha256=0b_zhmMbmmxcl-UpEdQJY_SLzF0Agycg9RbRybkSJhc,5
+libs_zip-0.0.3.dist-info/RECORD,,
