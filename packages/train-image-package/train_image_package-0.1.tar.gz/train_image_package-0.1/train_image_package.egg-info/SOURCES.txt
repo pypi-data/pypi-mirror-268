@@ -1,0 +1,11 @@
+setup.py
+TrainModelPackage/__init__.py
+TrainModelPackage/main.py
+TrainModelPackage/predict.py
+TrainModelPackage/process_data.py
+TrainModelPackage/train.py
+TrainModelPackage/train_model.py
+train_image_package.egg-info/PKG-INFO
+train_image_package.egg-info/SOURCES.txt
+train_image_package.egg-info/dependency_links.txt
+train_image_package.egg-info/top_level.txt
