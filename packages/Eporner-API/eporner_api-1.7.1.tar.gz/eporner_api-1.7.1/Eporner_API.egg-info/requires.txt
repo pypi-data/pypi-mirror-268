@@ -1,0 +1,4 @@
+requests
+bs4
+lxml
+eaf_base_api
