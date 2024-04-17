@@ -1,0 +1,3 @@
+[opentelemetry_instrumentor]
+qdrant_client=syntrac_opentelemetry.instrumentation.qdrant:QdrantInstrumentor
+
