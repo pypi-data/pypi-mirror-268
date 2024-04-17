@@ -1,0 +1,8 @@
+python-dotenv
+discord==2.3.2
+pystray==0.19.5
+serial==0.0.97
+pynmea2==1.19.0
+pyautogui==0.9.54
+pyaudio==0.2.14
+sounddevice==0.4.6
