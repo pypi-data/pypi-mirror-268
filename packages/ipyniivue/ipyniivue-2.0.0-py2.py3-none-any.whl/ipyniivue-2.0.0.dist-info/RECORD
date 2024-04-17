@@ -1,0 +1,10 @@
+ipyniivue/__init__.py,sha256=iXKU_WAun9ZuRUotvIOmBlWpgDzXSNEMz_bKom5VP-o,272
+ipyniivue/_constants.py,sha256=JKTDxzJzrCatQbZQmmXvbZr5JIBuVtBS3RVw7_o1Vys,592
+ipyniivue/_options_mixin.py,sha256=_OJ_QiMJ0T97xLknc0rr6afAx80EwhLKEk27_90Po3A,14423
+ipyniivue/_utils.py,sha256=l5ahxJeSQMxSXgQ78BqfzOEwtrI2l4i9mTb26m1VvAQ,645
+ipyniivue/_widget.py,sha256=ytv-X9r1-G8F6106MgF17dYsFH7NusC3LlZRlyjoM00,1648
+ipyniivue/static/widget.js,sha256=Ef5G-HEeY_MLoCPQikoC3eOt9Mss17TXhptLQe2g8Ac,2045073
+ipyniivue-2.0.0.dist-info/METADATA,sha256=HQKgNXw_Ejel2gx6zFJ7jMa6E-MM5xWroC6N2Ium9EU,1442
+ipyniivue-2.0.0.dist-info/WHEEL,sha256=8IcTzbak2ve5e1R0vR9EXl8iK2nV0AJn7SJvyHFUnt4,105
+ipyniivue-2.0.0.dist-info/licenses/LICENSE,sha256=vP-29lXX3qOejZYRYGpN2xPM3-lvTH_dbGfLU3FTOqA,1315
+ipyniivue-2.0.0.dist-info/RECORD,,
