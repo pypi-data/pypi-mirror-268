@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=40.6.0", "wheel", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+skip_glob = ["docs/tutorials/*.py"]
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+
+[tool.coverage.run]
+parallel = true
+branch = true
+source = ["exoplanet"]
+omit = [
+  "*_test.py",
+  "*__init__*",
+  "*/exoplanet/exoplanet_version.py",
+  "*/exoplanet/orbits/constants.py",
+  "*/exoplanet/light_curves/integrated.py",
+  "*/exoplanet/light_curves/interpolated.py",
+]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+  "raise NotImplementedError",
+  "except ImportError",
+  "pragma: no cover",
+  "def R_op",
+  "if verbose",
+]

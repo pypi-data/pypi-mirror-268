@@ -1,0 +1,6 @@
+paper/* linguist-documentation
+docs/* linguist-documentation
+*.h linguist-language=C++
+docs/notebooks/*.ipynb filter=nbstripout
+paper/figures/*.ipynb filter=nbstripout
+*.ipynb diff=ipynb
