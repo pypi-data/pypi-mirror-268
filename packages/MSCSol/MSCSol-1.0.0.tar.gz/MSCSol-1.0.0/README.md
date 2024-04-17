@@ -1,0 +1,36 @@
+## Using MSCSol to predict moleculer solubility
+
+### MSCSol
+
+[![Downloads](https://static.pepy.tech/badge/MSCSol)](https://pepy.tech/project/MSCSol)
+
+Our trained model has been uploaded to PyPI, accessible through this link (https://pypi.org/project/MSCSol/). We've included detailed installation instructions and usage guidelines, making it easy to obtain prediction results by inputting SMILES strings.
+
+
+### Installation
+
+```
+pip install MSCSol
+```
+
+### Quick Start
+
+```
+import MSCSol
+
+MSCSol.pred(<your_SMILES>)
+```
+
+### Note
+
+It will take some time to calculate the molecular signatures, so please be patient for a while. Also note that dipole moment features are not used here as they cannot be obtained directly by calling the code. 
+
+The training data was restricted to molecular weights less than or equal to 504, LogS values greater than or equal to -8, and experimental temperatures of 20-25 degrees Celsius, so if the molecule does not apply to the above conditions, the prediction results may have a large deviation. 
+
+In addition, due to the computational requirements of the node vector feature of the GVP-GNN, the input molecule atom number must be greater than or equal to 3.
+
+## Contact
+
+We thank all the researchers who contributed to this work.
+
+If you have any questions, please contact fzychina@csu.edu.cn.
