@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: kardb
+Version: 0.0.2
+Summary: A kickstart DBM python package for JSON data.
+Home-page: https://github.com/kartarake/kardb.git
+Author: kartarake
+Author-email: kar.prahveen@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: pymysql
+
