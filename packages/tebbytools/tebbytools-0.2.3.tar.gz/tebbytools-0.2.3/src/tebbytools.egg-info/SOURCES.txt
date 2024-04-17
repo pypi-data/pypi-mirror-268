@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/tebbytools/__init__.py
+src/tebbytools/reviewlist.py
+src/tebbytools/wordbank.py
+src/tebbytools.egg-info/PKG-INFO
+src/tebbytools.egg-info/SOURCES.txt
+src/tebbytools.egg-info/dependency_links.txt
+src/tebbytools.egg-info/top_level.txt
+tests/test.py
