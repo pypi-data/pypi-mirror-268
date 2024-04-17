@@ -1,0 +1,8 @@
+bmi-dbseabed:
+  var_name: {{var_name}}
+  west: {{west}}
+  south: {{south}}
+  east: {{east}}
+  north: {{north}}
+  output: {{output}}
+  local_file: {{local_file}}

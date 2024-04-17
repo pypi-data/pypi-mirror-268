@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pymt_dbseabed
+Version: 0.1.0
+Summary: PyMT plugin for dbSEABED datasets.
+Home-page: https://github.com/gantian127/pymt_dbseabed
+Author: Tian Gan
+Author-email: gantian127@gmail.com
+Keywords: bmi,pymt
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: bmi-dbseabed
+
+Credits
+=======
+
+* Tian Gan <gantian127@gmail.com>
+
+
+Changelog for pymt_dbseabed
+===========================
+
+0.2.0 (unreleased)
+-------------------
+
+
+0.1.0 (2024-04-16)
+------------------
+
+- Initial release
+

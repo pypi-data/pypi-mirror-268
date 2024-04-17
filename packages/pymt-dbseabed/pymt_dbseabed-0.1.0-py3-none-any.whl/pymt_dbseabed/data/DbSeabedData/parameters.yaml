@@ -1,0 +1,49 @@
+var_name:
+  name: Variable Name
+  description: The identifier of each dataset provided by dbSEABED.
+  value:
+    type: string
+    default: carbonate
+    units: 1
+west:
+  name: Bounding box west coordinate
+  description: The x value for the lower left corner of the grid extent.
+  value:
+    type: float
+    default: -98
+    units: meters
+south:
+  name: Bounding box south Coordinate
+  description: The y value for the lower left corner of the grid extent.
+  value:
+    type: float
+    default: 18
+    units: meters
+east:
+  name: Bounding box east Coordinate
+  description: The x value for the upper right corner of the grid extent.
+  value:
+    type: float
+    default: -80
+    units: meters
+north:
+  name: Bounding box North Coordinate
+  description: The y value for the upper right corner of the grid extent.
+  value:
+    type: float
+    default: 31
+    units: meters
+output:
+  name: Output
+  description: File name for the output GeoTiff file.
+  value:
+    type: string
+    default: 'download.tif'
+    units: 1
+local_file:
+  name: local file
+  description: If true, it will first try to open a local file that matches with the output file path.
+  value:
+    type: bool
+    default: false
+    units: 1

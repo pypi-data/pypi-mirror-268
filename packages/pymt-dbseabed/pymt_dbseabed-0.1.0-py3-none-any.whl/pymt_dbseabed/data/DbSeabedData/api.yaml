@@ -1,0 +1,4 @@
+name: pymt_dbseabed
+language: python
+package: pymt_dbseabed
+class: DbSeabedData

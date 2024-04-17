@@ -1,0 +1,2 @@
+[pymt.plugins]
+DbSeabedData = pymt_dbseabed.bmi:DbSeabedData
