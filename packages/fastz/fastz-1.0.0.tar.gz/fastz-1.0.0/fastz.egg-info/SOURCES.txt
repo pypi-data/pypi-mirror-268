@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+fastz/__init__.py
+fastz/core.py
+fastz/plotting.py
+fastz.egg-info/PKG-INFO
+fastz.egg-info/SOURCES.txt
+fastz.egg-info/dependency_links.txt
+fastz.egg-info/requires.txt
+fastz.egg-info/top_level.txt
+tests/test_core.py
