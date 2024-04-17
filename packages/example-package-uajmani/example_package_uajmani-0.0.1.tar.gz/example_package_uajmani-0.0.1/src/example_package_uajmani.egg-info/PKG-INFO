@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: example_package_uajmani
+Version: 0.0.1
+Summary: A small example package
+Author-email: uajmani <utkarsh.ajmani@tigeranalytics.com>
+Project-URL: Homepage, https://github.com/Utkarsh5678/packaging
+Project-URL: Issues, https://github.com/Utkarsh5678/packaging/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# packaging
+This is a simple example package
