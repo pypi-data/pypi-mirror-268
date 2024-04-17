@@ -1,0 +1,109 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "insight-git"
+version = "0.1.3"
+description = "Insight Git analyzes Git repositories to present comprehensive statistics."
+authors = [{name = "André F. Costa", email = "afmcosta@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["git", "analysis", "commit", "education"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Version Control :: Git"
+]
+dependencies = [
+    "dash",
+    "GitPython",
+    "pandas",
+    "plotly",
+    "dash-bootstrap-components"
+
+]
+
+[project.scripts]
+insight-git = "insight_git.__main__:main"
+
+[project.entry-points."insight_git.plugins"]
+branch_information = "insight_git.plugins.branch_information:display_branch_information"
+commit_graph = "insight_git.plugins.commit_graph:display_commit_graph"
+contributors = "insight_git.plugins.contributors_info:display_contributors_info"
+commit_type = "insight_git.plugins.commit_type:display_commit_type"
+git_statistics = "insight_git.plugins.git_statistics:display_git_statistics"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8 >= 6.0.0",
+    "flake8-black",
+    "flake8-builtins",
+    "flake8-bugbear",
+    "flake8-comprehensions",
+    "flake8-docstrings",
+    "flake8-isort",
+    "flake8-pytest-style",
+    "flake8-simplify",
+    "Flake8-pyproject",
+    "isort",
+    "pre-commit",
+    "pytest >= 8.0",
+    "pytest-cov >= 3.0.0",
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings",
+]
+
+[project.urls]
+Homepage = "https://github.com/andrecosta99/insight-git"
+Documentation = "https://andrecosta99.github.io/insight-git/"
+Repository = "https://github.com/andrecosta99/insight-git"
+
+[tool.setuptools]
+packages = [
+    "insight_git",
+    "insight_git.plugins",
+]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "--doctest-modules"
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.flake8]
+extend-select = ["B9", "C4"]
+max-line-length = 120
+max-doc-length = 120
+ignore = [
+    "B905", "E203", "D100", "D104", "E501", "W503", "D103", "D202", "D205", "D212", "D415", "W505", "B950", "E402", "PT001", "PT004", "SIM117", "D200", "F401", "D103", "D202", "D205", "D212", "D415", "W505", "B950", "E402", "PT001", "D200", "F401", "PT004", "SIM117", "W505", "B950", "D103", "D202", "D205", "D212", "D415"
+]
+doctests = true
+exclude = [
+    ".git",
+    "__pycache__",
+    ".*cache",
+    "build",
+    "dist",
+    "env",
+    "venv",
+    ".eggs",
+    "*.egg",
+    "docs"
+]
+docstring-convention = "google"
+
+[tool.setuptools.package-data]
+insight_git = ["resources/*"]

@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: insight-git
+Version: 0.1.3
+Summary: Insight Git analyzes Git repositories to present comprehensive statistics.
+Author-email: "André F. Costa" <afmcosta@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/andrecosta99/insight-git
+Project-URL: Documentation, https://andrecosta99.github.io/insight-git/
+Project-URL: Repository, https://github.com/andrecosta99/insight-git
+Keywords: git,analysis,commit,education
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Version Control :: Git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: dash
+Requires-Dist: GitPython
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: dash-bootstrap-components
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: flake8-black; extra == "dev"
+Requires-Dist: flake8-builtins; extra == "dev"
+Requires-Dist: flake8-bugbear; extra == "dev"
+Requires-Dist: flake8-comprehensions; extra == "dev"
+Requires-Dist: flake8-docstrings; extra == "dev"
+Requires-Dist: flake8-isort; extra == "dev"
+Requires-Dist: flake8-pytest-style; extra == "dev"
+Requires-Dist: flake8-simplify; extra == "dev"
+Requires-Dist: Flake8-pyproject; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=3.0.0; extra == "dev"
+Requires-Dist: mkdocs; extra == "dev"
+Requires-Dist: mkdocs-material; extra == "dev"
+Requires-Dist: mkdocstrings; extra == "dev"
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tests](https://github.com/andrecosta99/insight-git/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/andrecosta99/insight-git/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/andrecosta99/insight-git/branch/main/graph/badge.svg)](https://codecov.io/gh/andrecosta99/insight-git)
+[![Docs](https://img.shields.io/badge/docs-click%20here-blue.svg)](https://andrecosta99.github.io/insight-git/)
+[![PyPI version](https://badge.fury.io/py/insight-git.svg)](https://badge.fury.io/py/insight-git)
+![GitHub last commit](https://img.shields.io/github/last-commit/andrecosta99/insight-git)
+![GitHub forks](https://img.shields.io/github/forks/andrecosta99/insight-git)
+
+
+# Insight Git
+
+Insight Git is a tool designed to fetch and present comprehensive statistics from Git repositories. Whether the repository is hosted locally or on platforms like GitHub, Insight Git seamlessly analyzes commit history, contribution patterns, and other vital metrics. This utility is particularly useful for developers and teams looking to gain insights into project trends, contributor activity, and overall repository health. Built with Python and leveraging technologies such as Dash and Plotly, it provides an interactive and visually appealing interface for data representation.
+
+## Features
+
+- **Repository Analysis**: Obtain a detailed view of repository activity, including commits over time, contributions by author, and types of commits.
+- **Interactive Interface**: Explore statistics through an interactive web interface created with Dash and Plotly.
+- **Support for Local and Remote Repositories**: Works with both local Git repositories and remote repository URLs.
+
+## Installation
+
+To install Insight Git, ensure you have Python installed on your system, and run:
+
+```bash
+pip install insight-git
+```
+
+## Usage
+After installation, you can start the application by running:
+
+```bash
+insight-git
+```
+Follow the instructions in the web interface to input the path or URL of the Git repository you wish to analyze.
+
+## Contributing
+Contributions to Insight Git are welcome! If you've found a bug or have a suggestion, please open an issue on GitHub.
+
+## License
+Insight Git is licensed under the MIT License. See the LICENSE file for more details.
