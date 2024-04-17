@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tefs"
+version = "0.3.2"
+authors = [
+    { name = "Teo Bucci", email = "teobucci8@gmail.com" },
+    { name = "Paolo Bonetti", email = "paolo.bonetti@polimi.it" },
+]
+description = "Causal feature selection for time series data using transfer entropy"
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = [
+    "tefs",
+    "transfer entropy",
+    "feature selection",
+    "causality",
+    "time series",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scipy",
+    "seaborn",
+    "scikit-learn",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/teobucci/tefs"
+Documentation = "https://teobucci.github.io/tefs/"
+Repository = "https://github.com/teobucci/tefs"
+
+[tool.pdm.dev-dependencies]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "myst-parser",
+    "nbsphinx",
+    "ipykernel",
+    "jupyter",
+    "jupyterlab",
+    "nbconvert",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+build = [
+    "setuptools",
+    "wheel",
+    "twine",
+    "build",
+    "bumpver",
+]
+
+[tool.bumpver]
+current_version = "0.3.2"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "Bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"src/tefs/__init__.py" = ["{version}"]
+
+[tool.pdm]
+distribution = true
