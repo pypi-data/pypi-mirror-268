@@ -1,0 +1,2 @@
+[console_scripts]
+makefile-to-markdown = makefile_to_markdown.cli:run
