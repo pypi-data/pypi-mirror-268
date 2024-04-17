@@ -1,0 +1,28 @@
+[tool.coverage.run]
+branch = true
+source = [ "syntrac_opentelemetry/semconv/ai" ]
+
+[tool.coverage.report]
+exclude_lines = [ "if TYPE_CHECKING:" ]
+show_missing = true
+
+[tool.poetry]
+name = "syntrac-opentelemetry-semantic-conventions-ai"
+version = "0.0.2"
+description = "OpenTelemetry Semantic Conventions Extension for Large Language Models"
+authors = [ "Vuong Ngo <vuongngo.pd@gmail.com>" ]
+license = "Apache-2.0"
+readme = "README.md"
+
+  [[tool.poetry.packages]]
+  include = "syntrac_opentelemetry/semconv/ai"
+
+  [tool.poetry.dependencies]
+  python = ">=3.9,<4"
+
+[tool.poetry.group.dev]
+dependencies = { }
+
+[build-system]
+requires = [ "poetry-core" ]
+build-backend = "poetry.core.masonry.api"
