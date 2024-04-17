@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "inspect-recursive"
+version = "0.1.0"
+description = ""
+authors = ["hermann-web <hermannagossou6@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^24.4.0"
+flake8 = "^7.0.0"
+
+[tool.poetry.group.buildthedocs.dependencies]
+sphinx = "^7.0.0"
+sphinx-rtd-theme = "^2.0.0"
+m2r2 = "^0.3.3.post2"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
