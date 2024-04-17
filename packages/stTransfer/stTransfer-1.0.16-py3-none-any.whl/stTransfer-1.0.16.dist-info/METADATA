@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: stTransfer
+Version: 1.0.16
+Summary: Transfer learning for spatial transcriptomics data and single-cell RNA-seq data.
+Home-page: https://github.com/zepoch/stTransfer.git
+Author: zhoutao
+Author-email: zhotoa@foxmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: anndata >=0.8.0
+Requires-Dist: matplotlib >=3.5.1
+Requires-Dist: matplotlib-inline >=0.1.3
+Requires-Dist: networkx >=2.7.1
+Requires-Dist: numpy >=1.21.5
+Requires-Dist: pandas >=1.4.2
+Requires-Dist: scanpy >=1.9.1
+Requires-Dist: scikit-learn >=1.0.2
+Requires-Dist: scipy >=1.8.0
+Requires-Dist: seaborn >=0.11.2
+Requires-Dist: torch >=1.11.0
+Requires-Dist: torch-geometric >=2.0.2
+Requires-Dist: xgboost >=2.0.0
+
+# stTransfer
+
+[![python >= 3.8](https://img.shields.io/badge/python-3.8-brightgreen)](https://www.python.org/) 
+
+### Installation      
+```python
+pip install stTransfer
+```
+
+```python
+import stTransfer as st
+import anndata as ad
+sc_adata = ad.read('/home/share/huadjyin/home/zhoutao3/zhoutao3/stTransfer_1/example/data/mouse_testis_sc/preprocess/preprocess.h5ad')
+st_adata = ad.read('/home/share/huadjyin/home/zhoutao3/zhoutao3/stTransfer_1/example/data/Mouse_spermatogenesis/processed/Diabetes_Slide-seq_data/Diabetes_1.h5ad')
+sc_ann_key = 'celltype'
+save_path = '/home/share/huadjyin/home/zhoutao3/zhoutao3/stTransfer_1/example/test/Mouse_spermatogenesis/Diabetes_1'
+
+marker_genes = None
+
+# st.sc_model_train_test(sc_adata, st_adata, sc_ann_key, save_path, marker_genes, finetune_epochs = 200,finutune_pca_dim = 0, gpu = 0) # if cuda
+st.sc_model_train_test(sc_adata, st_adata, sc_ann_key, save_path, marker_genes, finetune_epochs = 200,finutune_pca_dim = 0 )
+```
