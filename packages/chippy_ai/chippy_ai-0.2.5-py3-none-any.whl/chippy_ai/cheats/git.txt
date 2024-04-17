@@ -1,0 +1,71 @@
+git init - Initialize a new git repository.
+$ git init
+
+git clone - Clone a repository into a new directory.
+$ git clone https://github.com/user/repo.git
+
+git add - Add file contents to the index.
+$ git add .
+
+git mv - Move or rename a file, a directory, or a symlink.
+$ git mv file_from file_to
+
+git rm - Remove files from the working tree and from the index.
+$ git rm file.txt
+
+git commit - Record changes to the repository.
+$ git commit -m "Commit message"
+
+git status - Show the working tree status.
+$ git status
+
+git branch - List, create, or delete branches.
+$ git branch new-branch
+
+git checkout - Switch branches or restore working tree files.
+$ git checkout branch_name
+
+git merge - Join two or more development histories together.
+$ git merge branch_name
+
+git pull - Fetch from and integrate with another repository or a local branch.
+$ git pull origin main
+
+git push - Update remote refs along with associated objects.
+$ git push origin main
+
+git fetch - Download objects and refs from another repository.
+$ git fetch origin
+
+git log - Show commit logs.
+$ git log
+
+git diff - Show changes between commits, commit and working tree, etc.
+$ git diff
+
+git reset - Reset current HEAD to the specified state.
+$ git reset --hard HEAD
+
+git tag - Create, list, delete or verify a tag object signed with GPG.
+$ git tag v1.0.0
+
+git show - Show various types of objects.
+$ git show
+
+git remote - Manage set of tracked repositories.
+$ git remote -v
+
+git stash - Stash the changes in a dirty working directory away.
+$ git stash
+
+git stash pop - Apply stashed changes back to the working directory.
+$ git stash pop
+
+git cherry-pick - Apply the changes introduced by some existing commits.
+$ git cherry-pick commit_hash
+
+git rebase - Reapply commits on top of another base tip.
+$ git rebase main
+
+git config - Get and set repository or global options.
+$ git config --global user.name "Your Name"
