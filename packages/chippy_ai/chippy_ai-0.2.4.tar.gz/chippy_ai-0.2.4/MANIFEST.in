@@ -1,0 +1,3 @@
+include chippy_ai/config.ini
+include README.md
+exclude .env
