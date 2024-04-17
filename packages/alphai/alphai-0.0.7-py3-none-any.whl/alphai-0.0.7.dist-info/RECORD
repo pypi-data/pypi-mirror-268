@@ -1,0 +1,16 @@
+alphai/__init__.py,sha256=6GT5TD28clMwXd-vad_MxwFl3YbAyf7Xz5eQcLmRKhM,63
+alphai/alphai.py,sha256=c6RxEaCsyYph5RJ4Az4fIDeOKztJKYOFRnO3ACCxGak,30965
+alphai/api/client.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alphai/benchmarking/benchmarker.py,sha256=n17sgQPxhJK262Qot5SV1foPMl8QInOZWHbg8vfQAFg,1050
+alphai/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alphai/client/client.py,sha256=VvVWWAhTK4pSnFM1oGmEYywgWQIxUe8Lqo-Q0nCEOK8,12630
+alphai/profilers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alphai/profilers/configs_base.py,sha256=v8CNk2AI39sWFcJJcyArPk6MWM3UGM9p7uZD9eCggX4,145
+alphai/profilers/jax.py,sha256=dIUsHyfuM6MBrdMMxF1qHnNy6KyYuVtJnHH0EjNzaqs,1165
+alphai/profilers/pytorch.py,sha256=5LFZTXCSInsBPsYZtkGNWwYWI3TQs_d7XngB30Yblw4,2722
+alphai/profilers/pytorch_utils.py,sha256=bIk9qIl8m3XRwXVj1naFAkNIXiflFqU-3t9I7re9QqM,13868
+alphai/util.py,sha256=oryhRFfIS5hpveD_T5N7NIBu8PKDTibfB9z6GmtwFJk,465
+alphai-0.0.7.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+alphai-0.0.7.dist-info/METADATA,sha256=AtRxxpqvbOggGnUYK4ISOA5-93q1pxaen0DwadiAMks,4792
+alphai-0.0.7.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+alphai-0.0.7.dist-info/RECORD,,
