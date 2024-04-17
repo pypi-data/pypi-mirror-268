@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/quadratic_function_solver_kemulk/__init__.py
+src/quadratic_function_solver_kemulk/quadratic_function_solver.py
+src/quadratic_function_solver_kemulk.egg-info/PKG-INFO
+src/quadratic_function_solver_kemulk.egg-info/SOURCES.txt
+src/quadratic_function_solver_kemulk.egg-info/dependency_links.txt
+src/quadratic_function_solver_kemulk.egg-info/top_level.txt
