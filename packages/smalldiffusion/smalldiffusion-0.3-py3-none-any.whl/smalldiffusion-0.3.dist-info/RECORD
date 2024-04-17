@@ -1,0 +1,9 @@
+smalldiffusion/__init__.py,sha256=088hUpMLyUSpM3qLC9M0tH5ECDoR1bUvfZolXbK1IeQ,307
+smalldiffusion/data.py,sha256=LptZGY4O99Te9RBN2eq_xIoQmOK7m-ptURqt-zGQhVk,1306
+smalldiffusion/diffusion.py,sha256=6nAsFzLf6PxYNga351DjbUj6oSRIh_3jt45DGaXrV58,5893
+smalldiffusion/model.py,sha256=Iot4CBwWoWVFD1Vpl33ec8EZ9Lm5Sh0UmgHHgK5QYGA,9022
+smalldiffusion-0.3.dist-info/LICENSE,sha256=k1sTNmmJBqD9pWGARtyyizLF4aIJW7CwjLelYZ9q2sA,1058
+smalldiffusion-0.3.dist-info/METADATA,sha256=mv9qolFOsL50ej3OVIlfRPgDT6L_dmLVnsIqcmQ3ZSk,10873
+smalldiffusion-0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+smalldiffusion-0.3.dist-info/top_level.txt,sha256=mabJSkjb1unHANvNek8tgsRd3o4g3XceynCrszRZZvo,15
+smalldiffusion-0.3.dist-info/RECORD,,
