@@ -1,0 +1,9 @@
+trivela/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+trivela/api.py,sha256=37CGKrIQBto1kP96ryxCc8vUEXxQmyxFlMnRdQ5p0Rk,5301
+trivela/middleware.py,sha256=1oq_3ibeOJ1piKO89_JJjv7QmhVkn1xrySpLInjOea0,673
+trivela/orm.py,sha256=U-Gvc3LZsVG0QtgazuZiDgYXz5_K4F2LBetxlVZy2e8,6424
+trivela/response.py,sha256=SAagEt6phGDMpNmOqK-FHAL62_0ikKhbAapiFvYB81w,953
+trivela-0.0.5.dist-info/METADATA,sha256=qqLhtBWJ2HcTwMvs0Fs1GP2vHs8ZDiWFq4t_CLrKqpQ,5182
+trivela-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+trivela-0.0.5.dist-info/top_level.txt,sha256=xlEx3yVzi3fuzxZOmZ7PYO-UyfTxYviNtQh9SFGQjgE,8
+trivela-0.0.5.dist-info/RECORD,,
