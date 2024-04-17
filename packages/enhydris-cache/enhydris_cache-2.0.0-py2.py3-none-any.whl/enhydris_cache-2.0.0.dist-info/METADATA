@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: enhydris-cache
+Version: 2.0.0
+Summary: Utilities for spatial integration of time series
+Home-page: https://github.com/openmeteo/enhydris-cache
+Author: Antonis Christofides
+Author-email: antonis@antonischristofides.com
+License: GNU General Public License v3
+Keywords: enhydris-cache
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: Click >=7.0
+Requires-Dist: enhydris-api-client <5,>=4
+
+==============
+enhydris-cache
+==============
+
+
+.. image:: https://img.shields.io/pypi/v/enhydris-cache.svg
+        :target: https://pypi.python.org/pypi/enhydris-cache
+
+.. image:: https://img.shields.io/travis/openmeteo/enhydris-cache.svg
+        :target: https://travis-ci.org/openmeteo/enhydris-cache
+
+.. image:: https://codecov.io/github/openmeteo/enhydris-cache/coverage.svg
+        :target: https://codecov.io/gh/openmeteo/enhydris-cache
+        :alt: Coverage
+
+.. image:: https://pyup.io/repos/github/openmeteo/enhydris-cache/shield.svg
+         :target: https://pyup.io/repos/github/openmeteo/enhydris-cache/
+         :alt: Updates
+
+Utilities for spatial integration of time series.
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://enhydris-cache.readthedocs.io.
+
+
+=======
+History
+=======
+
+2.0.0 (2024-04-16)
+==================
+
+- Requires enhydris-api-client v.4, and therefore htimeseries v.7, and
+  therefore Python 3.9 or later. See the enhydris-api-client v.4 release
+  notes for more information.
+
+1.0.2 (2023-07-31)
+==================
+
+- Allow running with enhydris-api-client v.3
+
+1.0.1 (2022-03-25)
+==================
+
+- Fixed error when attempting to connect to Enhydris unauthenticated.
+
+1.0.0 (2021-08-31)
+==================
+
+- The configuration file has changed; it now needs the timeseries_group_id
+  parameter.
+- Needs Python 3.7 or later.
+- Updated dependencies.
+- Updated pypi metadata.
+
+0.1.1 (2019-06-13)
+==================
+
+- Initial release
