@@ -1,0 +1,12 @@
+maxwell/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+maxwell/client/__init__.py,sha256=ED6jHcYiuYpr_0vjGz0zx2lrrmJT9sDJCzIljoDfmlM,65
+maxwell/client/client.py,sha256=9L8Nx_a31n74eUhID5jTh22RytNRZDkSpZHHgtmRQs4,2027
+maxwell/client/frontend.py,sha256=5MP9sum6XPxTaoRAI6pVBCmXuNn6CVWIgcmpoYZgsGU,8156
+maxwell/client/master.py,sha256=NL8Rjjj3ZTBWJPb7dOys8LcLYOur20IDOTVpaMs6Mqc,2298
+maxwell/client/msg_queue.py,sha256=y_BxlZ2snXd9NtbZ9MXNpni0ntz-eothL1xN9hnI3yo,2068
+maxwell/client/msg_queue_mgr.py,sha256=bj1TMqWW5WTri-8rBLEluTlCwbPBZ-H2Fj0q25G1mR0,672
+maxwell/client/subscription_mgr.py,sha256=OVsy9zoKBIlh04GxB2nyc_t3NA3cXH4wssS6YEsTrgk,1187
+maxwell_client-0.11.0.dist-info/METADATA,sha256=mMceIpJpVg3wkajrF3eRVtRpTkiEX0SB-73HqszqOQI,13860
+maxwell_client-0.11.0.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+maxwell_client-0.11.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+maxwell_client-0.11.0.dist-info/RECORD,,
