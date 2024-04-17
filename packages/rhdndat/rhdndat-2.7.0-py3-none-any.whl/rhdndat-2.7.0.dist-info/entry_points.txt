@@ -1,0 +1,4 @@
+[console_scripts]
+rhdndat=rhdndat.__main__:main
+rhdndat-rn=rhdndat.__main__:rename
+
