@@ -1,0 +1,35 @@
+    Run information
+    ---------------
+    
+    Generates close-on-exception content for `pytenstils.logging`
+        functionality.
+    
+        Start time    : 2024-04-16 16:25:47
+    
+    --------------------------------------------------------------------------
+    
+    Unhandled exception
+    -------------------
+    
+*** CRITICAL: The process failed due to an unhandled exception.
+
+    >>> NotImplementedError: The exception {ValueError} is not implemented for
+        `pytensils.config`.
+    
+        Filename       : T:\Documents\Projects\Pytensils\pytensils\errors.py
+        Line Number    : Line 66
+        Function       : raise_exception()
+        Exception      : NotImplementedError
+    
+    --------------------------------------------------------------------------
+    
+    Run time
+    --------
+    
+    Run-time performance summary.
+    
+        Start time    : 16:25:47.784523
+        End time      : 16:25:48.040522
+        Run time      : 00:00:00.255999
+
+    --------------------------------------------------------------------------

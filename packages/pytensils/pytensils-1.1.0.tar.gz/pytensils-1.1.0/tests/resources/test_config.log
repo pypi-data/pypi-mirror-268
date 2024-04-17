@@ -1,0 +1,38 @@
+    Run information
+    ---------------
+    
+    Environment information summary.
+    
+        Start time    : 2024-04-16 16:25:45
+    
+    --------------------------------------------------------------------------
+    
+    Configuration validation
+    ------------------------
+    
+*** ERROR: Validation failed. The following parameter values are inconsistent
+        with the expected data-types.
+    
+        Section        Key      Error
+        -------------  -------  -------------------------------------------
+        config         str      Invalid dtype {bool}. Expected {str}.
+        config         bool     Invalid dtype {int}. Expected {bool}.
+        config         int      Invalid dtype {float}. Expected {int}.
+        config         float    Invalid dtype {list}. Expected {float}.
+        config         list     Invalid dtype {dict}. Expected {list}.
+        config         dict     Invalid dtype {str}. Expected {dict}.
+        config         unknown  No dtype found in {dtypes}.
+        not-in-dtypes  -N/A-    No corresponding section found in {dtypes}.
+    
+    --------------------------------------------------------------------------
+    
+    Run time
+    --------
+    
+    Run-time performance summary.
+    
+        Start time    : 16:25:45.955076
+        End time      : 16:25:46.129457
+        Run time      : 00:00:00.174381
+
+    --------------------------------------------------------------------------
