@@ -1,0 +1,1 @@
+This package is used for producing random Chinese names.
