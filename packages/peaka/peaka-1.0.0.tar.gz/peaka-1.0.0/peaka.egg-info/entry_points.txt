@@ -1,0 +1,2 @@
+[sqlalchemy.dialects]
+peaka = peaka.sqlalchemy.dialect:TrinoDialect
