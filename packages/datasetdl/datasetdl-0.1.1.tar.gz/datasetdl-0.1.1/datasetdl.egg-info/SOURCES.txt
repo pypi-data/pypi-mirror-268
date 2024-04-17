@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+datasetdl/__init__.py
+datasetdl/download.py
+datasetdl.egg-info/PKG-INFO
+datasetdl.egg-info/SOURCES.txt
+datasetdl.egg-info/dependency_links.txt
+datasetdl.egg-info/top_level.txt
+datasetdl/datasets/revenue.csv

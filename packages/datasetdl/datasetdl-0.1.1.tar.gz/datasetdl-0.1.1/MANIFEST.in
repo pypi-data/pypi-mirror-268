@@ -1,0 +1,2 @@
+include datasetdl/datasets/*.csv
+include datasetdl/datasets/*.json

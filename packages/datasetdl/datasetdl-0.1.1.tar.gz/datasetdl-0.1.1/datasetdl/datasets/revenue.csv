@@ -1,0 +1,26 @@
+store_id,categories,sales
+Store_01,Electronics,120
+Store_01,Clothing,95
+Store_01,Home & Kitchen,75
+Store_01,Beauty & Health,60
+Store_01,Toys & Games,150
+Store_02,Electronics,110
+Store_02,Clothing,100
+Store_02,Home & Kitchen,80
+Store_02,Beauty & Health,65
+Store_02,Toys & Games,140
+Store_03,Electronics,90
+Store_03,Clothing,85
+Store_03,Home & Kitchen,70
+Store_03,Beauty & Health,55
+Store_03,Toys & Games,130
+Store_04,Electronics,105
+Store_04,Clothing,110
+Store_04,Home & Kitchen,95
+Store_04,Beauty & Health,70
+Store_04,Toys & Games,160
+Store_05,Electronics,115
+Store_05,Clothing,120
+Store_05,Home & Kitchen,100
+Store_05,Beauty & Health,75
+Store_05,Toys & Games,145
