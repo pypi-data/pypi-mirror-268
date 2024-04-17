@@ -1,0 +1,4 @@
+flavtool
+coloredlogs
+opencv-python
+numpy
