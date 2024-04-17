@@ -1,0 +1,11 @@
+ehdg_pupil_detector/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ehdg_pupil_detector/ehdg_pupil_detector.py,sha256=wxUiQ-y7OgjrTxVHnuWbz0xjoS7_82Fn5FXnQxqtLXo,22389
+ehdg_pupil_detector/opm_detector_config.json,sha256=Ygw-gsjcJ9LG8l1Ny0l5U8WKDkK97L7jBt1AT4dlaRQ,260
+ehdg_pupil_detector/opmtrack.py,sha256=vWHmyieV-piUDltnZbHSzV5_gF18c60a_oczGdu7CAU,14123
+ehdg_pupil_detector/opmtrack_plot.json,sha256=YcCqFhPDi9wrKiK_wrvNZwc0d0JzKwn0BkGSGwr5uoQ,200
+ehdg_pupil_detector-3.2.0.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+ehdg_pupil_detector-3.2.0.dist-info/METADATA,sha256=rePoKdotgAzKvhOP8xCjTs0T8S3Sn6ybROVlN9aw7_E,4080
+ehdg_pupil_detector-3.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ehdg_pupil_detector-3.2.0.dist-info/entry_points.txt,sha256=uzwJDAjCSN_RuYAFBao9-zBy7WfS7WPkzblVu4F5S9U,63
+ehdg_pupil_detector-3.2.0.dist-info/top_level.txt,sha256=eXyfIV3isp9jnVyHIdA9-ieNJ7BCcLe4gFua_8OlziY,20
+ehdg_pupil_detector-3.2.0.dist-info/RECORD,,
