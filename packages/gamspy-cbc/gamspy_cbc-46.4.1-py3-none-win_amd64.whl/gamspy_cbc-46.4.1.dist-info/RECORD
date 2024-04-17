@@ -1,0 +1,11 @@
+gamspy_cbc/__init__.py,sha256=6lkgeFb5TWdenqb8K-YMrR_p223LLENH-33dObFjO6o,391
+gamspy_cbc/cbccclib64.dll,sha256=d5f0ZHeKxdXMdTSJ0I2FsejwCuv-VozFstq5hB4D9O8,11387392
+gamspy_cbc/mkl_gams.dll,sha256=hZhZLa2zl7xRb0M6An8K2bM_S5w9gESzwmG7vv-FzSc,107392512
+gamspy_cbc/msvcp140.dll,sha256=4KIqWU4Uj6Vc7vPkmWm_p3ARqAEmegvXgFtoG1k8nQs,567328
+gamspy_cbc/optcbc.def,sha256=iTcInUny0cH0ei3apenYipzq83JAFMBiWv4NaB8qiSg,18255
+gamspy_cbc/pthreads.dll,sha256=H1mMgTq5b4F_mbTRq1a4LyJr-KlP52lFYAD6BXAMkBE,55808
+gamspy_cbc/version.py,sha256=PfEsnAfLuXVTA7hSNu9m9ueNe8npaTtOAv06fL-xeY4,22
+gamspy_cbc-46.4.1.dist-info/METADATA,sha256=VfsM8x9mKSbdMLTqq6YJZa6l67CndlyFXeu1-ZJkRF0,60
+gamspy_cbc-46.4.1.dist-info/WHEEL,sha256=-H981hu6jK6YKd-c0qWpYxXA3UZMihQ3r30_4YPQguI,104
+gamspy_cbc-46.4.1.dist-info/top_level.txt,sha256=IcTgSB0GiKn1AAeyYp_UDQixhnMIDBuufgKjfrBEqt4,11
+gamspy_cbc-46.4.1.dist-info/RECORD,,
