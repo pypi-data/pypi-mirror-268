@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: wykop
+Version: 1.0.4
+Summary: Python client for interacting with the Wykop API v3.
+Home-page: https://github.com/michalskibinski109/wykop
+Author: Michał Skibiński
+Author-email: michalskibinski109@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Requires-Dist: httpx
+Requires-Dist: loguru
+
+docs: https://github.com/michalskibinski109/wykop
