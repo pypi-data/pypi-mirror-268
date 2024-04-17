@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: minitraceback
+Version: 0.1.1
+Summary: A minimal traceback formatter for Python.
+Author-email: Inada Naoki <songofacandy@gmail.com>
+License: MIT
+License-File: LICENSE.txt
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# minitraceback
+
+A minimal traceback formatter for Python.
