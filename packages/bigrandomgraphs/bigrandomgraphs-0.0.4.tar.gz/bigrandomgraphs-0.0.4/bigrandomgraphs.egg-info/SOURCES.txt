@@ -1,0 +1,13 @@
+CMakeLists.txt
+README.md
+setup.py
+test.py
+./src/__init__.py
+bigrandomgraphs.egg-info/PKG-INFO
+bigrandomgraphs.egg-info/SOURCES.txt
+bigrandomgraphs.egg-info/dependency_links.txt
+bigrandomgraphs.egg-info/not-zip-safe
+bigrandomgraphs.egg-info/top_level.txt
+src/__init__.py
+src/generate_model.cpp
+src/wrapper_bindings.cpp
