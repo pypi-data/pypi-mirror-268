@@ -1,0 +1,7 @@
+cdp_monitoring/__init__.py,sha256=dCjrZsIwNI4fNV60fHONdtqcY1vPmjX6rX27k2RYsIM,76
+cdp_monitoring/monitoring_metrics.py,sha256=USKBsKtc3VrY9-HF80o0oRE9OSuK1JxA5E--MOXwjMU,1654
+cdp_monitoring/monitoring_middleware.py,sha256=1BocvskBkVZdlH2pygVKS79jysYEBEQWtShyAxgwgx4,5386
+cdp_monitoring/monitoring_utils.py,sha256=WFuSY3NVIsz4LAzE-dp5h1_rqVYqBqnLWm6slqLkPGA,2481
+cdp_monitoring-0.2.0.dist-info/METADATA,sha256=MWViZX59Jt1Vpvs14FW2OCHHYzWyhJgSvQrnwqv0g9U,1490
+cdp_monitoring-0.2.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+cdp_monitoring-0.2.0.dist-info/RECORD,,

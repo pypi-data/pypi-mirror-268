@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: cdp-monitoring
+Version: 0.2.0
+Summary: cdp monitoring python sdk
+Author: abeti.an
+Author-email: abeti.an@kakaocorp.com
+Requires-Python: >=3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fastapi (<0.108.0)
+Requires-Dist: opentelemetry-api (>=1.22.0,<2.0.0)
+Requires-Dist: opentelemetry-exporter-otlp (>=1.22.0,<2.0.0)
+Requires-Dist: opentelemetry-sdk (>=1.22.0,<2.0.0)
+Requires-Dist: prometheus-client (>=0.19.0,<0.20.0)
+Requires-Dist: setuptools (>=69.0.3,<70.0.0)
+Description-Content-Type: text/markdown
+
+# cdp-monitoring
+
+fastapi prometheus + opentelemetry sdk 
+
+## Install package
+```shell  
+VERSION=0.1.0
+pip install git+https://github.daumkakao.com/cdpdev/cdp-monitoring.git#${VERSION}
+```
+
+## Usage  
+### 1. Tempo url 을 환경변수로 설정  
+설정되어 있지 않은 경우 모니터링도 비활성화  
+```shell
+export TEMPO_URL=""
+```
+
+### 2. 모니터링 대상 FastAPI 앱을 init_monitoring 함수의 인자로 전달
+```python
+# app 생성
+from fastapi import FastAPI
+app = FastAPI(title="My FastAPI App")
+
+# 모니터링 설정 적용
+from cdp_monitoring import init_monitoring
+init_monitoring(app)
+```
+
+## Uninstall package  
+```shell
+pip uninstall cdp-monitoring
+```
