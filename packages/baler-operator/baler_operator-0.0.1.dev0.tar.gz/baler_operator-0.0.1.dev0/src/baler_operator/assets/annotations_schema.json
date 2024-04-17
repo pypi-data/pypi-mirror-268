@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "auto-provision-documentstore.pipelines.baler.gatecastle.com/enabled": {
+      "type": "string",
+      "enum": ["true", "false"],
+      "_comment": "If true, the Datastore will be automatically provisioned when a pipeline is created",
+      "_default": "false"
+    },
+    "preserve-documentstore.pipelines.baler.gatecastle.com/enabled": {
+      "type": "string",
+      "enum": ["true", "false"],
+      "_comment": "If true, the Datastore will be preserved when a pipeline is deleted",
+      "_default": "false"
+    },
+    "compute.pipelines.baler.gatecastle.com/type": {
+      "type": "string",
+      "enum": ["cpu", "gpu"],
+      "_comment": "The type of compute to use for the pipeline",
+      "_default": "cpu"
+    },
+    "compute.pipelines.baler.gatecastle.com/request-cpu": {
+      "type": "string",
+      "pattern": "^[0-9]+m$",
+      "_comment": "The amount of CPU to request for the pipeline",
+      "_default": "1000m"
+    },
+    "compute.pipelines.baler.gatecastle.com/request-memory": {
+      "type": "string",
+      "pattern": "^[0-9]+[KMG]i$",
+      "_comment": "The amount of memory to request for the pipeline",
+      "_default": "1Gi"
+    },
+    "compute.pipelines.baler.gatecastle.com/request-gpu": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "_comment": "The number of GPUs to request for the pipeline",
+      "_default": "0"
+    },
+    "compute.pipelines.baler.gatecastle.com/gpu-class": {
+      "type": "string",
+      "pattern": "^.*$",
+      "_comment": "The gpu class that is used in pod limits at nvidia.com/{{gpu_class}}",
+      "_default": "gpu"
+    },
+    "compute.pipelines.baler.gatecastle.com/node-selector": {
+      "type": "string",
+      "pattern": "^$|^(?:[a-zA-Z0-9_\\-]+:[a-zA-Z0-9_\\-]+;)*(?:[a-zA-Z0-9_\\-]+:[a-zA-Z0-9_\\-]+)?$",
+      "_comment": "Specifies node labels for pod assignment in the format 'key1:value1;key2:value2;...'. An empty string indicates no specific node selection.",
+      "_default": ""
+    },
+    "compute.pipelines.baler.gatecastle.com/tolerations": {
+      "type": "string",
+      "pattern": "^([a-zA-Z0-9_\\-]+:[a-zA-Z0-9_\\-]+:[a-zA-Z0-9_\\-]*:[a-zA-Z0-9_\\-]+;)*([a-zA-Z0-9_\\-]+:[a-zA-Z0-9_\\-]+:[a-zA-Z0-9_\\-]*:[a-zA-Z0-9_\\-]+)$",
+      "_comment": "Tolerations for the pod, formatted as 'key:operator:value:effect', multiple tolerations are separated by semicolons (';'). 'value' can be empty.",
+      "_example": "key1:Equal:value1:NoSchedule;key2:Exists::NoExecute",
+      "_default": ""
+    },
+    "compute.pipelines.baler.gatecastle.com/service-account": {
+      "type": "string",
+      "pattern": "^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$",
+      "_comment": "The name of the service account to use for the pipeline",
+      "_default": ""
+    },
+    "compute.pipelines.baler.gatecastle.com/image-pull-secrets": {
+      "type": "string",
+      "pattern": "^([^;]+(;[^;]+)*)?$",
+      "_comment": "The name of the image pull secrets to use for the pipeline, separated by semicolons",
+      "_default": ""
+    }
+  },
+  "additionalProperties": true
+}
+

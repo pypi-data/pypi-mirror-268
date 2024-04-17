@@ -1,0 +1,27 @@
+name: Documentation Generation
+
+on: [push, pull_request]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 # Ensures the full git history is checked out for accurate coverage computation
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9' # Replace '3.x' with the specific version of Python you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install hatch # Install coverage or any other package needed for generating reports
+        # Install your project's dependencies here, e.g., pip install -r requirements.txt
+
+    - name: Generate Docs
+      run: |
+        make docs

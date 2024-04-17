@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ name }}
+  labels:
+    app: haystack-pipeline-{{ name }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: haystack-pipeline-{{ name }}
+  template:
+    metadata:
+      labels:
+        app: haystack-pipeline-{{ name }}
+        pipelines.baler.gatecastle.com/owned-by: {{ owner }}
+    spec:
+      {% if service_account is defined and service_account %}
+      serviceAccountName: {{ service_account }}
+      {% endif %}
+      {% if image_pull_secrets is defined %}
+      imagePullSecrets:
+          {% for secret in image_pull_secrets %}
+          - name: {{ secret }}
+          {% endfor %}
+      {% endif %}
+      initContainers:
+      - name: pipeline-init
+        image: {{ init_image }}
+        imagePullPolicy: IfNotPresent
+        command:
+          - sh
+          - -c
+          - |
+            python -c "import baler_operator; import kubernetes; kubernetes.config.load_incluster_config(); baler_operator.utils.core.resolve_refs_in_kube_in_namespace('/pipeline.yaml', '{{ namespace }}')"
+        volumeMounts:
+          - name: config-volume
+            mountPath: /pipeline.yaml
+            subPath: pipeline
+          - name: pipeline-volume
+            mountPath: /mnt
+      containers:
+      - name: haystack
+        image: {{ haystack_image | default('deepset/haystack:cpu-v1.x') }}
+        resources:
+          requests:
+            memory: {{ memory | default('1Gi') }}
+            cpu: {{ cpu | default('500m') }}
+          limits:
+            {% if gpu %}
+            nvidia.com/{{ gpu_class | default('gpu') }}: {{ gpu }}
+            {% endif %}
+            memory: {{ memory | default('1Gi') }}
+        ports:
+        - containerPort: 8000
+        env:
+          {% for item in env %}
+          - {{ item | to_yaml | indent(12) | safe }}
+          {% endfor %}
+          - name: PIPELINE_YAML_PATH
+            value: "/mnt/pipeline.yaml"
+        volumeMounts:
+          - name: pipeline-volume
+            mountPath: /mnt
+        livenessProbe:
+          httpGet:
+            path: /initialized
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /initialized
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          timeoutSeconds: 3
+          successThreshold: 1
+          failureThreshold: 3
+      volumes:
+        - name: config-volume
+          configMap:
+            name: haystack-pipeline-{{ name }}-config
+        - name: pipeline-volume
+          emptyDir: {}
+      {% if node_selector is defined and node_selector %}
+      nodeSelector:
+        {% for key, value in node_selector.items() %}
+        {{ key }}: "{{ value }}"
+        {% endfor %}
+      {% endif %}
+      {% if tolerations is defined and tolerations %}
+      tolerations:
+        {% for toleration in tolerations %}
+        - key: "{{ toleration.key }}"
+          operator: "{{ toleration.operator }}"
+          value: "{{ toleration.value }}"
+          effect: "{{ toleration.effect }}"
+          {% if toleration.tolerationSeconds is defined %}
+          tolerationSeconds: {{ toleration.tolerationSeconds }}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
