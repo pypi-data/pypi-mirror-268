@@ -1,0 +1,5 @@
+[console_scripts]
+dice=dice_cli.main:main
+dice-adm=dice_cli.dicectl:main
+dicectl=dice_cli.dicectl:main
+
