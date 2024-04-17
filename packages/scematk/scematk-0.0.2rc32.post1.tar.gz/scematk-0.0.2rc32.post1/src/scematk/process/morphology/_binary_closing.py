@@ -1,0 +1,23 @@
+from ...image._binary_mask import BinaryMask
+from ...process._process import Process
+from dask_image.ndmorph import binary_closing
+from skimage.morphology import disk
+
+
+class BinaryClosing(Process):
+    def __init__(self, radius: float, metric: str = 'micron') -> None:
+        assert isinstance(radius, (int, float)), 'radius must be a number'
+        assert radius > 0, 'radius must be positive'
+        assert isinstance(metric, str), 'metric must be a string'
+        assert metric in ['micron', 'pixel'], 'metric must be either "micron" or "pixel"'
+        self.radius = radius
+        self.metric = metric
+        super().__init__(name=f'Binary Closing with a radius of {radius} {metric}s')
+
+    def run(self, image: BinaryMask) -> BinaryMask:
+        assert isinstance(image, BinaryMask), 'image must be a BinaryMask'
+        radius = image.pixel_from_micron(self.radius) if self.metric == 'micron' else self.radius
+        mask = image.image
+        footprint = disk(radius)
+        mask = binary_closing(mask, structure=footprint)
+        return BinaryMask(mask, image.info, image.channel_names)
