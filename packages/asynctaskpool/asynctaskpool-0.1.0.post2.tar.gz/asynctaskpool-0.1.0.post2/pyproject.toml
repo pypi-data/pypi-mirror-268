@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "asynctaskpool"
+version = "0.1.0.post2"
+description = "Provides a task pool for asynchronous tasks to be executed only once."
+authors = ["QCanvas <qcanvas@noreply.codeberg.org>"]
+readme = "README.md"
+repository = "https://codeberg.org/QCanvas/AsyncTaskPool"
+keywords = ["async", "taskpool"]
+classifiers = [
+    "Framework :: AsyncIO"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+block-timer = "^0.2.0"
+pytest-asyncio = "^0.23.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
