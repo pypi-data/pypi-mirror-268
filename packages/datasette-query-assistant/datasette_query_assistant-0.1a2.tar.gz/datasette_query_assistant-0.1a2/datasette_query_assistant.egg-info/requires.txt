@@ -1,0 +1,9 @@
+datasette
+anthropic
+
+[test]
+inline-snapshot
+pytest
+pytest-asyncio
+pytest-recording
+sqlite-utils
