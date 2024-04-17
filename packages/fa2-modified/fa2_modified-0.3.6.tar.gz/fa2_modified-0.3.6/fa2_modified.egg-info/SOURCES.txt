@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+examples/forceatlas2-layout.ipynb
+examples/geometric_graph.png
+examples/grid_graph.png
+fa2_modified/__init__.py
+fa2_modified/fa2util.py
+fa2_modified/forceatlas2.py
+fa2_modified.egg-info/PKG-INFO
+fa2_modified.egg-info/SOURCES.txt
+fa2_modified.egg-info/dependency_links.txt
+fa2_modified.egg-info/requires.txt
+fa2_modified.egg-info/top_level.txt
