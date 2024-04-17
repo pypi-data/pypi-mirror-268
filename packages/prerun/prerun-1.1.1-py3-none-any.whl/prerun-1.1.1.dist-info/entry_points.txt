@@ -1,0 +1,2 @@
+[console_scripts]
+prerun = prerun:main
