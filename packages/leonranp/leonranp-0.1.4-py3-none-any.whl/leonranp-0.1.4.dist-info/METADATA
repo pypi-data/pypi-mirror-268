@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: leonranp
+Version: 0.1.4
+Summary: This is Leon Random Plus,that add more functions to the random!
+Home-page: https://github.com/Leonmmcoset/leonranp
+Author: LeonMMcoset
+Author-email: leonmmcoset@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Leon Random Plus
+
+This is Leon Random Plus,that add more functions to the random!
+
+To use it,code "import leonranp"
+
+No need to import random,because this package is import random.
+
+## Website
+
+Wiki:http://leonmmcoset.jjmm.ink:8002/doku.php?id=leonranp
+
+To upgrade,use "leonranp.upgrade()"
+
+To delete Leon Random Plus,use "leonranp.dellrp()"
+
+Copyright LeonMMcoset.All rights reserved.
