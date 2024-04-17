@@ -1,0 +1,6 @@
+# This requirements file should only include dependencies for testing
+pytest                                  # test framework
+pytest-cov                              # coverage test
+
+boto3
+s3pathlib>=2.1.2,<3.0.0
