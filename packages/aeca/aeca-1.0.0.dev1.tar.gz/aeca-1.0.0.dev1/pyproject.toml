@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aeca"
+version = "1.0.0.dev1"
+authors = [{ name = "Aeca, Inc.", email = "jaepil@aeca.ai" }]
+description = "Python client for Aeca database"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+dependencies = [
+  "pandas>=1.5.3",
+  "polars>=0.16.18",
+  "pyarrow>=11.0.0",
+  "grpcio>=1.53.0",
+  "protobuf>=4.22.1",
+  "pillow",
+]
+keywords = [
+  "Aeca",
+  "Cognica",
+  "key-value",
+  "document store",
+  "full-text search",
+  "vector search",
+  "search engine",
+  "database",
+  "deep learning",
+  "NLP",
+  "natural language processing",
+  "transformer",
+  "vector embedding",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[project.urls]
+"Homepage" = "https://www.aeca.ai"
+
+[project.optional-dependencies]
+protobuf = ["grpcio>=1.43.0"]
+
+[tool.black]
+line-length = 80
