@@ -1,0 +1,2 @@
+[console_scripts]
+betatester = betatester.cli:app
