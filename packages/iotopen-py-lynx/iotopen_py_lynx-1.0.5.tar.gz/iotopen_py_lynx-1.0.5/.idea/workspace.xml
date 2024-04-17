@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ebfce3a-be03-4e50-b276-1512b6613de3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/py-lynx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/py-lynx.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/device.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/device.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/edge_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/edge_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/installation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/installation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/installation_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/installation_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/organization.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/organization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/publisher.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/publisher.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/shared.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/shared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/trace.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/trace.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lynx/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lynx/models/user.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2fBlfz04SORAdZP7BD8ocfQtoXe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.15026.15" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ebfce3a-be03-4e50-b276-1512b6613de3" name="Changes" comment="" />
+      <created>1713282458947</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713282458947</updated>
+      <workItem from="1713282460048" duration="226000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
