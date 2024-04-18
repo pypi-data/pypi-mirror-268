@@ -1,0 +1,7 @@
+pyqt5
+wmi
+xlrd
+numpy
+pywin32
+pyautogui
+datetime
