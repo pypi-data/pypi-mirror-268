@@ -1,0 +1,33 @@
+Screen {
+    align: center middle;
+    layers: below above;
+}
+
+Input {
+    width: 40;
+
+}
+
+#password {
+    margin: 1 0 1 0;
+}
+
+#openkey {
+    margin: 0 0 1 2;
+    width: auto;
+}
+
+#filepath {
+    margin: 1;
+}
+
+FileAsk {
+    layout: horizontal;
+    dock: bottom;
+    layer: above;
+}
+
+Button {
+    width: 20;
+}
+

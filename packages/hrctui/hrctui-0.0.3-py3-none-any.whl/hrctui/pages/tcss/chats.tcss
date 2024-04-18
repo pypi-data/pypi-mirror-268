@@ -1,0 +1,85 @@
+Screen {
+}
+
+InputBottom {
+    dock: bottom;
+    height: 3;
+    width: 100%;
+    layout: horizontal;
+}
+
+FriendButton {
+    margin-top: 1;
+    padding-left: 2;
+    width: 100%;
+}
+.messages {
+    height: 100%;
+}
+
+
+.msgcont {
+    layout: vertical;
+    min-height: 3;
+    height: auto;
+    padding-left: 3;
+    padding-bottom: 1;
+}
+
+#nick {
+    margin: 1 0 0 3;
+}
+
+.nickname {
+    text-style: bold;
+}
+
+
+#sm {
+    dock: bottom;
+}
+
+.input_message {
+    dock: bottom;
+    max-height: 3;
+    background: rgb(56, 58, 64);
+}
+
+.fr_last_msg {
+    color: gray;
+}
+
+#me {
+    dock: top;
+    height: 10%;
+    min-height: 3;
+    max-height: 3;
+    background: rgb(35, 36, 40);
+}
+
+#leftDown {
+    margin-top: 3;
+    dock: top;
+    min-width: 50;
+    background: rgb(43, 45, 49);
+
+}
+
+#leftSide {
+    dock: left;
+    min-width: 50;
+    width: 30%;
+
+}
+
+#rightSide {
+    dock: right;
+    min-width: 50;
+    background: rgb(49, 51, 56);
+    width: 70%;
+}
+
+#page {
+    background: rgb(49, 51, 56);
+    min-width: 100;
+}
