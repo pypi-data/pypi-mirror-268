@@ -1,0 +1,10 @@
+-r base.in
+
+coverage
+flake8
+flake8_docstrings
+pytest
+pytest-cov
+
+pytest>=5; python_version >= "3.0"
+more-itertools>=6; python_version >= "3.0"
