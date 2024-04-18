@@ -1,0 +1,5 @@
+Session started at: 2024-02-06 14:06:27.063889
+2024-02-06 14:06:39.980941: token count-258 : role - user : message - take off
+2024-02-06 14:06:43.446530: token count--1 : role - user : message - {"intent": "TAKE_OFF", "confidence": 1.0, "entities": [], "addressed_to": false}
+2024-02-06 14:06:56.790675: token count-295 : role - user : message - Lucy
+2024-02-06 14:06:59.287101: token count--1 : role - user : message - {"intent": "TAKE_OFF", "confidence": 1.0, "entities": [], "addressed_to": true}

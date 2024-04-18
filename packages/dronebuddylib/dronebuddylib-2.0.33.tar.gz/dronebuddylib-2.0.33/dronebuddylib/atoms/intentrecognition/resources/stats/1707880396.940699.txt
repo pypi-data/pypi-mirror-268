@@ -1,0 +1,3 @@
+Session started at: 2024-02-14 11:13:16.940699
+2024-02-14 11:13:39.509403: token count-261 : role - user : message - what can you see?
+2024-02-14 11:13:40.671313: token count--1 : role - user : message - {"intent": "NONE", "confidence": 1.0}

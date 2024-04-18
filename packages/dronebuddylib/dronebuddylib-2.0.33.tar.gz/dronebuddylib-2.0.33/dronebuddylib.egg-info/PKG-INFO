@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dronebuddylib
+Version: 2.0.33
+Summary: Everything to control and customize Tello
+Author: NUS
+Author-email: malshadz@nus.edu.sg
+License: MIT
+Requires-Python: >=3.9
+Requires-Dist: requests~=2.28.0
+Requires-Dist: numpy~=1.23.0
+Requires-Dist: cython~=0.29.34
+Requires-Dist: setuptools~=65.5.1
+Requires-Dist: packaging~=23.0
+Requires-Dist: pyparsing~=3.0.9
+Provides-Extra: face-recognition
+Requires-Dist: face-recognition; extra == "face-recognition"
+Provides-Extra: intent-recognition-gpt
+Requires-Dist: openai; extra == "intent-recognition-gpt"
+Requires-Dist: tiktoken; extra == "intent-recognition-gpt"
+Provides-Extra: intent-recognition-snips
+Requires-Dist: snips-nlu; extra == "intent-recognition-snips"
+Provides-Extra: object-detection-mp
+Requires-Dist: mediapipe; extra == "object-detection-mp"
+Provides-Extra: object-detection-yolo
+Requires-Dist: ultralytics; extra == "object-detection-yolo"
+Provides-Extra: text-recognition
+Requires-Dist: google-cloud-vision; extra == "text-recognition"
+Provides-Extra: speech-recognition-multi
+Requires-Dist: SpeechRecognition; extra == "speech-recognition-multi"
+Provides-Extra: speech-recognition-vosk
+Requires-Dist: vosk; extra == "speech-recognition-vosk"
+Provides-Extra: speech-recognition-google
+Requires-Dist: google-cloud-speech; extra == "speech-recognition-google"
+Provides-Extra: speech-generation
+Requires-Dist: pyttsx3; extra == "speech-generation"
