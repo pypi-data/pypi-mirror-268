@@ -1,0 +1,2 @@
+[console_scripts]
+scraperai = scraperai.cli.app:main
