@@ -1,0 +1,12 @@
+lignator/__init__.py,sha256=ITNGtIKF55ff42uJuyTMfmVBo_JsTO7qbfYxZHOTWDo,139
+lignator/__main__.py,sha256=bYt9eEaoRQWdejEHFD8REx9jxVEdZptECFsV7F49Ink,30
+lignator/cli.py,sha256=0FOdycm7WTQopU7dpNIokdPnyqY_UqouDFIbmNNQJ9I,2029
+lignator/commands/__init__.py,sha256=mJ9xEjbtFzikuhqcy3mDbniZvxOKFzIjBDTNL7YItAI,58
+lignator/commands/headers.py,sha256=5d9YPA2ay_yAdkvAOVsbP-FlfFfIWPtXtABXJdm-uzg,72
+lignator/commands/process.py,sha256=sqbHZbjtFmAi054t6XjE_Qkjhmbw97S2qpbuMoCYYMA,1998
+lignator/data_table.py,sha256=Q_Jv0xayxsLivf2Ov-VtrHRDnPBfpBRGkyYytDkX_3Q,1817
+lignator/logger.py,sha256=z0xyt1WlwptNt8aR726-0R4y8d5mzechdjBiQCJ3sks,284
+lignator-1.0.0.dist-info/METADATA,sha256=VyvNmutwOBYj1tqvgU2LbHKMUSu4cnyDOS1escOT6Ik,927
+lignator-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+lignator-1.0.0.dist-info/entry_points.txt,sha256=PthdTjK-B3MpWSofcd7BeAv2MjVc4uUQod_d8ksA7H8,46
+lignator-1.0.0.dist-info/RECORD,,
