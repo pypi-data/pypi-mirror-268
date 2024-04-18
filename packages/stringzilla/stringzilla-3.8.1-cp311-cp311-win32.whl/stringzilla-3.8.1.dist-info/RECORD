@@ -1,0 +1,10 @@
+stringzilla.cp311-win32.pyd,sha256=wGrpHK7DkByrXzWbphPlYmEEEH8y7Li_oQTdy3FgDt4,62976
+cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli/split.py,sha256=GP0sNydt9wrRQ_4J2v_mJp29P6TLEZnIGJeT55924zQ,3535
+cli/wc.py,sha256=d6FeYSHDrnJ1SWjprgHa8ZaEYi8LSlwlgQgKY7iXftc,3709
+stringzilla-3.8.1.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+stringzilla-3.8.1.dist-info/METADATA,sha256=pDqqVWnR0ZEpxdi-s8PXO1pAQ6vj5jdquu0czNUXwIY,74486
+stringzilla-3.8.1.dist-info/WHEEL,sha256=deu9bZJH225Lz7TZI9C8JKotIcjmi5Ibg2UG8qmj-qM,98
+stringzilla-3.8.1.dist-info/entry_points.txt,sha256=Xb61_R-C3KmzJc7YSQ3lf6xJGw-cE8CeeMaFuAGiVRw,64
+stringzilla-3.8.1.dist-info/top_level.txt,sha256=U1mcf1aXFqpjrfKgss9_dJWQaMOA-h9IR790RYAeT_Q,16
+stringzilla-3.8.1.dist-info/RECORD,,
