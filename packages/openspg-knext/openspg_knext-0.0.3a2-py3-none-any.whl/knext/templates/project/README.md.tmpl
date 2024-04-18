@@ -1,0 +1,16 @@
+
+```bash
+knext project create --name {{project_name}} --namespace {{namespace}} --desc {{description}}
+```
+
+```bash
+knext schema commit
+```
+
+```bash
+knext builder execute Company
+```
+
+```bash
+knext reasoner query --file ./reasoner/company.dsl
+```
