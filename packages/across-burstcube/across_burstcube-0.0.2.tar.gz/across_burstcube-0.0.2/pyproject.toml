@@ -1,0 +1,47 @@
+[project]
+name = "across-burstcube" # Required
+version = "0.0.2" # Required
+description = "ACROSS API Python client for BurstCube" # Optional
+readme = "README.md" # Optional
+
+requires-python = ">=3.9"
+
+keywords = ["astronomy", "api", "across"] # Optional
+authors = [
+  { name = "Jamie A. Kennea", email = "jak51@psu.edu" }, # Optional
+]
+maintainers = [
+  { name = "Jamie A. Kennea", email = "jak51@psu.edu" }, # Optional
+]
+
+classifiers = [ # Optional
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [ # Optional
+  "requests",
+  "pydantic",
+  "astropy",
+  "python-dateutil",
+  "types-python-dateutil",
+  "types-requests"
+]
+
+[project.scripts]
+
+[tool.setuptools]
+
+[tool.setuptools.package-data]
+"across_client" = ["py.typed"]
+
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"

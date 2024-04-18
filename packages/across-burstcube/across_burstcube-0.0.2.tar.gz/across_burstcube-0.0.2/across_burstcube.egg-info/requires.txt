@@ -1,0 +1,6 @@
+requests
+pydantic
+astropy
+python-dateutil
+types-python-dateutil
+types-requests
