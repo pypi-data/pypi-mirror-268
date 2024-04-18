@@ -1,0 +1,28 @@
+<address>
+	<companyName>{{ address.company }}</companyName>
+	<lastName>{{ address.name }}</lastName>
+	<firstName>{{ address.firstName }}</firstName>
+	<line0>{{ address.street2 }}</line0>
+	<line1>{{ address.street0 }}</line1>
+	<line2>{{ address.street1 }}</line2>
+	<line3>{{ address.street3 }}</line3>
+	<countryCode>{{ address.country }}</countryCode>
+	<city>{{ address.city }}</city>
+	<zipCode>{{ address.zip }}</zipCode>
+	{% if address.mobilePhone or address.homeNumber %}
+		{% if address.homeNumber %}
+			<phoneNumber>{{ address.homeNumber }}</phoneNumber>
+		{% endif %}
+		{% if address.mobilePhone %}
+			<mobileNumber>{{ address.mobilePhone }}</mobileNumber>
+		{% endif %}
+	{% else %}
+		{# backward compatibility but should be removed in next major version #}
+		<mobileNumber>{{ address.phone }}</mobileNumber>
+	{% endif %}
+	<doorCode1>{{ address.doorCode1 }}</doorCode1>
+	<doorCode2>{{ address.doorCode2 }}</doorCode2>
+	<email>{{ address.email | default('') }}</email>
+	<intercom>{{ address.intercom }}</intercom>
+	<language>{{ address.language }}</language>
+</address>
