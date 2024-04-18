@@ -1,0 +1,107 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="bda.plone.orders">
+
+  <include package="yafowil.plone" />
+  <include package="souper.plone" />
+  <include package="collective.js.datatables" />
+  <include package="bda.plone.checkout" />
+  <include package="bda.plone.discount" />
+
+  <i18n:registerTranslations directory="locales" />
+
+  <include file="permissions.zcml" />
+  <include file="profiles.zcml" />
+  <include file="upgrades.zcml" />
+  <include package=".browser" />
+  <include package=".restapi" />
+
+  <!-- roles -->
+  <utility name="Vendor" factory=".localroles.VendorRole" />
+  <utility name="Customer" factory=".localroles.CustomerRole" />
+
+  <!-- indexing -->
+  <adapter
+    name="customer_role"
+    factory=".indexer.customer_role" />
+
+  <!-- subscribers -->
+  <subscriber
+    for="zope.interface.Interface
+         plone.app.workflow.interfaces.ILocalrolesModifiedEvent"
+    handler=".subscriber.reindex_customer_role" />
+
+  <!-- souper soups -->
+  <utility
+    name="bda_plone_orders_bookings"
+    factory=".catalogfactories.BookingsCatalogFactory" />
+
+  <utility
+    name="bda_plone_orders_orders"
+    factory=".catalogfactories.OrdersCatalogFactory" />
+
+  <utility
+    name="bda_plone_orders_contacts"
+    factory=".contacts.ContactsCatalogFactory" />
+
+  <!-- order checkout adapter -->
+  <adapter
+    for="*
+         .interfaces.IOrdersExtensionLayer"
+    factory=".checkout.OrderCheckoutAdapter" />
+
+  <!-- payment data adapter -->
+  <adapter for="*" factory=".datamanagers.payment.PaymentData" />
+
+
+  <!-- mail templates storage -->
+  <adapter
+    for="zope.component.interfaces.ISite"
+    provides=".interfaces.IDynamicMailTemplateLibraryStorage"
+    factory=".mailtemplates.DynamicMailTemplateLibraryStorage" />
+
+  <adapter
+    for="bda.plone.orders.interfaces.IVendor"
+    provides=".interfaces.IDynamicMailTemplateLibraryStorage"
+    factory=".mailtemplates.DynamicMailTemplateLibraryStorage" />
+
+
+  <!-- EVENT SUBSCRIBERS -->
+
+  <!-- payment-->
+  <subscriber
+    for="bda.plone.payment.interfaces.IPaymentFailedEvent"
+    handler=".datamanagers.payment.payment_failed" />
+  <subscriber
+    for="bda.plone.payment.interfaces.IPaymentSuccessEvent"
+    handler=".datamanagers.payment.payment_success" />
+
+  <!-- mailnotify -->
+  <subscriber
+    for="bda.plone.payment.interfaces.IPaymentSuccessEvent"
+    handler=".mailnotify.dispatch_notify_payment_success" />
+  <subscriber
+    for="bda.plone.checkout.interfaces.ICheckoutDone"
+    handler=".mailnotify.dispatch_notify_checkout_success" />
+  <subscriber
+    for="bda.plone.orders.interfaces.IBookingCancelledEvent"
+    handler=".mailnotify.dispatch_notify_booking_cancelled" />
+  <subscriber
+    for="bda.plone.orders.interfaces.IBookingReservedToOrderedEvent"
+    handler=".mailnotify.dispatch_notify_booking_reserved_to_ordered" />
+  <subscriber
+    for="bda.plone.orders.interfaces.IStockThresholdReached"
+    handler=".mailnotify.dispatch_notify_stock_threshold_reached" />
+  <subscriber
+    for="bda.plone.orders.interfaces.IOrderSuccessfulEvent"
+    handler=".mailnotify.dispatch_notify_order_success" />
+
+  <!-- create contact on checkout success and save it in soup catalog-->
+  <subscriber
+    for="bda.plone.checkout.interfaces.ICheckoutDone"
+    handler=".contacts.save_contact" />
+
+
+</configure>
