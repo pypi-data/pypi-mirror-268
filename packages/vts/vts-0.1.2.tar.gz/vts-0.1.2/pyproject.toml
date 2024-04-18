@@ -1,0 +1,38 @@
+[project]
+name = "vts"
+version = "0.1.2"
+authors = [{ name = "Rikus Honey", email = "rikushoney2@gmail.com" }]
+requires-python = ">=3.10"
+description = "A framework for SFPGA architecture exploration"
+readme = "README.md"
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "License :: OSI Approved :: Apache Software License",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/rikushoney/vts"
+Repository = "https://github.com/rikushoney/vts"
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+manifest-path = "vts_api/Cargo.toml"
+python-source = "python"
+module-name = "vts._vts"
+
+[tool.black]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "N", "I"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true

@@ -1,0 +1,14 @@
+[package]
+name = "vts_api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+fnv.workspace = true
+thiserror.workspace = true
+vts_core.workspace = true
+pyo3 = { version = "0.21.0", features = ["abi3-py310"] }
+
+[lib]
+name = "_vts_api_rs"
+crate-type = ["cdylib"]
