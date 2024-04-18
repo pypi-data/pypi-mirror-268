@@ -1,0 +1,7 @@
+_proc
+bps_fbi_sp_ecoli
+config
+input
+nbs
+out
+output
