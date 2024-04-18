@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: dbally
+Version: 0.0.2
+Summary: "Efficient, consistent and secure library for querying structured data with natural language"
+Author: deepsense.ai
+Author-email: contact@deepsense.ai
+License: MIT
+Project-URL: Documentation, https://db-ally.deepsense.ai/
+Project-URL: Source, https://github.com/deepsense-ai/db-ally
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: pandas~=2.0.3
+Requires-Dist: python-dotenv>=0.5.1
+Requires-Dist: SQLAlchemy==2.0.25
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: click~=8.1.7
+Requires-Dist: numpy>=1.24.0
+Provides-Extra: openai
+Requires-Dist: openai>=1.10.0; extra == "openai"
+Requires-Dist: tiktoken>=0.6.0; extra == "openai"
+Provides-Extra: faiss
+Requires-Dist: faiss-cpu>=1.8.0; extra == "faiss"
+Provides-Extra: examples
+Requires-Dist: pydantic~=2.6.0; extra == "examples"
+Requires-Dist: pydantic_settings~=2.1.0; extra == "examples"
+Requires-Dist: psycopg2-binary~=2.9.9; extra == "examples"
+Provides-Extra: langsmith
+Requires-Dist: langsmith>=0.0.87; extra == "langsmith"
+Provides-Extra: transformers
+Requires-Dist: transformers>=4.37.1; extra == "transformers"
+Provides-Extra: benchmark
+Requires-Dist: asyncpg~=0.28.0; extra == "benchmark"
+Requires-Dist: eval-type-backport~=0.1.3; extra == "benchmark"
+Requires-Dist: hydra-core~=1.3.2; extra == "benchmark"
+Requires-Dist: loguru~=0.7.0; extra == "benchmark"
+Requires-Dist: neptune~=1.6.3; extra == "benchmark"
+Requires-Dist: pydantic~=2.6.1; extra == "benchmark"
+Requires-Dist: pydantic-core~=2.16.2; extra == "benchmark"
+Requires-Dist: pydantic-settings~=2.0.3; extra == "benchmark"
+Requires-Dist: psycopg2-binary~=2.9.9; extra == "benchmark"
