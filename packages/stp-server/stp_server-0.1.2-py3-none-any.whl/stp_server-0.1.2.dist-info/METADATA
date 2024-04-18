@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: stp-server
+Version: 0.1.2
+Summary: STP: Sitty Talky messaging Protocol : A primitive protocol purely written in python for tinkering with your office mates over LAN!
+Author-email: "@bRuttaZz" <agrajpdasprivate@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Agraj P Das
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/bRuttaZz/stp
+Project-URL: Issues, https://github.com/bRuttaZz/stp/issues
+Project-URL: Repository, https://github.com/bRuttaZz/stp.git
+Keywords: stp,sitty-talky,sittytalky,LAN,Messaging,protocol
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development
+Classifier: Natural Language :: English
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pycryptodome ==3.20.0
+
+# STP : Sitty Talky Protocol
+⚠️ **Work In Progress**
+
+⚠️ Beware of the buzzword: Spanig Tree Protocol. The STP described over here is much more stupid..
+
+**STP: Sitty Talky messaging Protocol** : A primitive protocol purely written in python for tinkering with your office mates over LAN! Originally created for my side project [Sitty Talky](https://github.com/bruttaZz/sittytalky).
+
+[![pypi](https://img.shields.io/pypi/v/stp-server.svg)](https://pypi.org/project/stp-server/)
+[![Release](https://img.shields.io/github/release/bruttazz/stp.svg)](https://github.com/bruttazz/stp/releases/latest)
+
+
+---
+
+### STP uses and have
+
+- uses UDP for peer finding and broadcasting (actually it's multicasting (used to reduce trafic (as part of being a good citizon)))
+- uses TCP for peer to peer connection (usual things)
+- A unique peer discovery mechanism (may not be perfect though)
+- An end-to-end encrypted peer to peer messaging facility by default (I mean real end-to-end)
+- Good news: there is no threads being spawned, the system can be added to your existing python eventloop (if needed)
+
+
+### Requirements
+- **Python version >= 3.11** (As it currently uses `loop.sock_recvfrom` in `asyncio`, Otherwise should go with the `loop.run_in_executor`, which I am not interested on)
+
+- Internally uses **[Pycryptodome](https://pypi.org/project/pycryptodome/)** for rsa encryption.
+- **The system is tested only on Unix (GNU/Linux to be specific)**
+
+### Installation
+This package can be installed from PyPi using
+```sh
+pip install stp-server
+```
+
+Or directly from github using 
+```sh
+pip install 'stp-server @ git+https://github.com/bRuttaZz/stp.git'
+```
+
+
+### Usage
+**A simple use case is demonstated bellow**
+
+starting the server
+```py
+from stp import STPServer
+from stp.interfaces import Packet, Peer
+
+app = STPServer()
+
+@app.route("/test-route")
+def test_route_func(packet:Packet):
+    print(f"Message got from {packet.headers.user}@{packet.sender} : {packet.data}")
+
+# bind events
+@app.on_peer_list_update
+def peer_list_change(new_peer:Peer, removed_peers:list[Peer]):
+    print(f"Peer list changed : new peer -> {new_peer.user}@{new_peer.ip}" +
+                f" : removed peers -> {len(removed_peers)}")
+    
+if __name__=="__main__":
+    print(f"starting server ...")
+    app.run()
+```
+
+sending messages to the client over a LAN network
+```py
+from stp import STPServer
+
+app = STPServer()
+    
+if __name__=="__main__":
+    app.broadcast("/test-route", "hi dear")
+    # app.send_to_peer() # work only if peers are discovered (uses TCP)
+```
+
+### The module architecture
+
+<img src="./.assets/stp.excalidraw.svg">
+
+
