@@ -1,0 +1,30 @@
+[project]
+name = "document_ingestor"
+version = "0.1.1"
+authors = [
+  { name = "Milan Anand Raj", email = "manandraj20@iitk.ac.in" },
+]
+description = "This package consumes one or more Spanish constitution PDFs and then processes them to generate embedding vectors. The vectors are generated with OpenAI service and PineCone is used to store and retrieve embedding vectors."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pymupdf<=1.23.11",
+    "openai",
+    "pinecone-client",
+    "numpy",
+    "tiktoken"
+]
+license = {file = "LICENSE.txt"} 
+
+
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
+
+
+

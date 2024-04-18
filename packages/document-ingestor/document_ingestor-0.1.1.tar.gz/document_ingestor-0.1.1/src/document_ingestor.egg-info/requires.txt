@@ -1,0 +1,5 @@
+pymupdf<=1.23.11
+openai
+pinecone-client
+numpy
+tiktoken

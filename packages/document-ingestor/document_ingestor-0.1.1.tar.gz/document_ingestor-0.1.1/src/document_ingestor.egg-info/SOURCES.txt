@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/document_ingestor/__init__.py
+src/document_ingestor/embedding_process.py
+src/document_ingestor/eu_data_parser.py
+src/document_ingestor/genericParser.py
+src/document_ingestor/pdf_parser.py
+src/document_ingestor.egg-info/PKG-INFO
+src/document_ingestor.egg-info/SOURCES.txt
+src/document_ingestor.egg-info/dependency_links.txt
+src/document_ingestor.egg-info/requires.txt
+src/document_ingestor.egg-info/top_level.txt
