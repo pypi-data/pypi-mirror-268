@@ -1,0 +1,6 @@
+setup.py
+discord_user_bot/__init__.py
+discord_user_bots.egg-info/PKG-INFO
+discord_user_bots.egg-info/SOURCES.txt
+discord_user_bots.egg-info/dependency_links.txt
+discord_user_bots.egg-info/top_level.txt
