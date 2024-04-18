@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "segmentools"
+authors = [
+  { name = "Lucas Bernigaud Samatan", email = "lucas.bernigaud-samatan@inrae.fr" },
+  { name = "Jordan Bernigaud Samatan", email = "jordan.bernigaud-samatan@inrae.fr" },
+]
+maintainers = [
+  { name = "Jordan Bernigaud Samatan", email = "jordan.bernigaud-samatan@inrae.fr" },
+]
+description = "Segmentools provide low and high levels utilities to train, evaluate and deploy models. Low levels classes and functions are usefull develop new method while keeping data formats uniforms and high level classes allow to write scripts in a very concise and understable way."
+readme = "README_deployment.md"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+requires-python = ">=3.10.12"
+dependencies = [
+  "computervisiontools",
+  "matplotlib==3.8.2",
+  "torch==2.1.0",
+  "torchvision==0.16.0",
+  "pandas==2.1.4",
+  "tensorboard==2.15.1",
+  "XlsxWriter==3.1.9",
+  "openpyxl==3.1.2",
+  "seaborn==0.13.0",
+  "torchgeometry==0.1.2",
+  "torchmetrics==1.3.0",
+]
+license = { file = "LICENSE.txt" }
+
+[project.urls]
+Homepage = "https://forgemia.inra.fr/ue-apc/librairies/python/segmentools"
+Issues = "https://forgemia.inra.fr/ue-apc/librairies/python/segmentools/-/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = { attr = "segmentools.__version__" }

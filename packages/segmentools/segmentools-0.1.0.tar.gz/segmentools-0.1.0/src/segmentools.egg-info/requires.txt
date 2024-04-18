@@ -1,0 +1,11 @@
+computervisiontools
+matplotlib==3.8.2
+torch==2.1.0
+torchvision==0.16.0
+pandas==2.1.4
+tensorboard==2.15.1
+XlsxWriter==3.1.9
+openpyxl==3.1.2
+seaborn==0.13.0
+torchgeometry==0.1.2
+torchmetrics==1.3.0
