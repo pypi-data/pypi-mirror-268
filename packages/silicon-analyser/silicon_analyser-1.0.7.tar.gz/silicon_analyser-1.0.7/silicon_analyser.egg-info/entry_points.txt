@@ -1,0 +1,2 @@
+[console_scripts]
+silicon-analyser = silicon_analyser.main:main_cli
