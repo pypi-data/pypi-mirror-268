@@ -1,0 +1,3 @@
+[console_scripts]
+repopacker=repopacker.main:main
+
