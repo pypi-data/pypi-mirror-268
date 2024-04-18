@@ -1,0 +1,7 @@
+
+[dev]
+cython>=3.0.0
+sphinx==7.*
+pytest
+dpkt
+netifaces
