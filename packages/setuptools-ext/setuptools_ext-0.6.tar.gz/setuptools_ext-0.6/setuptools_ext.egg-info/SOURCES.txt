@@ -1,0 +1,10 @@
+LICENSE
+README.rst
+pyproject.toml
+setuptools_ext.py
+setuptools_ext.egg-info/PKG-INFO
+setuptools_ext.egg-info/SOURCES.txt
+setuptools_ext.egg-info/dependency_links.txt
+setuptools_ext.egg-info/requires.txt
+setuptools_ext.egg-info/top_level.txt
+tests/test_setuptools_ext.py
