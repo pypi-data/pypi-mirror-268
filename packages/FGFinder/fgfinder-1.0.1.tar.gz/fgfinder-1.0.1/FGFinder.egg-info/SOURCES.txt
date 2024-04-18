@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+FGFinder/FGFinder.py
+FGFinder/__init__.py
+FGFinder/__main__.py
+FGFinder.egg-info/PKG-INFO
+FGFinder.egg-info/SOURCES.txt
+FGFinder.egg-info/dependency_links.txt
+FGFinder.egg-info/requires.txt
+FGFinder.egg-info/top_level.txt
+FGFinder/data/fgsmarts.pkl
