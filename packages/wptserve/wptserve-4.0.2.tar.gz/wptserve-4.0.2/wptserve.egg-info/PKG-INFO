@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: wptserve
+Version: 4.0.2
+Summary: Python web server intended for in web browser testing
+Home-page: http://wptserve.readthedocs.org/
+Author: James Graham
+Author-email: james@hoppipolla.co.uk
+License: BSD
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Requires-Dist: h2>=4.1.0
+Requires-Dist: pywebsocket3>=4.0.2
+
+wptserve
+========
+
+Web server designed for use with web-platform-tests.
+
+See the docs on [web-platform-tests.org](https://web-platform-tests.org/tools/wptserve/docs/index.html).
