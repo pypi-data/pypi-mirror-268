@@ -1,0 +1,17 @@
+fastapi[all]<0.99
+typing_extensions<4.6
+opentelemetry-distro
+opentelemetry-instrumentation-fastapi
+opentelemetry-exporter-otlp
+stomp.py
+
+[dev]
+copier
+pipdeptree
+pre-commit
+pyright
+pytest
+pytest-cov
+ruff
+tox-direct
+types-mock
