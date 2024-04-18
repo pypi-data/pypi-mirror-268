@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/edurpa_google.egg-info/PKG-INFO
+src/edurpa_google.egg-info/SOURCES.txt
+src/edurpa_google.egg-info/dependency_links.txt
+src/edurpa_google.egg-info/requires.txt
+src/edurpa_google.egg-info/top_level.txt
