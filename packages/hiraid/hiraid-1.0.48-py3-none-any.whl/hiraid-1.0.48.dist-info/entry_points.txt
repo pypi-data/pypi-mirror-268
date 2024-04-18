@@ -1,0 +1,3 @@
+[console_scripts]
+historutil = hiraid.historutils.historutils:main
+
