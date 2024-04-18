@@ -1,0 +1,2 @@
+[console_scripts]
+hdeps = hdeps.cli:main
