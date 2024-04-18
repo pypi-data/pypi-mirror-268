@@ -1,0 +1,5 @@
+setup.py
+fysftp.egg-info/PKG-INFO
+fysftp.egg-info/SOURCES.txt
+fysftp.egg-info/dependency_links.txt
+fysftp.egg-info/top_level.txt
