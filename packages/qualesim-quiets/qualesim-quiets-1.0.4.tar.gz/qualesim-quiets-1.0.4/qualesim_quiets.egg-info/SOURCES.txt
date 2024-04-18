@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+data/bin/dqcsfeqi
+qualesim_quiets/__init__.py
+qualesim_quiets/__main__.py
+qualesim_quiets/frontend.py
+qualesim_quiets/utils.py
+qualesim_quiets.egg-info/PKG-INFO
+qualesim_quiets.egg-info/SOURCES.txt
+qualesim_quiets.egg-info/dependency_links.txt
+qualesim_quiets.egg-info/requires.txt
+qualesim_quiets.egg-info/top_level.txt
+tests/test_cls.py
+tests/test_example_quiets_whitepaper.py
+tests/test_gate.py
+tests/test_qifile.py
