@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: codetool
+Version: 0.21
+Summary: Id generation, hash and encryption
+Author: lolo859
+Keywords: code,tool,codetool,hash,id,cdtl
+Classifier: Natural Language :: French
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Code Generators
+
+========
+CodeTool
+========
+*Id generation, hash and encryption*
+
+Install and import
+------------------
+
+- For install CodeTool : pip install codetool
+- For import CodeTool : import codetool
+
+Functions
+---------
+
+CodeTool reunites the indecode, hashint and secure_id as well as new functions for generating new types of ID, new methods of encryption, new hash algoryths and more.
+
+CodeTool provide all this functions :
+
+- mix(lenght:int=30) : return a mix of caracters with the lenght provided, default to 30, in the form of a string
+
+- universal_id1() : return a new type of unique identifier in the form of a string
+
+- generate_key() : return a new type of key in the form of list
+
+- code(text:str,key:list=generate_key()) : need a text to encod in the form of a string and a key generate by the generate_key() function, return the incoded text
+
+- decode(text:str,key:list) : need the encoded text generate by the code() function and the key to decrypt it, return the decoded text
+
+Class
+-----
+
+CodeTool provide all this class:
+
+- CeasarCode(key,list) : allow you to encode text by providing an alphabet in the form of list in the list argument and a key in the form of int in the key argument
+
+Exceptions
+----------
+
+CodeTool can raise all this errors :
+
+- LenghtError
+
+- KeyLenghtError
