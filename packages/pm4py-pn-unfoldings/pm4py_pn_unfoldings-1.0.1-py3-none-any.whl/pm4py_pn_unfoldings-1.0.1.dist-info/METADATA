@@ -1,0 +1,108 @@
+Metadata-Version: 2.1
+Name: pm4py-pn-unfoldings
+Version: 1.0.1
+Summary: Library for Petri net unfoldings based on pm4py
+Home-page: https://github.com/TimurTimergalin/Unfoldings
+Author: TimurTimergalin
+Author-email: tmtimergalin8080@gmail.com
+Keywords: petri-nets unfoldings pm4py
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: colorama >=0.4.6
+Requires-Dist: contourpy >=1.2.1
+Requires-Dist: cvxopt >=1.3.2
+Requires-Dist: cycler >=0.12.1
+Requires-Dist: deprecation >=2.1.0
+Requires-Dist: fonttools >=4.51.0
+Requires-Dist: graphviz >=0.20.3
+Requires-Dist: intervaltree >=3.1.0
+Requires-Dist: kiwisolver >=1.4.5
+Requires-Dist: lxml >=5.2.1
+Requires-Dist: matplotlib >=3.8.4
+Requires-Dist: networkx >=3.3
+Requires-Dist: numpy >=1.26.4
+Requires-Dist: packaging >=24.0
+Requires-Dist: pandas >=2.2.2
+Requires-Dist: pillow >=10.3.0
+Requires-Dist: pm4py >=2.7.11.7
+Requires-Dist: pydotplus >=2.0.2
+Requires-Dist: pyparsing >=3.1.2
+Requires-Dist: python-dateutil >=2.9.0.post0
+Requires-Dist: pytz >=2024.1
+Requires-Dist: scipy >=1.13.0
+Requires-Dist: setuptools >=69.5.1
+Requires-Dist: six >=1.16.0
+Requires-Dist: sortedcontainers >=2.4.0
+Requires-Dist: tqdm >=4.66.2
+Requires-Dist: tzdata >=2024.1
+Requires-Dist: wheel >=0.43.0
+
+# ИССЛЕДОВАНИЕ И ЭКСПЕРИМЕНТАЛЬНАЯ РЕАЛИЗАЦИЯ АЛГОРИТМА ПОСТРОЕНИЯ РАЗВЕРТОК ДЛЯ МОДЕЛЕЙ ПРОЦЕССОВ В ВИДЕ СЕТЕЙ ПЕТРИ
+Данный репозиторий содержит исходный код, написанный в рамках курсовой работы на данную тему.
+
+## Структура проекта
+
+```
+│   LICENSE
+│   README.md
+├───nets_generators
+│   │   dining_philosophers.py
+│   │   dining_philosophers_with_dict.py
+│   │   generate_slotted_ring.py
+│   │   milners_cyclic_scheduler.py
+│   │   mutual_exclusion.py
+│   │   __init__.py
+└───unfoldings
+    │   __init__.py
+    ├───alg
+    │   │   concurrency_relation.py
+    │   │   possible_extensions.py
+    │   │   priority_queue.py
+    │   │   __init__.py
+    ├───cutoff_settings
+    │   │   abstract.py
+    │   │   idle.py
+    │   │   mark.py
+    │   │   __init__.py
+    ├───decorations
+    │   │   abstract.py
+    │   │   colors.py
+    │   │   idle.py
+    │   │   labels.py
+    │   │   __init__.py
+    ├───obj
+    │   │   condition.py
+    │   │   event.py
+    │   │   prefix.py
+    │   │   __init__.py
+    ├───order_settings
+    │   │   abstract.py
+    │   │   basic.py
+    │   │   config_length_utils.py
+    │   │   foata.py
+    │   │   idle.py
+    │   │   __init__.py
+    ├───unfolding_algorithms
+    │   │   standard.py
+    │   │   __init__.py
+    │   ├───n_safe
+    │   │   │   build_prefix.py
+    │   │   │   condition.py
+    │   │   │   event.py
+    │   │   │   possible_extensions.py
+    │   │   │   __init__.py
+```
+
+Папка `nets_generator` содержит скрипты для генерации сетей Петри, использовавшихся при экспериментальной оценке программ.
+
+Исходный код проекта лежит в папке `unfoldings` и содержит следующие разделы:
+
+1. `alg` содержит в себе исходный код различных вспомогательных алгоритмов;
+2. `cutoff_settings` содержит в себе определение интерфейса настроек отсечения и его реализаций;
+3. `decorations` содержит в себе определение интерфейс декораций - настроек вывода префикса;
+4. `obj` содержит в себе классы, расширяющие объектную модель `pm4py`;
+5. `order_settings` содержит определение интерфейса настроек порядка и его реализаций;
+6. `unfolding_algorithms` содержит в себе реализацию 2-х версий алгоритма Макмиллана - стандартный обобщенный (`standard.py`) и обобщенный алгоритм построения развертки сопряженной сети (папка `n_safe`)
