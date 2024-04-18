@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: python-package-template-mldxo
+Version: 0.1.0
+Summary: Python Package Template Description
+Author-email: mldxo <miloszmaculewicz@gmail.com>
+Project-URL: Homepage, https://github.com/mldxo/python-package-template
+Project-URL: Issues, https://github.com/mldxo/python-package-template/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Python Package Template
+Template of Python project wrapped as package that can be easily uploaded to PyPi
+
+## Getting Started
+To use this template click "Use this template" and create a new repository or open the template in a codespace [or use this template here](https://github.com/new?template_name=python-package-template&template_owner=mldxo)
+
+## Usage
+Create virtual environment and install dependencies:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+After that you would adapt the code and continue when the project is ready to be published. Build the package using:
+```bash
+python setup.py sdist bdist_wheel
+```
+
+Test compiled package locally using:
+```bash
+pip install dist/package-xx.whl
+```
+
+Before publishing to PyPi create account and get API key.
+Save API key in your session using:
+```bash
+export TWINE_USERNAME=__token__
+export TWINE_PASSWORD=$actual_token
+```
+
+Publish the package to PyPi:
+```bash
+twine upload dist/*
+```
