@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+bilibili_dl/__init__.py
+bilibili_dl/cli.py
+bilibili_dl/downloader.py
+bilibili_dl/main.py
+bilibili_dl/utils.py
+bilibili_dl.egg-info/PKG-INFO
+bilibili_dl.egg-info/SOURCES.txt
+bilibili_dl.egg-info/dependency_links.txt
+bilibili_dl.egg-info/entry_points.txt
+bilibili_dl.egg-info/requires.txt
+bilibili_dl.egg-info/top_level.txt
