@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+a3mongo/__init__.py
+a3mongo/mongo_client_factory.py
+a3mongo/mongo_table.py
+a3mongo.egg-info/PKG-INFO
+a3mongo.egg-info/SOURCES.txt
+a3mongo.egg-info/dependency_links.txt
+a3mongo.egg-info/not-zip-safe
+a3mongo.egg-info/requires.txt
+a3mongo.egg-info/top_level.txt
