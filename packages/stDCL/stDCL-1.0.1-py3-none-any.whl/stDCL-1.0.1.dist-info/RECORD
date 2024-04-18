@@ -1,0 +1,10 @@
+stDCL/_init_.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stDCL/model.py,sha256=wwt8Wzfl5eT1zEyGewdXlVXvpycZBYTwo1qBWw3sVLg,2833
+stDCL/preprocess.py,sha256=yssRcgqhtUBz246p8SkyWq5QNnCXlohwCwy9NkHkSBI,3958
+stDCL/stDCL.py,sha256=UVSkZbSdiNuZryPlGIGl6qTNk1HCv1F4SY6zaEgggLU,6010
+stDCL/utils.py,sha256=enh4YghZ3IIQca4tC7DdT40iiC-5HRLMNvqLKCaCFiM,6467
+stDCL-1.0.1.dist-info/LICENSE,sha256=qegOX7C879uDvKVa7Nu0TgRQqE8GQuel4kIpIg6xMfc,1071
+stDCL-1.0.1.dist-info/METADATA,sha256=CgTsiPwFUy-aNwgoiWkc6k-nAmqeo0HJRFXV6n1uxN0,4369
+stDCL-1.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+stDCL-1.0.1.dist-info/top_level.txt,sha256=tuKILlM1rWqAC40Bat2OxOJ2R6PF1sAuP-BcVxC68RE,6
+stDCL-1.0.1.dist-info/RECORD,,
