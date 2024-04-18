@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+calculate_rewards_pkg/__init__.py
+calculate_rewards_pkg/calculate_rewards.py
+rewards_pkg_23246642.egg-info/PKG-INFO
+rewards_pkg_23246642.egg-info/SOURCES.txt
+rewards_pkg_23246642.egg-info/dependency_links.txt
+rewards_pkg_23246642.egg-info/top_level.txt
