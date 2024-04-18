@@ -1,0 +1,7 @@
+{% for message in conversation_history %}{{ message.get_text() }}
+{% endfor %}
+
+
+Given the conversation above, who should act next?
+Or should we {{termination_token}}?
+Set next participant.

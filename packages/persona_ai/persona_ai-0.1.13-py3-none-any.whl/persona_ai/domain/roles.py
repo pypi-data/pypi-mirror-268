@@ -1,0 +1,5 @@
+USER = "user"
+AI = "ai"
+CODER = "coder"
+TECHNICIAN = "technician"
+PARTY = "party"
