@@ -1,0 +1,12 @@
+oem2orm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+oem2orm/main.py,sha256=Ga__dMSY2IHEyQl6Qjabo5Pt5cMYOZ92YEKVqN5LceE,1030
+oem2orm/oep_compliance.py,sha256=zkjaJ8HfZqArSWJ9JEqA6CqWPhK3x1E4EhigwZXYrTs,6638
+oem2orm/oep_oedialect_oem2orm.py,sha256=estTtQrh7WzlqjBpuWSYUOf2uR-mMSTz1qZsQwfrcNg,14615
+oem2orm/postgresql_types.py,sha256=-n0d8vos8Snh82ZBK11kDanwcvg_Lh44ccxgbds2VTw,1564
+oem2orm/settings.py,sha256=7FCCzD7AMH4kBoLoAQjjT-YSdQhVkDXa__YAWx9B3ow,90
+oem2orm-0.4.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+oem2orm-0.4.1.dist-info/METADATA,sha256=8U5LQ15Dvv1c83nPgNDy2OOevMxRYHWOoUEvYZxgjqo,4989
+oem2orm-0.4.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+oem2orm-0.4.1.dist-info/entry_points.txt,sha256=BJ2wRXyAt_5d-dTQ1LP_QGrHDQHHPnLzNrBWKYPDVmg,45
+oem2orm-0.4.1.dist-info/top_level.txt,sha256=xSb1cuX96EiIY_UNu1CLQt0GjfRZMHfDPqVDfi_Wmlw,8
+oem2orm-0.4.1.dist-info/RECORD,,
