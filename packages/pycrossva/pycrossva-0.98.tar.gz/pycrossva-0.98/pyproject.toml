@@ -1,0 +1,44 @@
+[project]
+name = "pycrossva"
+description = "Prepare data from WHO and PHRMC instruments for verbal autopsy algorithms"
+version = "0.98"
+readme = "Readme.rst"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy >= 1.22.0",
+    "pandas",
+    "Click",
+]
+authors = [
+  {name = "ekarpinskiMITRE"},
+  {name = "pkmitre"},
+  {name = "owentrigueros"},
+  {name = "Peter Choi"},
+  {name = "Yue Chu"},
+  {name = "Jason Thomas"},
+]
+maintainers = [
+  {name = "openVA Team", email = "help@openva.net"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+keywords = ["verbal autopsy", "data preparation"]
+
+[project.urls]
+"Homepage" = "https://github.com/verbal-autopsy-software/pyCrossVA"
+"Bug Tracker" = "https://github.com/verbal-autopsy-software/pyCrossVA/issues"
+
+[project.scripts]
+pycrossva-transform = "pycrossva.scripts.pycrossva_transform:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
