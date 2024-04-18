@@ -1,0 +1,3 @@
+[console_scripts]
+vtf=vite_to_flask:_cli
+
