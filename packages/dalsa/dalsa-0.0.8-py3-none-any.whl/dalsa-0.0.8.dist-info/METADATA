@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dalsa
+Version: 0.0.8
+Summary: This package does Aspect Level Sentiment Analysis (ALSA) on user comments about a given product
+Author: Mostafa Amiri
+Author-email: <mostafa.amiri.62@gmail.com>
+Keywords: python,crawler,dall company
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: regex
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: pandas
+Requires-Dist: googletrans ==3.1.0a0
+Requires-Dist: tqdm
+
