@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: computervisiontools
+Version: 0.1.0
+Summary: Overlay of PyTorch that contain utilities for basic task in computer vision (Image preprocessing, reading/writing images, set reproducibility, etc..).
+Author-email: Lucas Bernigaud Samatan <lucas.bernigaud-samatan@inrae.fr>
+Maintainer-email: Jordan Bernigaud Samatan <jordan.bernigaud-samatan@inrae.fr>
+License: The MIT License (MIT)
+        
+        Copyright (c) <year> <copyright holders>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in
+        all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+        THE SOFTWARE.
+Project-URL: Homepage, https://forgemia.inra.fr/ue-apc/librairies/python/detectools
+Project-URL: Issues, https://forgemia.inra.fr/ue-apc/librairies/python/detectools/-/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: torch ==2.1.0
+Requires-Dist: torchvision ==0.16.0
+
+<!--
+<p align="center">
+  <img src="https://github.com///raw/main/docs/source/logo.png" height="150">
+</p>
+-->
+
+<h1 align="center">
+  ComputerVisionTools
+</h1>
+
+
+Torch overlay for trainning and inference processes for object detection & instance segmentation tasks. 
+
+## 💪 Context
+
+computervisiontools is developped by INRAE (french National Research Institute for Agriculture, Food and the Environment) for the [PHENOME-EMPHASIS project](https://www.phenome-emphasis.fr/)
+
+## Install
+
+computervisiontools has mostly been tested under Python 3.10 (even if it should work with later versions). We recommend using 3.10.
+
+In your python environment run 
+
+```
+pip install computervisiontools
+```
+
+
+## Code access and documentation
+
+Source code  documentation will be accessible soon.

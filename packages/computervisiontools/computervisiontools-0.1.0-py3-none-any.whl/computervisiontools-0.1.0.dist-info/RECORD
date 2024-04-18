@@ -1,0 +1,8 @@
+computervisiontools/__init__.py,sha256=YZsz1nOjrHFJzVkPsx1C_nkYTnSeuModYZx77_8EJ1I,2977
+computervisiontools/preprocessing.py,sha256=ycnHqxaii5U8pGO1wI_awKc_CytErFgRmGUkwCfy4VU,2135
+computervisiontools/torchscripting.py,sha256=qCt9U189qc-6QptoctqHboNYJWtrMCM1VaPba245DoA,969
+computervisiontools-0.1.0.dist-info/LICENSE.txt,sha256=lEjfVP9pyv7E9S6kRAY4vYbc3485gE9iNcSwX-8Bu6Y,1087
+computervisiontools-0.1.0.dist-info/METADATA,sha256=Q4GY-piK1inxTSSA4cpzJzE7CTzyxSrXNw07AU29OXE,2943
+computervisiontools-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+computervisiontools-0.1.0.dist-info/top_level.txt,sha256=IUIYLXftp2t9RMVWhHKVcnWIPxCJv7JC-ugo6F4gmlo,20
+computervisiontools-0.1.0.dist-info/RECORD,,
