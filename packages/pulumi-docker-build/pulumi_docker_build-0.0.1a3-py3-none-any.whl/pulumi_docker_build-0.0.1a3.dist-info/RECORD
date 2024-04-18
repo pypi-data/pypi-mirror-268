@@ -1,0 +1,17 @@
+pulumi_docker_build/__init__.py,sha256=jbA6SMpisvwJDycUKuo4IXVJ5_qjIao_1iPP9lcZ-Vw,983
+pulumi_docker_build/_enums.py,sha256=yfsDmimBobvf70zx6VAR_6ABp50Dan452rpIFVs8jkA,1928
+pulumi_docker_build/_inputs.py,sha256=L_v8wgNW_tjfh4caAatNqLUzqJwmPRbFSFFXrAs0h88,97964
+pulumi_docker_build/_utilities.py,sha256=rA8XvgybOPKFzEaIJx85muKv85tzLL5lEBQ58eVLEzs,9265
+pulumi_docker_build/image.py,sha256=AXN-kxI63aLrYFwbwTYjIuRf8XiPaC-YDtmh7jmqUpo,76626
+pulumi_docker_build/index.py,sha256=KHTpB_4i7e3b2no1batLV7KyhYJrWUj-bEdKh9VEYYQ,13254
+pulumi_docker_build/outputs.py,sha256=l9VIy-AMXUdQffKVpYcR-KCdtc7huWQ2qCDhv_hgHVs,83253
+pulumi_docker_build/provider.py,sha256=5f1FtyHXjxcCA3nouMG5HVJyrBEdCB452ezcNt53NmQ,4780
+pulumi_docker_build/pulumi-plugin.json,sha256=aNWnPPkTjPtNuWio8hIVyGOPhfmTF0knTyxRragQ0dQ,102
+pulumi_docker_build/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pulumi_docker_build/config/__init__.py,sha256=YdGLR92OvYD0CYDgt_FTaHJOb_VzW8fto_Cgx6fLd3k,267
+pulumi_docker_build/config/__init__.pyi,sha256=2lJs0q5nxrEi63kCCpe7M23-j-0NiQu9UpKaYAWe5TM,441
+pulumi_docker_build/config/vars.py,sha256=6g1SHA-v-YBMxDX9KwlhaZZ3Yk7DzC5_EB2xz0FQiKo,756
+pulumi_docker_build-0.0.1a3.dist-info/METADATA,sha256=IeBXqw170V8JSN9pgBeD4VtD4Gp2rW0_bgDB6WLEIi0,4791
+pulumi_docker_build-0.0.1a3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pulumi_docker_build-0.0.1a3.dist-info/top_level.txt,sha256=-O-MiPQ61mhil3wD9QdYf8yA4r5vNPmBgSGdi9cOQ18,20
+pulumi_docker_build-0.0.1a3.dist-info/RECORD,,
