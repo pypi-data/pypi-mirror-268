@@ -1,0 +1,7 @@
+mlops_ods/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlops_ods/app/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlops_ods/app/example.py,sha256=IY_yi7FLveCYKYUzgJRRdWSwlTsRttbzgTEd7ls8058,50
+mlops_ods/notebooks/eda.ipynb,sha256=cEFBGmaIXvsObEGiRLVTBH7oPdGQqst2p8qDBMctJGM,9730895
+mlops_ods-0.1.202404180935.dist-info/METADATA,sha256=3oGhR-W5epJSSQnxebBD3HWS0XZ03ao1stdt5m47OOU,1478
+mlops_ods-0.1.202404180935.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+mlops_ods-0.1.202404180935.dist-info/RECORD,,

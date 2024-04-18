@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: mlops_ods
+Version: 0.1.202404180935
+Summary: 
+Author: Iuliia Fokina
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: folium (>=0.16.0,<0.17.0)
+Requires-Dist: geodatasets (>=2023.12.0,<2024.0.0)
+Requires-Dist: geopandas (>=0.14.3,<0.15.0)
+Requires-Dist: kaggle (>=1.6.12,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Description-Content-Type: text/markdown
+
+# MLOps ODS
+This project for ml model with MLOps instruments
+
+the methodology of repo (github flow - one main branch, and developing in other brunches):
+- main branch: 'master'
+- other branches: 'fix-', 'feature-', 'model-', 'experiment-'
+
+Docker image (build / run):
+```commandline
+docker build . -t mlops_ods_image
+docker run -it mlops_ods_image /bin/bash
+```
+build for linux:
+```commandline
+docker build . -t mlops_ods_image --platform linux/amd64
+```
+run with port and volumes if necessary:
+```commandline
+docker run -p 8888:8888 -v {path-to-local-folder-(pwd)}:/app/volumes -it mlops_ods_image /bin/bash
+```
+
+documentation of jupyter notebooks with quarto:
+```commandline
+quarto render
+
+quarto preview  src/mlops_ods/notebooks/eda.ipynb
+quarto render src/mlops_ods/notebooks/eda.ipynb --to html
+```
+
