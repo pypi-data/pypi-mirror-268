@@ -1,0 +1,115 @@
+# Cascade Knowledge Node SDK
+
+A Python package and CLI proxy to register LLM agents with the Cascade network. The SDK and proxy enable API driven tooling, distributed tracing, and data access control for Langchain type agents.
+
+## Architecture
+
+[Cascade White Paper](https://cisco.sharepoint.com/:w:/s/CiscoInnovationLabs/ET2Ln0sVSdpLv7pf3zmzIDgBl47YKhrO43KCA-VeWNM1KQ?e=lmyPza)
+
+The Cascade Knowledge Node SDK defines a composition class around the Langchain AgentExecutor, or similar interface. The primary purpose of the composer is to register the agent with the Cascade network and enable API driven prompting and tooling. Upon registry, the node subscribes to a [Nats](https://nats.io) pub/sub network to receive and respond to prompt and tooling requests from peer agents. The composer subscribes to:
+
+`tools.<agent_name>` - to receive tooling updates
+`knowledge.<agent-name>` - to receive prompts
+
+This enables other Cascade agents to prompt and mutate tools of the registered agent via the Nats message broker.
+
+When adding a remote agent as a new tool via a tooling event, the composer creates a Langchain [`Tool`](https://python.langchain.com/docs/modules/agents/tools/) from the event payload. When called, the tool issues a [Nats request/reply](https://docs.nats.io/using-nats/developer/sending/request_reply) to the remote agent defined in the event.
+
+Note that agents can be run on and deployed to any environment which has network connectivity to the Nats message broker. This enables Cascade nodes deployed on-prem, in the cloud, or on a local machine, to transact and be traced.
+
+### Agent Environment Variables
+
+If your agent requires user-specific environment variables to be set, such as an API token, simply prefix the variale key with `CASCADE_ENV_`. These variables will then be requested via the Cascade Hub UI on a per-user basis.
+
+## Agent Package Quick Start
+
+### Install the package
+
+1. Clone the repository.
+
+   ```bash
+   git clone https://github3.cisco.com/cilantro/cascade-knowledge-node-sdk.git
+   ```
+
+2. Install the package locally.
+   ```bash
+   python3.11 -m pip install -e ./cascade-knowledge-node-sdk
+   ```
+   Or via the remote package manager server:
+   ```bash
+   pip install --index-url http://10.85.153.74:3141/root/cascade_node_sdk --extra-index-url https://pypi.org/simple cascade_node_sdk==<VERSION}> --trusted-host 10.85.153.74 --no-cache-dir
+   ```
+
+### Usage
+
+Below is an example of how to use the `AgentWrapper` class to create a Cascade node.
+
+```python
+from cascade_node_sdk.agent import AgentWrapper
+from os import environ
+
+# create your agentExecutor object here
+agent_executor = ...
+
+cascade_node = AgentWrapper(
+    controller_host=environ["CONTROLLER_HOST"],
+    name="my_agent_name",
+    description="my agent description",
+    access_level="PRIVATE",
+    category="Natural Language",
+)
+
+cascade_node.run_agent(
+    agentExecutor=agent_executor,
+)
+```
+
+## CLI Proxy Quick Start
+
+The CLI proxy can be run via poetry or installed via pipx as a standalone CLI tool.
+
+```bash
+pipx install git+https://github3.cisco.com/cilantro/cascade-knowledge-node-sdk.git
+```
+
+In the following example we will configure [privateGPT](https://docs.privategpt.dev) as a Cascade RAG node using the CLI proxy. Follow the [installation](https://docs.privategpt.dev/#section/Installation-and-Settings) instructions to install privateGPT locally.
+
+Once installed, we can register the node with the Cascade CLI proxy:
+
+```bash
+poetry run cascade proxy --help
+```
+
+Or via pipx:
+
+```bash
+cascade proxy --help
+```
+
+Configure the proxy with the following command:
+
+```bash
+cascade proxy \
+    -n privateGPT \
+    -d "privateGPT RAG node, query XYZ documents" \
+    -c "Natural Language" \
+    -a "PRIVATE" \
+    -u "http://localhost:8001/v1/completions"
+```
+
+The node will subsequently be available for use in the Cascade Knowledge Tree Network.
+
+```bash
+Controller host: localhost
+Registering node: privateGPT
+Node description: privateGPT RAG node, query XYZ documents
+Node access level: PRIVATE
+Proxy to URL: http://localhost:8001/v1/completions
+
+INFO:root:Connected to NATS server at localhost:4222
+INFO:root:subscribed to topics: [ tools.privateGPT, tool-calling-method.privateGPT, knowledge.privateGPT, set-env.privateGPT ]
+```
+
+## Containerization
+
+See the repository [cascade-knowledge-nodes](https://github3.cisco.com/cilantro/cascade-knowledge-nodes) for examples of creating a containerized Cascade nodes.
