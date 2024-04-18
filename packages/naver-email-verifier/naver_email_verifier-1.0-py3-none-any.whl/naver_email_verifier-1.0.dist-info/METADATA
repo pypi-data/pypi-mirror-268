@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: naver-email-verifier
+Version: 1.0
+Summary: A Python library for verifying Naver email addresses.
+Author: Seok Won Choi
+Author-email: ikr@kakao.com
+License-File: LICENSE
+Requires-Dist: httpx
+
