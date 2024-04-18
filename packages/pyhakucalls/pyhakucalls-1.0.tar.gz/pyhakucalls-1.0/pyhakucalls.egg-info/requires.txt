@@ -1,0 +1,5 @@
+tgcalls==3.0.0.dev6
+av>=8.0
+opencv-python-headless~=4.5
+haku==1.0
+telethon>=1.24.0
