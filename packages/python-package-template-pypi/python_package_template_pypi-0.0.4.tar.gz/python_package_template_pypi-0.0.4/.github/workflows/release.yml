@@ -1,0 +1,22 @@
+---
+name: release
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  release:
+    uses: daniel-mizsak/workflows/.github/workflows/pypi.yml@main
+    with:
+      environment: pypi
+      python-version: "3.12"
+    secrets: inherit
+
+  gh-pages:
+    permissions:
+      contents: write
+
+    uses: daniel-mizsak/workflows/.github/workflows/gh-pages.yml@main
+    with:
+      python-version: "3.12"
