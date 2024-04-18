@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: django-tsso
+Version: 0.0.1b2
+Summary: Transparent Single Sign On for Django-based Service Provider
+Home-page: http://pypi.python.org/pypi/django-tsso
+Author: Vsevolod Novikov
+Author-email: nnseva@gmail.com
+Keywords: authentication,authorization,SSO,django
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.1
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Requires-Python: >=3.0
+License-File: LICENSE
