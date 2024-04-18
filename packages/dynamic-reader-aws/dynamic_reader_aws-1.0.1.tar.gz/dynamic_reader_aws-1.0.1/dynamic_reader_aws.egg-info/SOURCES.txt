@@ -1,0 +1,7 @@
+README.md
+setup.py
+dynamic_reader_aws.egg-info/PKG-INFO
+dynamic_reader_aws.egg-info/SOURCES.txt
+dynamic_reader_aws.egg-info/dependency_links.txt
+dynamic_reader_aws.egg-info/requires.txt
+dynamic_reader_aws.egg-info/top_level.txt
