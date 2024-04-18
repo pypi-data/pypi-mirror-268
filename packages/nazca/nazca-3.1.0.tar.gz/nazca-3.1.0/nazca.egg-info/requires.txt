@@ -1,0 +1,5 @@
+lxml<6.0.0,>=4.0.0
+numpy
+python-dateutil
+scikit-learn
+scipy
