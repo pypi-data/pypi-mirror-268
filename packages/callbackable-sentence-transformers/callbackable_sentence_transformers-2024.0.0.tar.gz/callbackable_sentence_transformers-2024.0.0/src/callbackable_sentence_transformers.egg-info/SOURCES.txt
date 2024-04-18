@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/callbackable_sentence_transformers/__init__.py
+src/callbackable_sentence_transformers/callbackable_sentence_transformers.py
+src/callbackable_sentence_transformers.egg-info/PKG-INFO
+src/callbackable_sentence_transformers.egg-info/SOURCES.txt
+src/callbackable_sentence_transformers.egg-info/dependency_links.txt
+src/callbackable_sentence_transformers.egg-info/requires.txt
+src/callbackable_sentence_transformers.egg-info/top_level.txt

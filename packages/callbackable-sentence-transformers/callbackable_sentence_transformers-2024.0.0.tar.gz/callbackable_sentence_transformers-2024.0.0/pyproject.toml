@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "callbackable-sentence-transformers"
+version = "2024.0.0"
+dependencies = [
+    "sentence_transformers",
+    "torch",
+    "tqdm",
+    "transformers"
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Cyrille Siouffi", email = "cyrille.siouffi@protonmail.com"}
+]
+maintainers = [
+  {name = "Cyrille Siouffi", email = "cyrille.siouffi@protonmail.com"}
+]
+description = "A simple package to add a new parameter for the SentenceTransformer class"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["sentence_transformers", "train", "log"]
+classifiers = [
+  "Programming Language :: Python"
+]
