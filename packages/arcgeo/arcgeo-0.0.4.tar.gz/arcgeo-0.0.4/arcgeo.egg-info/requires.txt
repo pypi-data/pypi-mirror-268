@@ -1,0 +1,12 @@
+ipyleaflet
+numpy
+pandas
+pyshp
+geopandas
+localtileserver
+
+[all]
+arcgeo[extra]
+
+[extra]
+pandas

@@ -1,0 +1,2 @@
+[console_scripts]
+arcgeo = arcgeo.cli:main

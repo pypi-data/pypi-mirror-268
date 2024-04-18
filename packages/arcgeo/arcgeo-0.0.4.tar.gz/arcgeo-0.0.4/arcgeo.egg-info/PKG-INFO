@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: arcgeo
+Version: 0.0.4
+Summary: Just a practice repo
+Author-email: Shabiha Hossain <sabihahossain4105@gmail.com>
+License: MIT License
+Project-URL: Homepage, https://github.com/Omiimo05/arcgeo
+Keywords: arcgeo
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ipyleaflet
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyshp
+Requires-Dist: geopandas
+Requires-Dist: localtileserver
+Provides-Extra: all
+Requires-Dist: arcgeo[extra]; extra == "all"
+Provides-Extra: extra
+Requires-Dist: pandas; extra == "extra"
+
+# arcgeo
+
+
+[![image](https://img.shields.io/pypi/v/arcgeo.svg)](https://pypi.python.org/pypi/arcgeo)
+[![image](https://img.shields.io/conda/vn/conda-forge/arcgeo.svg)](https://anaconda.org/conda-forge/arcgeo)
+
+
+**Just a practice repo**
+
+
+-   Free software: MIT License
+-   Documentation: https://Omiimo05.github.io/arcgeo
+    
+
+## Features
+
+-   TODO
