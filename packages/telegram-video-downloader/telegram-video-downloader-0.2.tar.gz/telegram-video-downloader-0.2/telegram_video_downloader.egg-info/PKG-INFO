@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: telegram-video-downloader
+Version: 0.2
+Summary: Command to download a video published on Telegram
+Author: David Grau Martínez
+Author-email: fe80grau@gmail.com
+Keywords: telegram video download
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Framework :: Flask
+Classifier: Topic :: Internet
+License-File: LICENSE
+Requires-Dist: quart
+Requires-Dist: telethon
