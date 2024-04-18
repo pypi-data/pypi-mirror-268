@@ -1,0 +1,10 @@
+dfpyre/__init__.py,sha256=apPsSxJ1Tztfl71MoORoSmDfX7LyKLYlLwOGeLQUitw,25
+dfpyre/data/data.json,sha256=M4EHXKkh7Cx7y3BQ6c3csvmNmSqP2oE4txLI9MZcDDA,30347
+dfpyre/items.py,sha256=t9KsvhPOEe36_E7CNdgxNmEKtOF6nMvNZURyYFiXJb4,9215
+dfpyre/pyre.py,sha256=wn75bzj4dteAMtOELuV7Q0Xe46FBcFbdzHlcc7yRnU4,16970
+dfpyre/scriptgen.py,sha256=OS9VfFSTjIaxa28FqMxfIQ0bdfIJsI0ZqJo3UhHTYJ4,5450
+dfpyre/style.py,sha256=mLW1CFvvi8_9fk8JaH10I5S4WI0YBdQIXHtI3G_4sR8,980
+dfpyre-0.6.0.dist-info/LICENSE,sha256=_vuDskB0ja2c-Fgm7Gt8Q8cO9NsLNpZAVyvmZwX7E6o,1060
+dfpyre-0.6.0.dist-info/METADATA,sha256=c0t4TVbXxz_KB-kYtz7MjJP_4kqIU463b156zMJJKD8,11344
+dfpyre-0.6.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+dfpyre-0.6.0.dist-info/RECORD,,
