@@ -1,0 +1,10 @@
+vcf2seq/__init__.py,sha256=D8k9FFE46cgJxip0pS72mk3ZaB1zDAoeInbigI2PeEo,163
+vcf2seq/ascii.py,sha256=2xN0P_e1EC4xznA3sYLaxI9v5hD_QX0uRpuxncX6uIU,2393
+vcf2seq/info.py,sha256=6cMJ1HDL2I8im9rEUr0nKSHOHeG26OlstQ91OMfElxE,215
+vcf2seq/vcf2seq.py,sha256=AJwO64nk28sGqGXFWMkS3mrlsUQGOTFfMXGvNHq2rjQ,11029
+vcf2seq-0.4.1a0.dist-info/LICENCE.md,sha256=M7wm1EmMGDtwPRdg7kW4d00h1uAXjKOT3HFScYQMeiE,34916
+vcf2seq-0.4.1a0.dist-info/METADATA,sha256=aISrVJpMf3VU1pqipRvXbc4pSF3aSewrP6MeN2Zd-Qc,2221
+vcf2seq-0.4.1a0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+vcf2seq-0.4.1a0.dist-info/entry_points.txt,sha256=MhC__3ZdCcraHohJKIHkttZL1zz4XmtPlEm1oC4FXz8,49
+vcf2seq-0.4.1a0.dist-info/top_level.txt,sha256=HESHhAESIze3_-sNqRetkvrvzLDK5TUzdYNtlsrIrKg,8
+vcf2seq-0.4.1a0.dist-info/RECORD,,
