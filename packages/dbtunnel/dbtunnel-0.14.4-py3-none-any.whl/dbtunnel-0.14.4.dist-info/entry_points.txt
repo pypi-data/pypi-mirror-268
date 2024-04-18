@@ -1,0 +1,2 @@
+[console_scripts]
+dbtunnel = dbtunnel.cli.cli:cli
