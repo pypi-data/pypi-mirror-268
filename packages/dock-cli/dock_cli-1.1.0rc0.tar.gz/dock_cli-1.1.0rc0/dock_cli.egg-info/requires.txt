@@ -1,0 +1,8 @@
+click~=8.1.7
+
+[test]
+pylint
+pytest
+pytest-cov
+pytest-mock
+pytest-pylint
