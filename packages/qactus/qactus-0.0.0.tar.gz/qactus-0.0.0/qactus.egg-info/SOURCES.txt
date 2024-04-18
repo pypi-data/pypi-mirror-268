@@ -1,0 +1,4 @@
+qactus.egg-info/PKG-INFO
+qactus.egg-info/SOURCES.txt
+qactus.egg-info/dependency_links.txt
+qactus.egg-info/top_level.txt
