@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: subspyces
+Version: 0.0.2
+Summary: subspyces - subspaces in python!
+Author: Matheus Lima
+Author-email: mlima@cvlab.cs.tsukuba.ac.jp
+License: UNKNOWN
+Keywords: python,subspyces,pytorch
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Classifier: Typing :: Typed
+License-File: LICENSE
+Requires-Dist: torch>=2.1.0
+Requires-Dist: torchvision>=0.16.0
+Requires-Dist: scikit-learn>=1.2.0
+
+Pytorch is a very powerfull framework for developing ML algorithms, but implementing subspace methods in torch can be a bit repetitive when we don't have a starting point. For this, we developed this simple library which encapsulates some useful code that can be re-used and easily integrated with other torch codebases.
