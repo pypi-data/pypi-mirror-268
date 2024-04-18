@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+plover_retro_untranslator/__init__.py
+plover_retro_untranslator/spelling_converter.py
+plover_retro_untranslator.egg-info/PKG-INFO
+plover_retro_untranslator.egg-info/SOURCES.txt
+plover_retro_untranslator.egg-info/dependency_links.txt
+plover_retro_untranslator.egg-info/entry_points.txt
+plover_retro_untranslator.egg-info/requires.txt
+plover_retro_untranslator.egg-info/top_level.txt
+plover_retro_untranslator.egg-info/zip-safe

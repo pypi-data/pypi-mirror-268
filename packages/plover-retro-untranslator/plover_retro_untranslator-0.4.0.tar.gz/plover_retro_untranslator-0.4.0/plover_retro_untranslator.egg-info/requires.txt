@@ -1,0 +1,2 @@
+plover>=4.0.0.dev8
+PyQt5>=5.5

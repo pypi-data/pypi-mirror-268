@@ -1,0 +1,2 @@
+[plover.macro]
+retro_untranslator = plover_retro_untranslator:retro_untranslator
