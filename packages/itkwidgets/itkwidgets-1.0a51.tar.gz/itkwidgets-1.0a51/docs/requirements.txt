@@ -1,0 +1,8 @@
+furo
+imjoy_jupyterlab_extension
+jupyterlite[all]==0.1.0b17
+myst-parser[linkify]
+sphinx-autodoc2>=0.5.0
+sphinx-copybutton
+sphinx-design
+sphinxext-opengraph
