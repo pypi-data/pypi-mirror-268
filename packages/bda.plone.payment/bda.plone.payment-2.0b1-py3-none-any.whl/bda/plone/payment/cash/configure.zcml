@@ -1,0 +1,19 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <adapter name="cash" factory=".Cash" />
+
+  <browser:page
+    for="*"
+    name="cash"
+    class=".DoCash"
+    permission="zope2.View" />
+
+  <browser:page
+    for="*"
+    name="cashed"
+    template="cash.pt"
+    class=".CashFinished"
+    permission="zope2.View" />
+
+</configure>

@@ -1,0 +1,318 @@
+Metadata-Version: 2.1
+Name: bda.plone.payment
+Version: 2.0b1
+Summary: Payment
+Author: BlueDynamics Alliance
+Author-email: dev@bluedynamics.com
+License: GNU General Public Licence
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Zope
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.rst
+License-File: LICENSE_GPL.rst
+Requires-Dist: setuptools
+Requires-Dist: Products.CMFPlone
+Requires-Dist: requests
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+
+=================
+bda.plone.payment
+=================
+
+Payment processors for ``bda.plone.shop``.
+
+
+Installation
+============
+
+This package is part of the ``bda.plone.shop`` stack. Please refer to
+``https://github.com/bluedynamics/bda.plone.shop`` for installation
+instructions.
+
+
+Available Processors
+====================
+
+Following payment processors are available
+
+
+Cash
+----
+
+Useful when selling stuff which gets paid on-site.
+
+All Data is sent via email.
+
+Administrators exports orders or teller staff marks orders billed instantly
+in backend.
+
+
+Cash in advance
+---------------
+
+All Data is sent via email.
+
+Administrators send an invoice by e-mail.
+
+Administrators need to mark the order as billed manually after they received
+the payment.
+
+
+Cash on delivery
+----------------
+
+All Data is sent via email.
+
+Administrators send an invoice by e-mail.
+
+Administrators need to mark the order as billed manually after sending with
+service providing cash on delivery.
+
+
+Debit Order
+-----------
+
+Useful when customers are well known and permission to perform debit orders
+is granted.
+
+All Data is sent via email.
+
+Administrators take action and mark orders salaried.
+
+
+Invoice
+-------
+
+All Data is sent via email.
+
+Administrators send an invoice by e-mail.
+
+Administrators need to mark the order as billed manually after they received
+the payment.
+
+
+SIX-Payment
+-----------
+
+Redirect payment using ``https://www.saferpay.com``.
+
+Order is marked automatically salaried if payment succeed.
+
+Administrator needs to take action if payment failed.
+
+**TODO**: move six payment processor to ``bda.plone.sixpayment``
+
+
+Addon Payment processors
+========================
+
+Following addon payment processors are known:
+
+* https://github.com/bluedynamics/bda.plone.stripe
+* https://github.com/intk/bda.plone.ogonepayment
+* https://github.com/intk/bda.plone.molliepayment
+* https://github.com/intk/bda.plone.easyidealpayment
+* https://github.com/espenmn/bda.plone.klarnainvoice
+* https://github.com/espenmn/bda.plone.klarnapayment
+* https://github.com/espenmn/bda.plone.dibspayment
+
+If you have implemented another payment processors or know other
+implementations than the listed one, please let us know.
+
+
+Providing a payment processor
+=============================
+
+XXX
+
+
+Customize existing payment processors
+=====================================
+
+To de-activate a payment processor unconfigure it using `z3c.unconfigure`_:
+
+.. code-block:: xml
+
+    <include package="z3c.unconfigure" file="meta.zcml"/>
+    <include package="bda.plone.payment"/>
+    <unconfigure>
+      <adapter
+        name="six_payment"
+        factory="bda.plone.payment.six_payment.SixPayment" />
+    </unconfigure>
+
+.. _`z3c.unconfigure`: https://pypi.python.org/pypi/z3c.unconfigure
+
+
+Create translations
+===================
+
+::
+    $ cd src/bda/plone/payment/
+    $ ./i18n.sh
+
+
+Contributors
+============
+
+- Robert Niederreiter (Author)
+- Harald Frießnegger
+- Peter Holzer
+
+Changelog
+=========
+
+2.0b1 (2024-04-17)
+------------------
+
+- Introduce ``IPayment.clear_session`` flag.
+  [rnix]
+
+- Introduce ``IPayment.clear_session`` flag.
+  [rnix]
+
+- No longer support for z3c.autoinclude.
+  [jensens]
+
+- Migrate SIX Saferpay to JSON API.
+  [rnix]
+
+- Code style black.
+  [jensens]
+
+- Turn hard depenency indirection on bda.plone.shop into soft dependency with failover.
+  [jensens]
+
+- Avoid circular import (testing only).
+  [jensens]
+
+- Python 2/3 compatibility
+  [agitator]
+
+- Update version and classifiers - 2.x targets Plone 5.1/5.2 without Archetypes
+  [agitator]
+
+
+1.0a1 (unreleased)
+------------------
+
+- Replace unittest2 by unittest
+  [llisa123]
+
+- Rename invoice payment related views to avoid conflicts with bda.plone.orders
+  invoice view.
+  [rnix]
+
+- Fix shop admin email address lookup in sic payment.
+  [rnix]
+
+- Fix: Provide plone.protect authenticator token in invoice payment process
+  [jensens]
+
+- Plone 5 update
+  [rnix, agitator]
+
+
+0.5
+---
+
+- Add ``bda.plone.payment.cash_on_delivery.ICashOnDeliverySettings``.
+  [rnix]
+
+- Add "Cash on delivery" payment.
+  [rnix]
+
+- Add "Cash in advance" payment.
+  [rnix]
+
+
+0.4
+---
+
+- Remove ``available`` and ``default`` attributes from
+  ``bda.plone.payment.cash.Cash``,
+  ``bda.plone.payment.debit_order.DebitOrder``,
+  ``bda.plone.payment.invoice.Invoice`` and
+  ``bda.plone.payment.six_payment.SixPayment`` since they are provided by base
+  class now. **Note** - Remove class patches for ``availability`` and
+  ``default`` settings from your integration packages and and use controlpanel
+  settings in ``bda.plone.shop``.
+  [rnix]
+
+- Add missing ``pid`` attribute to ``bda.plone.payment.Payment``.
+  [rnix]
+
+- Implement ``available`` and ``default`` properties on
+  ``bda.plone.payment.Payment`` using settings from
+  ``bda.plone.payment.interfaces.IPaymentSettings``.
+  [rnix]
+
+- Introduce ``bda.plone.payment.interfaces.IPaymentSettings``.
+  [rnix]
+
+
+0.3
+---
+
+- Remove ``bda.plone.payment.six_payment.ISixPaymentData`` interface. Use
+  ``bda.plone.payment.interfaces.IPaymentData`` instead.
+  [rnix]
+
+
+0.2
+---
+
+- show "emails sent" status message when displaying the
+  "thanks for your order" page of the invoce payment processor.
+  in addition, show the order id
+  [fRiSi]
+
+- fix lookup for default IPayment adapter in case no default adapter
+  is registered
+  [fRiSi]
+
+
+0.1
+---
+
+- initial work
+  [rnix]
+
+License
+=======
+
+Copyright (c) 2012-2019, BlueDynamics Alliance, Austria
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this 
+  list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this 
+  list of conditions and the following disclaimer in the documentation and/or 
+  other materials provided with the distribution.
+* Neither the name of the BlueDynamics Alliance nor the names of its 
+  contributors may be used to endorse or promote products derived from this 
+  software without specific prior written permission.
+      
+THIS SOFTWARE IS PROVIDED BY BlueDynamics Alliance ``AS IS`` AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL BlueDynamics Alliance BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
