@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/frictionlessdata/frictionless-py/main/data/profiles/required.json",
+  "name": "name",
+  "resources": [
+    {
+      "name": "name",
+      "path": "table.csv"
+    }
+  ]
+}
