@@ -1,0 +1,165 @@
+{% from 'navigation.tmpl' import match %}
+
+{% call(header) match('DesignTransactionBody.TransactionContentDetails', Transaction) %}
+
+{% call(design) match('TransactionData.DesignApplicationDetails.DesignApplication', header) %}
+{% set design_count = design | get_designs_count(header) %}
+{% set design_pos = design | get_designs_pos(header) %}
+{% set kind = design | translate_kind(header) %}
+type: 'DESIGN'
+subtype: 'Open'
+designGrouping: 'Multiple'
+designsCount: {{ design_count }}
+designPos: {{ design_pos }}
+kind:
+  - {{kind}}
+registrationOfficeCode: {{ design.RegistrationOfficeCode }}
+designatedCountries:
+    - {{ design.RegistrationOfficeCode }}
+
+reference:
+{% if header | is_international %}
+  office: WO
+  registration:
+    - number: {{ design.DesignApplicationNumber | get_ir_refnum }}
+{% endif %}
+{% if not kind == 'Industrial Design' %}
+  office: {{ design.RegistrationNumber }}
+{% endif %}
+
+{% set idstatus = design.DesignDetails.Design | translate_status %}
+{% set appdate = design.DesignApplicationDate | get_appdate(design.DesignApplicationNumber) %}
+
+st13: {{ design.DesignApplicationNumber | st13(design.RegistrationOfficeCode, design_pos, appdate=appdate) }}
+
+applicationNumber: {{ design.DesignApplicationNumber }}
+applicationDate: {{ design.DesignApplicationDate }}
+registrationNumber: {{ design.DesignDetails.Design | get_registration_nb(idstatus) | remove_trailing('-') }}
+registrationDate: {{ design.DesignDetails.Design | get_registration_date(idstatus) }}
+publicationDate: {{ (design.DesignDetails.Design.PublicationDetails.Publication | last).PublicationDate }}
+expiryDate: {{ design.DesignDetails.Design | get_expiry_date(idstatus) }}
+
+applicationLanguageCode: {{ design.DesignApplicationLanguageCode }}
+
+officeStatus: {{ design.DesignDetails.Design.DesignCurrentStatusCode | parseStatus }}
+gbdStatus: {{ idstatus }}
+statusDate: {{ design.DesignDetails.Design.DesignCurrentStatusDate }}
+
+designDescription:
+  - languageCode: {{ design.DesignDetails.Design.DesignDescription | guess_language(design.DesignApplicationLanguageCode) }}
+    text: {{ design.DesignDetails.Design.DesignDescription }}
+
+designImageDetails:
+{% call(sheet) match('DesignRepresentationSheetDetails.DesignRepresentationSheet', design.DesignDetails.Design) %}
+{% call(img) match('RepresentationSheetFilename',sheet) %}
+  - name: {{ img }}
+{% endcall %}
+{% endcall %}
+applicants:
+  {% call(applicant) match('ApplicantDetails.Applicant', design.DesignDetails.Design) %}
+    {% call(details) match('ApplicantAddressBook.FormattedNameAddress.Name.FreeFormatName', applicant) %}
+      - identifier: {{ details.ApplicantIdentifier }}
+        fullName:
+          {% call(nameline) match('FreeFormatNameDetails.FreeFormatNameLine', details) %}
+          {% if nameline | has_value %}
+          - text: {{ nameline }}
+            languageCode: {{ nameline.__value | guess_language(nameline._languageCode, design.DesignApplicationLanguageCode) }}
+          {% endif %}
+          {% endcall %}
+      {% endcall %}
+      {% call(address) match('ApplicantAddressBook.FormattedNameAddress.Address', applicant) %}
+        fullAddress:
+          {% call(adrline) match('FreeFormatAddress.FreeFormatAddressLine', address) %}
+          {% if adrline | has_value %}
+          - text: {{ adrline }}
+            languageCode: {{ adrline | guess_language(adrline._languageCode, design.DesignApplicationLanguageCode) }}
+          {% endif %}
+          {% endcall %}
+        countryCode: {{ address.AddressCountryCode | remove_trailing('-', '.') | remove_numerics }}
+      {% endcall %}
+    {% endcall %}
+
+representatives:
+  {% call(representative) match('RepresentativeDetails.Representative', design.DesignDetails.Design) %}
+    {% call(details) match('RepresentativeAddressBook.FormattedNameAddress.Name.FreeFormatName', representative) %}
+      - identifier: {{ details.RepresentativeIdentifier }}
+        fullName:
+          {% call(nameline) match('FreeFormatNameDetails.FreeFormatNameLine', details) %}
+          - text: {{ nameline }}
+            languageCode: {{ nameline.__value | guess_language(nameline._languageCode, design.DesignApplicationLanguageCode) }}
+          {% endcall %}
+      {% endcall %}
+      {% call(address) match('RepresentativeAddressBook.FormattedNameAddress.Address', representative) %}
+        fullAddress:
+          {% call(adrline) match('FreeFormatAddress.FreeFormatAddressLine', address) %}
+          {% if not adrline == '-' %}
+          - text: {{ adrline }}
+            languageCode: {{ adrline | guess_language(adrline._languageCode, design.DesignApplicationLanguageCode) }}
+          {% endif %}
+          {% endcall %}
+        countryCode: {{ address.AddressCountryCode | remove_trailing('-', '.') | remove_numerics }}
+      {% endcall %}
+    {% endcall %}
+
+designer:
+  {% call(designer) match('DesignerDetails.Designer', design.DesignDetails.Design) %}
+    {% call(details) match('DesignerAddressBook.FormattedNameAddress.Name.FreeFormatName', designer) %}
+      - identifier: {{ details.DesignerIdentifier }}
+        fullName:
+          {% call(nameline) match('FreeFormatNameDetails.FreeFormatNameLine', details) %}
+          - text: {{ nameline }}
+            languageCode: {{ nameline.__value | guess_language(nameline._languageCode, design.DesignApplicationLanguageCode) }}
+          {% endcall %}
+      {% endcall %}
+      {% call(address) match('DesignerAddressBook.FormattedNameAddress.Address', designer) %}
+        fullAddress:
+          {% call(adrline) match('FreeFormatAddress.FreeFormatAddressLine', address) %}
+          {% if not adrline == '-' %}
+          - text: {{ adrline }}
+            languageCode: {{ adrline | guess_language(adrline._languageCode, design.DesignApplicationLanguageCode) }}
+          {% endif %}
+          {% endcall %}
+        countryCode: {{ address.AddressCountryCode | remove_trailing('-', '.') | remove_numerics }}
+      {% endcall %}
+    {% endcall %}
+
+productIndicationClasses:
+{% call(indicationProducts) match('IndicationProductDetails.IndicationProduct', design.DesignDetails.Design) %}
+  - kind: {{ indicationProducts.ClassificationKindCode | lower }}
+    version: {{ indicationProducts.ClassificationVersion}}
+    classes:
+    {% call(code) match('ClassDescriptionDetails.ClassDescription', indicationProducts) %}
+      - code: {{ code.ClassNumber }}
+        description: {{ code.ProductDescription}}
+    {% endcall %}
+{% endcall %}
+
+productIndication:
+{% call(indic) match('DesignTitle', design.DesignDetails.Design) %}
+  - languageCode: {{ indic | guess_language(indic._languageCode, design.DesignApplicationLanguageCode) }}
+    text: {{ indic }}
+  {% endcall %}
+
+noveltyStatement:
+{% call(indic) match('NoveltyStatement', design.DesignDetails.Design) %}
+  - languageCode: {{ indic | remove_trailing('-', '.')  | guess_language(indic._languageCode, design.DesignApplicationLanguageCode) }}
+    text: {{ indic | remove_trailing('-', '.') }}
+  {% endcall %}
+
+
+priorities:
+  {% call(priority) match('PriorityDetails.Priority', design.DesignDetails.Design) %}
+    - countryCode: {{ priority.PriorityCountryCode }}
+      number: {{ priority.PriorityNumber }}
+      date: {{ priority.PriorityDate }}
+  {% endcall %}
+
+publications:
+  {% call(pub) match('PublicationDetails.Publication', design.DesignDetails.Design) %}
+  - identifier: {{ pub.PublicationIdentifier}}
+    date: {{ pub.PublicationDate}}
+    section:
+  {% endcall %}
+
+{% endcall %}
+{% endcall %}

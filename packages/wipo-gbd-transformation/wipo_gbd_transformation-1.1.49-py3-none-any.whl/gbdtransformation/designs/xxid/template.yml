@@ -1,0 +1,148 @@
+{% from 'navigation.tmpl' import match %}
+
+design:
+  type: # DESIGN
+  subtype: # (OPEN|SEALED) -INID 27 - SealedDepositIndicator
+  designGrouping: # SINGLE|MULTIPLE
+  kind:
+    - # DESIGN|DESING PATENT(US)
+  registrationOfficeCode:
+  designatedCountries:
+    - str (CountryCode)
+  # rarely passed
+  filingPlace:
+
+  # some collections indicate that the application
+  # originates from international filing and provide IR number
+  applicationRefNumber:
+  applicationRefOrigin:
+
+  # can be deduced from appnum given office cc and (optional) appdate
+  st13: # {{ Design.ApplicationNumber | st13('XX', appdate=... }}
+
+  applicationNumber:
+  # dates can be converted if not matching expected format
+  applicationDate: # ex: {{ Design.ApplicationDate | convertdate('%Y%m%d') }}
+
+  # some collections have registration number
+  # equals application number when registered
+  registrationNumber:
+  # some collections we can guess registration date
+  # from event list
+  registrationDate:
+  publicationDate:
+  effectiveDate:
+  defermentPeriod:
+  expiryDate:
+
+  applicationLanguageCode:
+  # rarely passed
+  secondLanguageCode:
+
+  # status as is in the document
+  officeStatus:
+  # status as translated to gbdFormat
+  gbdStatus:  # (Ended|Expired|Pending|Registered|Unknown)
+  # can also be the date of the last event in markevents if given
+  statusDate:
+
+  designDescription: #Init 57
+    - languageCode:
+      text:
+
+  productDisclaimer:
+    - languageCode:
+      text:
+
+  designImageDetails:
+    - name:
+      legend:
+          - string
+
+  applicants:
+    - identifier:
+      kind:
+      fullName:
+        - languageCode:
+          text:
+      fullAddress:
+        - languageCode:
+          text:
+      countryCode: # sometimes, country name is provided instead
+
+  representatives:
+    - identifier:
+      kind:
+      fullName:
+        - languageCode:
+          text:
+      fullAddress:
+        - languageCode:
+          text:
+      countryCode:
+
+  designer:
+    - identifier:
+      kind:
+      fullName:
+        - languageCode:
+          text:
+      fullAddress:
+        - languageCode:
+          text:
+      countryCode:
+
+  correspondence:
+    fullName:
+      - languageCode:
+        text:
+    fullAddress:
+      - languageCode:
+        text:
+    countryCode:
+
+  productIndicationClasses:
+    - kind: Locarno/US/CA/Etc
+      version:  #mostly
+      code:
+
+  productIndication:
+    - languageCode:
+      text:
+
+  records:
+    - identifier:
+      officeKind:
+      gbdKind:
+      officeStatus:
+      gbdStatus:
+      statusDate:
+
+  exhibition:
+    - date:
+      name:
+      location:
+
+  priorities:
+    - countryCode:
+      number:
+      date:
+      comment:
+
+  publications:
+    - identifier:
+      date:
+      section:
+
+  events:
+    - officeKind:
+      gbdKind: # Filed, Withdrawn, Rejected, Unknown
+      date:
+  # here goes extra information that is office specific and that is pertinent for us to retain.
+  extra:
+
+
+
+
+
+
