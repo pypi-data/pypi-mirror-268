@@ -1,0 +1,12 @@
+relation_validator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+relation_validator/__main__.py,sha256=zq7I2-Nq3ESbJnbsQyX8gp377D-nQA-Yy0zLMReqHG0,1335
+relation_validator/conf/__init__.py,sha256=CzxIFC1-IrmZmWFzJEkiOUNn--j7RZmiQJgDaObgsrM,64
+relation_validator/conf/obograph-style.json,sha256=BUm6IsqSzlGW_OT4YsddnyMblLZH6ZsuCYuFb5blPU4,3501
+relation_validator/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+relation_validator/utils/utils.py,sha256=AUyMKDxEy-8pZqKEk1dtsHBci7jZEWEtLvxxWQooZFQ,5583
+relation_validator/validator.py,sha256=_0FN0-fB-S9j8o4Da4jWfMWqEFi2iE48PaYBZxWJyAA,1828
+relation_validator-0.5.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+relation_validator-0.5.1.dist-info/METADATA,sha256=Nzn_YehYFg5IxS6z_F5llYi2pUP_iH1o_NNmF2M2JyM,4179
+relation_validator-0.5.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+relation_validator-0.5.1.dist-info/entry_points.txt,sha256=vhu9eJmsa8wJzwQAZZqOsQxS2eksZ6qOfLz8qYTSEy4,71
+relation_validator-0.5.1.dist-info/RECORD,,

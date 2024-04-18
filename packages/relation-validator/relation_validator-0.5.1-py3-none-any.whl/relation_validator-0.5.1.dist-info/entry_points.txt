@@ -1,0 +1,3 @@
+[console_scripts]
+relation-validator=relation_validator.__main__:main
+
