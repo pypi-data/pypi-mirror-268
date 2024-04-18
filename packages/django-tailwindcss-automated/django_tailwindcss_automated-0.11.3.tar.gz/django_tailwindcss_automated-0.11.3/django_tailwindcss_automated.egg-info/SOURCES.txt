@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+django_tailwindcss_automated/__init__.py
+django_tailwindcss_automated/main.py
+django_tailwindcss_automated.egg-info/PKG-INFO
+django_tailwindcss_automated.egg-info/SOURCES.txt
+django_tailwindcss_automated.egg-info/dependency_links.txt
+django_tailwindcss_automated.egg-info/entry_points.txt
+django_tailwindcss_automated.egg-info/top_level.txt
