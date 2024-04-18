@@ -1,0 +1,9 @@
+{
+  "raw_plot": {
+    "x_data_column_name": "record_timestamp",
+    "y_data_column_name": "x_nom",
+    "graph_line_color": "black",
+    "graph_line_thickness": 1,
+    "mean_offset": 0.02
+  }
+}
