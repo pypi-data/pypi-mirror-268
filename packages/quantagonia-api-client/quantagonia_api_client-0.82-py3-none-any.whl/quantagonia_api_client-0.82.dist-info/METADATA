@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: quantagonia-api-client
+Version: 0.82
+Summary: This package contains APIs for accessing Quantagonia's HybridSolver for solving MIPs and QUBOs through native file formats or PuLP resp. PyQUBO, Qiskit, or Ocean
+Home-page: https://www.quantagonia.com
+Author: Quantagonia GmbH
+Author-email: apis@quantagonia.com
+Keywords: Optimization,Linear Programming,Operations Research
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: urllib3 >=1.26
+Requires-Dist: pyqubo
+Requires-Dist: pulp
+Requires-Dist: yaspin
+Requires-Dist: qiskit
+Requires-Dist: qiskit-optimization
+Requires-Dist: dwave-ocean-sdk
+Requires-Dist: concurrencytest
+Requires-Dist: parameterized
+Requires-Dist: typer[all]
+Requires-Dist: singledispatchmethod ; python_version <= "3.7"
+
+# Quantagonia API Client
+
+This package contains Quantagonia's CLI client and client-side APIs for using HybridSolver in the cloud.
+
+## Installation
+
+Python >= 3.8 is required. Then, do
+```
+python -m pip install quantagonia-api-client
+```
+In order to use HybridSolver through Quantagonia's cloud system, you'll need to sign up for an API key and set it system-wide by
+```
+export QUANTAGONIA_API_KEY=<your API key here>
+```
+
+## Quick start: using the CLI client
+
+This package provides the script `hybridsolver` to interact with the
+cloud solver. In order to solve a MIP (supported formats: `.mps, .lp,
+.mps.gz, .lp.gz`) or QUBO (spported formats: `.qubo, .qubo.gz`), just
+use
+```
+hybridsolver solve path/to/example.mps
+```
+which will automatically set all parameters and solver controls to their default value, which is a good compromise for many middle-sized
+optimization problems out there.
+
+The `solve` call has a few options (try `hybridsolver solve --help`) and will, after submitting the problem, stream the logs and output the
+solution vector if one is found.
+
+To start a job without attaching to its log stream and leave it running in the background, use
+```
+hybridsolver submit path/to/example.mps
+```
+which supports the same parameters as `solve` and returns a `job_id`.
+using this ID, logs, results and job status as well as time billed can
+be retrieved using
+```
+hybridsolver (logs | solution | status | time_billed) job_id
+```
+Lastly, in order to cancel a runnning job and avoid unnecessary
+costs, use `hybridsolver cancel job_id`. To list `k` active and/or past jobs,
+use `hybridsolver list --n=k`.
+
+## Using the API client in your own code
+
+The capabilities of the API client include, but are not limited to:
+- a plugin for PuLP to solve PuLP-generated models locally and in the client,
+- a simple API to model QUBOs locally and solve them in the cloud and
+- an importer to convert PyQUBO models into our format - allowing to solve PyQUBO models in QUantagonia's cloud.
+
+For starters, you can run the examples in `examples/` through, e.g.,
+```
+QUANTAGONIA_API_KEY="<redacted>" python examples/submit_qubo.py
+```
+with a valid Quantagonia API key.
+
+For more details, we refer to our [API reference](https://docs.quantagonia.com).
