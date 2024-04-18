@@ -1,0 +1,2 @@
+[console_scripts]
+pih-auto = AutomationService.__main__:start
