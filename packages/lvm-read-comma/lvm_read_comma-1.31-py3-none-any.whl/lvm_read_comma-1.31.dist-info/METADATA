@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: lvm_read_comma
+Version: 1.31
+Summary: LabView Measurement File Reader
+Home-page: https://github.com/Professor-0/lvm_read
+Author: Janko Slavič et al.
+Author-email: Theo Waltwood <professor-000@outlook.com>
+Project-URL: Homepage, https://github.com/professor-000/lvm_read
+Project-URL: Issues, https://github.com/professor-000/lvm_read/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+lvm_read
+========
+
+LabView Measurement file reader
+-------------------------------
+
+|pytest|
+
+|binder| to test the *Showcase lvm_read.ipynb*. 
+
+.. |binder| image:: http://mybinder.org/badge.svg 
+   :target: http://mybinder.org:/repo/ladisk/lvm_read
+.. |pytest| image:: https://github.com/ladisk/lvm_read/actions/workflows/python-package.yml/badge.svg
+    :target: https://github.com/ladisk/lvm_read/actions
+
+See also `Specifications <http://www.ni.com/tutorial/4139/en/>`_.
+
