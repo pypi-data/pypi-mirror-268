@@ -1,0 +1,14 @@
+symbolx/__init__.py,sha256=Eucqc-ZUcOhmSDMHthJ-R35wzaFV_B7GdTnGn0qifzA,869
+symbolx/handler.py,sha256=xQWHEf5oJK8zhPcDoZTzF7tG6ruqGm20WmEqBjDQkuo,12242
+symbolx/settings.py,sha256=_MPyJxVVsCclSB2cGVfW7pOuilkRJQoGPKVI_CTiFK4,1131
+symbolx/symbols.py,sha256=BsBvDuHx-1z9QUIgdOJew3lwpd2KAdxxxlRRucD9oIw,69308
+symbolx/utils.py,sha256=9pOpYEH1wXogztGbDiCZYD201sp2wEOLxQSTL7ZaWMk,6721
+symbolx/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+symbolx/parsers/parser_csv.py,sha256=o-gusPIaLBSeGXToEJzoPvtFodL_D55X-bBmY62YuWw,4615
+symbolx/parsers/parser_feather.py,sha256=dUQQKEgX2HCKJn1O2Q1uVaecXd-IJZ820ITs7sQ8HmU,3419
+symbolx/parsers/parser_gdx.py,sha256=JXv8pMiiSOljs0NXEx-innmW5k4uz6lEOtxN-Dob4uU,14117
+symbolx-0.4.3.dist-info/LICENSE,sha256=tuiTXVmco9Zhsk8bw15TwWH8x_Wl6C0ucPw4SOO44zM,1069
+symbolx-0.4.3.dist-info/METADATA,sha256=MbZxLQ99XaTjIJVWKoJzAFc3vpVDR0wq54ak7RRsU-c,3188
+symbolx-0.4.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+symbolx-0.4.3.dist-info/top_level.txt,sha256=Tvp2usM83v7sXGBog2cqHPwVC9D7yUjVS0GoZEAG3bc,8
+symbolx-0.4.3.dist-info/RECORD,,
