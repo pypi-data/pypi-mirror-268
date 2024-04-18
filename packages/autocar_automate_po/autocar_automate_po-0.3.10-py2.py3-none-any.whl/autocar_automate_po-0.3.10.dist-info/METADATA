@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: autocar_automate_po
+Version: 0.3.10
+Summary: autocar_po_automate
+Home-page: https://github.com/MuseHorizon/autocar_automate_po
+Author: Jean Henstock
+Author-email: jjhenstockwork@gmail.com
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: pyperclip
+Requires-Dist: xlwings
+
+# autocar_automate_po
