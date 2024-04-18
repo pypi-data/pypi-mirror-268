@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "diagrams-otc"
+version = "0.23.6"
+description = "Diagram as Code/Open Telekom Cloud Extensions"
+license = "MIT"
+authors = ["akyriako <akriotis.kyriakos@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/akyriako/diagrams"
+repository = "https://github.com/akyriako/diagrams"
+include = ["resources/**/*", "assets/**/*"]
+packages = [{include = "diagrams"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.7"
+graphviz = ">=0.13.2,<0.21.0"
+jinja2 = ">=2.10,<4.0"
+typed-ast = "^1.5.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.3"
+pylint = "^2.7"
+rope = "^0.14.0"
+isort = "^4.3"
+black = "^22.12.0"
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
