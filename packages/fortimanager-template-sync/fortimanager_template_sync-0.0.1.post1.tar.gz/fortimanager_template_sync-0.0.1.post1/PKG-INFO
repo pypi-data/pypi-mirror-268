@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: fortimanager_template_sync
+Version: 0.0.1.post1
+Summary: FortiManager Template Sync
+Author-email: Viktor Kertesz <vkertesz2@gmail.com>
+Requires-Python: >=3.9,<4
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Networking
+Requires-Dist: GitPython
+Requires-Dist: pydantic>2,<3
+Requires-Dist: typer
+Requires-Dist: pydantic-settings
+Requires-Dist: more-itertools
+Requires-Dist: pyfortinet
+Requires-Dist: jinja2
+Requires-Dist: ruamel.yaml
+Requires-Dist: python-dotenv
+Requires-Dist: pytest-cov ; extra == "dev"
+Requires-Dist: pytest ; extra == "dev"
+Requires-Dist: pytest-dependency ; extra == "dev"
+Requires-Dist: flit ; extra == "dev"
+Requires-Dist: invoke ; extra == "dev"
+Requires-Dist: ruff ; extra == "dev"
+Requires-Dist: pre-commit ; extra == "dev"
+Requires-Dist: mypy ; extra == "dev"
+Requires-Dist: mkdocs-material ; extra == "dev"
+Requires-Dist: mkdocs-material-extensions ; extra == "dev"
+Requires-Dist: mkdocs-gen-files ; extra == "dev"
+Requires-Dist: mkdocstrings-python ; extra == "dev"
+Requires-Dist: mkdocs-section-index ; extra == "dev"
+Requires-Dist: mkdocs-literate-nav ; extra == "dev"
+Requires-Dist: mkdocs-autorefs ; extra == "dev"
+Requires-Dist: rich ; extra == "rich"
+Project-URL: Documentation, https://realvitya.github.io/fortimanager-template-sync/
+Project-URL: Source, https://github.com/realvitya/fortimanager-template-sync
+Provides-Extra: dev
+Provides-Extra: rich
+
+# FortiManager GIT sync tool
+
+This project aims to synchronize CLI templates from a GIT repository to FortiManager
+via API calls automatically.
+
+## Features
+
+1. Test run
+2. Check FW sync status before update
+3. Error checking during update (rollback on error is supported by Workspace mode ADOMs)
+4. Deploy changes to firewalls
+5. CI/CD support
+
+## Introduction
+
+FMG by itself does not support GIT repository as backend to store CLI templates which
+makes it hard to manage changes. Using GIT has many advances like tracking history, easy rollback to a version
+in time. Additionally one could use GitHub to even manage developing these templates in a team with tools like
+approval, review process, comments amongst others. Once the template changes are developed and approved, GIT can
+merge the changes to its production branch which can trigger a run of this tool to sync up the changes to FMG.
+
+This is beta software, do not use in production before testing!!
+
+## Installation
+
+This tool is intended to run via console or GIT runner with CI/CD.
+
+Quick installation:
+``` shell
+pip install fortimanager-template-sync[rich]
+```
+
+[Quick Start Guide](https://realvitya.github.io/fortimanager-template-sync/user_guide/quickstart/) will do a quick
+tour on setup but it is recommended to read the full documentation:
+[User Guide/Installation](https://realvitya.github.io/fortimanager-template-sync/user_guide/installation/)
+

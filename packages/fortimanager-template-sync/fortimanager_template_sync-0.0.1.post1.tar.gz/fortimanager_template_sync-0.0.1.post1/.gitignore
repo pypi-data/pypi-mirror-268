@@ -1,0 +1,12 @@
+/.env
+__pycache__
+.idea/
+/private
+/dist
+.coverage
+.relint.yml
+# mkdocs folder
+/site
+/.mypy_cache/
+/.pytest_cache/
+/.ruff_cache/
