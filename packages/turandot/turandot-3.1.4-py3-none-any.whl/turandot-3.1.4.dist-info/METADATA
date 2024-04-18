@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: turandot
+Version: 3.1.4
+Summary: Turandot Markdown Converter
+Home-page: https://turandot.readthedocs.io
+Author: Martin Obrist
+Author-email: dev@obrist.email
+License: GPLv3
+Project-URL: Documentation, https://turandot.readthedocs.io
+Project-URL: Source Code, https://gitlab.com/dinuthehuman/turandot
+Project-URL: Issue Tracker, https://gitlab.com/dinuthehuman/turandot/-/issues
+Keywords: markdown,citeproc
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.10, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: beautifulsoup4 (==4.11.2)
+Requires-Dist: colour (==0.1.5)
+Requires-Dist: jinja2 (==3.1.3)
+Requires-Dist: lxml (==5.1.0)
+Requires-Dist: Mako (==1.2.4)
+Requires-Dist: markdown (==3.5.2)
+Requires-Dist: markdown-captions (==2.1.2)
+Requires-Dist: markdown-katex (==202112.1034)
+Requires-Dist: md-citeproc (==0.2.2)
+Requires-Dist: Pygments (==2.17.2)
+Requires-Dist: python-frontmatter (==1.0.0)
+Requires-Dist: pyyaml (==6.0.1)
+Requires-Dist: requests (==2.31.0)
+Requires-Dist: ruamel.yaml (==0.18.6)
+Requires-Dist: sqlalchemy (==2.0.27)
+Requires-Dist: urllib3 (==2.2.1)
+Requires-Dist: weasyprint (==56.0)
+Provides-Extra: dev
+Requires-Dist: gitpython (==3.1.42) ; extra == 'dev'
+Requires-Dist: mkdocs (==1.5.3) ; extra == 'dev'
+Requires-Dist: mkdocstrings (==0.24.1) ; extra == 'dev'
+Requires-Dist: twine (==5.0.0) ; extra == 'dev'
+Requires-Dist: pytest (==8.0.2) ; extra == 'dev'
+Requires-Dist: nose (==1.3.7) ; extra == 'dev'
+Requires-Dist: invoke (==2.2.0) ; extra == 'dev'
+Provides-Extra: gtk
+Requires-Dist: pygobject (==3.46.0) ; extra == 'gtk'
+Provides-Extra: optional
+Requires-Dist: gitpython (==3.1.42) ; extra == 'optional'
+Requires-Dist: qrcode (==7.4.2) ; extra == 'optional'
+Requires-Dist: swissqr (==0.2.0) ; extra == 'optional'
+Provides-Extra: tk
+Requires-Dist: tkhtmlview ; extra == 'tk'
+Requires-Dist: bidict ; extra == 'tk'
+
+# Turandot
+
+Feature-rich, cross-platform graphical document converter
+
+## Features
+
+- Conversion from Markdown to PDF (extendable architecture for more formats)
+- Graphical user interface in GTK (Linux) or Tk (Windows, MacOS)
+- Layout and styling in CSS with extensive support of CSS3 printed page rules thanks to [Weasyprint](https://weasyprint.org/)
+- Extensive templating capabilities based on [Mako](https://www.makotemplates.org/) and [Jinja](https://jinja.palletsprojects.com)
+- Automatic handling of bibliographic references in combination with [Zotero](https://www.zotero.org/) or CSLJSON files with formatting based on CSL
+- Rendering of mathematical formulas based on [KaTeX](https://katex.org/)
+- Automatic syntax highlighting in code blocks based on [pygments](https://pygments.org/)
+- Available as deb package with a Windows installer in progress
+
+## Links
+
+- [Full documentation](https://turandot.readthedocs.io) (work in progress)
+- [Source Code](https://gitlab.com/dinuthehuman/turandot)
+- [Issue Tracker](https://gitlab.com/dinuthehuman/turandot/-/issues)
