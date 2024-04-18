@@ -1,0 +1,11 @@
+pyyaml
+pydantic>=2.7
+
+[dev]
+pytest
+pre-commit
+
+[postgres]
+pandas
+sshtunnel
+psycopg[binary]
