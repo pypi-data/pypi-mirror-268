@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymrm"
+version = "1.3.0"
+dependencies = [
+    "numpy",
+    "scipy",
+]
+authors = [
+    {name = "E.A.J.F. Peters", email = "e.a.j.f.peters@tue.nl"},
+    {name = "M. van Sint Annaland", email= "M.v.SintAnnaland@tue.nl"},
+    {name = "M. Galanti", email = "m.galanti@tue.nl"},
+    {name = "D.R. Rieder", email = "d.r.rieder@tue.nl"}
+]
+maintainers = [
+    {name = "E.A.J.F. Peters", email = "e.a.j.f.peters@tue.nl"},
+]
+description = "Functions for multiphase reactor modeling"
+readme = "README.md"
+keywords = ["MRM", "modeling", "multiphase", "diffusion", "convection"]
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "License :: OSI Approved :: MIT License"
+]
+
+[project.urls]
+Homepage = "https://gitlab.tue.nl/SMM/research_projects/eajfpeters/pymrm/"
+Repository = "https://gitlab.tue.nl/SMM/research_projects/eajfpeters/pymrm/"
