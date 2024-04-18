@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "uttt_engine"
+version = "0.0.8"
+authors = [
+  { name="Ike Roy", email="isaacevansroy@gmail.com" },
+]
+description = "A python library for the game of Ultimate Tic-Tac-Toe"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Minor-Car-Mistake-LLC/UTTT-Engine"
+Issues = "https://github.com/Minor-Car-Mistake-LLC/UTTT-Engine/issues"
