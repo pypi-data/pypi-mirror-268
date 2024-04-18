@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "python",
+    "-m",
+    "pixi_kernel",
+    "ipykernel",
+    "Pixi - Python 3 (ipykernel)",
+    "python",
+    "-m",
+    "ipykernel_launcher",
+    "-f",
+    "{connection_file}"
+  ],
+  "display_name": "Pixi - Python 3 (ipykernel)",
+  "language": "python",
+  "metadata": {
+    "debugger": true
+  }
+}

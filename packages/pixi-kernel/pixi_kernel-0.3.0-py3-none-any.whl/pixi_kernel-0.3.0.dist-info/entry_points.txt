@@ -1,0 +1,2 @@
+[jupyter_client.kernel_provisioners]
+pixi-provisioner = pixi_kernel.provisioner:PixiProvisioner

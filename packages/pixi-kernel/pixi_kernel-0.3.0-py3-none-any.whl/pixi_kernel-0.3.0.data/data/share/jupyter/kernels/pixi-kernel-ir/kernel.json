@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "python",
+    "-m",
+    "pixi_kernel",
+    "r-irkernel",
+    "Pixi - R",
+    "R",
+    "--slave",
+    "-e",
+    "'IRkernel::main()'",
+    "--args",
+    "{connection_file}"
+  ],
+  "display_name": "Pixi - R",
+  "language": "R"
+}
