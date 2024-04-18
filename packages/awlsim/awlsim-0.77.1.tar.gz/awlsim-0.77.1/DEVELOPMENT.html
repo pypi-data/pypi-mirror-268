@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>DEVELOPMENT</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">DEVELOPMENT</h1>
+</header>
+<h1 id="awlsim-development-notes">Awlsim development notes</h1>
+<h2 id="unit-tests">Unit tests</h2>
+<p>The unit test suite can be run with the invocation of the command
+<code>./tests/run.sh</code>. This will run all unit tests and show the
+results. Please see <code>./tests/run.sh --help</code> for more
+options.</p>
+<h3 id="code-coverage-tracing">Code coverage tracing</h3>
+<p>To run a code statement coverage trace during unit testing the option
+<code>./tests/run.sh --coverage</code> is available. The results will be
+stored in <code>./code-coverage-report/</code>. It is desired to have a
+reasonable code coverage of the unit tests. All main code paths should
+be covered.</p>
+<h2 id="special-annotations-in-the-source-code">Special annotations in
+the source code</h2>
+<p>In order to support both compiling the Awlsim core with Cython and
+running the same code in a plain Python interpreter without compilation,
+a method to patch the files is required. The setup.py scrips patch each
+.py source file and create a .pyx file before starting Cython
+compilation. The Cython patching mechanism rewrites all
+<code>import</code>s to import the compiled Cython modules instead of
+the plain Python modules. In addition to that some special comments are
+provided as hint to the Cython patcher:</p>
+<ul>
+<li><code>#@cy</code> : Enable (un-comment) this line during Cython
+patching.</li>
+<li><code>#@cy-posix</code> : Enable (un-comment) this line during
+Cython patching, if compiling for a Posix platform.</li>
+<li><code>#@cy-win</code> : Enable (un-comment) this line during Cython
+patching, if compiling for a Windows platform.</li>
+<li><code>#@nocy</code> : Disable (comment) this line during Cython
+patching.</li>
+<li><code>#@no-cython-patch</code> : Do not touch this line during
+cython patching.</li>
+<li><code>#+NoneToNULL</code> : Transform all <code>None</code> keywords
+in this line into <code>NULL</code>.</li>
+<li><code>#+cimport</code> : Transform all <code>import</code> keywords
+in this line into <code>cimport</code>.</li>
+<li><code>#+cdef</code> : Add a <code>cdef</code> to this line. For
+functions or methods that means to change <code>def</code> into
+<code>cdef</code> in the function signature. For classes that means to
+change <code>class</code> to <code>cdef class</code>.</li>
+<li><code>#+cpdef</code> : Same as <code>#+cdef</code>, but add
+<code>cpdef</code> instead.</li>
+<li><code>#+cdef-foobar-bizz</code> : Same as <code>#+cdef</code>, but
+also add the additional words <code>foobar bizz</code> after
+<code>cdef</code>. Arbitrary words may be specified and the number of
+words is not limited. The dash <code>-</code> will be transformed into a
+space character.</li>
+<li><code>#+likely</code> : Mark an <code>if</code> condition as being
+likely to evaluate to True. This annotation can only be used in lines
+with an <code>if</code> statement. It helps the C compiler to generate
+better machine code.</li>
+<li><code>#+unlikely</code> : Mark an <code>if</code> condition as being
+unlikely to evaluate to True. This annotation can only be used in lines
+with an <code>if</code> statement. It helps the C compiler to generate
+better machine code.</li>
+<li><code>#+suffix-u</code> : Add an <code>u</code> suffix to all
+decimal and hexadecimal immediates in the line.</li>
+<li><code>#+suffix-LL</code> : Add an <code>L</code> suffix to all
+decimal and hexadecimal immediates in the line.</li>
+</ul>
+<p>To disable code coverage tracing an additional special comment is
+provided:</p>
+<ul>
+<li><code>#@nocov</code> : This excludes the line from Python
+<code>coverage</code> tracing.</li>
+</ul>
+</body>
+</html>
