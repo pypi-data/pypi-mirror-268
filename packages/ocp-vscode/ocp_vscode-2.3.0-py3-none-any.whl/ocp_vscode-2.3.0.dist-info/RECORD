@@ -1,0 +1,14 @@
+ocp_vscode/__init__.py,sha256=2m2nLcQTIfxzAF_pFgXYW-8vhNxkJb02sLcKONwc8uw,1281
+ocp_vscode/animation.py,sha256=YN3BGQN0aM6_CZm3HKV6ubZQqI97vTL8e8ZToLrbS2I,4972
+ocp_vscode/backend.py,sha256=WCyDVVNcTwjWbSJ3vCIXBcdj4b63aesFhpU57Wih_L4,14216
+ocp_vscode/build123d.py,sha256=mdywWZoNzV8aG-ta7Q1GWGeK4PB3RajQsVsMK2KNJFs,19453
+ocp_vscode/colors.py,sha256=rB0P5W3ffyTBS_KDmvgz3Yyqo9AgerWxhYCcRGFWRP0,19488
+ocp_vscode/comms.py,sha256=Nlce1GFXupdEjfkrjqoN5aU2DItcEojTnVUvrGEQcRo,8166
+ocp_vscode/config.py,sha256=qoZuQPyVLkLrLwrQr65on9DYDqiaLYdAz33VLLxW8W4,16326
+ocp_vscode/show.py,sha256=VzavCRqtQjKWFMtKnsHDggyEPyEM8TKgtfKoRhJElRk,33098
+ocp_vscode/state.py,sha256=psDvNq0QSXTLkK_FRoBJifoMCIwWb78xDwK9FmjWAHc,5024
+ocp_vscode-2.3.0.dist-info/LICENSE,sha256=FU1oYVRRnClbJnYb3FHL7vPzK06SeEIIqqpQ8PazX1Q,10938
+ocp_vscode-2.3.0.dist-info/METADATA,sha256=IQFaB-3z9sqMYWNoMo46Ph0txyfOVm6bBSTJRyMoTds,961
+ocp_vscode-2.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ocp_vscode-2.3.0.dist-info/top_level.txt,sha256=7Eq-_Z00RI29vwP3Gt2_K1ewGB93MiTbRN2LDFssEZI,11
+ocp_vscode-2.3.0.dist-info/RECORD,,
