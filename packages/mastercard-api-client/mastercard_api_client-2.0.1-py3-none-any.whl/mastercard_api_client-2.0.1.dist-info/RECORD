@@ -1,0 +1,17 @@
+mastercardapicore/__init__.py,sha256=KmbV6_QveU2APMaDTnKh-LbNOn3jKV5hL9dqIILakO4,294
+mastercardapicore/version.py,sha256=bF3yq4mMdl2HqCEtZhfcjJQAgtV6FASrUh5o6W5blPA,44
+mastercardapicore/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mastercardapicore/core/baseobject.py,sha256=G_NC8SLKVla_h57th1eZ24kSUjPCoDu67d_4Eam74c4,2780
+mastercardapicore/core/config.py,sha256=u3AUhMeuzfxOqvhUn3XbXrD_DAky3Ks-T5opjXF5kmA,3966
+mastercardapicore/core/constants.py,sha256=B338DvmwYufC9p002Q1leouqP_4_ayMPLgwmUNHbz2I,3537
+mastercardapicore/core/controller.py,sha256=rGYzKUHtl9bQujIkCaYBORK0XFwR41H1ukdDF3CKM2U,10082
+mastercardapicore/core/exceptions.py,sha256=SoYG0CCtlskWkxfK76TbB68L9KHJ0RY3VK7em_or5sM,8777
+mastercardapicore/core/model.py,sha256=5BOGuo73PdlVIWJMww4VOKO0BuMYSpr5eeg6KVEAlAQ,14473
+mastercardapicore/core/util.py,sha256=RU7X2mPCl1BbY0cCU0DnrVBZ_CWZp9WoR-IiQEbBM9o,5385
+mastercardapicore/security/__init__.py,sha256=6HI6TrT9gU5eF9gMzt2Ib4IHT_2HY_7cepdlKYCWU_g,82
+mastercardapicore/security/authentication.py,sha256=TONkz7TNOdLZV6Ath2Hi9OFc0Hp7G3iW7lNgNtDqAwE,1774
+mastercardapicore/security/oauth.py,sha256=r_ot6yCuxk4DZqqzZctS_iG3wXRyl2TYRti_Xr3ne8k,7242
+mastercardapicore/security/util.py,sha256=tUJfCkSQJXl326yq69RR9v6vfEx3gXkXsWpIEczxuvY,2064
+mastercard_api_client-2.0.1.dist-info/METADATA,sha256=zzTeaP_uJkGwDDqo_LSO4oSsyXbcQ2jrXEdeCYDYh2o,1066
+mastercard_api_client-2.0.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+mastercard_api_client-2.0.1.dist-info/RECORD,,
