@@ -1,0 +1,4 @@
+graft gpt4_copilot_free_api
+include pyproject.toml
+include setup.py
+global-exclude *.py[cod]

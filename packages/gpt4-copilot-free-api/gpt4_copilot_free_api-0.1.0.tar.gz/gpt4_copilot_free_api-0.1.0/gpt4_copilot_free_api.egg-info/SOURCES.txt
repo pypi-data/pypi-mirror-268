@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+gpt4_copilot_free_api/__init__.py
+gpt4_copilot_free_api/api.py
+gpt4_copilot_free_api/free-gpt4.py
+gpt4_copilot_free_api/server.py
+gpt4_copilot_free_api.egg-info/PKG-INFO
+gpt4_copilot_free_api.egg-info/SOURCES.txt
+gpt4_copilot_free_api.egg-info/dependency_links.txt
+gpt4_copilot_free_api.egg-info/requires.txt
+gpt4_copilot_free_api.egg-info/top_level.txt
+tests/__init__.py
