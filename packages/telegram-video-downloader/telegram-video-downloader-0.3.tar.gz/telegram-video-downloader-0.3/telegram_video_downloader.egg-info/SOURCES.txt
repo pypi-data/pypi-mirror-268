@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+telegram_video_downloader/__init__.py
+telegram_video_downloader/app.py
+telegram_video_downloader.egg-info/PKG-INFO
+telegram_video_downloader.egg-info/SOURCES.txt
+telegram_video_downloader.egg-info/dependency_links.txt
+telegram_video_downloader.egg-info/entry_points.txt
+telegram_video_downloader.egg-info/requires.txt
+telegram_video_downloader.egg-info/top_level.txt
