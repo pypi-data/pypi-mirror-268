@@ -1,0 +1,3 @@
+[console_scripts]
+jxa-builder=jxa_builder.cli:cli
+
