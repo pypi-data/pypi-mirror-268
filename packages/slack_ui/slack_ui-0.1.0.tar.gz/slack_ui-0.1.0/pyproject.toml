@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "slack_ui"
+version = "0.1.0"
+description = "Python's Slack Blocks Builder aims to provide an easy-to-use interface for creating complex Slack messages using Blocks, improving on Slack Bolt's native functionality."
+authors = ["Mikołaj Jeziorny <mikijezi@gmail.com>"]
+readme = "README.md"
+packages = [{include = "slack_ui"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
