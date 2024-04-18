@@ -1,0 +1,51 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='Manifold-Table-Graph',
+    version='0.1.0',
+    author='Davide Torre',
+    author_email='d.torre@iac.cnr.it',
+    description='A Python library for creating a graph representation of tabular data using manifold learning techniques and NetworkX.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/davidetorre92/Manifold-Table-Graph',
+    packages=find_packages(),
+    install_requires=[
+        'contourpy==1.2.0',
+        'cycler==0.12.1',
+        'fonttools==4.50.0',
+        'joblib==1.3.2',
+        'kiwisolver==1.4.5',
+        'matplotlib==3.8.3',
+        'networkx==3.2.1',
+        'numpy==1.26.4',
+        'packaging==24.0',
+        'pandas==2.2.1',
+        'pillow==10.2.0',
+        'pyparsing==3.1.2',
+        'python-dateutil==2.9.0.post0',
+        'pytz==2024.1',
+        'scikit-learn==1.4.1.post1',
+        'scipy==1.12.0',
+        'six==1.16.0',
+        'threadpoolctl==3.4.0',
+        'tzdata==2024.1'
+    ],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Topic :: Scientific/Engineering :: Information Analysis',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    python_requires='>=3.8',
+)
+
+

@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Manifold_Table_Graph.egg-info/PKG-INFO
+Manifold_Table_Graph.egg-info/SOURCES.txt
+Manifold_Table_Graph.egg-info/dependency_links.txt
+Manifold_Table_Graph.egg-info/requires.txt
+Manifold_Table_Graph.egg-info/top_level.txt
