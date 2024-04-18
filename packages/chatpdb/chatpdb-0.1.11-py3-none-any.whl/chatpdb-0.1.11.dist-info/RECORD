@@ -1,0 +1,15 @@
+chatpdb/__init__.py,sha256=o01rspvVpMYahR-JdCnz75IfNG0RzKUPmLJriitRbAo,657
+chatpdb/__main__.py,sha256=fcfeY1EelQcpHEOSZ0n5_jjyCKn_bEvxFYdXr6oovx0,11159
+chatpdb/debugger.py,sha256=VIhstEh6UHoiMSlCZxot_3dEaAUpZz4vEU6Zz9HR-NI,1625
+chatpdb/frame.py,sha256=mwcVLWWxd_2staEHt-u-rHIbx5Rna7J56Ot_1wySG4I,1431
+chatpdb/stdout.py,sha256=TISnyNbZ8oQOY1kp5fzb5a7JFjuZfldV3nSbX6IgmnM,1041
+chatpdb/chat/__init__.py,sha256=S5ozNED9pYbeobNZkaL8RKTCnqLJ9vHSR7tzlTX9y0s,126
+chatpdb/chat/interface.py,sha256=zfVOYlSvENAcw8ErV24o4YobApzeAuXGftHv5W4w4_M,1225
+chatpdb/parsing/__init__.py,sha256=aMPOFB0HA5eCFWUioKziWAT5XfCzSIIQNvZqit59JII,182
+chatpdb/parsing/interface.py,sha256=bKL7HuV3pbLqm8o0XPETLMzzhxgFLjxsuVEpCBNY6Bk,1435
+chatpdb/parsing/vars.py,sha256=eW8iCsG2gNtv-R8m6nlqv9QZ8P0_Dzm3q5ZlrIrHMvs,139
+chatpdb-0.1.11.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+chatpdb-0.1.11.dist-info/METADATA,sha256=rR6vrruqpmJHDVBsp8eNJ1BKRSt60J3aj48StqSs3n8,4293
+chatpdb-0.1.11.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+chatpdb-0.1.11.dist-info/top_level.txt,sha256=61hXXkCOgbHqTdiBWXRsYC-t0w268TyL8Y5f_kpbONA,8
+chatpdb-0.1.11.dist-info/RECORD,,
