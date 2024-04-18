@@ -1,0 +1,10 @@
+packaging
+py-evm>=0.7.0a1
+safe-pysha3>=1.0.0
+requests>=2
+web3>=6.2.0
+
+[django]
+django>=2
+django-filter>=2
+djangorestframework>=2
