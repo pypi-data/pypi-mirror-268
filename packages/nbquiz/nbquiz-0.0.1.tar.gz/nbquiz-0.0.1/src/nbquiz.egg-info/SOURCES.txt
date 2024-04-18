@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/nbquiz/__init__.py
+src/nbquiz.egg-info/PKG-INFO
+src/nbquiz.egg-info/SOURCES.txt
+src/nbquiz.egg-info/dependency_links.txt
+src/nbquiz.egg-info/requires.txt
+src/nbquiz.egg-info/top_level.txt
