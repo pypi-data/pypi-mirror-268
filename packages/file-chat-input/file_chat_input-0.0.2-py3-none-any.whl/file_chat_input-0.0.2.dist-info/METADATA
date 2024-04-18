@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: file-chat-input
+Version: 0.0.2
+Summary: Streamlit chat input that allows file attachments.
+Home-page: https://github.com/AI-Colleagues/st-components
+Author: Shaojie Jiang
+Author-email: shaojie.jiang1@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit >=1.32.0
+Requires-Dist: streamlit-float >=0.3.2
+Provides-Extra: devel
+Requires-Dist: wheel ; extra == 'devel'
+Requires-Dist: pytest ==7.4.0 ; extra == 'devel'
+Requires-Dist: playwright ==1.39.0 ; extra == 'devel'
+Requires-Dist: requests ==2.31.0 ; extra == 'devel'
+Requires-Dist: pytest-playwright-snapshot ==1.0 ; extra == 'devel'
+Requires-Dist: pytest-rerunfailures ==12.0 ; extra == 'devel'
+
+# Custom Streamlit Components
+
+This repository currently contains the following custom components:
+1. **file_message:** Sends files together with textual message
+
+## File with messages
+
+Video:
+
+
+
+https://github.com/AI-Colleagues/st-components/assets/26806376/40fd6e40-ecc1-4112-b239-9f2ad294a81c
+
+
+
+### Get started
+
+To install, run 
+```bash
+pip install file-chat-input
+```
+
+Then run example app:
+```bash
+streamlit run example.py
+```
+
+Known issues:
+
+* [ ] Due to the usage of `streamlit-float`, the chat messages don't automatically scroll when the page is full.
