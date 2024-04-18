@@ -1,0 +1,3 @@
+[console_scripts]
+wristwatch = wristwatch.wristwatch:main
+
