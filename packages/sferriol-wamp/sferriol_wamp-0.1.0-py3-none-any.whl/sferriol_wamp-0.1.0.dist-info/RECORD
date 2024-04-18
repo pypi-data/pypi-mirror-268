@@ -1,0 +1,10 @@
+sferriol/wamp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sferriol/wamp/component.py,sha256=icNsaZdXIPk2nr_OinEazLCO3xNWEW-ebZPQYk-KZR8,6990
+sferriol/wamp/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sferriol/wamp/util/crossbar.py,sha256=xDtmcuV6-OPyZkhiQxngzNWb1Bkz9ASHwHVxOZWVKp8,2193
+sferriol/wamp/util/test.py,sha256=6jwBZlXLobQaC7ssTRa7P_eO9gsSgWzSAUrJIhUJtPU,3147
+sferriol_wamp-0.1.0.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+sferriol_wamp-0.1.0.dist-info/METADATA,sha256=uoJEzaF4KmpiSorAZhDTeVtHDzfiu1aIDR9AW_XDjz4,791
+sferriol_wamp-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sferriol_wamp-0.1.0.dist-info/top_level.txt,sha256=OZwPBarx0XWpgPVyXyHb5Aoe-RjU5Q0vkqE9AwXNxtM,9
+sferriol_wamp-0.1.0.dist-info/RECORD,,

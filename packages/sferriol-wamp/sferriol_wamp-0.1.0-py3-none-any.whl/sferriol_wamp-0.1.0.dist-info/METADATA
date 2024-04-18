@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: sferriol-wamp
+Version: 0.1.0
+Summary: WAMP utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: autobahn ==22.1.1
+Requires-Dist: sferriol-python
+Provides-Extra: dev
+Requires-Dist: crossbar ==20.12.3 ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-doctestplus ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+
+# sferriol-wamp
+
+sferriol-wamp is a module of WAMP utilities
+
+## Installation
+
+### From pypi
+
+    pip install sferriol-wamp
+
+### From source
+
+    git clone https://gitlab.in2p3.fr/sferriol-ip2i/sferriol-wamp.git
+    cd sferriol-wamp
+    pip install .
+
+with dev environment
+
+    pip install .[dev]
+
+
+## Usage
+
+TBD
