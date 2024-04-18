@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+hypergptsdk/__init__.py
+hypergptsdk/hypergptsdk.py
+hypergptsdk.egg-info/PKG-INFO
+hypergptsdk.egg-info/SOURCES.txt
+hypergptsdk.egg-info/dependency_links.txt
+hypergptsdk.egg-info/requires.txt
+hypergptsdk.egg-info/top_level.txt
