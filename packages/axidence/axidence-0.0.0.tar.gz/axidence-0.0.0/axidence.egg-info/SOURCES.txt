@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+axidence/__init__.py
+axidence.egg-info/PKG-INFO
+axidence.egg-info/SOURCES.txt
+axidence.egg-info/dependency_links.txt
+axidence.egg-info/requires.txt
+axidence.egg-info/top_level.txt
+tests/test_placeholder.py

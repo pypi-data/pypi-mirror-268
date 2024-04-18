@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: axidence
+Version: 0.0.0
+Summary: strax-based data-driven accidental coincidence background simulation and peak-level salting
+Author-email: Dacheng Xu <dx2227@columbia.edu>
+Maintainer-email: Dacheng Xu <dx2227@columbia.edu>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2018, The axidence contributors and the XENON collaboration
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        * Redistributions of source code must retain the above copyright notice, this
+          list of conditions and the following disclaimer.
+        
+        * Redistributions in binary form must reproduce the above copyright notice,
+          this list of conditions and the following disclaimer in the documentation
+          and/or other materials provided with the distribution.
+        
+        * Neither the name of the copyright holder nor the names of its
+          contributors may be used to endorse or promote products derived from
+          this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        
+Project-URL: Homepage, https://github.com/dachengx/axidence
+Project-URL: Documentation, https://readthedocs.org/projects/axidence/
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: strax>=1.6.0
+Requires-Dist: straxen>=2.2.0
+
+# Axidence
+
+[![Test package](https://github.com/dachengx/axidence/actions/workflows/pytest.yml/badge.svg?branch=main)](https://github.com/dachengx/axidence/actions/workflows/pytest.yml)
+[![Coverage Status](https://coveralls.io/repos/github/dachengx/axidence/badge.svg?branch=main&kill_cache=1)](https://coveralls.io/github/dachengx/axidence?branch=main&kill_cache=1)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/axidence.svg)](https://pypi.python.org/pypi/axidence/)
+[![Documentation Status](https://readthedocs.org/projects/axidence/badge/?version=latest)](https://axidence.readthedocs.io/en/latest/?badge=latest)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/dachengx/axidence/main.svg)](https://results.pre-commit.ci/latest/github/dachengx/axidence/main)
+
+Axidence is a stax-based data-driven accidental coincidence background simulation framework. It can also perform the peak-level salting to calculate the features related to ambient environment.
+
+# Installation
+```
+cd axidence
+pip install ./ --user
+```
