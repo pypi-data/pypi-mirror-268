@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: cellworld_gym
+Version: 0.0.4
+Author: German Espinosa
+Author-email: germanespinosa@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: cellworld_game
+Requires-Dist: gym
+
+#Add your readme in markdown format here

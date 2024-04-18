@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.py
+cellworld_gym/README.md
+cellworld_gym/__init__.py
+cellworld_gym/bot_evade.py
+cellworld_gym/license.txt
+cellworld_gym/setup.cfg
+cellworld_gym.egg-info/PKG-INFO
+cellworld_gym.egg-info/SOURCES.txt
+cellworld_gym.egg-info/dependency_links.txt
+cellworld_gym.egg-info/not-zip-safe
+cellworld_gym.egg-info/requires.txt
+cellworld_gym.egg-info/top_level.txt
