@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pyvindex/__init__.py
+src/pyvindex/pyvindex.py
+src/pyvindex.egg-info/PKG-INFO
+src/pyvindex.egg-info/SOURCES.txt
+src/pyvindex.egg-info/dependency_links.txt
+src/pyvindex.egg-info/requires.txt
+src/pyvindex.egg-info/top_level.txt
