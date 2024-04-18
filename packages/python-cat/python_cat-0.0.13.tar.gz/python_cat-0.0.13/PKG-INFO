@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: python-cat
+Version: 0.0.13
+Summary: A lightweight Python tool for concatenating and displaying text files in the terminal.
+Home-page: https://github.com/mtdev/python-cat
+Author: mtdev
+Author-email: wuuuuusmall@outlook.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: pathlib>1.0.0
