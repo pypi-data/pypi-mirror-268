@@ -1,0 +1,7 @@
+pgeof-0.2.0.dist-info/METADATA,sha256=mDhSxh-2hb2ycVM8QDp8tsxOeTPiJ7_Df7uJPDttcTM,10011
+pgeof-0.2.0.dist-info/WHEEL,sha256=3hbAq9CJpu-eSiWHBtoMoEzcmr6vqv-pQ8RZzI0z93s,155
+pgeof-0.2.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgeof-0.2.0.dist-info/RECORD,,
+pgeof-0.2.0.dist-info/licenses/LICENSE,sha256=qbq0hUnRMmS716E-gro4bRVtlmdYW-efEBXQl5hq4As,1105
+pgeof/pgeof_ext.cpython-311-x86_64-linux-gnu.so,sha256=u1WFzOUq-zTHameHXGGWxXR5kgnGuV7vkkdxvDCXCnI,522072
+pgeof/__init__.py,sha256=DZnnqQCw2i6vQPCHpcCz31zdNnh_jwEdp7UhyqOEd_0,193
