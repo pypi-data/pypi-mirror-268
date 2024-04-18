@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: octo-rpc
+Version: 0.4.9
+Home-page: https://github.com/mtdev/octo-rpc
+Author: mtdev
+Author-email: wuuuuusmall@outlook.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: pathlib>1.0.0
+
+A robust Python library for building and implementing remote procedure call (RPC) services with support for high scalability and performance.
