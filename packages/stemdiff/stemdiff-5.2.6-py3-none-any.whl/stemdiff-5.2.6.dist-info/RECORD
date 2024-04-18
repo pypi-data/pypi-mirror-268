@@ -1,0 +1,12 @@
+stemdiff/__init__.py,sha256=K7AYDcJfkHbamsYMlOxrSClUDdTIu6ZGuQ8_RdHt2bI,1998
+stemdiff/dbase.py,sha256=Z-41mzzX2XqWJwPCPNMIboq7m57NtJhP4ViTfPssvpk,5985
+stemdiff/detectors.py,sha256=YHiOZjEaeOtYstlX0ATFPWqfVMVIiJCfFthXtVuVZaw,11850
+stemdiff/gvars.py,sha256=BBMM70kv-l3_mSQb_GX1abNR-EYewvUgZYkB66RQG0M,4453
+stemdiff/io.py,sha256=xHmjy5KYWz1P0cnYK8nVesf6AoDHQIWc7aeXFUUJIHM,48011
+stemdiff/sum.py,sha256=ZEHgLbdaQkooB7ZWgTxxmLJZpM5yCxCaOlK70A1rNSU,14607
+stemdiff/summ.py,sha256=LBhgfmPEvWMmCruZE2K7-XYSjA7Mh33WrziP4bTGcU4,8030
+stemdiff-5.2.6.dist-info/LICENCE,sha256=A0HugtkWkgCwRhYrsSqENRlIFre2Vu14xQajDnsYlqU,1340
+stemdiff-5.2.6.dist-info/METADATA,sha256=V8X-PpDZnkPoXO6FkUgPybTrFu3Id3v4UZsrjr2EXhM,4197
+stemdiff-5.2.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+stemdiff-5.2.6.dist-info/top_level.txt,sha256=EQn-XSqpLeMnvowHwcgup7Qwlk6c0zeBT3abWmDapRQ,9
+stemdiff-5.2.6.dist-info/RECORD,,
