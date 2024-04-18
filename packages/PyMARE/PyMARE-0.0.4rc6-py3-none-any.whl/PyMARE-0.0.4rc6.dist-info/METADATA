@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: PyMARE
+Version: 0.0.4rc6
+Summary: PyMARE: Python Meta-Analysis & Regression Engine
+Home-page: https://github.com/neurostuff/PyMARE
+Author: PyMARE developers
+Author-email: tsalo006@fiu.edu
+Maintainer: Taylor Salo
+Maintainer-email: tsalo006@fiu.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy >=1.8.0
+Requires-Dist: pandas
+Requires-Dist: scipy <1.13.0
+Requires-Dist: sympy
+Requires-Dist: wrapt
+Provides-Extra: all
+Requires-Dist: m2r ; extra == 'all'
+Requires-Dist: matplotlib ; extra == 'all'
+Requires-Dist: mistune <2 ; extra == 'all'
+Requires-Dist: numpydoc ; extra == 'all'
+Requires-Dist: pillow ; extra == 'all'
+Requires-Dist: recommonmark ; extra == 'all'
+Requires-Dist: seaborn ; extra == 'all'
+Requires-Dist: sphinx >=3.5 ; extra == 'all'
+Requires-Dist: sphinx-argparse ; extra == 'all'
+Requires-Dist: sphinx-copybutton ; extra == 'all'
+Requires-Dist: sphinx-gallery ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme ; extra == 'all'
+Requires-Dist: sphinxcontrib-bibtex ; extra == 'all'
+Requires-Dist: codecov ; extra == 'all'
+Requires-Dist: coverage ; extra == 'all'
+Requires-Dist: coveralls ; extra == 'all'
+Requires-Dist: flake8 ; extra == 'all'
+Requires-Dist: flake8-black ; extra == 'all'
+Requires-Dist: flake8-docstrings ; extra == 'all'
+Requires-Dist: flake8-isort ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pystan ; extra == 'all'
+Requires-Dist: arviz ; extra == 'all'
+Provides-Extra: doc
+Requires-Dist: m2r ; extra == 'doc'
+Requires-Dist: matplotlib ; extra == 'doc'
+Requires-Dist: mistune <2 ; extra == 'doc'
+Requires-Dist: numpydoc ; extra == 'doc'
+Requires-Dist: pillow ; extra == 'doc'
+Requires-Dist: recommonmark ; extra == 'doc'
+Requires-Dist: seaborn ; extra == 'doc'
+Requires-Dist: sphinx >=3.5 ; extra == 'doc'
+Requires-Dist: sphinx-argparse ; extra == 'doc'
+Requires-Dist: sphinx-copybutton ; extra == 'doc'
+Requires-Dist: sphinx-gallery ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Requires-Dist: sphinxcontrib-bibtex ; extra == 'doc'
+Provides-Extra: stan
+Requires-Dist: pystan ; extra == 'stan'
+Requires-Dist: arviz ; extra == 'stan'
+Provides-Extra: tests
+Requires-Dist: codecov ; extra == 'tests'
+Requires-Dist: coverage ; extra == 'tests'
+Requires-Dist: coveralls ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: flake8-black ; extra == 'tests'
+Requires-Dist: flake8-docstrings ; extra == 'tests'
+Requires-Dist: flake8-isort ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+
+
+PyMARE: Python Meta-Analysis & Regression Engine
+================================================
+A Python library for mixed-effects meta-regression (including meta-analysis).
+
+License
+=======
+`PYMARE` is licensed under the terms of the MIT license. See the file
+'LICENSE' for information on the history of this software, terms & conditions
+for usage, and a DISCLAIMER OF ALL WARRANTIES.
+
+All trademarks referenced herein are property of their respective holders.
+
+Copyright (c) 2019--, PyMARE developers
+
