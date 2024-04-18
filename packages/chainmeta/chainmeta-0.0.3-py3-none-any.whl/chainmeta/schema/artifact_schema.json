@@ -1,0 +1,122 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ChainMeta Artifact",
+    "description": "An object designed to uniformly describe blockchain metadata artifacts from different providers",
+    "type": "array",
+    "items": {
+        "description": "",
+        "type": "object",
+        "required": [
+            "chain",
+            "address",
+            "categories",
+            "entity",
+            "name",
+            "source",
+            "submitted_by",
+            "submitted_on"
+        ],
+        "properties": {
+            "chain": {
+                "$ref": "#/$defs/chain"
+            },
+            "address": {
+                "$ref": "#/$defs/address"
+            },
+            "entity": {
+                "$ref": "#/$defs/entity"
+            },
+            "name": {
+                "$ref": "#/$defs/name"
+            },
+            "categories": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/$defs/category"
+                }
+            },
+            "source": {
+                "$ref": "#/$defs/source"
+            },
+            "submitted_by": {
+                "type": "string"
+            },
+            "submitted_on": {
+                "type": "string",
+                "format": "date"
+            },
+            "additional_metadata": {
+                "type": "object",
+                "properties": {
+                    "valid_from": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "format": "date"
+                            },
+                            {
+                                "format": "date-time"
+                            }
+                        ]
+                    },
+                    "valid_to": {
+                        "type": "string",
+                        "anyOf": [
+                            {
+                                "format": "date"
+                            },
+                            {
+                                "format": "date-time"
+                            }
+                        ]
+                    },
+                    "reason": {
+                        "type": "string",
+                        "format": "uri"
+
+                    }
+                }
+            },
+            "deleted": {
+                "type": "boolean"
+            }
+        },
+        "additionalProperties": false
+    },
+    "$defs": {
+        "chain": {
+            "$id": "/schemas/chain",
+            "type": "string"
+        },
+        "address": {
+            "$id": "/schemas/address",
+            "type": "string"
+        },
+        "entity": {
+            "$id": "/schemas/entity",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "category": {
+            "$id": "/schemas/category",
+            "type": "string"
+        },
+        "name": {
+            "$id": "/schemas/name",
+            "type": [
+                "string",
+                "null"
+            ]
+        },
+        "source": {
+            "$id": "/schemas/source",
+            "type": "string"
+        },
+        "additional_metadata": {
+            "$id": "/schemas/additional_metadata",
+            "type": "object"
+        }
+    }
+}
