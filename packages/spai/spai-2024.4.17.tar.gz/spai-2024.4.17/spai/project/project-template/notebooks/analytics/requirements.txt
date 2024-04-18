@@ -1,0 +1,5 @@
+jupyter
+spai
+rasterio
+Pillow
+matplotlib

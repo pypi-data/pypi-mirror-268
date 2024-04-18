@@ -1,0 +1,9 @@
+python-dotenv
+spai
+rasterio
+geopandas
+overpy
+geojson
+rioxarray
+pystac-client
+odc-stac
