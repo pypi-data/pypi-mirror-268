@@ -1,0 +1,14 @@
+photo_gps/DSCF0311.xmp,sha256=NEXnyRWx7jdg496h-40wbPYmg351aViGPl9RqEygba4,532
+photo_gps/DSCF0312.xmp,sha256=O6bRshY32eHWN-qnWEeGaotOaju-WyZARPjNNva5iOU,534
+photo_gps/DSCF0313.xmp,sha256=O6bRshY32eHWN-qnWEeGaotOaju-WyZARPjNNva5iOU,534
+photo_gps/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+photo_gps/commands.py,sha256=3qLH2t08qFuazCp9fsKZlIFGaNuDKbxx8PFVzTzjzGQ,2711
+photo_gps/config.py,sha256=pvNtLRhQIrhpU6U2p00WSQI_KvYoCPDj5aCzK87r-D8,1272
+photo_gps/jinja/xmp.jinja,sha256=gIKPKSEb_lnYECr5wT3_TrOKWxn3BaGodw2fIP6IAGk,551
+photo_gps/photogps.example.yaml,sha256=5Vp36_fWpxJ3YzL7C4qYK-n2EPPpmGav5H6EG5G-Zl8,327
+photo_gps/photogps.py,sha256=w010mHW8sF3XjL7j_GgJ3hj7McCduAM2PrHB6DHr4_A,1112
+photo_gps/tools.py,sha256=qm_umAuDmPo78ObUBpogzzFcyW7YH8VXmCGG0-u_KLs,2881
+photo_gps_client-0.1.6.dist-info/METADATA,sha256=ZF2pccGccJ8Mi0lZCFWjr5ciN57dz__mmiNY69tNbrM,660
+photo_gps_client-0.1.6.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+photo_gps_client-0.1.6.dist-info/entry_points.txt,sha256=70dRL8_RjGGf9Ufu4F9aZyZBzWk11NgokBd9S6UBw3E,51
+photo_gps_client-0.1.6.dist-info/RECORD,,

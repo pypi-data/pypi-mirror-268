@@ -1,0 +1,3 @@
+[console_scripts]
+photogps=photo_gps.photogps:app
+
