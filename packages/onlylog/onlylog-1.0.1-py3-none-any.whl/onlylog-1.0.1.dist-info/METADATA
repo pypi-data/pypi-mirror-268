@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: onlylog
+Version: 1.0.1
+Summary: just simple log
+Home-page: https://github.com/akasakaid/onlylog
+Author: AkasakaID
+Author-email: akasakaid.gov@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+
+# Onlylog
+
+Just simple log for python 3
+
+# Installation
+
+```
+pip install onlylog
+```
+
+# How to Use
+
+Just 1 line require, simple :v 
+
+```
+from onlylog import Log
+```
+
+## Success
+
+with gree color text
+
+```
+Log.success('success text')
+```
+<img src="./images/log-success.png" width=500>
+
+## Warning
+
+with yellow color text
+
+```
+Log.warn('warn text')
+```
+
+<img src="./images/log-warn.png" width=500>
+
+## Error
+
+with red color text
+
+<img src="./images/log-error.png" width=500>
+
+## Save to file
+
+Save log to file
+
+```
+Log.write(file="app.log",text="log to save")
+```
+
+## Countdown
+
+Like method name this is for countdown
+
+```
+# parameter with second 100 is 100 second !
+
+Log.countdown(100)
+```
+
+# Donation
+
+If you want to donate your money to me you can follow link in below xD
+
+Trakteer [https://trakteer.id/fawwazthoerif/tip](https://trakteer.id/fawwazthoerif/tip)
+
+Socialbuzz [https://sociabuzz.com/fawwazthoerif/tribe](https://sociabuzz.com/fawwazthoerif/tribe)
+
+# Thank you < 3
