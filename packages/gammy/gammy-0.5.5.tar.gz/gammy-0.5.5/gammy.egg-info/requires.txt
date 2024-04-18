@@ -1,0 +1,15 @@
+bayespy
+h5py
+numpy>=1.10.0
+scipy>=0.13.0
+
+[dev]
+matplotlib
+pillow>=10.3.0
+
+[doc]
+sphinx
+numpydoc
+
+[test]
+pytest
