@@ -1,0 +1,7 @@
+setup.py
+myCDEPS/CDEPS.py
+myCDEPS/__init__.py
+myCDEPS.egg-info/PKG-INFO
+myCDEPS.egg-info/SOURCES.txt
+myCDEPS.egg-info/dependency_links.txt
+myCDEPS.egg-info/top_level.txt
