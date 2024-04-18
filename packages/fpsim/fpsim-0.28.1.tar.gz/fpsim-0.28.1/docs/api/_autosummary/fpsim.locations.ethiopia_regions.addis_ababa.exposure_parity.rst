@@ -1,0 +1,7 @@
+exposure\_parity
+================
+
+.. currentmodule:: fpsim.locations.ethiopia_regions.addis_ababa
+
+.. autoclass:: exposure_parity
+   :members:

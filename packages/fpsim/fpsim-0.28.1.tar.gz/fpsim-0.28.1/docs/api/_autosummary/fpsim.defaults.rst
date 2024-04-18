@@ -1,0 +1,25 @@
+﻿defaults
+========
+
+.. automodule:: fpsim.defaults
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+
+
