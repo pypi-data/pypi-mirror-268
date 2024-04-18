@@ -1,0 +1,12 @@
+pandas_paddles/__init__.py,sha256=97azb17AL3OUYbVTP0KZQKKOT7535Ya9Y947ywSyb3U,6983
+pandas_paddles/axis.py,sha256=CvvIk4RHfAzfHi31GL7T3w442IfHkXswjlF4tfi3rpc,19049
+pandas_paddles/closures.py,sha256=9xePvhEVmCyJ0fkPuHaWZp_ZXk37pbbNI7cfesrWJdw,6363
+pandas_paddles/contexts.py,sha256=YhfC4UXo9H86A2aLc2fcM-WKcEB4ait51GDYfma24Gc,11930
+pandas_paddles/operator_helpers.py,sha256=Td_mcWnA09m_KjAJDS5K_3FmIJKum1K0-3eMITMUjN4,1470
+pandas_paddles/paddles.py,sha256=Oj33SolIHhZbs4Gkih8edysQuKLMzj-1bHYLVSu1dB4,4963
+pandas_paddles/pipe.py,sha256=NQXHU25nDMP5F1TrF_oco8QblAjFBj9GEM8fu7p5NbQ,3214
+pandas_paddles/util.py,sha256=eNi5o5c0zW1SAqHvZAnzSmgdXvDMa_sBW0UQPUXFcUs,2756
+pandas_paddles-1.5.0.dist-info/LICENSE,sha256=WEVOM9QILXGXLGaxfiyWtOy-xhwhIsUaSx44DywSxH0,1096
+pandas_paddles-1.5.0.dist-info/METADATA,sha256=LuXm-nKvGtW6hpyDeNiJ1pEgu0L3LMSHFyjK7l0GEXI,7311
+pandas_paddles-1.5.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+pandas_paddles-1.5.0.dist-info/RECORD,,
