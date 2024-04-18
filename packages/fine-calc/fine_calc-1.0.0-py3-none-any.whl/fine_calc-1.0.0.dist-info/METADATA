@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: fine_calc
+Version: 1.0.0
+Summary: A Python library for calculating fines based on overdue days.
+Home-page: https://github.com/yourusername/chinmay-dhanawade
+Author: Chinmay Danwade
+Author-email: lawd7131@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
