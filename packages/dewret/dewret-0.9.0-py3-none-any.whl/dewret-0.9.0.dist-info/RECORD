@@ -1,0 +1,15 @@
+dewret/__init__.py,sha256=jy4isa2vPtL1AnBb1mirCZapMAoA4xka8ALIDXSPDcw,762
+dewret/__main__.py,sha256=VXJCgeqeHZdLmxLbmDc3UzKvZrgacllUFAJASES1OGg,2413
+dewret/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dewret/tasks.py,sha256=QWZzgBIXRwksoJ9-AWsCa8jfYw6uhownojeEQDd_3qM,10282
+dewret/utils.py,sha256=1pvgZBOmDm_0Tt3jIwkqtK6-4IGN8ZwylErLG_1pey0,3563
+dewret/workflow.py,sha256=zylGzuBSRBoIszGPW762cunHNoYccC8WZSPf9Fo3MGg,21713
+dewret/backends/__init__.py,sha256=gWHvRuZk8o_SByEyS4Iuj4CvrlIBv6XhYkSC-a1ccqs,783
+dewret/backends/_base.py,sha256=zWJs7J3IVQyd0ldx4mIapYt51ssCfwq_ppVje9Y4HmE,2350
+dewret/backends/backend_dask.py,sha256=7QXNrc9Vjbsa_FVTHNyh3FKYcS7gGIh2koKIxnmWADg,3116
+dewret/renderers/__init__.py,sha256=K4-_7h-lRnNlSGNc3SLdVRkf2v1PjGJgjZ4Qy37kpew,749
+dewret/renderers/cwl.py,sha256=Pj9alnQNQL2S-MWCPMtQKyBFokAfxY72_PsgKERUOIs,12577
+dewret-0.9.0.dist-info/METADATA,sha256=dwrpxPsjWNDKBQeRc1I7x79vxK-gSXsbNJ_xDxvHi-Q,1888
+dewret-0.9.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+dewret-0.9.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dewret-0.9.0.dist-info/RECORD,,
