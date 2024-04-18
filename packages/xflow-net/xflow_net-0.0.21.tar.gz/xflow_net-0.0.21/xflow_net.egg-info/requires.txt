@@ -1,0 +1,4 @@
+networkx
+ndlib
+torch_geometric
+cosasi
