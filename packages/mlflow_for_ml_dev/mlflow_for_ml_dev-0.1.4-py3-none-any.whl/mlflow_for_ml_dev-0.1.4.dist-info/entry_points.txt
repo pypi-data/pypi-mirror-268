@@ -1,0 +1,3 @@
+[console_scripts]
+start_tutorial=mlflow_for_ml_dev.entrypoints.start_tutorial:run_notebook
+

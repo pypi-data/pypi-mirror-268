@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: mlflow_for_ml_dev
+Version: 0.1.4
+Summary: Code examples for the youtube playlist 'MLflow for Machine Learning Development' by Manuel Gil
+Home-page: https://github.com/manuelgilm/mlflow_for_ml_dev
+License: MIT
+Keywords: mlflow,machine learning,development,youtube,tutorial
+Author: Manuel Gil
+Author-email: manuelgilsitio@gmail.com
+Maintainer: Manuel Gil
+Maintainer-email: manuelgilsitio@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: ipython (>=8.22.2,<9.0.0)
+Requires-Dist: jupyter (>=1.0.0,<2.0.0)
+Requires-Dist: mlflow (>=2.11.3,<3.0.0)
+Project-URL: Repository, https://github.com/manuelgilm/mlflow_for_ml_dev
+Description-Content-Type: text/markdown
+
+# MLflow for Machine Learning Development
