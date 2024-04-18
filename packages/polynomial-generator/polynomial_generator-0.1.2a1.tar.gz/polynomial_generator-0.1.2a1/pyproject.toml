@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "polynomial-generator"
+version = "0.1.2a1"
+description = "A Python package for generating polynomial expressions"
+authors = ["Hermann Agossou <agossouhermann7@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+maintainers = [
+    "Hermann Agossou <agossouhermann7@gmail.com>"
+]
+homepage = "https://github.com/Hermann-web/polynomial-generator"
+repository = "https://github.com/Hermann-web/polynomial-generator"
+documentation = "https://github.com/Hermann-web/polynomial-generator"
+keywords = ["polynomial", "generator", "mathematics", "CLI", "GUI"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Environment :: Win32 (MS Windows)",
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.13"
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.5.0"
+isort = "^5.13.2"
+black = "^24.3.0"
+
+[tool.poetry.scripts]
+polygen = "polynomial_generator.polynomial_cli:main"
+polygenapp = "polynomial_generator.polynomial_app:main"
+build = "polynomial_generator.pyinstaller_script:install"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
