@@ -1,0 +1,9 @@
+django_safe_template_engine/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_safe_template_engine/engine.py,sha256=DILalFVKBPQxttP_x82y7DBMacyWbG4hu3XMBoZPjcA,388
+django_safe_template_engine/trusted_filters.py,sha256=_xwp8T0Qoe4-ca2eNs-sk8sqBdbbPHIiFAvON1liJXE,3735
+django_safe_template_engine/trusted_tags.py,sha256=JEJIlZv-BHsOR7yjqqACQhuQgotpfBjqCNUduZ8Y_20,782
+django_safe_template_engine/validators.py,sha256=-tcJ17P__4CmgvOebixThuzN5IC0xeAJkR4O8ulilDU,370
+django_safe_template_engine-1.3.1.dist-info/METADATA,sha256=YOMXHpCe8PLyjqTFN_hQxV_azzOSIMTwTupU6jIiiG8,12284
+django_safe_template_engine-1.3.1.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+django_safe_template_engine-1.3.1.dist-info/licenses/LICENSE,sha256=s4ZJQQUComX2CWmQVUfmodxGppsLCAuHTBASUaZYxZg,1500
+django_safe_template_engine-1.3.1.dist-info/RECORD,,
