@@ -1,0 +1,1 @@
+the two functions are: add_number, times_numbers --> then use num1 and num2 
