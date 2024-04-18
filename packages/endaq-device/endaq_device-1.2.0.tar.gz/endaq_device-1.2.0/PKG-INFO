@@ -1,0 +1,88 @@
+Metadata-Version: 2.1
+Name: endaq-device
+Version: 1.2.0
+Summary: Python API for enDAQ data recorders
+Home-page: https://github.com/MideTechnology/endaq-device
+Author: Mide Technology
+Author-email: help@mide.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/MideTechnology/endaq-device/issues
+Project-URL: Documentation, https://mide-technology-endaq-device.readthedocs-hosted.com/en/latest/
+Project-URL: Source Code, https://github.com/MideTechnology/endaq-device
+Keywords: endaq configure recorder hardware
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: idelib>=3.2
+Requires-Dist: numpy>=1.19.4
+Requires-Dist: ebmlite>=3.1.0
+Requires-Dist: psutil>=5.5.0; sys_platform == "linux" or sys_platform == "darwin"
+Requires-Dist: pyserial>=3.5
+Requires-Dist: pywin32>=228; sys_platform == "win32"
+Provides-Extra: test
+Requires-Dist: ebmlite>=3.3.0; extra == "test"
+Requires-Dist: idelib>=3.2.9; extra == "test"
+Requires-Dist: numpy>=1.19.4; extra == "test"
+Requires-Dist: psutil>=5.5.0; (sys_platform == "linux" or sys_platform == "darwin") and extra == "test"
+Requires-Dist: pyserial>=3.5; extra == "test"
+Requires-Dist: pywin32>=228; sys_platform == "win32" and extra == "test"
+Requires-Dist: pytest>=7.2; extra == "test"
+Provides-Extra: docs
+Requires-Dist: ebmlite>=3.3.0; extra == "docs"
+Requires-Dist: idelib>=3.2.9; extra == "docs"
+Requires-Dist: numpy>=1.19.4; extra == "docs"
+Requires-Dist: psutil>=5.5.0; (sys_platform == "linux" or sys_platform == "darwin") and extra == "docs"
+Requires-Dist: pyserial>=3.5; extra == "docs"
+Requires-Dist: pywin32>=228; sys_platform == "win32" and extra == "docs"
+Requires-Dist: Sphinx==4.5.0; extra == "docs"
+Requires-Dist: sphinxcontrib-applehelp==1.0.2; extra == "docs"
+Requires-Dist: sphinxcontrib-devhelp==1.0.2; extra == "docs"
+Requires-Dist: sphinxcontrib-htmlhelp==2.0.0; extra == "docs"
+Requires-Dist: sphinxcontrib-jsmath==1.0.1; extra == "docs"
+Requires-Dist: sphinxcontrib-qthelp==1.0.3; extra == "docs"
+Requires-Dist: sphinxcontrib-serializinghtml==1.1.5; extra == "docs"
+Requires-Dist: pydata-sphinx-theme==0.7.1; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints==1.18.1; extra == "docs"
+
+# `endaq.device`
+`endaq.device` (formerly `endaqlib`) provides a means of representing, accessing, configuring
+and controlling [enDAQ™ data
+recorders](https://endaq.com/collections/endaq-shock-recorders-vibration-data-logger-sensors).
+It also supports legacy SlamStick™ devices (X, C, and S).
+
+## Installation
+
+The `endaq-device` package is [available on
+PyPI](https://pypi.org/project/endaq-device/), and can be installed via
+`pip`:
+
+    pip install endaq-device
+
+For the most recent features that are still under development, you can
+also use <span class="title-ref">pip</span> to install endaq directly
+from [the GitHub
+repository](https://github.com/MideTechnology/endaq-device/):
+
+    pip install git+https://github.com/MideTechnology/endaq-device.git@develop
+
+Note: While `endaq-device` installs into the same `endaq` 'namespace' as
+[endaq-python](https://docs.endaq.com/en/latest/index.html), it is
+otherwise separate; the two packages are not interdependent, and one can
+be installed without the other. The packages do distinctly different
+things, and have very different use-cases.
+
+## Documentation
+*Note: the documentation is currently a work in progress.*
+
+The docs for this package can be found [here](https://mide-technology-endaq-device.readthedocs-hosted.com/en/latest/).
+
+## License
+
+The endaq-python repository is licensed under the MIT license. The full text can be found in the [LICENSE file](https://github.com/MideTechnology/endaq-python/blob/main/LICENSE).

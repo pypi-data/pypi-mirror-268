@@ -1,0 +1,44 @@
+idelib>=3.2
+numpy>=1.19.4
+ebmlite>=3.1.0
+pyserial>=3.5
+
+[:sys_platform == "linux" or sys_platform == "darwin"]
+psutil>=5.5.0
+
+[:sys_platform == "win32"]
+pywin32>=228
+
+[docs]
+ebmlite>=3.3.0
+idelib>=3.2.9
+numpy>=1.19.4
+pyserial>=3.5
+Sphinx==4.5.0
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==2.0.0
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.5
+pydata-sphinx-theme==0.7.1
+sphinx-autodoc-typehints==1.18.1
+
+[docs:sys_platform == "linux" or sys_platform == "darwin"]
+psutil>=5.5.0
+
+[docs:sys_platform == "win32"]
+pywin32>=228
+
+[test]
+ebmlite>=3.3.0
+idelib>=3.2.9
+numpy>=1.19.4
+pyserial>=3.5
+pytest>=7.2
+
+[test:sys_platform == "linux" or sys_platform == "darwin"]
+psutil>=5.5.0
+
+[test:sys_platform == "win32"]
+pywin32>=228
