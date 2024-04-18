@@ -1,0 +1,13 @@
+tricky/__init__.py,sha256=kjeQHWIa1ByXU5-0Ozr_wVl19ltGZvEBQ5nbm9bdHh8,73
+tricky/getters.py,sha256=dTuMw61neY033GF_m92qea2kHJZhlrgIw_mgnmqW-RI,826
+tricky/iterables.py,sha256=IG0KTdmfGbJHMMpoWCGkJ0TuMk_NlJw3xzFyvTN2XRU,2500
+tricky/pydantic/__init__.py,sha256=bCxiYBjqNLsLKjVG_LyXj07uMvwsuxWIn7niX1qY_z8,59
+tricky/pydantic/mutators.py,sha256=3T8q9r5C2muhzfKeg1W8SWPzsOKzV7pGfopIrkjzRcw,1796
+tricky/pydantic/types.py,sha256=pMjmGDc5dmVqkiGwURbLC17N2U7saRfJdfll8-OraXI,1357
+tricky/typing.py,sha256=EARR_cXRMZGnTRt0tbHzZPC3Z77Wj3GkQk6W62PdlMo,4410
+tricky/utils/__init__.py,sha256=igLXnmv2n-gCgszAouh6E2579eyo_-gheGZ8NrUNvZw,47
+tricky/utils/decorators.py,sha256=haaxWSBRYgzc0RBovFl7F0RgOBPpAzuti5hD5Im8sJc,2598
+tricky-0.0.16.dist-info/LICENSE,sha256=wUqICPHje-HIiKP-2ZEnS4C6QqiCY87BUlfachoTgCY,1078
+tricky-0.0.16.dist-info/METADATA,sha256=7CjwmB9T8mLGhPzldYkgC_XVMHoLdxtITVp6RhRoFu8,7150
+tricky-0.0.16.dist-info/WHEEL,sha256=kLuE8m1WYU0Ig0_YEGrXyTtiJvKPpLpDEiChiNyei5Y,88
+tricky-0.0.16.dist-info/RECORD,,
