@@ -1,0 +1,57 @@
+--- TEASER-plusplus/CMakeLists.txt.orig	2023-11-29 16:15:49.000000000 +0100
++++ TEASER-plusplus/CMakeLists.txt	2024-04-17 16:06:38.765333088 +0200
+@@ -29,7 +29,8 @@
+ 
+ # Cache Variables
+ if (NOT TEASERPP_PYTHON_VERSION)
+-    set(TEASERPP_PYTHON_VERSION "" CACHE STRING "Python version to use for TEASER++ bindings.")
++    find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
++    set(TEASERPP_PYTHON_VERSION "${Python3_VERSION}" CACHE STRING "Python version to use for TEASER++ bindings.")
+ endif ()
+ 
+ # Find dependencies
+--- TEASER-plusplus/cmake/GoogleTest.CMakeLists.txt.in.orig	2023-11-29 16:15:32.000000000 +0100
++++ TEASER-plusplus/cmake/GoogleTest.CMakeLists.txt.in	2024-04-17 16:01:25.206585096 +0200
+@@ -4,7 +4,7 @@
+ 
+ include(ExternalProject)
+ ExternalProject_Add(googletest
+-        URL                https://github.com/google/googletest/archive/release-1.8.1.zip
++        URL                https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+         SOURCE_DIR        "${CMAKE_CURRENT_BINARY_DIR}/googletest-src"
+         BINARY_DIR        "${CMAKE_CURRENT_BINARY_DIR}/googletest-build"
+         CONFIGURE_COMMAND ""
+--- TEASER-plusplus/python/CMakeLists.txt.orig	2023-11-29 16:15:49.000000000 +0100
++++ TEASER-plusplus/python/CMakeLists.txt	2024-04-17 16:48:29.799002316 +0200
+@@ -43,3 +43,15 @@
+         DESTINATION .
+         FILES_MATCHING
+         PATTERN *.py)
++
++if(APPLE)
++    SET_TARGET_PROPERTIES(teaserpp_python PROPERTIES
++        INSTALL_RPATH "@loader_path/../../..")
++else()
++    SET_TARGET_PROPERTIES(teaserpp_python PROPERTIES
++        INSTALL_RPATH "\$ORIGIN/../../..")
++endif()
++install(TARGETS teaserpp_python
++    DESTINATION ${PYTHON_SITELIB}/teaserpp_python)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/teaserpp_python/__init__.py
++    DESTINATION ${PYTHON_SITELIB}/teaserpp_python)
+--- TEASER-plusplus/teaser/CMakeLists.txt.orig	2023-11-29 16:15:49.000000000 +0100
++++ TEASER-plusplus/teaser/CMakeLists.txt	2024-04-17 16:55:15.100763073 +0200
+@@ -38,6 +38,13 @@
+     target_link_libraries(teaser_registration PRIVATE OpenMP::OpenMP_CXX)
+ endif()
+ 
++if(APPLE)
++    SET_TARGET_PROPERTIES(teaser_registration PROPERTIES
++        INSTALL_RPATH "@loader_path")
++else()
++    SET_TARGET_PROPERTIES(teaser_registration PROPERTIES
++        INSTALL_RPATH "\$ORIGIN")
++endif()
+ install(TARGETS teaser_registration
+     EXPORT teaserpp-export
+     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}

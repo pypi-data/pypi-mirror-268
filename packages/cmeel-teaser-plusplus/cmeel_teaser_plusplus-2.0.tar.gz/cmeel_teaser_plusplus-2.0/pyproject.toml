@@ -1,0 +1,22 @@
+[build-system]
+build-backend = "cmeel"
+requires = ["cmeel[build]", "cmeel-eigen"]
+
+[project]
+description = "cmeel distribution for TEASER++"
+license = "MIT"
+name = "cmeel-teaser-plusplus"
+requires-python = ">= 3.8"
+version = "2.0"
+
+[project.urls]
+homepage = "https://github.com/cmake-wheel/cmeel-teaser-plusplus"
+upstream = "https://github.com/MIT-SPARK/TEASER-plusplus"
+
+[tool.cmeel]
+build-number = 0
+run-tests = false
+source = "TEASER-plusplus"
+
+[tool.tomlsort]
+all = true
