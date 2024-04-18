@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+pm4py_pn_unfoldings.egg-info/PKG-INFO
+pm4py_pn_unfoldings.egg-info/SOURCES.txt
+pm4py_pn_unfoldings.egg-info/dependency_links.txt
+pm4py_pn_unfoldings.egg-info/requires.txt
+pm4py_pn_unfoldings.egg-info/top_level.txt
+unfoldings/__init__.py
