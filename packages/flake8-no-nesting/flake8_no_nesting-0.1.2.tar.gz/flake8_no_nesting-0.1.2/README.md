@@ -1,0 +1,65 @@
+- [flake8-no-nesting](#flake8-no-nesting)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Rules Enforced](#rules-enforced)
+  - [Configuration](#configuration)
+  - [Motivation](#motivation)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+
+# flake8-no-nesting
+
+`flake8-no-nesting` is a plugin for Flake8 designed to enhance code readability and maintainability by enforcing the Object Calisthenics rule: "One Level of Indentation per Method." The plugin aims to detect and flag the use of nested control structures such as `try`, `if`, `with`, `while`, and `for` in Python code.
+
+## Installation
+
+Install `flake8-no-nesting` via pip:
+
+```bash
+pip install flake8-no-nesting
+```
+
+## Usage
+
+After installation, `flake8-no-nesting` integrates seamlessly with Flake8. To run the plugin, execute Flake8 on your project directory:
+
+```bash
+flake8 your_project_directory
+```
+
+The plugin will analyze your code for any violations related to nested control structures.
+
+## Rules Enforced
+
+- **FNN100** nested `if` found
+- **FNN101** nested `for` loop found
+- **FNN102** nested `while` loop found
+- **FNN103** nested `with` found
+- **FNN104** nested `try` found
+
+Each violation will report the specific type of nesting and its location, helping you to refactor your code accordingly.
+
+## Configuration
+
+No specific configuration is required to get started with `flake8-no-nesting`. However, you can customize the behavior of Flake8 via the `.flake8` configuration file to ignore certain files or directories, or to adjust other Flake8 settings.
+
+Example `.flake8` configuration:
+
+```ini
+[flake8]
+exclude = tests/*
+max-line-length = 120
+```
+
+## Motivation
+
+This plugin supports the "One Level of Indentation per Method" rule from Object Calisthenics, which advocates for minimal indentation to improve code readability and reduce complexity. Following this rule helps in writing code that is easier to understand, test, and maintain.
+
+## Contributing
+
+We welcome contributions to improve `flake8-no-nesting`. If you have suggestions or encounter bugs, please feel free to open an issue or submit a pull request.
+
+## License
+
+`flake8-no-nesting` is distributed under the MIT License. See the `LICENSE` file for more details.
