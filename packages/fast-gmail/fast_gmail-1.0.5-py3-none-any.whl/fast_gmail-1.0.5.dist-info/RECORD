@@ -1,0 +1,11 @@
+fast_gmail/__init__.py,sha256=jsje6TvnSEVSxDPkavRN6W1BgVUa2Y0LvYZCEUSnVww,30
+fast_gmail/draft.py,sha256=24N5MHbFxNXbSijvSmyVJYGdYJejAQ3l7bRvoXudPYE,358
+fast_gmail/gmail.py,sha256=hqx-Lf1gsWXMdHgwjnsINq_KgrA2YY3v3HMou-VEe04,21074
+fast_gmail/helpers.py,sha256=nBBNTiK5OqyDRS3FUjuNWGO4-r-iR6isbKz1mhU4McQ,7199
+fast_gmail/message.py,sha256=jibc89kFtao-5lDKrWlgtCN6mhPDjqrw5GPHGkh-j08,25018
+fast_gmail/search.py,sha256=IEchLgsfcf2gEYZh8LXwevASuAbGUt5fQU-dEShQFhM,3601
+fast_gmail-1.0.5.dist-info/LICENSE,sha256=XtfvxW5Lvr_Io9pSfPV6F3Lm3jXbIwh7l50An6AIdKE,1062
+fast_gmail-1.0.5.dist-info/METADATA,sha256=qyjMfyMhBSGEPE0GHA5AvdLgilSNN7vGVPiEhxDSDuQ,14796
+fast_gmail-1.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fast_gmail-1.0.5.dist-info/top_level.txt,sha256=D0OE0qXfk4-yBTKtNjmJNSbtggfG1ZUdxlf0OBXNNyY,11
+fast_gmail-1.0.5.dist-info/RECORD,,
