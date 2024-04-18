@@ -1,0 +1,2 @@
+[console_scripts]
+pydal2sql = pydal2sql.cli:app
