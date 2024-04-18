@@ -1,0 +1,11 @@
+requests
+setuptools
+FontTools[ufo]
+glyphsLib
+defcon
+unicodedata2
+gflanguages>=0.5.16
+pyyaml
+
+[dev]
+gfsubsets
