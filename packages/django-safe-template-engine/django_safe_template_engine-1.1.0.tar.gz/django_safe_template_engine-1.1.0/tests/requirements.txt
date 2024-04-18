@@ -1,0 +1,11 @@
+# Path to package:
+..
+
+# Coding style / typing:
+flake8
+isort
+mypy
+
+# Test tools:
+pytest
+django == 3.2.*
