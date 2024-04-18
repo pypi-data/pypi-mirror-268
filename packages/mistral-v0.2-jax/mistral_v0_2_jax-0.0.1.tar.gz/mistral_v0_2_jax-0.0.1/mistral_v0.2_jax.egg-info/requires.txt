@@ -1,0 +1,14 @@
+jax
+jaxlib
+torch
+transformers
+datasets
+einops
+einshard<0.3,>=0.2.0
+sentencepiece
+accelerate
+mypy
+sphinx
+sphinx-autobuild
+sphinx-autodoc-typehints
+sphinx-book-theme
