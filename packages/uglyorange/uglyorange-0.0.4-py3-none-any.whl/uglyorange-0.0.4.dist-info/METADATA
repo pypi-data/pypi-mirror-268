@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: uglyorange
+Version: 0.0.4
+Summary: 
+Author: ultrasev
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: codefast (>=24.2.24.10,<25.0.0.0)
+Requires-Dist: fire (>=0.6.0,<0.7.0)
+Requires-Dist: httpx[socks] (>=0.27.0,<0.28.0)
+Requires-Dist: lxml (==4.9.4)
+Description-Content-Type: text/markdown
+
+

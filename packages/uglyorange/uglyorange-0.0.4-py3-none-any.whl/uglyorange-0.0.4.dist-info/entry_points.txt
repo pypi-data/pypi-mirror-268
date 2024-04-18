@@ -1,0 +1,5 @@
+[console_scripts]
+cufo=uglyorange.network:Cufo.entrypoint
+mp=uglyorange.network:FastPing.entrypoint
+pxy=uglyorange.network:ProxyCheck.entrypoint
+
