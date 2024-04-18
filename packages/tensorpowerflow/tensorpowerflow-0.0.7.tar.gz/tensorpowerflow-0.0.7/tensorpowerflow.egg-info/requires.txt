@@ -1,0 +1,26 @@
+numpy
+pandas
+matplotlib
+scipy
+tqdm
+numba>=0.53.0
+networkx
+seaborn
+pandapower
+psutil
+
+[:platform_system != "Darwin"]
+mkl
+
+[dev]
+build
+twine
+matplotlib
+jupyterlab
+tox
+
+[doc]
+sphinx
+
+[test]
+pytest
