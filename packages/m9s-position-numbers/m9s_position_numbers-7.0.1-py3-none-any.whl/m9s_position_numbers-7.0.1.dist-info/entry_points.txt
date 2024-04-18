@@ -1,0 +1,2 @@
+[trytond.modules]
+position_numbers = trytond.modules.position_numbers

@@ -1,0 +1,37 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:account.invoice.line,custom_item_number:"
+msgid "Custom item number"
+msgstr "Eigene Positionsnummer"
+
+msgctxt "field:account.invoice.line,item_number:"
+msgid "Item number"
+msgstr "Position"
+
+msgctxt "field:purchase.line,custom_item_number:"
+msgid "Custom item number"
+msgstr "Eigene Positionsnummer"
+
+msgctxt "field:purchase.line,item_number:"
+msgid "Item number"
+msgstr "Position"
+
+msgctxt "field:sale.line,item_number:"
+msgid "Item number"
+msgstr "Position"
+
+msgctxt "help:account.invoice.line,custom_item_number:"
+msgid ""
+"Put a value in this field to be used instead of the automatic numbering."
+msgstr ""
+"Ein hier eingetragener Wert wird statt der automatischen Nummerierung "
+"verwendet."
+
+msgctxt "help:purchase.line,custom_item_number:"
+msgid ""
+"Put a value in this field to be used instead of the automatic numbering."
+msgstr ""
+"Ein hier eingetragener Wert wird statt der automatischen Nummerierung "
+"verwendet."
