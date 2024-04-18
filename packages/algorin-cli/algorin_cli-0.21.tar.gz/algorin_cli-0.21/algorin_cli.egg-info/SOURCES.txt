@@ -1,0 +1,16 @@
+README.md
+setup.py
+algorin/__init__.py
+algorin/chatbot.py
+algorin/file_extractor.py
+algorin/main.py
+algorin_cli.egg-info/PKG-INFO
+algorin_cli.egg-info/SOURCES.txt
+algorin_cli.egg-info/dependency_links.txt
+algorin_cli.egg-info/entry_points.txt
+algorin_cli.egg-info/requires.txt
+algorin_cli.egg-info/top_level.txt
+tests/__init__.py
+tests/test_chatbot.py
+tests/test_file_extractor.py
+tests/test_main.py
