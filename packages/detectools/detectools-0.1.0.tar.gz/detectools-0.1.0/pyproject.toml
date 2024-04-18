@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "detectools"
+authors = [
+  {name="Lucas Bernigaud Samatan", email="lucas.bernigaud-samatan@inrae.fr"},
+  {name="Jordan Bernigaud Samatan", email="jordan.bernigaud-samatan@inrae.fr"},
+]
+maintainers = [
+  {name="Jordan Bernigaud Samatan", email="jordan.bernigaud-samatan@inrae.fr"},
+]
+description = "Overlay of PyTorch to generalize trainning and inference processes for detection & instance segmentation tasks."
+readme = "README_deployment.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    ]
+
+dynamic = ["version"]
+requires-python = ">=3.10.12"
+
+dependencies = [
+    "computervisiontools",
+    "torch==2.1.0",
+    "torchvision==0.16.0",
+    "tensorboard==2.15.1",
+    "pycocotools==2.0.7",
+    "torchmetrics==1.3.0",
+    "ultralytics==8.1.7",
+    "transformers==4.39.2"
+]
+
+license = {file = "LICENSE.txt"}
+
+[project.urls]
+Homepage = "https://forgemia.inra.fr/ue-apc/librairies/python/detectools"
+Issues = "https://forgemia.inra.fr/ue-apc/librairies/python/detectools/-/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "detectools.__version__"}
