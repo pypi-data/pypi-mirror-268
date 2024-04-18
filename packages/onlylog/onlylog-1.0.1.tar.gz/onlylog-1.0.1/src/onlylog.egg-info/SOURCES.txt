@@ -1,0 +1,10 @@
+README.md
+setup.py
+src/onlylog/__init__.py
+src/onlylog/__version__.py
+src/onlylog/onlylog.py
+src/onlylog.egg-info/PKG-INFO
+src/onlylog.egg-info/SOURCES.txt
+src/onlylog.egg-info/dependency_links.txt
+src/onlylog.egg-info/requires.txt
+src/onlylog.egg-info/top_level.txt
