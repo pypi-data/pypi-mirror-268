@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: sanloop
+Version: 0.1
+Summary: Python library for integrating Arduino boards with Python through APIs.
+Home-page: https://github.com/akshaypiranav/pyduino
+Author: AKSHAY PIRANAV B
+Author-email: akshaypiranavb@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+Requires-Dist: requests
+
