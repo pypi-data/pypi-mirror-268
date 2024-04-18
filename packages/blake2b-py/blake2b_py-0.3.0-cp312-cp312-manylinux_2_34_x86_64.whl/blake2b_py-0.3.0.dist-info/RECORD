@@ -1,0 +1,5 @@
+blake2b_py-0.3.0.dist-info/METADATA,sha256=nGcOBCFBMM_7hZIT4-AXsD459XwwFmJd9I5ksbaqsKY,1598
+blake2b_py-0.3.0.dist-info/WHEEL,sha256=QMYRDXtA3cu3eugxojJr4Z0rW4X_0TiLWXDhSH7tcaU,108
+blake2b/__init__.py,sha256=xOb9NWHmg1amxD3Lh0nCGooKL4ZB3BKopXMvmYHY7Mg,6993
+blake2b/blake2b.cpython-312-x86_64-linux-gnu.so,sha256=FsD5B8pgkeQVEkMcFjtGYBW4wCGynTDLY1UWn_510g4,565864
+blake2b_py-0.3.0.dist-info/RECORD,,
