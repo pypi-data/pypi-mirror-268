@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: myarg
+Version: 1.0.3
+Summary: None
+Home-page: UNKNOWN
+Author: yi liu
+Author-email: 
+License: UNKNOWN
+Description: 
+        
+Keywords: python,flink,arg,toml,windows,linux
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Description-Content-Type: text/markdown
