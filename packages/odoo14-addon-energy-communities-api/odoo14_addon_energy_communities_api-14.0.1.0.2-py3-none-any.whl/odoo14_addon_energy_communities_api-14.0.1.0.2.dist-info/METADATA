@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: odoo14-addon-energy-communities-api
+Version: 14.0.1.0.2
+Summary: API/REST endpoints for energy communities
+Home-page: https://coopdevs.org
+Author: Coopdevs Treball SCCL & Som Energia SCCL & SomIT
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 14.0
+Requires-Python: >=3.6
+Requires-Dist: odoo14-addon-energy-communities ==14.0.8.2.1
+Requires-Dist: odoo14-addon-fastapi ==14.0.0.0.3
+Requires-Dist: odoo <14.1dev,>=14.0a
+
+
+        This addon enables an API/REST communication with energy communities platform based in Fastapi framework
+    
