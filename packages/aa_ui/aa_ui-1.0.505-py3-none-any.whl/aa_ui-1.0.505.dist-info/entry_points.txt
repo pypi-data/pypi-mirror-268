@@ -1,0 +1,4 @@
+[console_scripts]
+aladin_assistants=aa_ui.agenta_cli.agenta.cli.main:cli
+aladin_assistants_ui=aa_ui.cli:cli
+
