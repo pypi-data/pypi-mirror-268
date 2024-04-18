@@ -1,0 +1,8 @@
+LICENSE.txt
+README.txt
+pyproject.toml
+setup.cfg
+calculator/testontoplibrary.egg-info/PKG-INFO
+calculator/testontoplibrary.egg-info/SOURCES.txt
+calculator/testontoplibrary.egg-info/dependency_links.txt
+calculator/testontoplibrary.egg-info/top_level.txt
