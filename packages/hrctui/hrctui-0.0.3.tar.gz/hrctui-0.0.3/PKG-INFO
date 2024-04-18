@@ -1,0 +1,23 @@
+Metadata-Version: 2.3
+Name: hrctui
+Version: 0.0.3
+Summary: Textual UI for HRC
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Author-email: hecker <hecker@hecur.ru>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: pycryptodome
+Requires-Dist: textual
+Requires-Dist: textual-dev
+Requires-Dist: websockets
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
