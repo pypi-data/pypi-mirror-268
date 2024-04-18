@@ -1,0 +1,10 @@
+LICENCE
+README.md
+setup.py
+routput/__init__.py
+routput/__main__.py
+routput/routput.py
+routput.egg-info/PKG-INFO
+routput.egg-info/SOURCES.txt
+routput.egg-info/dependency_links.txt
+routput.egg-info/top_level.txt
