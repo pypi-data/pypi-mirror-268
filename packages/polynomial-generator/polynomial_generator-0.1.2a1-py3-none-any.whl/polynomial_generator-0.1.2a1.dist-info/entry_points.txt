@@ -1,0 +1,5 @@
+[console_scripts]
+build=polynomial_generator.pyinstaller_script:install
+polygen=polynomial_generator.polynomial_cli:main
+polygenapp=polynomial_generator.polynomial_app:main
+
