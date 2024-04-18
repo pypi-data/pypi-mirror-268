@@ -1,0 +1,3 @@
+[console_scripts]
+surfkit=surfkit.cli.main:app
+
