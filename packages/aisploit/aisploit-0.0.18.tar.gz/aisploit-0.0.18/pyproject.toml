@@ -1,0 +1,94 @@
+[tool.poetry]
+name = "aisploit"
+version = "0.0.18"
+description = "Tiny package designed to support red teams and penetration testers in exploiting large language model AI solutions."
+authors = ["hupe1980"]
+repository = "https://github.com/hupe1980/aisploit"
+homepage = "https://github.com/hupe1980/aisploit"
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = [
+    "security",
+    "ai",
+    "pentest",
+    "red-team",
+    "responsible-ai",
+    "red-team-tools",
+    "llm",
+    "generative-ai",
+    "ai-red-team",
+    "langchain",
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.6.2"
+requests = "^2.31.0"
+langchain-openai = ">=0.1.1"
+langchain-core = ">=0.1.26"
+langchain-community = ">=0.0.24"
+python-dotenv = "^1.0.1"
+numpy = "^1.26.4"
+transformers = "^4.38.1"
+torch = "^2.2.2"
+jinja2 = "^3.1.3"
+ipython = "^8.23.0"
+imapclient = "^3.0.1"
+langchain-anthropic = "^0.1.6"
+langchain-google-genai = "^1.0.1"
+nltk = "^3.8.1"
+confusables = "^1.2.0"
+python-docx = "^1.1.0"
+
+[tool.poetry.group.dev.dependencies]
+chromadb = "^0.4.23"
+pytest = "^8.0.1"
+jupyter = "^1.0.0"
+types-pyyaml = "^6.0.12.12"
+types-requests = "^2.31.0.20240218"
+black = "^24.2.0"
+mypy = "^1.8.0"
+sphinx = "^7.2.6"
+ruff = "^0.3.7"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.black]
+skip-string-normalization = true
+line-length = 120
+
+[tool.ruff]
+# Same as Black.
+line-length = 120
+
+lint.select = [
+    "E",  # pycodestyle errors (settings from FastAPI, thanks, @tiangolo!)
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+lint.ignore = [
+    "E501",  # line too long, handled by black
+    "C901",  # too complex
+]
+
+[tool.ruff.lint.isort]
+order-by-type = true
+relative-imports-order = "closest-to-furthest"
+extra-standard-library = ["typing"]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+known-first-party = []
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
