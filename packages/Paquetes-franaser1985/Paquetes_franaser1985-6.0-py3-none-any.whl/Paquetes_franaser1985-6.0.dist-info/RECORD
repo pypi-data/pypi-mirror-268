@@ -1,0 +1,13 @@
+Paquetes/__init__.py,sha256=LBLN84x7JmEfXll2-EStH1oZF9N6tS7IayanQq9SBE4,151
+Paquetes/Adios/__init__.py,sha256=Uhl3q9eEFf9WtwHm_gVyM4U7ao7hCJpOCm7L5dsUIBQ,151
+Paquetes/Adios/despedidas.py,sha256=W8I1vO_uL4XQvdF5jZwShh2pMo58Olfp3gPRd4dhstI,187
+Paquetes/Hola/__init__.py,sha256=p5Hy_sG-rlrWJ5sTJzCj-2nwv7Hp2-6aKE9VbQPgzvE,150
+Paquetes/Hola/test3.py,sha256=CqUxyAM3ueawWv78IS7uBnHI52U2NSlUkqEdxDm2HuQ,750
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_adios.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_hola.py,sha256=v0exYHAjS1ObGmDB_tr0Hjb1uUDhnjLj6nhhGKsd3eY,285
+Paquetes_franaser1985-6.0.dist-info/LICENSE,sha256=Rp4Y9imnASpIM49grAO2Yaexc4v77GbHcoBmJ7FlSCc,1082
+Paquetes_franaser1985-6.0.dist-info/METADATA,sha256=jFMSxEZ1gKyiHrlSztYLfOUmV1pmhD4-TNDtH6jEwVA,1097
+Paquetes_franaser1985-6.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+Paquetes_franaser1985-6.0.dist-info/top_level.txt,sha256=uKgmKAGlg8yQqSkICk-isjAHwTi5nfSElyp5UySo2h4,15
+Paquetes_franaser1985-6.0.dist-info/RECORD,,
