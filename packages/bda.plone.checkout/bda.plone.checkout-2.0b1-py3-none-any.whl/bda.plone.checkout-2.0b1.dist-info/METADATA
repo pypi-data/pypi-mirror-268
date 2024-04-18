@@ -1,0 +1,354 @@
+Metadata-Version: 2.1
+Name: bda.plone.checkout
+Version: 2.0b1
+Summary: Checkout
+Author: BlueDynamics Alliance
+Author-email: dev@bluedynamics.com
+License: GNU General Public Licence
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Zope
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.rst
+License-File: LICENSE_GPL.rst
+Requires-Dist: setuptools
+Requires-Dist: Plone
+Requires-Dist: bda.plone.cart
+Requires-Dist: bda.plone.payment
+Requires-Dist: pycountry
+Requires-Dist: yafowil.plone
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+
+==================
+bda.plone.checkout
+==================
+
+Checkout process and forms for ``bda.plone.shop``.
+
+
+Installation
+============
+
+This package is part of the ``bda.plone.shop`` stack. Please refer to
+`bda.plone.shop <https://github.com/bluedynamics/bda.plone.shop>`_ for
+installation instructions.
+
+
+Customizing the checkout form
+=============================
+
+To customize the checkout form you'll typically start off with your own
+form having a custom ``provider_registry``.
+
+You'll use the ``FieldsProvider`` objects that you're happy with and replace
+those that need an adaption.
+
+In this example, we'll add an additional field ``uid`` to the ``PersonalData``
+provider an re-use the others:
+
+.. code-block:: python
+
+    from zope.i18nmessageid import MessageFactory
+    from bda.plone.checkout.browser import form as coform
+
+
+    _ = MessageFactory('my.package')
+    my_provider_registry = coform.ProviderRegistry()
+
+
+    class MyPersonalData(coform.PersonalData):
+        fields_template = 'my.package.shop:forms/personal_data.yaml'
+        message_factory = _
+
+
+    my_provider_registry.add(coform.CartSummary)
+    my_provider_registry.add(MyPersonalData)
+    my_provider_registry.add(coform.BillingAddress)
+    my_provider_registry.add(coform.DeliveryAddress)
+    my_provider_registry.add(coform.ShippingSelection)
+    my_provider_registry.add(coform.PaymentSelection)
+    my_provider_registry.add(coform.OrderComment)
+    my_provider_registry.add(coform.AcceptTermsAndConditions)
+
+
+    class MyCheckoutForm(coform.CheckoutForm):
+        """Customized checkout form to add UID field for company.
+        """
+        provider_registry = my_provider_registry
+
+Copy ``bda/plone/checkout/browser/forms/personal_data.yaml`` to
+``my/package/shop/forms/personal_data.yaml`` and make your changes.
+
+This package uses `Yet Another FOrm WIdget Library`_ (`YAFOWIL`)
+for rendering the checkout form.
+
+.. _`Yet Another FOrm WIdget Library`: http://docs.yafowil.info/
+
+We'll append a new field `uid` at the end of the ``personal data``
+section:
+
+.. code-block:: yaml
+
+    - company:
+        factory: "#field:text"
+        value: context.get_value
+        props:
+            label: i18n:label_company:Company
+            display_proxy: True
+        mode: expr:context.mode
+    - uid:
+        factory: "#field:text"
+        value: context.get_value
+        props:
+            label: i18n:label_companyuid:UID Number
+            display_proxy: True
+        mode: expr:context.mode 
+
+(NOTE: it's not possible to mix i18n domains within a yaml file so
+you're better off to add you translations to a separtate
+``bda.plone.checkout.po`` file in your package's locales)
+
+Now register your customized form by overriding the browser page
+for your browserlayer or skinlayer:
+
+.. code-block:: xml
+
+    <browser:page
+      for="*"
+      name="checkoutform"
+      class=".checkout.MyCheckoutForm"
+      permission="zope2.View"
+      layer=".browser.interfaces.IThemeSpecific" />
+
+.. NOTE:: Your new field will automatically be included in the order data.
+
+    However, by default, it will not show up in order emails, the order export
+    (``@@exportorders``) or the order summary (``@@orders``).
+    See `bda.plone.orders`_ for instructions how to add them there.
+
+    .. _`bda.plone.orders`: https://github.com/bluedynamics/bda.plone.orders
+
+
+Permissions
+===========
+
+bda.plone.checkout.PerformCheckout
+----------------------------------
+
+This permission controls whether a user can actually perform the checkout
+process. Checkout related views are bound to this permission, thus, a visitor
+without this permission granted gets redirected to the login / registration
+form.
+
+By default, this permission is set for roles:
+
+* Manager
+* Site Administrator
+* Customer
+
+In order to enable non-customers or anonymous users to perform the checkout,
+edit ``rolemap.xml`` in your integration package as needed.
+
+
+Create translations
+===================
+
+::
+
+    $ cd src/bda/plone/checkout/
+    $ ./i18n.sh
+
+
+Contributors
+============
+
+- Robert Niederreiter (Author)
+- Peter Holzer
+- Harald Friessnegger
+
+Changelog
+=========
+
+2.0b1 (2024-04-17)
+------------------
+
+- rewrite CSS resources to SCSS
+  [petschki]
+
+- Introduce ``checkout_button_factories`` and ``confirmation_button_factories``.
+  [rnix, jensens]
+
+- Consider ``IPayment.clear_session`` in checkout form.
+  [rnix]
+
+- At end of checkout post form to activate plone.protect CSRF authenticator.
+  [jensens]
+
+- No longer support for z3c.autoinclude.
+  [jensens]
+
+- More CSS classes on cart.
+  [jensens]
+
+- Reflect latest changes in cart/shipping.
+  [jensens]
+
+- Code style black. isort.
+  [jensens]
+
+- Update version and classifiers - 2.x targets Plone 5.1/5.2 without Archetypes
+  [agitator]
+
+
+1.0a1 (unreleased)
+------------------
+
+- Use sort order of ENABLED_COUNTRIES
+  [agitator]
+
+- Replace unittest2 with untittest
+  [llisa123]
+
+- Display cart item discount in cart overview.
+  [rnix]
+
+- Introduce ``bda.plone.checkout: Perform Checkout`` permission and bind
+  checkout related views to it.
+  [rnix]
+
+- added ``data-context-url`` for sane ``cartData`` and ``validate_cart_item``
+  calls on Plone 5.
+  [agitator]
+
+- Plone 5 update.
+  [rnix, agitator]
+
+
+0.5
+---
+
+- JSHint JavaScript.
+  [thet]
+
+
+0.4
+---
+
+- Always deliver shipping markup for cart overview. Displaying gets controlled
+  by cart JS.
+  [rnix]
+
+- Implement ``skip`` property on ``ShippingSelection`` fields provider and
+  skip shipping selection if not item in cart is shippable.
+  [rnix]
+
+- Use ``bda.plone.checkout.interfaces.ICheckoutSettings`` adapter instead
+  of self in ``bda.plone.checkout.browser.form.CheckoutForm`` to handle
+  ``skip_payment`` and ``skip_payment_redirect_url``.
+  [rnix]
+
+- Remove ``skip_payment`` and ``skip_payment_redirect_url`` attributes
+  from ``bda.plone.checkout.interfaces.ICheckoutAdapter`` interface. They exist
+  now as functions accepting data uid on
+  ``bda.plone.checkout.interfaces.ICheckoutSettings``.
+  [rnix]
+
+- Introduce ``bda.plone.checkout.interfaces.ICheckoutSettings`` interface.
+  [rnix]
+
+- Implement ``skip`` property on ``PaymentSelection`` fields provider and
+  skip payment selection if total cart price is 0.
+  [rnix]
+
+- Add ``bda.plone.checkout.interfaces.IFieldsProvider.skip`` attribute.
+  [rnix]
+
+- Adopt shipping handling to ``bda.plone.shipping`` >= 0.4.
+  [rnix]
+
+- Consider shipping method from cookie in checkout form.
+  [rnix]
+
+- Do not rely on acquisition and base link for `terms and conditions`
+  on the navigation root. (path/to/navroot/<ID>)
+
+  `ID` is configurable by patching
+  ``bda.plone.checkout.browser.form.TERMS_AND_CONDITONS_ID``
+  [fRiSi]
+
+
+0.3
+---
+
+- Register pycountry translations and use them.
+  [rnix]
+
+- Adopt checkout summary to consider currency and discount.
+  [rnix]
+
+- Heading for ``accept_terms`` in checkout form. This better seperates this
+  button visually from the rest.
+  [thet]
+
+- Prefill the checkout form with defaults from ``ICheckoutFormPresets`` adapter.
+  [thet]
+
+- Fix BrowserLayer order precedence.
+  [thet]
+
+- introduce ``bda.plone.checkout.ICheckoutFormPresets``.
+  [rnix]
+
+
+0.2
+---
+
+- introduce ``skip_payment`` and ``skip_payment_redirect_url`` on
+  ``bda.plone.checkout.ICheckoutAdapter`` and consider in
+  ``bda.plone.checkout.browser.form.CheckoutForm``.
+  [rnix]
+
+
+0.1
+---
+
+- initial work
+  [rnix]
+
+License
+=======
+
+Copyright (c) 2012-2019, BlueDynamics Alliance, Austria
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this 
+  list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this 
+  list of conditions and the following disclaimer in the documentation and/or 
+  other materials provided with the distribution.
+* Neither the name of the BlueDynamics Alliance nor the names of its 
+  contributors may be used to endorse or promote products derived from this 
+  software without specific prior written permission.
+      
+THIS SOFTWARE IS PROVIDED BY BlueDynamics Alliance ``AS IS`` AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL BlueDynamics Alliance BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

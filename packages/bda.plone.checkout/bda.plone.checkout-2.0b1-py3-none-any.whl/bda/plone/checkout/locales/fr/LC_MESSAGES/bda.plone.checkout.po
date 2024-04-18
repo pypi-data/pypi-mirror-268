@@ -1,0 +1,196 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bda.plone.checkout\n"
+"POT-Creation-Date: 2020-05-29 10:44+0000\n"
+"PO-Revision-Date: 2014-09-04 14:32+0100\n"
+"Last-Translator: Peter Holzer <peter.holzer@agitator.com>\n"
+"Language-Team: Peter Holzer <peter.holzer@agitator.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: bda.plone.checkout\n"
+"X-Is-Fallback-For: fr-be fr-ca fr-lu fr-mc fr-ch fr-fr\n"
+
+#. Default: "${icon} Back"
+#: ./browser/form.py:379
+#, fuzzy
+msgid "back"
+msgstr "Retour"
+
+#: ./profiles.zcml:14
+msgid "bda.plone.checkout"
+msgstr ""
+
+#. Default: "Your Order"
+#: ./browser/view.pt:20
+msgid "checkout"
+msgstr "Caisse"
+
+# City is required
+msgid "city_is_required"
+msgstr "La localité est obligatoire"
+
+# Country is required
+msgid "country_is_required"
+msgstr "Le pays est obligatoire"
+
+# Email is required
+msgid "email_is_required"
+msgstr "L'adresse E-mail est obligatoire"
+
+#. Default: "Please accept our terms and conditions."
+#: ./browser/form.py:330
+msgid "error_accept_terms_and_conditiond"
+msgstr "S'il vous plaît accepter les termes et conditions"
+
+#. Default: "Female"
+#: ./vocabularies.py:14
+msgid "female"
+msgstr "Madame"
+
+#. Default: "Order now ${icon}"
+#: ./browser/form.py:415
+#, fuzzy
+msgid "finish"
+msgstr "Terminer"
+
+# First Name is required
+msgid "firstname_is_required"
+msgstr "Nom obligatoire"
+
+# Accept terms
+msgid "heading_accept_terms"
+msgstr "Termes et conditions"
+
+# Billing Address
+msgid "heading_billing_address"
+msgstr "Adresse de facturation"
+
+#. Default: "Cart"
+#: ./browser/form.py:134
+msgid "heading_cart_summary"
+msgstr "Aperçu du panier"
+
+# Delivery Address
+msgid "heading_delivery_address"
+msgstr "Adresse de livraison"
+
+# Additional information
+msgid "heading_order_comment"
+msgstr "Informations complémentaires"
+
+# Payment Selection
+msgid "heading_payment_selection"
+msgstr "Mode de payement"
+
+# Personal Data
+msgid "heading_personal_data"
+msgstr "Données personnelles"
+
+# Shipping
+msgid "heading_shipping_selection"
+msgstr "Expédition"
+
+# Delivery address differs from shipping address?
+msgid "label_alternative_delivery"
+msgstr "Différence entre adresse de livraison et facturation?"
+
+# City
+msgid "label_city"
+msgstr "Lieu"
+
+# Comment
+msgid "label_comment"
+msgstr "Commentaire"
+
+# Company
+msgid "label_company"
+msgstr "Entreprise"
+
+# Country
+msgid "label_country"
+msgstr "Pays"
+
+# Email
+msgid "label_email"
+msgstr "E-Mail"
+
+# First Name
+msgid "label_firstname"
+msgstr "Nom"
+
+# Gender
+msgid "label_gender"
+msgstr "Titre"
+
+# Last Name
+msgid "label_lastname"
+msgstr "Nom de famille"
+
+# Phone
+msgid "label_phone"
+msgstr "Téléphone"
+
+# Street
+msgid "label_street"
+msgstr "Rue"
+
+# ZIP
+msgid "label_zip"
+msgstr "Code postal"
+
+# Last Name is required
+msgid "lastname_is_required"
+msgstr "Nom de famille obligatoire"
+
+#. Default: "Male"
+#: ./vocabularies.py:13
+msgid "male"
+msgstr "Monsieur"
+
+#. Default: "Next ${icon}"
+#: ./browser/form.py:391
+#, fuzzy
+msgid "next"
+msgstr "Suivant"
+
+#. Default: "No"
+#: ./browser/form.py:197
+msgid "no"
+msgstr "Non"
+
+#. Default: "not set"
+#: ./browser/form.py:198
+msgid "not set"
+msgstr "Non défini"
+
+# Phone is required
+msgid "phone_is_required"
+msgstr "No. de téléphone obligatoire"
+
+# Street is required
+msgid "street_is_required"
+msgstr "Rue obligatoire"
+
+#. Default: "Terms and conditions"
+#: ./browser/form.py:307
+msgid "terms_and_conditions"
+msgstr "termes et conditions"
+
+#. Default: "I have read and accept the ${terms_and_conditions}"
+#: ./browser/form.py:314
+msgid "terms_and_conditions_text"
+msgstr "J'ai lu et j'accepte les ${terms_and_conditions}"
+
+#. Default: "Yes"
+#: ./browser/form.py:196
+msgid "yes"
+msgstr "Oui"
+
+# ZIP is required
+msgid "zip_is_required"
+msgstr "No. postal obligatoire"

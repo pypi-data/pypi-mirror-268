@@ -1,0 +1,192 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2020-05-29 10:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#. Default: "${icon} Back"
+#: ./browser/form.py:379
+msgid "back"
+msgstr ""
+
+#: ./profiles.zcml:14
+msgid "bda.plone.checkout"
+msgstr ""
+
+#. Default: "Your Order"
+#: ./browser/view.pt:20
+msgid "checkout"
+msgstr ""
+
+# City is required
+msgid "city_is_required"
+msgstr ""
+
+# Country is required
+msgid "country_is_required"
+msgstr ""
+
+# Email is required
+msgid "email_is_required"
+msgstr ""
+
+#. Default: "Please accept our terms and conditions."
+#: ./browser/form.py:330
+msgid "error_accept_terms_and_conditiond"
+msgstr ""
+
+#. Default: "Female"
+#: ./vocabularies.py:14
+msgid "female"
+msgstr ""
+
+#. Default: "Order now ${icon}"
+#: ./browser/form.py:415
+msgid "finish"
+msgstr ""
+
+# First Name is required
+msgid "firstname_is_required"
+msgstr ""
+
+# Accept terms
+msgid "heading_accept_terms"
+msgstr ""
+
+# Billing Address
+msgid "heading_billing_address"
+msgstr ""
+
+#. Default: "Cart"
+#: ./browser/form.py:134
+msgid "heading_cart_summary"
+msgstr ""
+
+# Delivery Address
+msgid "heading_delivery_address"
+msgstr ""
+
+# Additional information
+msgid "heading_order_comment"
+msgstr ""
+
+# Payment Selection
+msgid "heading_payment_selection"
+msgstr ""
+
+# Personal Data
+msgid "heading_personal_data"
+msgstr ""
+
+# Shipping
+msgid "heading_shipping_selection"
+msgstr ""
+
+# Delivery address differs from shipping address?
+msgid "label_alternative_delivery"
+msgstr ""
+
+# City
+msgid "label_city"
+msgstr ""
+
+# Comment
+msgid "label_comment"
+msgstr ""
+
+# Company
+msgid "label_company"
+msgstr ""
+
+# Country
+msgid "label_country"
+msgstr ""
+
+# Email
+msgid "label_email"
+msgstr ""
+
+# First Name
+msgid "label_firstname"
+msgstr ""
+
+# Gender
+msgid "label_gender"
+msgstr ""
+
+# Last Name
+msgid "label_lastname"
+msgstr ""
+
+# Phone
+msgid "label_phone"
+msgstr ""
+
+# Street
+msgid "label_street"
+msgstr ""
+
+# ZIP
+msgid "label_zip"
+msgstr ""
+
+# Last Name is required
+msgid "lastname_is_required"
+msgstr ""
+
+#. Default: "Male"
+#: ./vocabularies.py:13
+msgid "male"
+msgstr ""
+
+#. Default: "Next ${icon}"
+#: ./browser/form.py:391
+msgid "next"
+msgstr ""
+
+#. Default: "No"
+#: ./browser/form.py:197
+msgid "no"
+msgstr ""
+
+#. Default: "not set"
+#: ./browser/form.py:198
+msgid "not set"
+msgstr ""
+
+# Phone is required
+msgid "phone_is_required"
+msgstr ""
+
+# Street is required
+msgid "street_is_required"
+msgstr ""
+
+#. Default: "Terms and conditions"
+#: ./browser/form.py:307
+msgid "terms_and_conditions"
+msgstr ""
+
+#. Default: "I have read and accept the ${terms_and_conditions}"
+#: ./browser/form.py:314
+msgid "terms_and_conditions_text"
+msgstr ""
+
+#. Default: "Yes"
+#: ./browser/form.py:196
+msgid "yes"
+msgstr ""
+
+# ZIP is required
+msgid "zip_is_required"
+msgstr ""
