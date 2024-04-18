@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/ehdg_pupil_detector/__init__.py
+src/ehdg_pupil_detector/ehdg_pupil_detector.py
+src/ehdg_pupil_detector/opm_detector_config.json
+src/ehdg_pupil_detector/opmtrack.py
+src/ehdg_pupil_detector/opmtrack_plot.json
+src/ehdg_pupil_detector.egg-info/PKG-INFO
+src/ehdg_pupil_detector.egg-info/SOURCES.txt
+src/ehdg_pupil_detector.egg-info/dependency_links.txt
+src/ehdg_pupil_detector.egg-info/entry_points.txt
+src/ehdg_pupil_detector.egg-info/requires.txt
+src/ehdg_pupil_detector.egg-info/top_level.txt
