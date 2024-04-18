@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: serial_toolbox
+Version: 0.1.1
+Summary: Utility functions for pySerial
+License: AGPL-3.0
+Author: Takuya Sasatani
+Author-email: 33111879+t-sasatani@users.noreply.github.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: coloredlogs (>=15.0.1,<16.0.0)
+Requires-Dist: customtkinter (>=5.2.2,<6.0.0)
+Requires-Dist: matplotlib (>=3.8.4,<4.0.0)
+Requires-Dist: myst-parser (>=2.0.0,<3.0.0)
+Requires-Dist: pyserial (>=3.5,<4.0)
+Requires-Dist: sphinx (>=7.2.6,<8.0.0)
+Requires-Dist: sphinx-rtd-theme (>=2.0.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+Utility functions for pySerial. This project is still at very early development stages and not guaranteed to work.
+- [Docs](https://serial-toolbox.readthedocs.io)
+- [Github](https://github.com/t-sasatani/serial-toolbox)
+
+# Install
+## PyPI
+```bash
+pip install serial_toolbox
+```
+
+## Poetry (for development)
+```bash
+git clone <repo url>
+cd <clone directory>
+poetry shell
+poetry install
+```
+
+# Scripts
+
+## Serial port I/O inspired by Arduino IDE
+### Serial monitor application
+Interactively select serial port and monitor values
+```bash
+serial_monitor
+```
+
+### Serial plotter application
+Interactively select serial port and plot values
+```bash
+serial_plotter
+```
