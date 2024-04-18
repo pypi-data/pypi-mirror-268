@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: termii-python-client
+Version: 1.0.0
+Summary: Termii python package
+Author-email: "Gabriel Michael Ojomakpene [codewitgabi]" <codewitgabi222@gmail.com>, Joshua Joseph <joshuajosephizzyjosh@gmail.com>
+Project-URL: Homepage, https://github.com/codewitgabi/python-termii
+Project-URL: Issues, https://github.com/codewitgabi/python-termii/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<div align="center">
+    <h1>Termii Python</h1>
+</div>
