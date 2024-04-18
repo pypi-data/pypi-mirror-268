@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cesm
+Version: 0.0.1a0
+Summary: Compact Energy System Modeling Tool
+Home-page: https://github.com/EINS-TUDa/CESM
+Author: ['Sina Hajikazemi', 'Julia Barbosa']
+Author-email: sina.hkazemi@email.com
+License: MIT
+License-File: LICENSE.md
+Requires-Dist: setuptools
+Requires-Dist: openpyxl
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: gurobipy
+Requires-Dist: plotly
+Requires-Dist: kaleido
+Requires-Dist: click
+Requires-Dist: InquirerPy
+Requires-Dist: pyarrow
+
