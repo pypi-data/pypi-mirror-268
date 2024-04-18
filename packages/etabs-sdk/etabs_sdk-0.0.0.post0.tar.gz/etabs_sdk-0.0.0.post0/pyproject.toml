@@ -1,0 +1,88 @@
+# Instalar localmente con pip en modo editable: python -m pip install -e .
+# Generar requirements.txt: python -m piptools compile -o requirements.txt pyproject.toml
+# Generar dev-requirements.txt: python -m piptools compile --extra dev -o dev-requirements.txt pyproject.toml
+[build-system]
+  requires = [
+    "setuptools >= 69.2.0",
+    "setuptools_scm[toml] >= 8.0.4",
+    "wheel >= 0.43.0",
+  ]
+  build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+  write_to       = "etabs_sdk/_version.py"
+  local_scheme   = "no-local-version"
+  version_scheme = "post-release"
+
+[tool.setuptools]
+  packages = ["etabs_sdk"]
+
+[project]
+  name = "etabs-sdk"
+  dynamic = ["version"]
+  description = "SDK para gestionar las comunicaciones con la API de Etabs con Python"
+  requires-python = ">=3.11"
+  keywords = [
+    "python",
+    "engineering",
+    "structural engineering",
+    "seismic",
+    "earthquakes",
+    "structural design",
+    "etabs",
+    "ingeniería",
+    "ingeniería estructural",
+    "sismo",
+    "terremotos",
+    "sdk",
+  ]
+  authors = [
+    { name = "Matías Glasner Vivanco", email = "mglasner@iec.cl" },
+    { name = "José Luis Barrios", email = "jlbarrios@iec.cl" },
+    { name = "Jorge Araya Varela", email = "jaraya@iec.cl" },
+  ]
+  license = { file = "LICENSE" }
+  urls = { source = "https://github.com/iec-ingenieria/etabs-sdk" }
+  dependencies = ["comtypes==1.2.1", "tabulate==0.9.0"]
+
+[project.optional-dependencies]
+  dev = ["pytest==8.1.1", "ruff==0.3.7", "mypy==1.9.0"]
+
+[tool.mypy]
+  files                       = "**/*.py"
+  check_untyped_defs          = true
+  disallow_untyped_defs       = true
+  disallow_incomplete_defs    = true
+  disallow_untyped_decorators = true
+  warn_return_any             = true
+  warn_unused_ignores         = true
+  no_implicit_optional        = true
+  show_error_codes            = true
+
+[tool.ruff]
+  line-length = 120
+  target-version = "py311"
+  fix = true
+  unfixable = [
+    "F401", # unused-import
+    "F841", # unused-variable
+  ]
+  ignore = ["E711", "E712", "N805", "PLR0913"]
+  select = [
+    "F",  # Pyflakes
+    "E",  # Pycodestyle
+    "W",  # Pycodestyle
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "Q",  # flake8-quotes
+    "D",  # pydocstyle
+    "N",  # pep8-naming
+    "UP", # pyupgrade
+    "PL", # Pylint
+  ]
+
+[tool.ruff.pydocstyle]
+  convention = "google"
+
+[tool.ruff.mccabe]
+  max-complexity = 5
