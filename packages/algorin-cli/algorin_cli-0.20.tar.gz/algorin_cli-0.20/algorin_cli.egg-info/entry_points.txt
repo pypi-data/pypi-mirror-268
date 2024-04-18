@@ -1,0 +1,2 @@
+[console_scripts]
+algorin-cli = algorin.main:main_menu
