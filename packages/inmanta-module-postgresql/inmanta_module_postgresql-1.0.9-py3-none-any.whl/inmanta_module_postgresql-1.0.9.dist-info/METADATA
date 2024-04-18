@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: inmanta-module-postgresql
+Version: 1.0.9
+License: Apache 2.0
+Requires-Dist: inmanta-module-exec
+Requires-Dist: inmanta-module-ssh
+Requires-Dist: inmanta-module-std
+Requires-Dist: inmanta-module-yum
+
