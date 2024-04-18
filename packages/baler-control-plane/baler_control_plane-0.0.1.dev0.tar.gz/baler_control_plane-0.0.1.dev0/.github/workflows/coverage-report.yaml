@@ -1,0 +1,33 @@
+name: Generate Coverage Report and publish to Coveralls
+
+on: [push, pull_request]
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 # Ensures the full git history is checked out for accurate coverage computation
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9' # Replace '3.x' with the specific version of Python you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install hatch # Install coverage or any other package needed for generating reports
+        # Install your project's dependencies here, e.g., pip install -r requirements.txt
+
+    - name: Run tests and generate coverage report
+      run: |
+        make coverage
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@v2.0.0
+      with:
+        github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        path-to-lcov: ./coverage.xml # Specify the path to the coverage report
