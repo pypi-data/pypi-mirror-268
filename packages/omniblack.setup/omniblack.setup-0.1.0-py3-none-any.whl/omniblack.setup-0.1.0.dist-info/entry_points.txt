@@ -1,0 +1,2 @@
+[egg_info.writers]
+omniblack_package.json = omniblack.setup:write_egg_files
