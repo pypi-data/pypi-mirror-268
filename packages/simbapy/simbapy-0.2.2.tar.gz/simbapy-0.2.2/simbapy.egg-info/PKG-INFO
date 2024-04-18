@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: simbapy
+Version: 0.2.2
+Summary: SIMBa: System Identification Methods leveraging Backpropagation
+Home-page: 
+Author: 
+Author-email: loris.dinatale@alumni.epfl.ch
+License: GNU LESSER GENERAL PUBLIC LICENSE Version 3
+Requires-Python: >=3.8,<3.11
+
+SIMBa (System Identification Methods leveraging Backpropagation) is an open-source toolbox leveraging the Pytorch Automatic Differentiation framework for stable state-space linear SysID. It allows the user to incorporate prior knowledge (like sparsity patterns of the state-space matrices) during the identification procedure.  More details on https://github.com/Cemempamoi/simba.
