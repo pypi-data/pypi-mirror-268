@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "realtime-server"
+version = "0.1.0"
+description = ""
+authors = ["Adapt <hello@getadapt.ai>"]
+readme = "README.md"
+packages = [
+    { include = "realtime" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+exclude = [
+    '.venv',
+    '.git',
+    '__pycache__',
+    'proto',
+    'build'
+]
+line-length = 120
+lint.ignore = ['E501', 'E741']
+lint.select = ['E', 'F', 'W', 'I']
+
+[tool.ruff.lint.per-file-ignores]
+"*_test.py" = ['E712']
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = [
+    "realtime",
+]
+extra-standard-library = ["pytest"]
