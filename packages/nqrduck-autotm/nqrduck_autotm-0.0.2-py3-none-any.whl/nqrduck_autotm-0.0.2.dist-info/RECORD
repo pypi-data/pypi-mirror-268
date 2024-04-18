@@ -1,0 +1,13 @@
+nqrduck_autotm/__init__.py,sha256=HtVjdcukTj9VMIquYik5Ybkb8WrwxmNvM2EXvA3hKJ8,36
+nqrduck_autotm/autotm.py,sha256=-QrI2KcSFedhRPSQUD9dn0Mp5Z5a__rSgYZObkw7_Fg,201
+nqrduck_autotm/controller.py,sha256=_tczcJk9QKwcjM5C6ycP0wguMsjLnZrGD7LkMLPa4EY,50008
+nqrduck_autotm/model.py,sha256=RUX4LXgVdVM5WodxQxZbE0V-KpVbaswZir5e2eH3xDo,19920
+nqrduck_autotm/view.py,sha256=iyunN_wDk0GzWDn-tCr_Ed9oCd5gh7E0HYrrfafceXw,36460
+nqrduck_autotm/widget.py,sha256=FBlOZcwSGppVeIwbKV65vcFag4WvgQPMTa2RDPT5MBA,20632
+nqrduck_autotm/resources/AutoTM.ini,sha256=G8IEz4vKkvyxKG1R5SurdzzGVA2rMRPx5WjxPub2nak,152
+nqrduck_autotm/resources/autotm_widget.ui,sha256=IsZb7a02WJJ6lWpPWEv6i0qFFeHrD5-gCgydnl7bJA8,17613
+nqrduck_autotm-0.0.2.dist-info/METADATA,sha256=H0d9_-VwZXNqecTTpE_HLOIE0wGxUmXzNyAtb3yDcGI,4796
+nqrduck_autotm-0.0.2.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+nqrduck_autotm-0.0.2.dist-info/entry_points.txt,sha256=93qg4-dUUdO7RV4mp3_E9dyNx9ge3Ddz0_mKYeJJBRY,56
+nqrduck_autotm-0.0.2.dist-info/licenses/LICENSE,sha256=Rmv40RY21WulJhWOQfwy-dyYMEnqG5zEKb_ScalCXjs,1070
+nqrduck_autotm-0.0.2.dist-info/RECORD,,

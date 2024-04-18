@@ -1,0 +1,2 @@
+[nqrduck]
+nqrduck-autotm = nqrduck_autotm.autotm:AutoTM
