@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "mlops_ods"
+version = "0.1.202404180935"
+description = ""
+authors = ["Iuliia Fokina"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.2.2"
+kaggle = "^1.6.12"
+seaborn = "^0.13.2"
+geopandas = "^0.14.3"
+folium = "^0.16.0"
+geodatasets = "^2023.12.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.0.0"
+black = "^24.3.0"
+isort = "^5.13.2"
+mypy = "^1.9.0"
+pytest = "^8.1.1"
+pre-commit = "^3.7.0"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+exclude = [".git", "venv"]
+max-line-length = 88
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
