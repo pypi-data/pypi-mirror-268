@@ -1,0 +1,5 @@
+vdk-core
+click-spinner
+docker
+kubernetes
+vdk-plugin-control-cli
