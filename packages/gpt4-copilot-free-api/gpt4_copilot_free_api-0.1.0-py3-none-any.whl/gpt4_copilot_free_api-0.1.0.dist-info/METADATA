@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: gpt4-copilot-free-api
+Version: 0.1.0
+Summary: Default template for PDM package
+Home-page: https://github.com/xDepcio/freegpt4
+Author: Aleksander Drwal
+Author-email: xDepcio <olek.drwal@gmail.com>
+License: MIT
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: flask >=3.0.3
+Requires-Dist: requests >=2.31.0
+
+# gpt4-copilot-free-api
