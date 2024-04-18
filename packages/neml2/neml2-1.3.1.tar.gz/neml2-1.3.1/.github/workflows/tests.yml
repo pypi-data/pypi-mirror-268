@@ -1,0 +1,179 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: read # Required when overriding permissions
+  pull-requests: write # For posting coverage report
+  checks: write
+
+# Newer commits should cancel old runs
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  clang-format:
+    name: Formatting Check
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        path:
+          - "src"
+          - "include"
+          - "tests"
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run clang-format style check
+        uses: jidicula/clang-format-action@v4.11.0
+        with:
+          clang-format-version: "17"
+          check-path: ${{ matrix.path }}
+  copyright:
+    name: Copyright check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
+      - name: Check to see if source files have the correct copyright header
+        run: ./scripts/check_copyright.py
+  build-test:
+    needs: clang-format
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        btype: [Release, Debug]
+        unity: [ON, OFF]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - uses: jwlawson/actions-setup-cmake@v2
+        with:
+          cmake-version: "3.23"
+      - run: |
+          cmake \
+            -DCMAKE_BUILD_TYPE=${{ matrix.btype }} \
+            -DCMAKE_UNITY_BUILD=${{ matrix.unity }} \
+            -DNEML2_UNIT=ON \
+            -DNEML2_REGRESSION=ON \
+            -DNEML2_VERIFICATION=ON \
+            -DNEML2_BENCHMARK=OFF \
+            -DNEML2_PROFILING=OFF \
+            -DNEML2_PYBIND=OFF \
+            -DNEML2_DOC=OFF \
+            .
+      - run: make -j 2
+      - run: cd tests && ./unit_tests -r junit > unit_tests.xml
+        continue-on-error: true
+      - run: cd tests && ./regression_tests -r junit > regression_tests.xml
+        continue-on-error: true
+      - run: cd tests && ./verification_tests -r junit > verification_tests.xml
+        continue-on-error: true
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: matrix.os == 'ubuntu-latest'
+        with:
+          files: tests/*.xml
+          check_name: Test Results (${{ matrix.os }}-${{ matrix.btype }}-${{ matrix.unity }})
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action/composite@v2
+        if: matrix.os == 'macos-latest'
+        with:
+          files: tests/*.xml
+          check_name: Test Results (${{ matrix.os }}-${{ matrix.btype }}-${{ matrix.unity }})
+  build-all:
+    needs: clang-format
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        btype: [Release, Debug]
+        unity: [ON, OFF]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - run: |
+          cmake \
+            -DCMAKE_BUILD_TYPE=${{ matrix.btype }} \
+            -DCMAKE_UNITY_BUILD=${{ matrix.unity }} \
+            -DNEML2_UNIT=ON \
+            -DNEML2_REGRESSION=ON \
+            -DNEML2_VERIFICATION=ON \
+            -DNEML2_BENCHMARK=ON \
+            -DNEML2_PROFILING=ON \
+            -DNEML2_PYBIND=OFF \
+            -DNEML2_DOC=OFF \
+            .
+      - run: make -j 2
+  coverage:
+    name: Code coverage check
+    needs: build-test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - run: sudo apt install lcov
+      - run: |
+          cmake \
+            -DCMAKE_BUILD_TYPE=Coverage \
+            -DCMAKE_UNITY_BUILD=OFF \
+            -DNEML2_UNIT=ON \
+            -DNEML2_REGRESSION=ON \
+            -DNEML2_VERIFICATION=ON \
+            -DNEML2_BENCHMARK=OFF \
+            -DNEML2_PROFILING=OFF \
+            -DNEML2_DOC=OFF \
+            .
+      - run: make -j 2
+      - run: ./scripts/coverage.sh
+      - uses: romeovs/lcov-reporter-action@v0.3.1
+        with:
+          lcov-file: ./coverage/coverage.info
+          github-token: ${{ secrets.PR_ACTION }}
+          delete-old-comments: true
+  cmake-integration:
+    name: Test CMake integration as a subproject
+    needs: clang-format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          path: neml2
+      - name: Create a source file for testing purposes
+        run: |
+          echo -e "\
+            #include \"neml2/base/Registry.h\"\n\
+            int main() {\n\
+              neml2::Registry::print(std::cout);\n\
+              return 0;\n\
+            }\
+            " > main.cxx
+      - run: cat main.cxx
+      - name: Create a CMakeLists.txt file for testing purposes
+        run: |
+          echo -e "\
+            cmake_minimum_required(VERSION 3.5)
+            project(FOO)\n\
+            add_subdirectory(neml2)\n\
+            add_executable(foo main.cxx)\n\
+            target_link_libraries(foo neml2)\n\
+            " > CMakeLists.txt
+      - run: cat CMakeLists.txt
+      - name: Configure with CMake
+        run: cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DNEML2_DOC=OFF -B build .
+      - name: Compile
+        run: cd build && make -j 2
+      - run: cd build && ./foo

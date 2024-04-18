@@ -1,0 +1,7 @@
+#
+##### pip requirements ######
+#
+-r doc/requirements.txt
+-r scripts/requirements.txt
+-r python/requirements.txt
+-r tests/requirements.txt
