@@ -1,0 +1,6 @@
+[commitizen.plugin]
+cz_gitmoji=cz_gitmoji.main:CommitizenGitmojiCz
+
+[console_scripts]
+gitmojify=gitmojify.mojify:run
+

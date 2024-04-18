@@ -1,0 +1,17 @@
+cz_gitmoji/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cz_gitmoji/conventional_gitmojis_info.txt,sha256=FqhncEblZC1IYYW7MXhOkA_YOvgO8a1F8-kWSNHVOi8,1285
+cz_gitmoji/main.py,sha256=md8gGdeAbG2DEAe3oBxPIMGltWDBAvjzi6R9u6OIZxc,13466
+cz_gitmoji/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitmojify/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gitmojify/mojify.py,sha256=5MoTZI3_P3wGhF4_ENZrJm-1-QQTJt-qP9PLErSoJzk,1687
+gitmojify/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shared/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shared/gitmojis.py,sha256=Xgiwbg_2xO-f5e-BC5gKyKuGKeS5ZIvJklK88ZJGCik,2701
+shared/model.py,sha256=ZmJGWCr94P-xyipC1eFQH0wzxZwJ0wFRFPJFTAP9gog,406
+shared/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shared/spec.py,sha256=imyZVdUGrVprWmuIm7AbVNIwijzaSITJsfG-OQ2Fjbw,10765
+shared/utils.py,sha256=9q5wRjiXFTyGaoo9yC2dTvq4ENUKpczvBK_hE_De6gM,817
+cz_conventional_gitmoji-0.3.0.dist-info/METADATA,sha256=HF-YjM00f_mvrWze4vu-8bTQR4OifwkNgm_-pU6ZrBU,3574
+cz_conventional_gitmoji-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cz_conventional_gitmoji-0.3.0.dist-info/entry_points.txt,sha256=T8LYEA6aOALWrigw60mXU_2PyHmZdgpLE87L2fToGB4,118
+cz_conventional_gitmoji-0.3.0.dist-info/RECORD,,
