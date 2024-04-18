@@ -1,0 +1,7 @@
+**build**
+**dist**
+**file_backend_n_screenshots**
+**egg-info**
+**__pycache__**
+exclude
+update-github.md
