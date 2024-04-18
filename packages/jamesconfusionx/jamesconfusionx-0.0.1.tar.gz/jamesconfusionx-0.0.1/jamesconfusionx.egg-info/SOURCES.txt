@@ -1,0 +1,5 @@
+setup.py
+jamesconfusionx.egg-info/PKG-INFO
+jamesconfusionx.egg-info/SOURCES.txt
+jamesconfusionx.egg-info/dependency_links.txt
+jamesconfusionx.egg-info/top_level.txt
