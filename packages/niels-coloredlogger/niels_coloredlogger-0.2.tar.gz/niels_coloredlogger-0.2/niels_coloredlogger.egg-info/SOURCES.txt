@@ -1,0 +1,8 @@
+setup.py
+niels_coloredlogger/__init__.py
+niels_coloredlogger/logger.py
+niels_coloredlogger.egg-info/PKG-INFO
+niels_coloredlogger.egg-info/SOURCES.txt
+niels_coloredlogger.egg-info/dependency_links.txt
+niels_coloredlogger.egg-info/requires.txt
+niels_coloredlogger.egg-info/top_level.txt
