@@ -1,0 +1,48 @@
+[
+    {            
+        "displayname": "Alexander Clausen",
+        "authorname": "Clausen, Alexander",
+        "affiliation": "Jülich Research Centre",
+        "github": "sk1p",
+        "contribution": "Package structure, LiberTEM core, reviews",
+        "orcid": "0000-0002-9555-7455"
+    }, 
+    {
+        "displayname": "Dieter Weber",
+        "authorname": "Weber, Dieter",
+        "affiliation": "Jülich Research Centre",
+        "github": "uellue",
+        "contribution": "Management, requirements analysis, system design, testing, documentation, communication",
+        "orcid": "0000-0001-6635-9567"
+    },
+    {
+        "displayname": "Karina Ruzaeva",
+        "authorname": "Ruzaeva, Karina",
+        "affiliation": "Jülich Research Centre" ,
+        "github": "kruzaeva",
+        "contribution": "Fast diffraction analysis",
+        "orcid": "0000-0003-3610-0989"
+    },
+    {
+        "displayname": "Matthew Bryan",
+        "authorname": "Bryan, Matthew",
+        "affiliation": "CEA-Leti",
+        "github": "matbryan52",
+        "contribution": "Upsampling DFT refinement",
+        "orcid": "0000-0001-9134-384X"
+    },    
+    {
+        "displayname": "Knut Müller-Caspary",
+        "authorname": "Müller-Caspary, Knut",
+        "affiliation": "Jülich Research Centre",
+        "contribution": "Scientific advisory, discussion, sample data regarding strain mapping, sample code for MIB reader",
+        "orcid": "0000-0002-2588-7993"
+    },
+    {
+        "displayname": "Rafal E. Dunin-Borkowski",
+        "authorname": "Dunin-Borkowski, Rafal E.",
+        "affiliation": "Jülich Research Centre",
+        "contribution": "Scientific advisory, resources, discussion, publications",
+        "orcid": "0000-0001-8082-0647"
+    }
+]
