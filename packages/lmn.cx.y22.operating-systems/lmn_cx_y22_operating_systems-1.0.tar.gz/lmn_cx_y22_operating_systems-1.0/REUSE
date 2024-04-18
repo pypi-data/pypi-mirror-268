@@ -1,0 +1,32 @@
+
+The copyright and licensing for the contents of this project are
+tracked using the REUSE Specification. For more information on this
+standard, see <https://reuse.software/spec/>.
+
+For most files, this means we keep track of copyright and licensing
+using SPDX headers. For example, the SPDX headers for this COPYING
+file are:
+
+    SPDX-FileCopyrightText: 2024 Alex Lemna
+    SPDX-License-Identifier: CC0-1.0
+
+For all other files in this project, the SPDX headers will generally
+be in the first lines of the file. Any exceptions to this rule will
+have their copyright and licensing information stored in one of the
+alternate methods discussed at <https://reuse.software/spec/>, i.e.,
+
+  - comment headers in an adjacent file of the same name plus the 
+    `.license` extension (e.g., `dog.png` and `dog.png.license`), 
+    or
+
+  - a DEP5 file located at `.reuse/dep5` relative to the root
+    directory of this project.
+
+Some files may contain sections which are licensed differently - for 
+instance, if I have directly copied code from other open source 
+projects or from blogs, StackOverflow posts, et cetera. In these
+cases, the section will be clearly associated with additional SPDX
+tags to indicate that section's copyrights and licensing.
+
+You can review the full text of any license relevant to any of the
+contents of this project in the LICENSES directory.

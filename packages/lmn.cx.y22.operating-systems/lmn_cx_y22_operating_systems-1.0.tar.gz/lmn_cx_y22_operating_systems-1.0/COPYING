@@ -1,0 +1,22 @@
+
+The source code in this project is available under your choice of
+any of the following licenses:
+
+  - The BSD Zero Clause License
+  - The MIT License
+  - The Apache License 2.0
+
+If you're copying code from this project into your project, the
+BSD Zero Clause License is probably the license you want. No
+attribution necessary.
+
+This project is also covered by the MIT License. This is just to
+make it clear that you're allowed to copy code from this project
+into your own MIT-licensed project (with attribution), which isn't
+always the case with BSD-style licenses.
+
+The Apache License 2.0 is in case you want some explicit guarentees
+about software patents.
+
+You can view the full text of any of these licenses in the LICENSES
+directory.

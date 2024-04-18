@@ -1,0 +1,17 @@
+.gitignore
+COPYING
+LICENSE
+README.md
+REUSE
+pyproject.toml
+LICENSES/0BSD.txt
+LICENSES/Apache-2.0.txt
+LICENSES/CC0-1.0.txt
+LICENSES/MIT.txt
+src/lmn.cx.y22.operating_systems.egg-info/PKG-INFO
+src/lmn.cx.y22.operating_systems.egg-info/SOURCES.txt
+src/lmn.cx.y22.operating_systems.egg-info/dependency_links.txt
+src/lmn.cx.y22.operating_systems.egg-info/requires.txt
+src/lmn.cx.y22.operating_systems.egg-info/top_level.txt
+src/lmn/cx/y22/operating_systems/__init__.py
+src/lmn/cx/y22/operating_systems/_operating_systems.py
