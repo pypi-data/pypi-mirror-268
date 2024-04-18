@@ -1,0 +1,104 @@
+numpy
+silx<2.0.0,>=1.1.2
+matplotlib<3.9
+ewoks>=0.1.0
+ewokscore>=0.1.1
+packaging
+
+[:python_version < "3.7"]
+chardet<5.0.0
+
+[dev]
+matplotlib>=1.2.0
+opencv-python-headless<4.7,>=4.3.0.36
+scikit-learn
+PyQt5
+ewoksorange>=0.1.0
+orange3
+tqdm
+hdf5plugin
+pytest
+black>=22
+flake8>=4
+flake8_nb>=0.3.1
+
+[dev:python_version < "3.7"]
+scikit-image<0.17.1
+orange3<=3.30.1
+openTSNE<=0.6.1
+
+[dev:python_version < "3.8"]
+orange3<=3.32.0
+
+[dev:python_version >= "3.7"]
+scikit-image>=0.17.1
+
+[doc]
+matplotlib>=1.2.0
+opencv-python-headless<4.7,>=4.3.0.36
+scikit-learn
+PyQt5
+ewoksorange>=0.1.0
+orange3
+tqdm
+hdf5plugin
+pytest
+sphinx>=4.5
+sphinx-autodoc-typehints>=1.16
+nbsphinx
+recommonmark
+pydata_sphinx_theme<0.15
+
+[doc:python_version < "3.7"]
+scikit-image<0.17.1
+orange3<=3.30.1
+openTSNE<=0.6.1
+
+[doc:python_version < "3.8"]
+orange3<=3.32.0
+
+[doc:python_version >= "3.7"]
+scikit-image>=0.17.1
+
+[full]
+matplotlib>=1.2.0
+opencv-python-headless<4.7,>=4.3.0.36
+scikit-learn
+PyQt5
+ewoksorange>=0.1.0
+orange3
+tqdm
+hdf5plugin
+
+[full:python_version < "3.7"]
+scikit-image<0.17.1
+orange3<=3.30.1
+openTSNE<=0.6.1
+
+[full:python_version < "3.8"]
+orange3<=3.32.0
+
+[full:python_version >= "3.7"]
+scikit-image>=0.17.1
+
+[test]
+matplotlib>=1.2.0
+opencv-python-headless<4.7,>=4.3.0.36
+scikit-learn
+PyQt5
+ewoksorange>=0.1.0
+orange3
+tqdm
+hdf5plugin
+pytest
+
+[test:python_version < "3.7"]
+scikit-image<0.17.1
+orange3<=3.30.1
+openTSNE<=0.6.1
+
+[test:python_version < "3.8"]
+orange3<=3.32.0
+
+[test:python_version >= "3.7"]
+scikit-image>=0.17.1
