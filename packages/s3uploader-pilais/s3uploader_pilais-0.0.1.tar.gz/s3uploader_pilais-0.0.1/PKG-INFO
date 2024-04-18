@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: s3uploader_pilais
+Version: 0.0.1
+Summary: A package can be used to upload files to AWS S3
+Project-URL: Homepage, https://github.com/pengyoo/cpp_s3uploader
+Project-URL: Issues, https://github.com/pengyoo/cpp_s3uploader/issues
+Author-email: Peng Yu <yp1990@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# S3 Uploader
+
+This is a package to upload files to AWS s3.
+
+## Function defination
+
+```
+def upload_file(file, object_name, bucket=settings.S3_BUCKET)
+```
+
+## Parameters description
+
+### file: file object, for example request.FILES['file']
+
+### object_name: filename in S3 Bucket
+
+### bucket: bucket name

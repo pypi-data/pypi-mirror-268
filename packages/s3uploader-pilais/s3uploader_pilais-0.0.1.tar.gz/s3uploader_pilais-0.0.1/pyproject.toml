@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "s3uploader_pilais"
+version = "0.0.1"
+authors = [
+  { name="Peng Yu", email="yp1990@gmail.com" },
+]
+description = "A package can be used to upload files to AWS S3"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/pengyoo/cpp_s3uploader"
+Issues = "https://github.com/pengyoo/cpp_s3uploader/issues"
