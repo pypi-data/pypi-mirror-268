@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+sfmanager/__init__.py
+sfmanager/app.py
+sfmanager.egg-info/PKG-INFO
+sfmanager.egg-info/SOURCES.txt
+sfmanager.egg-info/dependency_links.txt
+sfmanager.egg-info/requires.txt
+sfmanager.egg-info/top_level.txt
