@@ -1,0 +1,11 @@
+bilibili_dl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bilibili_dl/cli.py,sha256=togbIP7XrUgwdCFBB7BRPn1w7Jhneh3jUJeNVriPRqU,58
+bilibili_dl/downloader.py,sha256=i0gBkUa3FJkvwiatTG4hsaVqp-XOZyqRJskQY8Uk1I4,3476
+bilibili_dl/main.py,sha256=zpQclbhyPHJvm8ELsCYBaxUQK8AXXbs__0-S5-AsD3s,1408
+bilibili_dl/utils.py,sha256=G_Ty9_jHl4t9FamVO1LtcfKDOghowJrbKb7QRdX9Ut8,2012
+bilibili_dl-3.0.0.dist-info/LICENSE,sha256=5ey1gsF3ZpmMajxN0HyBnY6SEp3g1xOj4niLvoSY9hA,19363
+bilibili_dl-3.0.0.dist-info/METADATA,sha256=kzkT6fmMxMySyxBimwigyVWI4jjlNZegvDe7io-lm4I,1427
+bilibili_dl-3.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bilibili_dl-3.0.0.dist-info/entry_points.txt,sha256=sLKAK6PzLPqSQ79SWo1_F2jpt4dExp5bTIIAkGpDzDk,56
+bilibili_dl-3.0.0.dist-info/top_level.txt,sha256=D-jS6i1-Gwai5rp4YBOYeKGae_Ea1YfBhCRkUeDG0sw,12
+bilibili_dl-3.0.0.dist-info/RECORD,,

@@ -1,0 +1,2 @@
+[console_scripts]
+bilibili-dl = bilibili_dl.cli:run_cli
