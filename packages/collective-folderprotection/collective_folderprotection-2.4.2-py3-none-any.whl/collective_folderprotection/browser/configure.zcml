@@ -1,0 +1,107 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="colelctive.folderprotection">
+
+    <include package=".widget" />
+
+    <!-- Page to handle the password protected folders -->
+    <browser:page
+        for="collective_folderprotection.exceptions.IPasswordProtectedUnauthorized"
+        name="index.html"
+        class=".passwordprotected.RenderPasswordView"
+        layer="collective_folderprotection.interfaces.IFolderProtectLayer"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="*"
+        name="passwordprompt"
+        class=".passwordprotected.AskForPasswordView"
+        layer="collective_folderprotection.interfaces.IFolderProtectLayer"
+        permission="zope2.View"
+        template="passwordprotected.pt"
+        />
+
+    <browser:page
+        for="plone.dexterity.interfaces.IDexterityContent"
+        name="assignpassword"
+        class=".passwordprotected.AssignPasswordFormView"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="*"
+        name="authorized_to_set_password"
+        class=".passwordprotected.AssignPasswordValidation"
+        allowed_interface=".passwordprotected.IAssignPasswordValidation"
+        permission="zope2.View"
+        />
+
+    <!-- Icon to show if the item has a password set or not.
+         Intended to be shown in the folder_contents view, which iterates
+         over brain objects -->
+    <adapter for="*
+                  collective_folderprotection.interfaces.IFolderProtectLayer
+                  Products.ZCatalog.interfaces.ICatalogBrain"
+           factory=".passwordprotected.PasswordProtectedIcon"
+           provides="plone.app.layout.icons.interfaces.IContentIcon" />
+
+    <browser:page
+        for="*"
+        name="object_rename"
+        class=".rename_protected.RenameForm"
+        layer="collective_folderprotection.interfaces.IFolderProtectLayer"
+        permission="cmf.ModifyPortalContent"
+        />
+
+    <browser:page
+        for="Products.CMFCore.interfaces._content.IFolderish"
+        name="fc-rename"
+        class=".rename_protected.RenameActionView"
+        layer="collective_folderprotection.interfaces.IFolderProtectLayer"
+        permission="cmf.ListFolderContents"
+        />
+
+    <browser:page
+        name="index.html"
+        for="collective_folderprotection.exceptions.IRenameProtectionException"
+        class=".rename_protected.RenameProtectedView"
+        layer="collective_folderprotection.interfaces.IFolderProtectLayer"
+        permission="zope2.View"
+        />
+
+    <browser:page
+        for="Products.CMFCore.interfaces._content.IFolderish"
+        name="fc-delete"
+        class=".delete_protected.DeleteActionView"
+        layer="collective_folderprotection.interfaces.IFolderProtectLayer"
+        permission="cmf.ListFolderContents"
+        />
+
+    <browser:page
+        name="index.html"
+        for="collective_folderprotection.exceptions.IDeleteProtectionException"
+        class=".delete_protected.DeleteProtectedView"
+        layer="collective_folderprotection.interfaces.IFolderProtectLayer"
+        permission="zope2.View"
+        />
+
+    <browser:viewlet
+        name="collective_folderprotection_alert"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        template="alert_viewlet.pt"
+        class=".alert_viewlet.AlertViewlet"
+        permission="cmf.ModifyPortalContent"
+        />
+
+    <browser:viewlet
+        name="collective_folderprotection_reason"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        template="reason_viewlet.pt"
+        class=".reason_viewlet.ReasonViewlet"
+        permission="cmf.ModifyPortalContent"
+        />
+
+</configure>
