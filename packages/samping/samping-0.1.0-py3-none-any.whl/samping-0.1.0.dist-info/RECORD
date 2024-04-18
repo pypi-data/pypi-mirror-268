@@ -1,0 +1,13 @@
+samping/__init__.py,sha256=xNPpAhkkrgGUHy8_Q7Avvec8J3D3M1pSievfXNWU_k0,46
+samping/app.py,sha256=B6Oyg2IcwUf_4Ov1W-mBz_wFpfqesn429jOQ6U0aTAU,12144
+samping/backoff.py,sha256=8DtW8XT5cUIovQP9_LvbU0K4MIbltpv2x4B-i-cGSyg,3129
+samping/exceptions.py,sha256=hE07haevQR2gC9s-sfoo6vlCUmQR6HIjwmrQPRSjEIw,469
+samping/messages.py,sha256=weMeud2GLi6NxJfuHrtclPw8xl2Jkn296zG4ZRduCug,2416
+samping/routes.py,sha256=NXxbvS0NYCRsD_Od8lE0BL3RKGFgE55pSafGzc1jP6s,435
+samping/tasks.py,sha256=ZrKe8b060A1TRB2a21rrf8OmjkctqCx89q3sucjoUew,3460
+samping/utils.py,sha256=ZbVsR6ovIy4XfzRIx_L6m9GFG5aXofJyk4HEkZISVxY,1765
+samping/driver/__init__.py,sha256=qL2u8k3ah2wYuBjBLZaaXIFOtOzKdU0rp7ld6e0KSxk,594
+samping/driver/sqs.py,sha256=uQvW_Qi6NKt2SbXc-lxGlX4NXxQ4BvoAHHE053TiaxA,10058
+samping-0.1.0.dist-info/METADATA,sha256=18XjGBUOvmez13RUBZSeApv8bKTnZa69-eXh3HUaQpc,447
+samping-0.1.0.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+samping-0.1.0.dist-info/RECORD,,

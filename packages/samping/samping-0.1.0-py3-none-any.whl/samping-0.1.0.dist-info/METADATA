@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: samping
+Version: 0.1.0
+Summary: Add a short description here
+Author-email: syaiful6 <syai.bahri6@gmail.com>
+Requires-Python: >=3.10
+Requires-Dist: croniter>=2.0.3
+Requires-Dist: msgpack>=1.0.5
+Requires-Dist: pytz>=2022.7.1
+Description-Content-Type: text/markdown
+
+# samping
+
+Samping is a simple task queue library and background task processing. Currently it only support SQS driver and integrate well with AWS Lambda.
