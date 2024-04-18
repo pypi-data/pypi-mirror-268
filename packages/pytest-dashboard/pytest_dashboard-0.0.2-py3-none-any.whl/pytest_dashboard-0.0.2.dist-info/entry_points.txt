@@ -1,0 +1,7 @@
+[console_scripts]
+run_dashboard=pytest_dashboard.commands:launch_pytest_dashboard
+run_pytest=pytest_dashboard.commands:run_pytest
+
+[pytest11]
+pytest_dashboard_plugin=pytest_dashboard.conftest
+
