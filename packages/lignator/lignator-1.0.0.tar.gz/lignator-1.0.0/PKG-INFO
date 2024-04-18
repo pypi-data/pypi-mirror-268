@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: lignator
+Version: 1.0.0
+Summary: 
+License: MIT
+Author: Carlos Beltran Recabarren
+Author-email: cbrecabarren@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: inflection (>=0.5.1,<0.6.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# lignator-code
+
+Procesa cargas de datos nuevos en el sistema menso-app
+
+
+# Setup
+
+Instalar
+
+```sh
+pip install poetry
+poetry install
+```
+
+
+# Run
+
+Procesar archivo
+
+```sh
+lignator process --file data/CR1000X_GenericTable.dat.gz
+```
+
+
+Sólo leer encabezados del formato
+
+```sh
+lignator headers --file data/CR1000X_GenericTable.dat.gz
+```
+
+`lignator --help` para consultar por todas las opciones
+

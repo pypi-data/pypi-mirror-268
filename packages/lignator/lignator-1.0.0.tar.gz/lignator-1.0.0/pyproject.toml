@@ -1,0 +1,32 @@
+
+[tool.poetry]
+name = "lignator"
+version = "1.0.0"
+description = ""
+authors = ["Carlos Beltran Recabarren <cbrecabarren@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "lignator", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.2"
+numpy = "^1.26.4"
+python-dotenv = "^1.0.1"
+inflection = "^0.5.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pytest-runner = "^6.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "./src"
+]
+
+[tool.poetry.scripts]
+lignator = "lignator.cli:main"
