@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+ComradeAI/DocumentRoutines.py
+ComradeAI/Mycelium.py
+ComradeAI/Processors.py
+ComradeAI/__init__.py
+ComradeAI.egg-info/PKG-INFO
+ComradeAI.egg-info/SOURCES.txt
+ComradeAI.egg-info/dependency_links.txt
+ComradeAI.egg-info/requires.txt
+ComradeAI.egg-info/top_level.txt

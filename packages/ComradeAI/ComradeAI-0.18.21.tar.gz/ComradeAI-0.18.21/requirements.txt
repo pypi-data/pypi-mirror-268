@@ -1,0 +1,8 @@
+aiohttp
+aio-pika
+beautifulsoup4
+openpyxl
+pika
+Pillow
+python-docx
+requests

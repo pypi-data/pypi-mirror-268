@@ -1,0 +1,6 @@
+# ComradeAI
+Comrade AI is an open source framework to assemble AI services like Claude, Gemini Pro, GPT 3.5/4, Yandex GPT, LLaMa v2 and many more into unified intelligent agents to build a collaborative network.
+
+Comrade AI advances true multimodality and decentralization, using a unified protocol and a digital currency for transactions, alongside supporting independent AI service providers. This streamlined approach not only makes integrating various AI services simpler but also promotes an open, competitive AI marketplace. By commoditizing AI machine time with our digital currency, we make AI resources more accessible, driving innovation and broadening access to cutting-edge technology.
+
+As for Feb 23, 2024 the framework has agents for Meta LLaMa v2, OpenAI DALLE-3, OpenAI GPT4/Vision, Vertex AI/Google Gemini Pro/Pro Vision, Yandex GPT v2 Async, OpenAI Whisper Large v3, Anthropic Claude 2.1, Meta MBART many-to-many, Mindsimulation SteosVoice. We are working on Mixtral, and fast OCR model. 
