@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: zermelo-for-python
+Version: 2024.4.17.13.32.37
+Summary: zermelo api for python
+Author: b.vill
+Author-email: villeriusborro@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+Requires-Dist: datetime
+Requires-Dist: requests
+
+# zermelo api for python v:2024.04.17.13.32.37
+![GitHub Logo](https://zermelo.nl/static/images/nav/zermelo.8ee5db22a007.svg)
+
+## install
+
+```properties
+pip install zermelo-for-python
+```
+# [source code](https://github.com/btpv/zermeloapi)
