@@ -1,0 +1,6 @@
+graft src/rer
+graft docs
+include *.rst
+global-exclude *.pyc
+exclude LICENSE.GPL
+include requirements.txt
