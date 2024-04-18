@@ -1,0 +1,11 @@
+pytest_hot_reloading/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pytest_hot_reloading/client.py,sha256=3-j5SwNWuFSKl3y5yi6yJQbnYljqjpfuuNSucjXe3B0,3775
+pytest_hot_reloading/daemon.py,sha256=Kk0QCpG-KKIjSzdsP1Gtrt0X7iJ6C_AeZjpb4GjCNFA,13647
+pytest_hot_reloading/jurigged_daemon_signalers.py,sha256=1tyasGZd7XR8ukFufcJfmIW4OcjSM2fn7XUYgxXXJdU,704
+pytest_hot_reloading/plugin.py,sha256=5mFjnuXM9YzmUCtVKVS95fI4XtddQ7tvxzxFm7pHxkU,18137
+pytest_hot_reloading/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+pytest_hot_reloading/workarounds.py,sha256=M-waaLlPdgzV_cl8As07JcAJLduuoEmt4fRsfkS5CBM,2935
+pytest_hot_reloading-0.1.0a18.dist-info/LICENSE,sha256=WEeKMosO6HK86iVTJZacos3PWhnB9s7o4KhE9pEOdbQ,1072
+pytest_hot_reloading-0.1.0a18.dist-info/METADATA,sha256=0095MzHY6oal1Kul1U614E2EX4_eUpqGArXdqHXf_4o,10496
+pytest_hot_reloading-0.1.0a18.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pytest_hot_reloading-0.1.0a18.dist-info/RECORD,,
