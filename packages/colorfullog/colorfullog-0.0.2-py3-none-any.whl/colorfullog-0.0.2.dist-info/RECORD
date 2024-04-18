@@ -1,0 +1,9 @@
+colorfullog/__init__.py,sha256=zbrkKqVntOng9R1EQuP8bxC62uNZ5aJluZ2qvwwW39k,90
+colorfullog/colorfullog.py,sha256=sKO0Csim1To-PxOaDpehTDN8K-SEpn7joQNwSBgI4c8,3245
+colorfullog/libs/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+colorfullog/libs/argparse.py,sha256=zB48Ony1OMMicKd7b2KsfpH_W1qSYWB8y7Pmr-V8RPc,96311
+colorfullog/libs/os.py,sha256=_-Fntxk93idEcyFy-L5j4EFeaP5HXAU6bTo_2Jxi9tU,41477
+colorfullog-0.0.2.dist-info/METADATA,sha256=MNwzc4wbMECCp4s2PxRikHAayJQxden1BrIW0tRAXGQ,444
+colorfullog-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+colorfullog-0.0.2.dist-info/top_level.txt,sha256=QRQrSvH7Hs9QDPxSOcAoXYmWFhrk9bGURocvkr7--og,12
+colorfullog-0.0.2.dist-info/RECORD,,
