@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: gnosisai
+Version: 0.1
+Requires-Dist: jinja2
+Requires-Dist: click
+
