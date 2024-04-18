@@ -1,0 +1,67 @@
+site_name: depthcharge
+repo_url: https://github.com/wfondrie/depthcharge
+nav:
+  - Getting Started:
+      - Introduction: "index.md"
+      - Installation: "getting-started/installation.md"
+  - API:
+      - Overview: "api/index.md"
+      - Tokenizers: "api/tokenizers.md"
+      - Datasets: "api/datasets.md"
+      - Encoders: "api/encoders.md"
+      - Transformers: "api/transformers.md"
+      - Primitives: "api/primitives.md"
+  - Changelog: CHANGELOG.md
+  - Contributing: CONTRIBUTING.md
+  - Code of Conduct: CODE_OF_CONDUCT.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.footer
+    - content.code.copy
+  logo: static/icon.svg
+  favicon: static/icon.svg
+  font:
+    text: Fira Code
+  palette:
+    scheme: depthcharge
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_root_heading: true
+            heading_level: 3
+            docstring_section_style: spacy
+            show_source: false
+            merge_init_into_class: true
+            docstring_options:
+              ignore_init_summary: true
+              trim_doctest_flags: true
+            options:
+              members: true
+
+markdown_extensions:
+  - attr_list
+  - smarty
+  - footnotes
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/wfondrie
