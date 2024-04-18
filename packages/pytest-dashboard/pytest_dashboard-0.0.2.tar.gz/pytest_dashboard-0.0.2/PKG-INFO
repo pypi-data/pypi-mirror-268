@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pytest-dashboard
+Version: 0.0.2
+Summary: 
+Home-page: https://github.com/pyfemtet/pytest-dashboard
+License: BSD-3-Clause
+Author: kazuma.naito
+Author-email: kazuma.naito@murata.com
+Requires-Python: >=3.9.3,<3.13
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: dash (>=2.14.2,<3.0.0)
+Requires-Dist: dash-bootstrap-components (>=1.5.0,<2.0.0)
+Requires-Dist: junitparser (>=3.1.2,<4.0.0)
+Requires-Dist: lxml (>=5.2.1,<6.0.0)
+Requires-Dist: myst-parser (==2.0.0)
+Requires-Dist: numpy (>=1.26.2,<2.0.0)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pandas (>=2.1.3,<3.0.0)
+Requires-Dist: pip-licenses (>=4.3.3,<5.0.0)
+Requires-Dist: plotly (>=5.18.0,<6.0.0)
+Requires-Dist: psutil (>=5.9.6,<6.0.0)
+Requires-Dist: pytest (>=7.4.3,<8.0.0)
+Requires-Dist: scipy (>=1.11.4,<2.0.0)
+Requires-Dist: sphinx (==7.2.6)
+Requires-Dist: sphinx-autobuild (==2021.3.14)
+Requires-Dist: sphinx-design (>=0.5.0,<0.6.0)
+Requires-Dist: sphinx-rtd-theme (==2.0.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Project-URL: Repository, https://github.com/pyfemtet/pytest-dashboard
+Description-Content-Type: text/markdown
+
+# pytest-dashboard
