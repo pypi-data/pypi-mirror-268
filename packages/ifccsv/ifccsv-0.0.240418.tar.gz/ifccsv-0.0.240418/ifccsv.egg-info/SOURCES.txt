@@ -1,0 +1,9 @@
+COPYING
+COPYING.LESSER
+ifccsv.py
+pyproject.toml
+ifccsv.egg-info/PKG-INFO
+ifccsv.egg-info/SOURCES.txt
+ifccsv.egg-info/dependency_links.txt
+ifccsv.egg-info/requires.txt
+ifccsv.egg-info/top_level.txt
