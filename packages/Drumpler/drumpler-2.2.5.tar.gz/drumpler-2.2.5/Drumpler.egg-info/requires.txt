@@ -1,0 +1,6 @@
+Flask
+python-dotenv
+SQLAlchemy
+Flask_SQLAlchemy
+psycopg2-binary
+psutil
