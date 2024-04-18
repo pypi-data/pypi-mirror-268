@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+src/zermelo_for_python/__init__.py
+src/zermelo_for_python/schedule.py
+src/zermelo_for_python/scheduleaction.py
+src/zermelo_for_python/scheduleitem.py
+src/zermelo_for_python.egg-info/PKG-INFO
+src/zermelo_for_python.egg-info/SOURCES.txt
+src/zermelo_for_python.egg-info/dependency_links.txt
+src/zermelo_for_python.egg-info/requires.txt
+src/zermelo_for_python.egg-info/top_level.txt
