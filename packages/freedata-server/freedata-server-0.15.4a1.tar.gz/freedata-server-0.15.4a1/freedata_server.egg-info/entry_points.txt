@@ -1,0 +1,2 @@
+[console_scripts]
+freedata-server = freedata_server.server:main
