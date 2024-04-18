@@ -1,0 +1,42 @@
+name: easysnowdata
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+ # core data science 
+ - python
+ - numpy
+ - pandas
+ - xarray
+ - matplotlib
+ - wget 
+ - requests
+ - urllib3
+ - dask
+ - lxml
+ 
+ # geospatial (raster+vector)
+ - gdal
+ - rasterio
+ - rioxarray
+ - geopandas
+ - shapely
+ - contextily
+ - earthaccess
+ - ipykernel
+ - pystac-client
+ - planetary-computer
+ - odc-stac
+ - xee
+ - bs4
+ - py3dep
+ 
+ # misc
+ - pip
+ 
+ - pip:
+   - matplotlib-scalebar
+
+   # geospatial+plotting
+   - "--editable=./"
+   #- "--editable=git+https://github.com/dshean/pygeotools.git#egg=pygeotools"
