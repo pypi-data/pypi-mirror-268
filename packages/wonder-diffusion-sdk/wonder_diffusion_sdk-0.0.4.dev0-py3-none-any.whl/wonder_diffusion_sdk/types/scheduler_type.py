@@ -1,0 +1,24 @@
+from enum import Enum
+
+
+class WonderSchedulerType(Enum):
+    DDIM = 'ddim'
+    DDPM = 'ddpm'
+    DEIS_MULTISTEP = 'deis_multistep'
+    DPM_SOLVER_MULTISTEP = 'DPM++ 2M'
+    DPM_SOLVER_MULTISTEP_2M_KARRAS = 'DPM++ 2M Karras'
+    DPM_SOLVER_MULTISTEP_2M_SDE = 'DPM++ 2M SDE'
+    DPM_SOLVER_MULTISTEP_2M_SDE_KARRAS = 'DPM++ 2M SDE Karras'
+    DPM_SOLVER_SINGLESTEP = 'DPM++ SDE'
+    DPM_SOLVER_SINGLESTEP_KARRAS = 'DPM++ SDE Karras'
+    EULER_ANCESTRAL_DISCRETE = 'Euler a'
+    EULER_DISCRETE = 'Euler'
+    HEUN_DISCRETE = 'Heun'
+    KDPM2_ANCESTRAL_DISCRETE = 'DPM2 a'
+    KDPM2_ANCESTRAL_DISCRETE_KARRAS = 'DPM2 a Karras'
+    KDPM2_DISCRETE = 'DPM2'
+    KDPM2_DISCRETE_KARRAS = 'DPM2 Karras'
+    LMS_DISCRETE = 'LMS'
+    LMS_DISCRETE_KARRAS = 'LMS Karras'
+    PNDM = 'pndm'
+    UNI_PC_MULTISTEP = 'uni_pc_multistep'

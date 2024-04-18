@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: wonder-diffusion-sdk
+Version: 0.0.4.dev0
+Summary: Python SDK for common Wonder diffusion models
+Author: basri
+Author-email: basri@wonder.co
+License-File: LICENCE
+Requires-Dist: diffusers (==0.26.3)
+
