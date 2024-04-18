@@ -1,0 +1,65 @@
+[project]
+name = "snowflake-id"
+version = "1.0.2"
+description = "The Snowflake generator done right"
+keywords = [
+    "snowflake",
+    "snowflake-id",
+    "id",
+    "ids",
+    "generator",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: User Interfaces",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+authors = [
+    { name = "vd", email = "snowflake@vd2.org" },
+]
+dependencies = []
+requires-python = ">=3.8,<4.0"
+readme = "README.md"
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+homepage = "https://github.com/vd2org/snowflake"
+repository = "https://github.com/vd2org/snowflake.git"
+issues = "https://github.com/vd2org/snowflake/issues"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest~=8.0.2",
+    "requests>=2.31.0",
+]
+
+[tool.ubump]
+template = "v${major}.${minor}.${patch}"
+message = "Bump to ${version}"
+tag = true
+files = [
+    "src/snowflake/__init__.py",
+]
