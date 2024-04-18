@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+datapyx/__init__.py
+datapyx/pack.py
+datapyx.egg-info/PKG-INFO
+datapyx.egg-info/SOURCES.txt
+datapyx.egg-info/dependency_links.txt
+datapyx.egg-info/top_level.txt
