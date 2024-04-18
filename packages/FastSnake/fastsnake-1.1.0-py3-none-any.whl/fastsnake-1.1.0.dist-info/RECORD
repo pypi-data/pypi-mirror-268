@@ -1,0 +1,12 @@
+fastsnake/__init__.py,sha256=R91ZfxnvwiDjWIgAnNbcaqcUdWFtKkP2sL5_GG_3LI4,72
+fastsnake/application.py,sha256=KnoOOkL0F_3S9CJ62U9KK9YKPVg2r5D2AK5HwlbuufI,1698
+fastsnake/algorithms/knapsack.py,sha256=srlEL63gfA6VkVb-FM3K69uNhtwAA4SQK929_gK3r0A,774
+fastsnake/algorithms/mex.py,sha256=SHU5fu3GU-1NEANWEIVvm6-HGXGpI7N2oneDOZol9Ws,499
+fastsnake/algorithms/minCoins.py,sha256=BnxrelfLGBy3zIyNIKvgIJNQIL2GB4O76Oeagsjm3nM,1115
+fastsnake/util/codeforces.py,sha256=wLDo_nROyqaY_AjxDfQDPcM38t_QexhnGIQbCyeuNq4,714
+fastsnake/util/compiler.py,sha256=9V8MACsFNg6SsGFE0C0_7f1Bo3rfIN16TG47NbyGaQ4,854
+fastsnake-1.1.0.dist-info/METADATA,sha256=pPh9JpqexGc9eBonI9P_5YOlgXt7ouSLseH5gy9lJPI,597
+fastsnake-1.1.0.dist-info/WHEEL,sha256=as-1oFTWSeWBgyzh0O_qF439xqBe6AbBgt4MfYe5zwY,87
+fastsnake-1.1.0.dist-info/entry_points.txt,sha256=XrhAqn8cIBe-OwEPO8wcdHqQ0EaIGB-JckOPEfbZYCQ,57
+fastsnake-1.1.0.dist-info/licenses/LICENSE,sha256=0lOs7Y4OtfGvb-FycT3mm0McMOuGiseJCN4hR_9Qwag,1095
+fastsnake-1.1.0.dist-info/RECORD,,
