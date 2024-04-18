@@ -1,0 +1,8 @@
+LICENSE
+README.md
+lythp.py
+pyproject.toml
+lythp.egg-info/PKG-INFO
+lythp.egg-info/SOURCES.txt
+lythp.egg-info/dependency_links.txt
+lythp.egg-info/top_level.txt
