@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: vts
+Version: 0.1.1
+License-File: LICENSE-APACHE
+License-File: LICENSE-MIT
+Author-email: Rikus Honey <rikushoney2@gmail.com>
+Requires-Python: >=3.10
