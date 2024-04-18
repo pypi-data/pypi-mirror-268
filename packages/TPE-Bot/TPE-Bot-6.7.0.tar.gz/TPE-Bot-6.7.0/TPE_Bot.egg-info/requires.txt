@@ -1,0 +1,11 @@
+pandas
+torch
+openpyxl
+transformers
+sentencepiece
+python-Levenshtein
+sentence-transformers
+fuzzywuzzy
+protobuf==3.20.0
+python-dotenv
+openai
