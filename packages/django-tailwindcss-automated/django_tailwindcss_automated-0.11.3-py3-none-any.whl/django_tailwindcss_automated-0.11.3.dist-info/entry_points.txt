@@ -1,0 +1,3 @@
+[console_scripts]
+automate = django_tailwindcss_automated:main
+
