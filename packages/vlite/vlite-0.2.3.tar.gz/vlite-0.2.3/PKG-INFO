@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vlite
+Version: 0.2.3
+Summary: A simple and blazing fast vector database
+Author: Surya Dantuluri
+Author-email: surya@suryad.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.10
+Provides-Extra: ocr
+License-File: LICENSE

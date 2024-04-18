@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+tests/test_server.py
+vlite/__init__.py
+vlite/ctx.py
+vlite/index.py
+vlite/main.py
+vlite/model.py
+vlite/server.py
+vlite/utils.py
+vlite.egg-info/PKG-INFO
+vlite.egg-info/SOURCES.txt
+vlite.egg-info/dependency_links.txt
+vlite.egg-info/requires.txt
+vlite.egg-info/top_level.txt

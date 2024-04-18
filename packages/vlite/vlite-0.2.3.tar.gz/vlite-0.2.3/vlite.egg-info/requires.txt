@@ -1,0 +1,14 @@
+numpy
+PyPDF2
+docx2txt
+pandas
+requests
+beautifulsoup4
+huggingface_hub
+tiktoken
+torch==2.2.2
+transformers==4.39.0
+tokenizers==0.15.2
+
+[ocr]
+surya-ocr-vlite
