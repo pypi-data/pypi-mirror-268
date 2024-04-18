@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sodata
+Version: 0.0.24
+Summary: processing web text data for NLP LLM
+Author: ZH
+Author-email: zhanghongsz@yunic.ai
+Requires-Python: >=3.6
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: jionlp
+Requires-Dist: regex
+Requires-Dist: datasketch
+Requires-Dist: tqdm
+Requires-Dist: langchain
+Requires-Dist: jieba
+Requires-Dist: pyyaml
