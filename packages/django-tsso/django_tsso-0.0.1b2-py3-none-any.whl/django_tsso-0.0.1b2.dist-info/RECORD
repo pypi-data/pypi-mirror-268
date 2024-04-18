@@ -1,0 +1,17 @@
+tsso/__init__.py,sha256=khViiRUlx7I1DsBOuP3yUllWmxC2S7RW92nl-skHj00,119
+tsso/admin.py,sha256=9jMKHyRmJ-hj6CFAOc5BBFZs2O-zu6oLfDVA2wz9S3A,919
+tsso/apps.py,sha256=x-IXGvxRB700R7swFkE-1O-ulHC69rENwJtDPrGUm9s,232
+tsso/middleware.py,sha256=lTCBxGaI_avG0JyZBUjITXn3j95stK3LfYzgI5DMsrk,869
+tsso/mixins.py,sha256=ByL_MoDuqGyAgPsrps-kSHJkMNWBq8YnG6ZD4YtBxcY,4169
+tsso/models.py,sha256=jpUU8LXRJRhhLl7XDWybi9xMCkIODudr0NNSX6yvFtw,2023
+tsso/version.py,sha256=N0Ra4P-cFF5Lk7itSpWyIyNrZm_fEDsRDwa74CRKFS8,24
+tsso/contrib/__init__.py,sha256=ld7erZisU4pQkk-WSaLhgqY0AO3y6hungVaV-PoYgPM,65
+tsso/contrib/rest/__init__.py,sha256=i_iTVGkoFLt_DOsjwv15TaScHv9hXuhM39DrPrVqB8s,60
+tsso/contrib/rest/authentication.py,sha256=Z9whQhh2jSMFi3aJ37Wa4sfgO2QnxbWRKd_NwQr9Y1w,717
+tsso/migrations/0001_initial.py,sha256=75ZoR41JvbZrHwzrToiGQmqLYVoEM1WTse9kgqKgbsA,2958
+tsso/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_tsso-0.0.1b2.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+django_tsso-0.0.1b2.dist-info/METADATA,sha256=CIwxNpONLqa4wCfq3TtVrljDCqE7lUHoS36j__hU7Yo,1216
+django_tsso-0.0.1b2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+django_tsso-0.0.1b2.dist-info/top_level.txt,sha256=kZScnwiAWxhuZk9HK8wrBbBd3KKx0eNlHzkIzc1jZXA,5
+django_tsso-0.0.1b2.dist-info/RECORD,,
