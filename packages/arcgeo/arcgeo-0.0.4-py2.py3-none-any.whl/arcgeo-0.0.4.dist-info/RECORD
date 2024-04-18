@@ -1,0 +1,9 @@
+arcgeo/__init__.py,sha256=xmwLatFbWWoyEr2GgaaYQ8j-JDnQMPoth0KRau7sCOI,160
+arcgeo/arcgeo.py,sha256=h_4PUVcGdcGUsiKAmOmovuzSiUfdHxJVGKFoV939EzQ,11026
+arcgeo/common.py,sha256=Si4ZvbkkaVGyKrOa7gmsVNWS2Abtji-V5nEsJhrIM3M,188
+arcgeo-0.0.4.dist-info/LICENSE,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+arcgeo-0.0.4.dist-info/METADATA,sha256=j4ib4s3ONh-psC-ptNTnfEZXKXEBVgj3B-IQcgI4PNU,1335
+arcgeo-0.0.4.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+arcgeo-0.0.4.dist-info/entry_points.txt,sha256=z4isMvQGiINdEueHDRKuW0nqIrYu0gCfnvpOqofAuz0,43
+arcgeo-0.0.4.dist-info/top_level.txt,sha256=9TADIa2kkZgmE6tzKdk0J5EwxgtvRv4hvumpCSVhmLU,7
+arcgeo-0.0.4.dist-info/RECORD,,
