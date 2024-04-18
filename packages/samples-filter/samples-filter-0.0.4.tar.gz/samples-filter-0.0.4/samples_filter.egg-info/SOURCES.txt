@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.py
+objects/__init__.py
+objects/__main__.py
+objects/cli.py
+objects/input.py
+objects/pre_filter.py
+objects/readme.py
+samples_filter.egg-info/PKG-INFO
+samples_filter.egg-info/SOURCES.txt
+samples_filter.egg-info/dependency_links.txt
+samples_filter.egg-info/entry_points.txt
+samples_filter.egg-info/requires.txt
+samples_filter.egg-info/top_level.txt
