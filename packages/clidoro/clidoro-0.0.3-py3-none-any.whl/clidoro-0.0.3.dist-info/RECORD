@@ -1,0 +1,14 @@
+clidoro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clidoro/_utils.py,sha256=oF-pHlcJzEOAARDPFyOHduUiDIW__AMYzsRlw3St6zE,2422
+clidoro/chart.py,sha256=rvvtBApPH1nS6gw6JA0DIBnBNd0DHGiH5WmdmJUMxhI,2923
+clidoro/clidoro.py,sha256=rVMOufDY3yieo8qzPWoNaGb6C0p42xzbahrra4aXL1k,3259
+clidoro/data.py,sha256=h8soLYOtdFnoKBmpWwq2GKo5TMvO6d7LyJpYh-VjhS8,449
+clidoro/termgraph/__init__.py,sha256=0rzdfCmv_g9uwNz841lmxJJkXKsmjRUpgbEArLhYO8Q,205
+clidoro/termgraph/_termgraph.py,sha256=9GNjdHGgjFm3AhwgkxxCJB1P8XYXCB9p6XiWktjo_A4,24073
+clidoro/termgraph/module.py,sha256=m8SCQboyDaHf2B4XH9UG-IzY-PFTWaDFIX7nsL1wMyg,12733
+clidoro/termgraph/utils.py,sha256=NijL413hv_XsMqt9qcWPYOZqRlBSTtRfMQFFrLt4sSs,546
+clidoro-0.0.3.dist-info/METADATA,sha256=b12TROasCl49Ilp0f_Qtaq0qP4pzzmoBd7isExgteFc,2500
+clidoro-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+clidoro-0.0.3.dist-info/entry_points.txt,sha256=e4E2kkb1Y8_vNvTWyYhWQN2fRZsVSuiD7Nh7gK0o8EM,49
+clidoro-0.0.3.dist-info/top_level.txt,sha256=1mnK86uLp5j7Bxop9-C5LNuSbzlIs_5qKHTPqPkkTxA,8
+clidoro-0.0.3.dist-info/RECORD,,

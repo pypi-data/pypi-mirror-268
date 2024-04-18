@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: clidoro
+Version: 0.0.3
+Summary: clidoro: pomodoro in your cli
+Home-page: https://github.com/kingjuno/clidoro
+License: MIT
+Keywords: Productivity,Pomodoro
+Platform: Linux
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: playsound
+Requires-Dist: alive-progress
+Requires-Dist: simple-term-menu
+Requires-Dist: requests
+Requires-Dist: colorama
+
+
+<pre>
+        _   _     _                 
+       | | (_)   | |                
+   ___ | |  _  __| | ___  _ __ ___  
+  / __|| | | |/ _` |/ _ \| '__/ _ \ 
+ | (__ | | | | (_| | (_) | | | (_) |
+  \___||_| |_|\__,_|\___/|_|  \___/ 
+</pre>
+
+
+Motivation: I really loved Habitica's Pomodoro because I could keep track of info, but sometimes it deletes all data, and if I don't have a backup, I am done for. Anyway, I use the terminal a lot, and this seems like a much better option to me than Habitica's Chrome extension. I have used my own tool for over a week now. Sharing this anyway, even though I don't know if anyone would want to use a Pomodoro on CLI. I have some features like sound, history, and all. Will improve later when I have time. You could also contribute if you want to, and I appreciate that. 
+
+Demo (sorry for the bad quality lol):
+
+![Alt Text](/assets/clidoro.gif)
+
+To install Do `pip install clidoro`. Then just type `clidoro` whenever you want.
+
+**For Devs**: To install: Clone the repo and do a `pip install -e .`. Then just type `clidoro` whenever you want.
+
+
+
+TODO:
+- [ ] add windows support (not tested)
+- [ ] add mac support (not tested)
+- [x] pypi
+- [ ] background sound
+- [ ] custom notification sound (use my [data-server](https://github.com/kingjuno/data-server))
