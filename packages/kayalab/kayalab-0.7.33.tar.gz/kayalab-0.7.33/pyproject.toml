@@ -1,0 +1,132 @@
+[tool.poetry]
+name = "kayalab"
+version = "0.7.33"
+description = "UI to create virtual machines and install HPE Ezmeral products."
+authors = ["Erdinc Kaya <erdincka@msn.com>"]
+license = "MIT"
+readme = "README-ezlab.md"
+packages = [
+    {include = "ezlab"},
+    {include = "ezlabctl"},
+    {include = "ezinfra"}
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+bottle = "0.12.25"
+distlib = "0.3.8"
+ifaddr = "0.2.0"
+aiofiles = "23.2.1"
+aiohttp = "3.9.3"
+aiosignal = "1.3.1"
+annotated-types = "0.6.0"
+anyio = "4.3.0"
+async-timeout = "4.0.3"
+attrs = "23.2.0"
+bcrypt = "4.1.2"
+bidict = "0.23.1"
+certifi = "2024.2.2"
+cffi = "1.16.0"
+cfgv = "3.4.0"
+charset-normalizer = "3.3.2"
+click = "8.1.7"
+cryptography = "42.0.5"
+docutils = "0.19"
+exceptiongroup = "1.2.0"
+fastapi = "0.109.2"
+filelock = "3.13.3"
+frozenlist = "1.4.1"
+h11 = "0.14.0"
+httpcore = "1.0.5"
+httptools = "0.6.1"
+httpx = "0.27.0"
+identify = "2.5.35"
+idna = "3.6"
+importlib-resources = "6.4.0"
+itsdangerous = "2.1.2"
+jinja2 = "3.1.3"
+libvirt-python = "10.2.0"
+markupsafe = "2.1.5"
+multidict = "6.0.5"
+nodeenv = "1.8.0"
+orjson = "3.10.0"
+paramiko = "3.4.0"
+paramiko-expect = "0.3.5"
+platformdirs = "4.2.0"
+pre-commit = "3.7.0"
+proxmoxer = "2.0.1"
+proxy-tools = "0.1.0"
+pscript = "0.7.7"
+pycdlib = "1.14.0"
+pycparser = "2.22"
+pydantic = "2.6.4"
+pydantic-core = "2.16.3"
+pygments = "2.17.2"
+pynacl = "1.5.0"
+pyobjc-core = "10.2"
+pyobjc-framework-cocoa = "10.2"
+pyobjc-framework-security = "10.2"
+pyobjc-framework-webkit = "10.2"
+python-dotenv = "1.0.1"
+python-engineio = "4.9.0"
+python-multipart = "0.0.9"
+python-socketio = "5.11.2"
+pywebview = "5.0.5"
+pyyaml = "6.0.1"
+requests = "2.31.0"
+simple-websocket = "1.0.0"
+sniffio = "1.3.1"
+starlette = "0.36.3"
+typing-extensions = "4.11.0"
+urllib3 = "2.2.1"
+uvicorn = "0.29.0"
+uvloop = "0.19.0"
+vbuild = "0.8.2"
+virtualenv = "20.25.1"
+watchfiles = "0.21.0"
+websockets = "12.0"
+wsproto = "1.2.0"
+yarl = "1.9.4"
+zipp = "3.18.1"
+nicegui = "^1.4.20"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+ezlab = "ezlab.main:enter"
+ezlabctl = "ezlabctl.main:enter"
+
+# Black formatting
+[tool.black]
+line-length = 150
+include = '\.pyi?$'
+exclude = '''
+/(
+      .eggs         # exclude a few common directories in the
+    | .git          # root of the project
+    | .hg
+    | .mypy_cache
+    | .tox
+    | venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+'''
+
+# iSort
+[tool.isort]
+profile = "black"
+line_length = 79
+multi_line_output = 3
+include_trailing_comma = true
+virtual_env = "venv"
+[tool.flake8]
+exclude = "venv"
+ignore = ["E501", "W503", "E226"]
+# E501: Line too long
+# W503: Line break occurred before binary operator
+# E226: Missing white space around arithmetic operator
