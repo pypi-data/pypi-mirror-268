@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "nqrduck"
+version = "0.0.4"
+authors = [
+  { name="Julia Pfitzer", email="git@jupfi.me" },
+]
+
+description = "Simple Python script to interact with various python modules used for magnetic resonance spectroscopy."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.8"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "matplotlib",
+    "pyqt6",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+#all = [
+#    "nqrduck-spectrometer",
+#    "nqrduck-broadband",
+#    "nqrduck-spectrometer-limenqr",
+#    "nqrduck-spectrometer-scout;(sys_platform == 'win32')",
+#    "nqrduck-pulseprogrammer",
+#    "nqrduck-measurement",
+#    "nqrduck-autotm",
+#    "nqrduck-spectrometer-simulator",
+#]
+#base = [
+#    "nqrduck-spectrometer",
+#    "nqrduck-pulseprogrammer",
+#    "nqrduck-measurement",
+#    "nqrduck-spectrometer-simulator",
+#]
+dev = [
+    "black",
+    "pydocstyle",
+    "pyupgrade",
+    "ruff",
+]
+
+[tool.ruff]
+exclude = [
+  "widget.py",
+  "main_window.py",
+]
+
+[tool.ruff.lint]
+extend-select = [
+  "UP",  # pyupgrade
+  "D",   # pydocstyle
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[project.gui-scripts]
+nqrduck = "nqrduck.__main__:main"
+
+[project.urls]
+"Homepage" = "https://nqrduck.cool"
+"Bug Tracker" = "https://github.com/nqrduck/nqrduck/issues"
+"Source Code" = "https://github.com/nqrduck/nqrduck"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nqrduck"]
