@@ -1,0 +1,7 @@
+Dockerfile.j2: "{name}/Dockerfile"
+prediction.py.j2: "{name}/src/ml/prediction.py"
+routers.py.j2: "{name}/src/app/routers/routers.py"
+deployment.yml.j2: "{name}/manifests/deployment.yml"
+namespace.yml.j2: "{name}/manifests/namespace.yml"
+makefile.j2: "{name}/makefile"
+docker-compose.yml.j2: "{name}/docker-compose.yml"
