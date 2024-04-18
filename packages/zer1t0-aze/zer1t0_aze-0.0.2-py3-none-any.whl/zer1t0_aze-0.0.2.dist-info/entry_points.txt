@@ -1,0 +1,10 @@
+[console_scripts]
+az-brute-passwords = aze.az_brute_passwords:main
+az-brute-service-subdomains = aze.az_brute_service_subdomains:main
+az-brute-usernames = aze.az_brute_usernames:main
+az-get-login-info = aze.az_get_login_info:main
+az-get-tenant-domains = aze.az_get_tenant_domains:main
+az-get-tenant-id = aze.az_get_tenant_id:main
+az-inspect-token = aze.az_inspect_token:main
+az-login-with-token = aze.az_login_with_token:main
+az-whoami = aze.az_whoami:main
