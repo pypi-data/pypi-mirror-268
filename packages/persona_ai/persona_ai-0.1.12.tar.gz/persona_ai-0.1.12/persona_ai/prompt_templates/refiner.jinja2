@@ -1,0 +1,10 @@
+Look at the following conversation.
+Infer and refine the final request from last message using the same language as the last message.
+The final request should contain all relevant information.
+
+Conversation:
+{% for message in conversation_history %}{{ message.get_text() }}
+{% endfor %}
+Last Message: {{ request }}
+
+Final request:

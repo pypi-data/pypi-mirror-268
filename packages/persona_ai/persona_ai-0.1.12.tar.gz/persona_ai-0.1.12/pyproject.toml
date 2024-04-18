@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "persona_ai"
+version = "0.1.12"
+description = "Persona is a groundbreaking distributed AI agent system utilizing Google Vertex AI's premier Large Language Models such as Gemini-pro, Text-Bison, and Code-Bison. Developed by Applica Software Guru, Persona is engineered for scalable, high-performance, and intelligent operations across various data sets and applications. It harnesses the power of Google's Vertex AI to deliver unmatched insights and automation capabilities, setting new standards in AI-driven analytics and decision-making processes"
+authors = ["Bruno Fortunato <bruno.fortunato@applica.guru>"]
+license = "MIT"
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+pydantic = "^2.6.4"
+python-dotenv = "^1.0.1"
+Jinja2 = "^3.1.3"
+termcolor = "^2.4.0"
+shortuuid = "^1.0.13"
+google-cloud-aiplatform = "^1.47.0"
+google-api-python-client = "^2.125.0"
+pymongo = "^4.6.3"
+pika = "^1.3.2"
+pycryptodome = "^3.20.0"
+pywhatkit = "^5.4"
+strip-markdown = "^1.3"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.2.6"
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
