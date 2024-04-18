@@ -1,0 +1,11 @@
+cmreslogging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cmreslogging/handlers.py,sha256=w73L78dVPZNmW_AlW77NKa5FeOvzA5BLNxKKpSYYuK4,15724
+cmreslogging/serializers.py,sha256=hWOxAzh12o_a3nFZ1krNy4P9N2QpwBoog447SsK4a8w,730
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cmreshandler.py,sha256=0gba96ICmIL4cWOq2qMM81yP9s3aUiLv0R9VAlVNR4Y,9712
+tests/test_cmresserializer.py,sha256=h1yEz554hmSr1le0TdCpieA9L9S9ET6rvdOQVpHVIZ4,3621
+CMRESHandler_NtlmAuth-1.1.0.dist-info/LICENSE.md,sha256=zSacCRTVx8TdVHckj__gBSJFhV48YPdsSf8RAzUJD34,574
+CMRESHandler_NtlmAuth-1.1.0.dist-info/METADATA,sha256=7kxOlntyCKbkRzVf8SkyX9EULyTXGKRRss1CcsHFkB0,11040
+CMRESHandler_NtlmAuth-1.1.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+CMRESHandler_NtlmAuth-1.1.0.dist-info/top_level.txt,sha256=TuzIxC7qW_8T09GEfc1DOY9HrUTd4liy8JSU20rStng,19
+CMRESHandler_NtlmAuth-1.1.0.dist-info/RECORD,,
