@@ -1,0 +1,9 @@
+openai
+typing_extensions
+
+[dev]
+mypy
+flake8
+pytest
+black
+pylint
