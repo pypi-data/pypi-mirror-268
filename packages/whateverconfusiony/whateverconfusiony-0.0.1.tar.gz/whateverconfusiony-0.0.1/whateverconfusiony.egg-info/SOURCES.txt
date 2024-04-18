@@ -1,0 +1,5 @@
+setup.py
+whateverconfusiony.egg-info/PKG-INFO
+whateverconfusiony.egg-info/SOURCES.txt
+whateverconfusiony.egg-info/dependency_links.txt
+whateverconfusiony.egg-info/top_level.txt
