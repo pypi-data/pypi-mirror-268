@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: impactpy-lachlanbaxter
+Version: 0.0.1
+Summary: Toolset for calibrating price impact models to LOB data
+Author: Lachlan Baxter
+Author-email: Lachlan Baxter <lachlan.baxter@outlook.com>
+Project-URL: Homepage, https://github.com/pypa/impactpy
+Keywords: price impact,limit order book,LOB,TCA,impact,transaction cost analysis
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: polars
