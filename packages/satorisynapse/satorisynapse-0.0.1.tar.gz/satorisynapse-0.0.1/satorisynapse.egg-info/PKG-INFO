@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: satorisynapse
+Version: 0.0.1
+Summary: satorisynapse contains domain model and apis for the Satori Network
+Home-page: https://github.com/SatoriNetwork/satorisynapse
+Author: Jordan Miller
+Author-email: jordan@satorinet.io
+License: UNKNOWN
+Download-URL: https://github.com/SatoriNetwork/satorisynapse
+Description: # Synapse
+        p2p for Satori
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9.5
+Description-Content-Type: text/markdown

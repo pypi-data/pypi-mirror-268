@@ -1,0 +1,1 @@
+git+https://github.com/SatoriNetwork/python-evrmorelib.git#egg=python-evrmorelib
