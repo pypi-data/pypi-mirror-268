@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: niels_coloredlogger
+Version: 0.1
+Author: Niels
+Requires-Dist: coloredlogs
+Requires-Dist: logging
+
