@@ -1,0 +1,1100 @@
+Metadata-Version: 2.1
+Name: bda.plone.orders
+Version: 2.0b2
+Summary: Orders persistence and backoffice UI for bda.plone.shop
+Author: BlueDynamics Alliance
+Author-email: dev@bluedynamics.com
+License: GNU General Public Licence
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Zope
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.rst
+License-File: LICENSE_GPL.rst
+Requires-Dist: bda.plone.ajax
+Requires-Dist: bda.plone.cart
+Requires-Dist: bda.plone.checkout
+Requires-Dist: bda.plone.discount
+Requires-Dist: collective.js.datatables
+Requires-Dist: plone.restapi
+Requires-Dist: Products.CMFPlone
+Requires-Dist: pycountry >=23.12.7
+Requires-Dist: setuptools
+Requires-Dist: simplejson >=2.1
+Requires-Dist: six
+Requires-Dist: csv23
+Requires-Dist: yafowil.plone >2.999
+Requires-Dist: yafowil.widget.array
+Requires-Dist: yafowil.widget.datetime
+Requires-Dist: zope.deferredimport
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+
+================
+bda.plone.orders
+================
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/ambv/black
+
+.. image:: https://travis-ci.org/bluedynamics/bda.plone.orders.svg?branch=master
+    :target: https://travis-ci.org/bluedynamics/bda.plone.orders
+
+Installation
+============
+
+This package is part of the `bda.plone.shop`_ stack. Please refer to
+https://github.com/bluedynamics/bda.plone.shop for installation
+instructions.
+
+
+Integration notes
+=================
+
+- The order actions are done with background images in CSS, so if you have your
+  own theme that is not based on Sunburst, you will have to add the "icons.on"
+  part of Sunburst's base.css.
+
+
+Customizing Orders
+==================
+
+If you've added custom fields to the checkout (see
+`bda.plone.checkout`_), chances are high you want to add them to the
+order emails, order summaries or the order export.
+
+.. _`bda.plone.checkout`: https://github.com/bluedynamics/bda.plone.checkout
+
+Please follow the instructions in `Customizing the shop` in the
+`bda.plone.shop`_ Readme first to setup the patch infrastructure.
+
+.. _`bda.plone.shop`: https://github.com/bluedynamics/bda.plone.shop
+
+After that you can start customizing the order process:
+
+.. code-block:: python
+
+    def patchShop():
+        patchMailTemplates()
+        patchOrderExport()
+
+
+Mail notifications
+------------------
+
+Order related notification is done by sending multipart mails containing a
+text and a HTML version of the notification payload.
+
+When customizing mail notification, both text and HTML templates needs to be
+customized.
+
+WARNING:
+
+    As of ``bda.plone.orders`` 1.0a1, signatue of
+    ``bda.plone.orders.MailNotify.send`` changed. It accepts now
+    ``subject``, ``receiver`` and ``text`` as positional arguments and an
+    optional ``html`` argument.
+
+
+HTML Templates
+~~~~~~~~~~~~~~
+
+Default HTML templates are located at ``bda.plone.orders:mailtemplates``.
+To customize them, copy the entire template folder to your integration package
+and patch ``bda.plone.orders.mailnotify.MAIL_TEMPLATES_DIRECTORY`` like so:
+
+.. code-block:: python
+
+    from bda.plone.orders import mailnotify
+    import os
+
+    mailnotify.MAIL_TEMPLATES_DIRECTORY = os.path.join(
+        os.path.dirname(__file__),
+        'mailtemplates'
+    )
+
+
+Text Templates
+~~~~~~~~~~~~~~
+
+Copy the messages you need to customize from
+``bda.plone.orders.mailtemplates`` and change the text to your needs.
+There are two dictionaries containing all the strings, ``ORDER_TEMPLATES``
+and ``RESERVATION_TEMPLATES``. Its a nested dict. On the first level is the
+langugae code, the second level is ``subject``, ``body`` and
+``delivery_address``. Change them i.e. like this:
+
+.. code-block:: python
+
+    from bda.plone.orders.mailtemplates import ORDER_TEMPLATES
+    from bda.plone.orders.mailtemplates import RESERVATION_TEMPLATES
+
+    ORDER_TEMPLATES['en']['body'] = """
+    This is my heavily customized confirmation mail."""
+
+    RESERVATION_TEMPLATES['de']['body'] = "Ihre Reservierung ist da!"
+
+When updating ``bda.plone.order`` to a new version, make sure to keep them
+in sync with the original templates and check if all stock variables
+(such as ``global_text`` or the ``@@showorder`` link which have been
+added in version 0.4 are present.)
+
+
+Customize notification mechanism
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Alternativly you add/replace the notification methods and implement your
+own very custom. To do provide your own two functions similar to
+``bda.plone.orders.mailnotify.notify_checkout_success`` and
+``bda.plone.orders.mailnotify.notify_payment_success``. Then
+
+.. code-block:: python
+
+    from bda.plone.orders.mailnotify import NOTIFICATIONS
+
+    # register as additional action
+    NOTIFICATIONS['checkout_success'].append(my_notify_checkout_success)
+    NOTIFICATIONS['payment_success'].append(my_notify_payment_success)
+
+    # OR
+    # register as replacement:
+    NOTIFICATIONS['checkout_success'] = [my_notify_checkout_success]
+    NOTIFICATIONS['payment_success'] = [my_notify_payment_success]
+
+
+Order Export
+------------
+
+To make a new field show up in the export, just add it to the
+list ``ORDER_EXPORT_ATTRS``.
+
+In this example we include the company uid we added in the example for
+customizing ``bda.plone.checkout`` right after the company name:
+
+.. code-block:: python
+
+    from bda.plone.orders.browser.export import ORDER_EXPORT_ATTRS
+
+    def patchOrderExport():
+        idx = ORDER_EXPORT_ATTRS.index('personal_data.company')
+        ORDER_EXPORT_ATTRS.insert(idx+1, 'personal_data.uid')
+
+
+Order details
+-------------
+
+To show the data of the new field in the detail view of the order
+customize ``bda/plone/orders/browser/templates/order.pt`` using
+`z3c.jbot <https://pypi.python.org/pypi/z3c.jbot>`_ or by registering
+the browser page for your policy package's browserlayer or themelayer:
+
+.. code-block:: xml
+
+    <browser:page
+      for="zope.component.interfaces.ISite"
+      name="order"
+      template="my-order.pt"
+      class="bda.plone.orders.browser.order.OrderView"
+      permission="bda.plone.orders.ViewOrders"
+      layer="my.package.interfaces.IMyBrowserLayer"/>
+
+WARNING:
+
+    as of ``bda.plone.orders`` 1.0a1 the template location changed from
+    browser package to templates folder in browser package. Please adopt
+    the location if you customized the template via ``z3c.jbot`` in your
+    integration package.
+
+
+Invoice view
+------------
+
+The invoice template is ``bda/plone/orders/browser/templates/invoice.pt``.
+It can be customized via `z3c.jbot <https://pypi.python.org/pypi/z3c.jbot>`_ or
+by registering the browser page for your policy package's browserlayer or
+themelayer:
+
+.. code-block:: xml
+
+      <browser:page
+        for="zope.component.interfaces.ISite"
+        name="invoice"
+        template="my-invoice.pt"
+        class="bda.plone.orders.browser.invoice.InvoiceView"
+        permission="bda.plone.orders.ViewOrders"
+        layer="my.package.interfaces.IMyBrowserLayer" />
+
+
+Restrictions with souper.plone
+==============================
+
+- Make sure you do not move orders or bookings soup away from portal root. This
+  will end up in unexpected behavior and errors.
+
+
+Vendor support
+==============
+
+``bda.plone.orders`` supports the concept of vendors. A vendor is able to
+manage his products and view orders and booking related to this products.
+
+A vendor has his own area, which is a container somewhere in the portal.
+To enable vendor support for a container, navigate to it and apply
+``Enable vendor area`` action on it. Then navigate to local roles management
+view of this container and grant ``Vendor`` role to the desired users.
+
+The users granted the ``Vendor`` role is now able to see order related views
+and perform order related actions in the context of this container.
+
+
+Permissions
+===========
+
+In general, custom shop deployments are likely to configure the permission and role settings according to their use cases.
+
+The Permissions ``bda.plone.orders.ViewOrderDirectly`` and ``bda.plone.orders.ViewOwnOrders`` are granted to default Plone roles rather than Customer role.
+The Customer role is intended to be granted as a local role contextually.
+The ``@@orders`` and ``@@showorder`` and ``@@showinvoice`` views should be callable on ``ISite`` root.
+So a possible customer might be no customer on the site root.
+
+Following as listing of the permissions and its purpose:
+
+
+``bda.plone.orders.ViewOrderDirectly``
+    Grants view access to single order data related views,
+    which are protected by ordernumber and related email address.
+
+    Currently order details and invoice are implemented as such views.
+    A link to them is sent in the order confirmation mail after successful checkout.
+
+    By default, this permission is set for roles:
+
+    * Manager
+    * Site Administrator
+    * Authenticated
+
+    In order to expose this views to all visitors by default, add ``Anonymous``
+    role via generic setup's ``rolemap.xml`` of your integration package.
+
+
+``bda.plone.orders.ViewOwnOrders``
+    Grants permission to view orders made by the currently authenticated user.
+
+    By default, this permission is set for roles:
+
+    * Manager
+    * Site Administrator
+    * Authenticated
+
+    To customize this, edit ``rolemap.xml`` in your integration package as needed.
+
+
+``bda.plone.orders.ViewOrders``
+    Grants permission to view all orders in a given context or globally.
+
+    By default, this permission is set for roles:
+
+    * Manager
+    * Site Administrator
+    * Vendor
+
+    To customize this, edit ``rolemap.xml`` in your integration package as needed.
+
+
+``bda.plone.orders.ModifyOrders``
+    Grants the user to modify orders.
+    This includes to perform state transitions on orders and bookings, and to modify booking comments.
+
+    By default, this permission is set for roles:
+
+    * Manager
+    * Site Administrator
+    * Vendor
+
+    To customize this, edit ``rolemap.xml`` in your integration package as needed.
+
+
+``bda.plone.orders.ExportOrders``
+    Grants the user to export orders in CSV format.
+
+    By default, this permission is set for roles:
+
+    * Manager
+    * Site Administrator
+    * Vendor
+
+    To customize this, edit ``rolemap.xml`` in your integration package as needed.
+
+
+``bda.plone.orders.ManageTemplates``
+    Grants the user to manage notification mail templates for existing orders.
+
+    By default, this permission is set for roles:
+
+    * Manager
+    * Site Administrator
+    * Vendor
+
+    To customize this, edit ``rolemap.xml`` in your integration package as needed.
+
+
+``bda.plone.orders.DelegateCustomerRole``
+    Grant the ``Customer`` role to other users via the localroles view.
+
+    By default, this permission is set for roles:
+
+    * Manager
+    * Site Administrator
+
+    To customize this, edit ``rolemap.xml`` in your integration package as needed.
+
+
+``bda.plone.orders.DelegateVendorRole``
+    Grants the user to grant the ``Vendor`` role to other users via the localroles view.
+
+    By default, this permission is set for no roles.
+
+    To customize this, edit ``rolemap.xml`` in your integration package as needed.
+
+
+How To allow anonymous users to buy items
+=========================================
+
+In your Generic Setup's profile, add to ``rolemap.xml``:
+
+.. code-block:: xml
+
+    <!-- Allow Anonymous to buy items -->
+    <permission name="bda.plone.orders: View Order Directly" acquire="True">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Authenticated" />
+      <role name="Anonymous"/>
+    </permission>
+    <permission name="bda.plone.shop: View Buyable Info" acquire="True">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Reviewer" />
+      <role name="Editor" />
+      <role name="Customer" />
+      <role name="Anonymous"/>
+    </permission>
+    <permission name="bda.plone.shop: Modify Cart" acquire="True">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Customer" />
+      <role name="Anonymous"/>
+    </permission>
+    <permission name="bda.plone.checkout: Perform Checkout" acquire="True">
+      <role name="Manager" />
+      <role name="Site Administrator" />
+      <role name="Customer" />
+      <role name="Anonymous"/>
+    </permission>
+
+
+REST-API
+========
+
+There is a REST API available.
+It is based on `plone.rest <https://pypi.org/project/plone.rest/>`_ endpoints.
+
+The REST API is work in progress and will be enhanced over time.
+
+We provide the following endpoints:
+
+GET ``@shop-order/${ORDER-UID}``
+    The order data of the order with the given order-uid.
+    It includes bookings and the booking-data.
+
+
+Create translations
+===================
+
+::
+
+    $ cd src/bda/plone/orders/
+    $ ./i18n.sh
+
+
+TODO
+====
+
+- Fix bookings views filters.
+
+- Store cart and item discount rules in checkout adapter instead of actual
+  discount values in order to reliably modify orders while keeping invoice and
+  order summary views sane.
+
+- Rename salaried to paid all over the place.
+
+- Icons in orders view actions.
+
+- Icons in contacts view actions.
+
+- Overhaul order view. Display discounted item price, etc.
+
+- Think about adding notification text to booking data in checkout adapter if
+  we want to display related text in invoice.
+
+- Add vendor support to invoices.
+
+- Properly implement initially non-billable bookings. Add a flag
+  ``charge_if_backorder`` to ``IStockBehavior``, so we have control per buyable
+  item, and a control panel setting with the default of this value
+  for all buyables. Implement UI to carry back unbilled backorders. Adopt order
+  and invoive views (Issue #45).
+
+- Adopt text notification mail generation to mako templates and move existing
+  text mail generation to legacy module, with flag to switch between old and
+  new style text generation. As fallback add transformation of HTML mail to
+  plain text version.
+  (https://github.com/collective/Products.EasyNewsletter/blob/master/Products/EasyNewsletter/utils/mail.py#L112)
+
+- @@orders in lineage subsites should only list orders in that path.
+
+- Consider vendor UID's and booking based state in mail notification.
+
+- Add ``is_customer`` utility.
+
+- Improve customers vocabulary utility to be more cpu friendly.
+
+- Search text in orders view needs to consider vendor and customer filter.
+
+- Display Export orders link only for vendors and administrators.
+
+- Work internally with unicode only.
+
+- Move IUUID adapter for ``IPloneSiteRoot`` to ``bda.plone.cart``, which is the
+  central package for the shop.
+
+- ``cart_discount_net`` and ``cart_discount_vat`` values calculation for vendor
+  specific orders in order view and order export.
+
+- Warning-popup, if state is changed globally for all bookings in orders view.
+
+- Move Customer role to ``bda.plone.cart``.
+
+- Fix dependency in bda.plone.payment.cash.__init__, which depends on
+  ``bda.plone.orders``.
+
+- Move some interfaces to ``bda.plone.cart`` to avoid circular dependencies.
+
+
+Contributors
+============
+
+- Robert Niederreiter (Author)
+- Johannes Raggam
+- Peter Holzer
+- Harald Frießnegger
+- Ezra Holder
+- Benjamin Stefaner (benniboy)
+- Jens Klein
+
+
+Icons used are `Silk-Icons by FamFamFam <http://www.famfamfam.com/lab/icons/silk/>`_
+under CC-BY 2.5 license.
+Changelog
+=========
+
+2.0b2 (2024-04-17)
+------------------
+
+- Add missing compiled resources.
+  [petschki]
+
+
+2.0b1 (2024-04-17)
+------------------
+
+- Introduce base class to allow more flexible subclassing for export.
+  [jensens]
+
+- Use csv23 for py2/3 csv export.
+  Make export charset configurable.
+  Do not convert point to comma for numbers in export.
+  [agitator]
+
+- Add contact information to export
+  [jensens, agitator]
+
+- Store contact uid back to order as attr contact_uid.
+  [jensens, agitator]
+
+- Customizable contact lookup query.
+  [jensens]
+
+- Add mailtemplate lang mapping for de-ch
+  [agitator]
+
+- Fix: UNSET email adress result in borken checkout.
+  [jensens, faro]
+
+- More robust dict-get on order.pt - do not require a bucnh of fields.
+  [jensens]
+
+- No longer support for z3c.autoinclude.
+  [jensens]
+
+- Make invoice fields optional
+  [agitator]
+
+- Add new order manager with ability to query and delete orders.
+  [jensens]
+
+- Clean out `common.py` into `datamanagers` directory with deprecation messages in place.
+  [jensens]
+
+- Update imports to reflect last cart/shipping changes.
+  [jensens]
+
+- Bootstrapping rest endpoints and add first endpoint for order under ``@shop-order/ORDER_UID``.
+  [jensens]
+
+- Define features of OrderState, OrderData and BookingData in interfaces and let add implementer to classes.
+  [jensens]
+
+- Refactor out of `common.py` into different file to make development easier.
+  [jensens]
+
+- Remove Plone 4 specific ContentViewBase
+  [jensens]
+
+- Python 2/3 compatibility
+  [agitator]
+
+- Update version and classifiers - 2.x targets Plone 5.1/5.2 without Archetypes
+  [agitator]
+
+
+1.0a1 (unreleased)
+------------------
+
+- Remove ``Authenticated`` role for ``bda.plone.orders: View Orders``
+  permission in ``rolmap.xml`` and add ``Vendor`` instead. We really do not
+  want all authenticated users to be able to see all orders.
+  [rnix]
+
+- Move page templates to dedicated folder.
+  [rnix]
+
+- Move invoice related views from ``views.py`` to ``invoice.py``.
+  [rnix]
+
+- Move order related views from ``views.py`` to ``order.py``.
+  [rnix]
+
+- Move orders related views from ``views.py`` to ``orders.py``.
+  [rnix]
+
+- Move general views from ``views.py`` to ``common.py``.
+  [rnix]
+
+- Ajaxify cancel bookings.
+  [rnix]
+
+- Fix comment editing in plone 5.
+  [rnix]
+
+- Only display cancel booking action if booking not already cancelled.
+  [rnix]
+
+- Fix error in the order detail if the product no longer exists (#20).
+  [rnix]
+
+- Do not exclude reserved bookings by default from billing. This resolves
+  inconsistenty introduced with
+  https://github.com/bluedynamics/bda.plone.orders/pull/39 and addressed at
+  https://github.com/bluedynamics/bda.plone.orders/issues/45.
+  [rnix]
+
+- Introduce ``ProtectedOrderDataView`` and use as base for ``DirectOrderView``
+  and ``DirectInvoiceView``.
+  [rnix]
+
+- Add invoice view.
+  [rnix]
+
+- Remove duplicate ``Translate`` class from
+  ``bda.plone.orders.browser.contacts``.
+  [rnix]
+
+- Rename ``OrdersContentView`` to ``ContentViewBase``.
+  Introduce view configuration properties ``do_disable_border``,
+  ``do_disable_left_column`` and ``do_disable_right_column``.
+  [rnix]
+
+- Introduce ``OrderDataView`` base class for views dealing with single order
+  data.
+  [rnix]
+
+- Add HTML support for order related notification mails.
+  [rnix]
+
+- Change signature of ``bda.plone.orders.MailNotify.send``. Accepts now
+  ``subject``, ``receiver`` and ``text`` as positional arguments and an
+  optional ``html`` argument.
+  [rnix]
+
+- Also handle transaction id and payment state for ``bda.plone.stripe``
+  payment in ``bda.plone.common.payment_success`` and
+  ``bda.plone.common.payment_failed`` event subscribers.
+  [rnix]
+
+- @@orders: rebind notification binder also after datatable has been updated.
+  [thet]
+
+- Don't fail in ``@@contacts`` view when searching for non-ascii characters.
+  [thet]
+
+- Display Toolbar contents in Plone 5 on order related content views.
+  [rnix]
+
+- Fix export orders form.
+  [rnix]
+
+- Fix export if stock behavior not applied on buyable
+  [rnix]
+
+- use MwSt. instead of Ust. in german
+  [agitator]
+
+- Added item_number to order mails
+  [agitator]
+
+- Create safe filenames for ``@@exportorders_contextual``.
+  [thet]
+
+- Make the current context as base url for ``ajaxurl`` in OrdersTable and BookingsTable.
+  This way, the current subsites settings are respected, e.g. when rendering state transition dropdowns, which again sends mails and those need the correct sender.
+  [thet]
+
+- Reimplement ``update_item_stock`` according to transition changes, documented at the table in ``transitions.py``.
+  [thet]
+
+- If no ``uid`` was given when calling the ``@@order`` view, redirect to current context and show an error message instead of failing.
+  [thet]
+
+- In ``@@bookings`` view, group by buyable per default.
+  [thet]
+
+- In ``@@bookings`` view, add ``buyable_comment`` column and combine first name, last name and address information to save space.
+  [thet]
+
+- Don't include reserved bookings in ``OrderData`` payment information (net, vat) and don't count them when calculating the salaried state for orders.
+  [thet]
+
+- In mail templates, list reserved items seperately from normal ordered items.
+  [thet]
+
+- Fix modifications of ``buyable_comment`` in ``@@orders`` view not being saved.
+  [thet]
+
+- Translate country code in mail notifications.
+  [thet]
+
+- On mail notifications, don't try to include delivery_address if no delivery_address template is available.
+  In some contexts, there is no need for a delivery_address, like booking canceling.
+  [thet]
+
+- Unicode almost everywhere.
+  Fixes some ``Unicode Decode Error``.
+  [thet]
+
+- Add transition actions when state is changed from "Reserved".
+  Sends out a mail with a notification for the customer and adminitrator, that the item became available and is ordered.
+  [thet]
+
+- In ``do_transition_for`` on orders, set the state on each booking instead directly on the order.
+  This way each booking setter is called, e.g. for changing stock items, setting overall order state and so on.
+  [thet]
+
+- Send out mails when cancelling whole orders or individual bookings from the ``@@orders`` and ``@@bookings`` views, not only from the order detail view.
+  This is done by moving the necessary logic into ``bda.plone.orders.transitions.do_transition_for``.
+  [thet]
+
+- Add filters for Vendor, Customer, State and Salaried state to the @@bookings view.
+  [pcdummy]
+
+- Overhaul order and bookings state and salaried transitions.
+  [rnix]
+
+- Add filter for order state and salaried to the @@orders view.
+  [pcdummy]
+
+- Introduce ``bda.plone.orders.mailnotify.BOOKING_CANCELLED_TITLE_ATTRIBUTE``
+  which is used to lookup title attribute for booking cancellation
+  notification.
+  [rnix]
+
+- Fix sorting on email address in orders table.
+  [rnix]
+
+- Re-add calculated values for state and salaried on order booking. Needed
+  for orders view to ensure sorting works.
+  [rnix]
+
+- Show user filter as "Lastname, Firstname (Username) - Email" instead of
+  "Username (Firstname, Lastname)", sort the users on Lastname.
+  [pcdummy]
+
+- Plone 5 update
+  [agitator]
+
+
+0.9.dev
+-------
+
+- Set JSON response headers in ``TableData.__call__``.
+  [rnix]
+
+- Fix ``notify_customers`` view to work on any context. This allows for sending
+  mail in the ``@@orders`` view when called somewhere else than ISite contexts.
+  [thet]
+
+- Fix indentation method in mailnotify module to handle non-ASCII data.
+  [thet]
+
+- Make orders view for whole site play nice with lineage.
+  [jensens]
+
+- Renew/Cancel Booking inc-/decreases stock now.
+  Also some changes in API to be more consistent.
+  [jensens]
+
+- Cancel Booking now uses transition API.
+  [jensens]
+
+- JSON response header needed for @@contactsdata.
+  [jensens]
+
+- JSON response header needed for @@bookingsdata.
+  [thet]
+
+- JSHint JavaScript resources.
+  [thet]
+
+- fix: #24 error on submitting the checkout
+  [jensens]
+
+- feature: booking comment editable
+  [jensens]
+
+- feature: delete single booking from order
+  [jensens]
+
+- Move export related code in own file to reduce length and increase
+  readability
+  [jensens]
+
+- Fix: Calculation of price in listings with a vat of zero failed.
+  [jensens]
+
+- Add two datatable views, in which bookings are displayed and can be grouped
+  by the buyers email adress or the buyable uid. Both views support daterange
+  filtering and text index support. The ``Bookings`` view gets called on the
+  portal root and the ``Bookings in Context`` returns all bookings data on
+  the corresponding context it is called.
+  [benniboy]
+
+- Major cleanup - code-analysis integrated, travis ci and moved IBuyable from
+  bda.plone.shop to this package to avoid circular dependencies.
+  [benniboy]
+
+- Dont depend on implemented interfaces ITrading and IShippingItem.
+  see https://github.com/bluedynamics/bda.plone.shop/issues/31
+  [jensens]
+
+- Fix item count validation in
+  ``bda.plone.orders.common.OrderCheckoutAdapter.create_booking``.
+  [rnix]
+
+- added item price to item listing in order mail
+  [agitator]
+
+- added translated salutation to available mail template attributes
+  [agitator]
+
+
+0.8
+---
+
+- In ``@@order`` view, show state and salaried columns per booking, for the
+  order notification email, indicate per booking, when it is reserved.
+  [thet]
+
+
+0.7
+---
+
+- Add ``buyable_available`` and ``buyable_overbook`` export attributes to CSV
+  exports.
+  [thet]
+
+- Use ``csv.QUOTE_MINIMAL`` for CSV writers.
+  [rnix]
+
+- Decode strings to unicode in ``DynamicMailTemplate.normalized``.
+  [rnix]
+
+- Aquire until ``IPloneSiteRoot`` instead of ``ISite`` in
+  ``acquire_vendor_or_shop_root``. ``lineage.subsite`` also works with
+  ``ISite`` interface, but we really want to use plone root as fallback vendor
+  if no object providing ``IVendor`` found in acquisition chain.
+  [rnix]
+
+- Instead of ``plone.app.uuid.utils.uuidToObject`` use
+  ``bda.plone.cart.get_object_by_uid``, which does the same but can handle
+  ``uuid.UUID`` and string objects.
+  [thet]
+
+
+0.6
+---
+
+- Introduce ``ViewOwnOrders`` (``bda.plone.orders: View Own Orders``) to
+  protect ``@@myorders`` and descendant views with a dedicated permission.
+  [thet]
+
+
+0.5
+---
+
+- Add ``bda.plone.orders.ExportOrders`` permission and bind export related
+  views to it.
+  [rnix]
+
+- Fix ``PaymentData.description`` unicode error.
+  [rnix]
+
+- Add upgrade step to reset all soup records attributes storage.
+  [rnix]
+
+- Include ``jquery-barcode`` from http://barcode-coder.com - not delivered to
+  the client or used yet.
+  [rnix]
+
+- Include ``qrcode.js`` from http://davidshimjs.github.io/qrcodejs/ and render
+  QR Code for order uuid in order view.
+  [rnix]
+
+- Move Javascript and CSS to resources folder.
+  [rnix]
+
+- Add ``bda.plone.orders.interfaces.ITrading`` and consider contract when
+  creating order bookings.
+  [rnix]
+
+- Translate ``customers_notified_success`` ajax message directly in view class.
+  [rnix]
+
+- Add ``shippable`` flag to order bookings and implement upgrade step.
+  [rnix]
+
+- Remove ``bda.plone.orders.common.SKIP_PAYMENT_IF_RESERVED``. Equivalent
+  exists now in ``bda.plone.shop`` controlpanel settings (**Attention** -
+  default value changed to False there).
+  [rnix]
+
+- Always check for reservations in orders to select used mail templates no
+  matter if mail gets send after checkout or after payment.
+  [rnix]
+
+- Rename ``bda.plone.orders.mailnotify.notify_reservation_if_payment_skipped``
+  to ``bda.plone.orders.mailnotify.notify_checkout_success`` and use
+  ``bda.plone.checkout.interfaces.ICheckoutSettings`` to check whether
+  notification mail should be sent after checkout has been done.
+  [rnix]
+
+- Adopt ``bda.plone.checkout`` interfaces changes in
+  ``bda.plone.orders.common.ICheckoutAdapter``.
+  [rnix]
+
+- Rename ``@@reservation_done`` view to ``@@order_done`` and handle displayed
+  heading and text by order state.
+  [rnix]
+
+- Use ``OrderData.currency`` instead of ``ICartDataProvider.currency`` in
+  ``bda.plone.orders.common.PaymentData.currency``.
+  [rnix]
+
+- Rename ``bda.plone.orders.mailnotify.create_order_total`` to
+  ``bda.plone.orders.mailnotify.create_order_summary``.
+  [rnix]
+
+- Rename ``order_total`` to ``order_summary`` in order notification mail
+  templates. **Note** - Update your template customizations
+  [rnix]
+
+- Add ``currency`` property to ``OrderData`` object.
+  [rnix]
+
+- Store ``payment_method`` and ``payment_label`` on order and provide upgrade
+  step.
+  [rnix]
+
+- Implement summary listing for notification mails.
+  [rnix]
+
+- Change ``IPaymentText.payment_text`` from property to function and accept
+  payment method id as argument.
+  [rnix]
+
+- Add ``@@exportorders_contextual`` view to export all orders of a context and
+  below.
+  [thet]
+
+- Adopt shipping handling to ``bda.plone.shipping`` >= 0.4.
+  [rnix]
+
+- Introduce ``INotificationSettings`` which provides ``admin_name`` and
+  ``admin_email`` attributes. Use these settings for sending notifications.
+  [fRiSi, rnix]
+
+
+0.4
+---
+
+- Change browser view and adapter regitrations from ``IPloneSiteRoot`` to
+  ``zope.component.interfaces.ISite``. That's needed for Lineage compatibility.
+  [thet]
+
+- Integrate ``@@showorder`` view to access information for a specific order for
+  anonymous users by giving the ordernumber and email as credentials.
+  [thet]
+
+- Fix mail sending for AT based buyable items.
+  [rnix]
+
+- Disable Diazo Theming for orders table
+  [ezvirtual, rnix]
+
+- Bind ``PaymentData`` adapter to interface instead of content class
+  [ezvirtual]
+
+- Integrate discounting information to orders and bookings.
+  [rnix]
+
+- Move state, salaried and tid to bookings.
+  [thet]
+
+- Order can have state ``processing``.
+  [rnix]
+
+- Add ``bda.plone.orders.permissions`` and call ``setDefaultRoles`` for
+  contained permissions.
+  [rnix]
+
+- Also register ``bda.plone.orders.common.OrderCheckoutAdapter`` for
+  ``Products.CMFPlone.interfaces.IPloneSiteRoot``.
+  [rnix]
+
+- Restrict orders and bookings in ``@@exportorders`` to what the user is
+  allowed to see.
+  [thet]
+
+- Include Booking URL in ``@@exportorders``. Titles can easily be ambiguous.
+  [thet]
+
+- Introduce ``bda.plone.orders.interfaces.IItemNotificationText``,
+  ``bda.plone.orders.interfaces.IGlobalNotificationText`` and
+  ``bda.plone.orders.interfaces.IPaymentText`` used for mail notification
+  after checkout.
+  [rnix, jensens]
+
+- ``OrderCheckoutAdapter`` no longer fails if uid in cart cookie which item
+  not exists any longer.
+  [rnix]
+
+- Implement dedicated ``create_booking`` function in ``OrderCheckoutAdapter``
+  for better customization purposes.
+  [rnix]
+
+- Implement multi client functionality with ``Vendor`` role and appropriate
+  permissions. Assign bookings to vendors. Allow definitions of vendor areas
+  via the ``IVendor`` interface.
+  [thet, rnix]
+
+- Introduce ``Customer`` Role.
+  [thet, rnix]
+
+- Render a link to the booked item in ``@@order`` view.
+  [thet]
+
+- Fix BrowserLayer order precedence.
+  [thet]
+
+- Copy all order data in ``create_mail_body`` to the template attributes to
+  support custom (string)fields out of the box in mail templates.
+  [fRiSi, rnix]
+
+- ``bda.plone.orders.common.OrderData`` now accepts either ``uid`` or ``order``
+  as keyword argument, and optional ``vendor_uid`` in ``__init__``.
+  [rnix]
+
+
+0.3
+---
+
+- ``bda.plone.payment.six_payment.ISixPaymentData`` has been removed. Use
+  ``bda.plone.payment.interfaces.IPaymentData`` instead.
+  [rnix]
+
+
+0.2
+---
+
+- consider cart item stock where necessary.
+  [rnix]
+
+- Use Mailhost do send emails (see documentation_) to support
+  setups with products such as `Products.PrintingMailHost`_
+  [fRiSi]
+
+  .. _documentation: http://plone.org/documentation/manual/upgrade-guide/version/upgrading-plone-3-x-to-4.0/updating-add-on-products-for-plone-4.0/mailhost.securesend-is-now-deprecated-use-send-instead
+  .. _`Products.PrintingMailHost`: https://pypi.python.org/pypi/Products.PrintingMailHost/0.7
+
+
+0.1
+---
+
+- initial work
+  [rnix]
+
+License
+=======
+
+Copyright (c) 2012-2019, BlueDynamics Alliance, Austria
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this
+  list of conditions and the following disclaimer in the documentation and/or
+  other materials provided with the distribution.
+* Neither the name of the BlueDynamics Alliance nor the names of its
+  contributors may be used to endorse or promote products derived from this
+  software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY BlueDynamics Alliance ``AS IS`` AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL BlueDynamics Alliance BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

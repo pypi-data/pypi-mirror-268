@@ -1,0 +1,1161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bda.plone.orders\n"
+"POT-Creation-Date: 2019-02-10 13:43+0000\n"
+"PO-Revision-Date: 2016-11-02 11:58+0100\n"
+"Last-Translator: Jens W. Klein <jk@kleinundpartner.at>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: bda.plone.orders\n"
+"X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. Default: "Item"
+#: ./browser/bookings.py:423
+msgid "Item"
+msgstr "Artikel"
+
+#. Default: "Actions"
+#: ./browser/contacts.py:75
+#: ./browser/orders.py:296
+msgid "actions"
+msgstr "Aktionen"
+
+#. Default: "Address"
+#: ./browser/bookings.py:442
+msgid "address"
+msgstr "Adresse"
+
+#. Default: "All"
+#: ./browser/common.py:23
+msgid "all"
+msgstr "Alle"
+
+#. Default: "Please provide the email adress you used for submitting the order."
+#: ./browser/order.py:161
+msgid "anon_auth_err_email"
+msgstr "Bitte geben Sie die E-Mail Adresse an unter der Sie die Bestellung abgeschlossen haben."
+
+#. Default: "No order could be found for the given credentials"
+#: ./browser/order.py:170
+msgid "anon_auth_err_order"
+msgstr "Keine Bestellung zu den angegebenen Kriterien gefunden."
+
+#. Default: "Please provide the ordernumber"
+#: ./browser/order.py:166
+msgid "anon_auth_err_ordernumber"
+msgstr "Bitte geben Sie die Bestellnummer an."
+
+#. Default: "Email"
+#: ./browser/order.py:124
+msgid "anon_auth_label_email"
+msgstr "E-Mail"
+
+#. Default: "Ordernumber"
+#: ./browser/order.py:115
+msgid "anon_auth_label_ordernumber"
+msgstr "Bestellnummer"
+
+#. Default: "Submit"
+#: ./browser/order.py:131
+msgid "anon_auth_label_submit"
+msgstr "Absenden"
+
+#: ./profiles.zcml:13
+msgid "bda.plone.orders"
+msgstr ""
+
+#. Default: "Billing Address:"
+#: ./browser/templates/order.pt:44
+msgid "billing_address"
+msgstr "Rechnungsadresse:"
+
+#. Default: "Comment"
+#: ./browser/bookings.py:428
+#: ./browser/templates/order.pt:179
+msgid "booking_comment"
+msgstr "Kommentar"
+
+#. Default: "Count"
+#: ./browser/templates/order.pt:172
+msgid "booking_count"
+msgstr "Anzahl"
+
+#. Default: "Currency"
+#: ./browser/templates/order.pt:174
+msgid "booking_currency"
+msgstr "Währung"
+
+#. Default: "Bookingdate"
+#: ./browser/bookings.py:417
+msgid "booking_date"
+msgstr "Buchungsdatum"
+
+#. Default: "Discount net"
+#: ./browser/templates/order.pt:176
+msgid "booking_discount_net"
+msgstr "Rabatt Netto"
+
+#. Default: "Exported"
+#: ./browser/templates/order.pt:178
+msgid "booking_exported"
+msgstr "Exportiert"
+
+#. Default: "Net"
+#: ./browser/templates/order.pt:175
+msgid "booking_net"
+msgstr "Netto"
+
+#. Default: "Quantity"
+#: ./browser/templates/order.pt:173
+msgid "booking_quantity_unit"
+msgstr "Einheit"
+
+#. Default: "Salaried"
+#: ./browser/templates/order.pt:181
+msgid "booking_salaried"
+msgstr "Bezahlt"
+
+#. Default: "State"
+#: ./browser/templates/order.pt:180
+msgid "booking_state"
+msgstr "Status"
+
+#. Default: "Title"
+#: ./browser/templates/order.pt:171
+msgid "booking_title"
+msgstr "Titel"
+
+#. Default: "Vat"
+#: ./browser/templates/order.pt:177
+msgid "booking_vat"
+msgstr "MwSt."
+
+#. Default: "Bookings"
+#: ./browser/templates/bookings.pt:8
+msgid "bookings"
+msgstr "Buchungen"
+
+#. Default: "Bookings quantity"
+#: ./browser/bookings.py:280
+msgid "bookings_quantity"
+msgstr "Anzahl der Buchungen"
+
+#. Default: "Bookings total sum"
+#: ./browser/bookings.py:286
+msgid "bookings_total_sum"
+msgstr "Buchungssumme"
+
+#. Default: "Buyable"
+#: ./vocabularies.py:63
+msgid "buyable"
+msgstr "Artikel"
+
+#. Default: "Buyable Uid"
+#: ./browser/bookings.py:406
+msgid "buyable_uid"
+msgstr "Artikel Uid"
+
+#. Default: "Cancel"
+#: ./vocabularies.py:32
+msgid "cancel"
+msgstr "stornieren"
+
+#. Default: "Cancelled"
+#: ./vocabularies.py:20
+msgid "cancelled"
+msgstr "Storniert"
+
+#. Default: "City"
+#: ./browser/orders.py:314
+msgid "city"
+msgstr "Ort"
+
+#. Default: "Contacts"
+#: ./browser/templates/contacts.pt:26
+msgid "contacts"
+msgstr "Kontakte"
+
+#. Default: "Count"
+#: ./browser/bookings.py:454
+msgid "count"
+msgstr "Anzahl"
+
+#. Default: "Currency:"
+#: ./browser/templates/order.pt:80
+msgid "currency"
+msgstr "Währung:"
+
+# customer_filter
+msgid "customer_filter"
+msgstr "Kunde"
+
+#. Default: "Mail to customers sent"
+#: ./browser/notify_customers.py:123
+msgid "customers_notified_success"
+msgstr "E-Mail an Kunden versandt"
+
+#. Default: "Date"
+#: ./browser/orders.py:301
+msgid "date"
+msgstr "Datum"
+
+#. Default: "Delivery Address:"
+#: ./browser/templates/order.pt:122
+msgid "delivery_address"
+msgstr "Lieferadresse:"
+
+#. Default: "Email"
+#: ./browser/bookings.py:384
+#: ./browser/contacts.py:80
+#: ./browser/orders.py:311
+msgid "email"
+msgstr "E-Mail"
+
+#. Default: "Failed to send notification to ${receiver}"
+#: ./mailnotify.py:350
+msgid "email_sending_failed"
+msgstr "Benachrichtigung an ${receiver} konnte nicht versandt werden."
+
+# export
+msgid "export"
+msgstr "Export"
+
+#. Default: "Export Orders"
+#: ./browser/templates/export.pt:23
+msgid "export_orders"
+msgstr "Bestellungen exportieren"
+
+#. Default: "Export recent orders as CSV (excel optimized)"
+#: ./browser/templates/export.pt:28
+msgid "export_recent_orders"
+msgstr "Exportiere aktuelle Bestellungen als CSV Datei"
+
+#. Default: "Failed"
+#: ./vocabularies.py:41
+msgid "failed"
+msgstr "Fehlgeschlagen"
+
+#. Default: "Filter for customers"
+#: ./browser/bookings.py:190
+#: ./browser/orders.py:355
+msgid "filter_for_customers"
+msgstr "Filter nach Kunden"
+
+#. Default: "Filter for salaried state"
+#: ./browser/bookings.py:216
+#: ./browser/orders.py:379
+msgid "filter_for_salaried"
+msgstr "Filter nach Bezahlt Status"
+
+#. Default: "Filter for states"
+#: ./browser/bookings.py:203
+#: ./browser/orders.py:367
+msgid "filter_for_state"
+msgstr "Filter nach Status"
+
+#. Default: "Filter for vendors"
+#: ./browser/bookings.py:173
+#: ./browser/orders.py:340
+msgid "filter_for_vendors"
+msgstr "Filter nach Anbieter"
+
+#. Default: "Filter from date"
+#: ./browser/bookings.py:229
+msgid "filter_from_date"
+msgstr "Filter Von-Datum"
+
+#. Default: "Filter to date"
+#: ./browser/bookings.py:242
+msgid "filter_to_date"
+msgstr "Filter Bis-Datum"
+
+#. Default: "Finish"
+#: ./vocabularies.py:31
+msgid "finish"
+msgstr "abschließen"
+
+#. Default: "Finished"
+#: ./vocabularies.py:19
+msgid "finished"
+msgstr "Abgeschlossen"
+
+#. Default: "First Name"
+#: ./browser/bookings.py:434
+#: ./browser/contacts.py:88
+#: ./browser/orders.py:308
+msgid "firstname"
+msgstr "Vorname"
+
+# from_date
+#. Default: "Filter from date"
+msgid "from_date"
+msgstr "Von"
+
+#. Default: "From-date after to-date"
+#: ./browser/export.py:172
+msgid "from_date_before_to_date"
+msgstr "Von-Datum nach Bis-Datum"
+
+# from_date_required
+msgid "from_date_required"
+msgstr "Von-Datum ist erforderlich"
+
+#. Default: "Group orders by"
+#: ./browser/bookings.py:257
+msgid "group_orders_by"
+msgstr "Bestellung gruppieren nach"
+
+#. Default: "Available placeholders:"
+#: ./browser/templates/mailtemplates_view.pt:50
+msgid "heading_mailtemplatelib_available"
+msgstr "Verfügbare Platzhalter:"
+
+#. Default: "In templates named placeholders can be used. A placeholder is inserted by inserting the name of the placeholder in curly braces, like so: ${example}"
+#: ./browser/templates/mailtemplates_view.pt:33
+msgid "heading_mailtemplatelib_example"
+msgstr "In Vorlagen können definierte Platzhalter verwendet werden. Um einen Platzhalter einzufügen, muss der Name des Platzhalters in gschwungene Klammern geschrieben werden, z.B. ${platzhalter}"
+
+#. Default: "Edit"
+#: ./browser/templates/mailtemplates_view.pt:36
+msgid "heading_mailtemplatelib_library"
+msgstr "Bearbeiten"
+
+#. Default: "Mailtemplates for Order Notifications"
+#: ./browser/templates/mailtemplates_view.pt:23
+msgid "heading_mailtemplatelib_main"
+msgstr "Textvorlagen für Email Benachrichtigung Bestellungen"
+
+#. Default: "Preview"
+#: ./browser/templates/mailtemplates_view.pt:42
+msgid "heading_mailtemplatelib_preview"
+msgstr "Vorschau"
+
+#. Default: "Using placeholder:"
+#: ./browser/templates/mailtemplates_view.pt:28
+msgid "heading_mailtemplatelib_using"
+msgstr "Benutze Platzhalter:"
+
+#. Default: "Found inconsistent Currencies on order related bookings. This should not happen at all!"
+#: ./browser/templates/order.pt:86
+msgid "inconsistent_currencies"
+msgstr "Inkonsistente Währung für diese Bestellung. Kontrollieren Sie bitte den Geld- und Warenfluss!"
+
+#. Default: "Invoice"
+#: ./browser/templates/invoice.pt:73
+msgid "invoice"
+msgstr "Rechnung"
+
+#. Default: "Net"
+#: ./browser/templates/invoice.pt:135
+msgid "invoice_cart_net"
+msgstr "Netto"
+
+#. Default: "Total"
+#: ./browser/templates/invoice.pt:237
+msgid "invoice_cart_total"
+msgstr "Rechnungsbetrag"
+
+#. Default: "VAT"
+#: ./browser/templates/invoice.pt:145
+msgid "invoice_cart_vat"
+msgstr "USt"
+
+#. Default: "Discount Net"
+#: ./browser/templates/invoice.pt:160
+msgid "invoice_discount_net"
+msgstr "Rabatt Netto"
+
+#. Default: "Discount Total"
+#: ./browser/templates/invoice.pt:184
+msgid "invoice_discount_total"
+msgstr "Rabatt Gesamt"
+
+#. Default: "Discount VAT"
+#: ./browser/templates/invoice.pt:172
+msgid "invoice_discount_vat"
+msgstr "Rabatt USt"
+
+#. Default: "Kind regards"
+#: ./browser/templates/invoice.pt:266
+msgid "invoice_kind_regards"
+msgstr "Mit freundlichen Grüßen"
+
+#. Default: "Amount"
+#: ./browser/templates/invoice.pt:85
+msgid "invoice_listing_amount"
+msgstr "Anzahl"
+
+#. Default: "Position"
+#: ./browser/templates/invoice.pt:88
+msgid "invoice_listing_position"
+msgstr "Position"
+
+#. Default: "Price"
+#: ./browser/templates/invoice.pt:91
+msgid "invoice_listing_price"
+msgstr "Preis"
+
+#. Default: "All prices in"
+#: ./browser/templates/invoice.pt:261
+msgid "invoice_prices_in_currency"
+msgstr "Alle Preisangaben verstehen sich in"
+
+#. Default: "Shipping Net"
+#: ./browser/templates/invoice.pt:201
+msgid "invoice_shipping_net"
+msgstr "Versand Netto"
+
+#. Default: "Shipping Total"
+#: ./browser/templates/invoice.pt:221
+msgid "invoice_shipping_total"
+msgstr "Versand Gesamt"
+
+#. Default: "Shipping VAT"
+#: ./browser/templates/invoice.pt:211
+msgid "invoice_shipping_vat"
+msgstr "Versand USt"
+
+# label_mailtemplatelib_array
+msgid "label_mailtemplatelib_array"
+msgstr "Vorlagenbibliothek"
+
+# label_mailtemplatelib_save
+msgid "label_mailtemplatelib_save"
+msgstr "Speichern"
+
+# label_mailtemplatelib_template
+msgid "label_mailtemplatelib_template"
+msgstr "Vorlage"
+
+# label_mailtemplatelib_title
+msgid "label_mailtemplatelib_title"
+msgstr "Titel"
+
+#. Default: "Last Name"
+#: ./browser/bookings.py:435
+#: ./browser/contacts.py:84
+#: ./browser/orders.py:305
+msgid "lastname"
+msgstr "Nachname"
+
+#. Default: "Loading Data, please wait..."
+#: ./browser/templates/contacts.pt:50
+#: ./browser/templates/table.pt:31
+msgid "loading_please_wait"
+msgstr "Lade Daten, bitte warten..."
+
+#. Default: "Mark outstanding"
+#: ./vocabularies.py:51
+msgid "mark_outstanding"
+msgstr "markiere unbezahlt"
+
+#. Default: "Mark salaried"
+#: ./vocabularies.py:49
+msgid "mark_salaried"
+msgstr "markiere bezahlt"
+
+#. Default: "Misses"
+#: ./browser/notify_customers.py:27
+msgid "misses"
+msgstr "Frau"
+
+#. Default: "Mister"
+#: ./browser/notify_customers.py:26
+msgid "mister"
+msgstr "Herr"
+
+#. Default: "Mister/Misses"
+#: ./browser/notify_customers.py:25
+msgid "mister_misses"
+msgstr "Herr/Frau"
+
+#. Default: "Mixed"
+#: ./vocabularies.py:22
+msgid "mixed"
+msgstr "Gemischt"
+
+#. Default: "New"
+#: ./vocabularies.py:17
+msgid "new"
+msgstr "Neu"
+
+#. Default: "No"
+#: ./browser/order.py:385
+#: ./vocabularies.py:40
+msgid "no"
+msgstr "Nein"
+
+#. Default: "No Payment"
+#: ./common.py:307
+msgid "no_payment"
+msgstr "Keine Bezahlmethode"
+
+#. Default: "No Shipping"
+#: ./common.py:332
+msgid "no_shipping"
+msgstr "Keine Versandmethode"
+
+#. Default: "No template selected"
+#: ./browser/notify_customers.py:62
+msgid "no_template_selected"
+msgstr "Keine Vorlage ausgewählt"
+
+#. Default: "None"
+#: ./browser/order.py:368
+msgid "none"
+msgstr "Keine"
+
+#. Default: "Notify customers of selected orders"
+#: ./browser/orders.py:411
+msgid "notify_customers"
+msgstr "Ausgewählte Kunden benachrichtigen"
+
+# notify_customers_heading
+msgid "notify_customers_heading"
+msgstr "Kunden Benachrichtigen"
+
+#. Default: "Order Bookings:"
+#: ./browser/templates/order.pt:163
+msgid "order_bookings"
+msgstr "Buchungen:"
+
+#. Default: "Order Comment:"
+#: ./browser/templates/order.pt:152
+msgid "order_comment"
+msgstr "Kommentar:"
+
+#. Default: "Company:"
+#: ./browser/templates/order.pt:36
+msgid "order_company"
+msgstr "Firma:"
+
+#. Default: "Country:"
+#: ./browser/templates/order.pt:52
+msgid "order_country"
+msgstr "Land:"
+
+#. Default: "Created:"
+#: ./browser/templates/order.pt:62
+msgid "order_created"
+msgstr "Erstellt:"
+
+#. Default: "Order Details"
+#: ./browser/templates/order.pt:9
+msgid "order_details"
+msgstr "Details Bestellung"
+
+#. Default: "Discount Net:"
+#: ./browser/templates/order.pt:99
+msgid "order_discount_net"
+msgstr "Rabatt Netto:"
+
+#. Default: "Discount VAT:"
+#: ./browser/templates/order.pt:102
+msgid "order_discount_vat"
+msgstr "Rabatt MwSt.:"
+
+#. Default: "Order Done"
+#: ./browser/views.py:28
+msgid "order_done"
+msgstr "Bestellung abgeschlossen"
+
+#. Default: "continue"
+#: ./browser/templates/order_done.pt:30
+msgid "order_done_continue"
+msgstr "weiter"
+
+#. Default: "Email:"
+#: ./browser/templates/order.pt:33
+msgid "order_email"
+msgstr "E-Mail:"
+
+#. Default: "Gender:"
+#: ./browser/templates/order.pt:26
+msgid "order_gender"
+msgstr "Anrede:"
+
+#. Default: "Address"
+#: ./mailtemplates/order_success.pt:75
+msgid "order_mail_address"
+msgstr "Adresse"
+
+#. Default: "Booked item"
+#: ./mailtemplates/booking_reserved_to_ordered.pt:21
+msgid "order_mail_booked_item"
+msgstr "Bestellter Artikel"
+
+#. Default: "One of your bookings was cancelled"
+#: ./mailtemplates/booking_cancelled.pt:9
+msgid "order_mail_booking_cancelled_heading"
+msgstr "Eine Ihrer bestellten Artikel wurde storniert"
+
+#. Default: "Your reserved item is now available and our order is being processed"
+#: ./mailtemplates/booking_reserved_to_ordered.pt:9
+msgid "order_mail_booking_reserved_to_ordered_heading"
+msgstr "Ihr reservierter Artikel ist verfügbar geworden und Ihre Bestellung wird nun bearbeitet"
+
+#. Default: "Cancelled item"
+#: ./mailtemplates/booking_cancelled.pt:21
+msgid "order_mail_cancelled_item"
+msgstr "Stornierter Artikel"
+
+#. Default: "Net"
+#: ./mailtemplates/order_success.pt:247
+msgid "order_mail_cart_net"
+msgstr "Netto"
+
+#. Default: "Total"
+#: ./mailtemplates/order_success.pt:311
+msgid "order_mail_cart_total"
+msgstr "Gesamt"
+
+#. Default: "VAT"
+#: ./mailtemplates/order_success.pt:252
+msgid "order_mail_cart_vat"
+msgstr "UST"
+
+#. Default: "City"
+#: ./mailtemplates/order_success.pt:85
+msgid "order_mail_city"
+msgstr "Stadt"
+
+#. Default: "Click here"
+#: ./mailtemplates/booking_cancelled.pt:26
+#: ./mailtemplates/booking_reserved_to_ordered.pt:26
+#: ./mailtemplates/order_success.pt:44
+msgid "order_mail_click_here"
+msgstr "Hier klicken"
+
+#. Default: "Comment"
+#: ./mailtemplates/order_success.pt:121
+msgid "order_mail_comment"
+msgstr "Kommentar"
+
+#. Default: "Company"
+#: ./mailtemplates/order_success.pt:64
+msgid "order_mail_company"
+msgstr "Firma"
+
+#. Default: "Country"
+#: ./mailtemplates/order_success.pt:89
+msgid "order_mail_country"
+msgstr "Land"
+
+#. Default: "Date"
+#: ./mailtemplates/booking_cancelled.pt:13
+#: ./mailtemplates/booking_reserved_to_ordered.pt:13
+#: ./mailtemplates/order_success.pt:30
+msgid "order_mail_date"
+msgstr "Datum"
+
+#. Default: "Delivery Address"
+#: ./mailtemplates/order_success.pt:93
+msgid "order_mail_delivery_address"
+msgstr "Lieferadresse"
+
+#. Default: "Discount Net"
+#: ./mailtemplates/order_success.pt:261
+msgid "order_mail_discount_net"
+msgstr "Rabatt Netto"
+
+#. Default: "Discount Total"
+#: ./mailtemplates/order_success.pt:275
+msgid "order_mail_discount_total"
+msgstr "Rabatt Gesamt"
+
+#. Default: "Discount VAT"
+#: ./mailtemplates/order_success.pt:268
+msgid "order_mail_discount_vat"
+msgstr "Rabatt UST"
+
+#. Default: "Email"
+#: ./mailtemplates/order_success.pt:72
+msgid "order_mail_email"
+msgstr "E-Mail"
+
+#. Default: "Name"
+#: ./mailtemplates/order_success.pt:59
+msgid "order_mail_fullname"
+msgstr "Name"
+
+#. Default: "Invoice"
+#: ./mailtemplates/order_success.pt:50
+msgid "order_mail_invoice"
+msgstr "Rechnung"
+
+#. Default: "Item Number"
+#: ./mailtemplates/order_success.pt:145
+msgid "order_mail_item_number"
+msgstr "Artikelnummer"
+
+#. Default: "Price"
+#: ./mailtemplates/order_success.pt:151
+msgid "order_mail_item_price"
+msgstr "Preis"
+
+#. Default: "Notifications"
+#: ./mailtemplates/order_success.pt:226
+msgid "order_mail_notifications"
+msgstr "Anmerkungen"
+
+#. Default: "Order details"
+#: ./mailtemplates/booking_cancelled.pt:25
+#: ./mailtemplates/booking_reserved_to_ordered.pt:25
+#: ./mailtemplates/order_success.pt:38
+msgid "order_mail_order_details"
+msgstr "Details zur Bestellung"
+
+#. Default: "Thank you for your order!"
+#: ./mailtemplates/order_success.pt:20
+msgid "order_mail_order_heading"
+msgstr "Besten Dank für Ihre Bestellung!"
+
+#. Default: "Ordered items"
+#: ./mailtemplates/order_success.pt:126
+msgid "order_mail_ordered_items"
+msgstr "Bestellte Artikel"
+
+#. Default: "Ordernumber"
+#: ./mailtemplates/booking_cancelled.pt:17
+#: ./mailtemplates/booking_reserved_to_ordered.pt:17
+#: ./mailtemplates/order_success.pt:34
+msgid "order_mail_ordernumber"
+msgstr "Bestellungsnummer"
+
+#. Default: "Payment"
+#: ./mailtemplates/order_success.pt:236
+msgid "order_mail_payment"
+msgstr "Bezahlung"
+
+#. Default: "Personal Data"
+#: ./mailtemplates/order_success.pt:57
+msgid "order_mail_personal_data"
+msgstr "Persönliche Angaben"
+
+#. Default: "Phone"
+#: ./mailtemplates/order_success.pt:68
+msgid "order_mail_phone"
+msgstr "Telefon"
+
+#. Default: "Remaining Stock"
+#: ./mailtemplates/stock_threshold_reached.pt:21
+msgid "order_mail_remaining_stock"
+msgstr "Verfügbarer Lagerbestand"
+
+#. Default: "Reservation details"
+#: ./mailtemplates/order_success.pt:41
+msgid "order_mail_reservation_details"
+msgstr "Details zur Reservierung"
+
+#. Default: "Thank you for your reservation!"
+#: ./mailtemplates/order_success.pt:25
+msgid "order_mail_reservation_heading"
+msgstr "Besten Dank für Ihre Reservierung!"
+
+#. Default: "Reserved items"
+#: ./mailtemplates/order_success.pt:176
+msgid "order_mail_reserved_items"
+msgstr "Reservierte Artikel"
+
+#. Default: "Shipping"
+#: ./mailtemplates/order_success.pt:286
+msgid "order_mail_shipping_label"
+msgstr "Versand"
+
+#. Default: "Shipping Net"
+#: ./mailtemplates/order_success.pt:291
+msgid "order_mail_shipping_net"
+msgstr "Versand Netto"
+
+#. Default: "Shipping Total"
+#: ./mailtemplates/order_success.pt:301
+msgid "order_mail_shipping_total"
+msgstr "Versand Gesamt"
+
+#. Default: "Shipping VAT"
+#: ./mailtemplates/order_success.pt:296
+msgid "order_mail_shipping_vat"
+msgstr "Versand UST"
+
+#. Default: "Products getting out of stock"
+#: ./mailtemplates/stock_threshold_reached.pt:9
+msgid "order_mail_stock_threshold_reached_heading"
+msgstr "Artikel erreichen niedrigen Lagerbestand"
+
+#. Default: "Street"
+#: ./mailtemplates/order_success.pt:77
+msgid "order_mail_street"
+msgstr "Straße"
+
+#. Default: "Summary"
+#: ./mailtemplates/order_success.pt:244
+msgid "order_mail_summary"
+msgstr "Zusammenfassung"
+
+#. Default: "ZIP"
+#: ./mailtemplates/order_success.pt:81
+msgid "order_mail_zip"
+msgstr "PLZ"
+
+#. Default: "Name:"
+#: ./browser/templates/order.pt:29
+msgid "order_name"
+msgstr "Name:"
+
+#. Default: "Net:"
+#: ./browser/templates/order.pt:93
+msgid "order_net"
+msgstr "Netto:"
+
+#. Default: "No Comment"
+#: ./browser/templates/order.pt:155
+msgid "order_no_comment"
+msgstr "Kein Kommentar"
+
+#. Default: "No delivery Address defined"
+#: ./browser/templates/order.pt:146
+msgid "order_no_delivery_address"
+msgstr "Keine Lieferadresse angegeben"
+
+#. Default: "Ordernumber:"
+#: ./browser/templates/order.pt:20
+msgid "order_number"
+msgstr "Bestellnummer:"
+
+#. Default: "Payment:"
+#: ./browser/templates/order.pt:65
+msgid "order_payment"
+msgstr "Zahlungsart:"
+
+#. Default: "Phone:"
+#: ./browser/templates/order.pt:39
+msgid "order_phone"
+msgstr "Telefon:"
+
+#. Default: "Salaried:"
+#: ./browser/templates/order.pt:68
+msgid "order_salaried"
+msgstr "Bezahlt:"
+
+#. Default: "Shipping Net:"
+#: ./browser/templates/order.pt:108
+msgid "order_shipping_costs_net"
+msgstr "Versand Netto:"
+
+#. Default: "Shipping VAT:"
+#: ./browser/templates/order.pt:111
+msgid "order_shipping_costs_vat"
+msgstr "Versand Umsatzsteuer:"
+
+#. Default: "Shipping:"
+#: ./browser/templates/order.pt:105
+msgid "order_shipping_title"
+msgstr "Versand:"
+
+#. Default: "State:"
+#: ./browser/templates/order.pt:74
+msgid "order_state"
+msgstr "Status:"
+
+#. Default: "Order State:"
+#: ./browser/templates/order.pt:61
+msgid "order_state_heading"
+msgstr "Status:"
+
+#. Default: "Street:"
+#: ./browser/templates/order.pt:45
+msgid "order_street"
+msgstr "Strasse:"
+
+#. Default: "Order Summary:"
+#: ./browser/templates/order.pt:79
+msgid "order_summary"
+msgstr "Zusammenfassung:"
+
+#. Default: "Net: ${value} ${currency}"
+#: ./mailnotify.py:462
+msgid "order_summary_cart_net"
+msgstr "Netto: ${value} ${currency}"
+
+#. Default: "Total: ${value} ${currency}"
+#: ./mailnotify.py:541
+msgid "order_summary_cart_total"
+msgstr "Gesamt: ${value} ${currency}"
+
+#. Default: "VAT: ${value} ${currency}"
+#: ./mailnotify.py:470
+msgid "order_summary_cart_vat"
+msgstr "MwSt.: ${value} ${currency}"
+
+#. Default: "Discount Net: ${value} ${currency}"
+#: ./mailnotify.py:480
+msgid "order_summary_discount_net"
+msgstr "Rabatt Netto: ${value} ${currency}"
+
+#. Default: "Discount Total: ${value} ${currency}"
+#: ./mailnotify.py:496
+msgid "order_summary_discount_total"
+msgstr "Rabatt Gesamt: ${value} ${currency}"
+
+#. Default: "Discount VAT: ${value} ${currency}"
+#: ./mailnotify.py:488
+msgid "order_summary_discount_vat"
+msgstr "Rabatt MwSt.: ${value} ${currency}"
+
+#. Default: "Summary:"
+#: ./mailnotify.py:549
+msgid "order_summary_label"
+msgstr "Zusammenfassung:"
+
+#. Default: "Shipping: ${label}"
+#: ./mailnotify.py:506
+msgid "order_summary_shipping_label"
+msgstr "Versand: ${label}"
+
+#. Default: "Shipping Net: ${value} ${currency}"
+#: ./mailnotify.py:517
+msgid "order_summary_shipping_net"
+msgstr "Versand Netto: ${value} ${currency}"
+
+#. Default: "Shipping Total: ${value} ${currency}"
+#: ./mailnotify.py:533
+msgid "order_summary_shipping_total"
+msgstr "Versand Gesamt: ${value} ${currency}"
+
+#. Default: "Shipping VAT: ${value} ${currency}"
+#: ./mailnotify.py:525
+msgid "order_summary_shipping_vat"
+msgstr "Versand MwSt.: ${value} ${currency}"
+
+#. Default: "Thanks for your Order."
+#: ./browser/views.py:45
+msgid "order_text"
+msgstr "Viele Dank für Ihre Bestellung."
+
+#. Default: "Total:"
+#: ./browser/templates/order.pt:114
+msgid "order_total"
+msgstr "Gesamt:"
+
+#. Default: "Order UID:"
+#: ./browser/templates/order.pt:16
+msgid "order_uid"
+msgstr "UID Bestellung:"
+
+#. Default: "VAT:"
+#: ./browser/templates/order.pt:96
+msgid "order_vat"
+msgstr "MwSt.:"
+
+#. Default: "ZIP/City:"
+#: ./browser/templates/order.pt:48
+msgid "order_zip_city"
+msgstr "PLZ/Ort"
+
+#. Default: "Ordernumber"
+#: ./browser/bookings.py:412
+msgid "ordernumber"
+msgstr "Bestellungsnummer"
+
+#. Default: "Orders"
+#: ./browser/templates/orders.pt:8
+msgid "orders"
+msgstr "Bestellungen"
+
+#. Default: "Personal Data:"
+#: ./browser/templates/order.pt:25
+msgid "personal_data"
+msgstr "Persönliche Daten:"
+
+#. Default: "Phone"
+#: ./browser/bookings.py:382
+msgid "phone"
+msgstr "Telefon"
+
+#. Default: "Price per unit"
+#: ./browser/bookings.py:448
+msgid "price_per_unit"
+msgstr "Preis pro Einheit"
+
+#. Default: "Process"
+#: ./vocabularies.py:30
+msgid "process"
+msgstr "starte Bearbeitung"
+
+#. Default: "Processing"
+#: ./vocabularies.py:18
+msgid "processing"
+msgstr "in Bearbeitung"
+
+#. Default: "Renew"
+#: ./vocabularies.py:29
+msgid "renew"
+msgstr "auf neu setzen"
+
+#. Default: "Reservation Done"
+#: ./browser/views.py:27
+msgid "reservation_done"
+msgstr "Reservierung eingelangt"
+
+#. Default: "Thanks for your Reservation."
+#: ./browser/views.py:43
+msgid "reservation_text"
+msgstr "Vielen Dank für Ihre Reservierung"
+
+#. Default: "Reserved"
+#: ./vocabularies.py:21
+msgid "reserved"
+msgstr "Reserviert"
+
+#. Default: "Salaried"
+#: ./browser/bookings.py:481
+#: ./browser/orders.py:317
+msgid "salaried"
+msgstr "Bezahlt"
+
+#. Default: "Select all visible orders"
+#: ./browser/orders.py:402
+msgid "select_all_orders"
+msgstr "Alle sichtbaren Bestellungen auswählen"
+
+# send
+msgid "send"
+msgstr "Senden"
+
+#. Default: "State"
+#: ./browser/bookings.py:487
+#: ./browser/orders.py:321
+msgid "state"
+msgstr "Status"
+
+#. Default: "Cannot show order information because no order uid was given."
+#: ./browser/order.py:69
+msgid "statusmessage_err_no_order_uid_given"
+msgstr "Information über Bestellung kann nich angezeigt werden. Keine Bestellungs-ID gefunden."
+
+# subject
+msgid "subject"
+msgstr "Betreff"
+
+# subject_required
+msgid "subject_required"
+msgstr "Betreff ist erforderlich"
+
+#. Default: "Sum"
+#: ./browser/bookings.py:460
+msgid "sum"
+msgstr "Summe"
+
+# template
+msgid "template"
+msgstr "Vorlage"
+
+# text
+msgid "text"
+msgstr "Benachrichtigung"
+
+# text_placeholders
+msgid "text_placeholders"
+msgstr "Text mit Platzhaltern"
+
+# text_required
+msgid "text_required"
+msgstr "Text für die Benachrichtigung erforderlich"
+
+#. Default: "Example Value"
+#: ./browser/templates/mailtemplates_view.pt:58
+msgid "th_mailtemplatelib_example"
+msgstr "Beispiel Wert"
+
+#. Default: "Placeholder"
+#: ./browser/templates/mailtemplates_view.pt:57
+msgid "th_mailtemplatelib_placeholder"
+msgstr "Platzhalter"
+
+#. Default: "Can Buy"
+#: ./localroles.py:18
+msgid "title_customer_role"
+msgstr "Kann kaufen"
+
+#. Default: "Can Sell"
+#: ./localroles.py:11
+msgid "title_vendor_role"
+msgstr "Kann verkaufen"
+
+# to_date
+#. Default: "to date"
+msgid "to_date"
+msgstr "Bis"
+
+# to_date_required
+msgid "to_date_required"
+msgstr "Bis-Datum ist erforderlich"
+
+#. Default: "Transaction ID:"
+#: ./browser/templates/order.pt:71
+msgid "transaction_id"
+msgstr "Transaktions ID:"
+
+#. Default: "Unknown"
+#: ./browser/invoice.py:54
+#: ./browser/order.py:378
+#: ./browser/views.py:37
+msgid "unknown"
+msgstr "unbekannt"
+
+#. Default: "Unknown Order"
+#: ./browser/views.py:30
+msgid "unknown_order"
+msgstr "Unbekannte Bestellung"
+
+#. Default: "Sorry, this order does not exist."
+#: ./browser/views.py:47
+msgid "unknown_order_text"
+msgstr "Entschuldigen Sie bitte, Diese Bestellung existiert nicht."
+
+# vendor_filter
+msgid "vendor_filter"
+msgstr "Anbieter"
+
+#. Default: "View Bookings"
+#: ./browser/contacts.py:56
+msgid "view_bookings"
+msgstr "Buchungen ansehen"
+
+#. Default: "View Invoice"
+#: ./browser/orders.py:451
+msgid "view_invoice"
+msgstr "Rechnung anzeigen"
+
+#. Default: "View Order"
+#: ./browser/orders.py:437
+msgid "view_order"
+msgstr "Bestellung ansehen"
+
+#. Default: "View Orders"
+#: ./browser/contacts.py:44
+msgid "view_orders"
+msgstr "Bestellungen ansehen"
+
+#. Default: "Yes"
+#: ./browser/order.py:385
+#: ./vocabularies.py:39
+msgid "yes"
+msgstr "Ja"
+
+#. Default: "Your Invoice"
+#: ./browser/templates/invoice.pt:10
+msgid "your_invoice"
+msgstr "Ihre Rechnung"
+
+#. Default: "Your Order number"
+#: ./browser/templates/order_done.pt:24
+msgid "your_order_order_id"
+msgstr "Ihre Bestellnummer"

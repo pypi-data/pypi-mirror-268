@@ -1,0 +1,37 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="bda.plone.orders">
+
+  <permission
+    id="bda.plone.orders.ViewOrderDirectly"
+    title="bda.plone.orders: View Order Directly" />
+
+  <permission
+    id="bda.plone.orders.ViewOwnOrders"
+    title="bda.plone.orders: View Own Orders" />
+
+  <permission
+    id="bda.plone.orders.ViewOrders"
+    title="bda.plone.orders: View Orders" />
+
+  <permission
+    id="bda.plone.orders.ModifyOrders"
+    title="bda.plone.orders: Modify Orders" />
+
+  <permission
+    id="bda.plone.orders.ExportOrders"
+    title="bda.plone.orders: Export Orders" />
+
+  <permission
+    id="bda.plone.orders.ManageTemplates"
+    title="bda.plone.orders: Manage Templates" />
+
+  <permission
+    id="bda.plone.orders.DelegateCustomerRole"
+    title="bda.plone.orders: Delegate Customer Role" />
+
+  <permission
+    id="bda.plone.orders.DelegateVendorRole"
+    title="bda.plone.orders: Delegate Vendor Role" />
+
+</configure>
