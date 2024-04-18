@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: gnosisai
+Version: 0.2
+Requires-Dist: jinja2
+Requires-Dist: click
+Requires-Dist: PyYAML
+
