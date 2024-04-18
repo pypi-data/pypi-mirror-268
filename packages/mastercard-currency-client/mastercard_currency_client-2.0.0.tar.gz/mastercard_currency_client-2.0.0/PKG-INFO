@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: mastercard-currency-client
+Version: 2.0.0
+Summary: MasterCard API Python Core SDK, fork of the mastercard-currency-conversion library.
+Author-email: Twisto Platform <platform@twisto.cz>
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: mastercard-api-client>=2.0.1
+Description-Content-Type: text/markdown
+
+# mastercard-currency-conversion
+
+MasterCard Currency Conversion library, fork of the [mastercard-currency-conversion](https://pypi.org/project/mastercard-currency-conversion/) library.
