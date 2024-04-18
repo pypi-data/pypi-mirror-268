@@ -1,0 +1,7 @@
+_proc
+bps_fbi_sp_ecoli
+conda
+config
+input
+nbs
+output
