@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: cellworld_game
+Version: 0.0.14
+Author: German Espinosa
+Author-email: germanespinosa@gmail.com
+Description-Content-Type: text/markdown
+Requires-Dist: cellworld
+
+#Add your readme in markdown format here
