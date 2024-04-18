@@ -1,0 +1,17 @@
+ntuee_mailer/AutoMailer.py,sha256=BTkEYdGNhyPENhHInnb2q6eRBFiOyd_KZm9QFhO64zs,14279
+ntuee_mailer/Letter.py,sha256=UOQruTl5Myc-iQWCuIlhGtdSnQD1T11oVjocKr7E5GU,14926
+ntuee_mailer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ntuee_mailer/__main__.py,sha256=HHl99Lhdp7oqPvKvMRnRpl4dNs2o8rYfbDDzcC23-IM,76
+ntuee_mailer/config-default.ini,sha256=qJ9VxH58BimTwmew44wjz9K0d9JbqKshqY6ultHMT-Y,109
+ntuee_mailer/globals.py,sha256=YaZ-Eralq58ElLOkGxfLv639KeyY59RilJgBFdWIYFc,434
+ntuee_mailer/main.py,sha256=vkRHLltPds0pm4PhgrQ3m0jf8HmXaKh7F4r6hcLtwdo,5706
+ntuee_mailer/template_letter/attachments/.placeholder,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ntuee_mailer/template_letter/config.yml,sha256=9Wv4Twjdw6gMphN7zB5_LkD-Aba024G3Xu8K9miJrx8,177
+ntuee_mailer/template_letter/content.html,sha256=Pw1deytXNCywR7fsBZgQuUK6tMPrOBgl_cYyl-EH4pg,214
+ntuee_mailer/template_letter/recipients.csv,sha256=mOIDMJ9u8i99Mzr-jRdZ2fqJVC1LYUZ6GKhXt5Rzs4A,80
+ntuee_mailer/utils.py,sha256=YfvS6jux_AspYhICtU8N14eIqgrMkHX5dmGSBX56JbI,4639
+ntuee_mailer-2.0.15.dist-info/LICENSE,sha256=p_czs2woMWbhpuy-6zZtlq1-pUx7P6I4G3n3TbZvMA8,1069
+ntuee_mailer-2.0.15.dist-info/METADATA,sha256=5B5O3IszvOT6sGjm2Oey-q7LPXpoFGGoKPaHF5nMtFI,4937
+ntuee_mailer-2.0.15.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ntuee_mailer-2.0.15.dist-info/entry_points.txt,sha256=w1OIcMe4uGI3svG6qGFLMO5Yl_dBH-5SXeG3-KxUmcY,54
+ntuee_mailer-2.0.15.dist-info/RECORD,,
