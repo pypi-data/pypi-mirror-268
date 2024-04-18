@@ -1,0 +1,7 @@
+setup.py
+maths_operations/__init__.py
+maths_operations/maths_operations.py
+maths_operations_package.egg-info/PKG-INFO
+maths_operations_package.egg-info/SOURCES.txt
+maths_operations_package.egg-info/dependency_links.txt
+maths_operations_package.egg-info/top_level.txt
