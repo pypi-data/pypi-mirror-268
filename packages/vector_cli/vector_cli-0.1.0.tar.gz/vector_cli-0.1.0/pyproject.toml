@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "vector_cli"
+version = "0.1.0"
+description = "cli tool to ask about your files"
+authors = ["Esa Nuurtamo <esa.nuurtamo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+click = "^8.0"
+langchain = "^0.1.16"
+faiss-cpu = "^1.8.0"
+tiktoken = "^0.6.0"
+pypdf = "^4.2.0"
+
+[tool.poetry.scripts]
+vector-cli = "vector_cli.main:cli"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
