@@ -1,0 +1,16 @@
+openai==1.6.1
+langchain==0.0.353
+langchain-community==0.0.7
+langchain-core==0.1.4
+argparse==1.4.0
+python-dotenv==1.0.0
+tqdm==4.66.1
+colorama==0.4.6
+prettytable==3.10.0
+pandas==2.2.2
+inquirer==3.2.4
+prompt-toolkit==3.0.43
+fastparquet==2024.2.0
+
+[dev]
+pytest==7.4.4
