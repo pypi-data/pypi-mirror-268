@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+package_config.yaml
+pyproject.toml
+./README.md
+src/omniblack.setup.egg-info/PKG-INFO
+src/omniblack.setup.egg-info/SOURCES.txt
+src/omniblack.setup.egg-info/dependency_links.txt
+src/omniblack.setup.egg-info/entry_points.txt
+src/omniblack.setup.egg-info/requires.txt
+src/omniblack.setup.egg-info/top_level.txt
+src/omniblack/setup/__init__.py

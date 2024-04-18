@@ -1,0 +1,43 @@
+[project]
+name = 'omniblack.setup'
+version = '0.1.0'
+description = "Library that helps package omniblack packages."
+readme='./README.md'
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+]
+
+dependencies=[
+    'setuptools ~= 68.2',
+    'ruamel.yaml',
+]
+
+[project.license]
+id = "Apache-2.0"
+file = "LICENSE.txt"
+
+[[project.authors]]
+name = "Terry Patterson"
+email = "Terryp@wegrok.net"
+[project.urls]
+Repository = "https://gitlab.com/terryp/terry.git"
+Homepage = "https://gitlab.com/terryp/terry/-/tree/next/tooling/setup"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+
+[tool.setuptools.package-data]
+"*" = ["*"]
+
+[project.entry-points.'egg_info.writers']
+'omniblack_package.json'='omniblack.setup:write_egg_files'
+
+
+[build-system]
+requires = [
+    "setuptools ~= 68.2",
+    "ruamel.yaml ~= 0.18",
+]
+build-backend = "setuptools.build_meta"
