@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: libs-zip
+Version: 0.0.4
+Download-URL: 
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: selenium
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Requires-Dist: pillow
+Requires-Dist: pyautogui
+Requires-Dist: pandas
+Requires-Dist: Matplotlib
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+
