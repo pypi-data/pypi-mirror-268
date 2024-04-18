@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: PythonProjectBootstrapperTest2
+Version: 0.1.16
+Summary: This is test output
+Author-email: Scientific Software Engineering Center at Georgia Tech <sse-center@gatech.edu>
+License: MIT
+Project-URL: Homepage, https://github.com/gt-sse-center/PythonProjectBootstrapperTest2
+Project-URL: Documentation, https://github.com/gt-sse-center/PythonProjectBootstrapperTest2
+Project-URL: Repository, https://github.com/gt-sse-center/PythonProjectBootstrapperTest2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: typer ~=0.9
+Provides-Extra: dev
+Requires-Dist: dbrownell-DevTools ; extra == 'dev'
+Provides-Extra: package
+Requires-Dist: build ==1.* ; extra == 'package'
+Requires-Dist: cx-Freeze ==6.* ; extra == 'package'
+Requires-Dist: twine ==4.* ; extra == 'package'
+
+# PythonProjectBootstrapperTest2
+
+
+
+This is test output
+
+### Overview
+
+TODO: Complete this section
+
+### How to use PythonProjectBootstrapperTest2
+
+TODO: Complete this section
+
+## Installation via Executable
+
+Download an executable for Linux, MacOS, or Windows to use the functionality provided by this repository without a dependency on [Python](https://www.python.org).
+
+1. Download the archive for the latest release [here](https://github.com/gt-sse-center/PythonProjectBootstrapperTest2/releases/latest); the files will begin with `exe.` and contain the name of your operating system.
+2. Decompress the archive
+
+## Installation via pip
+
+Install the PythonProjectBootstrapperTest2 package via [pip](https://pip.pypa.io/en/stable/) (Package Installer for Python) to use it with your python code.
+
+`pip install PythonProjectBootstrapperTest2`
+
+
+
+## License
+
+PythonProjectBootstrapperTest2 is licensed under the <a href="https://choosealicense.com/licenses/mit/" target="_blank">MIT</a> license.
