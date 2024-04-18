@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "setnext_ai_metering"
+version = "0.0.2"
+authors = [
+
+  { name="Nithyanantha Babu", email="nithyanantha@setnext.ai" },
+]
+description = "Metering Initial Package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "anthropic-bedrock",
+"langchain_community",
+"langchain==0.1.7",
+"langchain_core==0.1.23",
+"anthropic",
+    "pytz",
+    "boto3"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/setnext_ai"]
+
+
+[project.urls]
+Homepage = "https://setnext.io"
+Issues = "https://setnext.io/issues"

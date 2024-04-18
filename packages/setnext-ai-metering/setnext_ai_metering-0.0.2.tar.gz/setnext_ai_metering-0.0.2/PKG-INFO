@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: setnext_ai_metering
+Version: 0.0.2
+Summary: Metering Initial Package
+Project-URL: Homepage, https://setnext.io
+Project-URL: Issues, https://setnext.io/issues
+Author-email: Nithyanantha Babu <nithyanantha@setnext.ai>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: anthropic
+Requires-Dist: anthropic-bedrock
+Requires-Dist: boto3
+Requires-Dist: langchain-community
+Requires-Dist: langchain-core==0.1.23
+Requires-Dist: langchain==0.1.7
+Requires-Dist: pytz
+Description-Content-Type: text/markdown
+
+# SetNext Gen AI Metering API 
