@@ -1,0 +1,19 @@
+[
+    {
+        "species": "Mus musculus",
+        "brain_region": "VISli",
+        "nb_morphologies": 2,
+        "seed": 0
+    },
+    {
+        "species": "Mus musculus",
+        "brain_region": "VISli",
+        "seed": 0
+    },
+    {
+        "species": "Mus musculus",
+        "brain_region": "VISli",
+        "nb_morphologies": 9999,
+        "seed": 0
+    }
+]
