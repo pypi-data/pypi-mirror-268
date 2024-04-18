@@ -1,0 +1,3 @@
+[console_scripts]
+fmgsync=fortimanager_template_sync.__main__:app
+
