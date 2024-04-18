@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: ninjabook
+Version: 0.1.5
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Keywords: orderbook,trading,crypto,hft
+Home-Page: https://github.com/ninja-quant/ninjabook
+License: MIT
+Requires-Python: >=3.8
+Project-URL: Source Code, https://github.com/ninja-quant/ninjabook
