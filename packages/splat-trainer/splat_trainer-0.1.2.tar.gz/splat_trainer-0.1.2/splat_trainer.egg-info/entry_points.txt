@@ -1,0 +1,2 @@
+[console_scripts]
+splat-trainer = splat_trainer.scripts.train_scan:main

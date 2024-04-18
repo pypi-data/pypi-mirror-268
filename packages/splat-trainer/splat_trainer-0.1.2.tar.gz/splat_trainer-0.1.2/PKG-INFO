@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: splat-trainer
+Version: 0.1.2
+Summary: Gaussian Splatting scene reconstruction with taichi-splatting
+Maintainer-email: Oliver Batchelor <oliver.batchelor@canterbury.ac.nz>
+Project-URL: Homepage, https://github.com/uc-vision/splat-trainer
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: taichi-splatting>=0.12.0
+Requires-Dist: tqdm
+Requires-Dist: plyfile
+Requires-Dist: pypcd4
+Requires-Dist: hydra-core
+Requires-Dist: omegaconf
+Requires-Dist: roma>=1.4
+Requires-Dist: tabulate
+Requires-Dist: torchmetrics
+Requires-Dist: opencv-python
+Requires-Dist: pycolmap
+Requires-Dist: scipy
+Requires-Dist: tensorboard
+Requires-Dist: wandb
