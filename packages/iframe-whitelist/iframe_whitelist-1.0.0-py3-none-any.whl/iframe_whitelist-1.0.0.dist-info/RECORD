@@ -1,0 +1,16 @@
+iframe_whitelist/__init__.py,sha256=iH0of-O7g48b5z_i5F5N1Mk2KZr9BPq2-ljVh1TPLIU,590
+iframe_whitelist/_version.py,sha256=Y5SHlIXuXAzscWObrzxD1FAWP3sbr0Gm3wiDKpFPtvs,171
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/package.json,sha256=fRvCAFZQkNeU2N4lv8XtdwjjXG9BtPauGwiFGWgDvcA,5873
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/347.4d6a87f276e6b41d1a51.js,sha256=TWqH8nbmtB0aUdWk4ly2geT2nrOqdx1_TyLJDDvAjZo,4031
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/445.a5c50857051297ec726d.js,sha256=pcUIVwUSl-xybQ__umDYVBzCj4x65KzEmFOWLIWZi60,149
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/7.2cf0ffd115525f39b856.js,sha256=LPD_0RVSXzm4VoilI_zH66LCPSU0VEW8E5YuXG1KFCM,27692
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/728.1bb3b2d658d7b7ec3a03.js,sha256=bKb3yfr8I_J1Ogf3IScWE8sLltkapika17floeLUyII,183760
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/728.1bb3b2d658d7b7ec3a03.js.LICENSE.txt,sha256=1J-1y3fy9iL3n7_uSe7E09q1FXCtEZ0FQkKs0FNbmNc,160
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/remoteEntry.f0fa2914f5c1db36b0a9.js,sha256=8PopFPXB2zawqY_fUQkwFL5jht0i5zz04T6iG_gcTqU,7074
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/style.js,sha256=4HnjrauJvVTZn3ceCDK9ubiP5l2FoHcap2LN2Ydj3mA,159
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/static/third-party-licenses.json,sha256=n6FZfjr7ALQGI9Hwginjo3NRMxHgGHE129vIWKC8rSA,21404
+iframe_whitelist-1.0.0.data/data/share/jupyter/labextensions/iframe-whitelist/install.json,sha256=UCDtgBh29srzicDFe9TlbrMS83fr6m0czawfuZ-Kjjk,193
+iframe_whitelist-1.0.0.dist-info/METADATA,sha256=ABMQoOVfuXcVnuUeyCK2IZaOt7C8lAEv9Xdd0Mep504,5532
+iframe_whitelist-1.0.0.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+iframe_whitelist-1.0.0.dist-info/licenses/LICENSE,sha256=NUxkEhKIWzivu1akFsR09BIm6kdz6wQ1b5i6sDO9UpQ,1531
+iframe_whitelist-1.0.0.dist-info/RECORD,,
