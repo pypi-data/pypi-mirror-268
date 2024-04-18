@@ -1,0 +1,13 @@
+littlefs_python-0.10.3.dist-info/LICENSE,sha256=w9THsH9Q5JPNNctrjI8bbhsTPRz-BRHJkzmYWCGO6UY,1518
+littlefs_python-0.10.3.dist-info/METADATA,sha256=fNSjE1-_4OJ2OLaeCmHehz4p2Sw04likDjz60fa42iw,5777
+littlefs_python-0.10.3.dist-info/RECORD,,
+littlefs_python-0.10.3.dist-info/top_level.txt,sha256=ODpjzoOixM9dzTvlv3Fgd78PG_icni-AmzUB6VfdDwU,9
+littlefs_python-0.10.3.dist-info/entry_points.txt,sha256=mmVZvtJwx-4y5NGjeCkO2BzL5rDEGr10zEqshIDp2Qw,59
+littlefs_python-0.10.3.dist-info/WHEEL,sha256=wu3hndhZalUVU2IWYgNxmk7u4GcGZW0HG8iETlT6cV4,113
+littlefs/errors.py,sha256=r9KV3uoFEL5bHYMKzZNk3TppPzFn5y1mQ0bDPeQowgI,1270
+littlefs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+littlefs/lfs.pyi,sha256=605z1_DUYupJ9N-3rZl9kAC7AFmvJ4k-zWmRsvwApbk,3577
+littlefs/lfs.cpython-310-x86_64-linux-gnu.so,sha256=rNWunCutKrhhUqDy_r5UmB4UsEFzqCsnyII7hLKX4GQ,3360488
+littlefs/__init__.py,sha256=oHpsVAuQs1iy0AFOpgVZrYtfQYG_tHFdlZYkI75yWGg,14860
+littlefs/__main__.py,sha256=5ibavjEDH9_SQXAWM6XoRS2NBTf266VJ7ynTQp5D66M,6767
+littlefs/context.py,sha256=VRtEOaHncbwBtXkUz8KwFmw0P8bGfpvowTWc0BrovDQ,5375
