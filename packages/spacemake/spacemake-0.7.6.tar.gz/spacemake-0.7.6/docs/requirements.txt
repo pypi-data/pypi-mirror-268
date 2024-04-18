@@ -1,0 +1,8 @@
+sphinx==5.0.2
+sphinxcontrib-napoleon
+docutils>=0.14
+sphinx_rtd_theme
+sphinx-argparse
+nbsphinx>=0.4
+importlib-metadata
+Jinja2<3.1
