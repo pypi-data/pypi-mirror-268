@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: coapts
+Version: 0.0.17
+Summary: Python aiocoap dialect: CoAP Type Shuffling 
+Author-email: Erik Gonzalez <erikglez_ipn@hotmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/ErikGlz/coapts
+Keywords: coap,asyncio,iot
+Classifier: Framework :: AsyncIO
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Networking
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# coapts
