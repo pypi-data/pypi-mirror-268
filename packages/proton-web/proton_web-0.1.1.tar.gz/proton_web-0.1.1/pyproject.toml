@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "proton_web"
+dynamic = [
+ "version",
+]
+authors = [
+  { name="Xanderplayz16", email="xandermckay@proton.me" },
+]
+description = "A high-level, easy to use and modern web-application framework."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Topic :: Internet :: WWW/HTTP",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["pywebview", "typer", "nuitka"]
+keywords = ["webview", "ui", "pywebview", "eel", "html", "css", "js", "javascript"]
+[project.urls]
+Homepage = "https://github.com/Xanderplayz16/proton"
+Issues = "https://github.com/Xanderplayz16/proton/issues"
+
+[tool.hatch.version]
+path = "proton/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["proton"]

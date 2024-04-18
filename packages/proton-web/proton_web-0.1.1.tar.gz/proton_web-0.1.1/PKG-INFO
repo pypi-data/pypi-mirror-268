@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: proton_web
+Version: 0.1.1
+Summary: A high-level, easy to use and modern web-application framework.
+Project-URL: Homepage, https://github.com/Xanderplayz16/proton
+Project-URL: Issues, https://github.com/Xanderplayz16/proton/issues
+Author-email: Xanderplayz16 <xandermckay@proton.me>
+License-File: LICENSE
+Keywords: css,eel,html,javascript,js,pywebview,ui,webview
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.11
+Requires-Dist: nuitka
+Requires-Dist: pywebview
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# Proton

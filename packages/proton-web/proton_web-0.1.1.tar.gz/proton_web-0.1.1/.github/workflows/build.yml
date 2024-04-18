@@ -1,0 +1,48 @@
+# This workflow will build Proton on Windows and Linux, with python 3.10, 3.11 and 3.12.
+
+
+name: Build (and also pretty much a build tester!!!)
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  
+  build:
+    strategy:
+      matrix:
+        version: [3.9, '3.10', 3.11, 3.12]
+        os: [windows-2022, windows-2019, macos-14, macos-13, ubuntu-22.04, ubuntu-20.04]
+        exclude:
+          - os: macos-14
+            version: 3.9
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install hatch
+    - name: Build
+      run: |
+        hatch build
+    - uses: actions/upload-artifact@v4
+      name: "Upload artifacts"
+      with:
+        name: artifacts-${{ matrix.os }}-${{ matrix.version }}
+        path: dist
+        
+
+    
