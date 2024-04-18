@@ -1,0 +1,124 @@
+import unittest
+#from dotenv import load_dotenv
+from datetime import datetime
+from msfabricpysdkcore import FabricClientCore, FabricClientAdmin
+
+
+class TestFabricClientCore(unittest.TestCase):
+
+    def __init__(self, *args, **kwargs):
+        super(TestFabricClientCore, self).__init__(*args, **kwargs)
+
+                  
+    def test_domains(self):
+        fcc = FabricClientCore()
+        fca = FabricClientAdmin()
+
+        ws = fcc.get_workspace_by_name("sdktestdomains")
+        cap = fcc.get_capacity(capacity_id=ws.capacity_id)
+        principal = {'id': 'b4f4e299-e6e1-4667-886c-57e4a8dde1c2',  'type': 'User'}
+
+        # Delete if exists
+        try:
+            domain = fca.get_domain_by_name("sdktestdomains")
+            domain.delete()
+        except:
+            pass
+        try:
+            domain = fca.get_domain_by_name("sdktestdomains2")
+            domain.delete()
+        except:
+            pass
+
+        # Create domain
+        domain_name = "sdktestdomains"
+        domain = fca.create_domain(display_name=domain_name)
+        self.assertIsNotNone(domain.id)
+        self.assertEqual(domain.display_name, domain_name)
+
+        # Get domain by name
+        domain_clone = fca.get_domain_by_name(domain_name)
+        self.assertIsNotNone(domain_clone.id)
+        self.assertEqual(domain_clone.display_name, domain_name)
+
+        # Get domain by id
+        domain_clone = fca.get_domain_by_id(domain.id)
+        self.assertIsNotNone(domain_clone.id)
+        self.assertEqual(domain_clone.display_name, domain_name)
+
+        # List domains
+        domains = fca.list_domains()
+        self.assertGreater(len(domains), 0)
+        domains_ids = [d.id for d in domains]
+        self.assertIn(domain.id, domains_ids)
+
+        # Update domain
+        domain_new_name = "sdktestdomains2"
+        domain_clone = fca.update_domain(domain.id, display_name=domain_new_name)
+        self.assertEqual(domain_clone.display_name, domain_new_name)
+
+        # Assign domain workspaces by Ids
+        status_code = fca.assign_domain_workspaces_by_ids(domain.id, [ws.id])
+        self.assertEqual(status_code, 200)
+
+        # List domain workspaces
+        workspaces = fca.list_domain_workspaces(domain.id, workspace_objects=True)
+        self.assertGreater(len(workspaces), 0)
+        workspaces_ids = [w.id for w in workspaces]
+        self.assertIn(ws.id, workspaces_ids)
+
+        # Unassign domain workspaces by ids
+        status_code = fca.unassign_domain_workspaces_by_ids(domain.id, [ws.id])
+        self.assertEqual(status_code, 200)
+
+        workspaces = fca.list_domain_workspaces(domain.id)
+        self.assertEqual(len(workspaces), 0)
+
+        # Assign domain workspaces by capacities
+        status_code = fca.assign_domain_workspaces_by_capacities(domain.id, [cap.id])
+        self.assertEqual(status_code, 202)
+
+        workspaces = fca.list_domain_workspaces(domain.id, workspace_objects=True)
+        self.assertGreater(len(workspaces), 0)
+        workspaces_ids = [w.id for w in workspaces]
+        self.assertIn(ws.id, workspaces_ids)
+
+        # Unassign all domain workspaces
+        status_code = fca.unassign_all_domain_workspaces(domain.id)
+        self.assertEqual(status_code, 200)
+
+        workspaces = fca.list_domain_workspaces(domain.id)
+        self.assertEqual(len(workspaces), 0)
+
+        # Assign domain workspaces by principals
+        status_code = fca.assign_domains_workspaces_by_principals(domain.id, [principal], wait_for_completion=True)
+
+        self.assertEqual(status_code, 202)
+
+        workspaces = fca.list_domain_workspaces(domain.id, workspace_objects=True)
+        self.assertGreater(len(workspaces), 0)
+        workspaces_ids = [w.id for w in workspaces]
+        self.assertIn(ws.id, workspaces_ids)
+
+        # Role assignments bulk assign
+        
+        principal_2 = {'id': '6edbc444-16cd-43f4-ae48-cbe734b89657', 'type': 'User'}
+        principals = [principal, principal_2]
+
+        status_code = fca.role_assignments_bulk_assign(domain.id, "Contributors", principals)
+
+        self.assertEqual(status_code, 200)
+
+        # Role assignments bulk unassign
+        status_code = fca.role_assignments_bulk_unassign(domain.id, "Contributors", [principal_2])
+
+        self.assertEqual(status_code, 200)
+
+        # Delete domain
+        status_code = fca.delete_domain(domain.id)
+
+        self.assertEqual(status_code, 200)
+
+        domains = fca.list_domains()
+        domains_ids = [d.id for d in domains]
+        self.assertNotIn(domain.id, domains_ids)
