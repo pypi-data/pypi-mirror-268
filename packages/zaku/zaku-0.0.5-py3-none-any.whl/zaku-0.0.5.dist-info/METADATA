@@ -1,0 +1,144 @@
+Metadata-Version: 2.1
+Name: zaku
+Version: 0.0.5
+Summary: Zaku Task Queue is for distributed ML-workloads.
+Home-page: https://github.com/geyang/zaku
+Author: Ge Yang<ge.ike.yang@gmail.com>
+Author-email: ge.ike.yang@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: params-proto >=2.11.16
+Requires-Dist: pillow
+Requires-Dist: msgpack
+Requires-Dist: numpy >=1.21
+Requires-Dist: websockets
+Provides-Extra: all
+Requires-Dist: aiohttp ; extra == 'all'
+Requires-Dist: aiohttp-cors ; extra == 'all'
+Requires-Dist: killport ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: restructuredtext-lint ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: aiohttp ; extra == 'dev'
+Requires-Dist: aiohttp-cors ; extra == 'dev'
+Requires-Dist: killport ; extra == 'dev'
+Requires-Dist: black ==22.3.0 ; extra == 'dev'
+Requires-Dist: pylint ==2.13.4 ; extra == 'dev'
+Requires-Dist: pytest ==7.1.2 ; extra == 'dev'
+Requires-Dist: sphinx ==7.1.2 ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; extra == 'dev'
+Requires-Dist: pytest-dependency ; extra == 'dev'
+Requires-Dist: furo ; extra == 'dev'
+Requires-Dist: sphinx-copybutton ; extra == 'dev'
+Requires-Dist: myst-parser ; extra == 'dev'
+Requires-Dist: trimesh ; extra == 'dev'
+Requires-Dist: tqdm ; extra == 'dev'
+Provides-Extra: example
+Requires-Dist: aiohttp ; extra == 'example'
+Requires-Dist: aiohttp-cors ; extra == 'example'
+Requires-Dist: killport ; extra == 'example'
+Requires-Dist: open3d <0.16.0,>=0.15.0 ; extra == 'example'
+Requires-Dist: trimesh ; extra == 'example'
+Requires-Dist: cmx ; extra == 'example'
+Requires-Dist: functional-notations ; extra == 'example'
+Requires-Dist: ml-logger ; extra == 'example'
+Requires-Dist: opencv-python ; extra == 'example'
+
+# Zaku, a fast Task Queue for ML Workloads
+
+To get a quick overview of what you can do with `zaku`, check out the following:
+
+- take a look at the basic tutorial or the tutorial for robotics:
+  - [Zaku Basics](tutorials/basics)
+- or try to take a look at the example gallery [here](examples/01_simple_queue)
+
+Install zaku --- the latest version is `{VERSION}` on [pypi](https://pypi.org/project/zaku/{VERSION}/).
+
+```python
+pip install -U 'zaku[all]=={VERSION}'
+```
+
+**Setting Up Zaku Server**
+
+The server script is installed as the command `zaku`. First, take a look at its options by running
+
+```shell
+zaku -h
+```
+
+This should show you the documents on all of the arguments. Now, to setup a zaku task queue server, run the following: This enables access from other than localhost.
+
+````shell
+zaku --host 0.0.0.0 --port 9000
+````
+
+
+
+**Adding Jobs**:
+
+Supposed you have a TaskServer running at `localhost:9000`.
+
+```python
+from zaku import TaskQ
+
+queue = TaskQ(name="my-test-queue", uri="http://localhost:9000")
+
+for i in range(100):
+    queue.add_job({"job_id": i, "seed": i * 100})
+```
+
+**Retrieving Jobs**:
+
+```python
+from zaku import TaskQ
+
+queue = TaskQ(name="my-test-queue", uri="http://localhost:9000")
+
+job_id, job = queue.take()
+```
+
+Now, after you have finished the job, you need to mark the job for completion. The way we do so is by calling
+
+```python
+queue.mark_done(job_id)
+```
+
+Sometimes when you worker responsible for completeing the job encounters a failure, you need to also put the job back into the queue so that other workers can retry. You can do so by calling
+
+```python
+queue.mark_reset()
+```
+
+Now, we offer a context manager `TaskQ.pop`, which automatically catches exceptions and resets the job (or marks it complete).
+
+```python
+from zaku import TaskQ
+
+queue = TaskQ(name="my-test-queue", uri="http://localhost:9000")
+
+with queue.pop() as job:
+  if job is None:
+    print("No job available")
+  
+  print("Retrieved job:", job)
+```
+
+## Developing Zaku (Optional)
+
+If you want to develop zaku, you can install it in editable mode plus dependencies
+relevant for building the documentations:
+
+```shell
+cd zaku
+pip install -e '.[dev]'
+```
+
+To build the documentations, run
+
+```shell
+make docs
+```

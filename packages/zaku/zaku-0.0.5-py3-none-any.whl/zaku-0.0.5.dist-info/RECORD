@@ -1,0 +1,12 @@
+zaku/__init__.py,sha256=dVBFG2RyfsJ9Yf3OgSN49X6Tpk7RgfdFHyFYgs1vvjs,59
+zaku/base.py,sha256=7jgQ1Rcz6eDLNjkryDXLC9QrDWcct9fdixwHPjXd59g,3780
+zaku/client.py,sha256=u0GhknUONMzwGjY7mcS3A8HCrDZAxWx-vCdn0cheOo8,5045
+zaku/interfaces.py,sha256=Ak6jU-O7GMXxHW9ZF_5WiMyzNDj9xaIy5wHUy9pqAAI,8279
+zaku/job_queue.py,sha256=rClaiGYU6ZDSi-ehPtKbZfJcYxZaOr3DHMPfRq9jl4o,1678
+zaku/server.py,sha256=EiCWvox4LGtdNVcAkTcSlSCbOj7yQ6YRq9iPmppyTok,5879
+zaku-0.0.5.dist-info/LICENSE,sha256=ViVJUWot4p3kmGwzBBRu6vqoBFQuLFKyGIR3jzh4X_A,1064
+zaku-0.0.5.dist-info/METADATA,sha256=3YM2xv7zKiUvThsw_JUgGraeQOOJbeeRasHI82VDtzI,4102
+zaku-0.0.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+zaku-0.0.5.dist-info/entry_points.txt,sha256=OQmjyBNrqRKNAK7zutZ83SXuKvH6EURf28dG8-nPtdE,49
+zaku-0.0.5.dist-info/top_level.txt,sha256=NOH9JyYZg-VCpceLmApF5Rx3njTGe8RjuRaQsTc5k4o,5
+zaku-0.0.5.dist-info/RECORD,,
