@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mapieng
+Version: 0.1.0
+Summary: mapi engineers
+Home-page: https://github.com/MIDASIT-Co-Ltd/engineers-api-python
+Author: bschoi
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: mdutils
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+# engineers-api-python
+
+# test

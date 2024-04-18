@@ -1,0 +1,3 @@
+include base/*
+include base/steel/*
+include project/baseplate_KDS41_30_2022/*
