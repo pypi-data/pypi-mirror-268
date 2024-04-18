@@ -1,0 +1,10 @@
+desbordante.cpython-311-x86_64-linux-gnu.so,sha256=n2KM9w3GT_IbtgYM5qRHkjyVDwuqNzJe69oOwumjwDM,6956241
+desbordante.libs/libboost_container-ee9fbd85.so.1.78.0,sha256=fIFNAv9Y8CVYwcBg4gljl8f0qEj9IiY_F0KMwqcLwJ8,119273
+desbordante.libs/libboost_regex-63e44fd8.so.1.78.0,sha256=Yai1ArV1IZuul5EdIS-CTkQEvtxpMmSjO0kRsz-EQbg,532537
+desbordante.libs/libboost_graph-368eaee8.so.1.78.0,sha256=UTNnXvkBGu2sgpcmnJyaOWmirj3SLcxBOMTkknDJ_b0,520681
+desbordante.libs/libboost_thread-4f893b6f.so.1.78.0,sha256=OuHJoMgu9cVJKTkP20yiVO8UYK-Y-amSGBqIYOH-NFM,290553
+desbordante-2.0.0.dist-info/METADATA,sha256=6ge2yT_fAHXt4_gi15rjuf9S4WdVivPJKOycfu3rXyE,14645
+desbordante-2.0.0.dist-info/RECORD,,
+desbordante-2.0.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+desbordante-2.0.0.dist-info/WHEEL,sha256=3hbAq9CJpu-eSiWHBtoMoEzcmr6vqv-pQ8RZzI0z93s,155
+desbordante-2.0.0.dist-info/licenses/COPYING,sha256=z5W1Yecb88-4JwzpQReDsrYgw53lgQ7JkbOh8D3xN3Q,34504
