@@ -1,0 +1,6 @@
+setuptools
+Products.CMFPlone
+requests
+
+[test]
+plone.app.testing

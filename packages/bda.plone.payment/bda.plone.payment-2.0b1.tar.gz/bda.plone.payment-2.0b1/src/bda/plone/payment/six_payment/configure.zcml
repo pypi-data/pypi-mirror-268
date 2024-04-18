@@ -1,0 +1,32 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <adapter name="six_payment" factory=".SixPayment" />
+
+  <browser:page
+    for="*"
+    name="saferpay_initialize"
+    class=".SaferPayInitialize"
+    permission="zope2.View" />
+
+  <browser:page
+    for="*"
+    name="saferpay_assert"
+    class=".SaferPayAssert"
+    permission="zope2.View" />
+
+  <browser:page
+    for="*"
+    name="saferpay_success"
+    template="success.pt"
+    class=".SaferPaySuccess"
+    permission="zope2.View" />
+
+  <browser:page
+    for="*"
+    name="saferpay_failed"
+    template="failed.pt"
+    class=".SaferPayFailed"
+    permission="zope2.View" />
+
+</configure>

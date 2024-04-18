@@ -1,0 +1,24 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <include file="profiles.zcml" />
+  <include file="upgrades.zcml" />
+
+  <include package=".cash" />
+  <include package=".cash_in_advance" />
+  <include package=".cash_on_delivery" />
+  <include package=".debit_order" />
+  <include package=".invoice" />
+  <include package=".six_payment" />
+
+  <!-- resources -->
+  <browser:resourceDirectory
+    name="bda.plone.payment"
+    directory="resources" />
+
+</configure>

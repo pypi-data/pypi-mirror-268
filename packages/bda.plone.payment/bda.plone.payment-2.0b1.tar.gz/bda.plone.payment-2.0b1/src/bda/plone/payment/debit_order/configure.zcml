@@ -1,0 +1,19 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <adapter name="debit_order" factory=".DebitOrder" />
+
+  <browser:page
+    for="*"
+    name="debit_order"
+    class=".DoDebitOrder"
+    permission="zope2.View" />
+
+  <browser:page
+    for="*"
+    name="debit_ordered"
+    template="debit_order.pt"
+    class=".DebitOrderFinished"
+    permission="zope2.View" />
+
+</configure>

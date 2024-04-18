@@ -1,0 +1,25 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="bda.plone.payment">
+
+  <include package="Products.GenericSetup" file="meta.zcml" />
+
+  <genericsetup:registerProfile
+    name="default"
+    title="bda.plone.payment"
+    directory="profiles/default"
+    description="bda.plone.payment"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="bda.plone.payment (uninstall profile)"
+    directory="profiles/uninstall"
+    description="bda.plone.payment"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <!-- Hide profiles/products from Quick Installer -->
+  <utility factory=".setuphandlers.HiddenProfiles" name="bda.plone.payment" />
+
+</configure>
