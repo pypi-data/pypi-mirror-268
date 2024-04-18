@@ -1,0 +1,16 @@
+AITracker/AITrackerModel.py,sha256=i04uWF1zbOIk_3sxtZCM55RDbEtI31YrvMBHLgiKaZo,6884
+AITracker/AITrackerNetwork.py,sha256=CJwN4bpYVi9pBUOlSfRlCE8bishMqnhZkWLBCk8V8V8,2395
+AITracker/DataValidation.py,sha256=1P4JoREMgkb8cN3lVdVL2nWp1LLNt5i4WRFD-ZtbqKI,3823
+AITracker/UpdateH5.py,sha256=ZaALqYVAbxal7fSO5OMwJIxc1mfWLfc_Vq1ZAj8vdvE,13617
+AITracker/__init__.py,sha256=1j8hkNzkuiMv7JKe2h3MzIlkerIVTIq4KDExMOEA_gs,51
+AITracker/data/final_numpy_data.h5,sha256=stD1xS2tz6rFhqChwTDhM1Q2eRv8hzgVmaRWAiH9mcE,284934278
+AITracker/image_classifier6.model/fingerprint.pb,sha256=OHJokrMJk7nPBxmo920VC0moVFqld_TpBB3wMarojaM,57
+AITracker/image_classifier6.model/keras_metadata.pb,sha256=oifdFLTivO-H4JM-tL5NapX7UmOxR7-jJiZ0z4TW7MQ,19679
+AITracker/image_classifier6.model/saved_model.pb,sha256=KKZ_p4hicW1f4Gdss-BPpMoHTXQ8oRscC89f7DlwYfo,163329
+AITracker/image_classifier6.model/variables/variables.data-00000-of-00001,sha256=Z8z_XrwrS9icNWDsZNk7yCjIOPr3jBC09O1mI6hkTWw,35289916
+AITracker/image_classifier6.model/variables/variables.index,sha256=NWmu0mCEDdvgsK4KpkUu9fOITmsQ5n3ujXztgNDBndY,2305
+AITracker-0.9.91.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+AITracker-0.9.91.dist-info/METADATA,sha256=El9mB6135_K8_Ti5xx7z4X1t6XAmJE1xSLwbPhZyI_A,2891
+AITracker-0.9.91.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+AITracker-0.9.91.dist-info/top_level.txt,sha256=Yn-b2DXp0Tb6jjRtnU5s5bB6Dtw706paumeCOad8PFc,10
+AITracker-0.9.91.dist-info/RECORD,,
