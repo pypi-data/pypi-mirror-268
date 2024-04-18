@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: FastSnake
+Version: 1.1.0
+Summary: A helper for contests in Python 3
+Project-URL: Homepage, https://github.com/JeanExtreme002/FastSnake
+Author-email: Jean Loui Bernard Silva de Jesus <jeanextreme002@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: algorithms,codeforces,contest
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Provides-Extra: tests
+Requires-Dist: pytest; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# FastSnake
+A helper for contests in Python language
