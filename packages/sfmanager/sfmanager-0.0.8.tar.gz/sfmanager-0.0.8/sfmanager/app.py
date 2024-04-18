@@ -1,0 +1,62 @@
+class FileManager:
+	filename = None
+	level = None
+
+	def __init__(self, filename, level):
+		self.filename = str(filename)
+		self.level = int(level)
+
+	def readline(self):
+		if self.level >= 1:
+			try:
+				with open(f"{self.filename}", "r") as f:
+					raw = f.readline()
+				return raw
+			except FileNotFoundError:
+				print("Something went wrong...")
+		else:
+			print(f"Low access level! {self.level}, but need 1")
+
+	def readlines(self):
+		if self.level >= 1:
+			try:
+				with open(f"{self.filename}", "r") as f:
+					raw = f.readlines()
+				return raw
+			except FileNotFoundError:
+				print("Something went wrong...")
+		else:
+			print(f"Low access level! {self.level}, but need 1")
+	def set(self, text):
+		if self.level >= 3:
+			try:
+				with open(f"{self.filename}", "w") as f:
+					f.write(text)
+					return 1
+			except FileNotFoundError:
+				print("Something went wrong...")
+		else:
+			print(f"Low access level! {self.level}, but need 3")
+	def add(self, text):
+		if self.level >= 2:
+			try:
+				with open(f"{self.filename}", "r") as f:
+					old = f.read()
+				with open(f"{self.filename}", "w") as f:
+					f.write(old + " " + text)
+					return 1
+			except FileNotFoundError:
+				print("Something went wrong...")
+		else:
+			print(f"Low access level! {self.level}, but need 2")
+	def replace(self, target, text):
+		if self.level >= 3:
+			try:
+				with open(f"{self.filename}", "r") as f:
+					data = f.read().replace(target, text)
+				with open(f"{self.filename}", "w") as f:
+					f.write(data)
+			except FileNotFoundError:
+				print("Something went wrong...")
+		else:
+			print(f"Low access level! {self.level}, but need 3")
