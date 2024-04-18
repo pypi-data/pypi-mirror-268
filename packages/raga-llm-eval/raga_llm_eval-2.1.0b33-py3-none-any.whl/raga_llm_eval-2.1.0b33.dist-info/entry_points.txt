@@ -1,0 +1,2 @@
+[console_scripts]
+raga-rag-builder-ui = raga_rag_builder.raga_rag_builder_ui:main
