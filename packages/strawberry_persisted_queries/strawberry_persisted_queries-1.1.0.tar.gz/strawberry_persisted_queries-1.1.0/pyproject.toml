@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "strawberry_persisted_queries"
+packages = [{include = "strawberry_persisted_queries"}]
+version = "1.1.0"
+description = "Apollo-compatible persisted queries for Strawberry"
+authors = ["Rosalina <catgirl@catgirlin.space>"]
+readme = "README.md"
+license = "MIT"
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+]
+repository = "https://github.com/catgirlinspace/strawberry_persisted_queries.git"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = {version = "^5.0.3", optional = true}
+strawberry-graphql = ">=0.226"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+django = ["django"]
