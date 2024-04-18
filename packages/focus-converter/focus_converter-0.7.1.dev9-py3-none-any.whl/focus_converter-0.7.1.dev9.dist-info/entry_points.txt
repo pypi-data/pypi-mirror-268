@@ -1,0 +1,6 @@
+[console_scripts]
+focus-converter=focus_converter.main:app
+focus-export-conversion-rules=focus_converter.utils.export_conversion_rules:app
+focus-export-converted-sample-data=focus_converter.utils.export_converted_sample_data:app
+focus-generate-progress-pie-chart=focus_converter.utils.generate_per_provider_progress:app
+
