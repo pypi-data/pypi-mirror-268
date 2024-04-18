@@ -1,0 +1,5 @@
+setup.py
+selfserviceutils.egg-info/PKG-INFO
+selfserviceutils.egg-info/SOURCES.txt
+selfserviceutils.egg-info/dependency_links.txt
+selfserviceutils.egg-info/top_level.txt
