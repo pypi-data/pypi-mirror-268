@@ -1,0 +1,11 @@
+setuptools
+openpyxl
+numpy
+scipy
+pandas
+gurobipy
+plotly
+kaleido
+click
+InquirerPy
+pyarrow
