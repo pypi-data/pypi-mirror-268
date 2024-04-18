@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: xtnkk-tools
+Version: 1.0.1.1
+Summary: xtn 开发工具
+Author: xtn
+Author-email: czw011122@163.com
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymongo
+
+xtnkk-tools
