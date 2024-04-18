@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+naver_email_verifier.egg-info/PKG-INFO
+naver_email_verifier.egg-info/SOURCES.txt
+naver_email_verifier.egg-info/dependency_links.txt
+naver_email_verifier.egg-info/requires.txt
+naver_email_verifier.egg-info/top_level.txt
+naver_email_verifier/__pycache__/__init__.cpython-311.pyc
+naver_email_verifier/__pycache__/verifier.cpython-311.pyc
