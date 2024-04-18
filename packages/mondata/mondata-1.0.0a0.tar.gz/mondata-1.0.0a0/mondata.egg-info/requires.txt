@@ -1,0 +1,5 @@
+requests>=2.31.0
+pytz>=2024.1
+pycountry>=23.12.11
+deprecated>=1.2.14
+schematics>=2.1.1
