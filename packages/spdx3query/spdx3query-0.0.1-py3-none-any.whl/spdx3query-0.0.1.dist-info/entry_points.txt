@@ -1,0 +1,2 @@
+[console_scripts]
+spdx3query = spdx3query:main
