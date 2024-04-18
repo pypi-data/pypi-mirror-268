@@ -1,0 +1,10 @@
+document_ingestor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+document_ingestor/embedding_process.py,sha256=Kixicltx2B_w93w3KZuglqtdYfaeoOmOHteZ2JWLwrg,5779
+document_ingestor/eu_data_parser.py,sha256=VoiQYPNGOpD0wAkN-Kh3puxYuGc-DvkendSu4m8OGfE,1865
+document_ingestor/genericParser.py,sha256=gy7Ofkhdv4nuZkF4uoP12Z-m7ZSzHM7YfOIvJH_6oTM,2744
+document_ingestor/pdf_parser.py,sha256=JWwmqliqvXENzgmlTZWtEpjGzUw0W2OiTiWbwvZSnpw,6146
+document_ingestor-0.1.1.dist-info/LICENSE.txt,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+document_ingestor-0.1.1.dist-info/METADATA,sha256=vlfSoXxm-Q68TcZmeJmiHxkPGxgp-rDLZW_vbVZCV54,2388
+document_ingestor-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+document_ingestor-0.1.1.dist-info/top_level.txt,sha256=nGv_GDwKrPFq0sQGOxiFVOMzeMkDaQwez9W6_snRcq8,18
+document_ingestor-0.1.1.dist-info/RECORD,,
