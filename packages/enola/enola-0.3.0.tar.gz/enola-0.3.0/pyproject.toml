@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "enola"
+version = "0.3.0"
+authors = [
+  { name="Sebastian Rodriguez Robotham", email="sebastian.rodriguez@huemulsolutions.com" },
+  { name="Developer Code", email="developer.code@huemulsolutions.com" },
+]
+description = "Observability & Governance of Intelligence Agents"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/huemulsolutions/enola"
+"Bug Tracker" = "https://github.com/huemulsolutions/enola/issues"
