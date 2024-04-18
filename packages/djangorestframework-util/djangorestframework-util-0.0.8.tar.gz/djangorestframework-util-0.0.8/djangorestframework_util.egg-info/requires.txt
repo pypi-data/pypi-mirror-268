@@ -1,0 +1,6 @@
+Django==4.1.13
+djangorestframework==3.14.0
+drf-spectacular==0.26.0
+drf-standardized-errors==0.12.6
+opencv-python==4.8.1.78
+shortcut-util
