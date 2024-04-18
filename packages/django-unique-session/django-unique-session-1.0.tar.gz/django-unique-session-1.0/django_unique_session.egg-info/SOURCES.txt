@@ -1,0 +1,16 @@
+AUTHORS
+CHANGELOG
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+django_unique_session.egg-info/PKG-INFO
+django_unique_session.egg-info/SOURCES.txt
+django_unique_session.egg-info/dependency_links.txt
+django_unique_session.egg-info/top_level.txt
+django_unique_session.egg-info/zip-safe
+unique_session/__init__.py
+unique_session/models.py
+unique_session/views.py
+unique_session/backends/__init__.py
+unique_session/backends/session_backend.py

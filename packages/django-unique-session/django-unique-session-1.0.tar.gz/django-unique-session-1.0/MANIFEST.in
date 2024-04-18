@@ -1,0 +1,9 @@
+include AUTHORS
+include LICENSE
+include CHANGELOG
+include README.rst
+global-exclude *.pyc
+prune dist
+prune build
+
+
