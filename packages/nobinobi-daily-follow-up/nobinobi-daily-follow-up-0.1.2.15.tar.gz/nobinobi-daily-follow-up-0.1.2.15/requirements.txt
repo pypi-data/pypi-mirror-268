@@ -1,0 +1,10 @@
+nobinobi-child==0.1.4.25
+
+django-auto-one-to-one==3.3.5
+django-notifications-hq==1.8.3
+drf-writable-nested==0.7.0
+psycopg2-binary==2.9.9
+cffi==1.16.0
+argon2_cffi==23.1.0
+# nobinobi requirements
+
