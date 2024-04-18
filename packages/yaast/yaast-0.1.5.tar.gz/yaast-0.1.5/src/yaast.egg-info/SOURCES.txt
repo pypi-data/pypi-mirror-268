@@ -1,0 +1,15 @@
+LICENSE
+README.md
+console_url.sh
+pyproject.toml
+setup.cfg
+src/yaast/__init__.py
+src/yaast/__main__.py
+src/yaast/awsconfigparser.py
+src/yaast/write_session.py
+src/yaast.egg-info/PKG-INFO
+src/yaast.egg-info/SOURCES.txt
+src/yaast.egg-info/dependency_links.txt
+src/yaast.egg-info/entry_points.txt
+src/yaast.egg-info/requires.txt
+src/yaast.egg-info/top_level.txt

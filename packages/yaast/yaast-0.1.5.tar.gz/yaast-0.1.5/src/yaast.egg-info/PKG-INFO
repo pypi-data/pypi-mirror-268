@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: yaast
+Version: 0.1.5
+Summary: AWS credentials MFA-Resolver tool
+Home-page: https://github.com/dynnamitt/yaast
+Author: Kjetil Midtile
+Author-email: kjetil.midtlie@gmail.com
+Project-URL: Bug Tracker, https://github.com/dynnamitt/yaast
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: botocore
+
+# Yaast (Jåst)
+
+## YetAnotherAWSSessionTool
+
+*Why?* ..After obtaining a normal accessKey set, 
+the MFA enabled user faces the challege of 
+mantaining a daily set of temp accessKeys+token (session) for
+use with awscli, sdks and the stuff like terraform.
+
+## 0. Setup "start" profile
+
+    aws configure --profile awsops
+    # PASTE keys from aws csv file ...
+    
+    vim ~/.aws/config 
+    # ADD mfa_serial = arn:aws:iam::0000000:mfa/xxxxxxx
+
+## 1. Execute
+
+Writes a new [default] section into your $HOME/.aws/credentials,
+after downloading a new SESSION temp access/token set through a "start" profile.
+Start profile name defaults to [awsops] and should have 'mfa_serial' set, together with accesskeys.
+
+Both the *start* and *dest* profiles names can be selected with flags
+
+    yaast [-h] [flags] <mfacode>
+
+
+*DEPENDS* on botocore
+
