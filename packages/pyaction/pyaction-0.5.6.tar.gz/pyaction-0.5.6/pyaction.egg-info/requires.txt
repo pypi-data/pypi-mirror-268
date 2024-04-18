@@ -1,0 +1,13 @@
+copier>=9.2
+click>=8.1
+pygithub>=2.3.0
+markdown-to-json==2.1.0
+
+[dev]
+coverage
+pytest-cookies
+
+[docs]
+mkdocs-material
+cairosvg
+pillow
