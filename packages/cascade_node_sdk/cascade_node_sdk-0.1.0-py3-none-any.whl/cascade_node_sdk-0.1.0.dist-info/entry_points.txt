@@ -1,0 +1,3 @@
+[console_scripts]
+cascade=cascade_node_sdk.cli_proxy:cli
+
