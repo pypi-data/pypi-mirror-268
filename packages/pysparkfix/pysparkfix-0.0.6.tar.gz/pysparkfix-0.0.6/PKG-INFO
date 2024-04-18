@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pysparkfix
+Version: 0.0.6
+Summary: A utility tool for resolving common issues and fixing bugs in PySpark, a Python API for Apache Spark.
+Home-page: https://github.com/mtdev/pysparkfix
+Author: mtdev
+Author-email: wuuuuusmall@outlook.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: pathlib>1.0.0
