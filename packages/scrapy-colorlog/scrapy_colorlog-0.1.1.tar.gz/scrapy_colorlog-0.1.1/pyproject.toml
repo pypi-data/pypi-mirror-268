@@ -1,0 +1,43 @@
+[project]
+name = "scrapy-colorlog"
+version = "0.1.1"
+description = "Color log output support for Scrapy"
+authors = [
+    { name = "divtiply" },
+]
+dependencies = [
+    "scrapy>=1.0.0",
+    "colorlog>=6.6.0",
+    "typing-extensions>=4.0.0",
+]
+requires-python = ">=3.7"
+readme = "README.md"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Framework :: Scrapy",
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed",
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+repository = "https://github.com/divtiply/scrapy-colorlog"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "pep621"
+major_version_zero = true
