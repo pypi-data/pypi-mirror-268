@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+README_deployment.md
+pyproject.toml
+setup.py
+src/computervisiontools/__init__.py
+src/computervisiontools/preprocessing.py
+src/computervisiontools/torchscripting.py
+src/computervisiontools.egg-info/PKG-INFO
+src/computervisiontools.egg-info/SOURCES.txt
+src/computervisiontools.egg-info/dependency_links.txt
+src/computervisiontools.egg-info/requires.txt
+src/computervisiontools.egg-info/top_level.txt

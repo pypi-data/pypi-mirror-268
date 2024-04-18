@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "computervisiontools"
+authors = [
+  { name = "Lucas Bernigaud Samatan", email = "lucas.bernigaud-samatan@inrae.fr" },
+]
+maintainers = [
+  { name = "Jordan Bernigaud Samatan", email = "jordan.bernigaud-samatan@inrae.fr" },
+]
+description = "Overlay of PyTorch that contain utilities for basic task in computer vision (Image preprocessing, reading/writing images, set reproducibility, etc..)."
+readme = "README_deployment.md"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+]
+dynamic = ["version"]
+requires-python = ">=3.10.12"
+dependencies = [
+  "torch==2.1.0",
+  "torchvision==0.16.0",
+]
+license = { file = "LICENSE.txt" }
+
+[project.urls]
+Homepage = "https://forgemia.inra.fr/ue-apc/librairies/python/detectools"
+Issues = "https://forgemia.inra.fr/ue-apc/librairies/python/detectools/-/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = { attr = "computervisiontools.__version__" }
