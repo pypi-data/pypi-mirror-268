@@ -1,0 +1,34 @@
+Metadata-Version: 2.3
+Name: jr_connection
+Version: 0.0.2
+Summary: A simple python package to connect to JR servers and get the data
+Project-URL: Homepage, https://github.com/faburry23/JR_Connection
+Project-URL: Issues, https://github.com/faburry23/JR_Connection/issues
+Author-email: Felipe Burry <felipe.burry@jriveros.cl>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Requires-Dist: cramjam==2.8.3
+Requires-Dist: et-xmlfile==1.1.0
+Requires-Dist: fastparquet==2024.2.0
+Requires-Dist: fsspec==2024.3.1
+Requires-Dist: numpy==1.26.4
+Requires-Dist: openpyxl==3.1.2
+Requires-Dist: packaging==24.0
+Requires-Dist: pandas==2.2.1
+Requires-Dist: pyarrow==15.0.2
+Requires-Dist: pyodbc==5.1.0
+Requires-Dist: pytest-mock==3.14.0
+Requires-Dist: pytest==7.4.3
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: python-dotenv==1.0.1
+Requires-Dist: pytz==2024.1
+Requires-Dist: six==1.16.0
+Requires-Dist: sqlalchemy==2.0.29
+Requires-Dist: typing-extensions==4.10.0
+Requires-Dist: tzdata==2024.1
+Description-Content-Type: text/markdown
+
+# JR_Connection

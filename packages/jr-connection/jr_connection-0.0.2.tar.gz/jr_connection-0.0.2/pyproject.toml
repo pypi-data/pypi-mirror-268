@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jr_connection"
+version = "0.0.2"
+authors = [
+  { name="Felipe Burry", email="felipe.burry@jriveros.cl" },
+]
+description = "A simple python package to connect to JR servers and get the data"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "cramjam==2.8.3",
+    "et-xmlfile==1.1.0",
+    "fastparquet==2024.2.0",
+    "fsspec==2024.3.1",
+    "numpy==1.26.4",
+    "openpyxl==3.1.2",
+    "packaging==24.0",
+    "pandas==2.2.1",
+    "pyarrow==15.0.2",
+    "pyodbc==5.1.0",
+    "python-dateutil==2.9.0.post0",
+    "python-dotenv==1.0.1",
+    "pytz==2024.1",
+    "six==1.16.0",
+    "SQLAlchemy==2.0.29",
+    "typing_extensions==4.10.0",
+    "tzdata==2024.1",
+    "pytest==7.4.3",
+    "pytest-mock==3.14.0"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[project.urls]
+Homepage = "https://github.com/faburry23/JR_Connection"
+Issues = "https://github.com/faburry23/JR_Connection/issues"
