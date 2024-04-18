@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: library_book_fine
+Version: 0.1
+Summary: A simple Django app to manage books fines
+Home-page: http://github.com/yourusername/my_library_app
+Author: Chinmay
+Author-email: lawd7131@gmail.com
+License: MIT
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 3.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django >=3.2
+
+A simple Django app to manage books fines
