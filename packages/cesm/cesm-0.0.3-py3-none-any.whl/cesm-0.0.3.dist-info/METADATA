@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cesm
+Version: 0.0.3
+Summary: Compact Energy System Modeling Tool (CESM)
+Home-page: https://github.com/EINS-TUDa/CESM
+Author: ['Sina Hajikazemi', 'Julia Barbosa']
+Author-email: sina.hkazemi@email.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: setuptools
+Requires-Dist: openpyxl
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: gurobipy
+Requires-Dist: plotly
+Requires-Dist: kaleido
+Requires-Dist: click
+Requires-Dist: InquirerPy
+Requires-Dist: pyarrow
+
+
+Compact Energy System Modeling Tool (CESM)
+This is a compact energy system modeling tool that can model different forms of energy carriers and the conversion processes that convert them to each other. 
+The optimal output of the model determines how much should be invested in each part of the energy system to meet the energy demand and minimize costs.
+
+An example of the German energy system is also provided. The results of the model are compatible with the results of the paper "Barbosa, Julia, Christopher Ripp, and Florian Steinke. Accessible Modeling of the German Energy Transition: An Open, Compact, and Validated Model. Energies 14, no. 23 (2021)"
+    
