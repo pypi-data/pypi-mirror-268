@@ -1,0 +1,8 @@
+recursive-include correct/picture *
+recursive-include correct/data *
+recursive-include correct/logs *
+recursive-include correct/test *
+recursive-include correct/targer *
+
+prune correct/**/__pycache__
+prune  correct/picture *
