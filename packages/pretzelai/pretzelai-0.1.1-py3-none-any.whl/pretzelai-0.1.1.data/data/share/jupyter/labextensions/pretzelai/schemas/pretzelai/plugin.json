@@ -1,0 +1,8 @@
+{
+  "jupyter.lab.shortcuts": [],
+  "title": "pretzelai",
+  "description": "pretzelai settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}
