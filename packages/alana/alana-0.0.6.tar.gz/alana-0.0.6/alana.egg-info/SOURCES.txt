@@ -1,0 +1,12 @@
+LICENSE
+setup.py
+alana/__init__.py
+alana/aliases.py
+alana/color.py
+alana/globals.py
+alana/prompt.py
+alana.egg-info/PKG-INFO
+alana.egg-info/SOURCES.txt
+alana.egg-info/dependency_links.txt
+alana.egg-info/requires.txt
+alana.egg-info/top_level.txt
