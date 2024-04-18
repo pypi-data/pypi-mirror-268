@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "utf12"
+version = "1.0.0"
+authors = [
+    { name="Luke Bullard", email="2201010+LukeJBullard@users.noreply.github.com" }
+]
+description = "UTF-12 encoder"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "bitstring"
+]
+
+[project.urls]
+Homepage = "https://github.com/lukejbullard/utf-12"
+Issues = "https://github.com/lukejbullard/utf-12/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/utf12"]

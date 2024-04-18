@@ -1,0 +1,43 @@
+Metadata-Version: 2.3
+Name: utf12
+Version: 1.0.0
+Summary: UTF-12 encoder
+Project-URL: Homepage, https://github.com/lukejbullard/utf-12
+Project-URL: Issues, https://github.com/lukejbullard/utf-12/issues
+Author-email: Luke Bullard <2201010+LukeJBullard@users.noreply.github.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: bitstring
+Description-Content-Type: text/markdown
+
+# utf-12
+UTF-12 encoder based on [the tapemark article](https://web.archive.org/web/20230930121239/https://tapemark.narod.ru/comp/utf12en.html)
+
+Original tapemark article: <https://tapemark.narod.ru/comp/utf12en.html>
+
+
+Following the specs, everything is in big-endian.
+Ensure that inputs are big-endian.
+
+Encodes unicode characters 07c0-D7ff, e000-10ffff
+
+## Install
+    pip install utf12
+
+## Usage
+
+
+    from utf12 import encode, decode
+    encoded_bytes = encode("R2-D2")
+    print(decode(encoded_bytes))
+
+### encode(unicode_characters)
+unicode_characters is a python string of unicode characters
+Returns a bytes object of the slabs with trailing 0 bits on the last byte if needed
+
+### decode(slabs)
+slabs is a bytes object of the slabs for the characters
+Returns a python string of the unicode characters
