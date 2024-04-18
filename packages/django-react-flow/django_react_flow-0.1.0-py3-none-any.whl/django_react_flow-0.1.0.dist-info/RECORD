@@ -1,0 +1,12 @@
+django_react_flow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_react_flow/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_react_flow/parsers/base.py,sha256=eEITokCX53kYA6Z223vA_nO-8gc40rEeRyZj0hsobmw,161
+django_react_flow/parsers/yaml.py,sha256=JyDPSj48oIJOORjQ3VABCJYTuudG5fjx2XVdtzfv8ug,284
+django_react_flow/settings.py,sha256=YkXqfkJqT8zeQH27wYXrJYw0F67U1GcqJaGDLhsdOrM,487
+django_react_flow/templates/react_flow.html,sha256=WI1aUHXezgM6CJibNDpzg1mHEO0UUA-czod9XJ5tnsI,1368
+django_react_flow/urls.py,sha256=rG1JqnbsdraVZ44auatXANBAFYh5cZha3Wq_0gnh8eU,153
+django_react_flow/views/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_react_flow/views/react_flow.py,sha256=0WwCkPGvipvV2ieD-GMEOGkHTXi-cRaoZGyc3p1BWeU,611
+django_react_flow-0.1.0.dist-info/METADATA,sha256=XkxhJCAx1lPDP1CGIKL2SPOCaJFPkWOnPrb16x5nTbk,524
+django_react_flow-0.1.0.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+django_react_flow-0.1.0.dist-info/RECORD,,
