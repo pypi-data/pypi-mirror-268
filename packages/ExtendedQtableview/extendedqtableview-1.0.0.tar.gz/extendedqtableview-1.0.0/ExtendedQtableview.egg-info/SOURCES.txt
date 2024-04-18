@@ -1,0 +1,5 @@
+LICENSE_PYTHON.txt
+ExtendedQtableview.egg-info/PKG-INFO
+ExtendedQtableview.egg-info/SOURCES.txt
+ExtendedQtableview.egg-info/dependency_links.txt
+ExtendedQtableview.egg-info/top_level.txt
