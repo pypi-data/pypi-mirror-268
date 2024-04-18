@@ -1,0 +1,5 @@
+pydantic
+docstring_parser~=0.15
+
+[test]
+pytest~=7.4.4
