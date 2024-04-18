@@ -1,0 +1,55 @@
+"""
+Metadata factory entity.
+"""
+from __future__ import annotations
+
+import typing
+
+from digitalhub_core.registry.import_utils import import_class
+from digitalhub_core.registry.registry import registry
+from digitalhub_core.utils.generic_utils import get_timestamp
+
+if typing.TYPE_CHECKING:
+    from digitalhub_core.entities._base.metadata import Metadata
+    from digitalhub_core.registry.models import RegistryEntry
+
+
+def build_metadata(kind: str, **kwargs) -> Metadata:
+    """
+    Build entity metadata object.
+
+    Parameters
+    ----------
+    kind : str
+        The type of metadata to build.
+
+    Returns
+    -------
+    Metadata
+        Metadata object.
+    """
+    infos: RegistryEntry = getattr(registry, kind)
+    metadata = import_class(infos.metadata.module, infos.metadata.class_name)
+    kwargs = parse_arguments(**kwargs)
+    return metadata(**kwargs)
+
+
+def parse_arguments(**kwargs) -> dict:
+    """
+    Parse keyword arguments and add default values if necessary.
+
+    Parameters
+    ----------
+    **kwargs
+        Keyword arguments.
+
+    Returns
+    -------
+    dict
+        A dictionary containing the entity metadata attributes.
+    """
+    if "created" not in kwargs or kwargs["created"] is None:
+        kwargs["created"] = get_timestamp()
+    if "updated" not in kwargs or kwargs["updated"] is None:
+        kwargs["updated"] = kwargs["created"]
+    return kwargs
