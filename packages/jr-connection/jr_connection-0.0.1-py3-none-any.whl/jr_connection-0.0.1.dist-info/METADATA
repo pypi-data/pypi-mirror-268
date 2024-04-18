@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: jr_connection
+Version: 0.0.1
+Summary: A simple python package to connect to JR servers and get the data
+Project-URL: Homepage, https://github.com/faburry23/JR_Connection
+Project-URL: Issues, https://github.com/faburry23/JR_Connection/issues
+Author-email: Felipe Burry <felipe.burry@jriveros.cl>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# JR_Connection

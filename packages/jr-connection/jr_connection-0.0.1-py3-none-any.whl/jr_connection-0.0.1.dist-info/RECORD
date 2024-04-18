@@ -1,0 +1,11 @@
+jr_connection/__init__.py,sha256=tT7XlMnJsJUn6dtaTYk310FkEUrl0OF8bC5Qz0aClTQ,137
+jr_connection/first_run.py,sha256=CbJ8n8MOHBPy0t_v3F8LhCuyFWTw8am4Oeyt-KemvUs,2931
+jr_connection/other_constants.py,sha256=B7i-5T1UX0JsHtvTNMpz4cn3UVj1aoXZ9pRSG5OV42E,154
+jr_connection/classes/__init__.py,sha256=yEH61eBMVlvatmvMGlKLScbK9R5Gzb-ku1YRlSGnD54,85
+jr_connection/classes/connection_class.py,sha256=eZBOgQoZRMY_CROT1jtwbA1WmferOmVC44cpJcM8Ais,4801
+jr_connection/classes/data_handler_class.py,sha256=cb13K06DBVxqbO9-mY3Ph5yWzwjruHs6EsmIn7zWOn8,5504
+jr_connection/classes/dbconfig_class.py,sha256=rW-UuMTWbllFKrviysQZ98lDB4SQapRNaRaNjPSKvww,429
+jr_connection-0.0.1.dist-info/METADATA,sha256=_yHvrRN4VNfxPdTfbsIu_d3ZDxVn6NNHRMaKIlMiyvs,572
+jr_connection-0.0.1.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+jr_connection-0.0.1.dist-info/licenses/LICENSE,sha256=YI3pmlc8GLe8lSrFI1bvqDBf6ThrEba_-U-V72_qn0Y,1072
+jr_connection-0.0.1.dist-info/RECORD,,
