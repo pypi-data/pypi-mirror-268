@@ -1,0 +1,13 @@
+nqrduck_broadband/__init__.py,sha256=OLH6wuW74L044Xowgpxts6OuqapAbkc3TW0z-cEJyEc,43
+nqrduck_broadband/broadband.py,sha256=hpZMYCLVSiE9I0RMTXvVLGS6ZE3f7JmFQ0189ny6e64,223
+nqrduck_broadband/controller.py,sha256=SCp3RG3ZA5r60LbQIesX7siM2WHmzPsbZRjViuJr-3Y,9254
+nqrduck_broadband/model.py,sha256=KXzQIlKI8NcCmJS-nylCKu4-rXDcHBBXx_rsRnpxQIs,12717
+nqrduck_broadband/view.py,sha256=solu8kjrJKQroK-pDvV0_D60IjJ-SsswPjScrGgU_YM,14824
+nqrduck_broadband/widget.py,sha256=vMXDFnyJ9JtEAacnm8vmrb_J6enMfty25tJa4a7WtCo,12855
+nqrduck_broadband/resources/broadband.ini,sha256=diF9XbVOEHGGP3As_5hKfc1hkRE0F_ssar3JL_7POyU,248
+nqrduck_broadband/resources/broadband_widget.ui,sha256=-kXM7JhtdMppJfA4SKDsw7qGDBkkEAFeeS-mfQ7oh5M,10567
+nqrduck_broadband-0.0.13.dist-info/METADATA,sha256=j_HdwHPiJIPLBCiuaJXhL9aacdjWWBDOKVN12wM56u4,5189
+nqrduck_broadband-0.0.13.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+nqrduck_broadband-0.0.13.dist-info/entry_points.txt,sha256=Nc097hrNYwmDC73g93KPNZ6_Uy9e8oVxJQNZ9vwvFk8,68
+nqrduck_broadband-0.0.13.dist-info/licenses/LICENSE,sha256=Rmv40RY21WulJhWOQfwy-dyYMEnqG5zEKb_ScalCXjs,1070
+nqrduck_broadband-0.0.13.dist-info/RECORD,,
