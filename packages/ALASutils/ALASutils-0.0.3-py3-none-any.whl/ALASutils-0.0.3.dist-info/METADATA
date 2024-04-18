@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ALASutils
+Version: 0.0.3
+Summary: ALAS utils for daily tasks
+Author: Juan Pablo Calderon
+Author-email: <jpcalderon@fcaglp.unlp.edu.ar>
+Keywords: python,alas
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+Eso
