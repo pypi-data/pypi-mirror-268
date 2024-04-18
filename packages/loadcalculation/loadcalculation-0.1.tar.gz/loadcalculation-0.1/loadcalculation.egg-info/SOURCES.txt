@@ -1,0 +1,11 @@
+package_switch.py
+loadcalculation/ChineseStandardDeck.pyd
+loadcalculation/SingSunCPPCodeGenerate.pyd
+loadcalculation/SingSunCPPDeck.pyd
+loadcalculation/SingSunSTDUDeck.pyd
+loadcalculation/__init__.py
+loadcalculation.egg-info/PKG-INFO
+loadcalculation.egg-info/SOURCES.txt
+loadcalculation.egg-info/dependency_links.txt
+loadcalculation.egg-info/requires.txt
+loadcalculation.egg-info/top_level.txt
