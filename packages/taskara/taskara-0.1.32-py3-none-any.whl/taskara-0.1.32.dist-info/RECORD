@@ -1,0 +1,12 @@
+taskara/__init__.py,sha256=Zl3fFjD-M1XBoGKPPEFJYAUXJsMPPgtqxd6q1g3HOlM,43
+taskara/db/conn.py,sha256=CrAcMopCz14AgZrWpu_0JLVz5U8IMUTU1a6Qsnx57WQ,1999
+taskara/db/models.py,sha256=EI0nFhpE0G0zuQJpjOaXMcJ8DUXrMchYFrpEZZwV7Q0,850
+taskara/env.py,sha256=AMmqfFJZTml34sopZbVIubVzhOD8LumWS6GawURPvxQ,195
+taskara/metrics,sha256=WJtXXktqtCFcIpuLoltRwnhx0UFNBAl6Cy0XNCHfjCs,1520
+taskara/models.py,sha256=sME4G4s4AginaM3S4X4w_FudJerkK9GK_wm94x46HOY,1655
+taskara/task.py,sha256=F-HgbZjXW92d5DpMq3GUMdH4Xyi2H6RKyLClPT75lug,20931
+taskara-0.1.32.dist-info/LICENSE,sha256=QPI1TrZi67e5nYdLRfY54SZb7JMQc82p_yHGzyywxJk,1069
+taskara-0.1.32.dist-info/METADATA,sha256=b06DbZ1uexpa_5aEJg5AxyKfTtZgpZMKTh9XcsxoInM,1362
+taskara-0.1.32.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+taskara-0.1.32.dist-info/entry_points.txt,sha256=RZ2-n3vkjzSBjTStzl6MduzVLYyvA-F4-P0uzdRlOwo,42
+taskara-0.1.32.dist-info/RECORD,,
