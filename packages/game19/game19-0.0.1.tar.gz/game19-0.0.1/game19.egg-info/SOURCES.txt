@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+Game19/__init__.py
+Game19/game.py
+game19.egg-info/PKG-INFO
+game19.egg-info/SOURCES.txt
+game19.egg-info/dependency_links.txt
+game19.egg-info/top_level.txt
