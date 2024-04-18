@@ -1,0 +1,8 @@
+twine
+wheel
+setuptools
+python-dotenv
+requests
+python-slugify
+markdown
+dice
