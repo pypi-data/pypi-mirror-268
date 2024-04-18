@@ -1,0 +1,3 @@
+[console_scripts]
+space_weather = swpclib.cli:space_weather
+swpc_animations = swpclib.cli:animations
