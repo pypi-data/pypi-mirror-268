@@ -1,0 +1,15 @@
+TMC_2209/TMC_2209_StepperDriver.py,sha256=QK5l7F2gvDPuoijlnTA9BPiVntwPIX9rAuWXmjt7-QI,19929
+TMC_2209/_TMC_2209_GPIO_board.py,sha256=XfncfHlB2tNKijwHZqRxJYefUqVvxAQFLaz6kW56hrg,3201
+TMC_2209/_TMC_2209_comm.py,sha256=xjczVOmyw8UV8wfaJP6KFUZHjChcb-x9JbqDgO9rM_s,23126
+TMC_2209/_TMC_2209_logger.py,sha256=2puqwreOMI9vGpfeakWE7NZG75dMlYoOI7nEjE07ebY,5604
+TMC_2209/_TMC_2209_math.py,sha256=oL7EIoOxdYJDfmFEWc415PIZvTiLYEDnbQNcshO12Oo,2051
+TMC_2209/_TMC_2209_move.py,sha256=I4TB4xrrEnyly-DjyUFSa3hZkqJ1EmtFi9LqE0CFA_4,12473
+TMC_2209/_TMC_2209_reg.py,sha256=ZpVBTH8t5HUEwFhDneJZ8DkZoUQokOlm1ProaJ9rjMw,1925
+TMC_2209/_TMC_2209_test.py,sha256=oA2W8dWwdvpuYOkznqiE9TR0-0nzTc5MXfAoPzTDQC8,6457
+TMC_2209/_TMC_2209_uart.py,sha256=gos4tv3izUklPrGKDf7sCVEPuP17nNE58DMUsD4DCA8,10465
+TMC_2209/__init__.py,sha256=87WvSAstb6dSjtodEwB3aMjGkEGVDswfa5A_Ooo74dY,30
+TMC_2209_Raspberry_Pi-0.4.5.dist-info/LICENSE,sha256=5QtJ8jDPUD8h_-39nWVfosUp1UZZWecO0LksihFjtm4,35305
+TMC_2209_Raspberry_Pi-0.4.5.dist-info/METADATA,sha256=YHqQQ9yBDz3fjJmN0HNhQQ_qIqAV42zfdu_bHvSsYLM,10651
+TMC_2209_Raspberry_Pi-0.4.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+TMC_2209_Raspberry_Pi-0.4.5.dist-info/top_level.txt,sha256=hz5cohJt3kbCKuzzOwIHljk4d4niUzsoP99dcgBE5_8,9
+TMC_2209_Raspberry_Pi-0.4.5.dist-info/RECORD,,
