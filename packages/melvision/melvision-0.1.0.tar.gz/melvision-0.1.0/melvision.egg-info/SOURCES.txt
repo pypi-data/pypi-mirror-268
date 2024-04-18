@@ -1,0 +1,12 @@
+setup.py
+melvision/__init__.py
+melvision/utils.py
+melvision.egg-info/PKG-INFO
+melvision.egg-info/SOURCES.txt
+melvision.egg-info/dependency_links.txt
+melvision.egg-info/top_level.txt
+melvision/models/__init__.py
+melvision/models/alexnet.py
+melvision/models/googlenet.py
+melvision/models/resnet.py
+melvision/models/vgg.py
