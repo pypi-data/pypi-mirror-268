@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+pytesseract_api/__init__.py
+pytesseract_api/api.py
+pytesseract_api/capi_types.py
+pytesseract_api/exceptions.py
+pytesseract_api/py.typed
+pytesseract_api.egg-info/PKG-INFO
+pytesseract_api.egg-info/SOURCES.txt
+pytesseract_api.egg-info/dependency_links.txt
+pytesseract_api.egg-info/top_level.txt

@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: pytesseract-api
+Version: 1.0.2
+Summary: Tesseract C-API in python, a faster alternative to pytesseract
+Home-page: https://github.com/sandbox-pokhara/pytesseract-api
+Author: Pradish Bijukchhe
+Author-email: pradishbijukchhe@gmail.com
+Project-URL: Bug Tracker, https://github.com/sandbox-pokhara/pytesseract-api/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pytesseract-api
+
+Tesseract C-API in python, a faster alternative to pytesseract
+
+## Installation
+
+You can install the package via pip:
+
+```bash
+pip install pytesseract-api
+```
+
+## Usage
+
+```python
+import cv2
+
+from pytesseract_api import image_to_string
+
+img = cv2.imread("sample.png")
+text = image_to_string(img)
+print(text)
+```
+
+## Limitations
+
+- Only supports opencv images as input as of now
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
+## Contact
+
+If you want to contact me you can reach me at pradishbijukchhe@gmail.com.
