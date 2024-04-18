@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+libname/__init__.py
+libname/fine_calculator.py
+libraryfine.egg-info/PKG-INFO
+libraryfine.egg-info/SOURCES.txt
+libraryfine.egg-info/dependency_links.txt
+libraryfine.egg-info/requires.txt
+libraryfine.egg-info/top_level.txt
