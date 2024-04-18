@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: sort_alphabet
+Version: 0.1
+Summary: A Python package for alphabetical sorting
+Home-page: https://github.com/Ncived/sort_alphabet
+Author: Vedant
+Author-email: pawarvedant51@gmail.com
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Word Sorter
+
+A simple Python library for sorting words alphabetically.
+
+## Installation
+
+
+
