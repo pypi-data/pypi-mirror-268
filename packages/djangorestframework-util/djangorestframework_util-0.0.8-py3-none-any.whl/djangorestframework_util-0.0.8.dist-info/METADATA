@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: djangorestframework-util
+Version: 0.0.8
+Summary: Common Utils for DjangoRestFramework, made easy.
+Home-page: https://gitee.com/iamfengdy/djangorestframework-util
+Author: fengdy
+Author-email: iamfengdy@126.com
+License: BSD
+Project-URL: Source, https://gitee.com/iamfengdy/djangorestframework-util
+Keywords: djangorestframework util
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django :: 4.1
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django (==4.1.13)
+Requires-Dist: djangorestframework (==3.14.0)
+Requires-Dist: drf-spectacular (==0.26.0)
+Requires-Dist: drf-standardized-errors (==0.12.6)
+Requires-Dist: opencv-python (==4.8.1.78)
+Requires-Dist: shortcut-util
+
+# djangorestframework-util
+
+## 介绍
+基于DjangoRestFramework的通用代码
+
+## 规则定义
+### 删除
+1. 逻辑删除；
+2. 禁止查看；
+3. 禁止使用； 
+4. 关联关系允许展示，但状态为已删除（前端特殊展示）；
+5. 关联关系允许被解除
+    比如，用户U加入了组G，如果G删除了，那U在`我加入的组`中可以主动退出；
+
+### 禁用
+1. 允许查看
+2. 不允许使用
+
+
