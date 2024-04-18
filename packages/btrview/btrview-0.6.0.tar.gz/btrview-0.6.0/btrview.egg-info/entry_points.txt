@@ -1,0 +1,2 @@
+[console_scripts]
+btrview = btrview.scripts.btrview:main

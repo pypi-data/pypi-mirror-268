@@ -1,0 +1,11 @@
+treelib
+rich
+
+[build]
+build
+twine
+
+[dev]
+bumpver
+mypy
+pip-tools

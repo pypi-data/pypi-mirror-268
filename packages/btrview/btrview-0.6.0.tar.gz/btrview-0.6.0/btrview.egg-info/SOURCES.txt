@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+pyproject.toml
+btrview/__init__.py
+btrview/__main__.py
+btrview/btr_dict.py
+btrview/btrfs.py
+btrview/rich_output.py
+btrview/subvolume.py
+btrview/utils.py
+btrview.egg-info/PKG-INFO
+btrview.egg-info/SOURCES.txt
+btrview.egg-info/dependency_links.txt
+btrview.egg-info/entry_points.txt
+btrview.egg-info/requires.txt
+btrview.egg-info/top_level.txt
+btrview/scripts/btrview.py
