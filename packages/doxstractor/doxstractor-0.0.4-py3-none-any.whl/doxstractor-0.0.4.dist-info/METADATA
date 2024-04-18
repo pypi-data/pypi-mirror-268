@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: doxstractor
+Version: 0.0.4
+Summary: Doxstractor extracts strutured data from text in an easily configurable way.
+Author: Jannes Klaas
+License: Apache Software License (Apache 2.0)
+Project-URL: Homepage, https://github.com/JannesKlaas/doxstractor
+Project-URL: Issues, https://github.com/JannesKlaas/doxstractor/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: anthropic ==0.25.1
+
+# Doxtractor 📄➡️📊 
+
+Doxtractor is a modular library to extract structured data from text documents.
