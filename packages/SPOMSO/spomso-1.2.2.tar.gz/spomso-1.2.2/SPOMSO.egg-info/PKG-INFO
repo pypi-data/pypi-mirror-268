@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: SPOMSO
+Version: 1.2.2
+Summary: SPOMSO
+Home-page: https://github.com/peterropac/Aegolius/tree/main
+Author: Peter Ropač
+Author-email: <peter.ropac@fmf.uni-lj.si>
+Keywords: python,geometry
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+License-File: LICENSE_NOTICE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+Python package for generating geometry with SDFs.
