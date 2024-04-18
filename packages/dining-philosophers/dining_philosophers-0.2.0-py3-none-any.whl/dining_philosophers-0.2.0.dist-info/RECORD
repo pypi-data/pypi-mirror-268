@@ -1,0 +1,17 @@
+build/lib/dining_philosophers/__init__.py,sha256=wXcSEYZBzun6OOUGdukS-LW3Aw90kTmU4smxeuOGeVM,116
+build/lib/dining_philosophers/main.py,sha256=hImVixk2scdTJuuvIoRJ3gGZmQBeaf0yzkl4abGZPmw,431
+build/lib/dining_philosophers/version.py,sha256=PvMEjbB9BENaF9djN1Uwp7sDXRFABcISo8Gfdnp_mkc,68
+dining_philosophers/__init__.py,sha256=wXcSEYZBzun6OOUGdukS-LW3Aw90kTmU4smxeuOGeVM,116
+dining_philosophers/main.py,sha256=hImVixk2scdTJuuvIoRJ3gGZmQBeaf0yzkl4abGZPmw,431
+dining_philosophers/version.py,sha256=PvMEjbB9BENaF9djN1Uwp7sDXRFABcISo8Gfdnp_mkc,68
+dining_philosophers/src/dining_philosophers.py,sha256=f7x20MT1Lbhd0qexeahIr1YtScteuSZ9wTLSOE5qwXc,1869
+dining_philosophers/src/dining_simulation.py,sha256=ZhTGh3-l0fynvueYrqLxj2X6wH2-g6ieTWjL06o80cI,3221
+dining_philosophers/src/philosopher.py,sha256=-E2eEKpaoqTIkJSjXhGa_4bgjp084WFGvfl-uLdeFHU,948
+dining_philosophers/src/stick.py,sha256=RrjloI1sMqYhtcQXLF2MCF-zVtui0XgQE30q1YOsSXE,256
+tests/test_sample.py,sha256=zjV6ckIUPjsxHwu6hQby7ov_CblP9ogNQ5P_8MFwPz0,87
+dining_philosophers-0.2.0.dist-info/LICENSE,sha256=N8cTDgUNxrpxWAX78x-QRjHCNbwnI3Y3vnudLohpJMg,1094
+dining_philosophers-0.2.0.dist-info/METADATA,sha256=DdJydpNLBPvg0ztbASbh4yNkwfZxxDkDmhQJXOaWarM,666
+dining_philosophers-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dining_philosophers-0.2.0.dist-info/entry_points.txt,sha256=puZ-yRgD-rMmjDQd8NWfta6zrmw-n6nF3dOM3pxWczY,65
+dining_philosophers-0.2.0.dist-info/top_level.txt,sha256=S7e7AHyLHrdVGObbuBsSd61f5yd8r2VIhA-vpfUIJs8,42
+dining_philosophers-0.2.0.dist-info/RECORD,,

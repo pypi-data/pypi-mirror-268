@@ -1,0 +1,2 @@
+[console_scripts]
+dining-philosophers = dining_philosophers:main

@@ -1,0 +1,5 @@
+build
+dining_philosophers
+dist
+tests
+venv

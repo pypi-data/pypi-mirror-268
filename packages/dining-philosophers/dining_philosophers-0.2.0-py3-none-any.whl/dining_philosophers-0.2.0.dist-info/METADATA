@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dining-philosophers
+Version: 0.2.0
+Summary: Dining philosophers problem simulation
+Author-email: mldxo <miloszmaculewicz@gmail.com>, ZaumNort <nikolai.lobchuk@gmail.com>
+Project-URL: Homepage, https://github.com/mldxo/dining-philosophers
+Project-URL: Issues, https://github.com/mldxo/dining-philosophers/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Dining philosophers
+
+The dining philosophers problem simulation implemented as PyPi package.
