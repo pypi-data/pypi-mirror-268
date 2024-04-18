@@ -1,0 +1,7 @@
+README.md
+dune_rivals.py
+pyproject.toml
+dune_rivals.egg-info/PKG-INFO
+dune_rivals.egg-info/SOURCES.txt
+dune_rivals.egg-info/dependency_links.txt
+dune_rivals.egg-info/top_level.txt
