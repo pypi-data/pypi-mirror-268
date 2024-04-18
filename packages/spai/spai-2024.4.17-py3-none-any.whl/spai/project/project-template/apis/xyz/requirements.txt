@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+spai
+rasterio
+Pillow
+mercantile
+cachetools
+matplotlib
+shapely 
+geopandas
