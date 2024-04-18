@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: das-readability
+Version: 1.0.2
+Summary: Checks the readability of markdown files in a directory and its subdirectories.
+License: Copyright (C) 2024 Novo Nordisk A/S
+Author: lzvb
+Author-email: lzvb@novonordisk.com
+Requires-Python: >=3.9.7,<4.0.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: markdown (>=3.6,<4.0)
+Requires-Dist: prettytable (>=3.10.0,<4.0.0)
+Requires-Dist: setuptools (>=69.5.1,<70.0.0)
+Requires-Dist: textstat (>=0.7.3,<0.8.0)
+Description-Content-Type: text/markdown
+
+# das-readaility
+

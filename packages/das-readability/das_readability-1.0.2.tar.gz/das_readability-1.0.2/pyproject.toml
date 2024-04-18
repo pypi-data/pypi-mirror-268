@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "das-readability"
+version = "1.0.2"
+description = "Checks the readability of markdown files in a directory and its subdirectories."
+authors = ["lzvb <lzvb@novonordisk.com>"]
+license = "Copyright (C) 2024 Novo Nordisk A/S"
+readme = "README.md"
+packages = [{include = "das_readability"}]
+
+[tool.poetry.scripts]
+readability = "das_readability.readability:main"
+das-readability = "das_readability.readability:main"
+
+[tool.poetry.dependencies]
+python = "^3.9.7"
+beautifulsoup4 = "^4.12.3"
+markdown = "^3.6"
+prettytable = "^3.10.0"
+textstat = "^0.7.3"
+setuptools = "^69.5.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.7"
+pytest = "^8.1.1"
+pip-audit = "^2.7.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
