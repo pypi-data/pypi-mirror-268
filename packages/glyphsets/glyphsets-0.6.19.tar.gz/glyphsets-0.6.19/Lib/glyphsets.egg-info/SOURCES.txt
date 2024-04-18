@@ -1,0 +1,355 @@
+.gitignore
+CHANGELOG.md
+GLYPHSETS.md
+LICENSE
+OLD_README.md
+README.md
+build.sh
+renovate.json
+setup.py
+.github/dependabot.yml
+.github/workflows/publish-release.yml
+.github/workflows/test.yml
+.vscode/settings.json
+Archive/GF Glyph Sets/GF-latin-core_unique-glyphs.nam
+Archive/GF Glyph Sets/GF-latin-expert_unique-glyphs.nam
+Archive/GF Glyph Sets/GF-latin-global_unique-glyphs.nam
+Archive/GF Glyph Sets/GF-latin-plus_optional-glyphs.nam
+Archive/GF Glyph Sets/GF-latin-plus_unique-glyphs.nam
+Archive/GF Glyph Sets/GF-latin-pro_optional-glyphs.nam
+Archive/GF Glyph Sets/GF-latin-pro_unique-glyphs.nam
+Archive/GF Glyph Sets/README.md
+Archive/GF Glyph Sets/RECOMMENDED.md
+Archive/GF Glyph Sets/TROUBLESHOOTING.md
+Archive/GF Glyph Sets/Arabic/GF-arabic-core.nam
+Archive/GF Glyph Sets/Arabic/GF-arabic-plus.nam
+Archive/GF Glyph Sets/Arabic/README.md
+Archive/GF Glyph Sets/Cyrillic/GF-cyrillic-historical_unique-glyphs.nam
+Archive/GF Glyph Sets/Cyrillic/GF-cyrillic-plus-locl_unique-glyphs.nam
+Archive/GF Glyph Sets/Cyrillic/GF-cyrillic-plus_unique-glyphs.nam
+Archive/GF Glyph Sets/Cyrillic/GF-cyrillic-pro_unique-glyphs.nam
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/historical_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/plus-locl_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/plus-locl_unique-glyphs_italic.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/plus-locl_unique-glyphs_roman.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/plus_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/plus_unique-glyphs_core.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/plus_unique-glyphs_smallcaps.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/pro_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/nice names/pro_unique-glyphs_smallcaps.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/historical_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/plus-locl_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/plus-locl_unique-glyphs_italic.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/plus-locl_unique-glyphs_roman.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/plus_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/plus_unique-glyphs_core.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/plus_unique-glyphs_smallcaps.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/pro_unique-glyphs.txt
+Archive/GF Glyph Sets/Cyrillic/filter lists/uni names/pro_unique-glyphs_smallcaps.txt
+Archive/GF Glyph Sets/Greek/GF-greek-ancient-musical-symbols.nam
+Archive/GF Glyph Sets/Greek/GF-greek-archaic.nam
+Archive/GF Glyph Sets/Greek/GF-greek-coptic.nam
+Archive/GF Glyph Sets/Greek/GF-greek-core.nam
+Archive/GF Glyph Sets/Greek/GF-greek-expert.nam
+Archive/GF Glyph Sets/Greek/GF-greek-plus.nam
+Archive/GF Glyph Sets/Greek/GF-greek-pro.nam
+Archive/GF Glyph Sets/Greek/README.md
+Archive/GF Glyph Sets/Greek/filter lists/nice names/ancient-musical-symbols.txt
+Archive/GF Glyph Sets/Greek/filter lists/nice names/archaic.txt
+Archive/GF Glyph Sets/Greek/filter lists/nice names/coptic.txt
+Archive/GF Glyph Sets/Greek/filter lists/nice names/core.txt
+Archive/GF Glyph Sets/Greek/filter lists/nice names/expert.txt
+Archive/GF Glyph Sets/Greek/filter lists/nice names/plus.txt
+Archive/GF Glyph Sets/Greek/filter lists/nice names/pro.txt
+Archive/GF Glyph Sets/Greek/filter lists/uni names/ancient-musical-symbols.txt
+Archive/GF Glyph Sets/Greek/filter lists/uni names/archaic.txt
+Archive/GF Glyph Sets/Greek/filter lists/uni names/coptic.txt
+Archive/GF Glyph Sets/Greek/filter lists/uni names/core.txt
+Archive/GF Glyph Sets/Greek/filter lists/uni names/expert.txt
+Archive/GF Glyph Sets/Greek/filter lists/uni names/plus.txt
+Archive/GF Glyph Sets/Greek/filter lists/uni names/pro.txt
+Archive/GF Glyph Sets/Vietnamese/README.md
+Archive/GF Glyph Sets/Vietnamese/img/VIT_accents.jpg
+Archive/GF Glyph Sets/Vietnamese/img/VIT_glyphs.jpg
+Archive/GF Glyph Sets/Vietnamese/img/locl.png
+Archive/GF Glyph Sets/filter lists/README.md
+Archive/GF Glyph Sets/filter lists/plus_optional-glyphs_case-accents.txt
+Archive/GF Glyph Sets/filter lists/plus_unique-glyphs_vietnamese-all.txt
+Archive/GF Glyph Sets/filter lists/plus_unique-glyphs_vietnamese-unique.txt
+Archive/GF Glyph Sets/filter lists/pro_optional-glyphs_case-punctuation.txt
+Archive/GF Glyph Sets/filter lists/nice names/core_unique-glyphs.txt
+Archive/GF Glyph Sets/filter lists/nice names/expert_unique-glyphs.txt
+Archive/GF Glyph Sets/filter lists/nice names/plus_optional-glyphs.txt
+Archive/GF Glyph Sets/filter lists/nice names/plus_unique-glyphs.txt
+Archive/GF Glyph Sets/filter lists/nice names/pro_optional-glyphs.txt
+Archive/GF Glyph Sets/filter lists/nice names/pro_unique-glyphs.txt
+Archive/GF Glyph Sets/filter lists/uni names/core_unique-glyphs.txt
+Archive/GF Glyph Sets/filter lists/uni names/expert_unique-glyphs.txt
+Archive/GF Glyph Sets/filter lists/uni names/plus_optional-glyphs.txt
+Archive/GF Glyph Sets/filter lists/uni names/plus_unique-glyphs.txt
+Archive/GF Glyph Sets/filter lists/uni names/pro_optional-glyphs.txt
+Archive/GF Glyph Sets/filter lists/uni names/pro_unique-glyphs.txt
+Archive/GF Glyph Sets/glyphTypeSorting/EXPERT_composites_207.txt
+Archive/GF Glyph Sets/glyphTypeSorting/EXPERT_drawn_62.txt
+Archive/GF Glyph Sets/glyphTypeSorting/EXPERT_either_4.txt
+Archive/GF Glyph Sets/glyphTypeSorting/PLUS_composites_360.txt
+Archive/GF Glyph Sets/glyphTypeSorting/PLUS_drawn_215.txt
+Archive/GF Glyph Sets/glyphTypeSorting/PLUS_drawn_216.txt
+Archive/GF Glyph Sets/glyphTypeSorting/PLUS_either_19.txt
+Archive/GF Glyph Sets/glyphTypeSorting/PRO_composites_116.txt
+Archive/GF Glyph Sets/glyphTypeSorting/PRO_drawn_26.txt
+Archive/GF Glyph Sets/glyphTypeSorting/PRO_either_4.txt
+Archive/GF Glyph Sets/tutorials/README.md
+Archive/GF Glyph Sets/tutorials/Glyphs/CustomFilter.plist
+Archive/GF Glyph Sets/tutorials/Glyphs/Info/GlyphData.xml
+Archive/GF Glyph Sets/tutorials/img/Directory.png
+Archive/GF Glyph Sets/tutorials/img/ListFilters.png
+Archive/GF Glyph Sets/tutorials/img/PoiretOne-locl.png
+Archive/GF Glyph Sets/tutorials/img/ecircumflexacute.jpg
+Archive/GF Glyph Sets/tutorials/img/fix-1.png
+Archive/GF Glyph Sets/tutorials/img/fix-2.png
+Archive/GF Glyph Sets/tutorials/img/fix-3.png
+Archive/GF Glyph Sets/tutorials/img/list-filter-1.png
+Archive/GF Glyph Sets/tutorials/img/list-filter.png
+Lib/glyphsets/__init__.py
+Lib/glyphsets/__main__.py
+Lib/glyphsets/_version.py
+Lib/glyphsets/data.json
+Lib/glyphsets/helpers.py
+Lib/glyphsets/test_strings.json
+Lib/glyphsets.egg-info/PKG-INFO
+Lib/glyphsets.egg-info/SOURCES.txt
+Lib/glyphsets.egg-info/dependency_links.txt
+Lib/glyphsets.egg-info/entry_points.txt
+Lib/glyphsets.egg-info/not-zip-safe
+Lib/glyphsets.egg-info/requires.txt
+Lib/glyphsets.egg-info/top_level.txt
+Lib/glyphsets/definitions/GF_Arabic_Core.yaml
+Lib/glyphsets/definitions/GF_Arabic_Plus.yaml
+Lib/glyphsets/definitions/GF_Cyrillic_Core.yaml
+Lib/glyphsets/definitions/GF_Cyrillic_Historical.yaml
+Lib/glyphsets/definitions/GF_Cyrillic_Plus.yaml
+Lib/glyphsets/definitions/GF_Cyrillic_Pro.yaml
+Lib/glyphsets/definitions/GF_Greek_AncientMusicalSymbols.yaml
+Lib/glyphsets/definitions/GF_Greek_Archaic.yaml
+Lib/glyphsets/definitions/GF_Greek_Coptic.yaml
+Lib/glyphsets/definitions/GF_Greek_Core.yaml
+Lib/glyphsets/definitions/GF_Greek_Expert.yaml
+Lib/glyphsets/definitions/GF_Greek_Plus.yaml
+Lib/glyphsets/definitions/GF_Greek_Pro.yaml
+Lib/glyphsets/definitions/GF_Latin_African.yaml
+Lib/glyphsets/definitions/GF_Latin_Beyond.yaml
+Lib/glyphsets/definitions/GF_Latin_Core.yaml
+Lib/glyphsets/definitions/GF_Latin_Kernel.yaml
+Lib/glyphsets/definitions/GF_Latin_Plus.yaml
+Lib/glyphsets/definitions/GF_Latin_PriAfrican.yaml
+Lib/glyphsets/definitions/GF_Latin_Vietnamese.yaml
+Lib/glyphsets/definitions/GF_Phonetics_APA.yaml
+Lib/glyphsets/definitions/GF_Phonetics_DisorderedSpeech.yaml
+Lib/glyphsets/definitions/GF_Phonetics_IPAHistorical.yaml
+Lib/glyphsets/definitions/GF_Phonetics_IPAStandard.yaml
+Lib/glyphsets/definitions/GF_Phonetics_SinoExt.yaml
+Lib/glyphsets/definitions/GF_TransLatin_Arabic.yaml
+Lib/glyphsets/definitions/GF_TransLatin_Pinyin.yaml
+Lib/glyphsets/results/nam/GF_Arabic_Core.nam
+Lib/glyphsets/results/nam/GF_Arabic_Plus.nam
+Lib/glyphsets/results/nam/GF_Cyrillic_Core.nam
+Lib/glyphsets/results/nam/GF_Cyrillic_Historical.nam
+Lib/glyphsets/results/nam/GF_Cyrillic_Plus.nam
+Lib/glyphsets/results/nam/GF_Cyrillic_Pro.nam
+Lib/glyphsets/results/nam/GF_Greek_AncientMusicalSymbols.nam
+Lib/glyphsets/results/nam/GF_Greek_Archaic.nam
+Lib/glyphsets/results/nam/GF_Greek_Coptic.nam
+Lib/glyphsets/results/nam/GF_Greek_Core.nam
+Lib/glyphsets/results/nam/GF_Greek_Expert.nam
+Lib/glyphsets/results/nam/GF_Greek_Plus.nam
+Lib/glyphsets/results/nam/GF_Greek_Pro.nam
+Lib/glyphsets/results/nam/GF_Latin_African.nam
+Lib/glyphsets/results/nam/GF_Latin_Beyond.nam
+Lib/glyphsets/results/nam/GF_Latin_Core.nam
+Lib/glyphsets/results/nam/GF_Latin_Kernel.nam
+Lib/glyphsets/results/nam/GF_Latin_Plus.nam
+Lib/glyphsets/results/nam/GF_Latin_PriAfrican.nam
+Lib/glyphsets/results/nam/GF_Latin_Vietnamese.nam
+Lib/glyphsets/results/nam/GF_Phonetics_APA.nam
+Lib/glyphsets/results/nam/GF_Phonetics_DisorderedSpeech.nam
+Lib/glyphsets/results/nam/GF_Phonetics_IPAHistorical.nam
+Lib/glyphsets/results/nam/GF_Phonetics_IPAStandard.nam
+Lib/glyphsets/results/nam/GF_Phonetics_SinoExt.nam
+Lib/glyphsets/results/nam/GF_TransLatin_Arabic.nam
+Lib/glyphsets/results/nam/GF_TransLatin_Pinyin.nam
+Lib/glyphsets/results/txt/nice-names/GF_Arabic_Core.txt
+Lib/glyphsets/results/txt/nice-names/GF_Arabic_Plus.txt
+Lib/glyphsets/results/txt/nice-names/GF_Cyrillic_Core.txt
+Lib/glyphsets/results/txt/nice-names/GF_Cyrillic_Historical.txt
+Lib/glyphsets/results/txt/nice-names/GF_Cyrillic_Plus.txt
+Lib/glyphsets/results/txt/nice-names/GF_Cyrillic_Pro.txt
+Lib/glyphsets/results/txt/nice-names/GF_Greek_AncientMusicalSymbols.txt
+Lib/glyphsets/results/txt/nice-names/GF_Greek_Archaic.txt
+Lib/glyphsets/results/txt/nice-names/GF_Greek_Coptic.txt
+Lib/glyphsets/results/txt/nice-names/GF_Greek_Core.txt
+Lib/glyphsets/results/txt/nice-names/GF_Greek_Expert.txt
+Lib/glyphsets/results/txt/nice-names/GF_Greek_Plus.txt
+Lib/glyphsets/results/txt/nice-names/GF_Greek_Pro.txt
+Lib/glyphsets/results/txt/nice-names/GF_Latin_African.txt
+Lib/glyphsets/results/txt/nice-names/GF_Latin_Beyond.txt
+Lib/glyphsets/results/txt/nice-names/GF_Latin_Core.txt
+Lib/glyphsets/results/txt/nice-names/GF_Latin_Kernel.txt
+Lib/glyphsets/results/txt/nice-names/GF_Latin_Plus.txt
+Lib/glyphsets/results/txt/nice-names/GF_Latin_PriAfrican.txt
+Lib/glyphsets/results/txt/nice-names/GF_Latin_Vietnamese.txt
+Lib/glyphsets/results/txt/nice-names/GF_Phonetics_APA.txt
+Lib/glyphsets/results/txt/nice-names/GF_Phonetics_DisorderedSpeech.txt
+Lib/glyphsets/results/txt/nice-names/GF_Phonetics_IPAHistorical.txt
+Lib/glyphsets/results/txt/nice-names/GF_Phonetics_IPAStandard.txt
+Lib/glyphsets/results/txt/nice-names/GF_Phonetics_SinoExt.txt
+Lib/glyphsets/results/txt/nice-names/GF_TransLatin_Arabic.txt
+Lib/glyphsets/results/txt/nice-names/GF_TransLatin_Pinyin.txt
+data/empty_font.glyphs
+data/definitions/per_glyphset/GF_Arabic_Core.stub.glyphs
+data/definitions/per_glyphset/GF_Cyrillic_Historical.stub.glyphs
+data/definitions/per_glyphset/GF_Cyrillic_Plus.stub.glyphs
+data/definitions/per_glyphset/GF_Cyrillic_Pro.stub.glyphs
+data/definitions/per_glyphset/GF_Greek_AncientMusicalSymbols.stub.glyphs
+data/definitions/per_glyphset/GF_Greek_Archaic.stub.glyphs
+data/definitions/per_glyphset/GF_Greek_Coptic.stub.glyphs
+data/definitions/per_glyphset/GF_Greek_Core.stub.glyphs
+data/definitions/per_glyphset/GF_Greek_Expert.stub.glyphs
+data/definitions/per_glyphset/GF_Greek_Plus.stub.glyphs
+data/definitions/per_glyphset/GF_Greek_Pro.stub.glyphs
+data/definitions/per_glyphset/GF_Latin_Beyond.stub.glyphs
+data/definitions/per_glyphset/GF_Latin_Core.stub.glyphs
+data/definitions/per_glyphset/GF_Latin_Kernel.stub.glyphs
+data/definitions/per_glyphset/GF_Latin_Plus.stub.glyphs
+data/definitions/per_glyphset/GF_Latin_PriAfrican.stub.glyphs
+data/definitions/per_glyphset/GF_Latin_Vietnamese.stub.glyphs
+data/definitions/per_glyphset/GF_Phonetics_APA.stub.glyphs
+data/definitions/per_glyphset/GF_Phonetics_DisorderedSpeech.stub.glyphs
+data/definitions/per_glyphset/GF_Phonetics_IPAHistorical.stub.glyphs
+data/definitions/per_glyphset/GF_Phonetics_IPAStandard.stub.glyphs
+data/definitions/per_glyphset/GF_Phonetics_SinoExt.stub.glyphs
+data/definitions/per_glyphset/GF_TransLatin_Arabic.stub.glyphs
+data/definitions/per_glyphset/GF_TransLatin_Pinyin.stub.glyphs
+data/definitions/per_language/ca_Latn.stub.glyphs
+data/results/glyphs/GF_Arabic_Core.glyphs
+data/results/glyphs/GF_Arabic_Plus.glyphs
+data/results/glyphs/GF_Cyrillic_Core.glyphs
+data/results/glyphs/GF_Cyrillic_Historical.glyphs
+data/results/glyphs/GF_Cyrillic_Plus.glyphs
+data/results/glyphs/GF_Cyrillic_Pro.glyphs
+data/results/glyphs/GF_Greek_AncientMusicalSymbols.glyphs
+data/results/glyphs/GF_Greek_Archaic.glyphs
+data/results/glyphs/GF_Greek_Coptic.glyphs
+data/results/glyphs/GF_Greek_Core.glyphs
+data/results/glyphs/GF_Greek_Expert.glyphs
+data/results/glyphs/GF_Greek_Plus.glyphs
+data/results/glyphs/GF_Greek_Pro.glyphs
+data/results/glyphs/GF_Latin_African.glyphs
+data/results/glyphs/GF_Latin_Beyond.glyphs
+data/results/glyphs/GF_Latin_Core.glyphs
+data/results/glyphs/GF_Latin_Kernel.glyphs
+data/results/glyphs/GF_Latin_Plus.glyphs
+data/results/glyphs/GF_Latin_PriAfrican.glyphs
+data/results/glyphs/GF_Latin_Vietnamese.glyphs
+data/results/glyphs/GF_Phonetics_APA.glyphs
+data/results/glyphs/GF_Phonetics_DisorderedSpeech.glyphs
+data/results/glyphs/GF_Phonetics_IPAHistorical.glyphs
+data/results/glyphs/GF_Phonetics_IPAStandard.glyphs
+data/results/glyphs/GF_Phonetics_SinoExt.glyphs
+data/results/glyphs/GF_TransLatin_Arabic.glyphs
+data/results/glyphs/GF_TransLatin_Pinyin.glyphs
+data/results/nam/GF_Arabic_Core.nam
+data/results/nam/GF_Arabic_Plus.nam
+data/results/nam/GF_Cyrillic_Core.nam
+data/results/nam/GF_Cyrillic_Historical.nam
+data/results/nam/GF_Cyrillic_Plus.nam
+data/results/nam/GF_Cyrillic_Pro.nam
+data/results/nam/GF_Greek_AncientMusicalSymbols.nam
+data/results/nam/GF_Greek_Archaic.nam
+data/results/nam/GF_Greek_Coptic.nam
+data/results/nam/GF_Greek_Core.nam
+data/results/nam/GF_Greek_Expert.nam
+data/results/nam/GF_Greek_Plus.nam
+data/results/nam/GF_Greek_Pro.nam
+data/results/nam/GF_Latin_African.nam
+data/results/nam/GF_Latin_Beyond.nam
+data/results/nam/GF_Latin_Core.nam
+data/results/nam/GF_Latin_Kernel.nam
+data/results/nam/GF_Latin_Plus.nam
+data/results/nam/GF_Latin_PriAfrican.nam
+data/results/nam/GF_Latin_Vietnamese.nam
+data/results/nam/GF_Phonetics_APA.nam
+data/results/nam/GF_Phonetics_DisorderedSpeech.nam
+data/results/nam/GF_Phonetics_IPAHistorical.nam
+data/results/nam/GF_Phonetics_IPAStandard.nam
+data/results/nam/GF_Phonetics_SinoExt.nam
+data/results/nam/GF_TransLatin_Arabic.nam
+data/results/nam/GF_TransLatin_Pinyin.nam
+data/results/plist/CustomFilter_GF_Arabic.plist
+data/results/plist/CustomFilter_GF_Cyrillic.plist
+data/results/plist/CustomFilter_GF_Greek.plist
+data/results/plist/CustomFilter_GF_Latin.plist
+data/results/plist/CustomFilter_GF_Phonetics.plist
+data/results/plist/CustomFilter_GF_TransLatin.plist
+data/results/txt/nice-names/GF_Arabic_Core.txt
+data/results/txt/nice-names/GF_Arabic_Plus.txt
+data/results/txt/nice-names/GF_Cyrillic_Core.txt
+data/results/txt/nice-names/GF_Cyrillic_Historical.txt
+data/results/txt/nice-names/GF_Cyrillic_Plus.txt
+data/results/txt/nice-names/GF_Cyrillic_Pro.txt
+data/results/txt/nice-names/GF_Greek_AncientMusicalSymbols.txt
+data/results/txt/nice-names/GF_Greek_Archaic.txt
+data/results/txt/nice-names/GF_Greek_Coptic.txt
+data/results/txt/nice-names/GF_Greek_Core.txt
+data/results/txt/nice-names/GF_Greek_Expert.txt
+data/results/txt/nice-names/GF_Greek_Plus.txt
+data/results/txt/nice-names/GF_Greek_Pro.txt
+data/results/txt/nice-names/GF_Latin_African.txt
+data/results/txt/nice-names/GF_Latin_Beyond.txt
+data/results/txt/nice-names/GF_Latin_Core.txt
+data/results/txt/nice-names/GF_Latin_Kernel.txt
+data/results/txt/nice-names/GF_Latin_Plus.txt
+data/results/txt/nice-names/GF_Latin_PriAfrican.txt
+data/results/txt/nice-names/GF_Latin_Vietnamese.txt
+data/results/txt/nice-names/GF_Phonetics_APA.txt
+data/results/txt/nice-names/GF_Phonetics_DisorderedSpeech.txt
+data/results/txt/nice-names/GF_Phonetics_IPAHistorical.txt
+data/results/txt/nice-names/GF_Phonetics_IPAStandard.txt
+data/results/txt/nice-names/GF_Phonetics_SinoExt.txt
+data/results/txt/nice-names/GF_TransLatin_Arabic.txt
+data/results/txt/nice-names/GF_TransLatin_Pinyin.txt
+data/results/txt/prod-names/GF_Arabic_Core.txt
+data/results/txt/prod-names/GF_Arabic_Plus.txt
+data/results/txt/prod-names/GF_Cyrillic_Core.txt
+data/results/txt/prod-names/GF_Cyrillic_Historical.txt
+data/results/txt/prod-names/GF_Cyrillic_Plus.txt
+data/results/txt/prod-names/GF_Cyrillic_Pro.txt
+data/results/txt/prod-names/GF_Greek_AncientMusicalSymbols.txt
+data/results/txt/prod-names/GF_Greek_Archaic.txt
+data/results/txt/prod-names/GF_Greek_Coptic.txt
+data/results/txt/prod-names/GF_Greek_Core.txt
+data/results/txt/prod-names/GF_Greek_Expert.txt
+data/results/txt/prod-names/GF_Greek_Plus.txt
+data/results/txt/prod-names/GF_Greek_Pro.txt
+data/results/txt/prod-names/GF_Latin_African.txt
+data/results/txt/prod-names/GF_Latin_Beyond.txt
+data/results/txt/prod-names/GF_Latin_Core.txt
+data/results/txt/prod-names/GF_Latin_Kernel.txt
+data/results/txt/prod-names/GF_Latin_Plus.txt
+data/results/txt/prod-names/GF_Latin_PriAfrican.txt
+data/results/txt/prod-names/GF_Latin_Vietnamese.txt
+data/results/txt/prod-names/GF_Phonetics_APA.txt
+data/results/txt/prod-names/GF_Phonetics_DisorderedSpeech.txt
+data/results/txt/prod-names/GF_Phonetics_IPAHistorical.txt
+data/results/txt/prod-names/GF_Phonetics_IPAStandard.txt
+data/results/txt/prod-names/GF_Phonetics_SinoExt.txt
+data/results/txt/prod-names/GF_TransLatin_Arabic.txt
+data/results/txt/prod-names/GF_TransLatin_Pinyin.txt
+scripts/assemble_charactersets.py
+scripts/assemble_description.py
+scripts/assemble_languages.py
+scripts/create-glyphset.py
+scripts/find_language_for_character.py
+tests/test_dependencies.py
+tests/test_glyphsets.py
+tests/data/MavenPro[wght].ttf
