@@ -1,0 +1,8 @@
+.env
+.idea
+.DS_Store
+flamegraph.svg
+build/
+target/
+__pycache__/
+*.so

@@ -1,0 +1,221 @@
+{
+  "BG": {
+    "<c>": "ISO-3166-1",
+    "s": "<bln|ISO-3166-1#BG|\"Bulgaria\">",
+    "i": "BG",
+    "d": {
+      "name": "Bulgaria",
+      "short": "Bulgaria",
+      "alpha2": "BG",
+      "alpha3": "BGR",
+      "official_en": "Bulgaria",
+      "official_fr": "Bulgarie",
+      "continent": "EU"
+    }
+  },
+  "GB": {
+    "<c>": "ISO-3166-1",
+    "s": "<bln|ISO-3166-1#GB|\"United Kingdom of Great Britain and Northern Ireland\">",
+    "i": "GB",
+    "d": {
+      "name": "United Kingdom of Great Britain and Northern Ireland",
+      "short": "UK",
+      "alpha2": "GB",
+      "alpha3": "GBR",
+      "official_en": "United Kingdom of Great Britain and Northern Ireland",
+      "official_fr": "Royaume-Uni de Grande-Bretagne et d'Irlande du Nord",
+      "continent": "EU"
+    }
+  },
+  "GB:ABD": {
+    "<c>": "ISO-3166-2",
+    "s": "<bln|ISO-3166-2#GB:ABD|\"Aberdeenshire\">",
+    "i": "GB:ABD",
+    "d": {
+      "name": "Aberdeenshire",
+      "supercode": "GB",
+      "subcode": "ABD",
+      "level": "council area"
+    }
+  },
+  "GB:ABC2": {
+    "<c>": "ISO-3166-2",
+    "s": "<bln|ISO-3166-2#GB:ABC|\"Armagh City, Banbridge and Craigavon\">",
+    "i": "GB:ABC",
+    "d": {
+      "name": "Armagh City, Banbridge and Craigavon",
+      "supercode": "GB",
+      "subcode": "ABC",
+      "level": "council area"
+    }
+  },
+  "GB:WSX": {
+    "<c>": "ISO-3166-2",
+    "s": "<bln|ISO-3166-2#GB:WSX|\"West Sussex\">",
+    "i": "GB:WSX",
+    "d": {
+      "name": "West Sussex",
+      "supercode": "GB",
+      "subcode": "WSX",
+      "level": "ceremonial county"
+    }
+  },
+  "BG:01": {
+    "<c>": "ISO-3166-2",
+    "s": "<bln|ISO-3166-2#BG:01|\"Blagoevgrad\">",
+    "i": "BG:01",
+    "d": {
+      "name": "Blagoevgrad",
+      "supercode": "BG",
+      "subcode": "01",
+      "level": "region"
+    }
+  },
+  "BG:02": {
+    "<c>": "ISO-3166-2",
+    "s": "<bln|ISO-3166-2#BG:02|\"Burgas\">",
+    "i": "BG:02",
+    "d": {
+      "name": "Burgas",
+      "supercode": "BG",
+      "subcode": "02",
+      "level": "region"
+    }
+  },
+  "BG:LOZ": {
+    "<c>": "UN-LOCODE",
+    "s": "<bln|UN-LOCODE#BG:LOZ|\"Lozarevo\">",
+    "i": "BG:LOZ",
+    "d": {
+      "name": "Lozarevo",
+      "supercode": "BG",
+      "subcode": "LOZ",
+      "subdivision_name": "Burgas",
+      "subdivision_code": "02",
+      "function_code": "--3-----"
+    }
+  },
+  "BG:BLO": {
+    "<c>": "UN-LOCODE",
+    "s": "<bln|UN-LOCODE#BG:BLO|\"Lyuliakovo\">",
+    "i": "BG:BLO",
+    "d": {
+      "name": "Lyuliakovo",
+      "supercode": "BG",
+      "subcode": "BLO",
+      "subdivision_name": "Burgas",
+      "subdivision_code": "02",
+      "function_code": "-----6--"
+    }
+  },
+  "BG:DBD": {
+    "<c>": "UN-LOCODE",
+    "s": "<bln|UN-LOCODE#BG:DBD|\"Damyanitsa\">",
+    "i": "BG:DBD",
+    "d": {
+      "name": "Damyanitsa",
+      "supercode": "BG",
+      "subcode": "DBD",
+      "subdivision_name": "Blagoevgrad",
+      "subdivision_code": "01",
+      "function_code": "--3-----"
+    }
+  },
+  "BG:DA3": {
+    "<c>": "UN-LOCODE",
+    "s": "<bln|UN-LOCODE#BG:DA3|\"Garmen\">",
+    "i": "BG:DA3",
+    "d": {
+      "name": "Garmen",
+      "supercode": "BG",
+      "subcode": "DA3",
+      "subdivision_name": "Blagoevgrad",
+      "subdivision_code": "01",
+      "function_code": "--3-----"
+    }
+  },
+  "GB:BSI": {
+    "<c>": "UN-LOCODE",
+    "s": "<bln|UN-LOCODE#GB:BSI|\"Bognor Regis\">",
+    "i": "GB:BSI",
+    "d": {
+      "name": "Bognor Regis",
+      "supercode": "GB",
+      "subcode": "BSI",
+      "subdivision_name": "West Sussex",
+      "subdivision_code": "WSX",
+      "function_code": "123-----"
+    }
+  },
+  "GB:ABC": {
+    "<c>": "UN-LOCODE",
+    "s": "<bln|UN-LOCODE#GB:ABC|\"Abercarn\">",
+    "i": "GB:ABC",
+    "d": {
+      "name": "Abercarn",
+      "supercode": "GB",
+      "subcode": "ABC",
+      "subdivision_name": "Caerphilly [Caerffili GB-CAF]",
+      "subdivision_code": "CAY",
+      "function_code": "-23-----"
+    }
+  },
+  "GB:CAY": {
+    "<c>": "ISO-3166-2",
+    "s": "<bln|ISO-3166-2#GB:CAY|\"Caerphilly [Caerffili GB-CAF]\">",
+    "i": "GB:CAY",
+    "d": {
+      "name": "Caerphilly [Caerffili GB-CAF]",
+      "supercode": "GB",
+      "subcode": "CAY",
+      "level": "unitary authority (wales)"
+    }
+  },
+  "GB:SVN": {
+    "<c>": "UN-LOCODE",
+    "s": "<bln|UN-LOCODE#GB:SVN|\"Stonehaven\">",
+    "i": "GB:SVN",
+    "d": {
+      "name": "Stonehaven",
+      "supercode": "GB",
+      "subcode": "SVN",
+      "subdivision_name": "Aberdeenshire",
+      "subdivision_code": "ABD",
+      "function_code": "123-----"
+    }
+  },
+  "BG:02": {
+    "<c>": "ISO-3166-2",
+    "s": "<bln|ISO-3166-2#BG:02|\"Burgas\">",
+    "i": "BG:02",
+    "d": {
+      "name": "Burgas",
+      "supercode": "BG",
+      "subcode": "02",
+      "level": "region"
+    }
+  },
+  "my:1": {
+    "<c>": "MY-STANDARD",
+    "s": "<bln|MY-STANDARD#MY:1|\"My One\">",
+    "i": "my:1",
+    "d": {
+      "name": "My One1",
+      "supercode": "BG",
+      "subcode": "my-1",
+      "subdivision_code": "02",
+      "c": "54N 6W"
+    }
+  },
+  "my:2": {
+    "<c>": "MY-STANDARD",
+    "s": "<bln|MY-STANDARD#MY:2|\"My Two\">",
+    "i": "my:2",
+    "d": {
+      "name": "My Two2",
+      "supercode": "BG",
+      "subcode": "my-2",
+      "subdivision_code": "02"
+    }
+  }
+}
