@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: wizctl
+Version: 24.4.3
+Summary: CloudWiz Command Line Interface
+Home-page: https://cloudwiz.ktds.com/
+Author: Cloudwiz Team
+Author-email: admin@cloudwiz.ktds.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Dist: kt-ds-core
+Requires-Dist: kt-ds-api
+Requires-Dist: Click
+Requires-Dist: tabulate
+Requires-Dist: jinja2
+Requires-Dist: gspread
+Requires-Dist: pandas
+Requires-Dist: google-api-core
+Requires-Dist: google-api-python-client
+Requires-Dist: oauth2client
+Requires-Dist: boto3
+Requires-Dist: PyMySQL
+
+UNKNOWN
+
+
