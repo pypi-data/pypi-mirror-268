@@ -1,0 +1,10 @@
+AutomationService/__init__.py
+AutomationService/__main__.py
+AutomationService/const.py
+AutomationService/service.py
+pih_auto.egg-info/PKG-INFO
+pih_auto.egg-info/SOURCES.txt
+pih_auto.egg-info/dependency_links.txt
+pih_auto.egg-info/entry_points.txt
+pih_auto.egg-info/requires.txt
+pih_auto.egg-info/top_level.txt
