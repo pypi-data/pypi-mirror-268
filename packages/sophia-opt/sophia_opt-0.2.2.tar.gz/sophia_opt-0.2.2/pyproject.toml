@@ -1,0 +1,35 @@
+[project]
+name = "sophia-opt"
+version = "0.2.2"
+description = "A community package of the official implementation of “Sophia: A Scalable Stochastic Second-order Optimizer for Language Model Pre-training”"
+authors = [
+    { name = "Liuhong99" },
+    { name = "fuyutarow", email = "fuyutarow@gmail.com" }
+]
+dependencies = [
+    "torch>=2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+keywords = ["optimizer", "pytorch", "sophia"]
+license = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/fuyutarow/sophia-opt"
+Repository = "https://github.com/fuyutarow/sophia-opt"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sophia_opt"]
+
+
