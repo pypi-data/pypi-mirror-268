@@ -1,0 +1,13 @@
+django_readers/__init__.py,sha256=CpK8IH_dCUAwg9tqv7zm9FxbBFkxCnED1JUiRe7cftU,22
+django_readers/pairs.py,sha256=5b2kHcn1Fc3qH0MPmH2dfQk3gGwaUFX9gjoLXp7ffkI,4919
+django_readers/producers.py,sha256=VWHP07yxZYJHRi-K9WnEynxaKozh4CqQurlkMT7iafo,1421
+django_readers/projectors.py,sha256=thrCdBbFchQkIYNkBxYMBZLCBuMDxD6dQ94wN-vhGAM,705
+django_readers/qs.py,sha256=9zlMnnnevLakThSO8iBN7MILAPeMEOFOl8_BJZ3wB2s,10245
+django_readers/rest_framework.py,sha256=8WsevJ6bfunK9zAXOpFQlOe2e4CeWLp-v_BwAoNHEpU,10134
+django_readers/specs.py,sha256=J9b1zrsdYYAfhzT334DdQW14f5mSz_gmy70IYDwRbpk,1377
+django_readers/utils.py,sha256=Gtfi-mjjRF4f1SUlzlyFnTu0vFIP6E_iYBRSK5f8KLI,3501
+django_readers-2.3.0.dist-info/LICENSE,sha256=gcx34ycwXz-bgi2AK0tziF_8izHDa4LjDN4QHi9HdX8,1290
+django_readers-2.3.0.dist-info/METADATA,sha256=1KpjFwCGVuyHAl9CO6bYX-Ki69vg4dmIbQvORlEQRys,1981
+django_readers-2.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_readers-2.3.0.dist-info/top_level.txt,sha256=JEfWRO9zOFk4cvOuwJYkzAWhgMSUG2d1xPjy_D23NGQ,15
+django_readers-2.3.0.dist-info/RECORD,,
