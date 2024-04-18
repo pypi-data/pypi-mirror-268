@@ -1,0 +1,8 @@
+browserpilot/agents/__init__.py,sha256=moZlz3WzehSFGW9SrNvXBYN91eqxYRgwO9Mz3LIN2dM,85
+browserpilot/agents/compilers/instruction_compiler.py,sha256=Dz3W4eXlo2iwIG2cJfMqTo5-Ok8AgvtC8lIIblXTCVA,18867
+browserpilot/agents/gpt_selenium_agent.py,sha256=9ZGB-Ejtngs3FdGLQXagtMF5VPZWdq2Yuo-5akEUxCI,29180
+browserpilot/agents/memories/__init__.py,sha256=kKznUXSzID46sRdVHHON28rO9NlpNnWaNUu9ZSJCjmo,1584
+browserpilot-0.2.52.dist-info/LICENSE,sha256=b6TKcqvFoY4D_wYqQK1Q5g6cQAtovOcF6uqXzER6kHg,1067
+browserpilot-0.2.52.dist-info/METADATA,sha256=CylELVaK86XExc3TL1ojeSAOXYLq23Z9UsY6lMDM__s,11048
+browserpilot-0.2.52.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+browserpilot-0.2.52.dist-info/RECORD,,
