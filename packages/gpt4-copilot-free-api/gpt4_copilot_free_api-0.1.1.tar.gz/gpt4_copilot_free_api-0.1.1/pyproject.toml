@@ -1,0 +1,28 @@
+[project]
+name = "gpt4-copilot-free-api"
+version = "0.1.1"
+description = "Default template for PDM package"
+authors = [
+    { name = "xDepcio", email = "olek.drwal@gmail.com" },
+]
+dependencies = [
+    "flask>=3.0.3",
+    "requests>=2.31.0",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.entry-points.console_scripts]
+freegpt4 = "gpt4_copilot_free_api.server:main"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
