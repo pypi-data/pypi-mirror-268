@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: dataforgetoolkit
+Version: 1.0.4
+Summary: It is a library that facilitates converting CSV files to various formats (such as DataFrames or other CSV/Excel files) based on a JSON mapping
+Home-page: https://github.com/amitsingh7668/dataforgetoolkit
+Author: Amit Singh
+Author-email: 2singh.amit3@gmail.com
+License: Amit Singh
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
+
+# Project Title
+
+DataForgeToolkit is a Python library for mapping CSV or Excel files based on JSON transformation mappings.
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  pip install dataforgetoolkit
+```
+
+## Usage/Examples
+
+```python
+    from dataforgetoolkit import datamapper
+
+    mapped_data = datamapper.map(report_file_path, transformation_file_path)
+
+```
+
+
+## JSON Transformation Mapping
+
+ Transformation mappings are specified using a JSON file. Example:
+
+    {
+        "transformation_mapping": [
+            {
+                "column": "Name",
+                "new_name": "Student Name",
+                "value_mappings": [
+                    {
+                        "*": "Amit Singh"
+                    }
+                ]
+            },
+            {
+                "column": "Age_Column",
+                "new_name": "Age",
+                "value_mappings": [
+                    {
+                        "FILTER": "30"
+                    }
+                ]
+            }
+        ]
+    }
+
+
+## Authors
+
+- [@amitsingh](https://github.com/amitsingh7668/)
+
+- Software Engineer
+## Contributing
+
+Contributions are always welcome!
+
+Please adhere to this project's `code of conduct`.
+
+Suggest code and open PR/MR
+
+
+## Used By
+
+'Intended Audience' :: Developers , Testers , BA
+
+
+
