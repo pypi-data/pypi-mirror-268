@@ -1,0 +1,1 @@
+from brynq_sdk.successfactors.get_data import GetData
