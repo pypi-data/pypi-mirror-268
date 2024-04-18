@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+trubrics_beta/__init__.py
+trubrics_beta/main.py
+trubrics_beta.egg-info/PKG-INFO
+trubrics_beta.egg-info/SOURCES.txt
+trubrics_beta.egg-info/dependency_links.txt
+trubrics_beta.egg-info/top_level.txt
