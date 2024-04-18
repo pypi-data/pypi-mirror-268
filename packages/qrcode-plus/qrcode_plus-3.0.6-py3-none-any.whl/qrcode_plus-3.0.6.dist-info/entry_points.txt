@@ -1,0 +1,4 @@
+[segno.plugin.converter]
+pilplus=qrcode_plus:write_pil
+qrplus=qrcode_plus:write_artistic
+
