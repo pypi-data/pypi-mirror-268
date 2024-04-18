@@ -1,0 +1,5 @@
+Conversation History:
+{% for message in conversation_history %}{{ message.get_text() }}
+{% endfor %}
+
+Request: {{request.get_text()}}
