@@ -1,0 +1,12 @@
+psutil
+setproctitle
+tblib
+werkzeug>=2.1
+
+[test]
+aiohttp
+psutil
+setproctitle
+tblib
+timeout-decorator
+werkzeug>=2.1
