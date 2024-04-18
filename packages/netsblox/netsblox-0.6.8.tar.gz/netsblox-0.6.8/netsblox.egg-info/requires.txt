@@ -1,0 +1,11 @@
+websocket-client
+deprecation
+darkdetect
+randomname
+requests
+gelidum
+pillow>=8.2
+nb2pb>=0.1.13
+numpy
+parso
+jedi
