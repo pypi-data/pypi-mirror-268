@@ -1,0 +1,6 @@
+README.md
+setup.py
+alphabetical_sort.egg-info/PKG-INFO
+alphabetical_sort.egg-info/SOURCES.txt
+alphabetical_sort.egg-info/dependency_links.txt
+alphabetical_sort.egg-info/top_level.txt
