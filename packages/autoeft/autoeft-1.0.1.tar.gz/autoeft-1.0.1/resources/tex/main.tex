@@ -1,0 +1,46 @@
+% template to compile supplementray TeX files
+\documentclass[10pt,numbers=enddot]{scrartcl}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{autobreak}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage[colorlinks, linkcolor=blue]{hyperref}
+\usepackage[scale=.8]{geometry}
+
+\setkomafont{disposition}{\normalcolor\bfseries}
+
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\numberwithin{equation}{subsection}
+
+\newcommand{\hc}{\mathrm{h.c.}}
+
+\allowdisplaybreaks
+
+\setcounter{MaxMatrixCols}{100}
+
+\begin{document}
+\input{header}
+\maketitle
+\tableofcontents
+\clearpage
+\addsec{Model}
+\input{model}
+\clearpage
+\addsec{Numbers Table}
+\input{numbers_table}
+\clearpage
+\addsec{Hilbert Series}
+\input{hilbert_series}
+\clearpage
+\addsec{Operators}
+\input{operators}
+\end{document}

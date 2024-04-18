@@ -1,0 +1,82 @@
+# AutoEFT model file
+name: SMEFT
+description: Standard Model Effective Field Theory with baryon number conservation
+
+symmetries:
+  lorentz_group:
+    tex: SO^+(1,3)
+  sun_groups:
+    SU3:
+      N: 3
+      tex: SU(3)
+      indices: [a,b,c,d,e,f,g,h]
+    SU2:
+      N: 2
+      tex: SU(2)
+      indices: [i,j,k,l,m,n,p,q]
+  u1_groups:
+    U1:
+      tex: U(1)
+    Bno: {}
+
+fields:
+  GL:
+    representations:
+      Lorentz: -1
+      SU3: [2,1]
+    tex: G_{\mathrm{L}}
+    tex_hc: G_{\mathrm{R}}
+  WL:
+    representations:
+      Lorentz: -1
+      SU2: [2]
+    tex: W_{\mathrm{L}}
+    tex_hc: W_{\mathrm{R}}
+  BL:
+    representations:
+      Lorentz: -1
+    tex: B_{\mathrm{L}}
+    tex_hc: B_{\mathrm{R}}
+  QL:
+    representations:
+      Lorentz: -1/2
+      SU3: [1]
+      SU2: [1]
+      U1: 1/6
+      Bno: 1/3
+    generations: 3
+    tex: Q_{\mathrm{L}}
+  uR:
+    representations:
+      Lorentz: 1/2
+      SU3: [1]
+      U1: 2/3
+      Bno: 1/3
+    generations: 3
+    tex: u_{\mathrm{R}}
+  dR:
+    representations:
+      Lorentz: 1/2
+      SU3: [1]
+      U1: -1/3
+      Bno: 1/3
+    generations: 3
+    tex: d_{\mathrm{R}}
+  LL:
+    representations:
+      Lorentz: -1/2
+      SU2: [1]
+      U1: -1/2
+    generations: 3
+    tex: L_{\mathrm{L}}
+  eR:
+    representations:
+      Lorentz: 1/2
+      U1: -1
+    generations: 3
+    tex: e_{\mathrm{R}}
+  H:
+    representations:
+      SU2: [1]
+      U1: 1/2
+    tex: H

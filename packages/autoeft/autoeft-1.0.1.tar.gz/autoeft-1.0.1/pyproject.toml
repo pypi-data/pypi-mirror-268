@@ -1,0 +1,164 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "autoeft"
+version = "1.0.1"
+description = "Automated operator construction for effective field theories."
+readme = "PyPI_README.md"
+requires-python = ">=3.8"
+license.file = "LICENSE"
+authors = [
+    { name="Robert V. Harlander", email="harlander@physik.rwth-aachen.de" },
+    { name="Magnus C. Schaaf", email="magnus.schaaf@rwth-aachen.de" },
+]
+maintainers = [
+    { name="Magnus C. Schaaf", email="magnus.schaaf@rwth-aachen.de" },
+]
+keywords = [
+    "physics",
+    "hep",
+    "qft",
+    "eft",
+    "operators",
+    "basis",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Unix",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.18",
+    "packaging>=17.1",
+    "pydantic~=1.9",
+    "pyyaml>=5.2",
+    "rich>=12.3",
+#    "sagemath-standard>=9.3",
+    "scipy>=1.8",
+    "semver>=3.0",
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/auto_eft/autoeft"
+
+[project.scripts]
+autoeft = "autoeft.cli:main"
+
+[tool.hatch.build]
+exclude = [
+    "CONTRIBUTING.md",
+    "justfile",
+    ".pre-commit-config.yaml",
+    "template/",
+]
+
+[tool.hatch.build.targets.wheel.force-include]
+"COPYRIGHT" = "autoeft/COPYRIGHT"
+"models/sm.yml" = "autoeft/sm.yml"
+"resources" = "autoeft"
+
+[tool.hatch.envs.dev]
+extra-dependencies = [
+    "black",
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+[tool.hatch.envs.docs]
+extra-dependencies = [
+    "sphinx",
+]
+
+[tool.ruff]
+namespace-packages = ["tests/*"]
+
+[tool.ruff.lint]
+select = [
+    "F",      # Pyflakes
+    "E","W",  # pycodestyle
+    "C90",    # mccabe
+    "I",      # isort
+    "D",      # pydocstyle
+    "UP",     # pyupgrade
+    "YTT",    # flake8-2020
+    "S",      # flake8-bandit
+    "BLE",    # flake8-blind-except
+    "B",      # flake8-bugbear
+    "A",      # flake8-builtins
+    "COM",    # flake8-commas
+    "C4",     # flake8-comprehensions
+    "T10",    # flake8-debugger
+    "EM",     # flake8-errmsg
+    "EXE",    # flake8-executable
+    "ISC",    # flake8-implicit-str-concat
+    "ICN",    # flake8-import-conventions
+    "G",      # flake8-logging-format
+    "INP",    # flake8-no-pep420
+    "PIE",    # flake8-pie
+    "PT",     # flake8-pytest-style
+    "Q",      # flake8-quotes
+    "RSE",    # flake8-raise
+    "RET",    # flake8-return
+    "SLF",    # flake8-self
+    "SIM",    # flake8-simplify
+    "PTH",    # flake8-use-pathlib
+    "TD",     # flake8-todos
+    "FIX",    # flake8-fixme
+    "ERA",    # eradicate
+    "PGH",    # pygrep-hooks
+    "PL",     # Pylint
+    "TRY",    # tryceratops
+    "FLY",    # flynt
+    "NPY",    # NumPy-specific rules
+    "PERF",   # Perflint
+    "RUF",    # Ruff-specific rules
+]
+ignore = [
+    "S101",      # assert
+    "PLR0911",
+    "PLR0912",
+    "PLR0913",
+    "PLR0915",
+    "PLR2004",
+    "D100",      # TODO: remove
+    "D101",      # TODO: remove
+    "D102",      # TODO: remove
+    "D103",      # TODO: remove
+    "D104",      # TODO: remove
+    "D105",      # TODO: remove
+    "D106",      # TODO: remove
+    "D107",      # TODO: remove
+]
+unfixable = [
+    "F401",      # unused-import
+    "F841",      # unused-variable
+    "E731",      # lambda-assignment
+    "ERA001",    # commented out code
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 20
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]

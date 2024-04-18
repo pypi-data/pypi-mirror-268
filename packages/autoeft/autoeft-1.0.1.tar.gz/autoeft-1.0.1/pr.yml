@@ -1,0 +1,17 @@
+# AutoEFT model file
+name: PREFT
+description: Pseudo Real Effective Field Theory
+
+symmetries:
+  sun_groups:
+    SU21:
+      N: 2
+    SU22:
+      N: 2
+
+fields:
+  H:
+    representations:
+      SU21: (1)
+      SU22: (0)
+    conjugate: False
