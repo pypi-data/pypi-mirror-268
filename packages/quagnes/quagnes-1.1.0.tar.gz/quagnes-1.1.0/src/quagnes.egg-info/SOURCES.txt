@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/quagnes/__init__.py
+src/quagnes/agnes.py
+src/quagnes.egg-info/PKG-INFO
+src/quagnes.egg-info/SOURCES.txt
+src/quagnes.egg-info/dependency_links.txt
+src/quagnes.egg-info/top_level.txt

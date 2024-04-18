@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quagnes"
+version = "1.1.0"
+authors = [{name = "Ray Griner", email = "rgriner_fwd@outlook.com"}]
+description = "This package solves Agnes (Agnes Sorel) solitaire card games. It can be used to solve games having the rules implemented in the GNOME AisleRiot package and the rules attributed to Dalton in 1909 and Parlett in 1979 among others and to calculate win rates."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Topic :: Games/Entertainment :: Simulation",
+]
+keywords = ["patience","solitaire","solver","Agnes"]
+
+[setuptools.options]
+packages = "find:"
+include = "quagnes"
+python_requires = ">=3.8"
