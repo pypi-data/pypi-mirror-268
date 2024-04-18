@@ -1,0 +1,37 @@
+Metadata-Version: 2.3
+Name: rladv
+Version: 0.0.3
+Summary: A simple plotter for comparing two reinforcement learning algorithms on multiple environments
+Project-URL: Homepage, https://github.com/BobMak/rladv
+Project-URL: Issues, https://github.com/BobMak/rladv/issues
+Author-email: Volodymyr Makarenko <vlmr.mko@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# rladv
+
+A simple plotting utility for algorithm performance comparison in reinforcement learning benchmarks.
+Plot the relative advantage of your algorithm against your baseline.
+
+## Installation
+
+`pip install wandb tqdm rladv`
+
+## Usage
+
+1. Run your algorithm and a baseline on a benchmark, logging the target performance metric to wandb.
+
+2. Generate the plot:
+```python
+import rladv
+rladv.plot_advantage(project="my_project", comparison_variable="my_metric", cache=True, use_cached=True)
+```
+
+Example Plot: 
+
+![Example Plot](http://imgur.com/uY0EuU5.png)
+
