@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+termii.py
+termii_python_client.egg-info/PKG-INFO
+termii_python_client.egg-info/SOURCES.txt
+termii_python_client.egg-info/dependency_links.txt
+termii_python_client.egg-info/top_level.txt
+tests/test_contact.py
+tests/test_insights.py
+tests/test_messaging.py
+tests/test_number_api.py
+tests/test_phonebooks.py
+tests/test_sender_id.py
+tests/test_token.py
