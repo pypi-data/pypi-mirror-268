@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aidge_core
+Version: 0.0.3
+Summary:  Aidge
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: #TODO To change
+        POC of the next framework named Aidge
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
