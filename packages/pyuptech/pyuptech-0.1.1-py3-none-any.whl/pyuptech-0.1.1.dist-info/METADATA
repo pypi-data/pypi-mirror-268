@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pyuptech
+Version: 0.1.1
+Summary: A Python wrapper for the uptech binary lib
+Author-Email: Whth <88489697+Whth@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: coloredlogs>=15.0.1
+Description-Content-Type: text/markdown
+
+# pyuptech
