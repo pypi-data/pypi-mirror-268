@@ -1,0 +1,10 @@
+setup.py
+melvision/__init__.py
+melvision/alexnet.py
+melvision/googlenet.py
+melvision/resnet.py
+melvision/vgg.py
+melvision.egg-info/PKG-INFO
+melvision.egg-info/SOURCES.txt
+melvision.egg-info/dependency_links.txt
+melvision.egg-info/top_level.txt
