@@ -1,0 +1,12 @@
+easydict
+openpyxl
+pandas
+prettytable
+PTable
+pycryptodomex
+PySide6
+PySide6_Fluent_Widgets
+PySideSix_Frameless_Window
+qrcode
+requests
+setuptools
