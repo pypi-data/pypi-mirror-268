@@ -1,0 +1,110 @@
+[tool.poetry]
+name = "maser"
+version = "0.1.0"
+description = "maser offers tools to handle low frequency radioastronomy data"
+authors = ["Baptiste CECCONI <baptiste.cecconi@obspm.fr>", "Xavier BONNIN <xavier.bonnin@obspm.fr>", "Alan Loh <alan.loh@obspm.fr>", "Lucas Grosset <lucas.grosset@obspm.fr>", "Sonny LION <sonny.lion@obspm.fr>", "Quynh Nhu Nguyen <quynh-nhu.nguyen@obspm.fr>"]
+readme = "README.md"
+# be careful to format the license correctly so that Zenodo can use it as metadata
+# valid licenses are listed here : https://zenodo.org/api/licenses/
+license = "CeCILL"
+homepage = "https://pypi.org/project/maser"
+repository = "https://github.com/maserlib/maser"
+keywords = ["maser", "data science", "radioastronomy"]
+
+# handle namespace with poetry
+packages = [
+    { include = "maser", from = "src" },
+]
+
+#[tool.poetry.urls]
+#"Documentation" = "https://maser.pages.obspm.fr/maser4py"
+#"Tracker" = "https://gitlab.obspm.fr/maser/maser4py/-/issues"
+
+# [[tool.poetry.source]]
+# name = "gitlab_obspm"
+# url = "https://gitlab.obspm.fr/api/v4/projects/2910/packages/pypi/simple"
+
+#[tool.poetry.scripts]
+#maser = 'maser.script:main'
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4"
+#jupyter = {version = "^1.0.0", optional = true}
+#jupytext = {version = "^1.13.8", optional = true}
+#spacepy = {version = ">=0.4,<1.0", optional = true}
+#maser-data = {version = ">=0.4.0,<1.0", optional = true}
+#maser-plot = {version = ">=0.3.0,<1.0", optional = true}
+#maser-tools = {version = ">=0.1.0,<1.0", optional = true}
+
+#[tool.poetry.extras]
+#jupyter = ["jupyter", "jupytext"]
+#data = ["maser-data", "spacepy"]
+#plot = ["maser-plot"]
+#tools = ['maser-tools']
+#all = ["jupyter", "jupytext", "spacepy", "maser-data", "maser-plot", "maser-tools"]
+
+
+#[tool.poetry.dev-dependencies]
+#pytest = "^7.0.1"
+#pytest-cov = "^3.0.0"
+#pre-commit = "^2.17.0"
+#requests = "^2.27.1"
+#Sphinx = "^5.0.2"
+#sphinx-rtd-theme = "^1.0.0"
+#tomli = "^2.0.1"
+#myst-parser = "^0.18.0"
+#mypy = "^0.961"
+#black = "^22.6.0"
+#"maser-tools" = { path = "src/maser_tools", develop = true }
+#"maser-das2" = { path = "src/maser_das2", develop = true }
+#"maser-data" = { path = "src/maser_data", develop = true, extras = ["spacepy"]}
+#"maser-plot" = { path = "src/maser_plot", develop = true }
+
+#[[tool.poetry.source]]
+#name = "gitlab_obspm"
+#url = "https://gitlab.obspm.fr/api/v4/projects/2910/packages/pypi/simple"
+#secondary = true
+
+
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+#[tool.pytest.ini_options]
+#markers = [
+#    "test_data_required: mark tests that require downloading test data",
+#    "spacepy_required: mark tests that require the spacepy package",
+#]
+
+#[tool.jupytext]
+#formats = "ipynb,py:percent"
+# remove notebooks metadata from scripts
+#notebook_metadata_filter = "-all"
+#cell_metadata_filter = "-all"
+
+#[[tool.mypy.overrides]]
+#module = [
+#    "astropy.*",
+#    "spacepy.*",
+#    "matplotlib.*",
+#    "numpy.*",
+#    "xarray.*",
+#]
+#ignore_missing_imports = true
+
+
+[build-system]
+requires = ["poetry>=1.1.4", "setuptools"]
+build-backend = "poetry.core.masonry.api"
