@@ -1,0 +1,3 @@
+[console_scripts]
+freegpt4 = gpt4_copilot_free_api.server:main
+
