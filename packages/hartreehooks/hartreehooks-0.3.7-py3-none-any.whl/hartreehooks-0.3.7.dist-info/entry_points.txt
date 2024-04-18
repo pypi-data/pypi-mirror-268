@@ -1,0 +1,5 @@
+[console_scripts]
+check-missing-requirements=hooks.check_missing_requirements:main
+check-mypy-import-errors=hooks.check_mypy_import_errors:main
+check-pylint-import-errors=hooks.check_pylint_import_errors:main
+

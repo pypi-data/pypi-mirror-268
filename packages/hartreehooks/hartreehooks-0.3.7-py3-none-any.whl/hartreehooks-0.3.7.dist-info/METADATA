@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: hartreehooks
+Version: 0.3.7
+Summary: Custom pre-commit hooks for use within our projects
+Home-page: https://github.com/stfc/pre-commit-hooks
+License: MIT
+Keywords: pre-commit,hooks
+Author: Tom Collingwood
+Author-email: tom.collingwood@stfc.ac.uk
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mypy (>=1.1.1,<2.0.0)
+Requires-Dist: mypy-extensions (>=1.0.0,<2.0.0)
+Requires-Dist: pylint (>=3.1.0,<4.0.0)
+Requires-Dist: regex (>=2022.1.18,<2023.0.0)
+Requires-Dist: requirements-parser (>=0.2.0,<0.3.0)
+Requires-Dist: ruff (>=0.2.1,<0.3.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
+Project-URL: Repository, https://github.com/stfc/pre-commit-hooks
