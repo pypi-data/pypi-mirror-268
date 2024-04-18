@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+scgraph_data/__init__.py
+scgraph_data/world_highways.py
+scgraph_data/world_highways_and_marnet.py
+scgraph_data/world_railways.py
+scgraph_data.egg-info/PKG-INFO
+scgraph_data.egg-info/SOURCES.txt
+scgraph_data.egg-info/dependency_links.txt
+scgraph_data.egg-info/requires.txt
+scgraph_data.egg-info/top_level.txt
