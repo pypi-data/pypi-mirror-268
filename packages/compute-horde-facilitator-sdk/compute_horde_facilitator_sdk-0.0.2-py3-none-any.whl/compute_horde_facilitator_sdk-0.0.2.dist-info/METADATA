@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: compute-horde-facilitator-sdk
+Version: 0.0.2
+Summary: SDK library to communicate with ComputeHorde Facilitator
+Author: Backend Developers LTD
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: httpx>=0.27.0
+Description-Content-Type: text/markdown
+
+# compute-horde-facilitator-sdk
