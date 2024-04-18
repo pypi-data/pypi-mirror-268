@@ -1,0 +1,290 @@
+import pathlib
+
+from .properties.inputils import blocks as fb
+from .properties.inputils.compliance import ComplianceData
+from .properties.inputils.sitebldg import SiteBldgData as sbd
+from .properties.inputils.run_period import RunPeriod
+from .properties.inputils.title import Title
+from .properties.inputils.glass_types import GlassType
+from .utils.doe_formatters import short_name
+
+from honeybee.model import Model
+from honeybee_energy.construction.window import WindowConstruction
+from honeybee_energy.lib.constructionsets import generic_construction_set
+from honeybee.boundarycondition import Surface
+from honeybee.typing import clean_string
+from typing import List
+
+from .properties.switchstatements import *
+
+def model_to_inp(hb_model, hvac_mapping='story', exclude_interior_walls:bool=False, exclude_interior_ceilings:bool=False, switch_statements:bool=False):
+    # type: (Model) -> str
+    """
+        args:
+            hb_model: Honeybee model
+            hvac_mapping: accepts: 'room', 'story', 'model', 'assigned-hvac'
+    """
+    
+    room_list = [room for room in hb_model.rooms]
+    counts = {}
+    for i, room in enumerate(room_list):
+        if room.display_name in counts:
+            counts[room.display_name] += 1
+            room_list[i].display_name = f"{short_name(clean_string(value=room.display_name))}{counts[room.display_name]}"
+        else:
+            counts[room.display_name] = 1
+    
+    mapper_options = ['room', 'story', 'model', 'assigned-hvac']
+    if hvac_mapping not in mapper_options:
+        raise ValueError(
+            f'Invalid hvac_mapping input: {hvac_mapping}\n'
+            f'Expected one of the following: {mapper_options}'
+        )
+    hvac_maps = None
+    if hvac_mapping == 'room':
+        hvac_maps = hb_model.properties.doe2.hvac_sys_zones_by_room
+    elif hvac_mapping == 'story':
+        hvac_maps = hb_model.properties.doe2.hvac_sys_zones_by_story
+    elif hvac_mapping == 'model':
+        hvac_maps = hb_model.properties.doe2.hvac_sys_zones_by_model
+    elif hvac_mapping == 'assigned-hvac':
+        hvac_maps = hb_model.properties.doe2.hvac_sys_zones_by_hb_hvac
+        
+    hb_model = hb_model.duplicate()
+
+    if hb_model.units != 'Feet':
+        hb_model.convert_to_units(units='Feet')
+    hb_model.remove_degenerate_geometry()
+
+    if switch_statements:
+                
+        switchPeopleSched = SwitchPeopleSched.from_hb_model(hb_model).to_inp()
+        switchAreaPerson = SwitchAreaPerson.from_hb_model(hb_model).to_inp()
+        switchLightingWArea = SwitchLightingWArea.from_hb_model(hb_model).to_inp()
+        switchEquipmentWArea = SwitchEquipmentWArea.from_hb_model(hb_model).to_inp()
+        switchLightingSched = SwitchLightingSched.from_hb_model(hb_model).to_inp()
+        switchEquipmentSched = SwitchEquipmentSched.from_hb_model(hb_model).to_inp()
+        switchDesignHeat = SwitchDesignHeat.from_hb_model(hb_model).to_inp()
+        switchHeatSchedule = SwitchHeatSchedule.from_hb_model(hb_model).to_inp()    
+        switchDesignCool = SwitchDesignCool.from_hb_model(hb_model).to_inp()
+        switchCoolSchedule = SwitchCoolSchedule.from_hb_model(hb_model).to_inp()
+        switchOutsideAirFlow = SwitchOutsideAirFlow.from_hb_model(hb_model).to_inp()
+        switchFlowArea = SwitchFlowArea.from_hb_model(hb_model).to_inp()  
+        switchMinFlowRatio = SwitchMinFlowRatio.from_hb_model(hb_model).to_inp()
+        switchAssignedFlow = SwitchAssignedFlow.from_hb_model(hb_model).to_inp()
+        switchHMaxFlowRatio = SwitchHMaxFlowRatio.from_hb_model(hb_model).to_inp()
+        switchMinFlowArea = SwitchMinFlowArea.from_hb_model(hb_model).to_inp()
+        #switchMinFlowSch = SwitchMinFlowSched.from_hb_model(hb_model).to_inp()
+    else:
+        #switchMinFlowSch = ''
+        switchPeopleSched = ''
+        switchAreaPerson = ''
+        switchLightingWArea = ''
+        switchEquipmentWArea = ''
+        switchLightingSched = ''
+        switchEquipmentSched = ''
+        switchDesignHeat = ''
+        switchHeatSchedule = ''
+        switchDesignCool = ''
+        switchCoolSchedule = ''
+        switchOutsideAirFlow = ''
+        switchFlowArea = ''
+        switchMinFlowRatio = ''
+        switchAssignedFlow = ''
+        switchHMaxFlowRatio = ''
+        switchMinFlowArea = ''
+
+    for room in hb_model.rooms:
+        room.properties.doe2.interior_wall_toggle = exclude_interior_walls
+    
+    for room in hb_model.rooms:
+        room.properties.doe2.interior_ceiling_toggle = exclude_interior_ceilings
+
+    day_list = [] 
+    for scheduleruleset in hb_model.properties.energy.schedules:
+        for day in scheduleruleset.day_schedules:
+            day.unlock()
+            day.display_name = short_name(day.display_name)
+            day_list.append(day)
+    counts = {}
+    for i, day in enumerate(day_list):
+        if day.display_name in counts:
+            counts[day.display_name] += 1
+            day_list[i].display_name = f"{day.display_name[:-1]}{counts[day.display_name]}"
+        else:
+            counts[day.display_name] = 1 
+    
+
+    try:
+        hb_model.rectangularize_apertures(
+            subdivision_distance=0.5, max_separation=0.0, merge_all=True,
+            resolve_adjacency=True
+        )
+    except AssertionError:
+        # try without resolving adjacency that can create errors
+        hb_model.rectangularize_apertures(
+            subdivision_distance=0.5, max_separation=0.0, merge_all=True,
+            resolve_adjacency=False
+        )
+
+    room_names = {}
+    face_names = {}
+    for room in hb_model.rooms:
+        room.display_name = clean_string(room.display_name).replace('..', '_')
+        room.display_name = short_name(room.display_name)
+        if room.display_name in room_names:
+            original_name = room.display_name
+            room.display_name = f'{original_name}_{room_names[original_name]}'
+            room_names[original_name] += 1
+        else:
+            room_names[room.display_name] = 1
+
+        for face in room.faces:
+            face.display_name = clean_string(face.display_name).replace('..', '_')
+            face.display_name = short_name(face.display_name)
+            if face.display_name in face_names:
+                original_name = face.display_name
+                face.display_name = f'{original_name}_{face_names[original_name]}'
+                face_names[original_name] += 1
+            else:
+                face_names[face.display_name] = 1
+
+            for apt in face.apertures:
+                apt.display_name = clean_string(apt.display_name).replace('..', '_')
+                apt.display_name = short_name(apt.display_name)
+                if apt.display_name in face_names:
+                    original_name = apt.display_name
+                    apt.display_name = f'{original_name}_{face_names[original_name]}'
+                    face_names[original_name] += 1
+                else:
+                    face_names[apt.display_name] = 1
+    
+    room_mapper = {
+        r.identifier: r.display_name for r in hb_model.rooms
+    }
+    for i, shade in enumerate(hb_model.shades):
+        shade.display_name = f'shade_{i}'
+    for face in hb_model.faces:
+        if isinstance(face.boundary_condition, Surface):
+            adj_room_identifier = face.boundary_condition.boundary_condition_objects[1]
+            face.user_data = {'adjacent_room': room_mapper[adj_room_identifier]}
+
+    window_constructions = [
+        generic_construction_set.aperture_set.window_construction,
+        generic_construction_set.aperture_set.interior_construction,
+        generic_construction_set.aperture_set.operable_construction,
+        generic_construction_set.aperture_set.skylight_construction
+    ]
+
+    for construction in hb_model.properties.energy.constructions:
+        if isinstance(construction, WindowConstruction):
+            window_constructions.append(construction)
+    wind_con_set = set(window_constructions)
+    win_con_to_inp = [GlassType.from_hb_window_constr(constr) for constr in wind_con_set]
+    
+    
+    rp = RunPeriod()
+    comp_data = ComplianceData()
+    sb_data = sbd()
+    data = [
+        hb_model.properties.doe2._header,
+        fb.global_params,
+        fb.ttrpddh,
+        Title(title=str(hb_model.display_name)).to_inp(),
+        rp.to_inp(),  # TODO unhardcode
+        fb.comply,
+        comp_data.to_inp(),
+        sb_data.to_inp(),
+        fb.daySch,
+        hb_model.properties.doe2.day_scheduels,
+        fb.weekSch,
+        hb_model.properties.doe2.week_scheduels,
+        fb.mats_layers,
+        hb_model.properties.doe2.mats_cons_layers,
+        fb.glzCode,
+        '\n'.join(gt.to_inp() for gt in win_con_to_inp),
+        fb.doorCode,
+        fb.polygons,
+        '\n'.join(s.story_poly for s in hb_model.properties.doe2.stories),
+        fb.wallParams,
+        hb_model.properties.doe2.fixed_shades,
+        fb.miscCost,
+        fb.perfCurve,
+        fb.floorNspace,
+        switchPeopleSched,
+        switchAreaPerson,
+        switchLightingWArea,
+        switchLightingSched,
+        switchEquipmentWArea,
+        switchEquipmentSched,
+        '\n'.join(str(story) for story in hb_model.properties.doe2.stories),
+        fb.elecFuelMeter,
+        fb.elec_meter,
+        fb.fuel_meter,
+        fb.master_meter,
+        fb.hvac_circ_loop,
+        fb.pumps,
+        fb.heat_exch,
+        fb.circ_loop,
+        fb.chiller_objs,
+        fb.boiler_objs,
+        fb.dwh,
+        fb.heat_reject,
+        fb.tower_free,
+        fb.pvmod,
+        fb.elecgen,
+        fb.thermal_store,
+        fb.ground_loop_hx,
+        fb.comp_dhw_res,
+        fb.steam_cld_mtr,
+        fb.steam_mtr,
+        fb.chill_meter,
+        fb.hvac_sys_zone,
+        switchDesignHeat,
+        switchHeatSchedule,
+        switchDesignCool,
+        switchCoolSchedule,
+        switchOutsideAirFlow,
+        switchFlowArea,
+        switchMinFlowRatio,
+        switchAssignedFlow,
+        switchHMaxFlowRatio,
+        switchMinFlowArea,
+        #switchMinFlowSch,
+        '\n'.join(hv_sys.to_inp()
+                  for hv_sys in hvac_maps),  # * change to variable
+        fb.misc_meter_hvac,
+        fb.equip_controls,
+        fb.load_manage,
+        fb.big_util_rate,
+        fb.ratchets,
+        fb.block_charge,
+        fb.small_util_rate,
+        fb.output_reporting,
+        fb.loads_non_hrly,
+        fb.sys_non_hrly,
+        fb.plant_non_hrly,
+        fb.econ_non_hrly,
+        fb.hourly_rep,
+        fb.the_end
+    ]
+    return str('\n\n'.join(data))
+
+
+def honeybee_model_to_inp(
+        model: Model, hvac_mapping: str = 'story',exclude_interior_walls=False, exclude_interior_ceilings=False,
+        switch_statements:bool=False, folder: str = '.', name: str = None) -> pathlib.Path:
+
+    inp_model = model_to_inp(model, hvac_mapping=hvac_mapping,
+                             exclude_interior_walls=exclude_interior_walls,
+                             exclude_interior_ceilings=exclude_interior_ceilings,
+                             switch_statements=switch_statements)
+
+    name = name or model.display_name
+    if not name.lower().endswith('.inp'):
+        name = f'{name}.inp'
+    out_folder = pathlib.Path(folder)
+    out_folder.mkdir(parents=True, exist_ok=True)
+    out_file = out_folder.joinpath(name)
+    out_file.write_text(inp_model)
+    return out_file
