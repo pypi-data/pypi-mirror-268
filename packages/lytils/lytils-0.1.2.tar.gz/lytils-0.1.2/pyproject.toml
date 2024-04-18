@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "lytils"
+version = "0.1.2"
+description = "Python utilities. Pytils was taken."
+authors = ["GGLionCross"]
+license = "Apache 2.0"
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
