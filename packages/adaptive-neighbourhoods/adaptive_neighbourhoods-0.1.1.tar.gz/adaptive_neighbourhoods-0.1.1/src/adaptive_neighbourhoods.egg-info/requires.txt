@@ -1,0 +1,8 @@
+
+[dev]
+pandas
+numpy
+requests
+build
+twine
+pytest
