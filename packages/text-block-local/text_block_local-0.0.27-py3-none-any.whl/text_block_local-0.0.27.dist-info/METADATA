@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: text-block-local
+Version: 0.0.27
+Home-page: https://github.com/circles-zone/text-block-local-python-package
+Author: Circles
+Author-email: info@circles.life
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pytest >=7.4.1
+Requires-Dist: database-infrastructure-local >=0.0.19
+Requires-Dist: logger-local >=0.0.71
+Requires-Dist: database-mysql-local >=0.0.116
+Requires-Dist: user-context-remote >=0.0.35
+Requires-Dist: profiles-local >=0.0.65
+Requires-Dist: person-local >=0.0.40
+
+Text Block
