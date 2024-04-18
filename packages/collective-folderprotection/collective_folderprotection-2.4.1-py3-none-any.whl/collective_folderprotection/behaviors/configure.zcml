@@ -1,0 +1,38 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.folderprotection">
+
+    <configure zcml:condition="installed plone.behavior">
+        <include package="plone.behavior" file="meta.zcml" />
+
+        <plone:behavior
+            name="collective_folderprotection.password_protected"
+            title="Password Protected"
+            description="Allows to protect this content type with a password"
+            provides="collective_folderprotection.behaviors.interfaces.IPasswordProtected"
+            factory="collective_folderprotection.behaviors.passwordprotected.PasswordProtected"
+            for="plone.dexterity.interfaces.IDexterityContent"
+            />
+
+        <plone:behavior
+            name="collective_folderprotection.delete_protected"
+            title="Delete Protection"
+            description="Prevents anyone deleting content created inside this content type"
+            provides="collective_folderprotection.behaviors.interfaces.IDeleteProtected"
+            factory="collective_folderprotection.behaviors.del_protected.DeleteProtected"
+            for="plone.dexterity.interfaces.IDexterityContent"
+            />
+
+        <plone:behavior
+            name="collective_folderprotection.rename_protected"
+            title="Rename Protection"
+            description="Prevents anyone renaming content created inside this content type"
+            provides="collective_folderprotection.behaviors.interfaces.IRenameProtected"
+            factory="collective_folderprotection.behaviors.rename_protected.RenameProtected"
+            for="plone.dexterity.interfaces.IDexterityContent"
+            />
+    </configure>
+
+</configure>
