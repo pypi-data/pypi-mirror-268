@@ -1,0 +1,8 @@
+cleen/__init__.py,sha256=dXfNseI_c7l3AdNK4m0z7tuWOyUHdtLyiwoe2bMP000,71
+cleen/cluster/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cleen/learner/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cleen/segmenter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cleen-0.0.1.dist-info/LICENSE,sha256=pIPQDCvwEmBuuXYv72U7t_XW0qqWUZ9YJn1nFeHEF-0,1066
+cleen-0.0.1.dist-info/METADATA,sha256=00DxBO8b-L5ZRrnOG5qxzT70wdLAzV3JUtPPU0-A32M,1632
+cleen-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cleen-0.0.1.dist-info/RECORD,,
