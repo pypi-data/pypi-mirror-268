@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ksqldb-client
+Version: 0.28.2a2
+Summary: 
+Author: Ander Aramburu
+Author-email: ander.aranfdz@gmail.com
+Requires-Python: >=3.10,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx[http2] (>=0.27.0,<0.28.0)
+Requires-Dist: pandas (>=2.2.1,<3.0.0)
+Requires-Dist: pydantic (>=2.6.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# KSqlDB Client
+
+A Python client to interact with the [KSqlDB REST API](https://docs.ksqldb.io/en/latest/developer-guide/api/).
+
