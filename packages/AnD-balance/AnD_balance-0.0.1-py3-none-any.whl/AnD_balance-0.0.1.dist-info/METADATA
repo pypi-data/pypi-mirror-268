@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: AnD_balance
+Version: 0.0.1
+Summary: A Python package for communication with A&D FX-i/FX-iN balances
+Home-page: https://github.com/oscarbranson/AnD_balance
+Author: Oscar Branson
+Author-email: ob266@cam.ac.uk
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pyserial
+
