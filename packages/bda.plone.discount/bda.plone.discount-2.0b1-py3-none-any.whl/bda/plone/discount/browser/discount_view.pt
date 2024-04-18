@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="bda.plone.discount">
+
+<head>
+  <metal:override
+    fill-slot="top_slot"
+    tal:define="
+        border view/disable_border;
+        disable_left_column view/disable_left_column;
+        disable_right_column view/disable_right_column" />
+</head>
+
+<body>
+
+<metal:main fill-slot="main">
+  <tal:main-macro metal:define-macro="main">
+
+    <header>
+      <h1 class="documentFirstHeading"
+        tal:content="view/title">Discount Rules</h1>
+    </header>
+
+    <div class="discount_form_filter"
+         tal:attributes="ajax:target context/absolute_url">
+      <tal:form replace="structure view/rendered_filter" />
+    </div>
+
+    <div class="disount_form_wrapper">
+      <tal:form replace="structure view/rendered_form" />
+    </div>
+
+  </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

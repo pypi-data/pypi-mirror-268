@@ -1,0 +1,199 @@
+Metadata-Version: 2.1
+Name: bda.plone.discount
+Version: 2.0b1
+Summary: Discounting Information for Content Items
+Author: BlueDynamics Alliance
+Author-email: dev@bluedynamics.com
+License: GNU General Public Licence
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 6.0
+Classifier: Framework :: Plone :: Addon
+Classifier: Framework :: Zope
+Classifier: Framework :: Zope :: 5
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.rst
+License-File: LICENSE_GPL.rst
+Requires-Dist: setuptools
+Requires-Dist: Plone
+Requires-Dist: souper.plone
+Requires-Dist: yafowil.plone
+Requires-Dist: yafowil.widget.autocomplete
+Requires-Dist: yafowil.widget.array
+Requires-Dist: bda.plone.cart
+Provides-Extra: test
+Requires-Dist: plone.app.testing ; extra == 'test'
+Requires-Dist: mock ; extra == 'test'
+
+bda.plone.discount
+==================
+
+This package contains forms for defining discounting rules for buyable items,
+both on per item basis and for overall cart, and the corresponding calculation
+adapters.
+
+
+Installation
+------------
+
+This package is part of the ``bda.plone.shop`` stack. Please refer to
+``https://github.com/bluedynamics/bda.plone.shop`` for installation
+instructions.
+
+
+Usage
+-----
+
+XXX: Write me
+
+
+Restrictions with souper.plone
+------------------------------
+
+- Make sure you do not move discount rules soup away from portal root. This
+  will end up in unexpected behavior and errors.
+
+
+TODO
+----
+
+- Currently discount is calculated from net prices. Make it possible to control
+  whether discount should be calculated from gross prices.
+
+- Implement Vouchers / Coupons.
+
+- Implement "block neighbor" flag and consider neighbor rules as well as
+  parental rules.
+
+- Implement portal type filter in cart discount rules. Usecase is to discount
+  by overall items of same type in cart.
+
+
+Contributors
+------------
+
+- Robert Niederreiter (Author)
+- Peter Holzer
+- Jens Klein
+- Johannes Raggam
+- Ezra Holder
+
+Changelog
+=========
+
+2.0b1 (2024-04-17)
+------------------
+
+- No longer support for z3c.autoinclude.
+  [jensens]
+
+- Adopt import to latest cart changes.
+  [jensens]
+
+- Code style black. isort imports.
+  [jensens]
+
+- Python 2/3 compatibility
+  [agitator]
+
+- Update version and classifiers - 2.x targets Plone 5.1/5.2 without Archetypes
+  [agitator]
+
+- Update resource loading for discount view
+  [agitator]
+
+1.0a1 (unreleased)
+------------------
+
+- Replace unittest2 with untittest
+  [agitator]
+
+- Item discount threshold can be defined either by price or item count.
+  [rnix]
+
+- Add portal type filter support for cart item discount rules.
+  [rnix]
+
+- Ignore all non ``IDiscountSettingsEnabled`` and non ``ISite`` providing
+  contexts in ``RuleAcquierer.rules``.
+  [rnix]
+
+- Bind all views to ``IDiscountExtensionLayer``.
+  [rnix]
+
+- Make ``discount_form`` global in ``discount.js`` in order to make discount
+  form switch work again.
+  [rnix]
+
+- Add actions to enable and disable item discount
+  (``IDiscountSettingsEnabled``) on context.
+  [rnix]
+
+- Plone 5 update.
+  [agitator]
+
+
+0.3
+---
+
+- JSHint JavaScript.
+  [thet]
+
+
+0.2
+---
+
+- Translate ``changes_saved`` ajax message directly in view class.
+  [rnix]
+
+- Add ``user`` and ``group`` keyword arguments to
+  ``bda.plone.discount.settings.PersistendDiscountSettings.rules`` function.
+  Restrict the use of these keywords by defined ``for_attribute`` scope.
+  [rnix]
+
+- Avoid division / 0 in ``bda.plone.discount.calculator.CartDiscount.vat``
+  [rnix]
+
+- Only hide border for global dicsount_views.
+  [rnix]
+
+
+0.1
+---
+
+- initial work
+  [rnix]
+
+License
+=======
+
+Copyright (c) 2014-2019, BlueDynamics Alliance, Austria
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this 
+  list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this 
+  list of conditions and the following disclaimer in the documentation and/or 
+  other materials provided with the distribution.
+* Neither the name of the BlueDynamics Alliance nor the names of its 
+  contributors may be used to endorse or promote products derived from this 
+  software without specific prior written permission.
+      
+THIS SOFTWARE IS PROVIDED BY BlueDynamics Alliance ``AS IS`` AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL BlueDynamics Alliance BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
