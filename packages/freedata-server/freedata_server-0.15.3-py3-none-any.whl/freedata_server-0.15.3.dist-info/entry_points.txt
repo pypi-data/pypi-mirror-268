@@ -1,0 +1,2 @@
+[console_scripts]
+freedata-server = modem.server:main
