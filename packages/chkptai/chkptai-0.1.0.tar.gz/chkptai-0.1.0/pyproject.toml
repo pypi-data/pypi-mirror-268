@@ -1,0 +1,34 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[project]
+
+name = "chkptai"
+
+authors = [{ name = "Checkpoint-AI", email = "mail@checkpoint-ai.com" }]
+
+dynamic = ["version"]
+keywords = []
+description = "Checkpoint-AI Python SDK"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = []
+license = { text = "proprietary" }
+
+[project.optional-dependencies]
+dev = ["mypy", "flake8", "pytest", "black", "pylint"]
+[project.urls]
+
+homepage = "https://checkpoint-ai.com"
+
+[tool.setuptools.dynamic]
+version = { attr = "chkptai.__version__" }
