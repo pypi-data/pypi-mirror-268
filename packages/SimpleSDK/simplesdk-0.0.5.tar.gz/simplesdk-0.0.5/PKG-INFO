@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: SimpleSDK
+Version: 0.0.5
+Summary: SDK for EuskadiTech's Simple Axel (https://git.tech.eus/EuskadiTech/SimpleSDK)
+Home-page: https://git.tech.eus/EuskadiTech/SimpleSDK
+Author: EuskadiTech
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires: requests
+License-File: LICENSE
