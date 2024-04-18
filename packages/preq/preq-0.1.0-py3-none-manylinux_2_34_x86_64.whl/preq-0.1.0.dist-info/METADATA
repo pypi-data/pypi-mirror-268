@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: preq
+Version: 0.1.0
+Summary: Generates requirements.txt for Python projects.
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# preq
+
+Revamped alternative to pipreqs written in rust and using Python 3.10 sys package maetadata.
+
