@@ -1,0 +1,5 @@
+importlib-resources
+numpy
+aqme
+rdkit-pypi
+biopython

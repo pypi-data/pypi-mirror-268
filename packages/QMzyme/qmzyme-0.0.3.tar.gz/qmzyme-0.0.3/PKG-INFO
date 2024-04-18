@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: QMzyme
+Version: 0.0.3
+Summary: QM-based enzyme model generation and validation.
+Author-email: Heidi Klem <heidi.klem@nist.gov>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: importlib-resources
+Requires-Dist: numpy
+Requires-Dist: aqme
+Requires-Dist: rdkit-pypi
+Requires-Dist: biopython
+
+
+![](logo.png)
+
+Full documentation with installation instructions, technical details and examples can be found in [Read the Docs](https://hklem-qmzyme-documentation.readthedocs.io).
+
+#### Copyright
+Copyright (c) 2023, Heidi Klem
+
+#### Acknowledgements
+Project architecture initiated through the 
+[Computational Molecular Science Python Cookiecutter](https://github.com/molssi/cookiecutter-cms).
