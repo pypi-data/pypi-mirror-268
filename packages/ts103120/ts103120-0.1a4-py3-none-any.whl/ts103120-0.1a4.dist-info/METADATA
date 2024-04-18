@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ts103120
+Version: 0.1a4
+Summary: XMLTest XML validation helper
+Author-email: Mark Canterbury <markc@tencastle.com>
+Requires-Python: >3.7
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: xmltest
+Requires-Dist: testjson
+Requires-Dist: semver
+Requires-Dist: rich
