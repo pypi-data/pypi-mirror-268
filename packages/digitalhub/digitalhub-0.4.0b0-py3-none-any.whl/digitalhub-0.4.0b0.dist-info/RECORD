@@ -1,0 +1,14 @@
+digitalhub/__init__.py,sha256=HSgbYc9aZ03S1eX2vLm-NdSrZ2tGizTDWb4qwR_11HQ,2225
+test/test_crud_artifacts.py,sha256=yjlY_Bx99LPtMh15ufqFVU3KdogkmMjbbIGFkyVg25I,2511
+test/test_crud_dataitems.py,sha256=-xAQ4UxSBqWPwsSLDSqy0EXp8uElymh-MAak3NqnOcs,2504
+test/test_crud_functions.py,sha256=gYIBpPTE0spTVoM8li2N64nCa4zSTgh2CRu0FReWsEg,2769
+test/test_crud_runs.py,sha256=s8LG1SpsQe4pisFGmq-hlHiJr3RQcXsfjggRKtLGCCA,2220
+test/test_crud_tasks.py,sha256=XhSTj0hQNwJ61MbdSczYKMXYUIf_e6alwls9TnIpEiY,2111
+test/test_imports.py,sha256=2Uuo-pa0HgA-qASl1ZpUj6tVze8_2PlmBapuyvDgLDQ,1269
+test/testkfp.py,sha256=awl2LD6TDXqrZ1R4yyFZkWjmdISL5TWrg3_mrqlvNXI,1086
+test/testkfp_pipeline.py,sha256=s8Fz_S4eQGvakayDAzOfGRFT5W6mzm0ugvb2A4agGBk,619
+digitalhub-0.4.0b0.dist-info/LICENSE.txt,sha256=_yVOtnbW7Ss28mp058UEEc1X4Rgj8-kQBP_kj8_Sc88,11585
+digitalhub-0.4.0b0.dist-info/METADATA,sha256=cnV86D5O1WrWwfm9hZRAr_D86Qn-aEsVvlpX8DQCHbo,14309
+digitalhub-0.4.0b0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+digitalhub-0.4.0b0.dist-info/top_level.txt,sha256=ae9pDfCF27ZoaVAxuBKONMP0lm5P-N_I-e-no1WlvD8,16
+digitalhub-0.4.0b0.dist-info/RECORD,,
