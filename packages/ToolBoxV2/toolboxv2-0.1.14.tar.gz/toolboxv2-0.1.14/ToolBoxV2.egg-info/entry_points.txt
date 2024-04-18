@@ -1,0 +1,2 @@
+[console_scripts]
+toolboxv2 = toolboxv2.cli:main_runner
