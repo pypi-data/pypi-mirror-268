@@ -1,0 +1,2 @@
+[console_scripts]
+run_train_pipeline = automated_ml_pack.train_pipeline:main
