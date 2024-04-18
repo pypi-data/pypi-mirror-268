@@ -1,0 +1,5 @@
+setup.py
+funnel_nexus_lib.egg-info/PKG-INFO
+funnel_nexus_lib.egg-info/SOURCES.txt
+funnel_nexus_lib.egg-info/dependency_links.txt
+funnel_nexus_lib.egg-info/top_level.txt
