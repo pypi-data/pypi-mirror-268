@@ -1,0 +1,15 @@
+M18K/__init__.py,sha256=uBioVRaL7G7aFM1gEqYbXi35wK2I0lTRZwyrCGn5yfc,19
+M18K/Data/DataModule.py,sha256=dzVpGtFT_E59YREDMXOXH0zQmdNgtNWAU50pLBpbl_k,2086
+M18K/Data/Dataset.py,sha256=iRqhus-WVDaEVkxVPgZSD_yPgNJ4Rhu9N3uWl4MJZ4Q,5412
+M18K/Data/__init__.py,sha256=NMtTaZMaDhfAXHuuloYb3DeRiQkW7a5EliFwM8zUgt4,71
+M18K/Models/FasterRCNN.py,sha256=3-74Kji23Wdgr206GzO9_FCGebNz8hJMo_23ur3ZTzE,7780
+M18K/Models/HuggingFace.py,sha256=vRIkbdNQBGiTvWK-ifhCMiQ1JggECGyzk_GKNHi4bog,1401
+M18K/Models/MaskRCNN.py,sha256=wqNmnG4CBL6gNQt_p6YO0ApbiMuoFMlxdSdY7hP0Rws,10976
+M18K/Models/TimmWrapper.py,sha256=86fzBD6mC4-TfOfdJNFarFnocaAmU8srwhPZ4g9npKo,524
+M18K/Models/TorchVision.py,sha256=cgmQ3Vq2D-XvAlDB56gOgWv0xKNgVqYsI1jAyFp880o,1476
+M18K/Models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+M18K-1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+M18K-1.0.dist-info/METADATA,sha256=yKkfk3c5s_NFhoqlho-qpgzFhnX31mYAIHAPMqXwa1U,2453
+M18K-1.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+M18K-1.0.dist-info/top_level.txt,sha256=nHpfjzNRvujno7ecyE12zV5mc6QKWd-uNS_fRtFvRjo,5
+M18K-1.0.dist-info/RECORD,,
