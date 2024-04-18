@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: zbx-wxwork-assistant
+Version: 1.1.0
+Summary: A simple package for zabbix-wxwork assistant tool.
+Author: gary
+Author-email: mepmb@sina.com
+Requires-Dist: zabbix-api >=0.5.4
+Requires-Dist: diskcache ~=5.4.0
+
+zbx-wxwork-assistant
+====================
+
+前言
+----
+
+- 此模块主要用来在企业微信应用中展示 ``Zabbix`` 相关的信息，比如 **告警**、**主机信息** 等
+- 企业微信本身和 ``Zabbix`` **并无直接关联**，但是在 ``Zabbix`` 的用户媒介中可以配置企业微信的告警媒介，告警媒介的 ``sendto`` 字段中可以包含企业微信用户的 ``id`` 因而两者可以产生关联
+- 此模块需要传入 ``Zabbix`` 登录用户相关的信息，包括用户名、``Token`` 和服务器地址，为安全起见，不支持传入密码，且信息的读取全部通过环境变量
+
+环境变量
+---------
+
+- **WXZBXASSISTANT_ZABBIX_URL**，``Zabbix`` **服务器地址**
+- **WXZBXASSISTANT_ZABBIX_USERNAME**，``Zabbix`` **服务器登录用户**
+- **WXZBXASSISTANT_ZABBIX_API_TOKEN**，``Zabbix`` **服务器登录用户 API Token**
+- **WXZBXASSISTANT_ZABBIX_API_TIMEOUT**，``Zabbix`` **服务器访问超时时间**。默认值为 ``60``
+- **WXZBXASSISTANT_ZABBIX_SEVERITIES**，``Zabbix`` **告警级别列表**。默认值为 ``"[0, 1, 2, 3, 4, 5]"``
