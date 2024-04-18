@@ -1,0 +1,12 @@
+__pycache__
+/.vscode/launch.json
+/dist
+/refactor_deprecated
+/test_some_code
+/test/test.py
+/doc/build
+/videos
+/.coverage
+/env
+/result.json
+/result2.json
