@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: einhoorntje-llm-lib
+Version: 0.1
+Summary: A brief description of my library
+Author: Dmitrii Lukianov
+Author-email: unicornporated@gmil.com
+Requires-Dist: openai
