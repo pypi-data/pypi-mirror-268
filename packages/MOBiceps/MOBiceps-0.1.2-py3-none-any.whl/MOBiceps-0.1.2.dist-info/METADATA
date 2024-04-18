@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: MOBiceps
+Version: 0.1.2
+Summary: Python tools for Mass Spectrometry and Omics data.
+Home-page: https://github.com/JensSettelmeier/MOBiceps
+Author: Jens Settelmeier
+Author-email: jenssettelmeier@googlemail.com
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: ==3.8.*
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: joblib (==1.2.0)
+Requires-Dist: numpy (==1.21.6)
+Requires-Dist: pandas (==1.4.1)
+Requires-Dist: seaborn (==0.11.2)
+Requires-Dist: yellowbrick (==1.5)
+Requires-Dist: scikit-learn (==1.2.1)
+Requires-Dist: scipy (==1.8.1)
+Requires-Dist: scikit-image (==0.19.2)
+Requires-Dist: matplotlib (==3.5.1)
+Requires-Dist: shap (==0.41.0)
+Requires-Dist: xgboost (==1.6.2)
+Requires-Dist: tqdm (==4.63.0)
+Requires-Dist: pyopenms (==2.7.0)
+Requires-Dist: numba (==0.55.1)
+Requires-Dist: torch (==1.13.1)
+Requires-Dist: torchvision (==0.14.1)
+Requires-Dist: torchaudio (==0.13.1)
+Requires-Dist: statsmodels (==0.13.2)
+
+# MOBiceps
+![MOBicpes logo](./images/MOBiceps.png)
+MOBiceps is a collection of python functions for omics and mass spectrometry data. It is the working arm of [MOAgent](https://github.com/wollscheidlab/MOAgent). An early version of its core function featureSelector.py was first time applied in the work [Nature Communications, 2023](https://www.nature.com/articles/s41467-023-42101-z) to identify phenotype-specific proteins in myeloproliferative neoplasms (blood cancer).
+If you have any questions please do not hesitate to contact jsettelmeier@ethz.ch
+
+## Basic instructions
+
+You can use MOBiceps by cloning the repo to your local machine using
+
+```bash
+$ git clone https://github.com/wollscheidlab/MOBiceps.git
+```
+or using the python package distribution system pip via
+
+```bash
+$ pip install MOBiceps
+```
+
+## Notes
+Developed and tested under python 3.8. 
