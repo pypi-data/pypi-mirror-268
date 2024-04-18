@@ -1,0 +1,69 @@
+<tal:block i18n:domain="bda.plone.discount">
+
+  <div id="field-discount_form-discount-label_block"
+       class="block form_header">
+    <label for="input-discount_form-discount-label_block"
+           class="block form_header"
+           i18n:translate="discount_form_label_block">Block parental</label>
+  </div>
+
+  <div id="field-discount_form-discount-label_value"
+       class="value form_header">
+    <label for="input-discount_form-discount-label_value"
+           class="value form_header"
+           i18n:translate="discount_form_label_value">Value</label>
+  </div>
+
+  <div id="field-discount_form-discount-label_kind"
+       class="kind form_header">
+    <label for="input-discount_form-discount-label_kind"
+           class="kind form_header"
+           i18n:translate="discount_form_label_kind">Kind</label>
+  </div>
+
+  <div id="field-discount_form-discount-label_threshold"
+       class="threshold form_header">
+    <label for="input-discount_form-discount-label_threshold"
+           class="threshold form_header"
+           i18n:translate="discount_form_label_threshold">Threshold</label>
+  </div>
+
+  <div id="field-discount_form-discount-label_threshold_calculation"
+       class="threshold_calculation form_header">
+    <label for="input-discount_form-discount-label_threshold_calculation"
+           class="threshold_calculation form_header"
+           i18n:translate="discount_form_label_threshold_calculation">
+      Calculation
+    </label>
+  </div>
+
+  <div id="field-discount_form-discount-label_portal_type"
+       class="portal_type form_header"
+       tal:condition="python: view.portal_type_mode == 'edit'">
+    <label for="input-discount_form-discount-label_portal_type"
+           class="portal_type form_header"
+           i18n:translate="discount_form_label_portal_type">Portal Type</label>
+  </div>
+
+  <div id="field-discount_form-discount-label_valid_from"
+       class="valid_from form_header">
+    <label for="input-discount_form-discount-label_valid_from"
+           class="valid_from form_header"
+           i18n:translate="discount_form_label_valid_from">Valid From</label>
+  </div>
+
+  <div id="field-discount_form-discount-label_valid_to"
+       class="valid_to form_header">
+    <label for="input-discount_form-discount-label_valid_to"
+           class="valid_to form_header"
+           i18n:translate="discount_form_label_valid_to">Valid To</label>
+  </div>
+
+  <div id="field-discount_form-discount-label_for"
+       class="for form_header">
+    <label for="input-discount_form-discount-label_for"
+           class="for form_header"
+           i18n:translate="discount_form_label_user">User</label>
+  </div>
+
+</tal:block>
