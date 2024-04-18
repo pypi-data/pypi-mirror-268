@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: customs_utils
+Version: 0.0.1
+Summary: More poetry to the people! One cannot live on water but one can live on poetry (if there is also food ... and also water and whatnot).
+Author: Tiz Ismyname
+Author-email: jaymz@kommunpoet.se
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
