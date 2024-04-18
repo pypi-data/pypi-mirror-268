@@ -1,0 +1,11 @@
+pearson3curve-1.0.0.post0.dist-info/METADATA,sha256=qmI2AsAHTHT-IJAR3rNjeTaRpwavPdBPXMNaASQhAhw,2219
+pearson3curve-1.0.0.post0.dist-info/WHEEL,sha256=gZRWN_1fGFDwBnXrZ9N3dgvbKlKgo5AUcDIMajlGpKM,90
+pearson3curve-1.0.0.post0.dist-info/licenses/LICENSE,sha256=8UTXUGSvuIio1v4D-LbnYI9XtG3Dc9pB_tLm7e6rO7E,1072
+pearson3curve/__init__.py,sha256=AC9bcy3pTPsEvhp_LozSNIKkRL8ApBarC_xCv4Y1eNU,445
+pearson3curve/curve.py,sha256=ZZJnmk1LFjDcaplGudZ2IU7P_LhoZZy60BAT3iU3O5s,1394
+pearson3curve/data.py,sha256=srDwqDW3VrezzRAjmu9q-DhQqtI7d8NsYrjdn9TGvP8,7703
+pearson3curve/fitting.py,sha256=C6Jkj3v1TtBK1umdjiyFZnK7xSFxKvDLph9NZ5_Qmhs,4190
+pearson3curve/pgfplot.py,sha256=meoprB0vC6cegYkh0CMSxzzJNqraz616mJlwJ-L5pzg,524
+pearson3curve/plot.py,sha256=z6_ao87Wzj9ArIOxmdeIKpopqm_4Sqo7AwIcNUNdreA,7551
+pearson3curve/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pearson3curve-1.0.0.post0.dist-info/RECORD,,
