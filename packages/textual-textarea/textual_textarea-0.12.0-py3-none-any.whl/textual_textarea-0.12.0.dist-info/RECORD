@@ -1,0 +1,15 @@
+textual_textarea/__init__.py,sha256=SVBFgTbHqEMKspmn7v_nZ88g_YcdMALu2_7KK0UJqaY,292
+textual_textarea/__main__.py,sha256=xbQfwl0erXf4zXeqUYMzU-p163wH_GlvBuT5XiSLK98,1424
+textual_textarea/autocomplete.py,sha256=1PJkhbEqXd_suw4s7aucjnehm7iL15WonCgjNWweptw,8442
+textual_textarea/colors.py,sha256=Kdi-jM6vYkwezufciutzQQDTKX3s4E_C1ivWzCzYI1U,7599
+textual_textarea/comments.py,sha256=ZMSa_InZfy3CpztOpy4ySjDC_jLKRnpBj5Yfmz9vCd4,3510
+textual_textarea/containers.py,sha256=NgYyThdnCqgT0QQMnFk1jv3TFAUs275EmvelHpOP5sk,1268
+textual_textarea/error_modal.py,sha256=RcGMTbXUPI-1rFrqv1WSkoA2QLS4DG9idf1qTjcDeP4,2033
+textual_textarea/messages.py,sha256=OASBCPP7PrEN6llz6KMJJbIli27knUddCe-JYGwIU7I,604
+textual_textarea/path_input.py,sha256=thr0LymO6YFOHNGaqMVXOpja-vstSbjtXu_nAokTJZo,4229
+textual_textarea/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textual_textarea/text_editor.py,sha256=sf2fZfpdL4gJ9PYySAtXThgtU54WXtNlrmV2wLw_wqs,46747
+textual_textarea-0.12.0.dist-info/LICENSE,sha256=Wdf1mXEX48JTe3Unchs3u8M7sUOB6v0fGsMI5WP7bB4,1068
+textual_textarea-0.12.0.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+textual_textarea-0.12.0.dist-info/METADATA,sha256=-0kyRf9SWcQrk2S-DSqVaMhDLM9AVFGP48RxWVOTBa4,6318
+textual_textarea-0.12.0.dist-info/RECORD,,
