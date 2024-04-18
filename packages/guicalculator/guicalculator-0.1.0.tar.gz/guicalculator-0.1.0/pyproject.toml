@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "guicalculator"
+version = "0.1.0"
+license = "MIT"
+description = "A calculator written with python and tkinter"
+authors = ["Thomas Brotherton <tombroth@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/tombroth/guicalculator"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+packages = [{include = "guicalculator", from = "src"}]
+
+[tool.poetry.scripts]
+guicalculator = "guicalculator.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
