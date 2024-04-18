@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: photo-gps-client
+Version: 0.1.6
+Summary: 
+Author: antonio
+Author-email: mr.antonsilin@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: arrow (>=1.3.0,<2.0.0)
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: jinja2 (>=3.1.3,<4.0.0)
+Requires-Dist: pyexiftool (>=0.5.6,<0.6.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# Dependencies
+
+https://exiftool.org/index.html
+
+# Publish:
+
+`poetry publish --build`
+
