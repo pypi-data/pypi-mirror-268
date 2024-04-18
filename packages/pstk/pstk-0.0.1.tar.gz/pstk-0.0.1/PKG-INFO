@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: pstk
+Version: 0.0.1
+Summary: A toolkit for developing Postgres schemas & extensions.
+Author: albaike
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: psycopg2 (>=2.9.9,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# pstk -- Postgres Toolkit
+A toolkit for developing Postgres schemas & extensions, with single-command deployment and testing.
+
+## Install
+
+`pip install --user pstk`
+
+## Usage
+Create a `.env` file in the your postgres project directory with `POSTGRES_PASSWORD` if you are not using the default `postgres:postgres`
+
+To install:
+
+- a schema:
+
+`pstk . install`
+
+- an extension:
+
+`pstk --extension --schema-path=path-to-schema-data--1.0.sql . install`
+
+To test
+
+`pstk . test --replace`
