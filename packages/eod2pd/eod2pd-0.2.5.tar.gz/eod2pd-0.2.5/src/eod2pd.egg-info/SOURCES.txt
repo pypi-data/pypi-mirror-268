@@ -1,0 +1,14 @@
+LICENSE
+README.md
+license
+pyproject.toml
+readme.md
+src/eod2pd/__init__.py
+src/eod2pd/downloader.py
+src/eod2pd/downloaderfunctions.py
+src/eod2pd/utilityfunctions.py
+src/eod2pd.egg-info/PKG-INFO
+src/eod2pd.egg-info/SOURCES.txt
+src/eod2pd.egg-info/dependency_links.txt
+src/eod2pd.egg-info/requires.txt
+src/eod2pd.egg-info/top_level.txt

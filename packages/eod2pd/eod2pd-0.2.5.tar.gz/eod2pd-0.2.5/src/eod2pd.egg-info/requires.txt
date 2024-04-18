@@ -1,0 +1,10 @@
+basefunctions>=0.3.7
+requests>=2.31
+pandas>=2.1
+python-decouple>=3.4
+stockstats>=0.6.2
+
+[dev]
+
+[test]
+pytest>=7.4

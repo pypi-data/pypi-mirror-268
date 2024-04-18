@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eod2pd"
+version = "0.2.5"
+
+authors = [{ name = "NeuralDevelopment", email = "neutro2@outlook.de" }]
+description = "a simple library to quere EODHistoricalData in a multithreaded environment"
+
+readme = "readme.md"
+license = { file = "license" }
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+  "basefunctions >= 0.3.7",
+  "requests >= 2.31",
+  "pandas >= 2.1",
+  "python-decouple >= 3.4",
+  "stockstats >= 0.6.2",
+]
+
+[project.optional-dependencies]
+dev = [
+]
+test = [
+    "pytest >=7.4",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+"Homepage" = "https://dev.azure.com/neuraldevelopment/eod2pd"
