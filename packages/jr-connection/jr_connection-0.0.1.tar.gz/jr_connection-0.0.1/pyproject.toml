@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jr_connection"
+version = "0.0.1"
+authors = [
+  { name="Felipe Burry", email="felipe.burry@jriveros.cl" },
+]
+description = "A simple python package to connect to JR servers and get the data"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/faburry23/JR_Connection"
+Issues = "https://github.com/faburry23/JR_Connection/issues"
