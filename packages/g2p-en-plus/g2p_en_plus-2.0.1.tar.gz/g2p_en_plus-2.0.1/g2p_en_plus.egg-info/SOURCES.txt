@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+g2p_en_plus/__init__.py
+g2p_en_plus/checkpoint20.npz
+g2p_en_plus/expand.py
+g2p_en_plus/g2p.py
+g2p_en_plus/homographs.en
+g2p_en_plus.egg-info/PKG-INFO
+g2p_en_plus.egg-info/SOURCES.txt
+g2p_en_plus.egg-info/dependency_links.txt
+g2p_en_plus.egg-info/requires.txt
+g2p_en_plus.egg-info/top_level.txt

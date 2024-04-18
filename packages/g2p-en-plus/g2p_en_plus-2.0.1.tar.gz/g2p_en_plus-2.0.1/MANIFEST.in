@@ -1,0 +1,2 @@
+include g2p_en_plus/homographs.en
+include g2p_en_plus/checkpoint20.npz
