@@ -1,0 +1,32 @@
+factory: compound
+name: context.fields_name
+widgets:
+- heading:
+    factory: tag
+    props:
+        tag: h2
+        text: i18n:heading_shipping_selection:Shipping
+        class_add: "mt-2 mb-2 shipping-selection-heading"
+        structural: True
+- row-shipping:
+    factory: div
+    props:
+        class: "row"
+        structural: True
+    widgets:
+    - shipping:
+        factory: "field:error:select"
+        value: context.get_shipping
+        props:
+            format: radio
+            vocabulary: expr:context.shipping_vocabulary
+            field.class_add: "col mb-3"
+            display_proxy: True
+        mode: expr:context.mode
+- divider:
+    factory: tag
+    props:
+        tag: hr
+        text: ""
+        class_add: "bg-transparent"
+        structural: True

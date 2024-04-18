@@ -1,0 +1,9 @@
+setuptools
+Plone
+bda.plone.cart
+bda.plone.payment
+pycountry
+yafowil.plone
+
+[test]
+plone.app.testing
