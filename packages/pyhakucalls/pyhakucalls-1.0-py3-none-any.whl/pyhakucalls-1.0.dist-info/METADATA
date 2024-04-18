@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pyhakucalls
+Version: 1.0
+Summary: Seratus Persen Clone Pytgcalls
+Home-page: https://t.me/pyhakucalls
+Author: hakutaka
+Author-email: hakutaka@gmail.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: tgcalls (==3.0.0.dev6)
+Requires-Dist: av (>=8.0)
+Requires-Dist: opencv-python-headless (~=4.5)
+Requires-Dist: haku (==1.0)
+Requires-Dist: telethon (>=1.24.0)
+
