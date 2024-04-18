@@ -1,0 +1,2 @@
+[console_scripts]
+knext = knext.command.knext_cli:_main
