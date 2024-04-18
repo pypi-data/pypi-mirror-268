@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: spdx3query
+Version: 0.0.1
+Summary: Query SPDX 3 data files
+Project-URL: Homepage, https://github.com/JPEWdev/spdx3query
+Project-URL: Repository, https://github.com/JPEWdev/spdx3query.git
+Project-URL: Issues, https://github.com/JPEWdev/spdx3query/issues
+Author-email: Joshua Watt <JPEWhacker@gmail.com>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.9
+Provides-Extra: dev
+Requires-Dist: flake8>=7.0.0; extra == 'dev'
+Requires-Dist: pytest-cov>=4.1; extra == 'dev'
+Requires-Dist: pytest-server-fixtures>=1.7; extra == 'dev'
+Requires-Dist: pytest>=7.4; extra == 'dev'
+Requires-Dist: shacl2code==0.0.10; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# spdx3query
+Command line tool for querying SPDX 3 files
