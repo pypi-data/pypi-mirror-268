@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: PyMARE
+Version: 0.0.4rc6
+Summary: PyMARE: Python Meta-Analysis & Regression Engine
+Home-page: https://github.com/neurostuff/PyMARE
+Author: PyMARE developers
+Author-email: tsalo006@fiu.edu
+Maintainer: Taylor Salo
+Maintainer-email: tsalo006@fiu.edu
+License: MIT
+Description: 
+        PyMARE: Python Meta-Analysis & Regression Engine
+        ================================================
+        A Python library for mixed-effects meta-regression (including meta-analysis).
+        
+        License
+        =======
+        `PYMARE` is licensed under the terms of the MIT license. See the file
+        'LICENSE' for information on the history of this software, terms & conditions
+        for usage, and a DISCLAIMER OF ALL WARRANTIES.
+        
+        All trademarks referenced herein are property of their respective holders.
+        
+        Copyright (c) 2019--, PyMARE developers
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+Provides-Extra: doc
+Provides-Extra: tests
+Provides-Extra: stan
+Provides-Extra: all
