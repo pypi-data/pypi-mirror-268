@@ -1,0 +1,12 @@
+brotli
+humanize
+loguru
+lz4
+pypinyin
+pysmb
+websockets
+zstandard
+clickhouse-driver
+clickhouse-cityhash
+polars
+requests
