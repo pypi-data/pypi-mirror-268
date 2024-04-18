@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyproject_deplister/__init__.py
+src/pyproject_deplister/__main__.py
+src/pyproject_deplister/_version.py
+src/pyproject_deplister/utils.py
+src/pyproject_deplister.egg-info/PKG-INFO
+src/pyproject_deplister.egg-info/SOURCES.txt
+src/pyproject_deplister.egg-info/dependency_links.txt
+src/pyproject_deplister.egg-info/entry_points.txt
+src/pyproject_deplister.egg-info/requires.txt
+src/pyproject_deplister.egg-info/top_level.txt
+tests/test_pyproject_deplister.py

@@ -1,0 +1,6 @@
+tomli
+
+[dev]
+pytest
+build
+twine

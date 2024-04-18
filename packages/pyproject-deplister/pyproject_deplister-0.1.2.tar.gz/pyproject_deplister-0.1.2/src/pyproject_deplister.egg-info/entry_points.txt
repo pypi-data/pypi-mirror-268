@@ -1,0 +1,2 @@
+[console_scripts]
+pyproject-deplister = pyproject_deplister.__main__:main

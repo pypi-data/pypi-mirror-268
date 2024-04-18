@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyproject_deplister"
+dynamic = ["version"]
+authors = [
+    { name = "Célien Donzé", email = "celien.donze@he-arc.ch" },
+    { name = "Jonathan Guerne", email = "jonathan.guerne@he-arc.ch" },
+]
+description = "pyproject-deplister is a Python package for extracting dependency information from pyproject.toml files and converting it into the format of a requirements.txt file. With its simple and intuitive interface, pyproject-deplister makes it easy to manage and track dependencies for your Python projects, ensuring that you have all the necessary packages installed and up-to-date."
+license = { file = "LICENSE" }
+keywords = [
+    "dependencies",
+    "pyproject.toml",
+    "extractor",
+    "list",
+    "requirements.txt",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = ["tomli"]
+readme = { file = "README.md", content-type = "text/markdown" }
+
+[project.optional-dependencies]
+dev = ["pytest", "build", "twine"]
+
+[tool.setuptools.dynamic]
+version = { attr = "pyproject_deplister.__version__" }
+
+[project.scripts]
+pyproject-deplister = "pyproject_deplister.__main__:main"
+
+[tool.ruff]
+select = ["ALL"]
+ignore = ["S101", "UP006", "PTH123", "UP007"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
