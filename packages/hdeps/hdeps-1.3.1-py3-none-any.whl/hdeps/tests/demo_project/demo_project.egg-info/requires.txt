@@ -1,0 +1,10 @@
+a
+
+[:python_version == "3.6"]
+b
+
+[foo]
+c
+
+[foo:python_version == "3.6"]
+d
