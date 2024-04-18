@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pymrm
+Version: 1.3.0
+Summary: Functions for multiphase reactor modeling
+Author-email: "E.A.J.F. Peters" <e.a.j.f.peters@tue.nl>, "M. van Sint Annaland" <M.v.SintAnnaland@tue.nl>, "M. Galanti" <m.galanti@tue.nl>, "D.R. Rieder" <d.r.rieder@tue.nl>
+Maintainer-email: "E.A.J.F. Peters" <e.a.j.f.peters@tue.nl>
+Project-URL: Homepage, https://gitlab.tue.nl/SMM/research_projects/eajfpeters/pymrm/
+Project-URL: Repository, https://gitlab.tue.nl/SMM/research_projects/eajfpeters/pymrm/
+Keywords: MRM,modeling,multiphase,diffusion,convection
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# pymrm: Python Package for Multiphase Reactor Modeling
+
+## Overview
+
+Welcome to pymrm, a Python package designed for creating phenomenological models of multiphase reactors. Developed within the ambit of the Multiphase Reactor Modeling course at Eindhoven University of Technology, this package finds its roots in the Department of Chemical Engineering and Chemistry taught by Martin van Sint Annaland and Frank Peters. Originally implemented in Matlab, pymrm stands today as a port to Python, signifying a step forward in accessibility and open access.
+
+## Getting Started
+
+To get a comprehensive understanding of pymrm's capabilities, we recommend exploring the included Jupyter notebook. This notebook is packed with examples that demonstrate the application of the package in the realm of chemical engineering.
+
+### Features
+
+- Comprehensive set of functions for modeling multiphase reactors
+- User-friendly interface tailored for both students and professionals
+- Extensive documentation and example-based learning
+
+### How to Install
+
+pip install pymrm
+
+### Quickstart Guide
+
+Start implementing 1D reaction-diffusion equations, proceed to convection, different phases, mass transfer, etc. The Python notebook: py_mrm_examples.ipynb provides examples that are useful to get you started.
+
+### Contributing
+
+We welcome contributions from the community. If you're interested in enhancing pymrm or have suggestions, please contact us.
