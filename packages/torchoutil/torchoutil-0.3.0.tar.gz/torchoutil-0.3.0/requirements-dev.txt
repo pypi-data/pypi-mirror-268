@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+
+black==23.12.1
+coverage
+flake8
+ipython
+pre-commit
+pytest
+torchvision>=0.11.0
+twine

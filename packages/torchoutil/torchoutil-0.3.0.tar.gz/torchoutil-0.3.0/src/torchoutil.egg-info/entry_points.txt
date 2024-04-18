@@ -1,0 +1,2 @@
+[console_scripts]
+torchoutil-info = torchoutil.info:print_install_info
