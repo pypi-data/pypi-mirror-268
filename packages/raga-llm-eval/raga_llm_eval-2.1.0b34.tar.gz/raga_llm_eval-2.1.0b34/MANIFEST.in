@@ -1,0 +1,14 @@
+include src/raga_llm_eval/tests/test_details.toml
+include src/raga_llm_eval/tests/test_data/data_files/*.toml
+include src/raga_llm_eval/utils/data_files/profanity_en.csv
+include src/raga_llm_eval/utils/data_files/ldnoobw-en.txt
+include src/raga_llm_eval/utils/data_files/ofcom-potentially-offensive.txt
+include src/raga_llm_eval/utils/data_files/inthewild_jailbreak_llms.txt
+include src/raga_llm_eval/ui/templates/*.html
+include src/raga_llm_eval/ui/templates/components/*.html
+include src/raga_llm_eval/ui/static/*.png
+include src/raga_llm_eval/ui/static/*.js
+include src/raga_llm_eval/ui/static/*.css
+include src/raga_llm_eval/guardrails/resources/sensitive_patterns.json
+include src/raga_rag_builder/ui_files/RagaAI_logo.png
+include src/raga_rag_builder/templates/chat.html
