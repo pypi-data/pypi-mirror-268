@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+
+name = "tukey"
+
+version = "0.0.2"
+
+description = "A python based math module"
+
+readme = "README.md"
+
+requires-python = ">=3.8"
+
+license = {file = "LICENSE.txt"}
+
+keywords = ["math", "python", "development"]
+
+
+authors = [
+  {name = "Shubhranil Basak", email = "Shubhranil.Basak@iiitb.ac.in" }
+]
+
+
+maintainers = [
+  {name = "Shubhranil Basak", email = "Shubhranil.Basak@iiitb.ac.in" }
+]
+
+classifiers = [
+  "Development Status :: 1 - Planning",
+
+  "Intended Audience :: Education",
+
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+
+  "Operating System :: OS Independent",
+
+
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = []
+
+
+
+[project.urls]
+"Homepage" = "https://github.com/Shubhranil-Basak/tukey"
+"Bug Reports" = "https://github.com/Shubhranil-Basak/tukey/issues"
+"Funding" = "https://donate.pypi.org"
+"Source" = "https://github.com/Shubhranil-Basak/tukey/"
+
+
+[project.scripts]
+sample = "sample:main"
+
+[tool.setuptools]

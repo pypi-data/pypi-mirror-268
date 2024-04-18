@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/tukey/__init__.py
+src/tukey/tukey.py
+src/tukey.egg-info/PKG-INFO
+src/tukey.egg-info/SOURCES.txt
+src/tukey.egg-info/dependency_links.txt
+src/tukey.egg-info/entry_points.txt
+src/tukey.egg-info/top_level.txt
