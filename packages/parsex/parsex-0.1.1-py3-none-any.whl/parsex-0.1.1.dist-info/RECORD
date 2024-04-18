@@ -1,0 +1,12 @@
+parsex-0.1.1.dist-info/METADATA,sha256=J3Dx1jynkuos7I1btUVxTbdUWACGp94iqLgxAwdkYcg,373
+parsex-0.1.1.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+parsex/__init__.py,sha256=YVfzCgf0BJyrJy65aK8XnGw0VuDjCD7LUR8Hj5r-73g,1311
+parsex/api.py,sha256=KwB8pgA3mIrgIAZeHLj2B8v7MYZRwWgq5E4WuBnQ7Y0,161
+parsex/clearhtml.py,sha256=hMbAMdlKn16p1To3FIvsJKhf3oB7-4I34hkS73mDlIc,303
+parsex/datetime.py,sha256=TYnFw3yWG53QNso5lWWfvct-Jo6A2IsUXNhHYlTNgKc,978
+parsex/jsobject.py,sha256=2XhE2ziUDPIEptpaneE40m-4X7IFRkw3yWOsIoMfnXU,533
+parsex/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+parsex/structdata.py,sha256=32LmSc-3nXohw4sQbxnA3-VXK67dK4crGVy0Lu6WAPo,367
+parsex/text.py,sha256=VJAYsQryzHwp70jfcRe0XJYJt_jpWr9W0sstojG2wBE,2809
+parsex/url.py,sha256=NbHadYPN-4h8RvmT-RPszXrcXmYis4czbSJ4nEONH4k,1753
+parsex-0.1.1.dist-info/RECORD,,
