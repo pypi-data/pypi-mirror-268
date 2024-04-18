@@ -1,0 +1,77 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:plone="http://namespaces.plone.org/plone"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <!-- cart portlet -->
+  <plone:portlet
+    name="portlets.Cart"
+    interface=".portlet.ICartPortlet"
+    assignment=".portlet.CartAssignment"
+    renderer=".portlet.CartRenderer"
+    addview=".portlet.CartAddForm" />
+
+  <!-- cart viewlet -->
+  <browser:viewlet
+    name="bda.plone.cart"
+    class=".CartViewlet"
+    template="viewlet.pt"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    permission="zope2.View"
+    layer="..interfaces.ICartExtensionLayer" />
+
+  <!-- cart views -->
+  <browser:page
+    for="*"
+    name="cartData"
+    class=".CartDataView"
+    attribute="cartData"
+    permission="zope2.View"
+    layer="..interfaces.ICartExtensionLayer" />
+
+  <browser:page
+    for="*"
+    name="validate_cart_item"
+    class=".CartDataView"
+    attribute="validate_cart_item"
+    permission="zope2.View"
+    layer="..interfaces.ICartExtensionLayer" />
+
+  <browser:page
+    for="*"
+    name="cart_tile"
+    class=".CartView"
+    template="tile.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICartExtensionLayer" />
+
+  <browser:page
+    for="*"
+    name="cart_summary"
+    class=".CartView"
+    template="summary.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICartExtensionLayer" />
+
+  <browser:page
+    for="*"
+    name="cart"
+    template="view.pt"
+    permission="zope2.View"
+    layer="..interfaces.ICartExtensionLayer" />
+
+  <!-- generic resources -->
+  <browser:page
+    for="*"
+    name="bda.plone.cart.translations.js"
+    class=".CartJSTranslations"
+    permission="zope2.View"
+    layer="..interfaces.ICartExtensionLayer" />
+
+  <!-- resources -->
+  <browser:resourceDirectory
+    name="bda.plone.cart"
+    directory="static"
+    layer="..interfaces.ICartExtensionLayer" />
+
+</configure>
