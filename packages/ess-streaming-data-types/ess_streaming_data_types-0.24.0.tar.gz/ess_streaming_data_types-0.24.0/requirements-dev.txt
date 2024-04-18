@@ -1,0 +1,10 @@
+-r requirements.txt
+black
+flake8
+isort
+pre-commit
+pytest
+tox==3.27.1  # tox 4 seems to be broken at the moment
+tox-pyenv
+twine
+wheel

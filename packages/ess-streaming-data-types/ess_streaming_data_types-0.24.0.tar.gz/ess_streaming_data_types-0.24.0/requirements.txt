@@ -1,0 +1,2 @@
+flatbuffers==22.11.23
+numpy
