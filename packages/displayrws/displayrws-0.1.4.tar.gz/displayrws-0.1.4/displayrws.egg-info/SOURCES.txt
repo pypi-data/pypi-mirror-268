@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+displayrws/__init__.py
+displayrws/py.typed
+displayrws.egg-info/PKG-INFO
+displayrws.egg-info/SOURCES.txt
+displayrws.egg-info/dependency_links.txt
+displayrws.egg-info/not-zip-safe
+displayrws.egg-info/requires.txt
+displayrws.egg-info/top_level.txt
+tests/test_displayrws.py
