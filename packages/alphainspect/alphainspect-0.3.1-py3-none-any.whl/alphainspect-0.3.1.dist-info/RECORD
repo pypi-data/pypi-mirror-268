@@ -1,0 +1,17 @@
+alphainspect/__init__.py,sha256=LCu7mSBvsNM62KV6MH5_wvW1NmOAxJJBpuBh7s-49to,138
+alphainspect/_nb.py,sha256=VmGIJL1WG9mJPWllKRXoTmVYHesW1sH8Gb63tNVnJrY,3260
+alphainspect/_version.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+alphainspect/dtree.py,sha256=QFzDFfBGt47i8LWNRCef_DRjPyhkW6gDGxtz60iMWdg,4032
+alphainspect/events.py,sha256=ioT1je159C38Iz1gLDWb9ZnGUXIjh-zC3hKqGa6BrHY,4111
+alphainspect/ic.py,sha256=VxVHsMEyy1-3fIt7Nf5RMQ_9loKGQHnymQQiqaUOR2s,7492
+alphainspect/portfolio.py,sha256=n3m16XcudQbugar6Eu3DPLlbhRilOpVdnSC_WmCrlSM,7639
+alphainspect/reports.py,sha256=qONrVX4__LBqNLkndfQLOLTkFQFZrlHvprRZGP5tegw,9951
+alphainspect/returns.py,sha256=DMszkdpooTTaNyJ8vi4nbbBOy3-yU6NHN6qSWNlp3tY,2093
+alphainspect/selection.py,sha256=jnZBQ184VJ3oPZwKoGwkERcfZvsOvf6Mmft7IXG32d0,1863
+alphainspect/turnover.py,sha256=MU47vKI-XljfS3JBR7d-rlMgtoIGbgUicHAQW3Dblao,3312
+alphainspect/utils.py,sha256=9CTz87M5UlfcV3CIsz6MoVBiddZ9nb0xXLPvrA8sm_0,7824
+alphainspect-0.3.1.dist-info/LICENSE,sha256=reBHjhBu45YQvXWLh8WD5ASnwgUDb21XyT8FiTtEsa8,1062
+alphainspect-0.3.1.dist-info/METADATA,sha256=BwaaMyjSqGg0j5HF0d65yFSi_twCBH2WPT21K1oF_8I,5115
+alphainspect-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+alphainspect-0.3.1.dist-info/top_level.txt,sha256=ikqrwKF62YLz-4BrFKuDEAkOe5802lD40I0rQoUG08Y,13
+alphainspect-0.3.1.dist-info/RECORD,,
