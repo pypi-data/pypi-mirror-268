@@ -1,0 +1,10 @@
+README.md
+setup.py
+AuthMaster/__init__.py
+AuthMaster/auth.py
+AuthMaster/models.py
+AuthMaster.egg-info/PKG-INFO
+AuthMaster.egg-info/SOURCES.txt
+AuthMaster.egg-info/dependency_links.txt
+AuthMaster.egg-info/requires.txt
+AuthMaster.egg-info/top_level.txt

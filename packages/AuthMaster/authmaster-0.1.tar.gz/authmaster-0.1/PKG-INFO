@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: AuthMaster
+Version: 0.1
+Summary: A package for Flask authentication
+Home-page: https://github.com/CrystalV2/flask_simple_auth
+Author: Jasper
+Author-email: xifaxo-dulo72@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+Requires-Dist: Flask-Login
+Requires-Dist: SQLAlchemy
+Requires-Dist: Werkzeug
+
+# Auth Package
+
+Auth Package is a Python package that provides authentication functionalities for web applications.
+
+## Installation
+
+You can install Auth Package via pip:
+
+```bash
+pip install AuthMaster
