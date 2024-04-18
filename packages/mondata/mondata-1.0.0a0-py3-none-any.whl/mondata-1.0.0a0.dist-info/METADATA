@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mondata
+Version: 1.0.0a0
+Summary: Mondata, a data-driven client for Monday.com
+Home-page: https://github.com/Great-Strength-Studios/mondata
+Download-URL: https://github.com/Great-Strength-Studios/mondata
+Author: Andrew Shatz
+Author-email: andrew@greatstrength.me
+License: BSD 3
+License-File: LICENSE
+Requires-Dist: requests >=2.31.0
+Requires-Dist: pytz >=2024.1
+Requires-Dist: pycountry >=23.12.11
+Requires-Dist: deprecated >=1.2.14
+Requires-Dist: schematics >=2.1.1
+
