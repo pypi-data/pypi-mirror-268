@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/eth_logo/__init__.py
+src/eth_logo/eth_logo_core.py
+src/eth_logo/eth_logo_debug.py
+src/eth_logo/eth_logo_script.py
+src/eth_logo.egg-info/PKG-INFO
+src/eth_logo.egg-info/SOURCES.txt
+src/eth_logo.egg-info/dependency_links.txt
+src/eth_logo.egg-info/entry_points.txt
+src/eth_logo.egg-info/top_level.txt

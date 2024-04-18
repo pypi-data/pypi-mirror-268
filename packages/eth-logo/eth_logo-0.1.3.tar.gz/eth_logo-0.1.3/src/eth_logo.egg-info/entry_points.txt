@@ -1,0 +1,2 @@
+[console_scripts]
+print-eth = eth_logo:print_eth_script
