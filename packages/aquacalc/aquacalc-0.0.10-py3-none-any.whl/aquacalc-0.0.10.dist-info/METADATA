@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: aquacalc
+Version: 0.0.10
+Summary: A package for water and sanitation calculations
+Author: Bhuwan Panday
+Author-email: bhuwanpanday1@gmail.com
+
+This package provides functions and utilities for performing calculations related to water and sanitation. It includes modules for water quality analysis, water treatment design, wastewater treatment, and more.

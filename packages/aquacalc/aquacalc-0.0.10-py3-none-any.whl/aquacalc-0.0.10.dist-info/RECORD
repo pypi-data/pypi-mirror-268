@@ -1,0 +1,10 @@
+aquacalc/__init__.py,sha256=9Z0XxptHIcivxRUcXFHyorr-qMbtfeivD-SR4wYXilE,228
+aquacalc/all_formulas.py,sha256=ysBs2IU1R2wGbptBd3wWSwaYpYZ_HiCXpEpSoI6dgbk,5563
+aquacalc/all_simple.py,sha256=k_pUalzYKPPyPpEt58ma1I6x-7TXnuqTYE6PO5FNauc,3035
+aquacalc/aquacalc.py,sha256=3iy8Us2DHqJ1WNmp0mKZxfvWEcbM1wuSif530l0Wnp4,495
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/testcodes.py,sha256=4-xsGlnk5V9jenRQYuzplbE-5ZxgKICV3HndN6zZ1oE,1766
+aquacalc-0.0.10.dist-info/METADATA,sha256=XKvK4UplzYQotWaOxizWQkevIBWaTOZT7RMaswdqUTM,390
+aquacalc-0.0.10.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aquacalc-0.0.10.dist-info/top_level.txt,sha256=QUBvfpGy-kdvmDu-pvLJGSDRIS4segF1KqdA8dqttME,14
+aquacalc-0.0.10.dist-info/RECORD,,
