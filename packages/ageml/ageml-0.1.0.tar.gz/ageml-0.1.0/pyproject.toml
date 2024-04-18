@@ -1,0 +1,59 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ageml"
+version = "0.1.0"
+description = "AgeML is a Python package for Age Modelling with Machine Learning made easy."
+authors = [ "Computational Neuroimaging Lab Bilbao, IIS Biobizkaia",
+            "jorge.garcia.condado <jorgegarciacondado@gmail.com>",
+            "inigo.tellaetxe <inigotellaetxe@gmail.com>",
+            "asier.erramuzpe <aerramuzpe@gmail.com>",
+            "jesus.cortes <jesus.m.cortes@gmail.com>"
+            ]
+maintainers = ["jorge.garcia.condado <jorgegarciacondado@gmail.com>",
+                "inigo.tellaetxe <inigotellaetxe@gmail.com>"
+                ]
+readme = "README.md"
+repository = "https://github.com/compneurobilbao/ageml"
+license = "Apache 2.0"
+keywords = ["Machine Learning", "Age Modelling", "Brain Age"]
+classifiers = ["Topic :: Software Development :: Libraries :: Python Modules"]
+packages = [{include = "ageml", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8, <3.12"
+numpy = "1.24"
+pandas = "2.0"
+scipy = "1.10"
+statsmodels = "0.14.0"
+matplotlib = "3.5"
+scikit-learn = "1.3"
+coverage-conditional-plugin = "^0.7.0"
+xgboost = "^2.0.3"
+pillow = "^10.2.0"
+
+[tool.poetry.dev-dependencies]
+nox-poetry = "*"
+# Testing
+pytest = "*"
+pytest-cov = "*"
+coverage_conditional_plugin = "*"
+# Linting
+flake8 = "*"
+flake8-bugbear = "*"
+flake8-broken-line = "*"
+flake8-comprehensions = "*"
+# Formatting
+black = {version = "^23.1a1", allow-prereleases = true}
+
+[tool.poetry.scripts]
+ageml = "ageml.__main__:main"
+model_age = "ageml.commands:model_age"
+factor_correlation = "ageml.commands:factor_correlation"
+clinical_groups = "ageml.commands:clinical_groups"
+clinical_classify = "ageml.commands:clinical_classify"
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.0"
+
