@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: leap-data-management-utils
+Version: 0.0.3
+Summary: LEAP / pangeo-forge-recipes extension library for logging data in Google Big Query
+Author-email: LEAP <leap@columbia.edu>
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: apache-beam
+Requires-Dist: cftime
+Requires-Dist: db-dtypes
+Requires-Dist: google-api-core
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: pandas
+Requires-Dist: pangeo-forge-esgf
+Requires-Dist: pydantic-core
+Requires-Dist: pydantic >=2
+Requires-Dist: pyyaml
+Requires-Dist: universal-pathlib
+Requires-Dist: xarray
+Requires-Dist: zarr
+Provides-Extra: test
+Requires-Dist: pre-commit ; extra == 'test'
+
+# LEAP Data Management Utils
+
+This Repo is intended to be installed via the `requirements.txt` during recipe execution in `pangeo-forge-recipes`. It currently contains beam transforms to log information into BigQuery tables. Additional shared utilities and checks that are commonly used between LEAP pangeo-forge-feedstocks can live here.
