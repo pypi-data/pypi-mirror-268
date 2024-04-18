@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: clidoro
+Version: 0.0.2
+Summary: clidoro: pomodoro in your cli
+Home-page: https://github.com/kingjuno/clidoro
+License: MIT
+Keywords: Productivity,Pomodoro
+Platform: Linux
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Customer Service
+Classifier: Intended Audience :: System Administrators
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Software Distribution
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE.MD
+Requires-Dist: playsound
+Requires-Dist: alive-progress
+Requires-Dist: simple-term-menu

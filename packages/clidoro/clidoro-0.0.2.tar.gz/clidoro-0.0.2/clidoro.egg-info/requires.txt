@@ -1,0 +1,3 @@
+playsound
+alive-progress
+simple-term-menu
