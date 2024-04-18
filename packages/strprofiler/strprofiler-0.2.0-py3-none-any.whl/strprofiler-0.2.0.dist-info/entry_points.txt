@@ -1,0 +1,4 @@
+[console_scripts]
+strprofiler=strprofiler.strprofiler:strprofiler
+strprofiler-app=strprofiler.strprofiler:local_shiny_app
+
