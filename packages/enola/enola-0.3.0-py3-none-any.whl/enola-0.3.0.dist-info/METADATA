@@ -1,0 +1,38 @@
+Metadata-Version: 2.3
+Name: enola
+Version: 0.3.0
+Summary: Observability & Governance of Intelligence Agents
+Project-URL: Homepage, https://github.com/huemulsolutions/enola
+Project-URL: Bug Tracker, https://github.com/huemulsolutions/enola/issues
+Author-email: Sebastian Rodriguez Robotham <sebastian.rodriguez@huemulsolutions.com>, Developer Code <developer.code@huemulsolutions.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# enola-ai-python
+Librería en python para instalar en python
+
+
+para construir:
+py -m build
+
+para publicar:
+https://packaging.python.org/en/latest/guides/distributing-packages-using-setuptools/
+https://packaging.python.org/en/latest/tutorials/packaging-projects/#uploading-your-project-to-pypi
+
+py -m pip --version
+py -m pip install twine
+
+frecuente:
+py -m pip install build
+
+twine upload dist/*
+
+--para testing
+py -m twine upload --repository testpypi dist/*
+
+--para desarrollo
+py -m twine upload --repository pypi dist/*
