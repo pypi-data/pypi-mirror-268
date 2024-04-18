@@ -1,0 +1,9 @@
+README.md
+setup.py
+tokeninput/__init__.py
+tokeninput/tokenizer.py
+tokenizernltk.egg-info/PKG-INFO
+tokenizernltk.egg-info/SOURCES.txt
+tokenizernltk.egg-info/dependency_links.txt
+tokenizernltk.egg-info/requires.txt
+tokenizernltk.egg-info/top_level.txt
