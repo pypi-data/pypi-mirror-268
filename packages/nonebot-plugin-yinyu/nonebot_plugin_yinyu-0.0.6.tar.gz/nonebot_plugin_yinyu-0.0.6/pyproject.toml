@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "nonebot-plugin-yinyu"
+version = "0.0.6"
+description = "一个语句瑟瑟化插件"
+authors = ["shiyingyingjiang <2798134864@qq.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "nonebot_plugin_yinyu"}]
+homepage = "https://github.com/shi-yingyingjiang/nonebot-plugin-yinyu"
+repository = "https://github.com/shi-yingyingjiang/nonebot-plugin-yinyu"
+
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+nonebot2 = ">=2.0.0"
+yinglish = ">=1.0.1"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
