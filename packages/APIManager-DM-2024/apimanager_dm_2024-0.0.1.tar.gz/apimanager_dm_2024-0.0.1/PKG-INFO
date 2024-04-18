@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: APIManager_DM_2024
+Version: 0.0.1
+Summary: A small http(s) requests package
+Author-email: David <movsis.david@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: requests~=2.31.0
+Description-Content-Type: text/markdown
+
+<h2>Simple python package for http(s) requests</h2>
+
