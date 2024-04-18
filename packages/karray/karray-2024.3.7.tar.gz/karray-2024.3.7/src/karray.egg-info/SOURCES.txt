@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+src/karray/__init__.py
+src/karray/constants.py
+src/karray/py.typed
+src/karray/source_code.py
+src/karray.egg-info/PKG-INFO
+src/karray.egg-info/SOURCES.txt
+src/karray.egg-info/dependency_links.txt
+src/karray.egg-info/requires.txt
+src/karray.egg-info/top_level.txt
+tests/test_dense.py
+tests/test_sparse.py
