@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+src/mazagui/MAZAlib.ico
+src/mazagui/__init__.py
+src/mazagui/gui.py
+src/mazagui.egg-info/PKG-INFO
+src/mazagui.egg-info/SOURCES.txt
+src/mazagui.egg-info/dependency_links.txt
+src/mazagui.egg-info/requires.txt
+src/mazagui.egg-info/top_level.txt
