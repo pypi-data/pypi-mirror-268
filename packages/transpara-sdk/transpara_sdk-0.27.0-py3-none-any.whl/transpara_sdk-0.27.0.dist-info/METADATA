@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: transpara-sdk
+Version: 0.27.0
+Summary: Transpara Python SDK
+Project-URL: homepage, https://transpara.com
+License-File: LICENSE.txt
+Requires-Dist: jsonpickle ==1.4.2
+Requires-Dist: asyncio ==3.4.3
+Requires-Dist: opentelemetry-api ==1.20.0
+Requires-Dist: opentelemetry-sdk ==1.20.0
+Requires-Dist: opentelemetry-exporter-otlp ==1.20.0
+Requires-Dist: opentelemetry-exporter-otlp-proto-http ==1.20.0
+Requires-Dist: pydantic ==2.7.0
+Requires-Dist: requests ==2.26.0
+
