@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: StellarDS
+Version: 0.0.0.7
+Summary: StellarDS.io SDK for Python
+Project-URL: Homepage, https://github.com/StellarDS-SDK/StellarDS-SDK
+Project-URL: Issues, https://github.com/StellarDS-SDK/StellarDS-SDK/issues
+Author-email: StellarDS <info@stellards.io>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+StellarDS.io SDK for Python
