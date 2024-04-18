@@ -1,0 +1,15 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+main.py,sha256=AwRsTdXBQeVtlUzGVTarjZ1syG-v4IVMUaKLX0OJWjg,5462
+funcytests/***_authenticate.py,sha256=VGkBJubELd_0LGS3sfEkxNMbxmKXbkbuJa6r91oMDn0,4105
+funcytests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+funcytests/test_defaults.py,sha256=2sYrnxI6c_YYc0xutGNlwOA2slzLObKl1zp77KF6CKw,2976
+funcytests/test_download.py,sha256=BXZvmNDjA0UG81JqFqVpxEIEuRI87pg1WaYA4WKZqmo,4192
+funcytests/test_register.py,sha256=tSpfj9-69JhDh-P52bl26jSkjj-QItm1ufohzmZH2gI,4772
+funcytests/test_telemetry.py,sha256=Kf93XpZcRpKoAhyZRZMlDu08tkcs3-W0-2SKrZjypvw,7824
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/t_manager.py,sha256=E5R0FGc0BMb38uCqyLhKrwuGk-jWr96b2iplPjs2bR4,3427
+configure_api_tests-0.0.1.dist-info/LICENSE.txt,sha256=Kj1be-dZC8EVLOozTsFkahvurRMfrjZ-77RC2OHTe1s,1065
+configure_api_tests-0.0.1.dist-info/METADATA,sha256=5wk2sLDKjwvHXT1CuzfBAbsvN5BT4aMgw-z2H25f3T4,3843
+configure_api_tests-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+configure_api_tests-0.0.1.dist-info/top_level.txt,sha256=2EIcBCAkiQ21iCD0MV1VvRePUm7FeXSkTlDu57HZFJc,31
+configure_api_tests-0.0.1.dist-info/RECORD,,
