@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "org-todo-send"
+version = "0.1.1"
+description = "A CLI tool which sends TODOs from an Org file to people they have been assigned to via the Signal REST API"
+authors = ["Ammar Nanjiani <ammar.nanjiani@gmail.com>"]
+readme = "README.org"
+
+[tool.poetry.scripts]
+org-todo-send = "org_todo_send.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+orgparse = "^0.4.20231004"
+requests = "^2.31.0"
+pandas = "^2.2.1"
+pypandoc-binary = "^1.13"
+pysignalclirestapi = "^0.3.23"
+typer = {extras = ["all"], version = "^0.12.3"}
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

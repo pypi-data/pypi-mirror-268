@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: org-todo-send
+Version: 0.1.1
+Summary: A CLI tool which sends TODOs from an Org file to people they have been assigned to via the Signal REST API
+Author: Ammar Nanjiani
+Author-email: ammar.nanjiani@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: orgparse (>=0.4.20231004,<0.5.0)
+Requires-Dist: pandas (>=2.2.1,<3.0.0)
+Requires-Dist: pypandoc-binary (>=1.13,<2.0)
+Requires-Dist: pysignalclirestapi (>=0.3.23,<0.4.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: typer[all] (>=0.12.3,<0.13.0)
+Description-Content-Type: text/plain
+
+#+TITLE: org-todo-send
+This package is provided as is.
+
+* Usage
+- See [[file:usage.md][usage.md]]
+- The expected TOML file is simply a list of names with the number associated. [[file:recipients_example.toml][See the example.]]
+- This package relies on the [[https://github.com/bbernhard/signal-cli-rest-api][Signal REST API]].
+* Contributing
+My development environment for this project relies on using a nix flake and poetry, facilitated by devenv. To get set up, you'll need nix package manager, and direnv with nix-direnv installed. Once you have those, entering the project directory should automatically activate the flake, giving you an environment with all of the dependencies provided.
+* Features to add
+- [ ] message styling
+- [ ] tests
+- [ ] automated testing and deployment with actions
+

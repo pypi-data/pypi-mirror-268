@@ -1,0 +1,13 @@
+#+TITLE: org-todo-send
+This package is provided as is.
+
+* Usage
+- See [[file:usage.md][usage.md]]
+- The expected TOML file is simply a list of names with the number associated. [[file:recipients_example.toml][See the example.]]
+- This package relies on the [[https://github.com/bbernhard/signal-cli-rest-api][Signal REST API]].
+* Contributing
+My development environment for this project relies on using a nix flake and poetry, facilitated by devenv. To get set up, you'll need nix package manager, and direnv with nix-direnv installed. Once you have those, entering the project directory should automatically activate the flake, giving you an environment with all of the dependencies provided.
+* Features to add
+- [ ] message styling
+- [ ] tests
+- [ ] automated testing and deployment with actions
