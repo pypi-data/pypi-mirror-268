@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: everai
+Version: 0.1.22
+Summary: Client library to manage EvenMachine ai infrastructure
+Author-email: mc <mc@evermachine.io>
+Maintainer-email: mc <mc@evermachine.io>
+Project-URL: Homepage, https://evermachine.io
+Project-URL: Documentation, https://evermachine.io
+Project-URL: Repository, https://github.com/evermachine/everai
+Project-URL: Issues, https://github.com/evermachine/everai/issues
+Project-URL: Changelog, https://github.com/evermachine/everai/blob/main/CHANGELOG.md
+Keywords: evermachine,ever,everai,ai,inference,serveless,autoscaling
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: synchronicity ~=0.6.2
+Requires-Dist: Flask ~=3.0.2
+Requires-Dist: requests ~=2.31.0
+Requires-Dist: Werkzeug ~=3.0.1
+Requires-Dist: contextvars ~=2.4
+Requires-Dist: jsonpickle ~=3.0.3
+Requires-Dist: tzlocal ~=5.2
+Requires-Dist: python-dotenv ~=1.0.1
+Requires-Dist: gevent ~=24.2.1
+Requires-Dist: pymongo ~=4.6.2
+Requires-Dist: urllib3 >=1.26.0
+Requires-Dist: python-dateutil ~=2.9.0.post0
+Requires-Dist: pydantic ~=2.7.0
+Provides-Extra: build
+Requires-Dist: build ~=1.2.1 ; extra == 'build'
+Requires-Dist: wheel ~=0.41.2 ; extra == 'build'
+Requires-Dist: twine ~=5.0.0 ; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: pytest ~=8.0.2 ; extra == 'dev'
+Requires-Dist: pytest-cov ~=4.1.0 ; extra == 'dev'
+
+test file
