@@ -1,0 +1,14 @@
+cartopy
+fiona
+geojson
+geopy
+matplotlib
+netifaces
+pandas
+pint
+posttroll
+pycrs
+requests
+setuptools_scm
+shapely
+trollsift
