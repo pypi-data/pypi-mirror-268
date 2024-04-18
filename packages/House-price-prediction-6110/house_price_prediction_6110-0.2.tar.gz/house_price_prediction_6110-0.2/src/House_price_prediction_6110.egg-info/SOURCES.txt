@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/House_price_prediction/__init__.py
+src/House_price_prediction/ingest_data.py
+src/House_price_prediction/score.py
+src/House_price_prediction/train.py
+src/House_price_prediction_6110.egg-info/PKG-INFO
+src/House_price_prediction_6110.egg-info/SOURCES.txt
+src/House_price_prediction_6110.egg-info/dependency_links.txt
+src/House_price_prediction_6110.egg-info/requires.txt
+src/House_price_prediction_6110.egg-info/top_level.txt

@@ -1,0 +1,24 @@
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+line_length = 88
+profile = "black"
+
+[tool.black]
+line_length = 88
+skip-string-normalization = false
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "House_price_prediction_6110"
+version = "0.2"
+dependencies = [
+    'numpy',
+    'pandas',
+    'scikit-learn',
+    'scipy'
+]
