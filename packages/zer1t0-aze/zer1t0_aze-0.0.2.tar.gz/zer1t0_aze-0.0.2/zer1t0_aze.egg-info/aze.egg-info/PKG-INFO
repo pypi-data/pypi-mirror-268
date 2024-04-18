@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aze
+Version: 0.0.1
+Summary: Enhance azure cli
+Home-page: https://gitlab.com/Zer1t0/aze
+Author: Eloy Pérez González
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: msal_extensions
+
+# AZE
+
+Extended utilities for azure management.
+

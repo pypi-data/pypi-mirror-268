@@ -1,0 +1,6 @@
+[console_scripts]
+az-get-login-info = aze.az_get_login_info:main
+az-inspect-token = aze.az_inspect_token:main
+az-login-with-token = aze.az_login_with_token:main
+az-tenant-id = aze.az_tenant_id:main
+az-whoami = aze.az_whoami:main

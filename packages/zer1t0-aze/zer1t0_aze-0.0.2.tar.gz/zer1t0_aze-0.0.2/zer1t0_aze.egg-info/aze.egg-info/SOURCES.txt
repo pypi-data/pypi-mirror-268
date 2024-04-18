@@ -1,0 +1,16 @@
+README.md
+setup.py
+aze/__init__.py
+aze/az_get_login_info.py
+aze/az_inspect_token.py
+aze/az_login_with_token.py
+aze/az_tenant_id.py
+aze/az_whoami.py
+aze/read_in.py
+aze/version.py
+aze.egg-info/PKG-INFO
+aze.egg-info/SOURCES.txt
+aze.egg-info/dependency_links.txt
+aze.egg-info/entry_points.txt
+aze.egg-info/requires.txt
+aze.egg-info/top_level.txt
