@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: House_price_prediction_6110
+Version: 0.2
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
