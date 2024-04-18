@@ -1,0 +1,5 @@
+apt_wrapper-1.19.data/scripts/apt,sha256=YVSo4wq-ZFppUeohmAWnUtcj10OgbTijAHmhriveVyU,8022
+apt_wrapper-1.19.dist-info/METADATA,sha256=0bj4BA6cZ4RQMKP6cHMW2nvYb1ivbwd5ubhbooavnC0,3957
+apt_wrapper-1.19.dist-info/WHEEL,sha256=Xo9-1PvkuimrydujYJAjF7pCkriuXBpUPEjma1nZyJ0,92
+apt_wrapper-1.19.dist-info/top_level.txt,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+apt_wrapper-1.19.dist-info/RECORD,,
