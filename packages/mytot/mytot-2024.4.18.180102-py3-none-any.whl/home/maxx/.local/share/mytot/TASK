@@ -1,0 +1,47 @@
+#!/bin/bash -f
+
+function is_python_script() {
+    local filename="$1"
+    local extension="${filename##*.}"
+    [[ "$extension" == "py" ]]
+}
+
+function is_bash_script() {
+    local filename="$1"
+    local extension="${filename##*.}"
+    [[ "$extension" == "sh" ]]
+}
+
+function start_task() {
+    task_file=$(realpath "$1")
+
+    mkdir -p ~/.cache/task_log/
+    exec >>~/.cache/task_log/out.$(date +"%Y%m%d") 2>&1
+    find ~/.cache/task_log/ -type f -mtime +7 -exec rm -rf {} +
+    echo "---------------------------------------------------------------------"
+    echo ">>>>>>TASK $task_file"
+    echo "use shell:$SHELL"
+    echo "PATH=$PATH"
+    if $(is_bash_script $task_file); then
+        if [[ ! $(ps x | grep -v grep | grep -v TASK | grep bash | grep "$task_file") ]]; then
+            echo "$(date) |start $task_file"
+            task_wd=$(dirname $(realpath $task_file))
+            cd $task_wd
+            bash $task_file
+        else
+            echo "$(date) | $task_file is already running"
+        fi
+    fi
+    if $(is_python_script $task_file); then
+        if [[ ! $(ps x | grep -v grep | grep -v TASK | grep python | grep "$task_file") ]]; then
+            echo "$(date) |start $task_file"
+            task_wd=$(dirname $(realpath $task_file))
+            PYTHON='/miniconda/bin/python -Wignore'
+            cd $task_wd
+            $PYTHON $task_file
+        else
+            echo "$(date) | $task_file is already running"
+        fi
+    fi
+}
+start_task $1

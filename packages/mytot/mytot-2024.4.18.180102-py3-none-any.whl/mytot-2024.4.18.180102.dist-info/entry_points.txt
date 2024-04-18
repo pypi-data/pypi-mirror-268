@@ -1,0 +1,2 @@
+[console_scripts]
+TASK = mytot.main:TASK
