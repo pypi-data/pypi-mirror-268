@@ -1,0 +1,14 @@
+include MANIFEST.in
+include LICENSE
+include README.md
+include CMakeLists.txt
+recursive-include cmake *
+recursive-include aidge_core *
+recursive-include include *
+recursive-include src *
+recursive-include python_binding *
+include setup.py
+include version.txt
+include project_name.txt
+include aidge_core-config.cmake.in 
+ 
