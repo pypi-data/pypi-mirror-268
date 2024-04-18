@@ -1,0 +1,3 @@
+[console_scripts]
+ained=ained.main:app
+

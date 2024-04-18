@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Board Data",
+    "type": "object",
+    "properties": {
+      "boardProperties": {
+        "type": "object",
+        "properties": {
+          "rows": { "type": "number" },
+          "columns": { "type": "number" },
+          "probability": { "type": "number", "minimum": 0, "maximum": 1 },
+          "initialState": { "type":  "number", "minimum": 0, "maximum": 2}
+        },
+        "required": ["rows", "columns", "probability", "initialState"]
+      },
+      "timesteps": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "time": { "type": "number" },
+            "changes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "x": { "type": "number" },
+                  "y": { "type": "number" },
+                  "state": { "type": "number" }
+                },
+                "required": ["x", "y", "state"]
+              }
+            }
+          },
+          "required": ["time", "changes"]
+        }
+      }
+    },
+    "required": ["boardProperties", "timesteps"]
+  }
+  
