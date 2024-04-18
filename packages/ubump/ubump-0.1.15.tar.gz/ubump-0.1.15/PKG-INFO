@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: ubump
+Version: 0.1.15
+Summary: Yet another bump tool
+Keywords: bump,bumpversion,bump2version,bump-version,bumper,bumping,version,versioning
+Home-page: https://github.com/vd2org/ubump
+Author-Email: vd <ubump@vd2.org>
+License: Copyright 2024 Vd <ubump@vd2.org>
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+        the Software, and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+        FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+        COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+        IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Version Control
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Homepage, https://github.com/vd2org/ubump
+Project-URL: Repository, https://github.com/vd2org/ubump.git
+Project-URL: Issues, https://github.com/vd2org/ubump/issues
+Requires-Python: <4.0,>=3.11
+Requires-Dist: packaging~=23.2
+Requires-Dist: tomlkit~=0.12.3
+Description-Content-Type: text/markdown
+
+# ubump
+
+Yet another version bumper for your project.
+
+## Why?
+
+I wanted to have a simple version bumper that I could use in my CI/CD pipeline.
+I didn't want to have to install a bunch of dependencies or have to write a bunch of configs to just change the version number.
+
+This tool having less than 500 lines of code and just one dependency (`tomlkit`) is the result of that.
+
+## What does it do?
+
+This tool covers basic version management where only the major, minor, and patch numbers are used.
+
+Supporting `pyproject.toml` or `.ubump.toml` configuration files.
+
+The git commit and tag are also created with the new version number.
+
+If you need more than that take a look at [bump-my-version](https://github.com/callowayproject/bump-my-version) project.
+
+## Installation
+
+```shell
+pip install ubump
+```
+
+## Usage
+
+- Initialize the config file
+
+```shell
+ubump init 
+```
+
+- Bump the version
+
+```shell
+ubump pathch
+```
+
+```shell
+ubump minor
+```
+
+```shell
+ubump major
+```
+
+**That's it!**
