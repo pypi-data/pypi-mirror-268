@@ -1,0 +1,4 @@
+# Specifically for generating docs
+Sphinx
+m2r2
+readthedocs-sphinx-ext
