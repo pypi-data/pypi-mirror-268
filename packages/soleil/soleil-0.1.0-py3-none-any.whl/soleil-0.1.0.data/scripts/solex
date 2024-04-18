@@ -1,0 +1,20 @@
+#!python
+from typing import Type, Union
+from soleil.cli_tools.solex_decorator import solex
+from soleil.resolvers.base import get_resolver
+from soleil.resolvers.module_resolver import ModuleResolver, SolConfModule
+
+
+@solex(resolve=False)
+def run(conf: Union[SolConfModule, Type]):
+    # Supports `as_run` argument when conf is a Type and not a SolConf Module in case it is a promoted class
+
+    if (resolver := get_resolver(conf)) is None:
+        raise ValueError(f"Invalid type {type(conf)}.")
+
+    run = getattr(resolver, "run", None) or (lambda _: None)
+    run(resolver.resolve())
+
+
+if __name__ == "__main__":
+    run()
