@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: pysanet
+Version: 0.0.11
+Summary: 
+Author: Simone Dalla
+Author-email: simodalla@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Framework :: Pydantic
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: pydantic-settings (>=2.0.3,<3.0.0)
+Requires-Dist: pydantic-settings-toml (>=0.2.0,<0.3.0)
+Requires-Dist: pydantic[email] (>=2.4.2,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: typer (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+

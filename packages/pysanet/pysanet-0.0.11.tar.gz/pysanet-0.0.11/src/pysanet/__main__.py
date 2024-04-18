@@ -1,0 +1,27 @@
+"""PYNTeractA
+
+Usage:
+------
+
+    $ pysanet
+
+Contact:
+--------
+
+- https://www.unionerenolavinosamoggia.bo.it/index.php/contatti
+
+More information is available at:
+
+- https://github.com/simodalla/pynteracta
+
+
+Version:
+--------
+
+- pysanet v0.4.3
+"""
+
+from .cli.commands import app
+
+if __name__ == "__main__":
+    app()

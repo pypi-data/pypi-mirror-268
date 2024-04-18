@@ -1,0 +1,141 @@
+[tool.poetry]
+name = "pysanet"
+version = "0.0.11"
+description = ""
+authors = ["Simone Dalla <simodalla@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "pysanet", from = "src" }]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "Intended Audience :: System Administrators",
+  "License :: OSI Approved :: MIT License",
+  "Framework :: Pydantic",
+  "Framework :: Pydantic :: 2",
+  "Operating System :: Unix",
+  "Operating System :: POSIX :: Linux",
+  "Environment :: Console",
+  "Environment :: MacOS X",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Internet",
+]
+homepage = ""
+repository = ""
+
+[tool.poetry.scripts]
+pysanet = "pysanet.cli.commands:app"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = { extras = ["email"], version = "^2.4.2" }
+typer = "^0.12.3"
+requests = "^2.31.0"
+pydantic-settings = "^2.0.3"
+pydantic-settings-toml = "^0.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+pytest-cov = "^5.0.0"
+pre-commit = "^3.5.0"
+ipdb = "^0.13.13"
+mypy = "^1.6.1"
+pytest-sugar = "^1.0.0"
+coverage = "^7.3.2"
+devtools = "^0.12.2"
+faker = "^24.9.0"
+bumpver = "^2023.1129"
+ruff = "^0.3.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.bumpver]
+current_version = "0.0.11"
+version_pattern = "MAJOR.MINOR.PATCH"
+commit_message = "bump version v{old_version} -> v{new_version}"
+tag_message = "v{new_version}"
+tag_scope = "default"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
+"src/pysanet/__init__.py" = ["{version}"]
+
+
+[tool.pytest.ini_options]
+addopts = "-p no:warnings --pdbcls=IPython.core.debugger:Pdb -p no:randomly"
+#  -m 'not integration and not lifecycle and not temp'
+pythonpath = "./src"
+testpaths = "tests"
+norecursedirs = [
+    ".*",
+    "templates",
+    "compose",
+    "docs",
+    "htmlcov",
+    "staticstorage",
+    "locale",
+]
+markers = [
+    "integration: marks tests as integration (deselect with '-m \"not integration\"')",
+    "lifecycle: marks tests as lifecycle (deselect with '-m \"not lifecycle\"')",
+    "temp: marks tests as temp (deselect with '-m \"not temp\"')",
+]
+
+[tool.ruff]
+select = [
+    "B",
+    "C4",
+    "EXE",
+    "F",
+    "E",
+    "ISC",
+    "ICN",
+    "INP",
+    "PIE",
+    "SIM",
+    "W",
+    "T20",
+    "UP",
+    "T10",
+    "G",
+    "C90",
+    "ERA",
+]
+ignore = ["G004"]
+fixable = ["ALL"]
+# unfixable = ["G004", "ERA001"]
+# unfixable = ["G004", "ERA001", "ERA001", "F401", "F841"]
+
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".pre-commit-cache",
+    ".ruff_cache",
+    ".tox",
+    ".venv",
+    "venv",
+    "docs",
+    "__pycache",
+    "**/migrations/*",
+]
+line-length = 100
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+target-version = "py312"
+src = ["src", "test"]
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
