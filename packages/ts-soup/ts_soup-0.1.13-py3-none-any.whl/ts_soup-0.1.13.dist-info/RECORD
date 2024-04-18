@@ -1,0 +1,10 @@
+ts_soup/__init__.py,sha256=-T_jOSxH3xgU0lvx84_eFFhfdmbBvvO0Pl8BLAX1IMI,373
+ts_soup/app.py,sha256=GJCPwa7D3xm_gye9wXAIFYMMiyzEhKz8usGVzBMpC3o,1418
+ts_soup/common.py,sha256=bIFRJfM4zguK8zsGQL4hSrTKC-ZEvdt3CmRvZDJrjvs,15633
+ts_soup/workers/__init__.py,sha256=yR0hQ-hk9ooy-j3mrVM2HCjoAE5kLWUyQBkpMPLewRI,78
+ts_soup/workers/sources.py,sha256=tfXQgk0OJtH4tw6UBJAOHVUH-tWKvvcG9hLyYFkRUBM,4265
+ts_soup/workers/targets.py,sha256=kYx6dvcN4BvOTULPY0_wJzs6B0wtkHJk3oF69y5k2kE,5931
+ts_soup-0.1.13.dist-info/METADATA,sha256=aTZ8RMpaZJUfIxWNTO-a5aET2UmcdjQDD0pQbC7m0kc,1029
+ts_soup-0.1.13.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ts_soup-0.1.13.dist-info/top_level.txt,sha256=qMw4LJFHHdHZwbIjjoNXnESEeAPo7ArHUmhZxfJwE3s,8
+ts_soup-0.1.13.dist-info/RECORD,,
