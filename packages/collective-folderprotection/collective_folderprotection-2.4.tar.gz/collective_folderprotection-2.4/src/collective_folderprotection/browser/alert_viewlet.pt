@@ -1,0 +1,23 @@
+<div class="context-pw-protected" tal:condition="view/context_pw_protected">
+  <div class="alert alert-warning" role="alert">
+    <div>
+      <span>This location is password protected.</span>
+    </div>
+  </div>
+</div>
+<div class="folder-pw-protected" tal:condition="view/folder_pw_protected">
+  <div class="alert alert-warning" role="alert">
+    <div>
+      <span>A folder containing this item is password protected.</span>
+    </div>
+  </div>
+</div>
+<div class="parent-pw-protected"
+     tal:define="folder_protected nocall:view/parent_pw_protected"
+     tal:condition="folder_protected">
+  <div class="alert alert-warning" role="alert">
+    <div>
+      <span>A folder in this item's path is password protected, click <a tal:attributes="href folder_protected/absolute_url">here</a> to go to it.</span>
+    </div>
+  </div>
+</div>
