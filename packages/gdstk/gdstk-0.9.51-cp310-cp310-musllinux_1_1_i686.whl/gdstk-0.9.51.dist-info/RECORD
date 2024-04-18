@@ -1,0 +1,12 @@
+gdstk/_gdstk.pyi,sha256=llICUnXrJJrT2zrVwbMiI1QFZtZOu9Ba8R2R4MjE51Y,35702
+gdstk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdstk/_gdstk.cpython-310-i386-linux-gnu.so,sha256=hWcPJG89etcLy5avyO0xL5yYAsPUtWtok6JJXafBveY,1121309
+gdstk/__init__.py,sha256=RR5L88NqHyLuWtR0tyfgccVV6Pnz07KgRZKJCzYX59w,54
+gdstk-0.9.51.dist-info/METADATA,sha256=0ApztvmLDTAUUbbCNmBO7Ip7V6DVpEcaso7nJCuqhpg,8738
+gdstk-0.9.51.dist-info/RECORD,,
+gdstk-0.9.51.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdstk-0.9.51.dist-info/WHEEL,sha256=6RsnsHxOFI2fdy8CiMOf15HqwOK6HAJ2dp49keuKGi8,114
+gdstk-0.9.51.dist-info/licenses/LICENSE,sha256=vrjkLp1rQoTgMwTQWoGgdVIAqWX8jQpeCuoehM-AXW4,1361
+gdstk.libs/libgcc_s-8b50eaaa.so.1,sha256=WXj_FYQE1MDIyb-nN8siUALdxit6NHma0p9UxemQV8o,101649
+gdstk.libs/libstdc++-8baf04f9.so.6.0.28,sha256=yrzOxg1heyJ9Y-43YCLLn04Cpl_A68FN0D2Q1iBTMcY,2428961
+gdstk.libs/libqhull_r-f33791b2.so.8.0.2,sha256=6QJQXH6tRneNK1qturwEDE_sqqPHVCvcssg1o7J9sKc,540449
