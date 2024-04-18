@@ -1,0 +1,66 @@
+[tool.poetry]
+authors = ["blurhead <blurhead@outlook.com>"]
+description = "Human Readable Regular Expression"
+license = "MIT"
+name = "myre"
+readme = "README.md"
+repository = "https://github.com/blurhead/myre"
+version = "0.0.7"
+
+[[tool.poetry.source]]
+name = "default"
+priority = "primary"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typing-extensions = "^4.9.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.0"
+pre-commit = "^3.0"
+pytest = "^8.0"
+ruff = "*"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
+
+[tool.ruff]
+# Allow unused variables when underscore-prefixed.
+builtins = ["_"]
+exclude = ["tests"]
+line-length = 120
+target-version = "py310"
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+[tool.ruff.lint]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+ignore = [
+  "E501", # line too long(ruff will fix it)
+]
+select = [
+  "E", # pycodestyle errors
+  "W", # pycodestyle warnings
+  "F", # pyflakes
+  "I", # isort
+  "C", # flake8-comprehensions
+  "B", # flake8-bugbear
+  "R", # Refactor
+]
+unfixable = []
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+addopts = "--maxfail=1 --disable-warnings --import-mode=importlib -ra -q -s -vv"
+minversion = "7.0"
+testpaths = ["tests"]
+
+[tool.mypy]
+no_implicit_optional = false
