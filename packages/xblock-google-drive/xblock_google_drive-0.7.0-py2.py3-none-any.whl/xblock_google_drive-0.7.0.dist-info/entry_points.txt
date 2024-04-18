@@ -1,0 +1,3 @@
+[xblock.v1]
+google-calendar = google_drive:GoogleCalendarBlock
+google-document = google_drive:GoogleDocumentBlock
