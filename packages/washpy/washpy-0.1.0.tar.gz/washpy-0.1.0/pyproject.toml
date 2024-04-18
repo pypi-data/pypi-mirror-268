@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "washpy"
+version = "0.1.0"
+description = "A partial implementation of the Miele Professional IP Profile API"
+authors = ["Johann Carl Meyer <info@johannc.de>"]
+license = "LGPL-3.0-only"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "2.29.0"
+isodate = "^0.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
