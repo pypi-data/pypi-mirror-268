@@ -1,0 +1,12 @@
+unique_session/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unique_session/models.py,sha256=uHtVaQLlnNvlkEY21-NB4gvvqWIPotYwRFmhzfHuIdo,563
+unique_session/views.py,sha256=F42JXgnqFqK0fajXeutyJJxwOszRxoLMNkIhfc4Z7KI,26
+unique_session/backends/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unique_session/backends/session_backend.py,sha256=IyFwjAhF0Hf_5fH23gx7aRBmsHDn4X28Z4iZg4Z4oCA,3583
+django_unique_session-1.0.dist-info/AUTHORS,sha256=meOcgZpOfGuH9z3bZJEkbC1bqIEjFbiTBhZOpI7NWlo,41
+django_unique_session-1.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+django_unique_session-1.0.dist-info/METADATA,sha256=E3KjRzybGth7mT1oFQZpMrUs__cNpp18ZCaLxPAKrcw,1254
+django_unique_session-1.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+django_unique_session-1.0.dist-info/top_level.txt,sha256=o80tvaIAblijXRSI2MwDccejZZLToqphdU3RPOVtdPk,15
+django_unique_session-1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+django_unique_session-1.0.dist-info/RECORD,,
