@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "APIManager_DM_2024"
+version = "0.0.4"
+authors = [
+    { name = "David", email = "movsis.david@gmail.com" },
+]
+description = "A small http(s) requests package"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests~=2.31.0"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/APIManagerPackage"]
