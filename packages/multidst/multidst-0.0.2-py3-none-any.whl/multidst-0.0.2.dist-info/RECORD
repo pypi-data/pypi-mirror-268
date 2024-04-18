@@ -1,0 +1,17 @@
+multidst/__init__.py,sha256=h1ap4he6hSfq6F8Usj7PqpKetfKX_U5vJlpzUCToUog,80
+multidst/functions.py,sha256=K1HDgOXQa2uurSeKeU0-ctE2Oja6AtDRjEsrEKw5hSM,3121
+multidst/methods/BH.py,sha256=BpFKOPx9N6n_GufzhwjhhxWTrQNFIy7wchJ2Q0RlLZc,560
+multidst/methods/BY.py,sha256=LGpd5PI8y-Lfhh6HLQh9S2py3lJ4oWEt3o4GtneVLAY,553
+multidst/methods/__init__.py,sha256=fEJreaglG-tnLy5drWSzJxktDCs2YcpygDdQNmQD-Tw,175
+multidst/methods/bonf.py,sha256=A_kxQBDa0E9ynnG8i4rCTSX0_XhZ2DT2rJvSbeCJrEo,616
+multidst/methods/holm_bonf.py,sha256=TvdLHCWF-rzNiiWTt6mP_S10PmF3PHP9-t4yXazkkuo,980
+multidst/methods/qval.py,sha256=8QopCxTtySf4urUUgoIfVjXZI2jOjdwzxr_BgBKR3l8,3122
+multidst/methods/sgof.py,sha256=ExeIoAkKl8zXDzdicV8KOEVQzQN7loq4q4OX9XDdIIY,1339
+multidst/utils/__init__.py,sha256=M2UJXvq46dJusAhTMJxBWKMz8zMMuOp6Xj7rKeV7IWo,97
+multidst/utils/common_indices.py,sha256=ARYLrFTHm6gCMKz4x5uhJkHkSM8lyBmI9fGrW8Ese6U,3472
+multidst/utils/visualization.py,sha256=106LaUw6zRdariCndmaCZEn4DpiIyD6RaIeFm-HyXN0,13712
+multidst/utils/weighting.py,sha256=jRcHHZlKeWN3bk4KklJCVblgvhpwErZhneluWrGGkRU,7548
+multidst-0.0.2.dist-info/METADATA,sha256=sESqAPyYpcRak67EI6EkoMgP6BTz3kyzMnLW8heRBto,271
+multidst-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+multidst-0.0.2.dist-info/top_level.txt,sha256=T90UEm3mndppAJdQlSMWfLkMQM2DAfid7mzWH-QsFHY,9
+multidst-0.0.2.dist-info/RECORD,,
