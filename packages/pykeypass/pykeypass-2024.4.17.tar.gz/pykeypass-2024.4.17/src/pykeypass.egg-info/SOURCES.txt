@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/pykeypass/__init__.py
+src/pykeypass.egg-info/PKG-INFO
+src/pykeypass.egg-info/SOURCES.txt
+src/pykeypass.egg-info/dependency_links.txt
+src/pykeypass.egg-info/entry_points.txt
+src/pykeypass.egg-info/requires.txt
+src/pykeypass.egg-info/top_level.txt
+test/test_github.py
+test/test_local.py
