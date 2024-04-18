@@ -1,0 +1,230 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+rwmap/__init__.py
+rwmap/_core.py
+rwmap/_exceptions.py
+rwmap/_case/__init__.py
+rwmap/_case/_layer.py
+rwmap/_case/_object.py
+rwmap/_case/_objectgroup.py
+rwmap/_case/_tileset.py
+rwmap/_frame/__init__.py
+rwmap/_frame/_coordinate.py
+rwmap/_frame/_element_ori.py
+rwmap/_frame/_element_property.py
+rwmap/_maps/misc.tsx
+rwmap/_maps/units.tsx
+rwmap/_maps/bitmaps/decoration.png
+rwmap/_maps/bitmaps/misc.png
+rwmap/_maps/bitmaps/units.png
+rwmap/_maps/ridges/Dirt Dirt - Ridge.tsx
+rwmap/_maps/ridges/Dirt ShalowWater - Ridge.tsx
+rwmap/_maps/ridges/Ice Ice - Flat.tsx
+rwmap/_maps/ridges/Ice ShallowWater - Broken.tsx
+rwmap/_maps/ridges/Ice ShallowWater - Ridge.tsx
+rwmap/_maps/ridges/LongGrass Dirt - Flat.tsx
+rwmap/_maps/ridges/LongGrass Dirt - Ridge.tsx
+rwmap/_maps/ridges/LongGrass LongGrass - Hill.tsx
+rwmap/_maps/ridges/LongGrass LongGrass - Ridge.tsx
+rwmap/_maps/ridges/LongGrass ShallowWater - Flat.tsx
+rwmap/_maps/ridges/LongGrass ShallowWater - Ridge.tsx
+rwmap/_maps/ridges/LongGrass ShortGrass - Flat.tsx
+rwmap/_maps/ridges/Mountain Dirt - Flat.tsx
+rwmap/_maps/ridges/Mountain Dirt - Ridge.tsx
+rwmap/_maps/ridges/Mountain LongGrass - Flat.tsx
+rwmap/_maps/ridges/Mountain Mountain - Hill.tsx
+rwmap/_maps/ridges/Mountain Mountain - Ridge.tsx
+rwmap/_maps/ridges/Mountain Nothing - Flat.tsx
+rwmap/_maps/ridges/Mountain Sand - Flat.tsx
+rwmap/_maps/ridges/Mountain ShallowWater - Flat.tsx
+rwmap/_maps/ridges/Mountain ShallowWater - Ridge.tsx
+rwmap/_maps/ridges/Mountain Snow - Flat.tsx
+rwmap/_maps/ridges/Mountain Stone - Flat.tsx
+rwmap/_maps/ridges/Nothing Sand - Flat.tsx
+rwmap/_maps/ridges/Sand Dirt - Flat.tsx
+rwmap/_maps/ridges/Sand Dirt - Ridge.tsx
+rwmap/_maps/ridges/Sand LandGrass - Flat.tsx
+rwmap/_maps/ridges/Sand Sand - Hill.tsx
+rwmap/_maps/ridges/Sand Sand - Ridge.tsx
+rwmap/_maps/ridges/Sand ShallowWater - Flat.tsx
+rwmap/_maps/ridges/Sand ShallowWater - Ridge.tsx
+rwmap/_maps/ridges/ShallowWater Water - Flat.tsx
+rwmap/_maps/ridges/Snow Dirt - Flat.tsx
+rwmap/_maps/ridges/Snow Dirt - Ridge.tsx
+rwmap/_maps/ridges/Snow Ice - Ridge.tsx
+rwmap/_maps/ridges/Snow Snow - Hill.tsx
+rwmap/_maps/ridges/Snow Snow - ridge.tsx
+rwmap/_maps/ridges/Stone Lava - Ridge.tsx
+rwmap/_maps/ridges/Stone Lava - ridge2.tsx
+rwmap/_maps/ridges/Stone Sand - Flat.tsx
+rwmap/_maps/ridges/Stone ShallowWater - ridge.tsx
+rwmap/_maps/ridges/Stone Snow - ridge.tsx
+rwmap/_maps/ridges/Water DeepWater - Flat.tsx
+rwmap/_maps/ridges/bitmaps/dirt2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/dirt2dirt_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2ice_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2lava_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/dirt2longgrass_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2mountain_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2sand_flat.png
+rwmap/_maps/ridges/bitmaps/dirt2sand_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2shallowwater_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2snow_flat.png
+rwmap/_maps/ridges/bitmaps/dirt2snow_ridge.png
+rwmap/_maps/ridges/bitmaps/dirt2stone_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/ice2dirt_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2ice_flat.png
+rwmap/_maps/ridges/bitmaps/ice2ice_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2lava_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/ice2longgrass_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2mountain_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2sand_flat.png
+rwmap/_maps/ridges/bitmaps/ice2sand_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2shallowwater_broken.png
+rwmap/_maps/ridges/bitmaps/ice2shallowwater_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2snow_flat.png
+rwmap/_maps/ridges/bitmaps/ice2snow_ridge.png
+rwmap/_maps/ridges/bitmaps/ice2stone_ridge.png
+rwmap/_maps/ridges/bitmaps/lava2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/lava2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/lava2sand_flat.png
+rwmap/_maps/ridges/bitmaps/lava2snow_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2dirt_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2ice_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2ice_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2lava_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2lava_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2longgrass_hill.png
+rwmap/_maps/ridges/bitmaps/longgrass2longgrass_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2mountain_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2mountain_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2sand_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2sand_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2shallowwater_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2shallowwater_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2shortgrass_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2snow_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2snow_ridge.png
+rwmap/_maps/ridges/bitmaps/longgrass2stone_flat.png
+rwmap/_maps/ridges/bitmaps/longgrass2stone_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2dirt_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2ice_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2ice_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2lava_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2lava_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2longgrass_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2mountain_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2mountain_hill.png
+rwmap/_maps/ridges/bitmaps/mountain2mountain_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2nothing_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2sand_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2sand_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2shallowwater_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2shallowwater_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2snow_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2snow_ridge.png
+rwmap/_maps/ridges/bitmaps/mountain2stone_flat.png
+rwmap/_maps/ridges/bitmaps/mountain2stone_ridge.png
+rwmap/_maps/ridges/bitmaps/nothing2sand_flat.png
+rwmap/_maps/ridges/bitmaps/sand2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/sand2dirt_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2ice_flat.png
+rwmap/_maps/ridges/bitmaps/sand2ice_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2lava_flat.png
+rwmap/_maps/ridges/bitmaps/sand2lava_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/sand2longgrass_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2mountain_flat.png
+rwmap/_maps/ridges/bitmaps/sand2mountain_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2nothing_flat.png
+rwmap/_maps/ridges/bitmaps/sand2sand_flat.png
+rwmap/_maps/ridges/bitmaps/sand2sand_hill.png
+rwmap/_maps/ridges/bitmaps/sand2sand_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2shallowwater_flat.png
+rwmap/_maps/ridges/bitmaps/sand2shallowwater_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2snow_flat.png
+rwmap/_maps/ridges/bitmaps/sand2snow_ridge.png
+rwmap/_maps/ridges/bitmaps/sand2stone_flat.png
+rwmap/_maps/ridges/bitmaps/sand2stone_ridge.png
+rwmap/_maps/ridges/bitmaps/shallowwater2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/shallowwater2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/shallowwater2sand_flat.png
+rwmap/_maps/ridges/bitmaps/shallowwater2snow_flat.png
+rwmap/_maps/ridges/bitmaps/shallowwater2water_flat.png
+rwmap/_maps/ridges/bitmaps/snow2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/snow2dirt_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2ice_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2lava_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/snow2longgrass_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2mountain_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2sand_flat.png
+rwmap/_maps/ridges/bitmaps/snow2sand_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2shallowwater_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2snow_flat.png
+rwmap/_maps/ridges/bitmaps/snow2snow_hill.png
+rwmap/_maps/ridges/bitmaps/snow2snow_ridge.png
+rwmap/_maps/ridges/bitmaps/snow2stone_ridge.png
+rwmap/_maps/ridges/bitmaps/sone2sand_flat_2.png
+rwmap/_maps/ridges/bitmaps/stone2dirt_flat.png
+rwmap/_maps/ridges/bitmaps/stone2dirt_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2ice_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2lava.png
+rwmap/_maps/ridges/bitmaps/stone2lava_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2longgrass_flat.png
+rwmap/_maps/ridges/bitmaps/stone2longgrass_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2mountain_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2sand_flat.png
+rwmap/_maps/ridges/bitmaps/stone2sand_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2shallowwater_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2snow.png
+rwmap/_maps/ridges/bitmaps/stone2snow_flat.png
+rwmap/_maps/ridges/bitmaps/stone2snow_ridge.png
+rwmap/_maps/ridges/bitmaps/stone2stone_ridge.png
+rwmap/_maps/ridges/bitmaps/water2deepwater_flat.png
+rwmap/_maps/terrain/Deep Water.tsx
+rwmap/_maps/terrain/Dirt.tsx
+rwmap/_maps/terrain/Ice.tsx
+rwmap/_maps/terrain/Lava.tsx
+rwmap/_maps/terrain/Long Grass.tsx
+rwmap/_maps/terrain/Mountain.tsx
+rwmap/_maps/terrain/Sand.tsx
+rwmap/_maps/terrain/Shallow Water.tsx
+rwmap/_maps/terrain/Short Grass.tsx
+rwmap/_maps/terrain/Snow.tsx
+rwmap/_maps/terrain/Stone.tsx
+rwmap/_maps/terrain/Water.tsx
+rwmap/_object/__init__.py
+rwmap/_object/_object_group.py
+rwmap/_object/_object_one.py
+rwmap/_object/_object_pos.py
+rwmap/_object/_object_pro.py
+rwmap/_tile/__init__.py
+rwmap/_tile/_tile_group.py
+rwmap/_util/__init__.py
+rwmap/_util/_class_rel.py
+rwmap/_util/_dict_util.py
+rwmap/_util/_etElement_process.py
+rwmap/_util/_list_util.py
+rwmap/_util/_png_rel.py
+rwmap/_util/_str_util.py
+rwmap/data/__init__.py
+rwmap/data/default_data.py
+rwmap/data/tile_group_grid/__init__.py
+rwmap/data/tile_group_grid/_tile_group_addlayer.py
+rwmap/data/tile_group_grid/_tile_group_matrix.py
+rwmap/data/tile_group_grid/tile_group_one.py
+rwmap/data/tobject_group_COP/__init__.py
+rwmapeditor_exgcdwu.egg-info/PKG-INFO
+rwmapeditor_exgcdwu.egg-info/SOURCES.txt
+rwmapeditor_exgcdwu.egg-info/dependency_links.txt
+rwmapeditor_exgcdwu.egg-info/top_level.txt
