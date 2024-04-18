@@ -1,0 +1,134 @@
+Metadata-Version: 2.1
+Name: codeflex
+Version: 1.1.0
+Summary: Consulta MySQL con Python y Codeflex.
+Home-page: https://codeflex.com.co/
+Author: CODEFLEX S.A.S.
+Author-email: info@codeflex.com.co
+Project-URL: Bug Tracker, https://docs.codeflex.com.co/
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+[![MIT License][license-shield]](https://s3.amazonaws.com/www.codeflex.lat/documentos/c3320017-1937-4353-8881-475e3c89e25e/LICENSE.txt)
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://codeflex.com.co">
+    <img src="https://codeflex.com.co/assets/img/navegadorlogo/logooriginal.png" alt="Logo" width="300">
+  </a>
+
+  <h3 align="center">CODEFLEX S.A.S.</h3>
+
+  <p align="center">
+    Codificación y Almacenamiento Simplificados | IDE
+    <br />
+    <a href="https://docs.codeflex.com.co/"><strong>Explore the docs »</strong></a>
+    <br />
+  </p>
+</p>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![miniatura][miniatura]](https://codeflex.com.co)
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+You need to make sure you have installed the following modules.
+* Requests
+  ```s
+  pip install requests
+  ```
+
+### Installation
+
+```python
+pip install codeflex
+```
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+* Example 1
+    ```python
+    from codeflex.company import mysql
+
+    respuesta = mysql.UPDATETABLE_CUSTOM("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+
+
+    respuesta = mysql.DELETETABLE_CUSTOM("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+ 
+
+    respuesta = mysql.DELETETABLE("your_user", "your_password","your_database", "your_tablename") #Usuario , Contraseña, Base de datos, Nombre de la tabla
+    print(respuesta)
+
+
+    respuesta = mysql.TABLEINSERT_CUSTOM("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+ 
+
+    respuesta = mysql.TABLEQUERY_CUSTOM("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+
+
+    respuesta = mysql.TABLEQUERY("your_user", "your_password","your_database", "your_tablename") #Usuario , Contraseña, Base de datos, Nombre de la tabla
+    print(respuesta)
+
+
+    respuesta = mysql.CREATETABLE_CUSTOM("your_user", "your_password","your_database", "your_SQL") #Usuario , Contraseña, Base de datos, Sql
+    print(respuesta)
+
+
+    respuesta = mysql.CREATETABLE("your_user", "your_password","your_database", "your_tablename") #Usuario , Contraseña, Base de datos, Nombre de la tabla
+    print(respuesta)
+
+
+    respuesta = mysql.DELETEDB("your_user", "your_database") #Usuario y Base de datos
+    print(respuesta)
+
+
+    respuesta = mysql.CREATEDB("your_user", "your_database") #Usuario y Base de datos
+    print(respuesta)
+ 
+ 
+    respuesta = mysql.DBQUERY("your_user", "your_password") #Usuario y Contraseña
+    print(respuesta)
+
+    ```
+
+_For more examples, please refer to the [Examples packages](https://docs.codeflex.com.co/docs-page.html#section-3)_
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## Contact
+Telefono: 3008130562 |
+Email: info@codeflex.com.co
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/avmmodules/AVMWeather.svg?style=for-the-badge
+[contributors-url]: https://github.com/avmmodules/AVMWeather/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/avmmodules/AVMWeather.svg?style=for-the-badge
+[forks-url]: https://github.com/avmmodules/AVMWeather/network/members
+[stars-shield]: https://img.shields.io/github/stars/avmmodules/AVMWeather.svg?style=for-the-badge
+[stars-url]: https://github.com/avmmodules/AVMWeather/stargazers
+[issues-shield]: https://img.shields.io/github/issues/avmmodules/AVMWeather.svg?style=for-the-badge
+[issues-url]: https://github.com/avmmodules/AVMWeather/issues
+[license-shield]: https://img.shields.io/github/license/avmmodules/AVMWeather.svg?style=for-the-badge
+[license-url]: https://github.com/avmmodules/AVMWeather/blob/main/LICENSE
+[miniatura]: https://codeflex.com.co/assets/img/ggg.webp
