@@ -1,0 +1,42 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "vite-transporter"
+description = 'Transport Vite apps.'
+authors = [{ name = "David Carmichael", email = "david@uilix.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+    'Natural Language :: English',
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+flask = ["flask"]
+quart = ["quart"]
+
+[project.scripts]
+vt = "vite_transporter:_cli"
+
+[tool.pyqwe]
+vite = "*(app_vite_demo):npm start"
+flask = "app_flask_demo:run"
+quart = "app_quart_demo:run"
+install = "*:flit install --symlink"
+build = "*:flit build"
+publish = "*shell:export FLIT_USERNAME=__token__ && flit publish"
+
+[tool.vite_transporter]
+npm_exec = "npm"
+npx_exec = "npx"
+serve_app = "app_flask_demo"
+vite_apps = ["app_vite_demo"]

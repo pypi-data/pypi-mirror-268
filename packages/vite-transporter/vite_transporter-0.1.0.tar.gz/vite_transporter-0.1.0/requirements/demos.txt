@@ -1,0 +1,4 @@
+python-dotenv
+flask
+quart
+pyqwe
