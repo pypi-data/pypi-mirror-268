@@ -1,0 +1,8 @@
+openpyxl>=3.0
+otlmow-model>=2.10.4.0
+rdflib>=6.0.0
+geojson>=3.0.1
+prettytable>=3.6.0
+numpy>=1.18
+lxml>=4.9.3
+pandas>=1.3.5
