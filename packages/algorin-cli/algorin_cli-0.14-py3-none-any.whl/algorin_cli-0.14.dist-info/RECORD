@@ -1,0 +1,17 @@
+algorin/__init__.py,sha256=1y5mAJjoOQR3m9YZ6KuUCaee15k3ibCHrrZFfok28eE,473
+algorin/chatbot.py,sha256=7-j1FZCdDTjhBLXoK03P6o-6nKW4hUkDDdJKk9CDt4I,1021
+algorin/file_extractor.py,sha256=ABWF15OeLIDxl8ove43JhO2GdB4QWTGg8UgANDqq3Xk,1021
+algorin/main.py,sha256=QWUm8JDkIlnDFOg2a7FEs1dEZbQhHu0B2zJmd1iZeLw,1834
+algorin-cli/__init__.py,sha256=enlNnFwAPujMDxOx2H3HjBma0QBBoe-ppOFXPgHxbLY,425
+algorin-cli/chatbot.py,sha256=7-j1FZCdDTjhBLXoK03P6o-6nKW4hUkDDdJKk9CDt4I,1021
+algorin-cli/file_extractor.py,sha256=ABWF15OeLIDxl8ove43JhO2GdB4QWTGg8UgANDqq3Xk,1021
+algorin-cli/main.py,sha256=QWUm8JDkIlnDFOg2a7FEs1dEZbQhHu0B2zJmd1iZeLw,1834
+tests/__init__.py,sha256=fct4xj9T_UJ65lK7_9WCoKNa7qyGnrd0b-VQq1yoiVg,178
+tests/test_chatbot.py,sha256=uEy0MJHJO0afmtmd_dcyzduEaT2ZiHZ3mRJwxGq33BI,546
+tests/test_file_extractor.py,sha256=joUvSx4TtH-zNnUCrWVgwAV0hKxE6TYWMApxzkK_onA,769
+tests/test_main.py,sha256=kWZTApMJ7-cTpkqycF3FzTTG4gEcE-2AUcFdekoK4m4,631
+algorin_cli-0.14.dist-info/METADATA,sha256=owQaFYTkwwFeIsntfeq76aBVSSmngLkI5WgjrjkO2yQ,7842
+algorin_cli-0.14.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+algorin_cli-0.14.dist-info/entry_points.txt,sha256=U-rOnX7P7MTCz2DAWds5vk-5Kdf9CHnWo65c-hXFST0,55
+algorin_cli-0.14.dist-info/top_level.txt,sha256=wZ53p-Pn4tOrlhy4N6v0RA2XcGdAUH_PLOdSU9iPDMo,14
+algorin_cli-0.14.dist-info/RECORD,,
