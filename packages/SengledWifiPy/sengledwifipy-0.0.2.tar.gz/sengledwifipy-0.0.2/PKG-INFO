@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: SengledWifiPy
+Version: 0.0.2
+Summary: Python API to control Sengled Wifi Devices Programmatically.
+Home-page: https://github.com/cpadil/sengledwifipy
+License: Apache-2.0
+Keywords: Sengled,Wifi,homeassistant
+Author: Cesar
+Author-email: gv4plolxe@mozmail.com
+Requires-Python: >=3.11,<4
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiofiles (>=23.2.1,<24.0.0)
+Requires-Dist: aiohttp (>=3.9.4,<4.0.0)
+Requires-Dist: backoff (>=2.2.1)
+Requires-Dist: certifi
+Requires-Dist: paho-mqtt (>=2.0.0,<3.0.0)
+Requires-Dist: ruff (>=0.3.7,<0.4.0)
+Requires-Dist: simplejson
+Requires-Dist: yarl
+Project-URL: Repository, https://github.com/cpadil/sengledwifipy
+Description-Content-Type: text/markdown
+
+# SengledWifiPy
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python version compatibility](https://img.shields.io/pypi/pyversions/sengledwifipy)](https://pypi.org/project/sengledwifipy)
+[![Version on PyPi](https://img.shields.io/pypi/v/sengledwifipy)](https://pypi.org/project/sengledwifipy)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/sengledwifipy)
+
+
+Python package for controlling Sengled Wifi devices. 
+
+`NOTE`: This has no relation with Sengled. There's no official API. 
+
+Features:
+* Simulates the behavior of the Android App.
+* Create a websocket connection to the MQTT broker to receive updates (Cloud Push).
+* Alternative method to publish an update without creating a websocket connection.
+
+## Documentation
+
+[Code Documentation](https://cpadil.github.io/sengledwifipy)
+
+TL;DR The package is based on 3 classes:
+* `SengledWifiLogin` - Takes care of the login (requires credentials), reduces the API calls to a minimum by saving a session cookie locally.
+* `SengledWifiMqtt` - Requires a login (SengledWifiLogin), creates the connection to the MQTT server, subscribe to topics and publish updates. Is a wrapper for [paho-mqtt](https://pypi.org/project/paho-mqtt/).
+* `SengledWifiApi` - Uses the other two classes to get/set devices state
+
+
+## Usage example
+
+Simple example that will subscribe to all the topics related to the devices in the Sengled account. SengledWifiMqtt can also receive callbacks for new messages (will be executed when an update is received).
+
+```
+import logging
+import asyncio
+from sengledwifipy import SengledLogin, SengledWifiAPI, SengledWifiMQTT
+
+#set this for testing only
+logging.basicConfig(level=logging.DEBUG)
+
+def testing():
+    async def testmqtt():
+        login = SengledLogin(email = "email@domain.com",password  = "verysecure")
+        await login.login()
+        devices = await SengledWifiAPI.get_devices(login)
+        MqttClient = SengledWifiMQTT(login)
+        await MqttClient.async_connect(devices)
+        while True:
+            await asyncio.sleep(60)
+    return asyncio.run(testmqtt())
+
+testing()
+```
+This is a way to update the device state:
+
+```
+SengledWifiAPI.set_device_state(MqttClient,"deviceId",power_on=True, brightness=100)
+```
+
+
+## Credits
+
+Inspired by:
+- [alexapy](https://gitlab.com/keatontaylor/alexapy) (design ideas)
+- [ha-sengledapi](https://github.com/jfarmer08/ha-sengledapi)
+
