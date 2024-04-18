@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: discord-users-bot
+Version: 0.0.1.1
+Summary: Discord user bot library python
+Home-page: https://github.com/CCCProo/discord-user-bot
+Author: TVOFFicial1
+Author-email: kirill.shishkov2007@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+
