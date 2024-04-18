@@ -1,0 +1,13 @@
+dmtoolkit/__init__.py,sha256=x-mEbDNfu7r2SKAGR0A7P0FwPyhhSxJRlutHkucLsHk,23
+dmtoolkit/dmtools.py,sha256=DlRs32vpVT59G-BTLaetoD37sC_E_wnpytmgok43Y9I,479
+dmtoolkit/apis/dndbeyondapi.py,sha256=B66N0La-Z0r4PuWk7FqebmsuaWrn1B9J7vUG2Vpo700,8472
+dmtoolkit/apis/open5e/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmtoolkit/apis/open5e/open5eapi.py,sha256=jY5Pfrr9MeVQMinCReky4f5hvMTz4JWs9hMVIa7OSGE,1553
+dmtoolkit/apis/open5e/open5eitem.py,sha256=71Iv4NEmZU-P1ApabqnJxb6u_VXWuOnMssVShYKTv2s,103
+dmtoolkit/apis/open5e/open5emonster.py,sha256=H4qCJpPVBptCQmgpfMmbkrgyH0PDABdXdVnSKkxgAA0,90
+dmtoolkit/apis/open5e/open5espell.py,sha256=r-X04IXbIZT55PWY22HBlRcFTM0CzQNSFlkNsqvwwiU,97
+dmtoolkit-0.0.29.dist-info/LICENSE,sha256=-PHHSuDRkodHo3PEdMkDtoIdmLAOomMq6lsLaOetU8g,1076
+dmtoolkit-0.0.29.dist-info/METADATA,sha256=7h6LjVAQ-repHuylMqw4R0ML-cGbDh6MwlTJRJ9doCw,2908
+dmtoolkit-0.0.29.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dmtoolkit-0.0.29.dist-info/top_level.txt,sha256=NNWdLUX99Yai3X0sYaMgh8ZXCo0O7WqTnFpTeI7ZJyk,10
+dmtoolkit-0.0.29.dist-info/RECORD,,
