@@ -1,0 +1,2 @@
+[console_scripts]
+thepipe = thepipe_api.thepipe:main
