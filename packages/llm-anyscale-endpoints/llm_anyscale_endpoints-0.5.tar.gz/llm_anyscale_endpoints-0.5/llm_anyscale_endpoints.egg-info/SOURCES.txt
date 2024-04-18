@@ -1,0 +1,11 @@
+LICENSE
+README.md
+llm_anyscale_endpoints.py
+pyproject.toml
+llm_anyscale_endpoints.egg-info/PKG-INFO
+llm_anyscale_endpoints.egg-info/SOURCES.txt
+llm_anyscale_endpoints.egg-info/dependency_links.txt
+llm_anyscale_endpoints.egg-info/entry_points.txt
+llm_anyscale_endpoints.egg-info/requires.txt
+llm_anyscale_endpoints.egg-info/top_level.txt
+tests/test_llm_anyscale_endpoints.py
