@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: eflips
+Version: 0.1.3
+Summary: eFLIPS: Electric Fleet and Infrastructure Planning/Simulation
+License: AGPLv3
+Author: D. Jefferies
+Author-email: dominic.jefferies@tu-berlin.de
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: matplotlib (>=3.7.1,<4.0.0)
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: simpy (>=4.0.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+
