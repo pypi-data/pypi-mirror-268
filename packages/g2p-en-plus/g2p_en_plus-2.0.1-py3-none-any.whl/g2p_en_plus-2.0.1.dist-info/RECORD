@@ -1,0 +1,10 @@
+g2p_en_plus/__init__.py,sha256=Nv-uPo8srZ0oUTHHiWP2kDJ_UEa1Jz3-zFJwdlm-lJ0,21
+g2p_en_plus/checkpoint20.npz,sha256=uK815FltjdWDbf0_6bK6T5e5wxHv6IeVRMvPy9Vm2MY,3342298
+g2p_en_plus/expand.py,sha256=sx-fIXMoD0R53hJy1XVAOC1kSWZi7xJ89NBa9aSdcNs,2492
+g2p_en_plus/g2p.py,sha256=9Dt01W2WnjyHKSPacLewJ8fV7HAPwPwSXISQg0VQi0Y,9308
+g2p_en_plus/homographs.en,sha256=BAPtzGrv6JRfiYe-OYJ5_Zi_a3Z-VLdBMx07yZowcHE,18711
+g2p_en_plus-2.0.1.dist-info/LICENSE.txt,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+g2p_en_plus-2.0.1.dist-info/METADATA,sha256=UYICOKcoKlW7Sd2mjK_RLnhvF7O97iIhC7eIIiu9ddc,4443
+g2p_en_plus-2.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+g2p_en_plus-2.0.1.dist-info/top_level.txt,sha256=cj5npiTxwnl7ZYaspOhgXMvNTqR-AiTjH2k-tgxhb7U,12
+g2p_en_plus-2.0.1.dist-info/RECORD,,
