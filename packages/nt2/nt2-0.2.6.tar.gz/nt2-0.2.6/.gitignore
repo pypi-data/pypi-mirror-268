@@ -1,0 +1,9 @@
+/_
+/.nox
+/.coverage*
+/coverage.json
+/dist
+/doc/api
+__pycache__
+pyrightconfig.json
+*.sublime-project

@@ -1,0 +1,46 @@
+name: Run tests
+on:
+  push
+jobs:
+
+  types:
+
+    runs-on: ubuntu-22.04
+
+    steps:
+
+      - name: fetch code
+        uses: actions/checkout@v3
+
+      - name: get nox
+        uses: excitedleigh/setup-nox@v2.1.0
+
+      - name: run pyright in nox environment
+        run: nox -s typecheck --force-color
+
+  tests:
+
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, macos-12, windows-2022]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+      - name: fetch code
+        uses: actions/checkout@v3
+
+      - name: get nox
+        uses: excitedleigh/setup-nox@v2.1.0
+
+      - name: run ward tests in nox environment
+        run: nox -s test test_without_toml combine_coverage --force-color
+        env:
+          PYTHONIOENCODING: utf-8
+
+      - name: upload coverage data
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage.json
+          token: ${{ secrets.CODECOV_TOKEN }}
