@@ -1,0 +1,9 @@
+graze/__init__.py,sha256=sOiGu5hsqlwKChI2TbLCq_HYgEyUSpZqEnlFqDNwujY,340
+graze/base.py,sha256=9qs0PLw6S7SYZUV6Ln5MQdAmlOoOGiNV3JoSPYJDWGI,21899
+graze/migration_tools.py,sha256=AUZbAHlKrSAwGumYryZUQxoWrdLqbG3J1CnEr1YproE,3722
+graze/util.py,sha256=Uqg-wOywn2OfF38fDu51dsBVA5j22QixkwkNVLX_D_8,12155
+graze-0.1.15.dist-info/LICENSE,sha256=ACwmltkrXIz5VsEQcrqljq-fat6ZXAMepjXGoe40KtE,1069
+graze-0.1.15.dist-info/METADATA,sha256=eCN3bzoi9sJvEnFLn_iLj59P7pIz2LTgFXzw0jW8Zes,6677
+graze-0.1.15.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+graze-0.1.15.dist-info/top_level.txt,sha256=RlJoPyvbA5vsomqvTzXdlYFJjRYQNXd_CwEBdSXZzhs,6
+graze-0.1.15.dist-info/RECORD,,
