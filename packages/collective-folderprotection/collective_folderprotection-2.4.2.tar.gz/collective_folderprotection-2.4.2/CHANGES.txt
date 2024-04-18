@@ -1,0 +1,108 @@
+Changelog
+=========
+
+2.4.2 (2024-04-17)
+++++++++++++++++++
+
+- Only set a status message when there is a request
+  [frapell]
+
+
+2.4.1 (2024-04-17)
+++++++++++++++++++
+
+- Add event on folders
+  [frapell]
+
+
+2.4 (2024-04-17)
+++++++++++++++++
+
+- Add Plone 6 support
+  [frapell]
+
+
+2.3 (2021-01-11)
+++++++++++++++++
+
+- Bugfix: Infinite loop when context is the actual Plone site
+  [frapell]
+
+
+2.2 (2021-01-06)
+++++++++++++++++
+
+- Remove the password protection field from the edit and add forms, to avoid
+  issues with browsers password auto-fill causing issues
+  [frapell]
+
+- Create a new password widget to use the autocomplete attribute in the
+  <input> field, to prevent browser auto filling passwords
+  [frapell]
+
+- Replace the checkbox to clear password protection with a clear red button
+  [frapell]
+
+- Include a viewlet that will show up when the given folder or a parent folder
+  is password protected
+  [frapell]
+
+- Include a richtext field to provide the ability to include a reason on why
+  the folder is password protected
+  [frapell]
+
+
+2.1 (2019-12-10)
+++++++++++++++++++
+
+- Raise exceptions if a protected item is renamed or deleted
+  [frapell]
+
+- Include uninstall profile and add post_install routines to ignore exceptions
+  [frapell]
+
+
+2.0.1 (2019-08-06)
+++++++++++++++++++
+
+- Fix rst format for pkg description
+  [frapell]
+
+
+2.0 (2019-08-06)
+++++++++++++++++
+
+- As of this version, this product only supports Plone 5.0+
+
+- Remove support for Archetypes
+  [enfold-josh]
+
+- Support Python 3 and Plone 5.2
+  [enfold-josh,frapell]
+
+- Catch exception raised when inserting post_traverse hook during a
+  non-publishing traversal.
+  [enfold-josh]
+
+- Fix tests.
+  [enfold-josh]
+
+- Change functional test files extensions to .robot
+  [enfold-josh]
+
+
+1.0-dev (unreleased)
+++++++++++++++++++++
+
+- Add support for Archetypes [frapell]
+
+- Make Dexterity an optional dependency [frapell]
+
+- Include behavior to prevent removing items from a folderish [frapell]
+
+- Include behavior to prevent renaming items in a folderish (only through UI). [frapell]
+
+- Include behavior to allow setting a password for viewing a folder [frapell]
+
+- Package created using templer
+  [frapell]

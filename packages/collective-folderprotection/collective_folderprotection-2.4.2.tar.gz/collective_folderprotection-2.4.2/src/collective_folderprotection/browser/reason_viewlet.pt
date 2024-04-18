@@ -1,0 +1,7 @@
+<div class="pw-protected-reason" tal:condition="view/context_pw_protected">
+  <div class="alert alert-info" role="alert" tal:condition="view/reason">
+    <div>
+      <span tal:content="structure view/reason" />
+    </div>
+  </div>
+</div>
