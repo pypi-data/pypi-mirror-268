@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ained"
+version = "0.2.1"
+description = "Stochastic Synchrony Functional Model in Python"
+authors = ["aschroede <aschroed@ualberta.ca>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+ained = "ained.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+typer = {extras = ["all"], version = "^0.12.3"}
+fxpmath = "^0.4.9"
+matplotlib = "^3.8.4"
+jsonschema = "^4.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
