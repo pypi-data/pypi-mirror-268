@@ -1,0 +1,1 @@
+include dvadmin_celery/fixtures/init_menu.json
