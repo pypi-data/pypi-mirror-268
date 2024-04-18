@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.2.5
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: calvin.massonnet@univ-grenoble-alpes.fr
+author_name: Calvin Massonnet Turner
+data_format: string
+file_extension: ''
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: iframe-whitelist
+mimetype: ''
+mimetype_name: ''
+project_short_description: Embed iframes in Markdown cells for authorised domains.
+python_name: iframe_whitelist
+repository: https://gricad-gitlab.univ-grenoble-alpes.fr/doors/jupyterlab-iframe-whitelist
+test: false
+viewer_name: ''
+
