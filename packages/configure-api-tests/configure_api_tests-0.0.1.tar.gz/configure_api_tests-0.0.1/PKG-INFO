@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: configure-api-tests
+Version: 0.0.1
+Summary: Test suite design for the Configure API 
+Author: Jacob Roscoe
+Maintainer: Jacob Roscoe
+License: Copyright (c) 2024 Wavelynx Technologies LLC
+        Permission is hereby granted, free of charge, to any person obtaining a copy of
+        this software and associated documentation files (the "Software"), to deal in
+        the Software without restriction, including without limitation the rights to
+        use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+        of the Software, and to permit persons to whom the Software is furnished to do
+        so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Source, https://gitlab.com/WaveLynxTech/configure-api-tests
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Configure Tests README
+
+## Overview
+This README provides information about testing different endpoints for the Configure (Pocketbase) API.
+
+### 1. Authentication Endpoint: `POST /authenticate`
+Test the authentication endpoint by following these steps:
+
+- **Test Scenarios:**
+  1. Send a request with valid credentials.
+  2. Send a request with invalid credentials.
+
+- **Verification:**
+  - Ensure the endpoint returns the expected response codes and tokens upon successful authentication.
+  - Verify that the appropriate error messages are returned for invalid credentials.
+
+### 2. Profile Download Endpoint: `POST /download`
+Test the endpoint for downloading profiles:
+
+- **Test Scenarios:**
+  1. Send a request to download a profile.
+
+- **Verification:**
+  - Confirm that the endpoint allows downloading profiles.
+  - Ensure the profile data is returned correctly.
+
+### 3. Default Profiles Endpoint: `GET /defaults`
+Test the endpoint for retrieving default profiles:
+
+- **Test Scenarios:**
+  1. Send a request to retrieve default profiles.
+
+- **Verification:**
+  - Ensure the endpoint returns the default profiles as expected.
+
+### 4. Post an Event Endpoint: `POST /upload`
+Test the endpoint for posting an event:
+
+- **Test Scenarios:**
+  1. Send a request with expected formats.
+
+- **Verification:**
+  - Confirm that the endpoint accepts expected formats.
+
+### 5. Authentication Token for Profile Downloading: `POST /files/token`
+Test the endpoint for obtaining authentication tokens for profile downloading:
+
+- **Test Scenarios:**
+  1. Send a request to obtain an authentication token.
+
+- **Verification:**
+  - Ensure the endpoint returns valid authentication tokens as expected.
+
+### 6. Download Known File Endpoint: `GET path/to/url`
+Test the endpoint for downloading known files:
+
+- **Test Scenarios:**
+  1. Send requests to download specific files.
+
+- **Verification:**
+  - Verify that the files are downloaded successfully.
+
+### 7. Register a New User Endpoint: `POST /portal/register`
+Test the endpoint for registering new users:
+
+- **Test Scenarios:**
+  1. Send requests to register users with expected and unexpected formats.

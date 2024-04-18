@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/__init__.py
+src/main.py
+src/configure_api_tests.egg-info/PKG-INFO
+src/configure_api_tests.egg-info/SOURCES.txt
+src/configure_api_tests.egg-info/dependency_links.txt
+src/configure_api_tests.egg-info/top_level.txt
+src/funcytests/***_authenticate.py
+src/funcytests/__init__.py
+src/funcytests/test_defaults.py
+src/funcytests/test_download.py
+src/funcytests/test_register.py
+src/funcytests/test_telemetry.py
+src/utils/__init__.py
+src/utils/t_manager.py
