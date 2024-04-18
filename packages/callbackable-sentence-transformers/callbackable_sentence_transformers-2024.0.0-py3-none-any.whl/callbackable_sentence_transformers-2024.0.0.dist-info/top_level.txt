@@ -1,0 +1,1 @@
+callbackable_sentence_transformers
