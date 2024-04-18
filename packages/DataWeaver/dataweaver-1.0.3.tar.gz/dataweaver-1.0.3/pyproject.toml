@@ -1,0 +1,28 @@
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "DataWeaver"
+version = "1.0.3"
+authors = [{name = "RICHARD Quentin", email = "richard.quentin88@gmail.com"}]
+description = "DataWeaver is a Python library for mapping data and transform object to an other. It offers flexible field mapping through a simple configuration object, enabling easy data integration and transformation for analysis and processing."
+readme = "README.md"
+license = {text = "MIT License"}  # Update the license as appropriate
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "aiofiles>=0.7.0",
+    "PyYAML>=5.4",
+    # Include any other dependencies here
+]
+
+[project.urls]
+homepage = "https://github.com/RICHARD-Quentin/DataWeaver"
+
+[tool.mypy]
+mypy_path = ["src"]
