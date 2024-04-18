@@ -1,0 +1,40 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "web_skeleton3"
+dynamic = ["version"]
+description = "Static html code generator."
+authors = [{name = "rmm", email = "rosa.martinez@artgins.com"}]
+readme = "README.rst"  # Assuming README file is in the root of the project
+license = {file = "LICENSE.txt"}  # Assuming you have a LICENSE file in the root of the project
+requires-python = ">=3.8"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+    "rjsmin",
+    "cssutils",
+    "mako",
+    "webassets",
+    "delegator.py"
+]
+
+[project.urls]
+Homepage = "https://github.com/artgins/web-skeleton3"
+
+[project.scripts]
+web-skeleton3 = "web_skeleton3.main:main"
+
+[tool.pdm]
+distribution = true
+version = { source = "file", path = "web_skeleton3/__init__.py" }
+
