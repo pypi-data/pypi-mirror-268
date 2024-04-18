@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+server_client/__init__.py
+server_client/ai_client.py
+server_client/client.py
+server_client/main.py
+server_client/server.py
+server_client/start_server_with_ai_client.py
+server_client/terminal_client.py
+socktalk.egg-info/PKG-INFO
+socktalk.egg-info/SOURCES.txt
+socktalk.egg-info/dependency_links.txt
+socktalk.egg-info/entry_points.txt
+socktalk.egg-info/requires.txt
+socktalk.egg-info/top_level.txt
