@@ -1,0 +1,8 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./Cargo.toml"
+    ],
+    // "rust-analyzer.cargo.extraEnv": {
+    //     "CARGO_TARGET_DIR": "ra_target",
+    // },
+}

@@ -1,0 +1,26 @@
+[project]
+name = "rustfrecord"
+dynamic = ["version"]
+description = "Rust implementation to read TFRecord files into PyTorch tensors"
+requires-python = ">=3.8"
+
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+]
+
+dependencies = [
+    "setuptools==69.5.1",
+    "torch==2.2.0",
+    "maturin==1.5.1",
+    "pip==24.0",
+    "numpy==1.24.4",
+    # "patchelf",     #==0.17.2.1",
+]
+
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
