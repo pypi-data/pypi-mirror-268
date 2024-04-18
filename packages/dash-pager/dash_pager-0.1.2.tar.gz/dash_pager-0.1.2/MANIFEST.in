@@ -1,0 +1,11 @@
+include dash_pager/dash_pager.min.js
+include dash_pager/dash_pager.min.js.map
+include dash_pager/async-*.js
+include dash_pager/async-*.js.map
+include dash_pager/*-shared.js
+include dash_pager/*-shared.js.map
+include dash_pager/metadata.json
+include dash_pager/package-info.json
+include README.md
+include LICENSE
+include package.json
