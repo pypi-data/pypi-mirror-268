@@ -1,0 +1,3 @@
+[console_scripts]
+tsk=tsk_monster:main
+
