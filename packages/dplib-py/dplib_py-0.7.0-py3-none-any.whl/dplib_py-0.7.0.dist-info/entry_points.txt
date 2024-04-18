@@ -1,0 +1,2 @@
+[console_scripts]
+dp = dplib.plugins.cli.__main__:program

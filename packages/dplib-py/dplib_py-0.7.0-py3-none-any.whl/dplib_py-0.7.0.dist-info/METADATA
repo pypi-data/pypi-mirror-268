@@ -1,0 +1,86 @@
+Metadata-Version: 2.3
+Name: dplib-py
+Version: 0.7.0
+Summary: Python implementation of the Data Package standard
+Project-URL: homepage, https://github.com/frictionlessdata/dplib-py
+Author-email: Open Knowledge Foundation <info@okfn.org>
+License-Expression: MIT
+License-File: LICENSE.md
+Keywords: data package,data validation,json schema,json table schema,open data,tabular data package
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Requires-Dist: fsspec[http]>=2023.1.0
+Requires-Dist: jsonpath>=0.80
+Requires-Dist: jsonschema>=3.0
+Requires-Dist: pydantic>=2.0
+Requires-Dist: python-slugify>=6.0
+Requires-Dist: pyyaml>=5.0
+Requires-Dist: typing-extensions>=4.0
+Provides-Extra: cli
+Requires-Dist: rich>=10.0; extra == 'cli'
+Requires-Dist: typer>=0.12; extra == 'cli'
+Provides-Extra: dcat
+Requires-Dist: rdflib>=6.0; extra == 'dcat'
+Provides-Extra: dev
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: httpx; extra == 'dev'
+Requires-Dist: ipython; extra == 'dev'
+Requires-Dist: mkdocs; extra == 'dev'
+Requires-Dist: mkdocs-material; extra == 'dev'
+Requires-Dist: mkdocstrings[python]; extra == 'dev'
+Requires-Dist: moto; extra == 'dev'
+Requires-Dist: neovim; extra == 'dev'
+Requires-Dist: oauth2client; extra == 'dev'
+Requires-Dist: pyright; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-cov; extra == 'dev'
+Requires-Dist: pytest-dotenv; extra == 'dev'
+Requires-Dist: pytest-lazy-fixtures; extra == 'dev'
+Requires-Dist: pytest-mock; extra == 'dev'
+Requires-Dist: pytest-only; extra == 'dev'
+Requires-Dist: pytest-timeout; extra == 'dev'
+Requires-Dist: pytest-vcr; extra == 'dev'
+Requires-Dist: requests-mock; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Requires-Dist: yattag; extra == 'dev'
+Provides-Extra: pandas
+Requires-Dist: isodate>=0.6; extra == 'pandas'
+Requires-Dist: numpy>=1.0; extra == 'pandas'
+Requires-Dist: pandas-stubs>=1.0; extra == 'pandas'
+Requires-Dist: pandas>=1.0; extra == 'pandas'
+Provides-Extra: polars
+Requires-Dist: polars-lts-cpu>=0.10; extra == 'polars'
+Provides-Extra: sql
+Requires-Dist: sqlalchemy>=1.4; extra == 'sql'
+Description-Content-Type: text/markdown
+
+# Data Package Library
+
+[![Build](https://img.shields.io/github/actions/workflow/status/frictionlessdata/dplib-py/general.yaml?branch=main)](https://github.com/frictionlessdata/dplib-py/actions)
+[![Coverage](https://img.shields.io/codecov/c/github/frictionlessdata/dplib-py/main)](https://codecov.io/gh/frictionlessdata/dplib-py)
+[![Codebase](https://img.shields.io/badge/codebase-github-brightgreen)](https://github.com/frictionlessdata/dplib-py)
+[![Release](https://img.shields.io/pypi/v/dplib-py.svg)](https://pypi.python.org/pypi/dplib-py)
+
+Python implementation of the Data Package standard and various tools for working with data. For more information, please visit the [documentation portal](https://frictionlessdata.github.io/dplib-py).
+
+## Purpose
+
+The Data Package Library is a lightweight Data Package Standard implementation in Python providing Pydantic data models and various metadata converters. At the moment, the main purpose of this library is to be used as an underlying component of Data Package based integrations.
+
+## Funding
+
+This project is funded through [NGI0 Entrust](https://nlnet.nl/entrust), a fund established by [NLnet](https://nlnet.nl) with financial support from the European Commission's [Next Generation Internet](https://ngi.eu) program. Learn more at the [NLnet project page](https://nlnet.nl/project/FrictionlessStandards/).
+
+[<img src="https://nlnet.nl/logo/banner.png" alt="NLnet foundation logo" width="20%" />](https://nlnet.nl)
+[<img src="https://nlnet.nl/image/logos/NGI0_tag.svg" alt="NGI Zero Logo" width="20%" />](https://nlnet.nl/entrust)
