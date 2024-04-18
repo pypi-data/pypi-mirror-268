@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: teslastruct
+Version: 0.1.0
+Summary: Unconventional utils and data structures
+Author-email: ZackaryW <36378555+ZackaryW@users.noreply.github.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# teslastruct
+A python library that offers unconventional utils and data structures
+
+## Installation
+```
+pip install teslastruct
+```
+
+## Features
+- **Frozendict**: An immutable dictionary that behaves like a standard `dict` but prevents any changes after creation.
+- **DictWithDictKeys**: A dictionary that can use other dictionaries as keys.
+- **Nothing**: A singleton class that intercepts all attribute and method calls, effectively doing nothing. Useful as a placeholder or a default non-operative object.
+- **Onchange Save Dict and List**: Enhanced versions of Python's native `dict` and `list` that automatically save their state whenever any changes occur.
+
+## Usage
+### Nothing
+```py
+from teslastruct.nothing import Nothing
+nothing = Nothing()
+nothing.x.y("z")
+```
+works great as a placeholder object
+
+## More is on the way...
+- **RecursObj** - nest callable objects obj1(obj2(obj3)) == obj3(obj2(obj1))
+- **Better On Change List and Dict** 
+- **Code aware objects** - objects that are aware by the ctx of the script
