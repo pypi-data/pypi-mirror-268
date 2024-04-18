@@ -1,0 +1,8 @@
+click
+pygithub
+requests
+twine
+build
+html5lib
+docutils
+bibtexparser
