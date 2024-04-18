@@ -1,0 +1,18 @@
+[project]
+name = "lvm_read_comma"
+version = "1.32"
+authors = [
+  { name="Theo Waltwood", email="professor-000@outlook.com" },
+]
+description = "LabView Measurement File Reader"
+readme = "readme.rst"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/professor-000/lvm_read"
+Issues = "https://github.com/professor-000/lvm_read/issues"
