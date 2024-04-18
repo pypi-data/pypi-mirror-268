@@ -1,0 +1,15 @@
+:connect
+driver=mysql
+host=mysql服务器地址
+user=用户名
+password=密码
+database=库名
+port=3306
+charset=utf8
+
+:readdata
+
+:dot
+file=消息中心.dot
+
+:end
