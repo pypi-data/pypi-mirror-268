@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/sebchw_example_package/__init__.py
+src/sebchw_example_package/example.py
+src/sebchw_example_package.egg-info/PKG-INFO
+src/sebchw_example_package.egg-info/SOURCES.txt
+src/sebchw_example_package.egg-info/dependency_links.txt
+src/sebchw_example_package.egg-info/top_level.txt
