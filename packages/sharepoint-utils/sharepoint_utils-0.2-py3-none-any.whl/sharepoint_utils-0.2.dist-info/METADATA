@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: sharepoint-utils
+Version: 0.2
+Summary: Utility functions for working with SharePoint files
+Author: Omkar Sutar
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pandas
+Requires-Dist: Office365-REST-Python-Client
+
+# SharePoint Utility Functions
+
+This Python package provides utility functions for working with SharePoint files, including connecting to SharePoint, combining files into a single DataFrame, and uploading a DataFrame to SharePoint as a CSV file.
+
+## Installation
+
+```bash
+!pip install sharepoint-utils
+```
+
+
+## Usage
+
+1. `connect_to_sharepoint(username, password, site_address)`
+
+This function connects to a SharePoint site using the provided username, password, and site address.
+
+```python
+
+from sharepoint_utils import connect_to_sharepoint
+
+# Connect to SharePoint
+ctx = connect_to_sharepoint('your_username', 'your_password', 'https://your_sharepoint_site_url')
+
+```
+\
+2. `combine_files_into_dataframe(ctx, folder_url)`
+
+This function combines files from a SharePoint folder into a single pandas DataFrame.
+
+```python
+
+from sharepoint_utils import combine_files_into_dataframe
+
+# Specify the folder path in SharePoint containing the files to be combined into a DataFrame
+folder_path = 'relative/folder/path'
+
+# Combine files into a DataFrame
+df = combine_files_into_dataframe(ctx, folder_path)
+```
+
+\
+3. `upload_dataframe_to_sharepoint(ctx, folder, dataframe, file_name)`
+
+This function uploads a pandas DataFrame to a SharePoint folder as a CSV file.
+
+```python
+from sharepoint_utils import upload_dataframe_to_sharepoint
+
+# Define folder path
+folder_path = '/folder_path/'
+
+# Upload DataFrame to SharePoint folder
+upload_dataframe_to_sharepoint(ctx, folder, df, 'your_file_name.csv')
+```
+### Contributing
+
+Contributions are welcome! If you have any suggestions or find any issues, please feel free to contact me.
