@@ -1,0 +1,5 @@
+llama_index/callbacks/arize_phoenix/__init__.py,sha256=3c9vFGfeB1D8CmZf6MiJhzseti7We8z9dMv3X2QIpe4,130
+llama_index/callbacks/arize_phoenix/base.py,sha256=h3O_UY93kas1TQ_rZ976UMpUCQVB5G6mhbIBfiKEXmE,456
+llama_index_callbacks_arize_phoenix-0.1.5.dist-info/METADATA,sha256=rb-XSJXWZlARmCo8JTE7bfGfjWgfI1b2sf3hpUbv4lc,741
+llama_index_callbacks_arize_phoenix-0.1.5.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+llama_index_callbacks_arize_phoenix-0.1.5.dist-info/RECORD,,
