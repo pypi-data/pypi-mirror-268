@@ -1,0 +1,5 @@
+setup.py
+customs_lambda_utils.egg-info/PKG-INFO
+customs_lambda_utils.egg-info/SOURCES.txt
+customs_lambda_utils.egg-info/dependency_links.txt
+customs_lambda_utils.egg-info/top_level.txt
