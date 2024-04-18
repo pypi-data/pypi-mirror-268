@@ -1,0 +1,15 @@
+HISTORY.md
+LICENSE.md
+MANIFEST.in
+README.md
+setup.py
+disco_tif/__init__.py
+disco_tif/geotiff_plotting.py
+disco_tif/hillshades_pca.py
+disco_tif/process_sb_tiff.py
+disco_tif/write_mapfile.py
+disco_tif.egg-info/PKG-INFO
+disco_tif.egg-info/SOURCES.txt
+disco_tif.egg-info/dependency_links.txt
+disco_tif.egg-info/requires.txt
+disco_tif.egg-info/top_level.txt

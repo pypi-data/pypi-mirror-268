@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: disco-tif
+Version: 0.0.2
+Summary: Geotiff processing utilities
+Home-page: https://github.com/emerald-geomodelling/disco-tif
+Author: Benjamin Bloss
+Author-email: bb@emrld.no
+License: MIT
+Keywords: raster_processing,EMerald_custom_colormap,hillshade,pca
+License-File: LICENSE.md
+Requires-Dist: seaborn
+Requires-Dist: rasterio
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: earthpy
+Requires-Dist: scikit-learn
+
+Geotiff processing utilities
