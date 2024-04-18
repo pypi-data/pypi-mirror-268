@@ -1,0 +1,8 @@
+{
+  "source_dir": "/home/runner/work/python-plugins/python-plugins",
+  "build_dir": "/home/runner/work/python-plugins/python-plugins/build/cp312-cp312-manylinux_2_35_x86_64/Release",
+  "cmake_path": "/usr/local/bin/cmake",
+  "skbuild_path": "/tmp/build-env-gxdvhq6r/lib/python3.12/site-packages/scikit_build_core",
+  "skbuild_version": "0.8.2",
+  "python_executable": "/tmp/build-env-gxdvhq6r/bin/python"
+}
