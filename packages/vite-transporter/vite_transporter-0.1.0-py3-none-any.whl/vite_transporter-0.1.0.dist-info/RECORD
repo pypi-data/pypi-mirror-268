@@ -1,0 +1,12 @@
+vite_transporter/__init__.py,sha256=nhGk9Qz-BiB5Y1I016bpdvEjuwLeROyVf_GbBzW9Cjw,2185
+vite_transporter/_html_tags.py,sha256=3LjqnSLSNF81kn-Yeewg2b_WGpmn62KpEeJmZlz7EQU,4871
+vite_transporter/helpers.py,sha256=YeiLt5SObObqbQcv1UGXGrwitGyCDqudI6Ds27D8QWw,4002
+vite_transporter/parser.py,sha256=0PatFlgwdLXH0fKQEDBOE2jTmFthFAYSQz74fw0WmCQ,909
+vite_transporter/platform/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vite_transporter/platform/flask.py,sha256=XJ6YedMQsbxi8uWPgRISlNXvnFKi67aBHqhdhh1DeHA,4593
+vite_transporter/platform/quart.py,sha256=2_amDG2NfOB7aMZfVCEv9SnEcVKMABgDU6t4SgND3Ww,4671
+vite_transporter-0.1.0.dist-info/entry_points.txt,sha256=4mj5VwtPAq7dPL04w2SLqfV-xwGEKXfdqc9AJFEMpR0,44
+vite_transporter-0.1.0.dist-info/LICENSE,sha256=81tCgMDdo4oVlO7sIAynWuW7o8wwlfDK4lSFnkvTCwU,1083
+vite_transporter-0.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+vite_transporter-0.1.0.dist-info/METADATA,sha256=Ubi49NxLxyAnMlSeUEZlhr_Wq-L5w5hudLbAf19Pkfo,4459
+vite_transporter-0.1.0.dist-info/RECORD,,
