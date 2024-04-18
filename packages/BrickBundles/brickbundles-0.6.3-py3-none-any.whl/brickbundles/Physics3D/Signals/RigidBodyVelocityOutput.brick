@@ -1,0 +1,6 @@
+RigidBodyVelocityOutput is Physics.Signals.Output:
+    type: Physics.Signals.InputOutputType.Velocity3D
+    rigid_body is Physics3D.Bodies.RigidBody
+
+
+# TODO: Not implemented
