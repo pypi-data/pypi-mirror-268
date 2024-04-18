@@ -1,0 +1,13 @@
+lamatrix/__init__.py,sha256=cVN2AnImptHIY6kkVZiHbPR_JCunJtOuLeAUfJXx0cE,2393
+lamatrix/bound.py,sha256=u0hP-3aBYns9_UyYBIRbAdQ0VER6GLLWciAvmkEaCE0,5908
+lamatrix/combine.py,sha256=iewosNhS3t1LQHRpfK7tWs_uUezoPYUssLSWT9d5bkk,9689
+lamatrix/generator.py,sha256=RZdxDtbLct-Jtu0QVamfo8n8dE5ciGnuQnlfigwIjVQ,9429
+lamatrix/math.py,sha256=st-7TmsOpK4a4loMybE8Nw0vp-pb6XnQzD-a7rJ_z9I,584
+lamatrix/models/astrophysical.py,sha256=vAsmGOGiru8KgxmfH9tAHVsBbK3jEvbjtda4W3uE9rw,51
+lamatrix/models/gaussian.py,sha256=xUJDceAlQqj2dLq0O65Ip_n-QGGKZ8q_NaQEmXa2U_c,16277
+lamatrix/models/simple.py,sha256=BySGmW5ygqgJ2qvSFPiEAQ1_aAcWCw-0_E8E_NlZy3o,10134
+lamatrix/models/spline.py,sha256=0V09yx-8It-1QoZnfWQUksr8tmEEDG4RJq_WmkgYxH8,8680
+lamatrix-0.1.0.dist-info/LICENSE,sha256=IC92gmWn-oMZWuOxjqWeS1fGbOJiPa77RQBFoGROGQw,1073
+lamatrix-0.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+lamatrix-0.1.0.dist-info/METADATA,sha256=EMMYB1H3sm1Rn-0iEswwAGP3KUpJS46C6jhaKa1WXg8,1218
+lamatrix-0.1.0.dist-info/RECORD,,
