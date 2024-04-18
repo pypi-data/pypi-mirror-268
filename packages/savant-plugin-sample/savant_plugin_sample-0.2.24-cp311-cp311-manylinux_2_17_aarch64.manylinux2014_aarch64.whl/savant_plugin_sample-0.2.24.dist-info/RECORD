@@ -1,0 +1,8 @@
+savant_plugin_sample-0.2.24.dist-info/METADATA,sha256=Ta4-9LScmFjb1CnN8R6apEjhzF6r4Os8Li0jjMzOe7Y,827
+savant_plugin_sample-0.2.24.dist-info/WHEEL,sha256=tTvgbtbq8mOtWjJ3CS2PuqCaB8tMhZHyagTT7oG9atQ,132
+savant_plugin_sample.libs/libsavant_core-023bbe6b.so,sha256=wgov0Nuxlyz1Sb4Nhg1PG0QIYFhifWdp6QjdQrYRgMA,18076553
+savant_plugin_sample.libs/libstd-c042ed76b86e0dc3-1e688126.so,sha256=lixPqXoVOshTZkrOOxQi_FUBw1MIr1-CEaZGl3yphAY,12981169
+savant_plugin_sample.libs/libsavant_core_py-fb3ff3de.so,sha256=zHLTVp2ITRFq6Fa9bH39guV7OakxJv3wfVjmfeWQmxc,9103457
+savant_plugin_sample/__init__.py,sha256=79AF94pFI9EKE4E-ZlPXS9gdLgtyUzNW3Bza-1Aj4ww,163
+savant_plugin_sample/savant_plugin_sample.cpython-311-aarch64-linux-gnu.so,sha256=HKPuUUSdPh8dlB2REor7z9C_sG6cNG-A96j9e6L9NpU,206153
+savant_plugin_sample-0.2.24.dist-info/RECORD,,
