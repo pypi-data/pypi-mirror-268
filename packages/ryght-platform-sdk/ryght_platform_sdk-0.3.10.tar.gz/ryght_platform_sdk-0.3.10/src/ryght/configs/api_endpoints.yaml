@@ -1,0 +1,94 @@
+api_configs:
+    env:
+        dev:
+            auth_token_url: https://auth-dev.syntheticabio.net/auth/realms/sbp-registry-svc-realm/protocol/openid-connect/token
+            base_url: https://registry-api-dev.syntheticabio.net
+        qa:
+            auth_token_url: https://auth-qa.ryght.ai/auth/realms/ryght-realm/protocol/openid-connect/token
+            base_url: https://api-qa.ryght.ai/
+        preview:
+            auth_token_url: https://auth-preview.ryght.ai/auth/realms/ryght-realm/protocol/openid-connect/token
+            base_url: https://api-preview.ryght.ai/
+        enterprise:
+            auth_token_url: https://auth.ryght.ai/auth/realms/ryght-realm/protocol/openid-connect/token
+            base_url: https://api.ryght.ai/
+
+    endpoints:
+        summary:
+            base: /v1/summary
+
+        completions:
+            base: /v1/completions
+
+        metadata_templates:
+            base: /v1/metadata-templates
+
+        tag_apis:
+            base: /v1/tags
+            by_id: /v1/tags/{id}
+
+        prompt_templates:
+            base: /v1/prompt-templates
+            search: /v1/prompt-templates
+
+        variant:
+            search: /v1/variants/search
+            abstract: /v1/variants/abstract
+
+        notes:
+            base: /v1/notes
+            by_id: /v1/notes/{id}
+            search: /v1/notes/search
+
+        model_specification:
+            base: /v1/models
+            by_id: /v1/models/{id}
+            operation: /v1/models/operation
+
+        conversations:
+            base: /v1/conversations
+            by_id: /v1/conversations/{id}
+            feedback: /v1/conversations/feedback
+
+        chunk:
+            embed: /v1/chunks/embed
+            chunk: /v1/chunks/chunk
+            chunk_and_embed: /v1/chunks/chunk/embed
+
+        chunk_specification:
+            base: /v1/chunk-specifications
+            by_id: /v1/chunk-specifications/{id}
+            strategies: /v1/chunk-specifications/strategies
+
+        document:
+            base: /v1/documents/
+            by_id: /v1/documents/{id}
+            search: /v1/documents/search
+            upload: /v1/documents/upload
+
+        ai_tag:
+            base: /v1/ai-tags
+            by_id: /v1/ai-tags/{id}
+            search: /v1/ai-tags/search
+            associate: /v1/ai-tags/{id}/associate
+
+        document_collection:
+            base: /v1/document-collections
+            by_id: /v1/document-collections/{id}
+            search: /v1/document-collections/search
+            pre_chunked: /v1/document-collections/chunked
+            re_process: /v1/document-collections/reprocess-failed/{id}
+
+        document_import:
+            status: /document-import/v1/documents/status/{traceId}
+            json_object: /document-import/v1/documents/collections/{collectionId}
+            pdf_file: /document-import/v1/documents/collections/{collectionId}/files
+
+        permission_management:
+            resources: /v1/managements/resources
+            permissions: /v1/managements/permissions
+            for_users: /v1/management/permissions/organizations/users
+            for_members: /v1/management/permissions/organizations/members
+            permissions_users_in_org: /v1/management/permissions/organizations/{organizationId}/users
+            permissions_members_of_org: /v1/management/permissions/organizations/{organizationId}/members
+
