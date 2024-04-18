@@ -1,0 +1,11 @@
+README.md
+setup.py
+myarg/__init__.py
+myarg/configuration_util.py
+myarg/print_a.py
+myarg/set_content_root.py
+myarg.egg-info/PKG-INFO
+myarg.egg-info/SOURCES.txt
+myarg.egg-info/dependency_links.txt
+myarg.egg-info/requires.txt
+myarg.egg-info/top_level.txt
