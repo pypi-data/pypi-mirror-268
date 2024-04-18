@@ -1,0 +1,45 @@
+<body>
+<div id="root"></div>
+
+<!-- Include React and ReactDOM scripts -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- Include the ReactFlow script (this URL may need to be updated) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-flow-renderer/10.3.17/umd/index.js"></script>
+
+
+{{ nodes|json_script:"nodes" }}
+{{ edges|json_script:"edges" }}
+
+
+<script>
+    const nodes = JSON.parse(document.getElementById('nodes').textContent);
+    const edges = JSON.parse(document.getElementById('edges').textContent);
+
+
+    // Use the global ReactFlow variable from the script
+    const FlowComponent = ReactFlow.default;
+    const BackgroundComponent = ReactFlow.Background;
+
+    // Render the ReactFlow component into the root div
+    const container = document.getElementById('root')
+    const root = ReactDOM.createRoot(container);
+    root.render(
+        React.createElement(
+            FlowComponent,
+            {
+                nodes: nodes,
+                edges: edges
+            },
+            React.createElement(
+                BackgroundComponent,
+                {
+                    variant: ReactFlow.BackgroundVariant.Lines,
+                    gap: 15,
+                }
+            )
+        ),
+    );
+</script>
+</body>
