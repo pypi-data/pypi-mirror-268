@@ -1,0 +1,19 @@
+auth:
+  user: ""
+  token: ""
+
+# For this file extensions we will write GPS data into EXIF of the file
+exif:
+  - jpg
+  - jpeg
+
+# For this file extensions we will create XMP file with GPS data, original file will not be modified
+xmp:
+  - raf
+  - mov
+  - mp4
+
+default-path: '.'
+paths: []
+#  - /path/to/photos
+#  - /path/to/photos2
