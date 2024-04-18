@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: APIManager-DM-2024
+Version: 0.0.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.31.0
+
+<h3>Simple API Manipulator</h3>
+<h4>Import as: </h4>
+
+```python
+import api_manager
+```
+<h4>Or:</h4>
+```python
+from api_manager import APIManager
