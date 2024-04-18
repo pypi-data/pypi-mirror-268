@@ -1,0 +1,10 @@
+env/
+.hypothesis/
+.mypy_cache/
+.pytest_cache/
+__pycache__/
+build/
+dist/
+.eggs/
+*.egg-info
+cache/
