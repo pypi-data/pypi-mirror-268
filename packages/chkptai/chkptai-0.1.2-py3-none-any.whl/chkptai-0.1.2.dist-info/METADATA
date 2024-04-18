@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: chkptai
+Version: 0.1.2
+Summary: Checkpoint-AI Python SDK
+Author-email: Checkpoint-AI <mail@checkpoint-ai.com>
+License: proprietary
+Project-URL: homepage, https://checkpoint-ai.com
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+
+# Python-SDK
+
+![Tests](https://github.com/CheckpointAI/python-sdk/actions/workflows/test.yml/badge.svg)
