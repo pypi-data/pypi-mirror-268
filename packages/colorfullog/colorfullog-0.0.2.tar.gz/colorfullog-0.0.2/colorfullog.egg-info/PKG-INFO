@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: colorfullog
+Version: 0.0.2
+Summary: set console color of font
+Home-page: https://github.com/mouday/colorfullog
+Author: Peng Shiyu
+Author-email: pengshiyuyx@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+
+set console color of font
+
