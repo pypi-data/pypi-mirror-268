@@ -1,0 +1,8 @@
+LICENSE
+README.txt
+pyproject.toml
+src/__init__.py
+src/CIBPacket.egg-info/PKG-INFO
+src/CIBPacket.egg-info/SOURCES.txt
+src/CIBPacket.egg-info/dependency_links.txt
+src/CIBPacket.egg-info/top_level.txt
