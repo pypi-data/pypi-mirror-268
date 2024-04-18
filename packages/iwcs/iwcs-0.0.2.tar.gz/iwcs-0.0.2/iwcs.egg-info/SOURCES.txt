@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+iwcs/__init__.py
+iwcs.egg-info/PKG-INFO
+iwcs.egg-info/SOURCES.txt
+iwcs.egg-info/dependency_links.txt
+iwcs.egg-info/top_level.txt
