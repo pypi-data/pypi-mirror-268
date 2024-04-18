@@ -1,0 +1,2 @@
+[console_scripts]
+syntho-cli = cli.syntho_cli:cli
