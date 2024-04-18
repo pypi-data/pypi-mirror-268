@@ -1,0 +1,10 @@
+D:\a\ket\ket\src\ket\clib\libs\kbw\target\release\deps\libanstyle_wincon-0b689637f3feb8b4.rmeta: C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\lib.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\ansi.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\stream.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\windows.rs
+
+D:\a\ket\ket\src\ket\clib\libs\kbw\target\release\deps\libanstyle_wincon-0b689637f3feb8b4.rlib: C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\lib.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\ansi.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\stream.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\windows.rs
+
+D:\a\ket\ket\src\ket\clib\libs\kbw\target\release\deps\anstyle_wincon-0b689637f3feb8b4.d: C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\lib.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\ansi.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\stream.rs C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\windows.rs
+
+C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\lib.rs:
+C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\ansi.rs:
+C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\stream.rs:
+C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\anstyle-wincon-3.0.2\src\windows.rs:
