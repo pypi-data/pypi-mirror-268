@@ -1,0 +1,9 @@
+gdstk/__init__.py,sha256=obzv4q3OB-B1Tt4VyFzzj4A5Pu2upCFbQeeXrLQWEyw,56
+gdstk/_gdstk.cp38-win_amd64.pyd,sha256=kvrpmg93sYgG9l9fuXO4j3jr1nmh_T3i5EhJC0Ai-B4,1128960
+gdstk/_gdstk.pyi,sha256=DFrxorMwZGTutSM5AsEUhAlZ_K_v9siZvEPspezIA9o,36666
+gdstk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdstk-0.9.51.dist-info/METADATA,sha256=0ApztvmLDTAUUbbCNmBO7Ip7V6DVpEcaso7nJCuqhpg,8738
+gdstk-0.9.51.dist-info/WHEEL,sha256=iSbm6NryGhn0IRX0DpBo9KRoC5PhMQN0J1HBuCukgUo,103
+gdstk-0.9.51.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gdstk-0.9.51.dist-info/licenses/LICENSE,sha256=vrjkLp1rQoTgMwTQWoGgdVIAqWX8jQpeCuoehM-AXW4,1361
+gdstk-0.9.51.dist-info/RECORD,,
