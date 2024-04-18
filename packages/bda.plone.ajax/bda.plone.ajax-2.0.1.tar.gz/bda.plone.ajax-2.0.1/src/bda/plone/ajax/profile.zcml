@@ -1,0 +1,35 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="bda.plone.ajax">
+
+  <include package="Products.GenericSetup" file="meta.zcml" />
+
+  <genericsetup:registerProfile
+    name="default"
+    title="bda.plone.ajax"
+    directory="profile/default"
+    description="Extension profile for bda.plone.ajax."
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="bda.plone.ajax (uninstall)"
+    directory="profiles/uninstall"
+    description="Uninstalls the bda.plone.ajax."
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <!-- Hide profiles/products from Quick Installer -->
+  <utility factory=".setuphandlers.HiddenProfiles" name="bda.plone.ajax" />
+
+  <!-- upgradeSteps -->
+  <genericsetup:upgradeDepends
+      title="Reload Resourceregistry"
+      description=""
+      profile="bda.plone.ajax:default"
+      source="*"
+      destination="3001"
+      import_steps="plone.app.registry"
+      />
+
+</configure>

@@ -1,0 +1,3 @@
+setuptools
+Products.CMFPlone>=5.1
+bdajax>=1.10

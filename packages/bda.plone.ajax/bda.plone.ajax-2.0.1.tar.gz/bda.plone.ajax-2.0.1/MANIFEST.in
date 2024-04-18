@@ -1,0 +1,5 @@
+include *.cfg *.rst *.in
+exclude bootstrap.py
+graft src
+graft docs
+global-exclude *pyc
