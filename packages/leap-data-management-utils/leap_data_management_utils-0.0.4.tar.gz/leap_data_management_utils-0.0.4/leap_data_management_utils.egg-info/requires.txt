@@ -1,0 +1,16 @@
+apache-beam
+cftime
+db_dtypes
+google-api-core
+google-cloud-bigquery
+pandas
+pangeo-forge-esgf
+pydantic-core
+pydantic>=2
+pyyaml
+universal-pathlib
+xarray
+zarr
+
+[test]
+pre-commit
