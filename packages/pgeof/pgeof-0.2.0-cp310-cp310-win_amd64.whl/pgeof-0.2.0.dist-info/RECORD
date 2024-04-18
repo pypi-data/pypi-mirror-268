@@ -1,0 +1,7 @@
+pgeof/__init__.py,sha256=33VeGlVWHcRoDc62GqV01OBPTcXh05cxORcafHcOuVA,202
+pgeof/pgeof_ext.cp310-win_amd64.pyd,sha256=hma3gIjlP_hWc2ved0vCN09hTTpbH7ul5NLXafSxWm0,384512
+pgeof-0.2.0.dist-info/METADATA,sha256=mDhSxh-2hb2ycVM8QDp8tsxOeTPiJ7_Df7uJPDttcTM,10011
+pgeof-0.2.0.dist-info/WHEEL,sha256=8XuJkyxPIT13OzegTGarRVhmDP5NkOix_zaC7jtZJJE,105
+pgeof-0.2.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgeof-0.2.0.dist-info/licenses/LICENSE,sha256=fSPgRnJKA9xI5Bc_tHm7bKZeWOhPR1ir5rDT6ZO7VFo,1125
+pgeof-0.2.0.dist-info/RECORD,,
