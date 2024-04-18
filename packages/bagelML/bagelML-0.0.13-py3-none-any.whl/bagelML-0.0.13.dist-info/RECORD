@@ -1,0 +1,15 @@
+bagel/__init__.py,sha256=2XEvgzTCHp5ZKg8o11ouPw3vIrTy5h4qBwnnE7-ulzc,376
+bagel/config.py,sha256=6uonIN_cXREH3BdO8M9CpnJhTBf2z7tXD5Ln6B-eJcY,5965
+bagel/errors.py,sha256=Z0bebJBMxvOwrDtPsgnybGyhUuZXzYuUh6rsxoebT1M,683
+bagel/api/Cluster.py,sha256=ivUZyKht--ZTBT7xp2k3RpXH4Qn4M6pixPazxcpQ7a0,15205
+bagel/api/__init__.py,sha256=r59CfljrgxyPhb36hIO8emTyF3amBdyTl0CS-r5ZIg8,13969
+bagel/api/fastapi.py,sha256=E0ixa5t8rI-08GqTk1R5Q5kCIhNG0H5hcUJvs_29WN4,22393
+bagel/api/types.py,sha256=RUZ-BNdYXMaQfllbXsQGTtDR2eckad4awrrYXXvsjdQ,11570
+bagel/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/client_test.py,sha256=Q_bHsavM3kRteoX7i-rfr4B-BOA954G4iA6hw8s6bpU,2717
+test/opt_test.py,sha256=4ytra9T1QlcnC3f_tNnCXCY5lDqlM2CUJu0-OAVG-kU,2332
+bagelML-0.0.13.dist-info/METADATA,sha256=T_AZ12LLrXwrC7lv4bjMs_Yj2wlf5i2pZ6r_VRrqbe8,6728
+bagelML-0.0.13.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+bagelML-0.0.13.dist-info/top_level.txt,sha256=s6P2qojaWAKHs2NF3owLtlX_fi5N7_8Cgk56Hvanefo,11
+bagelML-0.0.13.dist-info/RECORD,,
