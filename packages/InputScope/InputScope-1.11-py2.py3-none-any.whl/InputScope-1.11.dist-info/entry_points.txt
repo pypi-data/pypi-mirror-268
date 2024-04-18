@@ -1,0 +1,6 @@
+[console_scripts]
+inputscope-listener = inputscope.listener:main
+inputscope-webui = inputscope.webui:main
+
+[gui_scripts]
+inputscope = inputscope.main:main
