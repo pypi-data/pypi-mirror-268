@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ray_utils"
+version = "0.0.4"
+authors = [
+  { name="Shadi Akiki", email="shadi@akiki.us" },
+]
+description = "utility functions for https://github.com/ray-project/ray/"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/shadiakiki1986/ray_utils"
+Issues   = "https://github.com/shadiakiki1986/ray_utils/issues"
