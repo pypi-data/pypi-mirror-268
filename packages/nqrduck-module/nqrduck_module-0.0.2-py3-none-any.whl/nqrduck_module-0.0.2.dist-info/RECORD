@@ -1,0 +1,13 @@
+nqrduck_module/__init__.py,sha256=U4Ms6G28fpS1SdwQymj7uyS1aUejRSGrbV1perCiskg,134
+nqrduck_module/controller.py,sha256=ag7DUl9my93Bm_nJaFEDGhuuIX5eORHnKvHKMZaF4zc,391
+nqrduck_module/model.py,sha256=ZHDoAQg2Ubrk97FGo46Y0jhVXChs3Wo97muS-IKfZGg,258
+nqrduck_module/module.py,sha256=ZgZSURpaQAk45BXwxaIUNw3wt47c9xpmm4zcOeSZcZo,603
+nqrduck_module/view.py,sha256=UzoqIXjUe9-ncj8lJXMQDp0rtzzMWSOKge9qiqSmdG8,553
+nqrduck_module/widget.py,sha256=vejSHoWo6hqUf0PTQBySzwh5xNfQex-cXTgrnCQoWTw,1398
+nqrduck_module/resources/module.ini,sha256=5GlDPjGhyEoTPgCe0keFRzMqR1Jb1VZqVW7sfQpyOYU,122
+nqrduck_module/resources/module_widget.ui,sha256=_jLf3vj5K_pldfJG4WKfwkGjO3qNQocZ01XWzSZJ_g8,785
+nqrduck_module-0.0.2.dist-info/METADATA,sha256=hHEJ-3W6kgT3Gu5ND1BdtPmG0y4m7AgYPg7e7uQdW8E,3589
+nqrduck_module-0.0.2.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+nqrduck_module-0.0.2.dist-info/entry_points.txt,sha256=YW9NnkOU5wqyqhZd3dg7W3V-T3pagPWQn3zrQLBsKSE,56
+nqrduck_module-0.0.2.dist-info/licenses/LICENSE,sha256=o5wva76OOX1_ay-xkzeOp-8ItiIqJYaAcZiD5wNoCjA,1062
+nqrduck_module-0.0.2.dist-info/RECORD,,
