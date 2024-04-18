@@ -1,0 +1,51 @@
+site_name: Reciprocal Space Station Distributions
+site_url: https://rs-station.githib.io/distributions/
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+plugins:
+  - autorefs
+  - search
+  - gen-files:
+      scripts:
+      - docs/gen_ref_pages.py
+  - literate-nav:
+      nav_file: SUMMARY.md
+  - section-index
+  - mkdocstrings:
+      defautl_handler: python
+      handlers:
+        python: 
+          paths: [src]
+
+markdown_extensions:
+  - callouts
+  - pymdownx.superfences
+  - pymdownx.snippets
+
+nav:
+  - Home:
+    - Overview: index.html
+  - Api: reference/rs_distributions/
+
