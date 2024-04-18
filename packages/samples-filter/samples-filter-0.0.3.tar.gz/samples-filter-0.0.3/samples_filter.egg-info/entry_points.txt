@@ -1,0 +1,3 @@
+[console_scripts]
+samples-filter = objects.__main__:main
+
