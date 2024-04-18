@@ -1,0 +1,11 @@
+teslastruct/_utils.py,sha256=iPUL7HpghIn9RamglKGKRXSlq0oKgf2eGieZ8BDhQnw,204
+teslastruct/frozen.py,sha256=_SpQR6pyZj49V6h1DcRpk0735wBZsdBXnMBYHqN3KgA,1149
+teslastruct/hashable.py,sha256=PCmy4F1qHIxGLLAoWvqcSL9GBRYpAgphBr2bTuS9_k0,815
+teslastruct/nothing.py,sha256=67M2_KN-3IJwrjRTn4zF5TBXaEx-Ze80yvYeT9VOzvs,327
+teslastruct/onChangeLite.py,sha256=zjrkaItwEn_rLfe9qRjiXAmxsHHHteDq5oaTxs3K63o,4033
+teslastruct/onChangeV1.py,sha256=VivHjoDVmKiOiB36JZnBeeApAquH0l7U5NHF2sPtY54,35622
+teslastruct/singletonV1.py,sha256=jComRJicfadX8hUegMyXsAsTWcQrzlbg0_SpMRhcCqM,224
+teslastruct-0.1.0.dist-info/METADATA,sha256=yYMumRXCuayY4_6LdmRPIJ2CJZWse99iefXsyfYqpZY,1284
+teslastruct-0.1.0.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+teslastruct-0.1.0.dist-info/licenses/LICENSE,sha256=O0Gffbq5TpMW7YLon4X8Gq2iNWSExdzBKpbGzHiyp9U,1086
+teslastruct-0.1.0.dist-info/RECORD,,
