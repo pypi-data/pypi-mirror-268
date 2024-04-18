@@ -1,0 +1,10 @@
+dig_ass_text_protos/DigitalAssistantText_pb2.py,sha256=6BMJ2MGDGS6usw9OGJgwVSvMSIX6apAGzweuSBflPy4,2725
+dig_ass_text_protos/DigitalAssistantText_pb2.pyi,sha256=X22_JoiGpK52TQuYncudfiaseCK_9iKIaRdujydmb4w,2366
+dig_ass_text_protos/DigitalAssistantText_pb2_grpc.py,sha256=duw810ZNg08_VKhsvGdmr-p93Gnm6RDi-4fexFR34WA,2946
+dig_ass_text_protos/__init__.py,sha256=QiiYsv0kcJaB8wCWyT-FnI2b6be87HA-CrrIUn8LQhg,22
+dig_ass_text_protos/abstract_client.py,sha256=uNUwe2yTFj9PTAIxkE_DotTVytcUbcUUWoKRgYd-H-M,389
+dig_ass_text_protos/client.py,sha256=vjyuqTqWM0shOfnCiQHsQ0xshIRMQmfJuQYIGG0tD9s,1307
+dig_ass_text_protos-0.0.6.dist-info/METADATA,sha256=cL_Z_N5vB-J6b8We6uvejFvOP82W2Neae6RslgdAeTg,337
+dig_ass_text_protos-0.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dig_ass_text_protos-0.0.6.dist-info/top_level.txt,sha256=92QH4fDcCA_pHETZaBsqigDH9hkaYqw3MeuDhCY1gAQ,20
+dig_ass_text_protos-0.0.6.dist-info/RECORD,,
