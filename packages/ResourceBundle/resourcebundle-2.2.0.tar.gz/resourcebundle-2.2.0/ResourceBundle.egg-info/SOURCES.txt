@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ResourceBundle/__init__.py
+ResourceBundle/exceptions.py
+ResourceBundle.egg-info/PKG-INFO
+ResourceBundle.egg-info/SOURCES.txt
+ResourceBundle.egg-info/dependency_links.txt
+ResourceBundle.egg-info/requires.txt
+ResourceBundle.egg-info/top_level.txt
