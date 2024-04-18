@@ -1,0 +1,2 @@
+[console_scripts]
+pysharek = pysharek.main:main
