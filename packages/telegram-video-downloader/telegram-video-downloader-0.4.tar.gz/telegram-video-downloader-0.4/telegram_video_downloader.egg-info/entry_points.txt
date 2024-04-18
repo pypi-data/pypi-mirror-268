@@ -1,0 +1,2 @@
+[console_scripts]
+telegram-video-downloader = telegram_video_downloader.app:main
