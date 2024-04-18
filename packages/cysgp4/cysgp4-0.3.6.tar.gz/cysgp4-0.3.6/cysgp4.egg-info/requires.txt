@@ -1,0 +1,17 @@
+astropy
+numpy
+scipy
+sgp4
+
+[docs]
+sphinx
+sphinx-astropy[confv2]
+sphinx-copybutton
+pydata-sphinx-theme
+pytest>=7.0
+
+[test]
+pytest>=7.0
+pytest-astropy>=0.10
+pytest-doctestplus
+pytest-remotedata
