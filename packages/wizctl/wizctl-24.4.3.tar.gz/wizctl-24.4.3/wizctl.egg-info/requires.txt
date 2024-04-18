@@ -1,0 +1,12 @@
+kt-ds-core
+kt-ds-api
+Click
+tabulate
+jinja2
+gspread
+pandas
+google-api-core
+google-api-python-client
+oauth2client
+boto3
+PyMySQL

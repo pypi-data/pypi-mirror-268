@@ -1,0 +1,3 @@
+[console_scripts]
+wizctl = spacectl.main:main
+
