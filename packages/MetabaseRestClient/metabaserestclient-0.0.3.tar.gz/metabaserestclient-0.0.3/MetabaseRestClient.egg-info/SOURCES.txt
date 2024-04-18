@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+MetabaseRestClient.egg-info/PKG-INFO
+MetabaseRestClient.egg-info/SOURCES.txt
+MetabaseRestClient.egg-info/dependency_links.txt
+MetabaseRestClient.egg-info/requires.txt
+MetabaseRestClient.egg-info/top_level.txt
+metabase/__init__.py
+metabase/exception.py
+metabase/serializer.py
+metabase/service/__init__.py
+metabase/service/http_service.py
+metabase/service/metabase_service.py
