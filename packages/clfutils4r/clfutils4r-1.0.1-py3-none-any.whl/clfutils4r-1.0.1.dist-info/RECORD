@@ -1,0 +1,9 @@
+clfutils4r/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+clfutils4r/eval_classification.py,sha256=jA6RVJ4yual-docp8If598NcNmM7Ky3pIdRwk4rI7a4,27610
+clfutils4r/gridsearch_classification.py,sha256=oopWgIwbSc815t3HOcorzeUUo7BGGQq6POTPsabk0Tw,14173
+clfutils4r/pretty_cm.py,sha256=oBchn8kOWMgMzb0FiSZot_xVZ-WDwsLlGFOhNdwk8Ww,10883
+clfutils4r-1.0.1.dist-info/LICENSE,sha256=N0P3pKtRMvfb64jmgJdlerg3TnS0a2QC776AzPsbZIg,35128
+clfutils4r-1.0.1.dist-info/METADATA,sha256=kT5pWFTnWDdz_o2eCahRY_PMzN94zXIQQ-zpQTyrLkw,7046
+clfutils4r-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+clfutils4r-1.0.1.dist-info/top_level.txt,sha256=tjTy32wxH-0UPfHOyVogD3mK2L_KTi3s7xQZzAY2IJQ,11
+clfutils4r-1.0.1.dist-info/RECORD,,
