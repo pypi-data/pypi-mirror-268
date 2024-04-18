@@ -1,0 +1,17 @@
+quil-0.9.1.dist-info/METADATA,sha256=JJJ5gKJAdcozGUi3kvpeaRHKIC8u6WkhMoPf3prL4Eo,1478
+quil-0.9.1.dist-info/WHEEL,sha256=7Ui73pGgidyUA-5snShG0g3e0MxNIiYlCeND1YtcadQ,94
+quil/expression/__init__.py,sha256=6jzXhURBlfDAGRRKREkTT3Nujza66hmbs-r7goHZBe4,31
+quil/expression/__init__.pyi,sha256=fX1n7uFQHySrTWao7O_ioZKvBWTVCDHRHCWeDC9UlBU,7725
+quil/instructions/__init__.py,sha256=B20bPa2m_7Ni0JDleRLFPXk9yyjVrxZ5XUPR4-_yTHM,126
+quil/instructions/__init__.pyi,sha256=dKSdejo3xu2om5UbRbeOuswJ12cVBOgHb7dHmel_H00,93498
+quil/program/__init__.py,sha256=DcDbBgh_MtZlrqkzZih1jZPeh7srqucyuSFGmuGFXzc,130
+quil/program/__init__.pyi,sha256=O2LGwCvAX1z9tX6O088z8OEma4PAjlLa6k6fONgT9yw,18379
+quil/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quil/validation/identifier.py,sha256=URKOz_fn6Z07493HlWRnl17wiD8ebhv0-NiEq84Yskk,42
+quil/validation/identifier.pyi,sha256=jSozwAd-Cr_RsCMF8TeZGOzG_mFsOrV4Xyapju-zoH4,431
+quil/validation/__init__.py,sha256=b4nfAqbRLs457GKvI3H4n_-4JyTee50pk-vSQR4GZQ4,163
+quil/validation/__init__.pyi,sha256=BvZvPovgoP8P6-NIb1QzzqYHn17rEy2lTNJUSKu6Mo4,40
+quil/__init__.py,sha256=4wYbrg97M6UXZBOT6EuQoRtUpmfQhK09My-FgXbWF4k,289
+quil/__init__.pyi,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+quil/quil.cp39-win_amd64.pyd,sha256=1AfZhz-xP6S9rDtQCB5aEb6rxvGSS6Kj9NKa1-FB0Qg,4854784
+quil-0.9.1.dist-info/RECORD,,
