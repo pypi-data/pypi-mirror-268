@@ -1,0 +1,23 @@
+pyaction/__init__.py,sha256=i8NwO8cc41nBmsHQ-IB3lCNyA3PbLA3nti6B4YDcots,88
+pyaction/auth.py,sha256=CzjAetWVmsVAWVtvQB9Pkvvf1N9us4HCtpk2Fns0joA,315
+pyaction/cli.py,sha256=_hkli1JIOTKfmUr0BsOsFp3__4iVgVyR0tehmroW5iI,953
+pyaction/exceptions.py,sha256=rDcSUHJEg13GOafBfKGHBLl_Gb7jOsFnumtsXGXuipU,53
+pyaction/io.py,sha256=at-hnvNzcqlaJhmGsi6gCOJdSQJ8RzpbhboNupZwzGc,1163
+pyaction/issues/__init__.py,sha256=IlRVrt2qIF5UzYUX4eYbEUoNvObBuNGDlRJriEdmbj0,116
+pyaction/issues/connector.py,sha256=hZroI9lvdSYR6_dLwpu0yTG4R3-Rt0EqRv9Ly1fABAQ,648
+pyaction/issues/rendering.py,sha256=vALJFneyxs7aVDc2_QPwHroe-UY0wAevwwURVJuJoPs,505
+pyaction/template/copier.yml,sha256=Q1-5pcFlW4ClGtkmVOEtB-5aE41lV2Yga2Oejqj127s,610
+pyaction/template/{{action_slug}}/.dockerignore,sha256=XGp-XRNm4LsmlHxWEVW5zfgDXvfzGUN2nzzVo9VzSK0,332
+pyaction/template/{{action_slug}}/.gitignore,sha256=miNAhrBi0yTYY6Np22O2z3SCK0ReR8YbiPToH7rSoL8,239
+pyaction/template/{{action_slug}}/Dockerfile.jinja,sha256=qGz5grNpzRfqybAKORHWo8Eiaw8hwRrQC7pXNx-oEU0,238
+pyaction/template/{{action_slug}}/README.md.jinja,sha256=g7tP6uuV74fiTKCm8C1gh7afysPL6ZKM_iXYNJ0P-Tk,401
+pyaction/template/{{action_slug}}/action.yml.jinja,sha256=Y4VouiH98Ky1GHn2BfP0TxT1dSCAqpwdP_-qN1B4H7Q,436
+pyaction/template/{{action_slug}}/main.py,sha256=nhyms-o2ueQDBwJtXDcYVt6DLa1IZo60IxSOAy4WamM,229
+pyaction/template/{{action_slug}}/requirements.txt,sha256=QemVw25Ahdllm82BuNbTW4F5QXcsdlyB01rWg-4pKJI,16
+pyaction/template/{{action_slug}}/{% if include_cicd_testing %}.github{% endif %}/workflows/test.yml,sha256=yAG0hOrWNLvARtSJRHqMlwo-dfU583H4M4gr4egtV10,271
+pyaction-0.5.6.dist-info/LICENSE,sha256=lwqHYREA83t3LhqPqEmzFGZWW18ZhFyLOXtpo3bRlYY,1072
+pyaction-0.5.6.dist-info/METADATA,sha256=bLIMuAY5c2TCU0uQBxSwVE4IdwNh-N34rKx8hJ4OzZQ,4165
+pyaction-0.5.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyaction-0.5.6.dist-info/entry_points.txt,sha256=JROKqt97wRU-kqa4IHLcV75bwDUxHqH4JFadKIHSUZQ,46
+pyaction-0.5.6.dist-info/top_level.txt,sha256=INdVbl2DGp771-K3yWpCaeVNJ5Q9ZFRncnoaEYtHBQI,9
+pyaction-0.5.6.dist-info/RECORD,,
