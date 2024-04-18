@@ -1,0 +1,2 @@
+[console_scripts]
+log_analysis_tool = log_analysis_tool.app:main
