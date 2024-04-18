@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: emerald_hws
+Version: 0.0.7
+Summary: A package to manipulate and monitor Emerald Heat Pump Hot Water Systems
+Author-email: Ross Williamson <ross@inertia.net.nz>
+Project-URL: Homepage, https://github.com/ross-w/emerald_hws_py
+Project-URL: Bug Tracker, https://github.com/ross-w/emerald_hws_py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: awsiotsdk
+
+# emerald_hws_py
+Python package for controlling Emerald Heat Pump Hot Water Systems
