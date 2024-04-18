@@ -1,0 +1,63 @@
+[project]
+name = "dimlpfidex"
+version = "0.0.1"
+description = "Discretized Interpretable Multi Layer Perceptron (DIMLP) and related algorithms"
+authors = [
+    { name = "Jean-Marc Boutay", email = "jean-marc.boutay@hesge.ch" },
+    { name = "Guido Bologna", email = "guido.bologna@hesge.ch" }
+]
+dependencies = [
+    "pybind11>=2.10.4",
+    "pybind11-global>=2.10.4",
+    "numpy>=1.22",
+    "scikit-learn>=1.2.2",
+    "tensorflow>=2.13",
+    "tensorflow-io-gcs-filesystem>=0.31.0",
+    "matplotlib>=3.7.4",
+    "build>=1.0.3",
+]
+readme = "README.md"
+license = { text = "BSD License (BSD-3-Clause)" }
+homepage = "https://hes-xplain.github.io/"
+repository = "https://github.com/HES-XPLAIN/dimlpfidex"
+keywords = ["machine learning", "xai"]
+classifiers=[
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: POSIX',
+    'Operating System :: Unix',
+    'Operating System :: MacOS',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Education',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: BSD License',
+    'Topic :: Scientific/Engineering',
+    'Topic :: Scientific/Engineering :: Mathematics',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Topic :: Software Development',
+    'Topic :: Software Development :: Libraries',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Programming Language :: C++',
+    'Programming Language :: Python :: 3',
+]
+requires-python = ">= 3.8.1"
+
+[build-system]
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "pre-commit>=3.5.0",
+]
+
+[tool.scikit-build]
+wheel.packages = [
+#    "dimlp",
+    "dimlpfidex",
+#    "example",
+#    "fidex",
+#    "common",
+    "trainings",
+]
+
