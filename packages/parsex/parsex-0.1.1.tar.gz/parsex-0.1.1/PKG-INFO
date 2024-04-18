@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: parsex
+Version: 0.1.1
+License: MIT
+Requires-Python: >=3.8.1
+Requires-Dist: lxml>=5.2.1
+Requires-Dist: parsel>=1.9.1
+Requires-Dist: html-text>=0.6.0
+Requires-Dist: clear-html>=0.4.0
+Requires-Dist: dateparser>=1.2.0
+Requires-Dist: price-parser>=0.3.4
+Requires-Dist: zyte-parsers>=0.5.0
+Requires-Dist: extruct>=0.16.0
+Requires-Dist: chompjs>=1.2.3
