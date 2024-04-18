@@ -1,0 +1,10 @@
+nullspace_optimizer/__init__.py,sha256=oEv-FNHvdAOkjWVfTcQgeG8VIbPoNH9wfeaCYPvbvY4,1107
+nullspace_optimizer/inout.py,sha256=QN3eS0zp3Llsuc294NUiyJsmF6qH2Z3k4LHD4TwTzhg,6649
+nullspace_optimizer/utils.py,sha256=DnI-Kkblyv6lU_AprFoe8mcAD2rHkA_NajTNHASSz7U,6240
+nullspace_optimizer/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nullspace_optimizer/examples/run_all.py,sha256=Img9RoDJ_hRlCDViEYQ7rLcshoPm0bRfhEA2tYnrgiE,241
+nullspace_optimizer-1.2.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+nullspace_optimizer-1.2.3.dist-info/METADATA,sha256=ljDGUDWoan1yY-AnyphJ_ubjdFM6X1jCw_vIjJOfRXw,3746
+nullspace_optimizer-1.2.3.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+nullspace_optimizer-1.2.3.dist-info/top_level.txt,sha256=6VT8pkHS8DApAjmsOUlur-eMPmhJrVGMjn5tPlStlCk,20
+nullspace_optimizer-1.2.3.dist-info/RECORD,,
