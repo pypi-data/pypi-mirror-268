@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: pandasxl
+Version: 0.1.0
+Summary: 
+Home-page: https://github.com/jonbiemond/pandasxl
+Author: Jonathan Biemond
+Author-email: jonathan.biemond@devrygreenhouses.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: openpyxl (>=3.1.2,<4.0.0)
+Requires-Dist: pandas (>=2.1.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# pandasxl
+
+pandasxl provides convenience functions for reading data from Excel files 
+into a pandas DataFrame.
+
+## Installation
+
+...
+
+## Usage
+
+For example, to read a table from an Excel file into a DataFrame:
+
+```python
+import openpyxl
+import pandasxl as pdxl
+
+wb = openpyxl.load_workbook('file.xlsx')
+df = pdxl.read.from_name(wb, 'table_name')
+```
+
+## API
+
+Public API of the `pandasxl` package.
+
+### Read
+
+The `read` module contains the core functions for reading data from Excel files.
+
+* `read.from_name(wb: openpyxl.Workbook, name: str, header: bool) -> pd.DataFrame`
+
+Read an Excel named range or table into a DataFrame.
+
+* `read.from_reference(wb: openpyxl.Workbook, ref: str) -> pd.DataFrame`
+
+Read an Excel range reference into a DataFrame.
+
+
