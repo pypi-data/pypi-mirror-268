@@ -1,0 +1,48 @@
+# Asset Core status
+ASSET_CORE_STATUS_MOVEDTODSU = 2 # MovedToDataStorageUnit
+
+# Asset validation status
+ASSET_VALIDATION_STATUS_ERROR = 0
+ASSET_VALIDATION_STATUS_PENDINGVALIDATION = 1
+ASSET_VALIDATION_STATUS_INPROGRESS = 2
+ASSET_VALIDATION_STATUS_VALIDATED = 3
+
+# Settings
+SETTINGS_SAMPLING_MAX_ERROR_PERCENTAGE = 'SamplingMaxErrorPercentage'
+SETTINGS_SAMPLING_ROW_COUNT_THRESHOLD = 'RowCountThresholdForSampling'
+SETTINGS_SAMPLING_PERCENTAGE = 'SamplingPercentage'
+
+# Validation results
+VALIDATION_RESULT_DATA_ROWS_FAILED_PERCENT = 'rows_failed_percent'
+VALIDATION_RESULT_DATA_VALIDATIONS_FAILED = 'validations_failed'
+VALIDATION_RESULT_DATA_REPORT = 'report'
+VALIDATION_RESULT_DATA_ROWS_FAILED_IDS = 'rows_failed_ids'
+VALIDATION_RESULT_DATA_ROWS_FAILED_COUNT = 'rows_failed_count'
+
+# Great Expectation attributes
+GE_STATISTICS = 'validation_statistics'
+GE_STATISTICS_UNSUCCESSFUL_EXPECTATIONS = 'unsuccessful_expectations'
+GE_VALIDATION_RESULTS = 'results'
+GE_VALIDATION_RESULTS_EXPECTATION_CONFIG = 'expectation_config'
+GE_VALIDATION_RESULTS_EXPECTATION_CONFIG_TYPE = 'expectation_type'
+GE_VALIDATION_RESULT = 'result'
+GE_VALIDATION_RESULT_UNEXPECTED_VALUES = 'unexpected_index_list'
+
+# Storage
+STORAGE_DEFAULT_CONTAINER = 'data-quality-validations'
+STORAGE_REPORTS_FOLDER = 'reports'
+STORAGE_RESULTS_FOLDER = 'results'
+
+# Databricks
+DATABRICKS_TABLE_ERROR_COLUMN_NAME = 'SidraPassedValidation'
+DATABRICKS_TABLE_ID_ASSET_COLUMN_NAME = 'SidraIdAsset'
+DATABRICKS_TABLE_IS_DELETED_COLUMN_NAME = 'SidraIsDeleted'
+
+# Secrets
+SECRET_STORAGE_ACCOUNT_NAME = 'principal_storage_account_name'
+SECRET_STORAGE_ACCOUNT_KEY = 'principal_storage_account_key'
+SECRET_CLIENT_ID = 'client_id'
+SECRET_CLIENT_SECRET = 'client_secret'
+SECRET_API_URL = 'api_url'
+SECRET_DATABRICKS_SCOPE = 'service_data_quality'
+SECRET_API_SCOPE = 'scope'
