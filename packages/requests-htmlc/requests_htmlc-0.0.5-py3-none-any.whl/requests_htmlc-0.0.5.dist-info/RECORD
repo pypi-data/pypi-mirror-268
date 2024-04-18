@@ -1,0 +1,12 @@
+requests_html.py,sha256=AvKn94OZMcqVU9xsuaRGGyps2e42-Q6YxrOAzPTpTkk,32509
+docs/index.md,sha256=qVob1NgBweNbglETh_EMpnWnjKcmutNAK4e-JuDXofs,297
+docs/requests-htmlc/requests_html.md,sha256=vDE0hGaYijXaAD7AJD7oII7DDBUZy6m142ZJPQjBFwc,55
+ext/requests-html-logo.ai,sha256=6s2E90wAam_35n8TPqKP0J9mEj4Dc50TUSdX1y8fASk,2899712
+tests/python.html,sha256=ED9c0lKkwOXXTkQZbPLoidymHM9dayhHoAdwXDgHVyo,48883
+tests/test_internet.py,sha256=qVeLRRvQQKTEh3v953BEgG3oZ2nDOtbh9tRD0fqzbxY,1171
+tests/test_requests_html.py,sha256=A9pS1kUDsxZVqtNwrtViFxoT7FUgNe8LOjYOY8Bzrqg,8696
+requests_htmlc-0.0.5.dist-info/LICENSE,sha256=auEF5pj7X6bfqRx5qJGpBcCJsl77mhYsoJ5vMx2Cr-Q,1076
+requests_htmlc-0.0.5.dist-info/METADATA,sha256=7PP2FoQk8ZvTx5-36_-2E7VqANG9sdEvllKS5tgpWeI,20847
+requests_htmlc-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+requests_htmlc-0.0.5.dist-info/top_level.txt,sha256=k2MDlO7WqQyE_rDwFo5I7oRQRI-hR9DSfpKg3Gy4lvo,29
+requests_htmlc-0.0.5.dist-info/RECORD,,
