@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: chencrafts
+Version: 1.1
+Summary: CHEN CRAFTS, my personal toolbox!
+Home-page: https://github.com/Harrinive/chencrafts
+Author: Danyang Chen
+Author-email: DanyangChen2026@u.northwestern.edu
+License: MIT
+Keywords: personal toolbox,superconducting qubits,quantum mechanics
+Platform: Linux
+Platform: Mac OSX
+Platform: Unix
+Platform: Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: pandas
+Requires-Dist: dill
+Requires-Dist: pathos
+Requires-Dist: scqubits
+Requires-Dist: IPython
+Provides-Extra: cqed
+Requires-Dist: torch; extra == "cqed"
+Requires-Dist: multiprocess; extra == "cqed"
+Provides-Extra: bsqubits
+Requires-Dist: networkx; extra == "bsqubits"
+
+
+There are four main parts in this package: `Toolbox`, `cqed`, `bsqubits`, and `projects`. They serves for different purposes in Danyang's research.
+
+
+## Modules
+- `Toolbox` (or `tb`): Toolbox includes functions for optimization, saving and loading data, etc. It is a general toolbox for all the projects.
+
+- `cqed`: General codes for simulating the cqed systems. It includes simulations for pulse, decoherence, critical photon number, etc. I also define the FlexibleSweep class, inherited from the scqubits.ParameterSweep class, which helps to define swept parameters in a different way. Specifically, it has module `custom_sweeps` for a bunch of pre-defined custom sweeps, which can be used in `scqubits.ParameterSweep` class.
+
+- `bsqubits` (or `bsq`): A package for simulating and studying some spacific systems, especially for the resonator-qubit systems. The code isn't general enough to be used for other systems. Very high level and practical. Specifically, it has module `QEC_graph` for simulating the cat code using a graph representation.
+
+
+- `projects` (or `prj`): A collection for all other projects, including files collected from other collaborators.
+
+## Installation
+```bash
+pip install chencrafts
+```

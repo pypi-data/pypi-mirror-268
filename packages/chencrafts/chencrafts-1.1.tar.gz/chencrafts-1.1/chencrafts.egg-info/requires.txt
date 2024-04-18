@@ -1,0 +1,16 @@
+matplotlib
+numpy
+scipy
+tqdm
+pandas
+dill
+pathos
+scqubits
+IPython
+
+[bsqubits]
+networkx
+
+[cqed]
+torch
+multiprocess
