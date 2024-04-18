@@ -1,0 +1,9 @@
+scgraph_data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scgraph_data/world_highways.py,sha256=4gcYaoSojq5P_uXf4-19w3BVoPe1Eld7qpqyGIfryrc,58618612
+scgraph_data/world_highways_and_marnet.py,sha256=qGSd9vEZijMJ7DYDCNP83Qq_F0xKpAY10hMld03OjAs,59908602
+scgraph_data/world_railways.py,sha256=8dC1N7EUXAhD-ksHvrMfwNEFG3Oi3AkSjJNLOsZC24M,28155293
+scgraph_data-1.1.0.dist-info/LICENSE,sha256=GWy4-aLaHLyuwV-pmUxyz3G-Po6JKhPrRWv4wrxyGHA,1072
+scgraph_data-1.1.0.dist-info/METADATA,sha256=54lLNr-SVmSbWEv-DWVSLvlQPB1B8--sOZ_9OmhmNbE,3118
+scgraph_data-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+scgraph_data-1.1.0.dist-info/top_level.txt,sha256=KbRZFbcZ5CbZSMQ_F4sZuBlEEmkOdGysewun4zJWo6w,13
+scgraph_data-1.1.0.dist-info/RECORD,,
