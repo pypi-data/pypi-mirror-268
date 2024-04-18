@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: cctext
+Version: 0.1.3
+Summary: Text processing library for russian languange
+Home-page: https://github.com/IRBorisov/cctext
+Author: CIHT CONCEPT, IRBorisov
+Author-email: iborisov@acconcept.ru
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Russian
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Text Processing :: Linguistic
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: razdel
+Requires-Dist: pymorphy3
+
+# cctext
+
+[![PyPI version](https://badge.fury.io/py/cctext.svg)](https://badge.fury.io/py/cctext)
+
+Python library for russian natural language. Allows inflecting complex terms and resolving special syntax references to other entities.
+Based on [pymorphy3](https://github.com/no-plagiarism/pymorphy3)
+
+This library lacks user documentation. Example use cases can be found in tests folder.
