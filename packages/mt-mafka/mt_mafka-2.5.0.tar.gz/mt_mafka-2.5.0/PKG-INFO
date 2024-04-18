@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mt-mafka
+Version: 2.5.0
+Home-page: https://github.com/mtdev/mtkafka
+Author: mtdev
+Author-email: wuuuuusmall@outlook.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: jinja2
+Requires-Dist: pathlib>1.0.0
+
+A Python package that facilitates communication and interaction with Apache Kafka clusters in a multi-threaded environment.
