@@ -1,0 +1,271 @@
+<div class="order_details"
+     xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     xmlns:ajax="http://namesspaces.bluedynamics.eu/ajax"
+     i18n:domain="bda.plone.orders"
+     tal:define="order view/order">
+
+  <h1 i18n:translate="order_details">Order Details</h1>
+
+  <div class="qr_code"
+       tal:attributes="data-text string:${order/uid};
+                       data-width string:100;
+                       data-height string:100"></div>
+
+  <strong i18n:translate="order_uid">Order UID:</strong>
+  <span tal:replace="order/uid">UID</span>
+  <br />
+
+  <strong i18n:translate="order_number">Ordernumber:</strong>
+  <span tal:replace="python:order.get('ordernumber', '-/-')">12345</span>
+
+  <div class="order_details_row">
+    <div class="personal_data">
+      <h3 i18n:translate="personal_data">Personal Data:</h3>
+      <strong i18n:translate="order_gender">Gender:</strong>
+      <span tal:replace="view/gender">gender</span>
+      <br />
+      <strong i18n:translate="order_name">Name:</strong>
+      <span tal:replace="python:order.get('personal_data.firstname', '')">first name</span>
+      <span tal:replace="python:order.get('personal_data.lastname', '')">last name</span>
+      <br />
+      <strong i18n:translate="order_email">Email:</strong>
+      <span tal:replace="python:order.get('personal_data.email', '')">email</span>
+      <br />
+      <strong i18n:translate="order_company">Company:</strong>
+      <span tal:replace="python:order.get('personal_data.company', '')">company</span>
+      <br />
+      <strong i18n:translate="order_phone">Phone:</strong>
+      <span tal:replace="python:order.get('personal_data.phone', '')">phone</span>
+    </div>
+
+    <div class="billing_address">
+      <h3 i18n:translate="billing_address">Billing Address:</h3>
+      <strong i18n:translate="order_street">Street:</strong>
+      <span tal:replace="python:order.get('billing_address.street', '')">street</span>
+      <br />
+      <strong i18n:translate="order_zip_city">ZIP/City:</strong>
+      <span tal:replace="python:order.get('billing_address.zip', '')">zip</span>
+      <span tal:replace="python:order.get('billing_address.city', '')">city</span>
+      <br />
+      <strong i18n:translate="order_country">Country:</strong>
+      <span tal:replace="python:view.country(order.get('billing_address.country', ''))">
+        country
+      </span>
+    </div>
+  </div>
+
+  <div class="order_details_row">
+    <div class="order_state">
+      <h3 i18n:translate="order_state_heading">Order State:</h3>
+      <strong i18n:translate="order_created">Created:</strong>
+      <span tal:replace="view/created">created</span>
+      <br />
+      <strong i18n:translate="order_payment">Payment:</strong>
+      <span tal:replace="view/payment">payment</span>
+      <br />
+      <strong i18n:translate="order_salaried">Salaried:</strong>
+      <span tal:replace="view/salaried">No</span>
+      <br />
+      <strong i18n:translate="transaction_id">Transaction ID:</strong>
+      <span tal:replace="view/tid">none</span>
+      <br />
+      <strong i18n:translate="order_state">State:</strong>
+      <span tal:replace="view/state">state</span>
+    </div>
+
+    <div class="order_summary">
+      <h3 i18n:translate="order_summary">Order Summary:</h3>
+      <strong i18n:translate="currency">Currency:</strong>
+      <tal:currency define="currency view/currency">
+        <tal:consistent condition="currency">
+          <span tal:content="currency">EUR</span>
+        </tal:consistent>
+        <tal:inconsistent condition="not:currency">
+          <span i18n:translate="inconsistent_currencies">
+            Found inconsistent Currencies on order related bookings. This
+            should not happen at all!
+          </span>
+        </tal:inconsistent>
+      </tal:currency>
+      <br />
+      <strong i18n:translate="order_net">Net:</strong>
+      <span tal:replace="view/net">0.00</span>
+      <br />
+      <strong i18n:translate="order_vat">VAT:</strong>
+      <span tal:replace="view/vat">0.00</span>
+      <br />
+      <strong i18n:translate="order_discount_net">Discount Net:</strong>
+      <span tal:replace="view/discount_net">0.00</span>
+      <br />
+      <strong i18n:translate="order_discount_vat">Discount VAT:</strong>
+      <span tal:replace="view/discount_vat">0.00</span>
+      <br />
+      <strong i18n:translate="order_shipping_title">Shipping:</strong>
+      <span tal:replace="view/shipping_title">0.00</span>
+      <br />
+      <strong i18n:translate="order_shipping_costs_net">Shipping Net:</strong>
+      <span tal:replace="view/shipping_net">0.00</span>
+      <br />
+      <strong i18n:translate="order_shipping_costs_vat">Shipping VAT:</strong>
+      <span tal:replace="view/shipping_vat">0.00</span>
+      <br />
+      <strong i18n:translate="order_total">Total:</strong>
+      <strong tal:content="view/total">0.00</strong>
+    </div>
+  </div>
+
+  <div class="order_details_row">
+    <div class="delivery_address"
+         tal:condition="python:order.get('delivery_address.alternative_delivery', '')">
+      <h3 i18n:translate="delivery_address">Delivery Address:</h3>
+      <strong i18n:translate="order_name">Name:</strong>
+      <span tal:replace="python:order.get('delivery_address.firstname', '')">first name</span>
+      <span tal:replace="python:order.get('delivery_address.lastname', '')">last name</span>
+      <br />
+      <strong i18n:translate="order_company">Company:</strong>
+      <span tal:replace="python:order.get('delivery_address.company', '')">company</span>
+      <br />
+      <strong i18n:translate="order_street">Street:</strong>
+      <span tal:replace="python:order.get('delivery_address.street', '')">street</span>
+      <br />
+      <strong i18n:translate="order_zip_city">ZIP/City:</strong>
+      <span tal:replace="python:order.get('delivery_address.zip', '')">zip</span>
+      <span tal:replace="python:order.get('delivery_address.city', '')">city</span>
+      <br />
+      <strong i18n:translate="order_country">Country:</strong>
+      <span tal:replace="python:view.country(order['delivery_address.country'])">
+        country
+      </span>
+    </div>
+
+    <div class="delivery_address"
+         tal:condition="not:python:order.get('delivery_address.alternative_delivery', '')">
+      <h3 i18n:translate="delivery_address">Delivery Address:</h3>
+      <p i18n:translate="order_no_delivery_address">
+        No delivery Address defined
+      </p>
+    </div>
+
+    <div class="order_comment">
+      <h3 i18n:translate="order_comment">Order Comment:</h3>
+      <p tal:content="order/order_comment.comment"
+         tal:condition="order/order_comment.comment">comment</p>
+      <p tal:condition="not:order/order_comment.comment"
+         i18n:translate="order_no_comment">
+        No Comment
+      </p>
+    </div>
+  </div>
+
+  <div class="order_bookings">
+    <h3 i18n:translate="order_bookings">Order Bookings:</h3>
+    <table tal:define="resources_url string:${context/absolute_url}/++resource++bda.plone.orders">
+      <tal:tr repeat="row view/listing">
+        <tal:def define="even repeat/row/even;
+                         start repeat/row/start;
+                         show_exported python:'exported' in row">
+
+          <tr tal:condition="start">
+            <th i18n:translate="booking_title">Title</th>
+            <th i18n:translate="booking_count">Count</th>
+            <th i18n:translate="booking_quantity_unit">Quantity</th>
+            <th i18n:translate="booking_currency">Currency</th>
+            <th i18n:translate="booking_net">Net</th>
+            <th i18n:translate="booking_discount_net">Discount net</th>
+            <th i18n:translate="booking_vat">Vat</th>
+            <th tal:condition="show_exported" i18n:translate="booking_exported">Exported</th>
+            <th i18n:translate="booking_comment">Comment</th>
+            <th i18n:translate="booking_state">State</th>
+            <th i18n:translate="booking_salaried">Salaried</th>
+          </tr>
+
+          <tr tal:attributes="class python:even and 'even' or 'odd'">
+            <td>
+              <a href="#"
+                 target="_blank"
+                 tal:attributes="href row/url"
+                 tal:content="row/title"
+                 tal:condition="row/url">title</a>
+
+              <span tal:replace="row/title"
+                    tal:condition="not:row/url">title</span>
+            </td>
+            <td tal:content="row/count">count</td>
+            <td tal:content="row/quantity_unit">quantity</td>
+            <td tal:content="row/currency">EUR</td>
+            <td tal:content="row/net">net</td>
+            <td tal:content="row/discount_net">discount net</td>
+            <td>
+              <span tal:replace="row/vat">20.0</span>%
+            </td>
+            <td tal:condition="show_exported" tal:content="python:view.exported(row)">No</td>
+            <td>
+              <span class="booking_comment_display booking_comment_text"
+                    tal:content="row/comment">comment</span>
+              <tal:edit condition="view/can_modify_order">
+                <input class="booking_comment_edit"
+                       type="text"
+                       tal:attributes="value row/comment;
+                                       data-booking-uid row/uid;
+                                       data-edit-url string:${context/absolute_url}/@@booking_update_comment"
+                />
+                <a href="#"
+                   class="booking_comment_display booking_comment_edit_action">
+                  <img src="#"
+                       title="edit comment"
+                       alt="edit comment icon"
+                       tal:attributes="src string:${resources_url}/pencil.png"
+                  />
+                </a>
+                <img class="booking_comment_spinner"
+                     src="#"
+                     alt="spinner icon"
+                     tal:attributes="src string:${resources_url}/spinner.gif"
+                />
+                <a href="#"
+                   class="booking_comment_edit booking_comment_save_action">
+                  <img src="#"
+                       title="save comment"
+                       alt="save comment icon"
+                       tal:attributes="src string:${resources_url}/tick.png"
+                  />
+                </a>
+                <a href="#"
+                   class="booking_comment_edit booking_comment_abort_action">
+                  <img src="#"
+                       title="undo edit comment"
+                       alt="undo edit comment icon"
+                       tal:attributes="src string:${resources_url}/cross.png"
+                  />
+                </a>
+              </tal:edit>
+            </td>
+            <td>
+              <span tal:content="row/state">state</span>
+
+              <a href="#"
+                 class="booking-cancel-link discreet"
+                 ajax:bind="click"
+                 ajax:target="#"
+                 ajax:action="booking_cancel:NONE:NONE"
+                 ajax:confirm="Do you really want to cancel this booking?"
+                 tal:attributes="ajax:target row/cancel_target"
+                 tal:condition="row/cancel_target">
+                <img src="#"
+                     title="cancel booking"
+                     alt="cancel booking"
+                     tal:attributes="src string:${resources_url}/delete.png"
+                />
+              </a>
+            </td>
+            <td tal:content="row/salaried">salaried</td>
+          </tr>
+
+        </tal:def>
+      </tal:tr>
+    </table>
+  </div>
+
+</div>

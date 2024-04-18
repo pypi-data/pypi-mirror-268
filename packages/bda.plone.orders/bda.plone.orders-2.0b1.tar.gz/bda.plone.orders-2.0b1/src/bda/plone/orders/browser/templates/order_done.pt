@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="bda.plone.orders">
+
+<head>
+  <metal:top fill-slot="top_slot">
+    <tal:border define="dummy python:request.set('disable_border', True)" />
+  </metal:top>
+</head>
+
+<body>
+
+<metal:main fill-slot="main">
+  <tal:main-macro metal:define-macro="main">
+
+    <header>
+      <h1 class="documentFirstHeading"
+        tal:content="view/heading">Order/Reservation Done</h1>
+    </header>
+
+    <p tal:condition="view/id">
+      <span i18n:translate="your_order_order_id">Your Order number</span>:
+      <span tal:content="view/id">345-424-2323</span>
+    </p>
+
+    <p tal:content="view/text">Text goes here</p>
+
+    <a href=""
+       class="payment_button standalone"
+       tal:attributes="href context/absolute_url"
+       i18n:translate="order_done_continue">continue</a>
+
+  </tal:main-macro>
+</metal:main>
+
+</body>
+</html>
