@@ -1,0 +1,6 @@
+cloud-accelerator-diagnostics
+
+[dev]
+pyink==24.3.0
+pylint>=2.6.0
+pre-commit
