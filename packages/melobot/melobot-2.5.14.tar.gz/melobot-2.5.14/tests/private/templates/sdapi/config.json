@@ -1,0 +1,6 @@
+{
+  "endpoint": "http://127.0.0.1:6006/sdapi/v1",
+  "username": "melodyecho",
+  "password": "aime@export39sd",
+  "negative_defaults": "nsfw, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad feet"
+}

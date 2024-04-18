@@ -1,0 +1,81 @@
+{
+  "status": "ok",
+  "retcode": 0,
+  "data": {
+    "messages": [
+      {
+        "time": 1706595899,
+        "message_type": "group",
+        "message_id": 359035276,
+        "real_id": 112533,
+        "sender": {
+          "user_id": 1094950020,
+          "nickname": "QQ用户",
+          "sex": "unknown",
+          "age": 0,
+          "uid": "u_B-xbHgFtPzMTjvfvZNVuqw",
+          "tiny_id": "u_B-xbHgFtPzMTjvfvZNVuqw"
+        },
+        "message": [
+          {
+            "type": "json",
+            "data": {
+              "data": "{\"app\":\"com.tencent.imagetextbot\",\"desc\":\"\",\"view\":\"index\",\"ver\":\"1.0.0.14\",\"prompt\":\"没什么好看的\",\"appID\":\"\",\"sourceName\":\"\",\"actionData\":\"\",\"actionData_A\":\"\",\"sourceUrl\":\"\",\"meta\":{\"robot\":{\"cover\":\"https://pic.25by.top/image/?url=https://gchat.qpic.cn/gchatpic_new/0/0-0-641665E91E57845E7F842881A0FA8E41/0?term=2\",\"jump_url\":\"\",\"subtitle\":\"\",\"title\":\"\"}},\"config\":{\"autosize\":1,\"ctime\":1706595024,\"token\":\"a2a954f3bab3b6f61ed0d4e1a456f0dd\"},\"text\":\"\",\"sourceAd\":\"\",\"extra\":\"\"}"
+            }
+          }
+        ],
+        "group_id": 284840486,
+        "peer_id": 284840486
+      },
+      {
+        "time": 1706595899,
+        "message_type": "group",
+        "message_id": 359035952,
+        "real_id": 112534,
+        "sender": {
+          "user_id": 1094950020,
+          "nickname": "QQ用户",
+          "sex": "unknown",
+          "age": 0,
+          "uid": "u_B-xbHgFtPzMTjvfvZNVuqw",
+          "tiny_id": "u_B-xbHgFtPzMTjvfvZNVuqw"
+        },
+        "message": [
+          {
+            "type": "json",
+            "data": {
+              "data": "{\"app\":\"com.tencent.imagetextbot\",\"desc\":\"\",\"view\":\"index\",\"ver\":\"1.0.0.14\",\"prompt\":\"没什么好看的\",\"appID\":\"\",\"sourceName\":\"\",\"actionData\":\"\",\"actionData_A\":\"\",\"sourceUrl\":\"\",\"meta\":{\"robot\":{\"cover\":\"https://pic.25by.top/image/?url=https://gchat.qpic.cn/gchatpic_new/0/0-0-B7AD55B3FA8102A66AF971BB5D72CE80/0?term=2\",\"jump_url\":\"\",\"subtitle\":\"\",\"title\":\"\"}},\"config\":{\"autosize\":1,\"ctime\":1706595701,\"token\":\"8e4fe9c3871c1aedf14d15cabe6199c7\"},\"text\":\"\",\"sourceAd\":\"\",\"extra\":\"\"}"
+            }
+          }
+        ],
+        "group_id": 284840486,
+        "peer_id": 284840486
+      },
+      {
+        "time": 1706595926,
+        "message_type": "group",
+        "message_id": 359035956,
+        "real_id": 112535,
+        "sender": {
+          "user_id": 1094950020,
+          "nickname": "QQ用户",
+          "sex": "unknown",
+          "age": 0,
+          "uid": "u_B-xbHgFtPzMTjvfvZNVuqw",
+          "tiny_id": "u_B-xbHgFtPzMTjvfvZNVuqw"
+        },
+        "message": [
+          {
+            "type": "json",
+            "data": {
+              "data": "{\"app\":\"com.tencent.imagetextbot\",\"desc\":\"\",\"view\":\"index\",\"ver\":\"1.0.0.14\",\"prompt\":\"看你嘛的个b臭嗨\",\"appID\":\"\",\"sourceName\":\"\",\"actionData\":\"\",\"actionData_A\":\"\",\"sourceUrl\":\"\",\"meta\":{\"robot\":{\"cover\":\"https://pic.25by.top/image/?url=https://gchat.qpic.cn/gchatpic_new/0/0-0-F14F199BCD468F8935CD07492DF0536D/0?term=2\",\"jump_url\":\"\",\"subtitle\":\"\",\"title\":\"\"}},\"config\":{\"autosize\":1,\"ctime\":1706070064,\"token\":\"b13ae9f6458303186514922eb9c61ea5\"},\"text\":\"\",\"sourceAd\":\"\",\"extra\":\"\"}"
+            }
+          }
+        ],
+        "group_id": 284840486,
+        "peer_id": 284840486
+      }
+    ]
+  },
+  "echo": ""
+}
