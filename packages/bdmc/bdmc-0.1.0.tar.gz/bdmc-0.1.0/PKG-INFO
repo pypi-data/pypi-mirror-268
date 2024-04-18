@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: bdmc
+Version: 0.1.0
+Summary: An api wrapper lib designed for the uptech BDMC divers
+Author-Email: Whth <88489697+Whth@users.noreply.github.com>
+License: MIT
+Requires-Python: >=3.11
+Requires-Dist: pyserial>=3.5
+Requires-Dist: coloredlogs>=15.0.1
+Description-Content-Type: text/markdown
+
+# bdmc
