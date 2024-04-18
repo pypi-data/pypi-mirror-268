@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: omni_archive
+Version: 0.0.2
+Summary: A generic archive reader and writer for various archive formats.
+Home-page: https://github.com/moi90/omni_archive
+Author: Simon-Martin Schroeder
+Author-email: sms@informatik.uni-kiel.de
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pathlib_abc
+Requires-Dist: fnmatch2
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx>=1.4; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=1.10.0; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+
+# OmniArchive
+
+This Python module provides a generic archive reader and writer for various archive formats, including ZIP, TAR, and regular filesystem directories.
+It offers a consistent interface following [`pathlib.Path`](https://docs.python.org/3/library/pathlib.html#pathlib.Path) for working with these archive types.
+The module is designed to be extensible, allowing developers to add support for additional archive formats.
+
+## Alternatives
+- [https://pypi.org/project/archive-path/](archive-path) provides a common path interface for different archive types but does not allow nested archives or folder archives.
+- [https://pypi.org/project/python-archive/](python-archive) / [https://pypi.org/project/Archive/](archive) provides a common interface for different archive types but no path interface.
+- [https://github.com/fake-name/UniversalArchiveInterface](UniversalArchiveInterface) also provides a common interface for different archive types but no path interface.

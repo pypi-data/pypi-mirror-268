@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+omni_archive/__init__.py
+omni_archive/_version.py
+omni_archive/dir.py
+omni_archive/generic.py
+omni_archive/tar.py
+omni_archive/zip.py
+omni_archive.egg-info/PKG-INFO
+omni_archive.egg-info/SOURCES.txt
+omni_archive.egg-info/dependency_links.txt
+omni_archive.egg-info/requires.txt
+omni_archive.egg-info/top_level.txt
+tests/test_archive.py
