@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edapiwl"
+version = "0.0.3"
+description = "A modified version of edapi, an unofficial integration of the Ed API with Python"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests",
+    "python-dotenv",
+    "beautifulsoup4"
+]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/trevmoy/edapiwl"
