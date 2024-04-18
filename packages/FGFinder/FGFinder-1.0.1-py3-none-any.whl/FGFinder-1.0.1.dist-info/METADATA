@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: FGFinder
+Version: 1.0.1
+Summary: A package to identify functional groups in molecules.
+Home-page: https://github.com/Borest5543/Fg_Finder
+Author: Túlio Augusto and Jefferson Richard
+Author-email: borest5543@gmail.com
+License: MIT License
+Keywords: Cheminformatics RDKit Chemistry
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas <=2.2.2
+Requires-Dist: rdkit
+Requires-Dist: numpy <=1.26.4
+
+[![DOI](https://zenodo.org/badge/783865416.svg)](https://zenodo.org/doi/10.5281/zenodo.10966985)
+# FG Finder
+A python package to identfy functional groups in molecules.
+
+# How to install
+### Pip
+```
+pip install FGFinder
+```
+
+### Manual
+```
+git clone https://github.com/Borest5543/Fg_Finder
+cd Fg_Finder
+python setup.py install
+``` 
