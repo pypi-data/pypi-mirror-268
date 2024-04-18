@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: vlite
+Version: 0.2.3
+Summary: A simple and blazing fast vector database
+Author: Surya Dantuluri
+Author-email: surya@suryad.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: PyPDF2
+Requires-Dist: docx2txt
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: huggingface-hub
+Requires-Dist: tiktoken
+Requires-Dist: torch (==2.2.2)
+Requires-Dist: transformers (==4.39.0)
+Requires-Dist: tokenizers (==0.15.2)
+Provides-Extra: ocr
+Requires-Dist: surya-ocr-vlite ; extra == 'ocr'
+
