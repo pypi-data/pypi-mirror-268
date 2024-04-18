@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "pydantic-sql-bridge"
+version = "0.0.7"
+description = "A simple bridge between SQL databases and Pydantic"
+authors = ["Rik <rik.de.kort@hey.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pydantic_sql_bridge"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = "2.*"
+sqlglot = "^19.1"
+pggm-datalab-utils = "^2.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.2"
+black = "^23"
+
+[[tool.poetry.source]]
+name = "ptho"
+url = "https://files.pythonhosted.org"
+priority = "primary"
+
+
+#[[tool.poetry.source]]
+#name = "Proget"
+#url = "https://proget.pggm-intra.intern/pypi/PGGMPythonGallery/simple"
+#priority = "primary"
+#
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
