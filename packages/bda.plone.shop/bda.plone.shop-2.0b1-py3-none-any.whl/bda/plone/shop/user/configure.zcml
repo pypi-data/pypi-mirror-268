@@ -1,0 +1,59 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           xmlns:browser="http://namespaces.zope.org/browser">
+
+  <!-- bind user preferences and information views to new permissions -->
+  <configure package="plone.app.users.browser">
+    <browser:page
+      zcml:condition="not-have plone-5"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="personal-preferences"
+      class=".personalpreferences.PersonalPreferencesPanel"
+      permission="bda.plone.shop.ChangePersonalPreferences"
+      layer="bda.plone.shop.interfaces.IShopExtensionLayer" />
+
+    <browser:page
+      zcml:condition="not-have plone-5"
+      for="plone.app.layout.navigation.interfaces.INavigationRoot"
+      name="personal-information"
+      class=".userdatapanel.UserDataPanel"
+      permission="bda.plone.shop.ChangePersonalInformation"
+      layer="bda.plone.shop.interfaces.IShopExtensionLayer" />
+  </configure>
+
+  <!-- userdata adapters -->
+  <adapter
+    zcml:condition="not-have plone-5"
+    factory=".userdata.UserDataPanelExtender"
+    provides="plone.z3cform.fieldsets.interfaces.IFormExtender"
+    name="bda.plone.shop.user.userdata.UserDataPanelExtender"/>
+    />
+
+  <adapter
+    zcml:condition="not-have plone-5"
+    factory=".userdata.RegistrationPanelExtender"
+    provides="plone.z3cform.fieldsets.interfaces.IFormExtender"
+    name="bda.plone.shop.user.userdata.RegistrationPanelExtender"/>
+
+  <adapter
+    zcml:condition="not-have plone-5"
+    factory=".userdata.AddUserFormExtender"
+    provides="plone.z3cform.fieldsets.interfaces.IFormExtender"
+    name="bda.plone.shop.user.userdata.AddUserFormExtender"/>
+
+  <adapter
+    zcml:condition="not-have plone-5"
+    provides=".userdata.ICustomer"
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    factory=".userdata.UserDataSchemaAdapter"/>
+
+  <!-- Adapter for member data retrieval in bda.plone.checkout -->
+  <adapter
+    factory=".userdata.CheckoutFormMemberPresets"/>
+
+  <subscriber
+    for="Products.PluggableAuthService.interfaces.events.IPrincipalCreatedEvent"
+    handler=".userrole.add_customer_role" />
+
+</configure>

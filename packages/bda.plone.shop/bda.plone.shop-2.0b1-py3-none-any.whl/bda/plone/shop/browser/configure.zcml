@@ -1,0 +1,199 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           xmlns:plone="http://namespaces.plone.org/plone"
+           xmlns:zcml="http://namespaces.zope.org/zcml">
+
+  <!-- availability adapter -->
+  <adapter factory=".availability.CartItemAvailability" />
+
+  <!-- viewlets -->
+  <browser:viewlet
+    name="bda.plone.shop.buyable"
+    for="bda.plone.orders.interfaces.IBuyable"
+    class="plone.app.layout.viewlets.common.ViewletBase"
+    template="buyable_viewlet.pt"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+    permission="zope2.View"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <!-- buyable controls -->
+  <browser:page
+    name="buyable_controls"
+    for="bda.plone.orders.interfaces.IBuyable"
+    class=".buyable.BuyableControls"
+    template="buyable.pt"
+    permission="zope2.View"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <!-- plone.app.contenttypes view override -->
+
+  <!-- override for IPloneSiteRoot  -->
+  <!-- XXX: summary listing throws exception on plone root
+  <browser:pages
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class="plone.app.contenttypes.browser.folder.FolderView"
+    layer="..interfaces.IShopExtensionLayer"
+    permission="zope2.View">
+
+    <browser:page
+      name="summary_view"
+      template="listing_summary.pt" />
+  </browser:pages>
+  -->
+
+  <browser:pages
+    for="plone.dexterity.interfaces.IDexterityContainer"
+    class="plone.app.contenttypes.browser.folder.FolderView"
+    layer="..interfaces.IShopExtensionLayer"
+    permission="zope2.View">
+
+    <browser:page
+      name="summary_view"
+      template="listing_summary.pt" />
+  </browser:pages>
+
+  <browser:pages
+    for="plone.app.contenttypes.behaviors.collection.ISyndicatableCollection"
+    class="plone.app.contenttypes.browser.collection.CollectionView"
+    layer="..interfaces.IShopExtensionLayer"
+    permission="zope2.View">
+
+    <browser:page
+      name="summary_view"
+      template="listing_summary.pt" />
+  </browser:pages>
+
+  <!-- actions -->
+  <!-- enable buyable -->
+  <browser:page
+    name="enable-buyable"
+    attribute="enableFeature"
+    for="..interfaces.IPotentiallyBuyable"
+    class=".actions.BuyableAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <browser:page
+    name="disable-buyable"
+    attribute="disableFeature"
+    for="..interfaces.IPotentiallyBuyable"
+    class=".actions.BuyableAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <browser:page
+    name="is-possible-to-enable-buyable"
+    attribute="isPossibleToEnableFeature"
+    for="*"
+    class=".actions.BuyableAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <browser:page
+    name="is-possible-to-disable-buyable"
+    attribute="isPossibleToDisableFeature"
+    for="*"
+    class=".actions.BuyableAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <!-- enable vendor area -->
+  <browser:page
+    name="enable-vendor"
+    attribute="enableFeature"
+    for="zope.container.interfaces.IContainer"
+    class=".actions.VendorAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <browser:page
+    name="disable-vendor"
+    attribute="disableFeature"
+    for="zope.container.interfaces.IContainer"
+    class=".actions.VendorAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <browser:page
+    name="is-possible-to-enable-vendor"
+    attribute="isPossibleToEnableFeature"
+    for="*"
+    class=".actions.VendorAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <browser:page
+    name="is-possible-to-disable-vendor"
+    attribute="isPossibleToDisableFeature"
+    for="*"
+    class=".actions.VendorAction"
+    permission="cmf.ModifyPortalContent"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <!-- shop portlet -->
+  <plone:portlet
+    name="portlets.ShopAdmin"
+    interface=".admin.IShopAdminPortlet"
+    assignment=".admin.ShopAdminAssignment"
+    renderer=".admin.ShopAdminRenderer"
+    addview=".admin.ShopAdminAddForm" />
+
+  <!-- shop navigation groups -->
+  <adapter name="orders" factory=".navigation.OrdersGroup" />
+  <adapter name="bookings" factory=".navigation.BookingsGroup" />
+  <adapter name="contacts" factory=".navigation.ContactsGroup" />
+  <adapter name="export" factory=".navigation.ExportGroup" />
+  <adapter name="mail_templates" factory=".navigation.MailTemaplatesGroup" />
+  <adapter name="discount" factory=".navigation.DiscountGroup" />
+  <adapter name="administration" factory=".navigation.AdministrationGroup" />
+
+  <!-- shop navigation links -->
+  <adapter name="orders" factory=".navigation.OrdersLink" />
+  <adapter name="orders_in_context" factory=".navigation.OrdersInContextLink" />
+  <adapter name="orders_in_container" factory=".navigation.OrdersInContainerLink" />
+  <adapter name="myorders" factory=".navigation.MyOrdersLink" />
+
+  <adapter name="bookings" factory=".navigation.BookingsLink" />
+  <adapter name="bookings_in_context" factory=".navigation.BookingsInContextLink" />
+  <adapter name="bookings_in_container" factory=".navigation.BookingsInContainerLink" />
+
+  <adapter name="contacts" factory=".navigation.ContactsLink" />
+
+  <adapter name="export_orders" factory=".navigation.ExportOrdersLink" />
+  <adapter name="export_orders_in_context" factory=".navigation.ExportOrdersInContext" />
+  <adapter name="export_orders_in_container" factory=".navigation.ExportOrdersInContainerLink" />
+
+  <adapter name="mail_templates" factory=".navigation.MailTemplatesLink" />
+
+  <adapter name="cart_discount" factory=".navigation.CartDiscountLink" />
+  <adapter name="item_discount" factory=".navigation.CartItemDiscountLink" />
+  <adapter name="item_discount_in_container" factory=".navigation.CartItemDiscountInContainerLink" />
+
+  <adapter name="control_panel" factory=".navigation.ControlPanelLink" />
+
+  <!-- controlpanel -->
+  <browser:page
+    name="shop_controlpanel"
+    for="zope.component.interfaces.ISite"
+    class=".controlpanel.ShopSettingsControlPanel"
+    permission="cmf.ManagePortal"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <!-- generic resources -->
+  <browser:resourceDirectory
+    name="bda.plone.shop"
+    directory="static"
+    layer="..interfaces.IShopExtensionLayer" />
+
+  <browser:menu
+    id="shop_toolbar_menu"
+    title="Shop"
+    class=".toolbar.ShopMenu" />
+
+  <adapter
+    for="* ..interfaces.IShopExtensionLayer"
+    name="shop_toolbar_menu_item"
+    factory=".toolbar.ShopSubMenuItem"
+    provides="plone.app.contentmenu.interfaces.IContentMenuItem" />
+
+</configure>

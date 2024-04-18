@@ -1,0 +1,69 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:gs="http://namespaces.zope.org/genericsetup"
+           i18n_domain="bda.plone.shop">
+
+ <gs:registerProfile
+   name="2_to_3"
+   title="Upgrade policy GS profile to 3"
+   directory="profiles/2_to_3"
+   description=""
+   provides="Products.GenericSetup.interfaces.EXTENSION"
+   for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+  <gs:registerProfile
+    name="3_to_4"
+    title="Upgrade policy GS profile to 4"
+    directory="profiles/3_to_4"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+  <gs:registerProfile
+    name="4_to_5"
+    title="Upgrade policy GS profile to 5"
+    directory="profiles/4_to_5"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+  <gs:registerProfile
+    name="5_to_6"
+    title="Upgrade policy GS profile to 6"
+    directory="profiles/5_to_6"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+  <gs:registerProfile
+    name="6_to_7"
+    title="Upgrade policy GS profile to 7"
+    directory="profiles/6_to_7"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+  <gs:registerProfile
+    name="8_to_9"
+    title="Upgrade policy GS profile to 9"
+    directory="profiles/8_to_9"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+  <gs:registerProfile
+    name="9_to_10"
+    title="Upgrade policy GS profile to 10"
+    directory="profiles/9_to_10"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+  <gs:registerProfile
+    name="10_to_11"
+    title="Upgrade policy GS profile to 11"
+    directory="profiles/10_to_11"
+    description=""
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot" />
+
+</configure>

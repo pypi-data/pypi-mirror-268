@@ -1,0 +1,21 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  i18n_domain="bda.plone.shop">
+
+  <permission
+    id="bda.plone.shop.ViewBuyableInfo"
+    title="bda.plone.shop: View Buyable Info" />
+
+  <permission
+    id="bda.plone.shop.ModifyCart"
+    title="bda.plone.shop: Modify Cart" />
+
+  <permission
+    id="bda.plone.shop.ChangePersonalInformation"
+    title="bda.plone.shop: Change Personal Information" />
+
+  <permission
+    id="bda.plone.shop.ChangePersonalPreferences"
+    title="bda.plone.shop: Change Personal Preferences" />
+
+</configure>

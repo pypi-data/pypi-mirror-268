@@ -1,0 +1,90 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           xmlns:i18n="http://namespaces.zope.org/i18n"
+           i18n_domain="bda.plone.shop">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <!--
+    Set this interface on desired content class in order to enable content
+    action turning object into buyable.
+  -->
+  <!--
+  <class zcml:condition="installed Products.Archetypes"
+         class="Products.Archetypes.BaseObject.BaseObject">
+    <implements interface="bda.plone.shop.interfaces.IPotentiallyBuyable" />
+  </class>
+  -->
+  <!--
+    Set this interface on desired content class in order to turn object
+    into buyable directly.
+  -->
+  <!--
+  <class zcml:condition="installed Products.Archetypes"
+         class="Products.Archetypes.BaseObject.BaseObject">
+    <implements interface="bda.plone.orders.interfaces.IBuyable" />
+  </class>
+  -->
+
+  <include package="collective.z3cform.datagridfield" />
+  <include package="plone.app.registry" />
+  <include package="bda.plone.orders" />
+
+  <include file="permissions.zcml" />
+  <include file="profiles.zcml" />
+  <include file="vocabularies.zcml" />
+
+  <include package=".browser" />
+  <include package=".user" />
+  <include package=".upgrades" />
+
+  <include file="dx.zcml"/>
+
+  <!-- indexing -->
+  <adapter name="item_buyable" factory=".indexer.item_buyable" />
+  <adapter name="item_net" factory=".indexer.item_net" />
+  <adapter name="item_buyable_start" factory=".indexer.item_buyable_start" />
+  <adapter name="item_buyable_end" factory=".indexer.item_buyable_end" />
+
+  <!-- invoice sender -->
+  <adapter factory=".orders.InvoiceSender" />
+
+  <!-- checkout settings -->
+  <adapter factory=".checkout.CheckoutSettings" />
+
+  <!-- payment settings -->
+  <adapter factory=".payment.PaymentSettings" />
+  <adapter factory=".payment.CashOnDeliverySettings" />
+
+  <!-- shipping settings -->
+  <adapter factory=".shipping.ShippingSettings" />
+
+  <!-- default shipping -->
+  <adapter name="default_shipping" factory=".shipping.DefaultShipping" />
+
+  <!-- cash and carry shipping -->
+  <adapter name="cash_and_carry" factory=".shipping.CashAndCarryShipping" />
+
+  <!-- flat rate shipping (B/C, default shipping offers same functionality) -->
+  <!--
+  <adapter name="flat_rate" factory=".shipping.FlatRate" />
+  -->
+
+  <!-- cart related adapters -->
+  <adapter factory=".cartdata.CartDataProvider" />
+  <adapter factory=".cartdata.CartItemState" />
+
+  <!-- notification settings adapter -->
+  <adapter factory=".mailnotify.NotificationSettings" />
+
+  <!-- notification text adapter -->
+  <adapter factory=".mailnotify.BubbleItemNotificationText" />
+  <adapter factory=".mailnotify.RegistryItemNotificationText" />
+  <adapter factory=".mailnotify.BubbleGlobalNotificationText" />
+  <adapter factory=".mailnotify.RegistryGlobalNotificationText" />
+  <adapter factory=".mailnotify.RegistryPaymentText" />
+
+</configure>
