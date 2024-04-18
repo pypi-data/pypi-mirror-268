@@ -1,0 +1,2 @@
+[console_scripts]
+ubitlogger = ubitlogger.cli:cli
