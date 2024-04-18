@@ -1,0 +1,17 @@
+close_dot_io/__about__.py,sha256=KbK511TMZWiFCnc7WTjMn06gNsOwZbWJMutN9g97ccQ,127
+close_dot_io/__init__.py,sha256=Y6PUBlUsJhCVqSCMb7TTEGNyO7C6iIViKj8Xarrdypk,178
+close_dot_io/client.py,sha256=Fr0cen5IplAJgqzvrR4m9ZXWVYur6dGkhX7Q4bDuLpc,11989
+close_dot_io/dict_util.py,sha256=VwC7obOlx24vFxOBI4LhsWrUSgq08KdQN9UTyqxj9uA,360
+close_dot_io/enums.py,sha256=zC7dLos9jNpw72s5bUHTMAFhPKzWKnrBT-7ptyIaIX4,369
+close_dot_io/resources/__init__.py,sha256=70XHl755AQ93aAU1bxV4w-wXaiwWmD3TU3m0xH60c_A,516
+close_dot_io/resources/activity.py,sha256=219imUTQWEUgo70a-PZkqCmJTqMOmc4jVDvPG9AdrVE,4944
+close_dot_io/resources/base.py,sha256=LOnqEsZrwnwFBRceoT4swabOCgfDIkB_Na-j3P5Zn00,729
+close_dot_io/resources/connected_account.py,sha256=avQMbf_-mSzD4ruzibR9aI1b0ZNeccwNXSETZf1JkbU,367
+close_dot_io/resources/contact.py,sha256=AI9fXNKtRFtxg8waY2snhJp09H8peH1L4Hs70Mn6_6Q,1411
+close_dot_io/resources/lead.py,sha256=yNBxwxb77CpB2n8d9cl4jNwfi2xBRMv34CrD8d_Ysik,1173
+close_dot_io/resources/sequence.py,sha256=tKLj8L1dxEW2kNRbe_nlkTRVsnhAw5Ki4cHQxJQ7i6E,835
+close_dot_io/resources/smart_view.py,sha256=_LtBqFHg3J-PvywOmumcwjChuqBuncO1xLPqk-rM_5A,547
+close_dot_io-0.0.8.dist-info/METADATA,sha256=zr_RWRWgWzS9IFM6VvC8nJ-aO6KDq5Xchaq-4_wsIvU,8476
+close_dot_io-0.0.8.dist-info/WHEEL,sha256=xl5aZkiJYVTjhVaiADvIe6UeUVylGNomrxKZ0Zda1CE,87
+close_dot_io-0.0.8.dist-info/licenses/LICENSE.txt,sha256=U2jcqbM1pHyQsOSny_kc97hkFPaFo7192XcCaRYnZcI,1113
+close_dot_io-0.0.8.dist-info/RECORD,,
