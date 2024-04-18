@@ -1,0 +1,59 @@
+# ray-utils
+
+[![PyPI version](https://badge.fury.io/py/ray-utils.svg)](https://badge.fury.io/py/ray-utils)
+
+utility functions for https://github.com/ray-project/ray/
+    
+## Usage
+
+Installation
+
+```
+pip install ray-utils
+```
+
+## Documentation
+
+### `apply_parallel`
+
+Apply a function in parallel on elements of an iterable.
+
+Example:
+
+```
+from ray_utils import apply_parallel
+apply_parallel(
+    group_l=enumerate([1,2,3,4]),
+    func_apply=lambda x, val_init: val_init*x,
+    func_init=lambda: 3
+)
+```
+
+### `init_in_context`
+
+Like `ray.init()` but automatically calls `ray.shutdown()` at the end of the "python context".
+
+Example:
+
+```
+from ray_utils import init_in_context
+with init_in_context():
+    print("bla")
+```
+
+## Dev notes
+
+Edit project in `github.dev` at:
+- https://github.dev/shadiakiki1986/ray-utils
+
+Push python package updates to pypi at:
+- https://www.kaggle.com/code/shadiakiki1/ray-utils-publish-to-pypi/notebook
+
+Python package development tutorial:
+- https://packaging.python.org/en/latest/tutorials/packaging-projects/
+
+pypi page:
+- https://pypi.org/project/ray-utils/
+
+pypi badge in this readme:
+- https://badge.fury.io/for/py/ray-utils
