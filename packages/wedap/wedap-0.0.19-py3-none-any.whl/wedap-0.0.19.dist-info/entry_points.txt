@@ -1,0 +1,4 @@
+[console_scripts]
+mdap = mdap.__main__:main
+wedap = wedap.__main__:main
+wekap = wekap.__main__:main
