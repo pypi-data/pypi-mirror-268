@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: cmeel-teaser-plusplus
+Version: 2.0
+Summary: cmeel distribution for TEASER++
+Requires-Python: >= 3.8
+License-Expression: MIT
+Home-page: https://github.com/cmake-wheel/cmeel-teaser-plusplus
+Project-URL: Upstream, https://github.com/MIT-SPARK/TEASER-plusplus
+Requires-Dist: cmeel
+Provides-Extra: build
+Requires-Dist: cmeel-eigen ; extra == "build"
+Description-Content-Type: text/markdown
+
+# CMeel TEASER++
+
+[![PyPI version](https://badge.fury.io/py/cmeel-teaser-plusplus.svg)](https://pypi.org/project/cmeel-teaser-plusplus)
+[![Release](https://github.com/cmake-wheel/cmeel-teaser-plusplus/actions/workflows/release.yml/badge.svg)](https://github.com/cmake-wheel/cmeel-teaser-plusplus/actions/workflows/release.yml)
+
+[TEASER++](https://github.com/MIT-SPARK/TEASER-plusplus) distribution for cmeel packages.
