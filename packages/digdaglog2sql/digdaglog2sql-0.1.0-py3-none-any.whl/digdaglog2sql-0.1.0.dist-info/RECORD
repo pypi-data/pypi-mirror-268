@@ -1,0 +1,9 @@
+digdaglog2sql/__init__.py,sha256=ShXQBVjyiSOHxoQJS2BvNG395W4KZfqMxZWBAR0MZrE,22
+digdaglog2sql/cli.py,sha256=F-gslmNtB4AcxxseFQlOc6zJHGVVtqJMH8p14Rqs4ck,2477
+digdaglog2sql/extractor.py,sha256=Jqs0v98vLtmuEsl7NVAFF-rmtpO0Ghs-y4h0MGd_jB4,318
+digdaglog2sql/td_op.py,sha256=7AQ_oro2y-Yp_hXygg4m4a2XTgEbt6zmgMhS9OU91wM,1191
+digdaglog2sql-0.1.0.dist-info/LICENSE,sha256=iIBUs0Cr579gP5mqHCcCLIOGHbL1mYJprB_WfN17gpo,11340
+digdaglog2sql-0.1.0.dist-info/METADATA,sha256=X1AtHv_NOF5gpHlw-U3oY1tH2F2OG_2jsUJ6n1q3Swo,2155
+digdaglog2sql-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+digdaglog2sql-0.1.0.dist-info/entry_points.txt,sha256=GVmuQc8qfmI91T1BstrfP3gWICDTmwjdNR_9_zSrffc,55
+digdaglog2sql-0.1.0.dist-info/RECORD,,
