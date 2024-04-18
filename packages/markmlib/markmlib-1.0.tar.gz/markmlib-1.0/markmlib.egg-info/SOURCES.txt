@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+markmlib/SidraTools.py
+markmlib/__init__.py
+markmlib.egg-info/PKG-INFO
+markmlib.egg-info/SOURCES.txt
+markmlib.egg-info/dependency_links.txt
+markmlib.egg-info/requires.txt
+markmlib.egg-info/top_level.txt
