@@ -1,0 +1,8 @@
+fastcore
+python_dotenv
+envyaml
+pandas
+requests
+openpyxl
+
+[dev]
