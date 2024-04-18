@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+'''
+    %(prog)s - A Software PAckage Manager interface utility for Linux.
+    (C) 2024 Mike Miller, License: GPLv3+
+
+    %(prog)s \x1b[3moptions\x1b[m sub-command \x1b[3mmoar-args\x1b[m
+
+    # additional/customized sub-commands for
+'''
+import os
+import signal
+import sys
+from argparse import ArgumentParser
+from platform import freedesktop_os_release
+from subprocess import call
+
+
+VERSION = '0.50'
+USE_SUDO = (
+    'add-apt-repository',
+    'autoremove',
+    'clean',
+    'install',
+    'remove',
+    'update',
+    'check-update',
+    'upgrade',
+)
+PLATFORM_MAP = dict(  # os-release.ID: (pkg-mgr, aliases)
+    fedora=(
+        'dnf',
+        dict(
+            clean='clean packages; autoremove',
+            install='install --cacheonly',
+            listfiles='repoquery -l',
+            provides='provides --disablerepo=\\*',
+            purge='remove',
+            show='info --cacheonly',
+            update='check-update --refresh',
+        ),
+    ),
+    debian=(
+        'apt',
+        dict(
+            add='!add-apt-repository',
+            clean='clean; autoremove',
+            info='show',
+            infile='!sudo dpkg --install',
+            listfiles='!dpkg-query --listfiles',
+            provides='!dpkg --search',
+            upgrade='update; dist-upgrade',
+        ),
+    ),
+    # add more here, should be tested first
+)
+PLATFORM_MAP['ubuntu'] = PLATFORM_MAP['debian']
+PLATFORM_MAP['linuxmint'] = PLATFORM_MAP['debian']
+PLATFORM_MAP['redhat'] = PLATFORM_MAP['fedora']
+
+SCMD_ALIASES = dict(
+    inf='infile',
+    lsf='listfiles',
+    ls='list',
+    po='policy',
+    pr='provides',
+    pu='purge',
+    rm='remove',
+    se='search',
+    up='upgrade',
+)
+SCMD_ALIASES['in'] = 'install'
+
+
+def main(argv):
+    # find system - need to do first so we can print aliases if need be
+    release = freedesktop_os_release()
+    release_id = release.get('ID')
+
+    pkgmgr, platform_aliases = PLATFORM_MAP.get(release_id)
+    if not pkgmgr:
+        print('Error:', f'package manager not found for {release_id!r}.')
+        return os.EX_UNAVAILABLE
+
+    _usage = (
+        f'{__doc__.rstrip()} \x1b[1m{pkgmgr}\x1b[m:\n    '
+        f'{", ".join(platform_aliases.keys())}\n '
+    )  # important, ends in nbsp to prevent another strip by argparse
+
+    # check & prepare args
+    parser = ArgumentParser(usage=_usage)
+    parser.add_argument('-d', '--debug', action='store_true', help='print...')
+    parser.add_argument(
+        '--version', action='version', version='%(prog)s ' + VERSION
+    )
+    parser.add_argument(
+        'sub_command', metavar='sub-command', help='package manager command.'
+    )
+    try:
+        args, moar_args = parser.parse_known_args(argv[1:])
+    except SystemExit:
+        exit(os.EX_USAGE)
+    if args.debug:
+        print('debug:', args)
+        print(' moar:', moar_args)
+
+    codes = []
+    # unalias, if necessary
+    SCMD_ALIASES.update(platform_aliases)
+    if args.debug:
+        print('aliases:', SCMD_ALIASES)
+        print('subcmd0:', args.sub_command)
+    sub_command = SCMD_ALIASES.get(args.sub_command, args.sub_command)
+
+    if args.debug:
+        print('subcmd1:', repr(sub_command))
+    if sub_command in platform_aliases:  # expand again
+        sub_command = platform_aliases[sub_command]
+    if args.debug:
+        print('subcmd2:', repr(sub_command))
+
+    for sub_command in sub_command.split(';'):  # may be multiple
+
+        if args.debug:
+            print('subcmd3:', repr(sub_command))
+        cmdlist = [pkgmgr]
+        if sub_command.startswith('!'):  # runs stand-alone, rm prefix
+            cmdlist = []
+            sub_command = sub_command[1:]
+
+        if args.debug:
+            print('subcmd4:', repr(sub_command))
+        sub_command = sub_command.split()  # may have spaces
+        if sub_command[0] in USE_SUDO:
+            cmdlist.insert(0, 'sudo')
+        cmdlist.extend(sub_command)
+        cmdlist.extend(moar_args)
+
+        # cmdline should be a string when shell=True
+        cmdline = ' '.join(cmdlist)
+        if args.debug:
+            print('cmdlist:', cmdlist)
+        print('\x1b[2m⏵', cmdline, '\x1b[m', file=sys.stderr)
+        error_code = call(cmdline, shell=True)
+        if error_code:
+            return error_code
+        codes.append(error_code)
+        print()
+
+    return codes[-1]  # last success
+
+
+# http://youtu.be/0hiUuL5uTKc?t=8s
+try:
+    sys.exit(main(sys.argv))
+except KeyboardInterrupt:
+    print('\nWarning: Ctrl+C entered, exiting.', file=sys.stderr)
+    sys.exit(128 + signal.SIGINT)
