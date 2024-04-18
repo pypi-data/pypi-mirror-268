@@ -1,0 +1,6 @@
+
+[visualization]
+numpy
+plotly
+pandas
+nbformat
