@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/main.cpp
+src/radial_basis.h
+src/vector_ops.h
+src/adaptive_neighbourhoods.egg-info/PKG-INFO
+src/adaptive_neighbourhoods.egg-info/SOURCES.txt
+src/adaptive_neighbourhoods.egg-info/dependency_links.txt
+src/adaptive_neighbourhoods.egg-info/requires.txt
+src/adaptive_neighbourhoods.egg-info/top_level.txt
+tests/test_iris.py
