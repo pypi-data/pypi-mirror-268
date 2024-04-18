@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "natnetsdk"
+version = "4.1.1"
+description = "Python's natnetsdk now on PyPI!!!"
+authors = ["optitrack"]
+readme = "README.md"
+license = "Apache-2.0"
+homepage = "https://optitrack.com/"
+
+[tool.poetry.urls]
+"latest releases" = "https://optitrack.com/support/downloads/developer-tools.html"
+
+[tool.poetry.dependencies]
+python = "3.*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
