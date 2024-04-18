@@ -1,0 +1,8 @@
+README.md
+setup.py
+Rami_arithmetic/Rami_arithmetic.py
+Rami_arithmetic/__init__.py
+Rami_arithmetic.egg-info/PKG-INFO
+Rami_arithmetic.egg-info/SOURCES.txt
+Rami_arithmetic.egg-info/dependency_links.txt
+Rami_arithmetic.egg-info/top_level.txt

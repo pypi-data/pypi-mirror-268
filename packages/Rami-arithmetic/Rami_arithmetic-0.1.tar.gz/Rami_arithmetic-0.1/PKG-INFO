@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: Rami_arithmetic
+Version: 0.1
+Summary: A simple Rami_arithmetic package
+Home-page: UNKNOWN
+Author: rami.tawadros
+Author-email: ramikamalabdelsayed@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+T# Your Package Name
+
+A simple Python package for performing basic arithmetic operations.
+
+## Installation
+
+You can install the package using pip:
+
+
+
