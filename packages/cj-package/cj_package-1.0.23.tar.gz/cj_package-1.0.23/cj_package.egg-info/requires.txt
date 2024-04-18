@@ -1,0 +1,8 @@
+aliyun-log-python-sdk>=0.8.15
+requests>=2.31.0
+loguru>=0.6.0
+dnspython
+pandas
+pendulum
+pymysql
+openpyxl
