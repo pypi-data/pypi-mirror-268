@@ -1,0 +1,14 @@
+MANIFEST.in
+changelog.md
+license
+manifest.in
+readme.md
+setup.py
+mkdocs_glossary/__init__.py
+mkdocs_glossary/plugin.py
+mkdocs_glossary.egg-info/PKG-INFO
+mkdocs_glossary.egg-info/SOURCES.txt
+mkdocs_glossary.egg-info/dependency_links.txt
+mkdocs_glossary.egg-info/entry_points.txt
+mkdocs_glossary.egg-info/requires.txt
+mkdocs_glossary.egg-info/top_level.txt
