@@ -1,0 +1,151 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools"]
+
+[project]
+authors = [
+  {name = "ThreatConnect", email = "support@threatconnect.com"},
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Natural Language :: English",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Security",
+]
+dependencies = [
+  "arrow",
+  "black",
+  "debugpy",
+  "inflection",
+  "isort",
+  "paho-mqtt<2.0.0",
+  "pyaes",
+  "pydantic<2.0.0",
+  "python-dateutil",
+  "PyYAML",
+  "redis<5.0.0",
+  "requests",
+  "rich",
+  "semantic_version",
+  "tinydb",
+  "typer[all]",
+]
+description = "ThreatConnect Exchange App CLI Tool"
+dynamic = ["readme", "version"]
+keywords = ["tcex", "threatconnect"]
+license = {text = "Apache-2.0"}
+name = "tcex_cli"
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+  "bandit",
+  "pre-commit",
+  "pydocstyle",
+  "pylint",
+  "pyright",
+  "pyupgrade",
+]
+test = [
+  "pytest",
+  "pytest-cov",
+]
+
+[project.scripts]
+tcex = "tcex_cli.cli.cli:app"
+
+[project.urls]
+Documentation = "https://github.com/ThreatConnect-Inc/tcex-cli"
+Source = "https://github.com/ThreatConnect-Inc/tcex-cli"
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/markdown"}
+version = {attr = "tcex_cli.__version__"}
+
+[tool.setuptools.packages.find]
+exclude = ["tests*", "local-*"]
+
+#
+# Linters / Formatters
+#
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+
+[tool.codespell]
+# ignore-words-list=
+skip = "*.history,*local"
+
+[tool.isort]
+dedup_headings = false
+import_heading_firstparty = "first-party"
+import_heading_stdlib = "standard library"
+import_heading_thirdparty = "third-party"
+include_trailing_comma = true
+known_first_party = ""
+known_local_folder = "."
+known_third_party = ""
+line_length = 100
+profile = "black"
+
+[tool.pydocstyle]
+ignore = [
+  "D202", # no blank lines allowed after function docstring
+  "D203", # 1 blank line required before class docstring (found 0)
+  "D213", # Multi-line docstring summary should start at the second line
+  "D400", # First line should end with a period ...
+  "D406", # Section name should end with a newline ...
+  "D407", # Missing dashed underline after section ...
+  "D413", # Missing blank line after last section ...
+  "D415", # First line should end with a period, question mark, or exclamation point ...
+]
+
+[tool.pylint.messages_control]
+disable = [
+  "broad-exception-caught",
+  "duplicate-code",
+  "fixme",
+  "inconsistent-return-statements", # pylint doesn't properly handle "NoReturn" in all cases
+  "invalid-name",
+  "logging-fstring-interpolation",
+  "relative-beyond-top-level", # disable relative rule due to this project being a submodule
+  "too-few-public-methods",
+  "too-many-ancestors",
+  "too-many-arguments",
+  "too-many-branches",
+  "too-many-instance-attributes",
+  "too-many-lines",
+  "too-many-locals",
+  "too-many-public-methods",
+  "too-many-return-statements",
+]
+extension-pkg-whitelist = "pydantic"
+
+[tool.pyright]
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md#sample-pyprojecttoml-file
+exclude = [
+  "**/.history",
+  "**/__pycache__",
+  "**/local-*",
+  "tcex/api/tc/v2",
+  "tests",
+]
+pythonPlatform = "Linux"
+pythonVersion = "3.11"
+reportIncompatibleMethodOverride = false
+reportIncompatibleVariableOverride = false
+reportPrivateImportUsage = false
+
+[tool.pytest.ini_options]
+filterwarnings = []
+junit_family = "xunit2"
+testpaths = [
+  "tests",
+]
