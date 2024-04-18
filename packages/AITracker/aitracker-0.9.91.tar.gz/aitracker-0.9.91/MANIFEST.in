@@ -1,0 +1,2 @@
+include src/AITracker/image_classifier6.model/*
+include src/AITracker/image_classifier6.model/variables/*
