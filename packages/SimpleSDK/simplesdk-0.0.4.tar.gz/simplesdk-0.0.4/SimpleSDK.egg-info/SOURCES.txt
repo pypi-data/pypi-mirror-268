@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+SimpleSDK.egg-info/PKG-INFO
+SimpleSDK.egg-info/SOURCES.txt
+SimpleSDK.egg-info/dependency_links.txt
+SimpleSDK.egg-info/top_level.txt
+simplesdk/__init__.py
+simplesdk/internal.py
+simplesdk/translations.py
