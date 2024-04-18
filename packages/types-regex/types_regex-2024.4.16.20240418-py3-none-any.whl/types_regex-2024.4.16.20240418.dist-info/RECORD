@@ -1,0 +1,10 @@
+regex-stubs/METADATA.toml,sha256=lASwBDeARGSzN9KrO9vtLKt2Q0_QJLkQlePgSVsURIU,87
+regex-stubs/__init__.pyi,sha256=dRHbnggsRYhBpwhHkZhLvxX5Tct21I8bJksynwRBWAU,21
+regex-stubs/_regex.pyi,sha256=FboBpWCY5P1mTSXIX9Ueatt8LkmaP72hhEaiOpkvf7c,812
+regex-stubs/_regex_core.pyi,sha256=ZaFryqpnX-qEpjIBbO6jU7uwA8bW3SMYo9VXqbaEUhk,1497
+regex-stubs/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+regex-stubs/regex.pyi,sha256=LwSdf8kRuR2I3L8o1Gr4TneaOZPg63rJwKYTtwsMp9E,19266
+types_regex-2024.4.16.20240418.dist-info/METADATA,sha256=Zr7orhxg46NptHt_UVGvuKnkWkhFFKahXKAgUwPZyQ0,1557
+types_regex-2024.4.16.20240418.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+types_regex-2024.4.16.20240418.dist-info/top_level.txt,sha256=f3TLEOp0P1pbBY2jUQii9WD4Vuam1DNhh_xn0E4yEOA,12
+types_regex-2024.4.16.20240418.dist-info/RECORD,,
