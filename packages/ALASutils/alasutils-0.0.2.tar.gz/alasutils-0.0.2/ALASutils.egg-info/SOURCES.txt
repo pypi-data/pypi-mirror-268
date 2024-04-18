@@ -1,0 +1,5 @@
+setup.py
+ALASutils.egg-info/PKG-INFO
+ALASutils.egg-info/SOURCES.txt
+ALASutils.egg-info/dependency_links.txt
+ALASutils.egg-info/top_level.txt
