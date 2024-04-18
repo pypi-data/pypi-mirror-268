@@ -1,0 +1,2 @@
+[console_scripts]
+pb2py = protobuf2pydantic.main:app
