@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ignutils"
+version = "0.0.7"
+authors = [
+  { name="Ignitarium", email="jerin.antony@ignitarium.com" },
+]
+description = "A small CV test package"
+# readme = "pypi/README.md"
+requires-python = ">=3.8"
+dynamic = ["dependencies"]              #used for requiremnts.txt file
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.urls]
+Homepage = "https://gitlab.ignitarium.in/ign-ai/internal/ignutils"
+Issues = "https://gitlab.ignitarium.in/ign-ai/internal/ignutils/-/issues"
