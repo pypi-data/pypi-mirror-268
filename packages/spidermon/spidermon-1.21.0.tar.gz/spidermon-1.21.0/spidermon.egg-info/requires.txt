@@ -1,0 +1,15 @@
+jsonschema[format]>=4.21.0
+python-slugify
+
+[monitoring]
+Jinja2
+boto
+boto3
+itemadapter
+premailer
+requests
+scrapinghub
+scrapinghub-entrypoint-scrapy
+scrapy
+sentry_sdk
+slack_sdk
