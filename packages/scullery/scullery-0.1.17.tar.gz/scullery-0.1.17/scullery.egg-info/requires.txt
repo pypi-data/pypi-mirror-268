@@ -1,0 +1,4 @@
+pyyaml
+beartype
+paho-mqtt
+pint
