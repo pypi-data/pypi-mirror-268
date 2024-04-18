@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "savingsatoshi_bitcoin_rpcpy"
+version = "75.1.0"
+description = "faux bitcoin core for Saving Satoshi code challenges"
+authors = ["Matthew Zipkin <pinheadmz@gmail.com>"]
+license = "MIT"
+packages = [{include = "bitcoin_rpcpy"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
