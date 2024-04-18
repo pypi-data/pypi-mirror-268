@@ -1,0 +1,9 @@
+strudel/__init__.py,sha256=lDHxHmfRK6WmbOUii_HhE5VIVnhqgmSNiul-_Z2LGX4,76
+strudel/callbacks.py,sha256=LHncztmvIw58iYaQACR7WCa0AoXF-qI7_V16wecD8JM,2402
+strudel/main.py,sha256=GsBQEb8HtgL7AQak30B741ikRXadfnb0Iv8EvzrXTGM,10816
+strudel/utils.py,sha256=TUr_BdUwqppH5GqedXd0dQPI3YHSkTkAIA2UD7CiWVc,3518
+strudel_cli-0.0.7.dist-info/METADATA,sha256=X3CsOeBV543zjA6Fk7MELb45x9Kfs58Bl_9H-YasPpU,9701
+strudel_cli-0.0.7.dist-info/WHEEL,sha256=K0BPUNF1N3kQ9olb8aVEtkObePEjdr2JOLT1N83EVws,87
+strudel_cli-0.0.7.dist-info/entry_points.txt,sha256=ZUgIRPqc7nPnlTG-hZR_vjP2DTcH9PyxW71e6mFXovQ,45
+strudel_cli-0.0.7.dist-info/licenses/LICENSE,sha256=scO7fs8tBCnWwqdt274b5JotRtPlc4l1b4DQM6BJfSM,2519
+strudel_cli-0.0.7.dist-info/RECORD,,
