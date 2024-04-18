@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+CalPleX.egg-info/PKG-INFO
+CalPleX.egg-info/SOURCES.txt
+CalPleX.egg-info/dependency_links.txt
+CalPleX.egg-info/requires.txt
+CalPleX.egg-info/top_level.txt

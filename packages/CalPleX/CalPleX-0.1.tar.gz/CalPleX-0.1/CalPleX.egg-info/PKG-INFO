@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: CalPleX
+Version: 0.1
+Summary: Functions and classes that does math, graphing and much more!
+Home-page: https://github.com/JihoTheCoder0607
+Download-URL: https://github.com/JihoTheCoder0607/CalPleX/archive/refs/tags/0.2.tar.gz
+Author: Jiho Lee
+Author-email: life120607@gmail.com
+License: MIT
+Keywords: Math,Graphs,Geometry
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+License-File: LICENSE.txt
+Requires-Dist: matplotlib
+Requires-Dist: numpy
