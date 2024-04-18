@@ -1,0 +1,395 @@
+Metadata-Version: 2.1
+Name: flap-lite
+Version: 0.6.27
+Summary: An open-source tool for linking free-text addresses to UPRN
+Author-email: Huayu Zhang <huayu.zhang@ed.ac.uk>
+Project-URL: Homepage, https://github.com/huayu-zhang/flap_lite
+Project-URL: Bug Tracker, https://github.com/huayu-zhang/flap_lite/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: attrs ==22.2.0
+Requires-Dist: certifi ==2022.12.7
+Requires-Dist: click ==8.1.3
+Requires-Dist: click-plugins ==1.1.1
+Requires-Dist: cligj ==0.7.2
+Requires-Dist: et-xmlfile ==1.1.0
+Requires-Dist: Fiona ==1.9.2
+Requires-Dist: geopandas ==0.12.2
+Requires-Dist: importlib-metadata ==6.1.0
+Requires-Dist: joblib ==1.2.0
+Requires-Dist: munch ==2.5.0
+Requires-Dist: numpy ==1.24.2
+Requires-Dist: openpyxl ==3.1.2
+Requires-Dist: packaging ==23.0
+Requires-Dist: pandas ==1.5.3
+Requires-Dist: psutil ==5.9.6
+Requires-Dist: pyproj ==3.5.0
+Requires-Dist: python-dateutil ==2.8.2
+Requires-Dist: pytz ==2023.3
+Requires-Dist: scikit-learn ==1.2.2
+Requires-Dist: scipy ==1.10.1
+Requires-Dist: shapely ==2.0.1
+Requires-Dist: six ==1.16.0
+Requires-Dist: threadpoolctl ==3.1.0
+Requires-Dist: tqdm ==4.65.0
+Requires-Dist: tzdata ==2023.3
+Requires-Dist: zipp ==3.15.0
+
+![PyPI](https://img.shields.io/pypi/v/flap-lite?label=pypi%20package)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/flap-lite)
+
+# FLAP
+
+*FLAP* is an open-source tool for linking free-text addresses to 
+Ordinance Survey Unique Property Reference Number (OS UPRN). You need to have a
+licence of OS UPRN and download the address premium product to use *FLAP*
+*FLAP* can be used at scale with a few lines of syntax.
+
+
+## Setup FLAP
+
+Full deployment resources can be found in `deploy` of this repository.
+
+Please see:
+- `deploy/linux` for using the tool on a linux server
+- `deploy/docker` for running *FLAP* from a docker container
+- `deploy/posit_setup_public` for launch *FLAP* jobs on POSIT workbench
+
+## Quick Start
+
+### Matching
+
+Use `flap.match` for matching address to database
+
+```python
+from flap import match
+
+input_csv = '[PATH_TO_INPUT_CSV_FILE]'
+db_path = '[PATH_TO_THE_DB]'
+
+results = match(
+    input_csv=input_csv,
+    db_path=db_path
+    )
+```
+
+Optional arguments that can be passed: 
+- `output_file_path` : str, default None
+    Path for saving the output csv file, containing ['input_id', 'input_address', 'uprn', 'score']. If None, results
+    are not saved
+- `raw_output_path`: str, default None
+        Path for save the batched raw output files. If None, results are not saved
+- `in_progress_log_path`: str, default None
+        Path for files indicating one batch is being processed
+- `max_log_interval`: str, default 4800
+        The interval under which the programme thinks some process is actively working on it
+- `batch_size`: int, default 10000
+        Size of each batch
+- `max_workers`: int, default None
+        Number of processes. If None, the max cpu available is determined by `flap.utils.cpu_count.available_cpu_count()`
+- `in_memory_db`: bool, default False
+        If in-memory SQLite database is used. If True, a temp database is created in shared memory cache from pre-built
+        csv files
+- `classifier_model_path`: str, default None
+        The path to the pretrained sklearn classifier model.
+        If None, the model is loaded from 'flap.__file__/model/*.clf'
+- `max_beam_width`: int, default 200
+        The max number of rows to be considered from UPRN database
+- `score_threshold`: float, default 0.3
+        The min score for early stop of matching
+
+
+## Application of FLAP to your data
+
+### Preparations of input data
+
+#### When no UPRN suggestions are given
+
+To start matching a table with addresses to UPRN from scratch, the input data should be a `.csv` file with the following format. Essentially, there should be an `input_id` column which you can use to join the address to other tables and an `input_address` column which is an free-text address. This input is usually concatenated from multiple fields in your raw data.
+
+The function in this scenario is `flap.match`
+
+| input_id | input_address                                                                    |
+|--------------------------|----------------------------------------------|
+| xxxxxx1  | The Queens Medical Research Institute, 47 Little France Cres, Edinburgh EH16 4TJ |
+| xxxxxx2  | Queen Elizabeth University Hospital, 1345 Govan Rd, Glasgow G51 4TF              |
+| xxxxxx3  | 47 Little France Crescent, Edinburgh EH16 4TJ                                    |
+| xxxxxx4  | 1345 Govan Rd, Glasgow G51 4TF                                                   |
+| ...      | ...                                                                              |
+
+#### When there are suggestions of UPRN
+
+In many scenarios, there are suggestions of UPRNs for some of the addresses. For example, the data was processed with other tools like CURL or ASSIGN. It could be that there are some manual matching done. FLAP can use these suggestions to speed up the matching. First, FLAP will score the suggested UPRN matching. If the score passes a threshold, the suggested UPRN will be accepted. If not, it will be then matched as usual together with other addresses without UPRN suggestions.
+
+If this is the scenario, the input should look like this. And the function to be used is `flap.score_and_match`
+
+| input_id | input_address                                                                    | uprn      |
+|-------------------|----------------------------------|-------------------|
+| xxxxxx1  | The Queens Medical Research Institute, 47 Little France Cres, Edinburgh EH16 4TJ | 906426044 |
+| xxxxxx2  | Queen Elizabeth University Hospital, 1345 Govan Rd, Glasgow G51 4TF              |           |
+| xxxxxx3  | 47 Little France Crescent, Edinburgh EH16 4TJ                                    |           |
+| xxxxxx4  | 1345 Govan Rd, Glasgow G51 4TF                                                   |           |
+| ...      | ...                                                                              | ...       |
+
+## Format of results and general guidance of usage
+
+### Format of results
+
+I have divided the result table in two parts just for better reading experience. It would be in one table for FLAP output.
+
+| input_id | uprn      | flap_eval_score    | flap_match_score   | flap_uprn    |
+|----------|-----------|--------------------|--------------------|--------------|
+| xxxxxxx1 | 906426044 | 0.6341964285714285 | 0.6341964285714285 | 906426044    |
+| xxxxxxx2 |           |                    | 0.8225             | 906700404351 |
+| xxxxxxx3 |           |                    | 0.46               | 906426044    |
+| xxxxxxx4 |           |                    | 0.6225             | 906700404351 |
+
+| input_id | input_address                                                                    | uprn_row                                                                                                                            |
+|------------------|---------------------------|---------------------------|
+| xxxxxxx1 | The Queens Medical Research Institute, 47 Little France Cres, Edinburgh EH16 4TJ | UNIVERSITY OF EDINBURGH,,,THE QUEENS MEDICAL RESEARCH INSTITUTE,47,,LITTLE FRANCE CRESCENT,,EDINBURGH BIOQUARTER,EDINBURGH,EH16 4TJ |
+| xxxxxxx2 | QUEEN ELIZABETH UNIVERSITY HOSPITAL 1345 Govan Rd, Glasgow G51 4TF               | QUEEN ELIZABETH UNIVERSITY HOSPITAL,,,,1345,,GOVAN ROAD,,,GLASGOW,G51 4TF                                                           |
+| xxxxxxx3 | University of Edinburgh, 47 Little France Crescent, Edinburgh EH16 4TJ           | UNIVERSITY OF EDINBURGH,,,THE QUEENS MEDICAL RESEARCH INSTITUTE,47,,LITTLE FRANCE CRESCENT,,EDINBURGH BIOQUARTER,EDINBURGH,EH16 4TJ |
+| xxxxxxx4 | 1345 Govan Rd, Glasgow G51 4TF                                                   | QUEEN ELIZABETH UNIVERSITY HOSPITAL,,,,1345,,GOVAN ROAD,,,GLASGOW,G51 4TF                                                           |
+
+### Explanations of the fields
+
+-   `flap_match_score` is the confidence level of the matching. In general, a score \>0.5 indicate a good match that you do not need to review, unless the input has tenement patterns `regex'\d+F\d+'` like `'2F3'`. Matchings with scores between 0.3 and 0.5 are a mix of low confidence correct match and mismatches. The confidence score is not a probability (or not calibrated), so that a score of 0.6 does **NOT** mean 60% of time it is correct.
+-   `flap_uprn` is the UPRN matched
+-   `uprn_row` is the comma delimited values from the AddressPremium database
+-   `flap_eval_score` is the score from scoring the suggested match
+
+### Interpreting the results
+
+In general, matches with score over `0.5` are almost always to be a good match,
+with the caveat that addresses with patterns of `regex('\d+F\d+)` like `2F3` might not be correct
+because the guessing of how many flats per level is not always correct.
+
+| input_id | interpretation                                                                                                                                                                                                                                                       |
+|-----------------|-------------------------------------------------------|
+| xxxxxxx1 | The input has a suggested UPRN which is scored. The score is 0.63 which passes the threshold of 0.5 and accepted. The match is correct. FLAP has dealt with the abbreviation in the street name *Cres* and the missing `ORGANISATION_NAME` *UNIVERSITY OF EDINBURGH* |
+| xxxxxxx2 | The input has good quality and is matched to the correct UPRN. There is an abbreviation in the street name *Rd*                                                                                                                                                      |
+| xxxxxxx3 | The input has missing `BUILDING_NAME`. The matching is correct but the score is only 0.46. It is a False Negative.                                                                                                                                                   |
+| xxxxxxx4 | The input has missing `ORGANISATION_NAME` and an abbreviation *Rd*. The matching is correct with a score of 0.6225. Note that the score is lower than input no. `xxxxxxx2`, but still passes the threshold                                                           |
+
+
+## A tour under the hood of FLAP
+
+### Top-level APIs
+
+The `flap.match` function is the top-level api for matching an input table of addresses from scratch to UPRN.
+
+``` python
+from flap import match
+
+input_csv = <path_to_your_input_csv_file>
+db_path = <path_to_the_built_db>
+
+results = match(
+    input_csv, db_path
+)
+
+print(results)
+```
+
+The `flap.score_and_match` function is the top-level api for scoring the suggested uprn matchings and match the ones not pass the threshold and without UPRN suggestion.
+
+``` python
+from flap import score_and_match
+
+input_csv = <path_to_your_input_csv_file>
+db_path = <path_to_the_built_db>
+
+results = match(
+    input_csv, db_path
+)
+
+print(results)
+```
+
+You may use the python function `help` to see the detailed documentation on the use of optional arguments.
+
+``` python
+from flap import match, score_and_match
+
+print(help(match))
+
+print(help(score_and_match))
+```
+
+### Database operations
+
+The database operations are handled by `flap.database.sql.SqlDB` class
+
+``` python
+from flap.database.sql import SqlDB
+
+
+db_path = <path_to_the_built_db>
+
+sql_db = SqlDB(db_path)
+
+print(sql_db.get_table_names())
+print(sql_db.get_columns_of_table('indexed'))
+print(sql_db.sql_query('select * from indexed limit 2'))
+```
+
+### The Matcher class
+
+The `flap.matcher.sql_matcher.SqlMatcher` class handles matching of addresses to UPRN. The `flap.matcher.sql_matcher.SqlMatcher` class takes an obligatory argument of `flap.database.sql.SqlDB` class, which specifies the database to match to.
+
+``` python
+from flap.matcher.sql_matcher import SqlMatcher
+from flap.database.sql import SqlDB
+
+
+db_path = <path_to_the_built_db>
+
+sql_db = SqlDB(db_path)
+
+matcher = SqlMatcher(sql_db)
+
+address = '1345 GOVAN ROAD, GLASGOW G51 4TF'
+
+match_results = matcher.match(address)
+
+print(match_results)
+```
+
+### The Parser class
+
+The `flap.parser.rule_parser_fast.RuleParserFast` class handles parsing information from address strings. The `flap.parser.rule_parser_fast.RuleParserFast` class takes an obligatory argument of `flap.database.sql.SqlDB` class, because it uses the vocabularies from the database.
+
+``` python
+from flap.parser.rule_parser_fast import RuleParserFast
+from flap.database.sql import SqlDB
+
+
+db_path = <path_to_the_built_db>
+
+sql_db = SqlDB(db_path)
+
+parser = RuleParserFast(sql_db)
+parsed = parser.parse(address, method='all')
+
+print(parsed)
+```
+
+### Step-by-step demonstration of matching process
+
+Here, I demonstrate a simplified process of how an address is match to the database.
+
+We start with having an input address
+
+``` python
+address = '1345 GOVAN ROAD, GLASGOW G51 4TF'
+```
+
+Step 1. Parse the address string and extract information that is useful for narrowing down the search
+
+``` python
+from flap.database.sql import SqlDB
+from flap.parser.rule_parser_fast import RuleParserFast
+
+
+db_path = <path_to_the_built_db>
+
+sql_db = SqlDB(db_path)
+
+parser = RuleParserFast(sql_db)
+
+parsed = parser.parse(address)
+
+postcode = parsed['FOR_QUERY']['POSTCODE']
+
+print(postcode)
+```
+
+Step 2. Narrowing down to local area using SQL query
+
+``` python
+local_area = sql_db.sql_query(f'select * from indexed where POSTCODE=="{postcode}"')
+headers = sql_db.get_columns_of_table('indexed')
+
+print(local_area)
+```
+
+Step 3. Generation of features for each address-UPRN pair
+
+``` python
+from flap.matcher.sql_matcher import prepare_uprn, \
+    get_number_like_matching_matrix, postcode_matching, summarize_features
+from flap.alignment.linear_assignment_alignment import LinearAssignmentAlignment
+
+
+records = {}
+
+
+for query_res in local_area:
+    
+    d_uprn = {k: v for k, v in zip(headers, query_res)} # Convert the UPRN query to dict
+    
+    uprn_prepared = prepare_uprn(d_uprn) 
+    
+    print(uprn_prepared)
+    
+    # Generation of features based on the free-text part of address and UPRN are dealt with using linear assignment        
+    # See https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html
+    
+    seq1 = parsed['TEXTUAL']
+    seq2 = uprn_prepared['TEXTUAL']
+    
+    laa = LinearAssignmentAlignment(seq1, seq2)
+    
+    alignment_results = laa.get_result()
+    
+    text_align_features = alignment_results.get_score()
+    
+    # Generation of features based on deterministic part of address and UPRN are dealt with parsing and pairwise comparison
+    
+    sn1 = list(parsed['NUMBER_LIKE'].values())
+    sn2 = uprn_prepared['NUMBER_LIKE']
+    
+    mat = get_number_like_matching_matrix(sn1, sn2)
+    
+    # Lastly we need features from comparing the postcodes
+    
+    pc1 = parsed['POSTCODE_SPLIT']
+    pc2 = uprn_prepared['POSTCODE_SPLIT']
+    
+    pc_match = postcode_matching(p1, p2)
+    
+    # Features are concat here
+    
+    features = summerize_features(mat, text_align_features, pc_match)
+    
+    # Store everything
+    records[d_uprn['UPRN']] = features
+    
+```
+
+Step 4. Score the features corresponding to UPRNs and get the UPRN with highest score
+
+``` python
+import os
+import flap
+from flap.matcher.sql_matcher import ClassifierScorer
+
+
+MODULE_PATH = os.path.dirname(flap.__file__)
+
+DEFAULT_MODEL_PATH = [os.path.join(MODULE_PATH, 'model', path)
+                      for path in os.listdir(os.path.join(MODULE_PATH, 'model')) if 'clf' in path][0]
+                      
+scorer = ClassifierScorer(DEFAULT_MODEL_PATH)
+
+match_scores = {k: scorer.score(v) for k: v in records.items()}
+
+best_match = max(match_scores, key=lambda k: match_scores[k])
+
+print(best_match)
+```
+
