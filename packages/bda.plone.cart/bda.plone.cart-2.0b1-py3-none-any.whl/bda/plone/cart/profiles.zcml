@@ -1,0 +1,35 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+           xmlns:zcml="http://namespaces.zope.org/zcml"
+           i18n_domain="bda.plone.cart">
+
+  <include package="Products.GenericSetup" file="meta.zcml" />
+
+  <genericsetup:registerProfile
+    name="default"
+    title="bda.plone.cart"
+    directory="profiles/default"
+    description="A generic cart"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="bda.plone.cart (uninstall profile)"
+    directory="profiles/uninstall"
+    description="Uninstall plone cart"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <!-- Hide profiles/products from Quick Installer -->
+  <utility factory=".setuphandlers.HiddenProfiles" name="bda.plone.cart" />
+
+  <!-- upgradeSteps -->
+  <genericsetup:upgradeDepends
+      title="Reload Resourceregistry"
+      description=""
+      profile="bda.plone.cart:default"
+      source="1.0"
+      destination="2000"
+      import_steps="plone.app.registry"
+      />
+
+    </configure>
