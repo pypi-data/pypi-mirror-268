@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: cosmicweb-music
+Version: 0.1.0
+Summary: Script to download initial conditions for zoom-in cosmological simulations from the cosmICweb service.
+Home-page: https://github.com/michaelbuehlmann/cosmicweb-music
+License: MIT
+Keywords: scientific computing
+Author: Michael Buehlmann
+Author-email: buehlmann.michi@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: Documentation, https://github.com/michaelbuehlmann/cosmicweb-music
+Project-URL: Repository, https://github.com/michaelbuehlmann/cosmicweb-music
+Description-Content-Type: text/markdown
+
+
