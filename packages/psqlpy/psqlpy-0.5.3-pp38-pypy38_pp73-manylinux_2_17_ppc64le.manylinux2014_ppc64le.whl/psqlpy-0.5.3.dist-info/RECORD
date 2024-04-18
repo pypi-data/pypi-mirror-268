@@ -1,0 +1,12 @@
+psqlpy-0.5.3.dist-info/METADATA,sha256=bZX0CTETfOWYujuZDIfK8-NiRN7_6B9ATxVDpeaCsIg,3744
+psqlpy-0.5.3.dist-info/WHEEL,sha256=rKDQWM3IfnUZiSBZe_8d2GyWqiWMgBy3OcE9z16YmEw,136
+psqlpy-0.5.3.dist-info/license_files/LICENSE,sha256=UkxvzBjZdhB37ez6jaooRIOe3GON6A2MJ7RVsiOxlUc,1078
+psqlpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psqlpy/__init__.py,sha256=ltbN6DrrkkF2GVWYtbEnK7BF99vyG6L65N70auTp5Os,428
+psqlpy/extra_types.py,sha256=D1YeB37218W1gEhujU3gjFZhvOzBCnrFqNP8Afp6JJE,344
+psqlpy/exceptions.py,sha256=9Ksq8D3G8flAjNVawRXWhNMU1qXcwxlGmxNkUjBfR3g,541
+psqlpy/_internal/extra_types.pyi,sha256=Dx8BBoGYxDMzptWV2xCpRljk7YMtbFgkv_g5V59vx0U,2976
+psqlpy/_internal/__init__.pyi,sha256=-_RC5TLsOb5Y8B0lTez-4qRvwtUdczEwi8vMMnCnFrc,29156
+psqlpy/_internal/exceptions.pyi,sha256=C6RoibQD5UwAFvDGffb_OtyUkagpTqlHS85F8ZCX-rw,1442
+psqlpy/_internal.pypy38-pp73-ppc_64-linux-gnu.so,sha256=cgnV_ocLAo2UMWaCEZSxqOMaAeH7j4r3xpWxn9DaN_g,8049000
+psqlpy-0.5.3.dist-info/RECORD,,
