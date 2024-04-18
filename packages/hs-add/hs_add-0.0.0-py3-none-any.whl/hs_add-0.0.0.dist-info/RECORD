@@ -1,0 +1,16 @@
+hsproject/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hsproject/asgi.py,sha256=tQhXTjRI0dLq2kabmOH9AsOfb7VhkYJiPC3ltzaghF0,395
+hsproject/settings.py,sha256=kYZv676KJXNCrVXHo9t7vKz6pVpjJatC46WnBQfYBfE,6467
+hsproject/urls.py,sha256=SoLVKYFfwde5wugGxral4sodVLFwMPjpo4vFxLXB28k,223
+hsproject/wsgi.py,sha256=8WEidURFHBmQPSv-Rx7J2s83bIaLmiUttoZ2_ywen10,395
+system/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+system/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+system/apps.py,sha256=B41HUl14OMxsgQEEqWw2vImTcq1G17qMXV4CMMruoss,144
+system/models.py,sha256=Icf07YRp6dbjpIQGZ-PvsR0OOACdPeoHyoVMZ-CFUMk,61
+system/urls.py,sha256=O4HltNttlX2hxvmiA0ILya7edyrI0tKTyi2tN1E4ePo,134
+system/views.py,sha256=AQfhCgccrX7WIM5dTIP5ztqXluBksFI4Ng6F1JuJEgE,9768
+system/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hs_add-0.0.0.dist-info/METADATA,sha256=3rc3KuJUSDueEBZ0K0ortYXS2CUrLtGTLwqQMgSfZQ0,174
+hs_add-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hs_add-0.0.0.dist-info/top_level.txt,sha256=1CNwJTA3-2Ldg5_ajD5j7al_YjMfo01XUqaukKgVhhw,17
+hs_add-0.0.0.dist-info/RECORD,,
