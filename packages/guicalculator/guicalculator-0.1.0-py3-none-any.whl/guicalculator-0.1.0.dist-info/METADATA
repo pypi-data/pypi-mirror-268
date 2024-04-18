@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: guicalculator
+Version: 0.1.0
+Summary: A calculator written with python and tkinter
+Home-page: https://github.com/tombroth/guicalculator
+License: MIT
+Author: Thomas Brotherton
+Author-email: tombroth@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://github.com/tombroth/guicalculator
+Description-Content-Type: text/markdown
+
+GUI Calculator: A calculator written in Python
+====================================================================
+
+GUI Calculator is a calculator application written in Python using only the standard library.
+
+The tkinter module is used for the interface, the ast module is used for parsing, testing is done by unittest.
