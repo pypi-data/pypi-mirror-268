@@ -1,0 +1,88 @@
+attrs>=21.3
+build>=0.7.0
+cachetools>=4.1
+click>=4.0
+cookiecutter<3.0,>=2.1.1
+dynaconf<4.0,>=3.1.2
+fsspec>=2021.4
+gitpython>=3.0
+importlib_resources<7.0,>=1.3
+more_itertools>=8.14.0
+omegaconf>=2.1.1
+parse>=1.19.0
+pluggy<1.4.0,>=1.0
+pre-commit-hooks
+PyYAML<7.0,>=4.2
+rich<14.0,>=12.0
+rope<2.0,>=0.21
+toml>=0.10.0
+
+[:python_version < "3.9"]
+graphlib_backport>=1.0.0
+
+[:python_version >= "3.8"]
+importlib-metadata<8.0,>=3.6
+
+[all]
+kedro[docs,jupyter,test]
+
+[docs]
+docutils<0.21
+sphinx<7.3,>=5.3
+sphinx_rtd_theme==2.0.0
+sphinx-autodoc-typehints==1.20.2
+sphinx_copybutton==0.5.2
+sphinx-notfound-page
+ipykernel<7.0,>=5.3
+myst-parser<2.1,>=1.0
+Jinja2<3.2.0
+sphinx-last-updated-by-git
+sphinx-favicon
+sphinxcontrib-youtube
+
+[jupyter]
+ipylab>=1.0.0
+notebook>=7.0.0
+
+[test]
+behave==1.2.6
+coverage[toml]
+import-linter==2.0
+ipylab>=1.0.0
+jupyterlab_server>=2.11.1
+jupyterlab<5,>=3
+jupyter~=1.0
+mypy~=1.0
+pandas~=2.0
+pluggy<1.4,>=1.0
+pre-commit<4.0,>=2.9.2
+pyproj~=3.0
+pytest-cov~=3.0
+pytest-mock<4.0,>=1.7.1
+pytest-xdist[psutil]~=2.2.1
+pytest<9.0,>=7.2
+s3fs<2024.4,>=2021.4
+semver
+trufflehog~=2.1
+pandas-stubs
+types-PyYAML
+types-cachetools
+types-toml
+
+[test:python_version < "3.11"]
+pyarrow>=1.0
+
+[test:python_version < "3.8"]
+ipython<8.0,>=7.31.1
+
+[test:python_version < "3.9"]
+kedro-datasets<2.0.0
+
+[test:python_version >= "3.11"]
+pyarrow>=7.0
+
+[test:python_version >= "3.8"]
+ipython~=8.10
+
+[test:python_version >= "3.9"]
+kedro-datasets
