@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "uglyorange"
+version = "0.0.4"
+description = ""
+authors = ["ultrasev"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fire = "^0.6.0"
+codefast = "^24.2.24.10"
+httpx = {extras = ["socks"], version = "^0.27.0"}
+lxml = "4.9.4"
+
+[tool.poetry.scripts]
+mp = "uglyorange.network:FastPing.entrypoint"
+cufo = "uglyorange.network:Cufo.entrypoint"
+pxy = "uglyorange.network:ProxyCheck.entrypoint"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
