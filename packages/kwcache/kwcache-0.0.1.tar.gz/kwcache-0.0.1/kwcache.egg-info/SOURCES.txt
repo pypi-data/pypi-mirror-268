@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+kwcache/__init__.py
+kwcache/kwcache.py
+kwcache.egg-info/PKG-INFO
+kwcache.egg-info/SOURCES.txt
+kwcache.egg-info/dependency_links.txt
+kwcache.egg-info/pbr.json
+kwcache.egg-info/top_level.txt
