@@ -1,0 +1,8 @@
+ssl_framework/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ssl_framework/byol.py,sha256=KumrwWyZZw9hoT5VafQZkzUgyta_CEpBQQD08p6IUZY,8347
+ssl_framework/simclr.py,sha256=pcrY4_33GHM_ondBoDhjFTzLaZMy0CinTlrT3lYha3c,8791
+ssl_framework-0.2.2.dist-info/LICENSE,sha256=dOWH5TP09gmi-ePA_t01XH92g5B6aZ07yJVuN1XNl-4,1072
+ssl_framework-0.2.2.dist-info/METADATA,sha256=juscvMyAq39SSy4rN7A6RLwnO4jnRF_pcNrCaxt9jg8,744
+ssl_framework-0.2.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ssl_framework-0.2.2.dist-info/top_level.txt,sha256=1y3ZX-jsJP5sPJDS92HN_PggxPhaPyx2ynI-C6he0Ek,14
+ssl_framework-0.2.2.dist-info/RECORD,,
