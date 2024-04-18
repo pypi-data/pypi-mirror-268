@@ -1,0 +1,8 @@
+[console_scripts]
+FBI_run_bifrostecolipostkma = bps_fbi_sp_ecoli.run_bifrostecolipostkma:cli
+FBI_run_qcecolisummary = bps_fbi_sp_ecoli.run_qcecolisummary:cli
+core_hello_world = bps_fbi_sp_ecoli.core:cli
+hello_two_world = bps_fbi_sp_ecoli.hello_world:cli
+
+[nbdev]
+bps_fbi_sp_ecoli = bps_fbi_sp_ecoli._modidx:d
