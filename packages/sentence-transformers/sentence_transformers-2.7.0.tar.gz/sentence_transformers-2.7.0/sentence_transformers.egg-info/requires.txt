@@ -1,0 +1,13 @@
+transformers<5.0.0,>=4.34.0
+tqdm
+torch>=1.11.0
+numpy
+scikit-learn
+scipy
+huggingface-hub>=0.15.1
+Pillow
+
+[dev]
+pre-commit
+pytest
+ruff>=0.3.0
