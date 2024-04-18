@@ -1,0 +1,6 @@
+setup.py
+rnwkgus_calculator.egg-info/PKG-INFO
+rnwkgus_calculator.egg-info/SOURCES.txt
+rnwkgus_calculator.egg-info/dependency_links.txt
+rnwkgus_calculator.egg-info/entry_points.txt
+rnwkgus_calculator.egg-info/top_level.txt
