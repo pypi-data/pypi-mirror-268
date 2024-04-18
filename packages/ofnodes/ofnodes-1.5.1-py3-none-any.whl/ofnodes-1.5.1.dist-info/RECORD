@@ -1,0 +1,10 @@
+ofnodes/__init__.py,sha256=srQ5qmgblfUj-cfGX7jE1qTxzW41sbTWyphDBVrfxyQ,953
+ofnodes/nodes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ofnodes/nodes/singlynode.py,sha256=H0dqeFnXctLP8zJltm9bZklZ3tBTgokAp5O4Axvj7-k,2479
+ofnodes/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ofnodes/structures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ofnodes/structures/singlylinkedlist.py,sha256=0lCkYrapI4c7P0P7ytVXSO5F41yfs6fKxBtwZjAlZPA,23695
+ofnodes-1.5.1.dist-info/LICENSE,sha256=VZnFkiF8XPzgo-eSsGlv8sL89HplCj9EPz2SYWo2j3Y,1072
+ofnodes-1.5.1.dist-info/METADATA,sha256=Lx1SAkBrY7gFLhlYdB15g72RdyhcD0bStQEhchyJgpc,3013
+ofnodes-1.5.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+ofnodes-1.5.1.dist-info/RECORD,,
