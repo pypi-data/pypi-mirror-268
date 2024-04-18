@@ -1,0 +1,10 @@
+workfloz/__init__.py,sha256=2fuLsnxBOVdU-mlJXBV37ZB3TuBh2xLO5rA4KchMGos,671
+workfloz/cluster.py,sha256=PrAbvcD5GH7g35T2twKvUEoQPzURuxgGtqdxLctUXWI,4826
+workfloz/component.py,sha256=4-Z68sGY6r1esf5WuktvSKWVQXtBpTryEMe7ikMFJJg,8296
+workfloz/entity.py,sha256=9ekh_FLXX7nhikARhI1vaX46E_vqERKPqwqsFcSSmJM,6739
+workfloz/exceptions.py,sha256=wbTBJ20WyNBP5cdQtSCwHBE2mnuqXpAjRheYF3Oj5pQ,532
+workfloz/parameter.py,sha256=Jg46GBypJpjoAhMTuYiQIpKToIcI4Kpa-EleioXTjOA,5169
+workfloz-0.1.0.dist-info/LICENSE,sha256=Zyu3x9NKkmrLjBshT8EGIpT-nMWtg3jbxdose0usXbk,33886
+workfloz-0.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+workfloz-0.1.0.dist-info/METADATA,sha256=XrAw9vUwfZXE0lpMMXBwv_3zF0_sxBFg0vI1Kr6kbvY,4424
+workfloz-0.1.0.dist-info/RECORD,,
