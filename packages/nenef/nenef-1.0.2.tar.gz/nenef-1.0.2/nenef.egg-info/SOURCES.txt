@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+nenef.egg-info/PKG-INFO
+nenef.egg-info/SOURCES.txt
+nenef.egg-info/dependency_links.txt
+nenef.egg-info/requires.txt
+nenef.egg-info/top_level.txt
