@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: loadcalculation
+Version: 0.1
+Summary: Your package description
+Author: None
+Author-email: None@gmail.com
+License: MIT
+Requires-Dist: pyqt5
+Requires-Dist: wmi
+Requires-Dist: xlrd
+Requires-Dist: numpy
+Requires-Dist: pywin32
+Requires-Dist: pyautogui
+Requires-Dist: datetime
+
