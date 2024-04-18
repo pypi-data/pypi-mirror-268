@@ -1,0 +1,9 @@
+*.egg-info/
+*.egg
+*.pyc
+*_version.py
+*__pycache__*
+build/
+docs/_build/*
+docs/source/api/*
+dist/*

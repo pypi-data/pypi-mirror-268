@@ -1,0 +1,26 @@
+.. gwtc-tools documentation master file, created by
+   sphinx-quickstart on Fri Sep 22 11:37:36 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to gwtc-tools's documentation!
+======================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+API
+---
+
+.. autosummary::
+   :toctree: api
+   :caption: API:
+   :template: custom-module-template.rst
+   :recursive:
+
+    gwtc
+
+
+
