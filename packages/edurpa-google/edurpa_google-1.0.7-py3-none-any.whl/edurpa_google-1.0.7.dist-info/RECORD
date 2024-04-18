@@ -1,0 +1,11 @@
+EduRPA/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+EduRPA/Google/Classroom.py,sha256=ZUMo0Dlc46bFwAUnUHKrbOl_RzvOvVHWAQtfa3hJPqQ,13103
+EduRPA/Google/CustomOAuth.py,sha256=mdcF-tqze2HulL4QZ6K-dl-dr-Am8qLSB3opr2F9PkM,1549
+EduRPA/Google/Form.py,sha256=K4SdXFT6VKbreHnNebTjGtEDuJoPC7JnKD4t1xSB55Y,11964
+EduRPA/Google/Utils.py,sha256=isWNWUMrlhzVR8q5MG6XeYs8QI5fOYRCA22xvZd3MbI,313
+EduRPA/Google/__init__.py,sha256=Y2b2fCvm7_Fng--J_MFc-YCQLzo0kSvZz1N4vsZwikk,22
+edurpa_google-1.0.7.dist-info/LICENSE,sha256=YgvlMcXsea3kZqp1y62n8AgkwZp6xXbWSYW17pT58Yg,1088
+edurpa_google-1.0.7.dist-info/METADATA,sha256=sRyeonDpV_oJ0eaIih6VXUSyDKinqezq7fQB6TKuL6c,670
+edurpa_google-1.0.7.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+edurpa_google-1.0.7.dist-info/top_level.txt,sha256=Wl0EDd9il1J3fz62-gLcRCpFYSlEbU4KVE_SNWkcpaI,7
+edurpa_google-1.0.7.dist-info/RECORD,,
