@@ -1,0 +1,11 @@
+eth_logo/__init__.py,sha256=IaYDKL61riRA2RqeW0oW9mAkxqGEH5L441zVWZygjNc,115
+eth_logo/eth_logo_core.py,sha256=HvNqkI4BXS-3mnAZbVQ-eSNpmi349Sfsxo9_sLrFX34,1952
+eth_logo/eth_logo_debug.py,sha256=Pb0W2gKTQ4o8YdNfgohD1edsKSV39YxJyjFYI_b_1Lc,3033
+eth_logo/eth_logo_script.py,sha256=yr4YxiNCiU4aPCN6ECRYBavzwaiJ_iqIsKQIsS6HUbM,1364
+eth_logo-0.1.3.data/scripts/eth_logo_script.py,sha256=cytx5CmoJN4twCpLioCpoFMG-kVqtJ3F1IGQ7jLYuVQ,1355
+eth_logo-0.1.3.dist-info/LICENSE,sha256=Lkgp0u4Sd_nA2YHbAWukWQ5w5Z8uuL1vmrtFX_nS0co,1062
+eth_logo-0.1.3.dist-info/METADATA,sha256=_0kztH1rIxHin_DR71DFtW5clPiamtv-yX9Yy_dmTr0,1957
+eth_logo-0.1.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+eth_logo-0.1.3.dist-info/entry_points.txt,sha256=puJoujMfr7RFmjb-s7B2PwvCZKMN8Mklg3ldL0748Gk,56
+eth_logo-0.1.3.dist-info/top_level.txt,sha256=FLkzeIqlnapxpDx3HIpMzxwgUweDWgzGfD1NCIr6xJw,9
+eth_logo-0.1.3.dist-info/RECORD,,
