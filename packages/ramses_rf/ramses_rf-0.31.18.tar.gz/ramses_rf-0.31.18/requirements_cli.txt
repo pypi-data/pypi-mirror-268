@@ -1,0 +1,13 @@
+# last updated 2024-03-09
+#  - to check against pyproject.toml, github workflows
+#
+
+# for using the library
+  -r requirements.txt
+
+# for using the the library via the CLI, client.py
+  click>=8.1.7
+  colorama>=0.4.6
+
+# used for testing at runtime
+  debugpy>=1.8.1
