@@ -1,0 +1,7 @@
+matplotlib
+pip
+freeimage
+coveralls
+pytest
+scipy
+pillow

@@ -1,0 +1,9 @@
+numpy
+
+[tests]
+matplotlib
+pip
+coveralls
+pytest
+scipy
+pillow
