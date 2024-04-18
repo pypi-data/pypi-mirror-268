@@ -1,0 +1,2 @@
+[console_scripts]
+oirun = OiRunner.BetterRunner:main

@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: OiRunner
+Version: 0.0.3
+Summary: This package is designed to help oier compile the cpp file conveniently.
+Home-page: https://github.com/ste1hi/OiRunner
+Author: ste1
+Author-email: 1874076121@qq.com
+Requires-Python: >=3.6
+License-File: LICENSE
+
