@@ -1,0 +1,20 @@
+[package]
+name = "sergio"
+version = "0.2.0"
+edition = "2021"
+
+[lib]
+name = "sergio_rs"
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+ndarray = "0.15.6"
+ndarray-rand = "0.14.0"
+ndarray-stats = "0.5.1"
+noisy_float = "0.2.0"
+numpy = "0.21.0"
+polars = "0.39.1"
+pyo3 = { version = "0.21.1", features = ["extension-module"] }
+pyo3-polars = "0.13.0"
+rand_pcg = "0.3.1"
