@@ -1,0 +1,105 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cubed"
+version = "0.14.2"
+authors = [
+    {name = "Tom White", email = "tom.e.white@gmail.com"},
+]
+license = {text = "Apache License 2.0"}
+description = "Bounded-memory serverless distributed N-dimensional array processing"
+readme = {file = "README.md", content-type = "text/markdown"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "aiostream",
+    "array-api-compat",
+    "cloudpickle",
+    "donfig",
+    "fsspec",
+    "mypy_extensions", # for rechunker
+    "networkx != 2.8.3, != 2.8.4, != 2.8.5, != 2.8.6, != 2.8.7, != 2.8.8, != 3.0.*, != 3.1.*, != 3.2.*",
+    "numpy >= 1.22",
+    "tenacity",
+    "toolz",
+    "zarr",
+]
+
+[project.optional-dependencies]
+diagnostics = [
+    "tqdm",
+    "graphviz",
+    "jinja2",
+    "pydot",
+    "pandas",
+    "matplotlib",
+    "rich",
+    "seaborn",
+]
+beam = ["apache-beam", "gcsfs"]
+dask = ["dask"]
+dask-distributed = ["distributed"]
+lithops = ["lithops[aws] >= 2.7.0"]
+modal = [
+    "cubed[diagnostics]",
+    "modal-client",
+    "s3fs",
+]
+modal-gcp = [
+    "cubed[diagnostics]",
+    "modal-client",
+    "gcsfs",
+]
+coiled = [
+    "cubed[diagnostics]",
+    "coiled",
+    "dask[complete]",
+    "s3fs",
+]
+test = [
+    "apache-beam",  # beam but not gcsfs as tests use local beam runner
+    "cubed[diagnostics,lithops]",  # modal tests separate due to conflicting package reqs
+    "dill",
+    "numpy_groupies",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+]
+test-dask = [
+    "cubed[dask,diagnostics]",
+    "dill",
+    "numpy_groupies",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+]
+test-dask-distributed = [
+    "cubed[dask-distributed,diagnostics]",
+    "dill",
+    "numpy_groupies",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+]
+test-modal = [
+    "cubed[modal]",
+    "numpy_groupies",
+    "dill",
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+]
+
+[project.urls]
+homepage = "https://github.com/cubed-dev/cubed"
+documentation = "https://tomwhite.github.io/cubed"
+repository = "https://github.com/cubed-dev/cubed"
