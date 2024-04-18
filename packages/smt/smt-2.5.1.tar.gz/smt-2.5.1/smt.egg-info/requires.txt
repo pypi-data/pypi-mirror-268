@@ -1,0 +1,13 @@
+scikit-learn
+pyDOE3
+scipy
+jenn
+
+[cs]
+ConfigSpace~=0.6.1
+
+[gpx]
+egobox~=0.18
+
+[numba]
+numba~=0.56.4
