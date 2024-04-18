@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "chess2vec"
+version = "0.1.1a0"
+description = ""
+authors = ["Piotr Żarczyński <piotr.zarczynski.06@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+chess = "^1.10.0"
+numpy = "^1.26.4"
+scipy = "^1.13.0"
+alive-progress = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
