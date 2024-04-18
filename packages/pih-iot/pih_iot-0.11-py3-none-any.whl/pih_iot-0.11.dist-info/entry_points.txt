@@ -1,0 +1,2 @@
+[console_scripts]
+pih-iot = IOTDeviceService.__main__:start
