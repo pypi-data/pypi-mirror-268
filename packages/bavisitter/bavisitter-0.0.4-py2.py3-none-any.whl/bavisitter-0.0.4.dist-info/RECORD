@@ -1,0 +1,17 @@
+bavisitter/Bavisitter.py,sha256=HEiL2gM3AOJhv6pXvk98__SBh7r3dVnZEtm2xWmRzJc,8364
+bavisitter/__init__.py,sha256=Yv3v_3vvyGkBhvPjVl1miJ51zXZJHtrMHrf-mn1aXfk,61
+bavisitter/model/__init__.py,sha256=banvVL3EYbR8AZJRPDBsrLD1mDo4jyE6-P5d5tEHrCI,254
+bavisitter/model/ipc_model.py,sha256=yfi5QuiysCZSDnGkzLIU2LL_S4QaizfjtzyqAsvGl-w,207
+bavisitter/model/message_model.py,sha256=i3o11Vdqt0WfsNzXNTpPsZ7kgalQFOVm42OsvM6Q7Mg,599
+bavisitter/static/main.js,sha256=BAKu-a78ARt2qMyvYCp8Oidfg7Ciql1VAtSa83fplvY,20082536
+bavisitter/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bavisitter/tests/test_Bavisitter.py,sha256=-MpMabrgVJRQuXxQL3PRMkmRKBG82RgTnC4JdfKvcbo,159
+bavisitter/utils/__init__.py,sha256=PFM7fZGKGQ2oWaI5H4EsgND-K9DNCysgyaIWTl4fvWg,348
+bavisitter/utils/deep_equal.py,sha256=-PH6mLY6xRGkCpumSEND9fbjOl9UKE8CZANoK1Eafgk,522
+bavisitter/utils/file_browser.py,sha256=920d8GWuz9eVX_G0zJRYaoa_5krkKZwDZGOZc-Nookg,680
+bavisitter/utils/get_chunk_type.py,sha256=l4AMbqTxVIPCRYXqWo1I0JULlhh8vjTPKTwABrlQ1w8,777
+bavisitter/utils/set_interpreter.py,sha256=DUMp6soMMoJzAI23PYadxT-_76JqitWTiPB2fYuHRmM,833
+bavisitter/utils/system_prompt.py,sha256=wOW3Slrppaz8WTGnIRcBBVq28acxmjA_DHKy-R36PTc,2097
+bavisitter-0.0.4.dist-info/METADATA,sha256=FT0Yo1ixpCVy5gTc68MplgzRwQQgYchwomrOBvmvqCg,1252
+bavisitter-0.0.4.dist-info/WHEEL,sha256=adIW6_CayhCWDUikzqu5WLRybZ1lcYIbb8UUP37hrXo,105
+bavisitter-0.0.4.dist-info/RECORD,,
