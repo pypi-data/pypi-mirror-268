@@ -1,0 +1,10 @@
+fairnessdatasets/__init__.py,sha256=Vs96d3hNPJBQqUrFU936IuorDcSxQdfSJA_j3kfZv_Y,269
+fairnessdatasets/adult.py,sha256=_x3SXvlodWkWxltkeL6tS5K0DdYo3SopiiIpG5LBcyo,8846
+fairnessdatasets/base.py,sha256=WPIRIYEjiXGSlWrDKdqxuN2XWQmR4TYhX57a9D8zqdU,15339
+fairnessdatasets/default.py,sha256=6uv4J_zcLbosppdV6Bs44OHz_9nmcpLpXoJGHZEkTPw,5397
+fairnessdatasets/law_school.py,sha256=R0eUyItIeS_Q9xIouBwff5jkGKCoiTU4plrH8Y_dwD0,6476
+fairnessdatasets/south_german.py,sha256=ji23AtNBf_H8yJY8H7-vq6Y8PVbI4pQ3gq4eUOjEGaI,7062
+fairness_datasets-0.2.1.dist-info/LICENSE,sha256=IGiayQhhdI3GZeSDbzJZIT2Vu0CR3q8JpddfzjaxRrI,1070
+fairness_datasets-0.2.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+fairness_datasets-0.2.1.dist-info/METADATA,sha256=7bMmM5-vz1nzfmCyX5BT0WjUjRy9sj4gghW58Phd9TY,3513
+fairness_datasets-0.2.1.dist-info/RECORD,,
