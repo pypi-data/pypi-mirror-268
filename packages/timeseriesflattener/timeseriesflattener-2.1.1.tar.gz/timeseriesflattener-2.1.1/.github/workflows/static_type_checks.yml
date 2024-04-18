@@ -1,0 +1,29 @@
+# We do not include static_type_checks as a pre-commit hook because pre-commit hooks
+# are installed in their own virtual environment, so static_type_checks cannot
+# use stubs from imports
+name: static_type_checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  static_type_checks:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Checkout (GitHub)
+        uses: actions/checkout@v4
+
+      - name: Create github hosts file
+        run: | # If this file is not created, the dev container fails because of non-existent mount
+          mkdir -p ~/.config/gh
+          touch ~/.config/gh/hosts.yml
+
+      - name: Pre-build dev container image
+        uses: devcontainers/ci@v0.3
+        with:
+          runCmd: |
+            inv types
