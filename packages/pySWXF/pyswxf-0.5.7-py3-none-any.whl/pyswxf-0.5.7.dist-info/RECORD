@@ -1,0 +1,10 @@
+pySWXF/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pySWXF/fluor_fit.py,sha256=TfuFLp4ism5vmV2NfEdUoX9EQOtDA3IulGrE6vjLFT0,8354
+pySWXF/refl_funs.py,sha256=XRi0XOxVgAVynyki_0zT0caWfJaS6vCm5Xgv_uQAetQ,6863
+pySWXF/spec_utils.py,sha256=faa4B6j6Q52PeWqrLfZYWBl91f1mYs5EDZhNAXyxQ3U,23723
+pySWXF/view_new_multilayer.ipynb,sha256=tm8gT8rE5BvSV6TFX2aTt0qZan1Cg1ZzUemteinkNBM,2747
+pySWXF/xray_utils.py,sha256=-HsTTOJPEa9lVKq8PsZJJ9s8NvCHuTES5FXYt0VwUmQ,952
+pyswxf-0.5.7.dist-info/METADATA,sha256=TmZBXPz25qqqwB5N59kxYX4VhBftq3Lrk1XKuqikhTY,3856
+pyswxf-0.5.7.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+pyswxf-0.5.7.dist-info/licenses/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+pyswxf-0.5.7.dist-info/RECORD,,
