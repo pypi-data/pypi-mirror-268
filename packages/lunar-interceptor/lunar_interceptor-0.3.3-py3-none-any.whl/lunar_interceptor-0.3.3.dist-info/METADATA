@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: lunar-interceptor
+Version: 0.3.3
+Summary: The Lunar interceptor used to manage the framwork traffic.
+Author: Lunar
+Author-email: support@lunar.dev
+License: MIT License
+Requires-Python: >=3.6.8
+Requires-Dist: yarl ==1.9.2
+
