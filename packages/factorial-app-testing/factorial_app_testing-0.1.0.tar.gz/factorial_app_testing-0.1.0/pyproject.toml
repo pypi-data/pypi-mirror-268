@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "factorial-app-testing"
+version = "0.1.0"
+description = ""
+authors = ["TueNtai <nguyen.taitue2901@gmail.com>"]
+readme = "README.md"
+packages = [{include='factorial_app_testing'}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.33.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
