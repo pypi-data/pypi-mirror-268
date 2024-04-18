@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: brat_tools
+Version: 0.1
+Summary: A unofficial copy of BRAT toolkit for easy access.
+Home-page: https://github.com/nlplab
+Author: fx
+Author-email: itisfuqixu@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+A wrapped up version of the brat tool kit for easy access.
+The original scripts are all in https://github.com/nlplab/brat.
+
