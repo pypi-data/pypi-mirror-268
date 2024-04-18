@@ -1,0 +1,7 @@
+click==8.1.7
+setuptools~=68.2.0
+transformers
+torch~=2.1.0
+accelerate
+bitsandbytes
+colorama
