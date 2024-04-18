@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: nenef
+Version: 1.0.6
+Summary: This is module for neuronetworks
+Home-page: https://github.com/ktotozdesest/nenef
+Author: ktotozdesest
+Author-email: kto00210@gmail.com
+Project-URL: Documentation, https://github.com/ktotozdesest/nenef
+Keywords: python neuronetworks neurenet
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.24.1
+
+Р”Р»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїР°РєРµС‚Р° СЃРѕР·РґР°Р№С‚Рµ РєР»Р°СЃСЃ С€Р°Р±Р»РѕРЅР°, РїСЂРёРЅРёРјР°СЋС‰РёР№ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РІРµСЃР° РЅРµР№СЂРѕСЃРµС‚Рё.
+РџСЂРёРјРµСЂ:
+
+    class MyNetwork:
+        def __init__(self, weights=None):
+            if weights is None:
+                self.network = ForwardBlock(4, 'perc', (3, 9, 3, 1))
+                self.weights = self.network.weights
+            else:
+                self.network = ForwardBlock(4, 'perc', (3, 9, 3, 1), weights=weights)
+                self.weights = weights
+    
+        def do(self, param):
+            return self.network.do(param)
+РўР°РєР¶Рµ РѕРїСЂРµРґРµР»РёС‚Рµ С„СѓРЅРєС†РёСЋ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ СѓСЃРїРµС€РЅРѕСЃС‚Рё(С„РёС‚РЅРµСЃСЃ-С„СѓРЅРєС†РёСЋ)
+. РћРЅР° РґРѕР»Р¶РЅР° РІРѕР·РІСЂР°С‰Р°С‚СЊ РјР°СЃСЃРёРІ СЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё РґР»СЏ РєР°Р¶РґРѕР№ РЅРµР№СЂРѕСЃРµС‚Рё РІ 1 РёСЃРїС‹С‚Р°РЅРёРё.
+РўРѕ РµСЃС‚СЊ РїСЂРё СЃРѕСЂРµРІРЅРѕРІР°РЅРёРё 2 РЅРµР№СЂРѕСЃРµС‚РµР№ С„СѓРЅРєС†РёСЏ РґРѕР»Р¶РЅР° РІРѕР·РІСЂР°С‰Р°С‚СЊ 2 Р·РЅР°С‡РµРЅРёСЏ. РџСЂРё РѕР±СѓС‡РµРЅРёРё 1 РЅРµР№СЂРѕСЃРµС‚Рё
+1 Р·РЅР°С‡РµРЅРёРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ.
+
