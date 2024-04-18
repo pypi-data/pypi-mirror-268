@@ -1,0 +1,5 @@
+playsound
+alive-progress
+simple-term-menu
+requests
+colorama
