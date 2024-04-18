@@ -1,0 +1,6 @@
+llama_index/retrievers/bedrock/BUILD,sha256=Nf7BYWWe1USoFEIsIiEVZ8sa05J5FPkMJ-UIMDLrU8o,17
+llama_index/retrievers/bedrock/__init__.py,sha256=0lMdDZx2cvVRRqNTUY5fo4ucKc1GDc7A3ZKa2PjanRM,123
+llama_index/retrievers/bedrock/base.py,sha256=NARe0Dm8oHk5cpdvCy0DzirCarAvonj8DdHiLe8Qots,3907
+llama_index_retrievers_bedrock-0.1.1.dist-info/METADATA,sha256=gZDCq0lori-M0cgCN8w4jB7R3wJQFkEJZ0m8kODqEW8,1810
+llama_index_retrievers_bedrock-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+llama_index_retrievers_bedrock-0.1.1.dist-info/RECORD,,
