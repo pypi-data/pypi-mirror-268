@@ -1,0 +1,27 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="bda.plone.shop">
+
+  <include package="Products.GenericSetup" file="meta.zcml" />
+
+  <genericsetup:registerProfile
+    name="default"
+    title="bda.plone.shop"
+    directory="profiles/default"
+    description="bda.plone.shop"
+    provides="Products.GenericSetup.interfaces.EXTENSION" />
+
+  <genericsetup:registerProfile
+    name="uninstall"
+    title="bda.plone.shop (uninstall)"
+    description="Uninstalls the bda.plone.shop add-on."
+    provides="Products.GenericSetup.interfaces.EXTENSION"
+    directory="profiles/uninstall"
+    post_handler=".setuphandlers.uninstall"
+    />
+
+  <!-- Hide profiles/products from addon manager -->
+  <utility factory=".setuphandlers.HiddenProfiles" name="bda.plone.shop" />
+
+</configure>

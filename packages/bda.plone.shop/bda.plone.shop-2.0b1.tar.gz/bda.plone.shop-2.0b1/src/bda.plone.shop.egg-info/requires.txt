@@ -1,0 +1,15 @@
+bda.plone.discount
+bda.plone.orders
+collective.z3cform.datagridfield
+Products.CMFPlone>=6.0a1
+plone.api
+setuptools
+zope.deferredimport
+zope.schema>=3.4
+
+[test]
+plone.app.contenttypes
+plone.app.dexterity
+plone.app.robotframework[debug]
+plone.app.testing[robot]
+Products.PrintingMailHost
