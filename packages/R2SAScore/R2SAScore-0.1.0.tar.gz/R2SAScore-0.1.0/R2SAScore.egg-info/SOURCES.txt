@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+R2SAScore/R2SAScore.py
+R2SAScore/__init__.py
+R2SAScore.egg-info/PKG-INFO
+R2SAScore.egg-info/SOURCES.txt
+R2SAScore.egg-info/dependency_links.txt
+R2SAScore.egg-info/not-zip-safe
+R2SAScore.egg-info/requires.txt
+R2SAScore.egg-info/top_level.txt
+R2SAScore/pickle/BScores_emolecules.pkl.gz
+R2SAScore/pickle/R2SAScores_uspto_emolecules.pkl.gz
+R2SAScore/pickle/RScores_uspto.pkl.gz
