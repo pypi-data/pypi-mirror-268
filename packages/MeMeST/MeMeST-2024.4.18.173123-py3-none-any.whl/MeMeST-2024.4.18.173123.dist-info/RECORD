@@ -1,0 +1,16 @@
+MeMeST-2024.4.18.173123.data/data/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+git_tools/__init__.py,sha256=-M_wTgmk-Pe-gzayRUsldMI8maSAQpgrCrKbiUQFV2o,76
+git_tools/base_dtypes.py,sha256=Y7F6fUoZvETZVV4EKpPnrfS3Qfeudb-Oojh-B93mSPQ,1139
+git_tools/git_api.py,sha256=eu7gHRAxlnrzupVUQAxzRyetkl8P5xZd3SDWfMCUDns,6061
+git_tools/rep_task.py,sha256=vFPW1Z8mTIF0ZGJgaGF8AZM91A4Ogf_Sdo-bKtdo8-c,143
+mest/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mest/config.py,sha256=JSp3d_cIZo0HcFf6J1Uf5jTtf7pZk-VjUd6VSH_hrqQ,4215
+mest/main.py,sha256=JYI1M33VaTNSUqop2tmRuUyjRZCCYj4n1fD3hs70bMo,2158
+mest/rep_mana.py,sha256=wXjehwt-r6id-ZoMf1RZMkN8JFIfh9LT1AOsvDVpVTY,2320
+mest/test_git.py,sha256=BgD4moVzqnxfnhZzoM-EgHklAVFYPbtYu5Ke6qqFHhI,569
+MeMeST-2024.4.18.173123.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+MeMeST-2024.4.18.173123.dist-info/METADATA,sha256=8AqW0H-bDpBtINI3nXt02oLkeaaEmerkDGCCDBN4yV0,1729
+MeMeST-2024.4.18.173123.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+MeMeST-2024.4.18.173123.dist-info/entry_points.txt,sha256=OYg2gMfzGJOXcQc_TTGdfCSPRPqlQylNW3LSReX_ta8,42
+MeMeST-2024.4.18.173123.dist-info/top_level.txt,sha256=iFxJRSyvq4K2f9Wl2wqP84mPUD7Ta4IoyDy9bDHkiYE,15
+MeMeST-2024.4.18.173123.dist-info/RECORD,,
