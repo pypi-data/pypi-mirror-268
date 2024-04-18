@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ppt-to-pdf-converter
+Version: 0.0.2
+Summary: convert ppt files to pdf in folder
+Home-page: https://github.com/Thongangerge/ppt-to-pdf-converter
+Download-URL: https://github.com/Thongangerge/ppt-to-pdf-converter
+Author: jhheo
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: pywin32
+
