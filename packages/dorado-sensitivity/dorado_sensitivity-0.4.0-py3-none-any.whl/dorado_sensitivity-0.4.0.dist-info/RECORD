@@ -1,0 +1,17 @@
+dorado/sensitivity/__init__.py,sha256=zSV6VEO6vuWZtNCQwJNMdfqGb9haU4IsAdVmgqbjQoI,8933
+dorado/sensitivity/backgrounds.py,sha256=TL5EDEP0zRBbMYHDY1pK8e-t5QI0oAyIz9LPIa_6A3E,6354
+dorado/sensitivity/bandpasses.py,sha256=sPG_XAdkUDdihFji5SYNocDvdlyzCTfyLDZIqUG5lbE,1217
+dorado/sensitivity/constants.py,sha256=MtA2JjtjanyoJNmKq390s6ZXh_hefLbSjHP6x35XtZg,1213
+dorado/sensitivity/data/__init__.py,sha256=94m5J2oeFsinaxL_HlE5FMX5LScJlWtKv8tDIe4UwoQ,280
+dorado/sensitivity/data/leinert_zodi.txt,sha256=xSFMJaPQZ117JdRNO-qnkN0WXb1bx-GFOvPg5pygTyE,902
+dorado/sensitivity/data/nuv_d_baseline_effective_area.ecsv,sha256=RsZ5zmdbHjN1jiJiuyhjvnzj_z4pNiIUGFwUFhV6zFM,24492
+dorado/sensitivity/data/nuv_d_cbe_effective_area.ecsv,sha256=r3i895Ld9wKHPea-mOSBY3L565whlEqSKVPo7GpmchI,24428
+dorado/sensitivity/data/nuv_d_threshold_effective_area.ecsv,sha256=yaQ_5RNI5HkCSx9MDulw7kcHgKCldKaCdDJdSiqhho4,24802
+dorado/sensitivity/data/stis_zodi_high.ecsv,sha256=7vO7XfCP8wigPoLIosoNAWIRePWGtOmv_aNLBHqULvw,1429
+dorado/sensitivity/tests/__init__.py,sha256=94m5J2oeFsinaxL_HlE5FMX5LScJlWtKv8tDIe4UwoQ,280
+dorado/sensitivity/tests/test_sensitivity.py,sha256=X0mcIwVl1JnjdmOhqIWmxlSQp8nrNCqOPEvWAxdFmOM,1840
+dorado_sensitivity-0.4.0.dist-info/LICENSE.txt,sha256=NyX30Kxs0mhfrV6ivAM33a4AfIQ05HAWBXu8-xRM9pc,12552
+dorado_sensitivity-0.4.0.dist-info/METADATA,sha256=dbEy_-iZqdi7WIiwP3JRziO0_CVhNysEUASONLKt7xQ,2518
+dorado_sensitivity-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dorado_sensitivity-0.4.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dorado_sensitivity-0.4.0.dist-info/RECORD,,
