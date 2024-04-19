@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: lantana
+Version: 2.9.7
+Summary: Bootstrap theme for MkDocs
+Home-page: https://lantana.wsoft.ws/
+Author: WSOFT
+Author-email: info@wsoft.ws
+License: MIT
+Requires-Python: >=3.5
+License-File: LICENCE.md
