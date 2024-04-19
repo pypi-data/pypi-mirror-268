@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+church_fundraising.egg-info/PKG-INFO
+church_fundraising.egg-info/SOURCES.txt
+church_fundraising.egg-info/dependency_links.txt
+church_fundraising.egg-info/top_level.txt
+product_management/__init__.py
+product_management/product.py
+product_management/transaction.py
+tests/test_product.py
+tests/test_transaction.py
