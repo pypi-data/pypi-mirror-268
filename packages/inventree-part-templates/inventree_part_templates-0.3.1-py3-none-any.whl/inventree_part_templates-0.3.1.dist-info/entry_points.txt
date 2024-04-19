@@ -1,0 +1,2 @@
+[inventree_plugins]
+PartTemplatesPlugin = inventree_part_templates.part_templates_plugin:PartTemplatesPlugin

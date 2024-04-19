@@ -1,0 +1,16 @@
+inventree_part_templates/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inventree_part_templates/part_templates.yaml,sha256=lvmdUxeXoeTdHVJhYcQLazz6vDmpLVLvYmse-gEM7ng,3204
+inventree_part_templates/part_templates_plugin.py,sha256=ub83EcOoOghXVwaFlorwZD3JSvwZdcsQQ4GQQUtkAQ0,24128
+inventree_part_templates/version.py,sha256=XkAjQ5d3P1CNcsVwWvw-qt19EbHpjxNgJtQcPYbXBXM,95
+inventree_part_templates/example_labels/inventree-label-part-16mm.html,sha256=_rKV2gt527f9zjM-9GiPr2QrfQEWPEOSvEhK8e7QK6A,2231
+inventree_part_templates/example_labels/inventree-label-part-29mm.html,sha256=G5kVEtor5uiHIUKBo2e8bl7L5IJxJYFRDE3Cc-T8hQc,2308
+inventree_part_templates/example_labels/inventree-label-part-smdbox.html,sha256=-0oFZHjWJPARYJYYB_nLAR3sRlLsNm9yn1wHOTMu8Dc,2164
+inventree_part_templates/templates/part_templates/part_detail_panel.html,sha256=MwwWICq9irJCqZoax73lnb8aTqI3KEGR7cmJ66K2wYc,10332
+inventree_part_templates/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+inventree_part_templates/templatetags/part_templates.py,sha256=rmi_yzlNU0qv5qXT_U2NPeiWcG-QcXBt0bYRPWCMCRY,5927
+inventree_part_templates-0.3.1.dist-info/LICENSE,sha256=7PD9GAc5d_Un21sjBrHa2iUojJ8svCeMidWV3c_BDTM,1089
+inventree_part_templates-0.3.1.dist-info/METADATA,sha256=Ir2KHfWjNDvme9EtAe1MShLZzAf3080sTlTSw99IXxw,17404
+inventree_part_templates-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+inventree_part_templates-0.3.1.dist-info/entry_points.txt,sha256=88lCzxtcpq68dxXFXTi6ATjdFgpJPm1DNiqpgjGavPQ,109
+inventree_part_templates-0.3.1.dist-info/top_level.txt,sha256=mImCdDeg2q7F1wJwzC9KMDB6QDmQEOiCHRRmmhuiZQA,25
+inventree_part_templates-0.3.1.dist-info/RECORD,,
