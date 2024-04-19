@@ -1,0 +1,25 @@
+structlog
+platformdirs
+tornado>=6
+pycurl
+
+[:python_version < "3.11"]
+tomli
+
+[:python_version < "3.8"]
+setuptools
+
+[awesomeversion]
+awesomeversion
+
+[htmlparser]
+lxml
+
+[jq]
+jq
+
+[pypi]
+packaging
+
+[vercmp]
+pyalpm
