@@ -1,0 +1,7 @@
+setup.py
+next_api_starter.egg-info/PKG-INFO
+next_api_starter.egg-info/SOURCES.txt
+next_api_starter.egg-info/dependency_links.txt
+next_api_starter.egg-info/entry_points.txt
+next_api_starter.egg-info/requires.txt
+next_api_starter.egg-info/top_level.txt
