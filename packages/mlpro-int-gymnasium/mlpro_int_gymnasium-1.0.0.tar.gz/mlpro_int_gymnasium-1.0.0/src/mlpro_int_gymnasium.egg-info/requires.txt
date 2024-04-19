@@ -1,0 +1,4 @@
+
+[full]
+mlpro[full]>=1.4.0
+gymnasium[all]>=0.29
