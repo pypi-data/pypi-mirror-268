@@ -1,0 +1,9 @@
+bd_extrusions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bd_extrusions/vslot.py,sha256=Hmuw52CePU8d8SnkMPaLfPl9fkWmw_x2XZnc4BB-NW4,7487
+bd_extrusions/utils/array.py,sha256=z5lYzgxhSWn1NRCFhfle2SltUyeYhEefZe4mxXebUFg,256
+bd_extrusions/utils/locations.py,sha256=vP2Nx_hcIeWETtxE-XLRrZLHDP1XmckdpIiZef9Q59g,3580
+bd_extrusions-0.0.1.dist-info/LICENSE,sha256=zW7rhIXur-TY9eMtWtVZIs7jCOjzbxj0vnb9zztBLVM,1067
+bd_extrusions-0.0.1.dist-info/METADATA,sha256=w_t9aC1nr7Rr963TF2BjTyA41X1102xZ4cdPyOTMEY0,754
+bd_extrusions-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bd_extrusions-0.0.1.dist-info/top_level.txt,sha256=41M1jweGWterXoNYIuvHYV-HWuB14hq3pa9toUddeOU,14
+bd_extrusions-0.0.1.dist-info/RECORD,,
