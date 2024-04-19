@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: pymusicbox
+Version: 0.0.3
+Summary: Toolkit with music synthesis and analysis tools for python.
+Author: Maanas Arora
+Maintainer: Maanas Arora
+License: MIT License
+        
+        Copyright (c) [year] [fullname]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+Project-URL: Repository, https://github.com/MaanasArora/pymusicbox
+Keywords: music
+Classifier: Programming Language :: Python
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cffi ==1.15.1
+Requires-Dist: numpy ==1.23.5
+Requires-Dist: pycparser ==2.21
+Requires-Dist: soundfile ==0.11.0
+
+# pymusicbox
+
+A library with toolkits for music synthesis and analysis. This is a work in progress.
+
+## Current Features
+
+- Symbolic language to represent notes and tracks
+- Create instruments with sine oscilators and harmonics
+
+## Installation
+
+```pip install pymusicbox```
+
+## Example Usage
+
+```python
+from pymusicbox.synth.instrument.oscillator import HarmonicOscillator, HarmonicsConfiguration
+from pymusicbox.symbolic.symbols import Note, NoteEvent, Track
+
+track = Track(events=[
+  NoteEvent(time=0, note=Note(pitch='C', octave=3, length=1, velocity=100)),
+  NoteEvent(time=1, note=Note(pitch='D', octave=3, length=1, velocity=80)),
+  NoteEvent(time=2, note=Note(pitch='E', octave=3, length=1, velocity=90)),
+  NoteEvent(time=2, note=Note(pitch='A', octave=3, length=1, velocity=100)),
+  NoteEvent(time=3, note=Note(pitch='A', octave=3, length=1.8, velocity=110)),
+  NoteEvent(time=3, note=Note(pitch='D', octave=2, length=1.8, velocity=110)),
+])
+
+harmonics = HarmonicsConfiguration(attack=0.1, decay=0.2, release=0.2, sustain_factor=0.6)
+oscillator = HarmonicOscillator(harmonics=harmonics)
+audio = oscillator.render_track(track)
+audio.write('output.wav')
+```
