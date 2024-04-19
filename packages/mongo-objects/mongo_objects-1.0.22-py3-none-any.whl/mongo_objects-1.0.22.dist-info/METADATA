@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: mongo_objects
+Version: 1.0.22
+Summary: Access MongoDB documents and subdocuments through user-defined UserDict and proxy objects.
+Project-URL: Homepage, https://headwaters.com.sg/pycon-2023
+Author-email: Jonathan Lindstrom <lindstrom.j@headwaters.com.sg>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pymongo
+Description-Content-Type: text/markdown
+
+mongo_objects
+
+Access your MongoDB documents and subdocuments as objects you define:
+* Documents are returned as UserDict subclasses
+* Subdocuments are access through dictionary- or list-like proxy objects
