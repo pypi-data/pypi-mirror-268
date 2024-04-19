@@ -1,0 +1,82 @@
+Metadata-Version: 2.3
+Name: h5view
+Version: 0.1.0a0
+Summary: A small app for viewing h5 files in a simple and clean way
+Author-email: Matthew Joyce <matthew.joyce@refeyn.com>
+License: MIT License
+        
+        Copyright (c) 2024 Matthew Joyce and other h5view contributors
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENCE
+Requires-Dist: h5py
+Requires-Dist: hdf5plugin
+Requires-Dist: numpy
+Requires-Dist: pyside6
+Provides-Extra: build
+Requires-Dist: nuitka; extra == 'build'
+Requires-Dist: ordered-set; extra == 'build'
+Requires-Dist: zstandard; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: build; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: pre-commit; extra == 'dev'
+Requires-Dist: pylint; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# H5View
+
+_A small app for viewing h5 files in a simple and clean way_
+
+<p align="center"><img src="https://github.com/refeyn/h5view/assets/103422031/7687cfb1-12e3-4e1c-b6ff-c45456ef91b4" width="40%"> <img src="https://github.com/refeyn/h5view/assets/103422031/b3f326fb-6f09-4cc2-b5a1-6949130292b7" width="40%"></p>
+
+Features:
+
+ - Can open and view datasets of any HDF5 files h5py can read
+ - Navigate hierarchical groups using a simple tree view
+ - Can render >=1D data as tables
+ - Can render >=2D data as images
+ - Sensible display of strings and other 0D data
+ - Displays dataset attributes and metadata (size, datatype, compression filters, etc.)
+
+# Installation
+
+Executable versions of this tool can be found under the releases tab on GitHub. Alternatively, h5view can be installed by pip (`pip install h5view`) and then run using the `h5view` command.
+
+# Development
+
+## Run from source
+
+ - Clone this repo.
+ - Run `setup_venv.ps1` to create the virtual env (subsequent runs only need `activate_venv.ps1`).
+ - Run `python -m h5view` to run the app.
+
+## Develop
+
+ - Clone this repo.
+ - Run `setup_venv.ps1` to create the virtual env.
+ - Open the workspace is VSCode.
+ - Select the venv in the venv menu.
+ - The ui conversion is run automatically before running the app.
+
+## Build executable
+
+ - Run `build.ps1`
