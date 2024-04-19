@@ -1,0 +1,14 @@
+openlxp_authentication/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openlxp_authentication/admin.py,sha256=c_zuUVk9YhWv1qwzbtFuq_L51E9cDKVJbC2RvKUxhag,199
+openlxp_authentication/apps.py,sha256=yYkJe0NKCoDKWA3pnALn8tOLjMyTo2vFvj07NRsSkLg,242
+openlxp_authentication/models.py,sha256=seseCN9b3zb3QZImTuw8aAed1EB7vMvNoVgjTfsT56M,2362
+openlxp_authentication/serializers.py,sha256=0XKYxVZTNucMv70eAQf2MzQFwI3zBgr-9nwqg0s3AWc,283
+openlxp_authentication/urls.py,sha256=EqDEycCY09Rkg7SGkCTBRLCS8LMoT1oXi87hnsMV0Jw,241
+openlxp_authentication/views.py,sha256=9in8TNR75BxYVwN2nVGsljL-R7HR5GOfuUiBE9C4bZs,512
+openlxp_authentication/migrations/0001_initial.py,sha256=_AzOhQse89AdOoyYl2pV3DZgMXyk5XaykgVEjZ_D8e0,839
+openlxp_authentication/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openlxp_authentication-1.1.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+openlxp_authentication-1.1.2.dist-info/METADATA,sha256=QCP9emAfTNOJXZwGUdhXn-6t_C1Isi4vbRA70cqTfe0,6300
+openlxp_authentication-1.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+openlxp_authentication-1.1.2.dist-info/top_level.txt,sha256=iPu5mOxi86uqp807Z2jiva4j71B4Ft4y_oQKgFvY-Iw,23
+openlxp_authentication-1.1.2.dist-info/RECORD,,
