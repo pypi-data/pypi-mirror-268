@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+selphyprint/__init__.py
+selphyprint/main.py
+selphyprint.egg-info/PKG-INFO
+selphyprint.egg-info/SOURCES.txt
+selphyprint.egg-info/dependency_links.txt
+selphyprint.egg-info/entry_points.txt
+selphyprint.egg-info/requires.txt
+selphyprint.egg-info/top_level.txt
