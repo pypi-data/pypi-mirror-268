@@ -1,0 +1,4 @@
+[console_scripts]
+ray-on-golem=ray_on_golem.main:main
+rog-db=ray_on_golem.reputation.admin:admin
+
