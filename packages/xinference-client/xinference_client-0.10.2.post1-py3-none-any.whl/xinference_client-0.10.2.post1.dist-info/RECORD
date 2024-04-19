@@ -1,0 +1,14 @@
+xinference_client/__init__.py,sha256=PQRng32iO-3R_oPnSdr1_firoiIu3ogfd4mBFIXvl7Q,722
+xinference_client/_compat.py,sha256=SQAjZMGxtBIce45qtW7ob7RWzA0zhv2yB3AxT0rb0uU,1778
+xinference_client/_version.py,sha256=s6oSalXcIxTftOZBjgfYyJ-jFsCGiPeclJjLCYsiCeA,504
+xinference_client/fields.py,sha256=BFAVowcvvwA4i1HHHeyD1J_p3p6Vi5hVmKY0CT21blM,5075
+xinference_client/types.py,sha256=wMg9xjkDB-g0EEa7cmiOyrQk8Z-DS1-Q-VeD9gO2Vqw,13115
+xinference_client/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xinference_client/client/common.py,sha256=iciZRs5YjM2gYsXnwACPMaiBZp4_XpawWwfym0Iyu40,1617
+xinference_client/client/restful/__init__.py,sha256=h_JgzSqV5lP6vQ6XX_17kE4IY4BRnvKta_7VLQAL1ms,581
+xinference_client/client/restful/restful_client.py,sha256=ukox-JX1PRsR1BhIJrUPDlC0-c1Yf9RH8z2lQyygNqQ,42354
+xinference_client-0.10.2.post1.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+xinference_client-0.10.2.post1.dist-info/METADATA,sha256=4t7wStWxgglzxRl9UzuyKi6UNmsJZXs6OYmpENpfWfc,2913
+xinference_client-0.10.2.post1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+xinference_client-0.10.2.post1.dist-info/top_level.txt,sha256=YX64xfrwqvz4oQlU4rOo60Nk5ip6Mil7bC7uIcvVgxE,18
+xinference_client-0.10.2.post1.dist-info/RECORD,,
