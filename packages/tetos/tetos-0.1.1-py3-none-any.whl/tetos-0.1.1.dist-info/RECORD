@@ -1,0 +1,15 @@
+tetos-0.1.1.dist-info/METADATA,sha256=JzVRkryjsjcC2IsqnOcioO4W9L8W1urktticeXNj860,3529
+tetos-0.1.1.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+tetos-0.1.1.dist-info/entry_points.txt,sha256=R2Z6IqVK3dtN8EyjmdFibLSSvDwXTeooFUVeLB_1VNM,46
+tetos-0.1.1.dist-info/licenses/LICENSE,sha256=M9WiqKG-GUcPEcL8ZsTp3Vfoc5AS-cX0S_cK9EEgSLI,551
+tetos/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tetos/__main__.py,sha256=KK0ugD5nd_lrxfyw8O4BgPLQWLAkdiNIoNMOPbQJ83E,928
+tetos/azure.py,sha256=5X92WB9km_iyfA705ZFsgZHe8TVTnaN9rM81ASLtPI0,3777
+tetos/baidu.py,sha256=Xm4uFDCgTFnD84RiMRY_bUevYfgJvUlKXNt61hOE62o,5210
+tetos/base.py,sha256=p7b9iH-coYZhhOnLUiFZyil9x2I0X_mir5PUPxNFles,3048
+tetos/consts.py,sha256=zDRQp84jOJqdrNyFB2PYDG1ANr7A8hD6ZMuiPv6oFuM,20883
+tetos/edge.py,sha256=92s3qoGco5ta95cIsR1hqFqJTJ1P8RjSVsDi1xS118I,2473
+tetos/google.py,sha256=_YyMFSijJfmpJUKyfQIPKqS2-4BGaM955VpID1AcUGk,4891
+tetos/openai.py,sha256=eur4xEXtWFRxwpUaBesTZADwR6yAeID9SOnl82acH4k,2770
+tetos/volc.py,sha256=i60X2KukpaH_JWlWS7JLf84OJqC9s0ASkiqwg2QFHko,9002
+tetos-0.1.1.dist-info/RECORD,,
