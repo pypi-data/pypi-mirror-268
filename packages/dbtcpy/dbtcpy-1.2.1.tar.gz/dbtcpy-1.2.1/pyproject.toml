@@ -1,0 +1,18 @@
+[project]
+name = "dbtcpy"
+version = "1.2.1"
+authors = [
+  { name="xLitus", email="xLitus@protestant.com" },
+]
+description = "Open source library in python3 to freely manage databases."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/xLitus/dbtcpy"
+Issues = "https://github.com/xLitus/dbtcpy/issues"
