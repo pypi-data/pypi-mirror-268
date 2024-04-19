@@ -1,0 +1,62 @@
+{
+  "id": "f17f930a-b762-4952-8619-682255415d4c",
+  "name": "Default Welcome Intent - Web",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "awaiting_login",
+          "lifespan": 5
+        },
+        {
+          "name": "DefaultWelcomeIntent-Web-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "title": "To start, key in your login ID in the chat window below 👇🏼.",
+                  "image": {
+                    "src": {
+                      "rawUrl": "https://firebasestorage.googleapis.com/v0/b/almgtbot.appspot.com/o/agenticon.png?alt\u003dmedia\u0026token\u003dacfb8428-4e7e-4225-99dd-c4ec989530dc"
+                    }
+                  },
+                  "type": "info",
+                  "subtitle": "Here\u0027s a tip: \n\n Your login ID \u003d last 5 alphanumeric characters of your admin number. \n\n E.g. If your admin number is 1234567A, key in 4567A.",
+                  "actionLink": ""
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

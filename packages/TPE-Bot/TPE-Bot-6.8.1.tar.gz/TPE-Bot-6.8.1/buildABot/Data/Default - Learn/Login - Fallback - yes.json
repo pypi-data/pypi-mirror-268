@@ -1,0 +1,52 @@
+{
+  "id": "4334cdc3-0f99-469d-b208-1367102aa8a5",
+  "parentId": "57bedbfc-4c92-4817-9f80-fafc167c38a0",
+  "rootParentId": "57bedbfc-4c92-4817-9f80-fafc167c38a0",
+  "name": "Login - Fallback - yes",
+  "auto": true,
+  "contexts": [
+    "Login-Fallback-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "Login-Fallback.Login-Fallback-yes",
+      "affectedContexts": [
+        {
+          "name": "Login-Fallback-yes-followup",
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "platform": "telegram",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "That\u0027s Great! 😃 Can you share with us the answer?"
+          ],
+          "condition": ""
+        },
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

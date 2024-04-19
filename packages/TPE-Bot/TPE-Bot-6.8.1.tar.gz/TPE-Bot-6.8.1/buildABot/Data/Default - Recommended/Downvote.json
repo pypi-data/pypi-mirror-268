@@ -1,0 +1,92 @@
+{
+  "id": "deaa839a-0308-44a3-87c1-ed0c6c5ff2fb",
+  "name": "Downvote",
+  "auto": true,
+  "contexts": [
+    "loggedIn"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "loggedIn",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "title": "Email Enquiry. 📧",
+                  "image": {
+                    "src": {
+                      "rawUrl": "https://firebasestorage.googleapis.com/v0/b/almgtbot.appspot.com/o/agenticon.png?alt\u003dmedia\u0026token\u003dacfb8428-4e7e-4225-99dd-c4ec989530dc"
+                    }
+                  },
+                  "type": "info",
+                  "subtitle": "Click on the chip below if you want to end an email to your tutor on your urgent query.",
+                  "actionLink": ""
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        },
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "type": "chips",
+                  "options": [
+                    {
+                      "text": "Send an email enquiry to my tutor. 📧"
+                    }
+                  ]
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        },
+        {
+          "type": "1",
+          "platform": "telegram",
+          "title": "Click on the chip below if you want to end an email to your tutor on your urgent query.",
+          "buttons": [
+              {
+                  "postback": "Send an email enquiry to my tutor. 📧",
+                  "text": "Send an email enquiry to my tutor. 📧"
+              }
+          ],
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+      }
+        
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

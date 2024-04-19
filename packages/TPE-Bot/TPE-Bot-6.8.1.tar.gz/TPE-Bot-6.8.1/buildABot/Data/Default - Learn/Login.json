@@ -1,0 +1,50 @@
+{
+  "id": "a6bcec9f-6176-4d24-861e-1a5bc149bd47",
+  "name": "Login",
+  "auto": true,
+  "contexts": [
+    "awaiting_login"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "loggedIn",
+          "lifespan": 10
+        },
+        {
+          "name": "sentiment",
+          "lifespan": 1
+        }
+      ],
+      "parameters": [
+        {
+          "id": "4986e1b6-aad9-49bb-ac4c-d0e3e7d6016e",
+          "name": "loginID",
+          "required": false,
+          "dataType": "@LoginID",
+          "value": "$loginID",
+          "defaultValue": "",
+          "isList": false,
+          "prompts": [],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": []
+        }
+      ],
+      "messages": [],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

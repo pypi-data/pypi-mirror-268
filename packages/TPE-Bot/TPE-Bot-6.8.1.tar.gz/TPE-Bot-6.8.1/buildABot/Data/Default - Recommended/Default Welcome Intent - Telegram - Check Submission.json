@@ -1,0 +1,46 @@
+{
+    "id": "39952e29-d7bb-4513-8987-0c0e97dc1dbf",
+    "name": "Default Welcome Intent - Telegram - Check Submission",
+    "auto": true,
+    "contexts": [
+      "loggedIn"
+    ],
+    "responses": [
+      {
+        "resetContexts": false,
+        "action": "",
+        "affectedContexts": [
+          {
+            "name": "loggedIn",
+            "lifespan": 10
+          }
+        ],
+        "parameters": [
+          {
+            "id": "4986e1b6-aad9-49bb-ac4c-d0e3e7d6016e",
+            "name": "loginID",
+            "required": false,
+            "dataType": "@LoginID",
+            "value": "#loggedIn.loginID",
+            "defaultValue": "",
+            "isList": false,
+            "prompts": [],
+            "promptMessages": [],
+            "noMatchPromptMessages": [],
+            "noInputPromptMessages": [],
+            "outputDialogContexts": []
+          }
+        ],
+        "messages": [],
+        "speech": []
+      }
+    ],
+    "priority": 500000,
+    "webhookUsed": true,
+    "webhookForSlotFilling": false,
+    "fallbackIntent": false,
+    "events": [],
+    "conditionalResponses": [],
+    "condition": "",
+    "conditionalFollowupEvents": []
+  }
