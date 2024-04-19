@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: sortapl
+Version: 1.1.0
+Summary: A Python package for sorting words alphabetically
+Home-page: https://github.com/chinmay-dhanawade/sortz
+Author: Chinmay Danawade
+Author-email: chinmaydhanawade112@email.com
+License: MIT
+
