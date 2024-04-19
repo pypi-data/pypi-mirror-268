@@ -1,0 +1,10 @@
+pyriddle/__init__.py,sha256=iB3VznrNwChvc7VUjjBDe3Ke0mKptPRu30QJIian9N0,133
+pyriddle/cli.py,sha256=1ifVIomT_pB4Nc9krJfivB1H3iT8i9s-PVZ6Sm57NoI,1225
+pyriddle/data.py,sha256=vg_ef_L8qWWKuJMDoUnf7kpM8R7aimM18sQiu71Gins,50922
+pyriddle/riddle.py,sha256=avkHEnlNHnoimDU_6ANgsFPEdI4BcPe-on0sg4KfOl0,1173
+pyriddle-1.0.0.dist-info/LICENSE,sha256=SmQIM5L1-PEinbq5MGePgY88oFuixfhBjBmussGNdmA,1091
+pyriddle-1.0.0.dist-info/METADATA,sha256=XdNbwzop-BuQIp2ITiaAe6JA0EAm-FRvnzrlNxkON8k,635
+pyriddle-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyriddle-1.0.0.dist-info/entry_points.txt,sha256=VysngM87m7bS97rYTzX7u9mvNOWCMVxnKblS-8HFHNE,47
+pyriddle-1.0.0.dist-info/top_level.txt,sha256=bMYRvImtlVLGllDUjF3y6Ng7c4Aoz21OaDQowy3AqQ8,9
+pyriddle-1.0.0.dist-info/RECORD,,
