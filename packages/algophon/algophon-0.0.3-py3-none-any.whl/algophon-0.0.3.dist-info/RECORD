@@ -1,0 +1,12 @@
+algophon/__init__.py,sha256=mmtfZcn_1S3-XSFI_a34UpGEDvzjLGFbJ1utcos36r0,168
+algophon/ipa.txt,sha256=0HlrVdh6-3MWo65nSSSZ9moSOEQ6q1AdTHNQdOAOkRA,350526
+algophon/natclass.py,sha256=guleLzZZcUovxS0E7eGOAUVe5SSB_enABXA0ukmaeYs,87
+algophon/seg.py,sha256=7BQ2EFBtPO2GIPbnRE821RATVOu_YtqKnPdKChDNVEU,1173
+algophon/seginv.py,sha256=7Nr_fJ-54SzEcFVq8fc0jFq7WtMlfagyMJZfsB4TV0Q,3465
+algophon/segstr.py,sha256=LX_CkUQftR8G2jmKdhu0D0ATrdx1gjzXrn4JBClGNS8,5615
+algophon/symbols.py,sha256=HoRlEWOHucF-YrCAE7UqX4CETWqNe8JvHb1s4Hsml-c,166
+algophon-0.0.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+algophon-0.0.3.dist-info/METADATA,sha256=crQaV09KEu_Dd7PI8KOwSKpDWcoOMgXlTRlrQ6vFm10,7284
+algophon-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+algophon-0.0.3.dist-info/top_level.txt,sha256=9SwV_4M-Xiv9Y5qx-pz5u10WLJVPjDkKRgDB08rYeTs,9
+algophon-0.0.3.dist-info/RECORD,,
