@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+data/bin/dqcsbequantumsim
+qualesim_quantumsim/__init__.py
+qualesim_quantumsim/__main__.py
+qualesim_quantumsim/backend.py
+qualesim_quantumsim/qubit.py
+qualesim_quantumsim.egg-info/PKG-INFO
+qualesim_quantumsim.egg-info/SOURCES.txt
+qualesim_quantumsim.egg-info/dependency_links.txt
+qualesim_quantumsim.egg-info/requires.txt
+qualesim_quantumsim.egg-info/top_level.txt

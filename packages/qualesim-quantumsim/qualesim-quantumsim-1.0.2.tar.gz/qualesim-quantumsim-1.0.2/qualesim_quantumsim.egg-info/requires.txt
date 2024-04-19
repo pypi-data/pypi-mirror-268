@@ -1,0 +1,2 @@
+quantumsim==0.2
+numpy
