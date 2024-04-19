@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: qualesim-quantumsim
+Version: 1.0.1
+Summary: QuaLeSim backend for QuantumSim.
+Home-page: https://gitee.com/hpcl_quanta/dqcsim-quantumsim.git
+Author: Dingdong Liu
+Author-email: dingdongliu@quanta.org.cn
+License: GPLv3
+Keywords: QuaLeSim quantumsim
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: quantumsim ==0.2
+Requires-Dist: numpy
+
+# QuaLeSim backend for Quantumsim.
+It is an adapted version of DQCSim-quantumsim.
