@@ -1,0 +1,2 @@
+[console_scripts]
+convert_us_to_uk = convert_us_to_uk.converter:main
