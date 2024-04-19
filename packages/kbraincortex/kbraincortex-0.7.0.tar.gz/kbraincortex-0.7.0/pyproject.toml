@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "kbraincortex"
+version = "0.7.0"
+description = "Common KBRaiN Functions"
+authors = ["Daniel Eric Fredriksen <daniel.fredriksen@us.kbr.com>"]
+license = "unlicensed"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+azure-core = "^1.29.5"
+azure-cosmos = "^4.5.1"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+applicationinsights = "^0.11.10"
+datetime = "^5.3"
+bcrypt = "^4.0.1"
+openai = "^1.3.3"
+azure-mgmt-datafactory = "^4.0.0"
+azure-identity = "^1.15.0"
+nest-asyncio = "^1.5.8"
+numpy = "^1.26.2"
+guidance = "^0.1.10"
+azure-search = "^1.0.0b2"
+azure-search-documents = "11.4.0b6"
+kbrainsdk = "0.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "default"
+
+[[tool.poetry.source]]
+name = "azure"
+url = "https://pkgs.dev.azure.com/kbrcorp-mariana/a5dbb958-921c-43a3-93ad-8f8ef1690fe9/_packaging/kbrain-packages/pypi/simple/"
+priority = "explicit"
