@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: proxybandit
+Version: 1.0.1
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml
