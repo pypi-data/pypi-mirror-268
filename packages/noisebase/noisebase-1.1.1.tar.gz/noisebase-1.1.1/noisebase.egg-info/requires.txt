@@ -1,0 +1,7 @@
+torch
+pyfvvdp==1.2.0
+zarr>=2
+pytorch-msssim
+hydra-core
+requests
+tqdm
