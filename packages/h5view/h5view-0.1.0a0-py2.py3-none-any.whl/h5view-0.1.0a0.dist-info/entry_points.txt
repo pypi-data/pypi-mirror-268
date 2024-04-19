@@ -1,0 +1,2 @@
+[console_scripts]
+h5view = h5view:main
