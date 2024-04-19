@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: htt
+Version: 0.8
+Summary: 
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: protobuf (>=4.22,<5.0)
+Description-Content-Type: text/markdown
+
+
