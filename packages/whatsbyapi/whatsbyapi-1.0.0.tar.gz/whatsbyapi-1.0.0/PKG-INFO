@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: whatsbyapi
+Version: 1.0.0
+Summary: Python wrapper for the WhatsApp Cloud API with Webhook support
+Author-email: bdelhak Zaaim <abdelhakzammii@gmail.com>
+License: MIT
+Keywords: whatsapp,whatsapp-api,whatsapp-cloud-api,whatsapp-cloud,whatsapp-api-python,whatsapp-cloud-api-python,whatsbyapi,wapy,wa,wa-api,wa-cloud-api,wa-cloud,wa-api-python,wa-cloud-api-python,whatsapp-webhook,whatsapp-webhook-python,whatsapp-webhook-api,whatsapp-flows,whatsapp-cloud-api-flows
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Communications
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: annotated-types==0.6.0
+Requires-Dist: blinker==1.7.0
+Requires-Dist: certifi==2024.2.2
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: click==8.1.7
+Requires-Dist: Flask==3.0.3
+Requires-Dist: idna==3.7
+Requires-Dist: itsdangerous==2.2.0
+Requires-Dist: Jinja2==3.1.3
+Requires-Dist: MarkupSafe==2.1.5
+Requires-Dist: pydantic==2.7.0
+Requires-Dist: pydantic_core==2.18.1
+Requires-Dist: pywa==1.16.2
+Requires-Dist: requests==2.31.0
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: typing_extensions==4.11.0
+Requires-Dist: urllib3==2.2.1
+Requires-Dist: Werkzeug==3.0.2
+Provides-Extra: flask
+Requires-Dist: flask; extra == "flask"
+Provides-Extra: fastapi
+Requires-Dist: fastapi; extra == "fastapi"
+Requires-Dist: uvicorn[standard]; extra == "fastapi"
+Provides-Extra: cryptography
+Requires-Dist: cryptography; extra == "cryptography"
