@@ -1,0 +1,10 @@
+syntax: glob
+__about__.py
+db
+dist
+.DS_Store
+__pycache__
+.pytest_cache
+site.conf
+venv
+.vscode
