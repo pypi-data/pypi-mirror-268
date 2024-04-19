@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: rapidpe_rift_rota_tools
+Version: 0.0.3
+Summary: Rota tools for  RapidPE-RIFT
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.0
+License-File: COPYING
+Requires-Dist: jinja2
+Requires-Dist: rapidpe-rift-pipe
+
+# RapidPE-RIFT ROTA Tools
+
+Generates status page for RapidPE-RIFT runs
+
+
+# Credit
+
+Copyright (c) 2024 Vinaya Valsan, Daniel Wysocki, Caitlin Rose
+
+This software may be freely distributed under the terms of the GNU General Public License v2.  See [`COPYING`](./COPYING) for details.

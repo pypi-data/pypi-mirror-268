@@ -1,0 +1,115 @@
+.status-SUCCESS {
+    color: green
+}
+.status-FAIL {
+    color: red
+}
+
+.status-RUN {
+    color: indigo
+}
+
+.status-IDLE {
+    color: orange
+}
+.status-HOLD {
+    color: orangered
+}
+
+.statuspage{
+    font-weight: bold;
+    font-size:20px;
+    text-align: center;
+
+}
+.JobComplete {
+    font-weight: bold;
+    font-size:20px;
+    text-align: center;
+    color: green
+}
+.JobNotComplete {
+    font-weight: bold;
+    font-size:20px;
+    text-align: center;
+    color: red
+}
+
+.hiddentable {
+    display: none;
+}
+
+
+.messagecolumn {
+       width: 10px;
+}
+
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 2px solid transparent;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+
+body {
+  margin: 1px;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+  margin-top: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+td {
+    border-right: 1px solid #ddd;
+}
+
+

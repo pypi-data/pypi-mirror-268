@@ -1,0 +1,1 @@
+recursive-include src/rapidpe_rift_rota_tools/template_files *jinja2

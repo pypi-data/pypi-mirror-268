@@ -1,0 +1,3 @@
+[console_scripts]
+rapidpe-rift-rota-tools = rapidpe_rift_rota_tools.create_status_page:main
+rapidpe-rift-rota-tools-auto-generate = rapidpe_rift_rota_tools.auto_generate_status_page:main
