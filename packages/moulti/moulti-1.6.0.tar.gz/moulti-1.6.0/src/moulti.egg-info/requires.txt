@@ -1,0 +1,3 @@
+textual>=0.53
+pyperclip
+argcomplete
