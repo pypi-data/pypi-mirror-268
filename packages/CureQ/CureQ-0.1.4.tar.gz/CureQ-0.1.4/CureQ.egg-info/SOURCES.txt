@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+CureQ/__init__.py
+CureQ/mea.py
+CureQ/mea_02_04.py
+CureQ/mea_18_04_2024.py
+CureQ/mea_for_py_files.py
+CureQ.egg-info/PKG-INFO
+CureQ.egg-info/SOURCES.txt
+CureQ.egg-info/dependency_links.txt
+CureQ.egg-info/requires.txt
+CureQ.egg-info/top_level.txt
