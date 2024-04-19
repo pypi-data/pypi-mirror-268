@@ -1,0 +1,4 @@
+Metadata-Version: 2.3
+Name: indexify_text_splitter
+Version: 0.1.1
+Summary: A text splitter module for Python, implemented in Rust using PyO3.
