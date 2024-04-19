@@ -1,0 +1,13 @@
+codemodder==0.91.0
+click
+prompt-toolkit
+questionary~=2.0.0
+security~=1.2.0
+
+[dev]
+black
+pre-commit
+pylint
+pytest
+pytest-cov
+pytest-mock
