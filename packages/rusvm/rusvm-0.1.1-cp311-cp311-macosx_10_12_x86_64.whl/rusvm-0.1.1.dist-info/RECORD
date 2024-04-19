@@ -1,0 +1,5 @@
+rusvm-0.1.1.dist-info/METADATA,sha256=a2NoO8mUZrFx5r5DDjiODf8gDugkbN--Wkm-NJI6isM,1663
+rusvm-0.1.1.dist-info/WHEEL,sha256=SRnG_FQQvieLA6itQS84WHKSBcd0TLWM889Dyr1qTMA,106
+rusvm/__init__.py,sha256=_sPctfY-z_LXb6qCzu3YU5_oHyHcv5buEPAie8uE-yc,103
+rusvm/rusvm.cpython-311-darwin.so,sha256=8eVegUpi6FF9Zk-JF-vXHTn_qYCDUinhTvojnCXc4JQ,684552
+rusvm-0.1.1.dist-info/RECORD,,
