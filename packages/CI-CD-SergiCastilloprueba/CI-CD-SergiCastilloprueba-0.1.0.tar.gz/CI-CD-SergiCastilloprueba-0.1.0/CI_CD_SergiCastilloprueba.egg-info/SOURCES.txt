@@ -1,0 +1,9 @@
+README.md
+setup.py
+CI_CD_SergiCastilloprueba.egg-info/PKG-INFO
+CI_CD_SergiCastilloprueba.egg-info/SOURCES.txt
+CI_CD_SergiCastilloprueba.egg-info/dependency_links.txt
+CI_CD_SergiCastilloprueba.egg-info/requires.txt
+CI_CD_SergiCastilloprueba.egg-info/top_level.txt
+app/__init__.py
+app/app.py
