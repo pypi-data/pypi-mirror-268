@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.mp3
+*.cache*
+
+/dist/*
+
+/build/*
+!/build/build.sh
+
+# Virtual Environment
+venv
+.idea/aws.xml
+
+windows
+
+.env
+
+# setuptools_scm
+_version.py
