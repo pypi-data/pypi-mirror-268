@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/minsprojectr/init.py
+src/minsprojectr/operations.py
+src/minsprojectr.egg-info/PKG-INFO
+src/minsprojectr.egg-info/SOURCES.txt
+src/minsprojectr.egg-info/dependency_links.txt
+src/minsprojectr.egg-info/top_level.txt
