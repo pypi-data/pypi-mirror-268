@@ -1,0 +1,16 @@
+tnseeker/Essential_Finder.py,sha256=LDNzqLfMkbVTXaHq_b3R8x7Vf7jtzTFjvijj40GAJK8,71540
+tnseeker/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tnseeker/__main__.py,sha256=KiB_iDS22L4EQnTRgBz_8rTwIXeL86LkvbKXc-BmbtE,20263
+tnseeker/blaster.py,sha256=Q_zhKNmbeqhDIUvpPXxKiarXFJg9ZFkHqlmF4XJ2yas,1366
+tnseeker/insertions_over_genome_plotter.py,sha256=8ON6dwvZ1AKr7B8i83GXA733_E1wHpM5uTaxUlycYQo,8626
+tnseeker/reads_trimer.py,sha256=KO3BWhJsadsPwJIEIhqjV_Dx6yB3aNchTBBfCqlyq5Y,13108
+tnseeker/sam_to_insertions.py,sha256=WTiFDu_DpcjyZrm4nfqOmLAcIilp9QCFFC-oqR5WI2w,27092
+tnseeker/data/barcode2sam.sh,sha256=pjVgyfTLwiE3Cw8QJkOWxdBvtobOFIgonYDDZyHLBmA,2160
+tnseeker/data/true_negatives.fasta,sha256=1-Nz743_tnEoyzq4D640nU-iF6GamNRrati_LwKbLGk,1644188
+tnseeker/data/true_positives.fasta,sha256=N84sP_Z7nKXFNJnEKl9MjKHeaCFrvuGQs8dgDZMB9U8,64979
+tnseeker/extras/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tnseeker/extras/possion_binom.py,sha256=OL1kCzwDMZYINjg1AebziBe2w2po4RzKzbvJUTai0J8,10547
+tnseeker-1.0.7.dist-info/METADATA,sha256=bb4pwuDxb-KIZq1lUbJSgjw4lY__e2GVCnBKUG3XYRw,6069
+tnseeker-1.0.7.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+tnseeker-1.0.7.dist-info/top_level.txt,sha256=1xR6-F3_Y1FM5i8i09LJrLiZmAjz1yLSWQntv-aOmYQ,9
+tnseeker-1.0.7.dist-info/RECORD,,
