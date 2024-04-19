@@ -1,0 +1,15 @@
+Markdown==3.6
+Pygments==2.17.2
+aiohttp==3.9.5
+pymdown-extensions==10.7.1
+watchdog==4.0.0
+
+[dev]
+mypy
+types-Markdown
+black
+isort
+
+[dist]
+setuptools
+wheel
