@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ipdm
+Version: 0.2.0rc3
+Summary: Infini 包管理器
+Author-Email: =?utf-8?b?6IuP5ZCR5aSc?= <fu050409@163.com>, =?utf-8?b?566A5b6L57qv?= <leader@hydroroll.team>
+License: MIT
+Requires-Python: >=3.8
+Requires-Dist: typer>=0.9.0
+Requires-Dist: requests>=2.31.0
+Requires-Dist: rich>=13.7.0
+Requires-Dist: infini>=2.1.8
+Requires-Dist: tomlkit>=0.12.4
+Requires-Dist: virtualenv>=20.25.1
+Requires-Dist: gitpython>=3.1.42
+Description-Content-Type: text/markdown
+
+# IPM
+
+Infini 包管理器
