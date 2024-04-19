@@ -1,0 +1,10 @@
+LICENSE
+pyproject.toml
+docs/README.md
+ezrest/__init__.py
+ezrest/requests.py
+ezrest.egg-info/PKG-INFO
+ezrest.egg-info/SOURCES.txt
+ezrest.egg-info/dependency_links.txt
+ezrest.egg-info/requires.txt
+ezrest.egg-info/top_level.txt
