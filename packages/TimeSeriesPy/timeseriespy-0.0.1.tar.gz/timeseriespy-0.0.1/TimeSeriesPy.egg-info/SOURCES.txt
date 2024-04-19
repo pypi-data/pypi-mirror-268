@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+TimeSeriesPy/__init__.py
+TimeSeriesPy/test.py
+TimeSeriesPy.egg-info/PKG-INFO
+TimeSeriesPy.egg-info/SOURCES.txt
+TimeSeriesPy.egg-info/dependency_links.txt
+TimeSeriesPy.egg-info/requires.txt
+TimeSeriesPy.egg-info/top_level.txt
