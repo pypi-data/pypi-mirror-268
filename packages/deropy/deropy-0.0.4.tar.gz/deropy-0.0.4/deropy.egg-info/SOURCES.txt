@@ -1,0 +1,14 @@
+README.md
+setup.py
+deropy/__init__.py
+deropy/main.py
+deropy.egg-info/PKG-INFO
+deropy.egg-info/SOURCES.txt
+deropy.egg-info/dependency_links.txt
+deropy.egg-info/entry_points.txt
+deropy.egg-info/requires.txt
+deropy.egg-info/top_level.txt
+deropy/commands/__init__.py
+deropy/commands/configure.py
+deropy/commands/deploy.py
+deropy/commands/generate.py

@@ -1,0 +1,6 @@
+click==8.0.4
+requests==2.27.1
+coloredlogs==15.0.1
+pyperclip==1.8.2
+python-dotenv==0.20.0
+InquirerPy==0.3.4
