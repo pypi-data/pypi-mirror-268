@@ -1,0 +1,2 @@
+[console_scripts]
+sciword-finder = sciword_finder:main
