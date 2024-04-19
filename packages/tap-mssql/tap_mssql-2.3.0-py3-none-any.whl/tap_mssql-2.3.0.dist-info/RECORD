@@ -1,0 +1,12 @@
+tap_mssql/__init__.py,sha256=tFe5kCD2KZIXA1RVC48gP07-msN2Kyrt17MWoeSGW7A,29147
+tap_mssql/connection.py,sha256=SZjJ9z1y3889rtBCNK12A8p4ugsom_aOeAdaIF_cOAA,1723
+tap_mssql/sync_strategies/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tap_mssql/sync_strategies/common.py,sha256=W46BDulqn3y2xPSZDPrEWZ0S_fvEZB0aKqJKIuTRj34,10933
+tap_mssql/sync_strategies/full_table.py,sha256=G_73GMfB5KlQu90VogxusUc6UZAnK36yKlqT1gqPkGY,2221
+tap_mssql/sync_strategies/incremental.py,sha256=kNqf6uob6TRLgdk-iJH0k65X5HyNmjkpPtzQhvV9FQk,2888
+tap_mssql/sync_strategies/log_based.py,sha256=ULePg5DYYLclVKu5XHLTIA7ODR3yWuzToIKwdZSNNb4,15642
+tap_mssql-2.3.0.dist-info/LICENSE,sha256=_yIJprfD1F0WcUuj9l5g_nflaQ-KF4mPLKVJLoZm170,33005
+tap_mssql-2.3.0.dist-info/METADATA,sha256=pFF2HmjpmXAY8L8vV6kfU8ksCJRlh0ulb57TgtO9fj8,21856
+tap_mssql-2.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tap_mssql-2.3.0.dist-info/entry_points.txt,sha256=ADLy3xePA3H1YiKGP_dagRgJ7MXhFWp6_K4K3O44rWw,53
+tap_mssql-2.3.0.dist-info/RECORD,,
