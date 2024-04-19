@@ -1,0 +1,3 @@
+[console_scripts]
+mrepl = macal.mrepl:main
+mrun = macal.mrun:main
