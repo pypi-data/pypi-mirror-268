@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: kaiju-scheduler
+Version: 0.1.0
+Summary: Asynchronous tasks scheduler and executor
+Home-page: https://github.com/violet-black/kaiju-scheduler
+Author: violetblackdev@gmail.com
+License: MIT
+Keywords: scheduler,asyncio,tasks
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: pylint ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: python-docs-theme ; extra == 'docs'
+Requires-Dist: m2r2 ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+
+[![pypi](https://img.shields.io/pypi/v/kaiju-scheduler.svg)](https://pypi.python.org/pypi/kaiju-scheduler/)
+[![docs](https://readthedocs.org/projects/kaiju-scheduler/badge/?version=latest&style=flat)](https://kaiju-scheduler.readthedocs.io)
+[![codecov](https://codecov.io/gh/violet-black/kaiju-scheduler/graph/badge.svg?token=FEUUMQELFX)](https://codecov.io/gh/violet-black/kaiju-scheduler)
+[![tests](https://github.com/violet-black/kaiju-scheduler/actions/workflows/tests.yaml/badge.svg)](https://github.com/violet-black/kaiju-scheduler/actions/workflows/tests.yaml)
+[![mypy](https://www.mypy-lang.org/static/mypy_badge.svg)](https://mypy-lang.org/)
+[![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+[![python](https://img.shields.io/pypi/pyversions/kaiju-scheduler.svg)](https://pypi.python.org/pypi/kaiju-scheduler/)
+
+**kaiju-scheduler** is
+
+# Installation
+
+With pip and python 3.8+:
+
+```bash
+pip3 install kaiju-scheduler
+```
+
+# How to use
+
+See the [user guide](https://kaiju-scheduler.readthedocs.io/guide.html) for more info.
