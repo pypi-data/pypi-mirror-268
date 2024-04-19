@@ -1,0 +1,62 @@
+==================================
+ RsCMPX_NrFr2Meas
+==================================
+
+.. image:: https://img.shields.io/pypi/v/RsCMPX_NrFr2Meas.svg
+   :target: https://pypi.org/project/ RsCMPX_NrFr2Meas/
+
+.. image:: https://readthedocs.org/projects/sphinx/badge/?version=master
+   :target: https://RsCMPX_NrFr2Meas.readthedocs.io/
+
+.. image:: https://img.shields.io/pypi/l/RsCMPX_NrFr2Meas.svg
+   :target: https://pypi.python.org/pypi/RsCMPX_NrFr2Meas/
+
+.. image:: https://img.shields.io/pypi/pyversions/pybadges.svg
+   :target: https://img.shields.io/pypi/pyversions/pybadges.svg
+
+.. image:: https://img.shields.io/pypi/dm/RsCMPX_NrFr2Meas.svg
+   :target: https://pypi.python.org/pypi/RsCMPX_NrFr2Meas/
+
+Rohde & Schwarz CMX/CMP New Radio FR2 Measurement RsCMPX_NrFr2Meas instrument driver.
+
+Basic Hello-World code:
+
+.. code-block:: python
+
+    from RsCMPX_NrFr2Meas import *
+
+    instr = RsCMPX_NrFr2Meas('TCPIP::192.168.2.101::hislip0')
+    idn = instr.query('*IDN?')
+    print('Hello, I am: ' + idn)
+
+Supported instruments: CMX500, CMP200
+
+The package is hosted here: https://pypi.org/project/RsCMPX-NrFr2Meas/
+
+Documentation: https://RsCMPX-NrFr2Meas.readthedocs.io/
+
+Examples: https://github.com/Rohde-Schwarz/Examples/
+
+
+Version history
+----------------
+
+	Latest release notes summary: Update for FW 5.0.90
+
+	Version 5.0.90
+		- Update for FW 5.0.90
+
+	Version 4.0.186
+		- Fixed documentation
+
+	Version 4.0.185
+		- Update for FW 4.0.185
+
+	Version 4.0.140
+		- Update of RsCMPX_NrFr2Meas to FW 4.0.140 from the complete FW package 7.10.0
+
+	Version 4.0.60
+		- Update of RsCMPX_NrFr2Meas to FW 4.0.60
+
+	Version 4.0.10
+		- First released version
