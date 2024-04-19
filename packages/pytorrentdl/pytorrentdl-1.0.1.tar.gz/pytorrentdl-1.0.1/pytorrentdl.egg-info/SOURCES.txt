@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+pytorrentdl/__init__.py
+pytorrentdl/cli.py
+pytorrentdl/downloader.py
+pytorrentdl/session.py
+pytorrentdl/torrent_downloader.py
+pytorrentdl/torrent_info.py
+pytorrentdl.egg-info/PKG-INFO
+pytorrentdl.egg-info/SOURCES.txt
+pytorrentdl.egg-info/dependency_links.txt
+pytorrentdl.egg-info/entry_points.txt
+pytorrentdl.egg-info/requires.txt
+pytorrentdl.egg-info/top_level.txt
