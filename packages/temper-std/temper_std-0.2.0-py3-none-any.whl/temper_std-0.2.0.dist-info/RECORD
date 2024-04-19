@@ -1,0 +1,11 @@
+temper_std/__init__.py,sha256=k0Ozm9RzXThsZ3v3auRTns7cX34Ierm7e7KF-soG8hU,95
+temper_std/__init__.py.map,sha256=8yc2KCRq_PWHuNgjjpebNE7w--hE3Yv3cniLWOGawtQ,106
+temper_std/regex.py,sha256=yhUurZ-1_j1jkuM6pURJzQ1XH-g-y__roPyhH-HN344,28586
+temper_std/regex.py.map,sha256=MU66dY9ZoUesftufmPD74dtKK1LQXvFj3DRuhjA0mSE,50476
+temper_std/temporal.py,sha256=vexgevYJfo4XXXY4s5Mhr-TOmosbRyDutGDzEH9Xm54,1974
+temper_std/temporal.py.map,sha256=jKNYsgVNNvuwsQEoDQDiajTpd4HMa5cbrj_GYU9EGQk,7395
+temper_std/testing.py,sha256=sNFKU9m8o0zWNT0bHYDZZb4VjknEidiqTtOSMgodyjU,7174
+temper_std/testing.py.map,sha256=e_cMoLXOONVW3YaVASHhVbLCE6gLK6QwAQAd4vdwvZM,14155
+temper_std-0.2.0.dist-info/METADATA,sha256=7wVSIadZyxKwSFi2FxsMQUyDJ6xSnnwG9z6bINsIdrA,632
+temper_std-0.2.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+temper_std-0.2.0.dist-info/RECORD,,
