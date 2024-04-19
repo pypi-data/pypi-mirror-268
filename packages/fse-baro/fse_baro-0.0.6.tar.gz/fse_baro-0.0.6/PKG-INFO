@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: fse-baro
+Version: 0.0.6
+Summary: BARO: Robust Root Cause Analysis for Microservices via Multivariate Bayesian Online Change Point Detection
+Author-email: Luan Pham <phamquiluan@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 Luan Pham
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+Requires-Dist: pytest
+Requires-Dist: tqdm
+Requires-Dist: requests
+Requires-Dist: matplotlib
+
+# BARO: Robust Root Cause Analysis for Microservices via Multivariate Bayesian Online Change Point Detection
+
+[![pypi package](https://img.shields.io/pypi/v/fse-baro.svg)](https://pypi.org/project/fse-baro)
+[![Build and test](https://github.com/phamquiluan/baro/actions/workflows/python-package.yml/badge.svg)](https://github.com/phamquiluan/baro/actions/workflows/python-package.yml)
+
+
+In the progress of preparing the Artifact submission:
+- Deadline 30/4
+- https://2024.esec-fse.org/track/fse-2024-artifacts#submission-for-replicated-and-reproduced-badges
+- Can apply for all three badges: Available, Function, Reusable
+
+TODO:
+
+- [ ] reproduce RobustScorer
+- [ ] reproduce BOCPD
+- [ ] make the API
+- [ ] restructure + lint code
+- [ ] better readme
+- [ ] make a Helm chart
+
+## Installation
+
+Build from source
+
+```bash
+git clone https://github.com/phamquiluan/baro.git && cd baro
+pip install -e .
+```
+
+Install from [PyPI](https://pypi.org/project/fse-baro)
+
+```bash
+pip install fse-baro
+```
+
+## How-to-use
+
+```python
+from baro import BARO
+
+m = BARO()
+
+anomalies = m.detect_anomalies(data)
+root_causes = m.rca(data, anomalies=anomalies)
+print(root_causes)
+```
+
+## Download Paper
+
+TBD
+
+## Download Datasets
+
+TBD 
+
+## Performance comparison
+
+TBD 
+
+## Citation
+
+```
+@inproceedings{pham2024baro,
+  title={BARO: Robust Root Cause Analysis for Microservices via Multivariate Bayesian Online Change Point Detection},
+  author={Luan Pham, Huong Ha, and Hongyu Zhang},
+  booktitle={Proceedings of the 32nd ACM Symposium on the Foundations of Software Engineering (FSE'24)},
+  year={2024},
+  organization={ACM}
+}
+```
