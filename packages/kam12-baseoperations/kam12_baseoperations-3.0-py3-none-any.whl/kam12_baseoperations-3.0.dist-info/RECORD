@@ -1,0 +1,10 @@
+kam12-baseactions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kam12-baseactions/exceptions.py,sha256=upGqZZ8UGx1YNaQNPhwIWYsXS9NHycQFkcgtjH_hS34,352
+kam12-baseactions/hidden_operation.py,sha256=RMeLEJ0AWpuUym95TDztB27Mv31kKOP2gnoGiMHkeE4,1810
+kam12-baseactions/main_operation.py,sha256=51SqUQagSpGZoHwA_BoCPqTglv8oyiWvDraloH8IDMM,15496
+kam12-baseactions/static_object.py,sha256=3u8yTdQDFqvXYTyH0_EkyQI-9c_qHJ_b4y4z-P0_yx4,3235
+kam12_baseoperations-3.0.dist-info/LICENCE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+kam12_baseoperations-3.0.dist-info/METADATA,sha256=AjLckmytZwfGTPl97mkQO8UX_Fm4w6zL1d2cQxplGOw,1243
+kam12_baseoperations-3.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+kam12_baseoperations-3.0.dist-info/top_level.txt,sha256=9bX2TLQMOjvOnaX8oRsCLklQs_EG6uVBD7mirUi9pwo,18
+kam12_baseoperations-3.0.dist-info/RECORD,,
