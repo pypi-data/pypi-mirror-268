@@ -1,0 +1,2 @@
+[console_scripts]
+installer = installer:main

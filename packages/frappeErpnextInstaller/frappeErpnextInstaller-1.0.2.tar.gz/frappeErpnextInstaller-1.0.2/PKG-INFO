@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: frappeErpnextInstaller
+Version: 1.0.2
+Summary: PIP Installer for Frappe Framework
+Author: Akinkunmi Nasiru
+Description-Content-Type: text/markdown
+
+Unattended script for Frappe ERPNext installation.
+
+This is a no-interactive script for installing Frappe ERPNext with very minimal interaction.
+
+# How To:
+To use this installer, follow these steps:
+
+# Before Installation
+```
+ACtivate WSL for windows
+```
+1. Right-click on the Windows Start menu icon, choose Search and type Windows Features. Select the top entry (category Control panel) to enable or turn off Windows-Features. The Windows-Features dialog will be opened.
+2. Select in the upcoming dialog the check box for Virtual Machine Platform from the bottom of the list and press the OK button. Applying the changes may take a few minutes. Finally, press the Restart now button to reboot the computer.
+3. Go to Microsoft Store and Download Ubuntu.
+
+Make sure you install the latest package versions by updating system packages if you are running this installer on a fresh Ubuntu machine.
+
+```
+sudo apt update && sudo apt -y upgrade
+```
+
+```
+pip3 install frappeErpnextInstaller
+```

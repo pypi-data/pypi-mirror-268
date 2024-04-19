@@ -1,0 +1,7 @@
+README.md
+setup.py
+frappeErpnextInstaller.egg-info/PKG-INFO
+frappeErpnextInstaller.egg-info/SOURCES.txt
+frappeErpnextInstaller.egg-info/dependency_links.txt
+frappeErpnextInstaller.egg-info/entry_points.txt
+frappeErpnextInstaller.egg-info/top_level.txt
