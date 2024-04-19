@@ -1,0 +1,8 @@
+setup.py
+srdetector/__init__.py
+srdetector/main.py
+srdetector.egg-info/PKG-INFO
+srdetector.egg-info/SOURCES.txt
+srdetector.egg-info/dependency_links.txt
+srdetector.egg-info/requires.txt
+srdetector.egg-info/top_level.txt

@@ -1,0 +1,8 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='srdetector',
+    version='0.3',
+    packages=find_packages(),
+    install_requires=['pandas>=2.1.1', 'numpy>=1.23.5', 'yfinance>=0.2.33', 'pandas-ta>=0.3.14b0']
+)
