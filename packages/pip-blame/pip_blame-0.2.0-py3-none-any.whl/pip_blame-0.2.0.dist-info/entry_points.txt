@@ -1,0 +1,3 @@
+[console_scripts]
+pip-blame=pip_blame:main
+
