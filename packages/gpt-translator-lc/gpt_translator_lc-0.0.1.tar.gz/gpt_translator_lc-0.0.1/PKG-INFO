@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: gpt_translator_lc
+Version: 0.0.1
+Summary: None
+Home-page: https://github.com/zc277584121/GPTTranslator
+Author: zc
+Author-email: 277584121@qq.com
+Requires-Dist: langchain
+Requires-Dist: langchain_community
+Requires-Dist: langchain_core
+Requires-Dist: langchain_openai
+Requires-Dist: tqdm
+Requires-Dist: argparse
