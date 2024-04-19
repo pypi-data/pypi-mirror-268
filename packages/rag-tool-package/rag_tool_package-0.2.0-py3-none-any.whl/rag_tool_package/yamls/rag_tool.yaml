@@ -1,0 +1,41 @@
+rag_tool_package.tools.rag_tool.rag_answer:
+  function: rag_answer
+  inputs:
+    input_file:
+      type:
+      - file_path
+    # connection:
+      # type:
+      # - CustomConnection
+    input_text:
+      type:
+      - string
+    model_name:
+      type:
+      - string
+      dynamic_list:
+        func_path: rag_tool_package.tools.rag_tool.list_model_names
+        func_kwargs: 
+        - name: group
+          type: 
+          - string
+          optional: true
+          # reference: ${inputs.input_prefix}
+          value: 'embbedings'
+      allow_manual_entry: false
+      is_multi_select: false
+    chunk_size:
+      type:
+      - int
+      optional: true
+      default: 1000
+    chunk_overlap:
+      type:
+      - int
+      optional: true
+      default: 200
+  module: rag_tool_package.tools.rag_tool
+  name: RAG Tool
+  description: This is custom tool with RAG (llamaindex)
+  type: python
+
