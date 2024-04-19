@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: marzpy
+Version: 0.0.5
+Summary: a simple application with python to manage Marzban panel
+Home-page: https://github.com/Mewhrzad/marzpy
+Author: Mewhrzad
+Keywords: marzpy,Marzban,Gozargah,Marzban python,Marzban API
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: aiohttp
+
+text/markdown
