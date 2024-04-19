@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: th-influx-sdk
+Version: 1.0.1
+Summary: A SDK for influxDb
+Author: xiongyi
+Author-email: 15679191752@163.com
+Description-Content-Type: text/markdown
+Requires-Dist: influxdb
+Requires-Dist: typing
+Requires-Dist: dateutil==2.9.0
+Requires-Dist: datetime
+Requires-Dist: collections
+Requires-Dist: json
+
+# -*- coding: utf-8 -*-
+influx sdk
+
