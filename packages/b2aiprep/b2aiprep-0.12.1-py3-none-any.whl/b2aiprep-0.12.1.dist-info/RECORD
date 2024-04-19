@@ -1,0 +1,13 @@
+b2aiprep/__init__.py,sha256=jMVE6eKegndV9O0lmGwPddirpw8Rn7Pdlqw5tyj2c4w,73
+b2aiprep/_version.py,sha256=G9E696wVlT1feF6baeJ8A9rJ5XoUJr-IGqj9qbNo6Kk,498
+b2aiprep/cli.py,sha256=1u7u1gjSEiQa7YKtrB6cKV0UvOqayhg9sP7mpME-cI4,10251
+b2aiprep/demographics.py,sha256=z2gEw2i8gzL0pBB4kLYSGQtI4LLAPXY12sINDpyG_es,4276
+b2aiprep/process.py,sha256=IQtzB-hijxhtz3RKkC9EoAmWwwEzzo9Uip52RnffWks,19245
+tests/test_speech_to_text.py,sha256=orR3giiM-T_Wc0n9rSqIJk55aqSapFVgznQrWgPBlSY,1076
+tests/test_voice_converstion.py,sha256=2rzskHIBFfdHGBcbffNvw_dHDB41grtc2G3ocW8WAqU,2734
+b2aiprep-0.12.1.dist-info/LICENSE,sha256=ieEKJ-VczfHpbzAARBk5cBwN-Qfu4_jjKLNpnH1JyAg,9161
+b2aiprep-0.12.1.dist-info/METADATA,sha256=4iItpBsit1GBIjYSl47PVRErOMHW9WvyxlnXlvOR-7s,14354
+b2aiprep-0.12.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+b2aiprep-0.12.1.dist-info/entry_points.txt,sha256=ky6iIlvk40eyZObeZVSHyLAzERAsD8yaDjZBRzWzpYE,51
+b2aiprep-0.12.1.dist-info/top_level.txt,sha256=AHHKJPf37kQsBe5iI2L4m6hjVlVPltrwazhpXftzpts,15
+b2aiprep-0.12.1.dist-info/RECORD,,
