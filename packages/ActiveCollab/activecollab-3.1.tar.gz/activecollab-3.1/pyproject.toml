@@ -1,0 +1,32 @@
+[project]
+name = "ActiveCollab"
+authors = [
+  { name="Ankushtpss", email="ankushkumartpss@gmail.com" },
+]
+description = "A python library working with activeCollab"
+keywords = ["Active Collab", "ActiveCollab",  "Active Collab SDK", "active collab"]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "requests",
+    "sys",
+]
+
+version = "3.1"
+
+[tool.setuptools_scm]
+
+[project.urls]
+"Homepage" = "https://github.com/Ankushtpss/ActiveCollab"
+"Bug Tracker" = "https://github.com/Ankushtpss/ActiveCollab/issues"
+
+
+[build-system]
+requires = ["setuptools","setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
