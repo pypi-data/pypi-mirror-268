@@ -1,0 +1,14 @@
+localcosmos-server
+localcosmos-cordova-builder
+localcosmos-app-kit-taxonomy
+django-tenants==3.4.7
+django-cleanup==6.0.0
+django-ipware==4.0.2
+django-filter==22.1
+lxml
+xlrd==2.0.1
+openpyxl==3.0.10
+deepl
+opencv-python
+opencv-python-headless
+unidecode
