@@ -1,0 +1,27 @@
+[project]
+name = "soleil"
+version = "0.1.1"
+authors = [
+  { name="Joaquin Zepeda", email="jazs.pro@gmail.com" },
+]
+description = "Object configuration system"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["jztools", "climax", "rich", "freezegun"] #freezegun for tests
+keywords = ["configuration", "Machine Learning", "object oriented"]
+
+[project.urls]
+Homepage = "https://github.com/zepedaj/soleil"
+Issues = "https://github.com/zepedaj/soleil/issues"
+Documentation = "https://soleil.readthedocs.io/en/latest/"
+
+[tool.hatch.build]
+exclude = ['tests', 'data_for_tests']
+
+[tool.hatch.extras_require]
+examples = ['soleil_examples']
