@@ -1,0 +1,6 @@
+numpy
+gymnasium
+pygame
+pettingzoo
+matplotlib
+numba
