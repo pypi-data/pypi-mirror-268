@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: news_dashboard
+Version: 0.1
+Summary: A Python library for fetching news articles using the News API
+Home-page: https://github.com/dvaishnavi8631/dvaish_private.git
+Author: Vaishnavi Deshpande
+Author-email: x23183209@student.ncirl.ie
+Requires-Dist: requests
+
