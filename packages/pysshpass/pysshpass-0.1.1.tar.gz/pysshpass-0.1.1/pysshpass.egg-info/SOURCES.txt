@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+PySSHPass/__init__.py
+PySSHPass/pysshpass.py
+pysshpass.egg-info/PKG-INFO
+pysshpass.egg-info/SOURCES.txt
+pysshpass.egg-info/dependency_links.txt
+pysshpass.egg-info/entry_points.txt
+pysshpass.egg-info/requires.txt
+pysshpass.egg-info/top_level.txt

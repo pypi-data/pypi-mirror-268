@@ -1,0 +1,3 @@
+[console_scripts]
+pysshpass = PySSHPass.pysshpass:ssh_client
+
