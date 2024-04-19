@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: lyk-reservation-nowon
+Version: 0.0.5
+Summary: lyk-reservation-nowon
+Author: officeyongki
+Author-email: officeyongki@gmail.com
+Keywords: reservation,lyk,pypi
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10
