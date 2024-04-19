@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: MailCraft
+Version: 0.0.2
+Summary: A easy way to create your mail server and and mail templates.
+Project-URL: Homepage, https://github.com/Preet-taparia/MailCraft
+Project-URL: Issues, https://github.com/Preet-taparia/MailCraft/issues
+Author-email: Preet Taparia <preettaparia@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Mail Craft
+
+A easy way to create your mail server and and mail templates.
+
+Currently only testing its publishing.
