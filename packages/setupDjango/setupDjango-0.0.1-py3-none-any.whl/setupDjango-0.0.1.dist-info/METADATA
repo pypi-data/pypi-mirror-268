@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: setupDjango
+Version: 0.0.1
+Summary: This package makes the Django environment simple to set.
+Home-page: https://github.com/rhenus9911/webpro
+Download-URL: https://github.com/rhenus9911/webpro/
+Author: jeonghoonbae
+Author-email: jeonghoon9911@naver.com
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
