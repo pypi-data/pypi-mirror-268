@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+invariantkernels/__init__.py
+invariantkernels/group_invariant_kernel.py
+invariantkernels/transformation_groups.py
+invariantkernels.egg-info/PKG-INFO
+invariantkernels.egg-info/SOURCES.txt
+invariantkernels.egg-info/dependency_links.txt
+invariantkernels.egg-info/requires.txt
+invariantkernels.egg-info/top_level.txt
