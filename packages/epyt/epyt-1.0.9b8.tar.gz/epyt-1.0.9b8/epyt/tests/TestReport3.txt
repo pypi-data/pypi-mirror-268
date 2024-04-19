@@ -1,0 +1,78 @@
+  Page 1                                    Fri Apr 19 10:35:20 2024
+
+  ******************************************************************
+  *                           E P A N E T                          *
+  *                   Hydraulic and Water Quality                  *
+  *                   Analysis for Pipe Networks                   *
+  *                         Version 2.2                            *
+  ******************************************************************
+  
+   EPANET Example Network 1
+  A simple example of modeling chlorine decay. Both bulk and
+  wall reactions are included. 
+   
+      Input Data File ................... C:\Users\mkiri\OneDrive - University of Cyprus\GITHUB\EPyT\epyt\networks\asce-tf-wdst\Net1_temp.inp
+      Number of Junctions................ 9
+      Number of Reservoirs............... 1
+      Number of Tanks ................... 1
+      Number of Pipes ................... 12
+      Number of Pumps ................... 1
+      Number of Valves .................. 0
+      Headloss Formula .................. Hazen-Williams
+      Nodal Demand Model ................ DDA
+      Hydraulic Timestep ................ 1.00 hrs
+      Hydraulic Accuracy ................ 0.001000
+      Status Check Frequency ............ 2
+      Maximum Trials Checked ............ 10
+      Damping Limit Threshold ........... 0.000000
+      Maximum Trials .................... 40
+      Quality Analysis .................. Chlorine
+      Water Quality Time Step ........... 5.00 min
+      Water Quality Tolerance ........... 0.01 mg/L
+      Specific Gravity .................. 1.00
+      Relative Kinematic Viscosity ...... 1.00
+      Relative Chemical Diffusivity ..... 1.00
+      Demand Multiplier ................. 1.00
+      Total Duration .................... 24.00 hrs
+      Reporting Criteria:
+         All Nodes
+         All Links
+   
+   
+  AVERAGE Node Results:
+  --------------------------------------------------------
+                     Demand      Head  Pressure  Chlorine
+  Node                  gpm        ft       psi      mg/L
+  --------------------------------------------------------
+  10                   0.00   1018.99    133.89      1.00
+  11                 240.00   1001.90    126.48      0.87
+  12                 240.00    988.62    125.06      0.79
+  13                 160.00    987.34    126.67      0.60
+  21                 240.00    989.42    125.41      0.75
+  22                 320.00    987.44    126.72      0.63
+  23                 240.00    987.04    128.71      0.50
+  31                 160.00    985.38    123.65      0.58
+  32                 160.00    983.83    118.65      0.50
+  9                    0.00    800.00      0.00      1.00  Reservoir
+  2                 1029.42    988.57     60.04      1.00  Tank
+   
+   
+  AVERAGE Link Results:
+  ----------------------------------------------
+                       Flow  Velocity  Headloss
+  Link                  gpm       fps   /1000ft
+  ----------------------------------------------
+  10                1909.42      2.41      1.89
+  11                1310.99      2.73      3.21
+  12                 257.86      1.05      0.81
+  21                 235.69      0.96      0.69
+  22                 142.19      0.40      0.11
+  31                  49.99      0.57      0.47
+  110               1100.00      1.39      0.68
+  111                531.34      2.17      3.10
+  112                491.04      1.39      1.10
+  113                 97.86      0.62      0.40
+  121                209.99      1.34      1.65
+  122                110.02      1.25      2.02
+  9                 1909.42      0.00      0.00  Pump
+   

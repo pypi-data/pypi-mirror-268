@@ -1,0 +1,109 @@
+[TITLE]
+NET3 Chloramine Decay Example
+
+
+[SPECIES]
+BULK    HOCL                             MMOL            1.000000e-08 1.000000e-04
+BULK    NH3                              MMOL            1.000000e-08 1.000000e-04
+BULK    NH2CL                            MMOL            1.000000e-08 1.000000e-04
+BULK    NHCL2                            MMOL            1.000000e-08 1.000000e-04
+BULK    I                                MMOL            1.000000e-08 1.000000e-04
+BULK    OCL                              MMOL            1.000000e-08 1.000000e-04
+BULK    NH4                              MMOL            1.000000e-08 1.000000e-04
+BULK    ALK                              MMOL            1.000000e-08 1.000000e-04
+BULK    H                                MMOL            1.000000e-08 1.000000e-04
+BULK    OH                               MMOL            1.000000e-08 1.000000e-04
+BULK    CO3                              MMOL            1.000000e-08 1.000000e-04
+BULK    HCO3                             MMOL            1.000000e-08 1.000000e-04
+BULK    H2CO3                            MMOL            1.000000e-08 1.000000e-04
+BULK    TOC                              MG              1.000000e-08 1.000000e-04
+BULK    cNH3                             MG              1.000000e-08 1.000000e-04
+BULK    cNH2CL                           MG              1.000000e-08 1.000000e-04
+
+[COEFFICIENTS]
+CONSTANT    S1                                2.000000e-02
+CONSTANT    S2                                5.000000e-01
+PARAMETER   k1                                1.500000e+10
+PARAMETER   k2                                7.600000e-02
+PARAMETER   k3                                1.000000e+06
+PARAMETER   k4                                2.300000e-03
+PARAMETER   k6                                2.200000e+08
+PARAMETER   k7                                4.000000e+05
+PARAMETER   k8                                1.000000e+08
+PARAMETER   k9                                3.000000e+07
+PARAMETER   k10                               5.500000e+01
+PARAMETER   kDOC1                             3.000000e+04
+PARAMETER   kDOC2                             6.500000e+05
+
+[OPTIONS]
+AREA_UNITS  FT2
+RATE_UNITS  HR
+SOLVER      ROS2
+COUPLING    NONE
+COMPILER    NONE
+TIMESTEP    300
+RTOL        0.0001
+ATOL        1.0e-8
+
+[TERMS]
+ k5    (2.5e7*H) + (4.0e4*H2CO3) + (800*HCO3)
+ a1    k1*HOCL*NH3
+ a2    k2*NH2CL
+ a3    k3*HOCL*NH2CL
+ a4    k4*NHCL2
+ a5    k5*NH2CL*NH2CL
+ a6    k6*NHCL2*NH3*H
+ a7    k7*NHCL2*OH
+ a8    k8*I*NHCL2
+ a9    k9*I*NH2CL
+ a10   k10*NH2CL*NHCL2
+ a11   kDOC1*S1*TOC*NH2CL/12000
+ a12   kDOC2*S2*TOC*HOCL/12000
+
+[PIPE]
+RATE   HOCL    -a1 + a2 - a3 + a4 + a8 - a12
+RATE   NH3     -a1 + a2 + a5 - a6 + a11
+RATE   NH2CL    a1 - a2 - a3 + a4 - a5 + a6 - a9 - a10 - a11
+RATE   NHCL2    a3 - a4 + a5 - a6 - a7 - a8 - a10
+RATE   I        a7 - a8 - a9
+RATE   H        0
+RATE   ALK      0
+RATE   TOC      0
+EQUIL  OCL    H*OCL - 3.16E-8*HOCL
+EQUIL  NH4    H*NH3 - 5.01E-10*NH4
+EQUIL  CO3    H*CO3 - 5.01E-11*HCO3
+EQUIL  H2CO3  H*HCO3 - 5.01E-7*H2CO3
+EQUIL  HCO3   ALK - HCO3 - 2*CO3 - OH + H
+EQUIL  OH     H*OH - 1.0E-14
+FORMULA     cNH3     17000*NH3
+FORMULA     cNH2CL   51500*NH2CL
+
+
+[REPORT]
+NODES   ALL
+LINKS   ALL
+SPECIE  cNH3   YES  4
+SPECIE  cNH2CL YES  4
+
+
+
+[PARAMETERS]
+
+[QUALITY]
+NODE    4                                 NH2CL                             5.000000e-05
+NODE    5                                 NH2CL                             5.000000e-05
+GLOBAL  ALK                               4.000000e-03
+GLOBAL  H                                 2.818000e-08
+GLOBAL  OH                                3.550000e-07
+NODE    4                                 TOC                               1.500000e+00
+NODE    5                                 TOC                               3.000000e+00
+
+[SOURCES]
+SETPOINT    10                                TOC                               2.000000e+00
+CONC        15                                HOCL                              8.000000e-01
+MASS        20                                NH3                               5.000000e-01
+FLOW        35                                NH2CL                             4.500000e+00
+
+[PATTERNS]
+PAT1                              1.900000e+02
+PAT2                              2.000000e+01

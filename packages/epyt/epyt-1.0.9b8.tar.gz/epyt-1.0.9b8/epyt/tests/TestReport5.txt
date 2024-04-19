@@ -1,0 +1,50 @@
+  Page 1                                    Fri Apr 19 10:35:21 2024
+
+  ******************************************************************
+  *                           E P A N E T                          *
+  *                   Hydraulic and Water Quality                  *
+  *                   Analysis for Pipe Networks                   *
+  *                         Version 2.2                            *
+  ******************************************************************
+  
+   EPANET Example Network 1
+  A simple example of modeling chlorine decay. Both bulk and
+  wall reactions are included. 
+   
+      Input Data File ................... C:\Users\mkiri\OneDrive - University of Cyprus\GITHUB\EPyT\epyt\networks\asce-tf-wdst\Net1_temp.inp
+      Number of Junctions................ 9
+      Number of Reservoirs............... 1
+      Number of Tanks ................... 1
+      Number of Pipes ................... 12
+      Number of Pumps ................... 1
+      Number of Valves .................. 0
+      Headloss Formula .................. Hazen-Williams
+      Nodal Demand Model ................ DDA
+      Hydraulic Timestep ................ 1.00 hrs
+      Hydraulic Accuracy ................ 0.001000
+      Status Check Frequency ............ 2
+      Maximum Trials Checked ............ 10
+      Damping Limit Threshold ........... 0.000000
+      Maximum Trials .................... 40
+      Quality Analysis .................. Chlorine
+      Water Quality Time Step ........... 5.00 min
+      Water Quality Tolerance ........... 0.01 mg/L
+      Specific Gravity .................. 1.00
+      Relative Kinematic Viscosity ...... 1.00
+      Relative Chemical Diffusivity ..... 1.00
+      Demand Multiplier ................. 1.00
+      Total Duration .................... 24.00 hrs
+      Reporting Criteria:
+         No Nodes
+         Selected Links
+   
+   
+  Link Results at 0:00:00 hrs:
+  --------------------------
+                       Flow
+  Link                  gpm
+  --------------------------
+  10                1909.42
+  11                1310.99
+  12                 257.86
+   
