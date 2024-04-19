@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: a3consul
+Version: 0.1.0
+Summary: It is just a thin wrapper of py-consul.
+Home-page: https://github.com/three-kinds/a3consul
+Author: three-kinds
+Author-email: 3179158552@qq.com
+License: Apache 2.0
+Project-URL: Documentation, https://github.com/three-kinds/a3consul
+Project-URL: Source, https://github.com/three-kinds/a3consul
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: a3py>=0.1.9
+Requires-Dist: py-consul>=1.4.1
+
+# a3consul
+
+It is just a thin wrapper of py-consul.
+
+[History.](HISTORY.md)
+
+## Install
+
+```shell script
+pip install a3consul
+
+```
