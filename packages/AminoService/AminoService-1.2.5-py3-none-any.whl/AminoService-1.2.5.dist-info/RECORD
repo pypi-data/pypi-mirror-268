@@ -1,0 +1,15 @@
+AminoService/__init__.py,sha256=hgi5mgX-_dtvJ_fHcrGPg22HffXgCL5nmorXgVtB98k,974
+AminoService/acm.py,sha256=fRw2yFA22HmemjfQTqpHg1nc7KodzsApWs4Ko_G99Mw,12546
+AminoService/client.py,sha256=HKcmVITqB1jdbWzZH4lQj6ETg4Ak2lqXcY-StitHLbQ,97891
+AminoService/socket.py,sha256=1EzIGmxQqlHbkwWDfpV4AGE2_ftRn3W_NXNG4GxUgLM,14394
+AminoService/sub_client.py,sha256=rdkCLGDE8iXgggktyoFFSZIwkvR1NOhiieRuNrvp3Q4,118411
+AminoService/lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+AminoService/lib/util/__init__.py,sha256=P6r3_pqgJpktspmZTd_krWTW1niVUw6g-YQ3mBws2cU,226
+AminoService/lib/util/exceptions.py,sha256=PQ4aTXqjoi1d25-RHLIFjlbVrGOd9zD32Us0rs5gOG8,24159
+AminoService/lib/util/headers.py,sha256=iSWTLdyLlg60-qJYXmJq9OX2G7IvYudjKsE21QLA3r0,4004
+AminoService/lib/util/helpers.py,sha256=5IXVpHCUlMy9nISOntDtrUsYLtQC7hSI3y5bhfSeQQ8,2211
+AminoService/lib/util/objects.py,sha256=wpKenc0-JgzOaR9gTILDJCNlWcOMzEGWo7PZ4bal_6E,200353
+AminoService-1.2.5.dist-info/METADATA,sha256=pLI6RxnVZuyhx-mnrvKZLYXVXARv4wJP_W69WNxY7KM,540
+AminoService-1.2.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+AminoService-1.2.5.dist-info/top_level.txt,sha256=3P510N4jwZOXOY1GVaYLeLFVPeewOKLH_NkmPqIg8r4,13
+AminoService-1.2.5.dist-info/RECORD,,
