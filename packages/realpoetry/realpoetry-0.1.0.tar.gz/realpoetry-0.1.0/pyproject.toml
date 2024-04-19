@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "realpoetry"
+version = "0.1.0"
+description = ""
+authors = ["Ars123z <arsalannaziri0786@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.3"
+mysqlclient = {version = "^2.2.4", optional = true}
+psycopg2-binary = {version = "^2.9.9", optional = true}
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.0"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+mypy = "^1.9.0"
+pylint = "^3.1.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+faker = "^24.11.0"
+requests-mock = "^1.12.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

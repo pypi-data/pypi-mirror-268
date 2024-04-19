@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: realpoetry
+Version: 0.1.0
+Summary: 
+Author: Ars123z
+Author-email: arsalannaziri0786@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: mysqlclient (>=2.2.4,<3.0.0)
+Requires-Dist: psycopg2-binary (>=2.9.9,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
