@@ -1,0 +1,3 @@
+[whyis]
+whyis_activity_agent = whyis_activitystreams.activity_agent:ActivityAgent
+whyis_activitystreams = whyis_activitystreams:ActivityStreamsPlugin
