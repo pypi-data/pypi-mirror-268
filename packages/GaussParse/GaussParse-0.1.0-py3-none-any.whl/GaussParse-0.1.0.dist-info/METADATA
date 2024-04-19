@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: GaussParse
+Version: 0.1.0
+Summary: GaussParse is a python package to parse Gaussian output files.
+Home-page: UNKNOWN
+Author: Sina Gilassi
+Author-email: <sina.gilassi@gmail.com>
+License: MIT
+Keywords: python,Gaussian Software,Computational Chemistry
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: xlsxwriter
+Requires-Dist: docx
+
+
+# GaussParse
+
+GaussParse is a python package to parse Gaussian output files.
+
+
+
