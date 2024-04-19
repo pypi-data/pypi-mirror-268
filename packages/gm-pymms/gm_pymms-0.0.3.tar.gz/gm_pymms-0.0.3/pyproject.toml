@@ -1,0 +1,9 @@
+[build-system]
+include = ["gm_pymms"]
+requires = [
+    "pydub",
+    "gm_termcontrol",
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
