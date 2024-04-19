@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+packageplayer/__init__.py
+packageplayer/packager.py
+packageplayer/player.py
+packageplayer.egg-info/PKG-INFO
+packageplayer.egg-info/SOURCES.txt
+packageplayer.egg-info/dependency_links.txt
+packageplayer.egg-info/top_level.txt
