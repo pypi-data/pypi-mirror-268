@@ -1,0 +1,11 @@
+src/wordx/__init__.py,sha256=DVHrasZVFC53AEZBHU4ddcaBmJBcyPVMTzKd7oQK5BQ,146
+src/wordx/document.py,sha256=h6RN5dtEeHv4LwjoQExJ1-RKbNy3rWNeHdtQ8g30-M4,1799
+src/wordx/mixins.py,sha256=mggIr-R3X9Hwk205G0bjaKrKFsX95HXJbU6KTT3RoeY,1864
+src/wordx/sheet.py,sha256=vksku2ENo1KZfW_lRid2hb9pmcfnglGNsHA0TuoXyB8,1769
+src/wordx/word_file.py,sha256=dBncIUBnnoLkN2xdDKFeEXmkSeWWwOaqLJgPvPY3-Qk,3756
+src/wordx/utils/fake_zip.py,sha256=7AYx5BJybROrTZpXFgMXynpT1Sz-1gNkycnOKaZ2HhI,1176
+src/wordx/utils/tree.py,sha256=sWK8TXLvu_46NZMqxW3s1xOMXHkKOFhtwgVptuN-5Q4,325
+tool/utility.py,sha256=_c6GLuiQRKVAzEGav2uvg27Lc2yXve3CClAeTu6CRZk,4636
+xl_word-0.4.8.dist-info/METADATA,sha256=L8nHVlCWE27OVtiSLj8YHfTSegfDvrFG7SIpr1smto8,472
+xl_word-0.4.8.dist-info/WHEEL,sha256=KGYbc1zXlYddvwxnNty23BeaKzh7YuoSIvIMO4jEhvw,87
+xl_word-0.4.8.dist-info/RECORD,,
