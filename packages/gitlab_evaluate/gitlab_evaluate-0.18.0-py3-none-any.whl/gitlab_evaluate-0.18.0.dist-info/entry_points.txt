@@ -1,0 +1,4 @@
+[console_scripts]
+evaluate-gitlab=gitlab_evaluate.main:evaluate_gitlab
+evaluate-jenkins=gitlab_evaluate.main:evaluate_jenkins
+
