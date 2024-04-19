@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mopp
+Version: 0.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Sherlyn Weng (@sherlyn99)
+Author-email: y1weng@ucsd.edu
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: Click
+Requires-Dist: pandas
+
+UNKNOWN
+

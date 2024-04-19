@@ -1,0 +1,17 @@
+mopp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mopp/_defaults.py,sha256=bbhgIR25rmbh3xZsJ4_Tw07yA9aH3M30crrUx8-Z-2s,2641
+mopp/mopp.py,sha256=0aenj96dxZDXZAa1urnFjAHuMhPYJDIrHcy-ZYk_oNM,8895
+mopp/modules/__init__.py,sha256=7D0E4soQttyoqyD9RCwGjSDGGBR4bqSIBoyRTRk7hWM,156
+mopp/modules/align.py,sha256=t-hAeaUctOJu9RigN5a1lnxb_DdGCi4hoYbxpK71VeA,1931
+mopp/modules/coverages.py,sha256=aF08XPiQPwQ6ThpjUVo1kyUI9nyWtUbwgjF74zFOrFg,1297
+mopp/modules/features.py,sha256=NAkmwcgJI4TMf_iGoHOWc8vzyLTqri47AlvqOPG5w60,3895
+mopp/modules/index.py,sha256=Ki4VPSnFugjl-OSU1gRlhwIgrIUP5THB4IBoH1MKs6Q,6229
+mopp/modules/metadata.py,sha256=hCYAwdB2PqflvL_QQ0H7bARksSleSZLTRq68O61Bp14,2037
+mopp/modules/trim.py,sha256=hxbeQareiSJcHaifDcKNprEvQqbXesXDKO-BMnww3pw,4697
+mopp/modules/utils.py,sha256=9aa6NJZ2A9q_XtnzUR67EBWdofjmM6Ci71zkllju6iI,1321
+mopp-0.0.1.dist-info/LICENSE,sha256=tBlrpVHH8NXuq3WrqHyJbqVqT0NohYCQt-TuSo24FVc,1496
+mopp-0.0.1.dist-info/METADATA,sha256=g9Pq8n5KG1h0BGt4IBr_sAgwAz-uCUQdmh6D76U7QnU,258
+mopp-0.0.1.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mopp-0.0.1.dist-info/entry_points.txt,sha256=rmRDDsYJGQUnYSXAcSnYXh2pyyux_a7Q_uYIiidfdJ0,41
+mopp-0.0.1.dist-info/top_level.txt,sha256=5WWLwIl2lkqAPQeQazoK3JdEqeQhAnv2Op-Qi-hS-rg,5
+mopp-0.0.1.dist-info/RECORD,,
