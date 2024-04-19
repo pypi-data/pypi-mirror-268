@@ -1,0 +1,92 @@
+[tool.poetry]
+name = "depot_api"
+version = "1.0.0"
+description = "FastAPI"
+authors = [
+    "OpenAPI Generator Community <team@openapitools.org>",
+]
+license = "NoLicense"
+readme = "README.md"
+repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+keywords = [
+    "OpenAPI",
+    "OpenAPI-Generator",
+    "FastAPI",
+]
+include = [
+    "depot_api/py.typed",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+urllib3 = ">= 1.25.3"
+python-dateutil = ">=2.8.2"
+pydantic = ">=2"
+typing-extensions = ">=4.7.1"
+
+[tool.poetry.dev-dependencies]
+pytest = ">=7.2.1"
+tox = ">=3.9.0"
+flake8 = ">=4.0.0"
+types-python-dateutil = ">=2.8.19.14"
+mypy = "1.4.1"
+
+[tool.pdm]
+
+[tool.pylint."MESSAGES CONTROL"]
+extension-pkg-whitelist = "pydantic"
+
+[tool.mypy]
+files = [
+    "depot_api",
+    "tests",
+]
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+strict_equality = true
+strict_concatenate = true
+check_untyped_defs = true
+disallow_subclassing_any = true
+disallow_untyped_decorators = true
+disallow_any_generics = true
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+authors = [
+    { name = "OpenAPI Generator Community", email = "team@openapitools.org" },
+    { name = "OpenAPI Generator community", email = "team@openapitools.org" },
+    { name = "CodeDepot Team", email = "contact@codedepot.ai" },
+]
+requires-python = "<4.0,>=3.7"
+dependencies = [
+    "urllib3>=1.25.3",
+    "python-dateutil>=2.8.2",
+    "pydantic>=2",
+    "typing-extensions>=4.7.1",
+    "pydantic >= 2",
+    "python-dateutil",
+    "typing-extensions >= 4.7.1",
+    "urllib3 >= 1.25.3, < 2.1.0",
+]
+name = "depot-api"
+version = "1.0.1"
+description = "FastAPI client for the Depot API"
+readme = "README.md"
+keywords = [
+    "OpenAPI",
+    "OpenAPI-Generator",
+    "FastAPI",
+]
+
+[project.license]
+text = "NoLicense"
+
+[project.urls]
+repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
+Homepage = "https://codedepot.ai"
