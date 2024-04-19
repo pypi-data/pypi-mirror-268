@@ -1,0 +1,114 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  pull-requests: write
+
+jobs:
+  # Build the docs and update the PR description w/ a link to readthedocs
+  # https://github.com/readthedocs/actions/tree/main/preview
+  documentation-links:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: readthedocs/actions/preview@v1
+        with:
+          project-slug: "ridgeplot"
+
+  # Run static checks only for Ubuntu and Python 3.8
+  static-checks:
+    name: Static checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-python
+        with:
+          python-version: "3.8"
+          requirements: tox
+      # Instead of running all checks in one task (i.e., `tox -m static`),
+      # we'll instead run them one-by-one, so that it's easier to
+      # identify and debug failing tests in the GitHub UI.
+      - name: Run static checks with pre-commit
+        shell: bash
+        run: tox -e pre-commit
+      - name: Run type checks with mypy
+        shell: bash
+        run: tox -e mypy
+
+  # Run test suits for all platforms and Python versions
+  software-tests:
+    name: Software tests
+    strategy:
+      matrix:
+        python-version:
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
+        os:
+          - ubuntu-latest
+          # There shouldn't be any behavior differences between
+          # OSes, so we'll only run the test suite on Ubuntu for now.
+          # Also, since I (the main maintainer) develop on a macOS
+          # machine, I'll run the tests locally on macOS before
+          # merging any PRs or releasing new versions. This should
+          # be sufficient and will speed up the CI process...
+          # - macos-latest
+          # - windows-latest
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup-python
+        with:
+          python-version: "${{ matrix.python-version }}"
+          requirements: tox
+
+      # Instead of running all tests in one task (i.e., `tox -m tests`),
+      # we'll instead run them one-by-one, so that it's easier to
+      # identify and debug failing tests in the GitHub UI.
+
+      - name: Run unit tests
+        shell: bash
+        run: tox -e tests-unit
+        env:
+          DIFF_AGAINST: HEAD
+
+      - name: Run doctests
+        shell: bash
+        run: tox -e doctests
+
+      - name: Run E2E tests
+        shell: bash
+        run: tox -e tests-e2e
+
+      - name: Test the `extras` utilities
+        shell: bash
+        run: tox -e tests-extras
+
+      # Upload coverage reports to Codecov and Codacy.
+
+      - name: Upload coverage to codecov
+        uses: codecov/codecov-action@v3
+        env:
+          OS: "${{ matrix.os }}"
+          PYTHON: "${{ matrix.python-version }}"
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          env_vars: OS,PYTHON
+          fail_ci_if_error: true
+          verbose: true
+
+      - name: Upload coverage to codacy
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: coverage.xml

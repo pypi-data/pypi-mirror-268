@@ -1,0 +1,40 @@
+name: Release workflow
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-python
+        with:
+          python-version: "3.8"
+          requirements: tox
+      - name: Generate release notes
+        run: tox -e release-notes
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: LATEST_RELEASE_NOTES.md
+
+  build-and-publish-to-pypi:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup-python
+        with:
+          python-version: "3.8"
+          requirements: tox
+      - name: Build and publish a release to TestPyPI
+        env:
+          TWINE_PASSWORD: "${{ secrets.PYPI_TOKEN_TEST }}"
+        run: tox -e publish-pypi-test
+      - name: Build and publish a release PyPI
+        env:
+          TWINE_PASSWORD: "${{ secrets.PYPI_TOKEN }}"
+        run: tox -e publish-pypi-prod
