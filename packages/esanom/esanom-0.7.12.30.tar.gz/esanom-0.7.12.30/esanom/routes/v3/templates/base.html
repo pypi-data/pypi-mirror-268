@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+{% macro linebreaks_for_string( the_string ) -%}
+{% if the_string %}
+{% for line in the_string.split('\n') %}
+<p>{{ line }}</p>
+{% endfor %}
+{% else %}
+{{ the_string }}
+{% endif %}
+{%- endmacro %}
+
+<head>
+{% include( "inc_page_head.html" ) %}
+</head>
+
+<body class="d-flex flex-column h-100">
+
+<header>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top zbg-dark" style="background-color: #335e6f;">
+<div class="container-fluid">
+{% include( "inc_page_header.html" ) %}
+</div>
+</nav>
+</header>
+
+<!-- -->
+<main class="flex-shrink-0">
+
+{% if _tdata["is_loggedin"] and _tdata["is_admin"] %}
+{% include( "inc_debug.html" ) %}
+{% endif %}
+
+{% if _tdata["is_loggedin"] %}
+{% include( "inc_loggedin_nav.html" ) %}
+{% endif %}
+
+
+<div class="container pt-3">
+<h1>{% block main_title %}{% endblock %}</h1>
+{% block main_content %}{% endblock %}
+</div>
+</main>
+<!-- -->
+
+<div>&nbsp;</div>
+
+<!-- -->
+<footer class="footer mt-auto py-2 bg-body-tertiary text-center text-muted">
+<div class="container">
+{% include( "inc_page_footer.html" ) %}
+</div>
+</footer>
+<!-- -->
+
+<script src="{{ url_for('.static',filename='bootstrap.bundle.min.js',_=_tdata['nom_version'])}}"></script>
+<script src="{{ url_for('.static',filename='htmx.min.js',_=_tdata['nom_version'])}}"></script>
+<script src="{{ url_for('.static',filename='datatables.min.js',_=_tdata['nom_version'])}}"></script>
+<script src="{{ url_for('.static',filename='main.js',_=_tdata['nom_version'])}}"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+<tbody>
+
+{% for row in tdata["rows"] %}
+
+<tr>
+
+{% for column in tdata["columns"] %}
+
+{% if column=="uid" %}
+    <td class="text-center"><a class="link-underline-light" href="{{ url_for('.page_models_read',uid=row['uid']) }}">👁</a></td>
+
+{% elif column=="[heartbeat_last]" %}
+    <td>
+    {% if row[column]<20 %}
+        <span class="badge bg-success text-light">ONLINE</span>
+    {% else %}
+        <span class="badge bg-warning text-dark">Since {{row[column]}} seconds</span>
+    {% endif %}
+    </td>
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+

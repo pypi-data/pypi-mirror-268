@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ADMIN GROUP UPDATE{% endblock %}
+
+{% block main_content %}
+
+<div>name: {{tdata["row"]["name"]}}</div>
+<div>enable: {{tdata["row"]["enable"]}}</div>
+
+<div class="col-3 bg-light p-3 border">
+{% include( "pages/admin_group_update/inc_form.html" ) %}
+</div>
+
+<div id="hx-results">FOO</div>
+
+{% endblock %}
+
