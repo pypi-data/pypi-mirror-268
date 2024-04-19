@@ -1,0 +1,29 @@
+name: "Run tests"
+description: "Run tests"
+inputs:
+  python-version:
+    description: "Which Python version to run on"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout (GitHub)
+      uses: actions/checkout@v4
+
+    - name: Replace python version in Dockerfile
+      shell: bash
+      run: |
+        sed -i '/python:.*/c\FROM python:${{ inputs.python-version }}' Dockerfile
+
+    - name: Create github hosts file
+      shell: bash
+      run: | # If this file is not created, the dev container fails because of non-existent mount
+        mkdir -p ~/.config/gh
+        touch ~/.config/gh/hosts.yml
+
+    - name: Pre-build dev container image
+      uses: devcontainers/ci@v0.3
+      with:
+        runCmd: |
+          inv test --pytest-args "src/" --pytest-args --pytest-args "--cov=src" --pytest-args "--cov-report term-missing" --pytest-args="--color=yes" --pytest-args="-n auto"
