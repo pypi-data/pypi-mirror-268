@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: tshet-uinh-encoder
+Version: 0.6.0
+Summary: A Python library for the operating the basic structure of the Tshet-uinh phonological system
+Author-email: nk2028 Developers <support@nk2028.shn.hk>
+Project-URL: Homepage, https://github.com/nk2028/tshet-uinh-encoder-python
+Project-URL: Issues, https://github.com/nk2028/tshet-uinh-encoder-python/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Topic :: Text Processing :: Linguistic
+Classifier: Natural Language :: Chinese (Traditional)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Tshet-uinh Encoder Python
+
+A Python library for the operating the basic structure of the Tshet-uinh phonological system
+
+## Install
+
+```sh
+$ pip install tshet-uinh-encoder
+```
+
+## Usage
+
+```python
+import TshetUinhEncoder as TE
+print(TE.音韻地位.from描述('幫三凡入').攝)  # output: 咸
+```
+
+For detailed usage, see [documentation](https://tshet-uinh-encoder-python.readthedocs.io/).
