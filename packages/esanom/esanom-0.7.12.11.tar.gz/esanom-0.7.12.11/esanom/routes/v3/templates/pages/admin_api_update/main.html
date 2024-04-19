@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ADMIN API UPDATE{% endblock %}
+
+{% block main_content %}
+
+<div class="col-3 bg-light p-3 border">
+{% include( "pages/admin_api_update/inc_form.html" ) %}
+</div>
+
+<div id="hx-results"></div>
+
+{% endblock %}
+

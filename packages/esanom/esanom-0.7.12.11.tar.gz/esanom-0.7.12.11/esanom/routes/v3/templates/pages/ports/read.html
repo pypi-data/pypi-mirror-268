@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main_title %}PORT : {{ tdata['row']['name'] }}{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/ports/read_inc_info.html" ) %}
+
+{% if tdata["rows"]|length>0 %}
+{% include( "pages/ports/read_inc_table.html" ) %}
+{% else %}
+<div>
+No PINS!
+</div>
+{% endif %}
+
+{% endblock %}
+

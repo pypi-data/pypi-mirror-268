@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block main_title %}page_dashboard_tasks{% endblock %}
+
+{% block main_content %}
+
+
+<script src="{{url_for('.static',filename='plotly.min.js',_=_tdata['nom_version'])}}" async></script>
+<div id="gd"></div>
+
+<script>
+
+data = {
+    "data" : [ { 
+        x: [],
+        "y" : []
+    } ] ,
+
+    "layout" : {
+        "yaxis" : {
+            "rangemode":"tozero"
+        }
+
+    }
+}
+
+var config = {responsive: true}
+
+
+document.onreadystatechange = function () {
+  if (document.readyState == "complete") {
+    Plotly.newPlot( "gd" , data , config ) ;
+  }
+}
+
+function adjustValue1( xvalue, yvalue ) {
+    data[ "data" ][ 0 ][ "x" ].push( xvalue ) ; 
+    data[ "data" ][ 0 ][ "y" ].push( yvalue ) ; 
+    Plotly.redraw( "gd" ) ;
+}
+
+</script>
+
+<div hx-get="{{ url_for('.hx_dashboard_tasks_taskcount') }}" hx-trigger="every 5s" hx-swap="innerHTML">    
+One moment... 
+</div>
+
+
+{% endblock main_content %}
+

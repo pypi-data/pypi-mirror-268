@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main_title %}REGISTER{% endblock %}
+
+{% block main_content %}
+
+{% if tdata['system_registration']==0 %}
+<p>
+Online registrations on this NoM Server are currently disabled. Please contact {{_tdata["admin_account_email"]|safe}} if you require an account.
+</p>
+{% else %}
+{% include( "pages/register/main_inc_form.html" ) %}
+{% endif %}
+
+{% endblock %}
+
