@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: hygeoclas
+Version: 0.5.1
+Summary: Package for hydrogeological classifcation
+Author: Brayan A. Quiceno
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: seaborn
+Requires-Dist: torch
