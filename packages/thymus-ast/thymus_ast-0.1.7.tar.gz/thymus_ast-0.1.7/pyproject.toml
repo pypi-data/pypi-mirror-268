@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "thymus-ast"
+version = "0.1.7"
+description = "A set of tools to build ASTs for different NOS"
+authors = ["Igor Malyushkin <gmalyushkin@gmail.com>"]
+readme = "README.md"
+packages = [{include = "thymus_ast"}]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+
+[tool.ruff]
+line-length = 119
+
+[tool.ruff.lint]
+ignore = ["E721"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
