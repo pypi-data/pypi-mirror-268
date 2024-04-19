@@ -1,0 +1,9 @@
+FROM {REGISTRY}/{base_python_image}-{BUNDLE_VERSION}
+
+{pre_install}
+
+RUN {python} -mpip install --no-cache-dir {package} {extra_deps}
+
+{post_install}
+
+CMD {CMD}
