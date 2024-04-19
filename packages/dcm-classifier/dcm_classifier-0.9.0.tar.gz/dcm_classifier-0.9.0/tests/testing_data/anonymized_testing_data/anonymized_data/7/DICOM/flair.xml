@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<file-format>
+<meta-header xfer="1.2.840.10008.1.2.1" name="Little Endian Explicit">
+<element tag="0002,0000" vr="UL" vm="1" len="4" name="FileMetaInformationGroupLength">184</element>
+<element tag="0002,0001" vr="OB" vm="1" len="2" name="FileMetaInformationVersion" binary="hidden"></element>
+<element tag="0002,0002" vr="UI" vm="1" len="26" name="MediaStorageSOPClassUID">1.2.840.10008.5.1.4.1.1.4</element>
+<element tag="0002,0003" vr="UI" vm="1" len="44" name="MediaStorageSOPInstanceUID">2.25.230074296766972384739927109188983313630</element>
+<element tag="0002,0010" vr="UI" vm="1" len="20" name="TransferSyntaxUID">1.2.840.10008.1.2.1</element>
+<element tag="0002,0012" vr="UI" vm="1" len="16" name="ImplementationClassUID">1.2.40.0.13.1.1</element>
+<element tag="0002,0013" vr="SH" vm="1" len="12" name="ImplementationVersionName">dcm4che-2.0</element>
+<element tag="0002,0016" vr="AE" vm="1" len="4" name="SourceApplicationEntityTitle">RAP</element>
+</meta-header>
+<data-set xfer="1.2.840.10008.1.2.1" name="Little Endian Explicit">
+<element tag="0008,0005" vr="CS" vm="1" len="10" name="SpecificCharacterSet">ISO_IR 100</element>
+<element tag="0008,0008" vr="CS" vm="5" len="30" name="ImageType">ORIGINAL\PRIMARY\M\NORM\DIS2D</element>
+<element tag="0008,0012" vr="DA" vm="1" len="8" name="InstanceCreationDate">20230327</element>
+<element tag="0008,0013" vr="TM" vm="1" len="14" name="InstanceCreationTime">014221.091000</element>
+<element tag="0008,0016" vr="UI" vm="1" len="26" name="SOPClassUID">1.2.840.10008.5.1.4.1.1.4</element>
+<element tag="0008,0018" vr="UI" vm="1" len="44" name="SOPInstanceUID">2.25.230074296766972384739927109188983313630</element>
+<element tag="0008,0020" vr="DA" vm="1" len="8" name="StudyDate">00010101</element>
+<element tag="0008,0021" vr="DA" vm="1" len="8" name="SeriesDate">00010101</element>
+<element tag="0008,0022" vr="DA" vm="1" len="8" name="AcquisitionDate">00010101</element>
+<element tag="0008,0023" vr="DA" vm="1" len="8" name="ContentDate">00010101</element>
+<element tag="0008,0030" vr="TM" vm="1" len="10" name="StudyTime">000000.00</element>
+<element tag="0008,0031" vr="TM" vm="1" len="10" name="SeriesTime">000000.00</element>
+<element tag="0008,0032" vr="TM" vm="1" len="10" name="AcquisitionTime">000000.00</element>
+<element tag="0008,0033" vr="TM" vm="1" len="10" name="ContentTime">000000.00</element>
+<element tag="0008,0050" vr="SH" vm="0" len="0" name="AccessionNumber"></element>
+<element tag="0008,0060" vr="CS" vm="1" len="2" name="Modality">MR</element>
+<element tag="0008,0061" vr="CS" vm="2" len="6" name="ModalitiesInStudy">MR\SR</element>
+<element tag="0008,0070" vr="LO" vm="1" len="8" name="Manufacturer">SIEMENS</element>
+<element tag="0008,0090" vr="PN" vm="0" len="0" name="ReferringPhysicianName"></element>
+<sequence tag="0008,1032" vr="SQ" card="1" name="ProcedureCodeSequence">
+<item card="3">
+<element tag="0008,0100" vr="SH" vm="1" len="8" name="CodeValue">IMG3018</element>
+<element tag="0008,0102" vr="SH" vm="1" len="2" name="CodingSchemeDesignator">L</element>
+<element tag="0008,0104" vr="LO" vm="1" len="32" name="CodeMeaning">MRI BRAIN W/WO CONTRAST (70553)</element>
+</item>
+</sequence>
+<element tag="0008,1090" vr="LO" vm="1" len="4" name="ManufacturerModelName">Aera</element>
+<element tag="0010,0010" vr="PN" vm="0" len="0" name="PatientName"></element>
+<element tag="0010,0020" vr="LO" vm="0" len="0" name="PatientID"></element>
+<element tag="0010,0030" vr="DA" vm="1" len="8" name="PatientBirthDate">00010101</element>
+<element tag="0010,0040" vr="CS" vm="0" len="0" name="PatientSex"></element>
+<element tag="0012,0062" vr="CS" vm="1" len="4" name="PatientIdentityRemoved">YES</element>
+<element tag="0012,0063" vr="LO" vm="1" len="46" name="DeidentificationMethod">Per DICOM PS 3.15 AnnexE. Details in 0012,0064</element>
+<sequence tag="0012,0064" vr="SQ" card="1" name="DeidentificationMethodCodeSequence">
+<item card="3">
+<element tag="0008,0100" vr="SH" vm="1" len="6" name="CodeValue">113104</element>
+<element tag="0008,0102" vr="SH" vm="1" len="4" name="CodingSchemeDesignator">DCM</element>
+<element tag="0008,0104" vr="LO" vm="1" len="32" name="CodeMeaning">Clean Structured Content Option</element>
+</item>
+</sequence>
+<element tag="0018,0015" vr="CS" vm="1" len="6" name="BodyPartExamined">BRAIN</element>
+<element tag="0018,0020" vr="CS" vm="2" len="6" name="ScanningSequence">SE\IR</element>
+<element tag="0018,0021" vr="CS" vm="4" len="12" name="SequenceVariant">SK\SP\MP\OSP</element>
+<element tag="0018,0022" vr="CS" vm="1" len="2" name="ScanOptions">IR</element>
+<element tag="0018,0023" vr="CS" vm="1" len="2" name="MRAcquisitionType">2D</element>
+<element tag="0018,0024" vr="SH" vm="1" len="10" name="SequenceName">*tir2d1_19</element>
+<element tag="0018,0025" vr="CS" vm="1" len="2" name="AngioFlag">N</element>
+<element tag="0018,0050" vr="DS" vm="1" len="2" name="SliceThickness">5</element>
+<element tag="0018,0080" vr="DS" vm="1" len="4" name="RepetitionTime">9000</element>
+<element tag="0018,0081" vr="DS" vm="1" len="4" name="EchoTime">101</element>
+<element tag="0018,0082" vr="DS" vm="1" len="4" name="InversionTime">2500</element>
+<element tag="0018,0083" vr="DS" vm="1" len="2" name="NumberOfAverages">1</element>
+<element tag="0018,0084" vr="DS" vm="1" len="10" name="ImagingFrequency">63.608311</element>
+<element tag="0018,0085" vr="SH" vm="1" len="2" name="ImagedNucleus">1H</element>
+<element tag="0018,0086" vr="IS" vm="1" len="2" name="EchoNumbers">1</element>
+<element tag="0018,0087" vr="DS" vm="1" len="4" name="MagneticFieldStrength">1.5</element>
+<element tag="0018,0088" vr="DS" vm="1" len="2" name="SpacingBetweenSlices">7</element>
+<element tag="0018,0089" vr="IS" vm="1" len="4" name="NumberOfPhaseEncodingSteps">202</element>
+<element tag="0018,0091" vr="IS" vm="1" len="2" name="EchoTrainLength">19</element>
+<element tag="0018,0093" vr="DS" vm="1" len="2" name="PercentSampling">70</element>
+<element tag="0018,0094" vr="DS" vm="1" len="2" name="PercentPhaseFieldOfView">75</element>
+<element tag="0018,0095" vr="DS" vm="1" len="4" name="PixelBandwidth">150</element>
+<element tag="0018,1020" vr="LO" vm="1" len="12" name="SoftwareVersions">syngo MR E11</element>
+<element tag="0018,1251" vr="SH" vm="1" len="4" name="TransmitCoilName">Body</element>
+<element tag="0018,1310" vr="US" vm="4" len="8" name="AcquisitionMatrix">0\384\202\0</element>
+<element tag="0018,1312" vr="CS" vm="1" len="4" name="InPlanePhaseEncodingDirection">ROW</element>
+<element tag="0018,1314" vr="DS" vm="1" len="4" name="FlipAngle">150</element>
+<element tag="0018,1315" vr="CS" vm="1" len="2" name="VariableFlipAngleFlag">N</element>
+<element tag="0018,1316" vr="DS" vm="1" len="16" name="SAR">0.15954525954694</element>
+<element tag="0018,1318" vr="DS" vm="1" len="2" name="dBdt">0</element>
+<element tag="0018,5100" vr="CS" vm="1" len="4" name="PatientPosition">HFS</element>
+<element tag="0020,000d" vr="UI" vm="1" len="44" name="StudyInstanceUID">2.25.106736773675271926686056457127502108539</element>
+<element tag="0020,000e" vr="UI" vm="1" len="44" name="SeriesInstanceUID">2.25.145164887802920426619760969196367403421</element>
+<element tag="0020,0010" vr="SH" vm="0" len="0" name="StudyID"></element>
+<element tag="0020,0011" vr="IS" vm="1" len="2" name="SeriesNumber">7</element>
+<element tag="0020,0012" vr="IS" vm="1" len="2" name="AcquisitionNumber">1</element>
+<element tag="0020,0013" vr="IS" vm="1" len="2" name="InstanceNumber">1</element>
+<element tag="0020,0032" vr="DS" vm="3" len="50" name="ImagePositionPatient">-109.24515063749\-116.88512732743\47.145331568123</element>
+<element tag="0020,0037" vr="DS" vm="6" len="100" name="ImageOrientationPatient">0.9902136156989\-0.0614119890659\0.12532183721719\0.05692196026088\0.99761256916277\0.03910309819585</element>
+<element tag="0020,0052" vr="UI" vm="1" len="40" name="FrameOfReferenceUID">2.25.13577134093647780978280517673183155</element>
+<element tag="0020,1040" vr="LO" vm="0" len="0" name="PositionReferenceIndicator"></element>
+<element tag="0020,1041" vr="DS" vm="1" len="16" name="SliceLocation">64.349792016772</element>
+<element tag="0020,1208" vr="IS" vm="1" len="4" name="NumberOfStudyRelatedInstances">455</element>
+<element tag="0028,0002" vr="US" vm="1" len="2" name="SamplesPerPixel">1</element>
+<element tag="0028,0004" vr="CS" vm="1" len="12" name="PhotometricInterpretation">MONOCHROME2</element>
+<element tag="0028,0010" vr="US" vm="1" len="2" name="Rows">384</element>
+<element tag="0028,0011" vr="US" vm="1" len="2" name="Columns">288</element>
+<element tag="0028,0030" vr="DS" vm="2" len="12" name="PixelSpacing">0.625\0.625</element>
+<element tag="0028,0100" vr="US" vm="1" len="2" name="BitsAllocated">16</element>
+<element tag="0028,0101" vr="US" vm="1" len="2" name="BitsStored">12</element>
+<element tag="0028,0102" vr="US" vm="1" len="2" name="HighBit">11</element>
+<element tag="0028,0103" vr="US" vm="1" len="2" name="PixelRepresentation">0</element>
+<element tag="0028,0106" vr="US" vm="1" len="2" name="SmallestImagePixelValue">0</element>
+<element tag="0028,0107" vr="US" vm="1" len="2" name="LargestImagePixelValue">747</element>
+<element tag="0028,0303" vr="CS" vm="1" len="8" name="LongitudinalTemporalInformationModified">REMOVED</element>
+<element tag="0028,1050" vr="DS" vm="1" len="4" name="WindowCenter">406</element>
+<element tag="0028,1051" vr="DS" vm="1" len="4" name="WindowWidth">863</element>
+<element tag="0028,1055" vr="LO" vm="1" len="6" name="WindowCenterWidthExplanation">Algo1</element>
+<element tag="0029,0010" vr="LO" vm="1" len="18" name="PrivateCreator">SIEMENS CSA HEADER</element>
+<element tag="0029,1010" vr="OB" vm="1" len="11284" name="CSAImageHeaderInfo" loaded="no" binary="hidden"></element>
+<element tag="0040,0244" vr="DA" vm="1" len="8" name="PerformedProcedureStepStartDate">00010101</element>
+<element tag="0040,1008" vr="LO" vm="0" len="0" name="ConfidentialityCode"></element>
+<element tag="7fe0,0010" vr="OW" vm="1" len="221184" name="PixelData" loaded="no" binary="hidden"></element>
+</data-set>
+</file-format>
