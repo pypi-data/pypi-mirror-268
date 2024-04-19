@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: testsolar-testtool-sdk-py2
+Version: 0.1.5
+Summary: Python2 SDK for TestSolar testtool
+Home-page: https://github.com/OpenTestSolar/testtool-sdk-python-py2
+Author: asiazhang
+Author-email: asiazhang2002@gmail.com
+License: Apache License 2.0
+Description: UNKNOWN
+Keywords: testsolar
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Requires-Python: >=2.7, <3
