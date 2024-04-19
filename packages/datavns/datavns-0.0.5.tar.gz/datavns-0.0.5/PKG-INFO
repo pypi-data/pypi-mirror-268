@@ -1,0 +1,248 @@
+Metadata-Version: 2.1
+Name: datavns
+Version: 0.0.5
+Summary: A package to collect and backtest the trading strategy on Vietnam stocks market
+Author-email: the-a1pha <buitruonganbta@gmail.com>
+Project-URL: Homepage, https://github.com/the-a1pha/datavns
+Project-URL: Issues, https://github.com/the-a1pha/datavns/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<div align="center">
+
+# **Thư viện thu thập dữ liệu và backtest chiến lược đầu tư**
+# **dữ liệu dựa trên thị trường chứng khoán Việt Nam**
+</div>
+
+
+## Hướng dẫn cài đặt
+
+Để cài đặt package sử dụng câu lệnh:
+
+    pip install datavns
+  
+Để import thư viện vào file và sử dụng
+
+    from datavns import *
+
+## I. GIỚI THIỆU TỔNG QUAN
+Dự án được thực hiện gồm 2 phần chính
+- Phần một là thu thập dữ liệu về giá cổ phiếu và các thông tin vi mô của doanh nghiệp
+
+- Phần hai là xây dựng hệ thống kiểm thử cho chiến lược cụ thể dựa trên lịch sử giao dịch của cổ phiếu và tối ưu hóa danh mục
+
+
+## II. NỘI DUNG CHÍNH CỦA DỰ ÁN
+
+### Phần 1: Thu thập dữ liệu
+
+#### 1.1 Thu thập dữ liệu về danh sách cổ phiếu niêm yết
+*Để thu thập dữ liệu về danh sách cổ phiếu theo sàn, chúng ta có thể sử dụng câu lệnh*
+```python
+list_cp(exchange = 'HSX')
+```
+<details>
+  <summary>Output</summary>
+
+```
+    Symbol TradeCenterId                                        CompanyName     CategoryName
+0      AAA          HOSE                  Công ty Cổ phần Nhựa An Phát Xanh  Nguyên vật liệu
+1      AAM          HOSE                    Công ty Cổ phần Thủy sản Mekong      Nông nghiệp
+2      AAT          HOSE        Công ty Cổ phần Tập đoàn Tiên Sơn Thanh Hóa   Hàng tiêu dùng
+3      ABR          HOSE              Công ty Cổ phần Đầu tư Nhãn hiệu Việt   Hàng tiêu dùng
+4      ABS          HOSE     Công ty cổ phần Dịch vụ Nông nghiệp Bình Thuận      Nông nghiệp
+..     ...           ...                                                ...              ...
+388    VSI          HOSE  Công ty Cổ phần Đầu tư và Xây dựng Cấp thoát nước          Dịch vụ
+389    VTB          HOSE               Công ty Cổ phần Viettronics Tân Bình   Hàng tiêu dùng
+390    VTO          HOSE            Công ty Cổ phần Vận tải Xăng dầu VITACO       Năng lượng
+391    YBM          HOSE     Công ty Cổ phần Khoáng sản Công nghiệp Yên Bái  Nguyên vật liệu
+392    YEG          HOSE                     Công ty Cổ phần Tập đoàn Yeah1          Dịch vụ
+```
+</details>
+
+#### 1.2 Thu thập dữ liệu về lịch sử giao dịch của cổ phiếu
+*Để thu thập dữ liệu về thông tin giao dịch của từng cổ phiếu, chúng ta có thể sử dụng câu lệnh*
+```python
+price(cp = 'VCB',start_date='2000-01-01',end_date='2024-01-01')
+```
+Trong đó:
+
+  `cp (str)`: Mã cổ phiếu niêm yết
+
+  `start_date (str)`: Ngày bắt đầu trong khoảng thời gian cần lấy thông tin giao dịch
+
+  `end_date (str)`: Ngày kết thúc trong khoảng thời gian cần lấy thông tin giao dịch
+<details>
+  <summary>Output</summary>
+
+```
+                  date symbol  priceHigh   priceLow  priceOpen  priceAverage  priceClose  ...  sellQuantity  adjRatio  currentForeignRoom  propTradingNetDealValue  propTradingNetPTValue  propTradingNetValue    unit
+2009-06-30  2009-06-30    VCB  13.753204  13.753204  13.753204     13.753204   13.753204  ...      294070.0   4.36262          82612532.0                      NaN                    NaN                  NaN  1000.0
+2009-07-01  2009-07-01    VCB  14.440864  13.638594  14.440864     13.867814   13.867814  ...     9434870.0   4.36262          82441852.0                      NaN                    NaN                  NaN  1000.0
+2009-07-02  2009-07-02    VCB  13.753204  13.180154  13.638594     13.294764   13.294764  ...     4349330.0   4.36262          82445952.0                      NaN                    NaN                  NaN  1000.0
+2009-07-03  2009-07-03    VCB  13.065544  12.836324  12.950934     12.836324   12.836324  ...     1707030.0   4.36262          82445952.0                      NaN                    NaN                  NaN  1000.0
+2009-07-06  2009-07-06    VCB  13.409374  12.836324  12.836324     13.409374   13.409374  ...     1761890.0   4.36262          82445952.0                      NaN                    NaN                  NaN  1000.0
+...                ...    ...        ...        ...        ...           ...         ...  ...           ...       ...                 ...                      ...                    ...                  ...     ...
+2023-12-25  2023-12-25    VCB  81.800000  80.700000  80.900000     81.450000   81.800000  ...     1981465.0   1.00000         368592029.0             1.255251e+10           0.000000e+00         1.255251e+10  1000.0
+2023-12-26  2023-12-26    VCB  82.800000  82.000000  82.000000     82.468081   82.800000  ...     2064601.0   1.00000         369568282.0            -5.857600e+09           0.000000e+00        -5.857600e+09  1000.0
+2023-12-27  2023-12-27    VCB  83.200000  82.500000  82.900000     82.947677   82.700000  ...     2154248.0   1.00000         370241676.0             7.025160e+09           0.000000e+00         7.025160e+09  1000.0
+2023-12-28  2023-12-28    VCB  83.100000  82.400000  82.700000     82.759912   82.800000  ...     1481457.0   1.00000         370338290.0             8.650900e+08           1.010160e+10         1.096669e+10  1000.0
+2023-12-29  2023-12-29    VCB  83.900000  80.300000  83.500000     83.109435   80.300000  ...     3755033.0   1.00000         369747626.0            -1.127470e+10           1.102055e+10        -2.541490e+08  1000.0
+```
+</details>
+
+#### 1.3 Thu thập dữ liệu về báo cáo tài chính
+*Để thu thập dữ liệu về báo cáo tài chính của từng cổ phiếu, chúng ta có thể sử dụng câu lệnh*
+```python
+bctc('VHM',type=1,year=2023,quarter=4)
+```
+Trong đó:
+
+  `cp (str)`: Mã cổ phiếu niêm yết
+
+  `type (int)`: Loại báo cáo trong báo cáo tài chính cần lấy
+
+      type = 1: Bảng cân đối kế toán
+      type = 2: Báo cáo kết quả hoạt động kinh doanh
+      type = 3: Báo cáo lưu chuyển tiền tệ trực tiếp (Đa số các doanh nghiệp bị trống dữ liệu về báo cáo lưu chuyển tiền tệ trực tiếp, trừ nhóm ngành ngân hàng)
+      type = 4: Báo cáo lưu chuyển tiền tệ gián tiếp
+
+  `year (int)`: Năm cuối cùng trong danh sách báo cáo tài chính cần lấy
+
+  `quarter (int)`: Quý của báo cáo tài chính cần lấy
+
+      quarter = 0: Sẽ lấy báo cáo tài chính theo năm của doanh nghiệp
+      quarter = 1-4: Sẽ lấy báo cáo tài chính theo quý của năm tương ứng với parameter `year`
+
+<details>
+  <summary>Output</summary>
+
+```
+TÀI SẢN A. Tài sản lưu động và đầu tư ngắn hạn I. Tiền và các khoản tương đương tiền           1. Tiền  ... 2. Nguồn kinh phí đã hình thành tài sản cố định 3. Quỹ dự phòng trợ cấp mất việc làm TỔNG CỘNG NGUỒN VỐN Symbol
+2016-4       0                       16491882437206.0                       2802422910160.0    941467410160.0  ...                                             0.0                                  0.0    37520745782451.0    VHM   
+2017-4       0                       44421050167080.0                       1561577770818.0    818341400251.0  ...                                               0                                    0    51303819026055.0    VHM   
+2018-1       0                       63034145841192.0                       2062432049868.0   1493612044556.0  ...                                             0.0                                  0.0    94692754719784.0    VHM   
+2018-2       0                       79522351482962.0                       4718599887522.0   1056804069839.0  ...                                             0.0                                  0.0   117412841677162.0    VHM   
+2018-3       0                      107648617911024.0                       5928624411953.0   2042456531699.0  ...                                             0.0                                  0.0   138194633048678.0    VHM   
+2018-4       0                       80465682928899.0                       3515572453074.0   2695395180367.0  ...                                             0.0                                  0.0   117807670734368.0    VHM   
+2019-1       0                       96614245780097.0                       2387016056828.0   1381145632230.0  ...                                             0.0                                  0.0   128472112295867.0    VHM   
+2019-2       0                      103263325121450.0                      14035726372516.0   6738642779317.0  ...                                             0.0                                  0.0   138935344916434.0    VHM   
+2019-3       0                      112763374085401.0                       9038091555930.0   5541055127966.0  ...                                             0.0                                  0.0   161661530824145.0    VHM   
+2019-4       0                      133821706000000.0                       7231388000000.0   2828216000000.0  ...                                             0.0                                  0.0   197170133000000.0    VHM   
+2020-1       0                      141421460000000.0                       4439856000000.0    993105000000.0  ...                                             0.0                                  0.0   203007149000000.0    VHM   
+2020-2       0                      141342852000000.0                      11859527000000.0   2458360000000.0  ...                                             0.0                                  0.0   224789551000000.0    VHM   
+2020-3       0                      141229902000000.0                      13547878000000.0   4779171000000.0  ...                                             0.0                                  0.0   220509139000000.0    VHM   
+2020-4       0                      102010303000000.0                      12479392000000.0   4143874000000.0  ...                                             0.0                                  0.0   214937493000000.0    VHM   
+2021-1       0                       94043347000000.0                       7746445000000.0   3309282000000.0  ...                                             0.0                                  0.0   207714674000000.0    VHM   
+2021-2       0                      101733721000000.0                       8417973000000.0   2363795000000.0  ...                                             0.0                                  0.0   210849493000000.0    VHM   
+2021-3       0                      102471473000000.0                       4504657000000.0   2633827000000.0  ...                                             0.0                                  0.0   219638744000000.0    VHM   
+2021-4       0                       91216562000000.0                       4823696000000.0    589818000000.0  ...                                             0.0                                  0.0   230417689000000.0    VHM   
+2022-1       0                       94888743000000.0                       5628313000000.0   2553086000000.0  ...                                             0.0                                  0.0   233962584000000.0    VHM   
+2022-2       0                      181594498000000.0                      29813549000000.0   3546896000000.0  ...                                             0.0                                  0.0   319105330000000.0    VHM   
+2022-3       0                      179330798000000.0                      14743348000000.0   2518249000000.0  ...                                             0.0                                  0.0   341601215000000.0    VHM   
+2022-4       0                      185196368000000.0                      10812720000000.0   1844898000000.0  ...                                             0.0                                  0.0   361203698000000.0    VHM   
+2023-1       0                      205327661000000.0                       1889644000000.0   1642692000000.0  ...                                             0.0                                  0.0   377621667000000.0    VHM   
+2023-2       0                      190310276000000.0                       5105284000000.0   3829067000000.0  ...                                             0.0                                  0.0   391330538000000.0    VHM   
+2023-3       0                      215057869000000.0                       2909914000000.0   2482981000000.0  ...                                             0.0                                  0.0   417039474000000.0    VHM   
+2023-4       0                      240250006000000.0                      14104131000000.0  13124281000000.0  ...                                             0.0                                  0.0   447360776000000.0    VHM 
+```
+</details>
+
+#### 1.4 Thu thập dữ liệu về lịch sử chi trả cổ tức
+*Để thu thập dữ liệu về lịch sử chi trả cổ tức của của từng cổ phiếu, chúng ta có thể sử dụng câu lệnh*
+```python
+dividends_historical(cp='VIC',num=20)
+```
+Trong đó:
+
+  `cp (str)`: Mã cổ phiếu niêm yết
+
+  `num (int)`: Số năm lấy dữ liệu chi trả cổ tức, tính ngược từ thời điểm hiện tại
+
+<details>
+  <summary>Output</summary>
+
+```
+    year  cashDividend  stockDividend   totalAssets  stockHolderEquity
+0   2005           0.0       0.000000  4.891457e+11       3.137832e+11
+1   2006           0.0       0.000000  6.744084e+11       5.945214e+11
+2   2007           0.0       0.000000  3.179824e+12       1.933137e+12
+3   2008           0.0       0.000000  6.021566e+12       1.622503e+12
+4   2009         500.0       0.000000  1.431337e+13       3.635735e+12
+5   2010           0.0      60.100000  2.614685e+13       9.553640e+12
+6   2011        5880.0       0.000000  3.551264e+13       8.252177e+12
+7   2012           0.0      27.500000  5.582488e+13       1.087363e+13
+8   2013           0.0      32.500000  7.577265e+13       1.861654e+13
+9   2014        2149.0      48.700000  9.048531e+13       2.728463e+13
+10  2015           0.0      25.800000  1.454947e+14       3.757684e+13
+11  2016           0.0      33.500000  1.804508e+14       4.526639e+13
+12  2017           0.0       0.000000  2.137921e+14       5.255701e+13
+13  2018           0.0      21.000000  2.879742e+14       9.901371e+13
+14  2019           0.0       0.000000  4.037408e+14       1.205886e+14
+15  2020           0.0       0.000000  4.225038e+14       1.358527e+14
+16  2021           0.0      12.499993  4.283845e+14       1.595719e+14
+17  2022           0.0       0.000000  5.774072e+14       1.356554e+14
+18  2023           0.0       0.000000  6.696171e+14       1.480216e+14
+```
+</details>
+
+### Phần 2: Backtest
+
+#### 2.1. Tải & lưu dữ liệu phục vụ cho backtest
+
+*Các bước cần thực hiện để tải dữ liệu phục vụ cho quá trình backtest*
+
+* Tạo đường dẫn thư mục đến file dữ liệu backtest
+
+  Chạy file `update_data_for_backtest.py` sau đó chỉ đường dẫn thư mục mong muốn để lưu dữ liệu phục vụ backtest, đường dẫn default đến thư mục sẽ là `D:\Python\datavns\Data`
+
+* Để import dữ liệu vào backtest, sử dụng câu lệnh:
+
+```python
+data_for_backtest.take()
+```
+<details>
+  <summary>Output</summary>
+
+```
+Dữ liệu phục vụ backtest được lưu tại dict: .data
+```
+</details>
+
+#### 2.2. Đối với danh mục đầu tư gồm các cổ phiếu được xác định trước
+
+
+#### 2.3. Đối với danh mục đầu tư được tối ưu hóa tự động
+
+### Phần 3: Các chỉ số đánh giá hiệu quả danh mục
+
+*Đang trong giai đoạn phát triển, vui lòng chờ*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0",
+    "wheel",
+    "requests",
+    "pandas",
+    "numpy",
+    "matplotlib"
+    ]
+
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datavns"
+version = "0.0.5"
+authors = [
+  { name="the-a1pha", email="buitruonganbta@gmail.com" },
+]
+description = "A package to collect and backtest the trading strategy on Vietnam stocks market"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/the-a1pha/datavns"
+Issues = "https://github.com/the-a1pha/datavns/issues"
