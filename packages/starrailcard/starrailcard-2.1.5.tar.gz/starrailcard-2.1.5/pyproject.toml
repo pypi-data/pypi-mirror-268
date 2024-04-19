@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "starrailcard"
+version = "2.1.5"
+description = "This Python module provides the ability to create captivating character cards based on player data from Honkai Star Rail, obtained through their unique user identifiers (UIDs). StarRailCard streamlines the process of generating personalized character assembly cards, relying on the information provided by players."
+authors = ["DEViantUA <deviantapi@gmail.com>"]
+license = "MIT License with Additional Restrictions"
+
+readme = 'README.md'  # Markdown files are supported
+
+repository = "https://github.com/DEViantUA/StarRailCard"
+homepage = "https://github.com/DEViantUA/StarRailCard"
+
+keywords = ["honkai", "cards", "generation", "honkaistarraill","raill", "starraill", "builds", "honkairail", "honkai"] 
+
+[tool.poetry.dependencies]
+Pillow = "*"
+python = "^3.9"
+aiofiles = "*"
+aiohttp = "*"
+cachetools = "*"
+imageio = "*"
+moviepy = "*"
+more-itertools = "*"
+numpy = "*"
+pydantic = "*"
+beautifulsoup4 = "*"
+anyio = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
