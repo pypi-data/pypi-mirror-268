@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object meta_type="Plone Catalog Tool"
+        name="portal_catalog"
+>
+  <index meta_type="ZCTextIndex"
+         name="SearchableText"
+         remove="true"
+  />
+  <index meta_type="ElasticSearchProxyIndex"
+         name="SearchableText"
+  >
+    <querytemplate>
+{
+  "query": {
+      "multi_match": {
+          "query": "{{keys[0]}}",
+          "fields": [
+            "title*^1.9",
+            "description*^1.5",
+            "text.data*^1.2",
+            "blocks_plaintext*^1.2",
+            "file__extracted.content*"
+          ],
+          "analyzer": "{{analyzer}}",
+          "operator": "or",
+          "fuzziness": "AUTO",
+          "prefix_length": 1,
+          "type": "most_fields",
+          "minimum_should_match": "75%"
+      }
+  }
+}
+    </querytemplate>
+  </index>
+</object>
