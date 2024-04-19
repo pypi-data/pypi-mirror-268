@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: xl-word
+Version: 0.4.8
+Summary: xl-word
+Project-URL: Homepage, https://git.xilonglab.com/xilong/xl-word
+Project-URL: Bug Tracker, https://git.xilonglab.com/xilong/xl-word/issues
+Author-email: xilong <xilonglab@163.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: jinja2==3.1.2
+Requires-Dist: lxml==4.9.2
