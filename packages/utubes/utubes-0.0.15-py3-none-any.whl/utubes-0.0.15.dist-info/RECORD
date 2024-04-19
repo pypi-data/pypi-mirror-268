@@ -1,0 +1,14 @@
+Utube/__init__.py,sha256=H1IcHyaX41Tk6nDO6RdiSwb-RMmYqG20gq_--NL9x-M,38
+Utube/functions/__init__.py,sha256=eX8KnbNyL2P38_bt93BK3xz7pLbe3Olis9eUiptpscw,106
+Utube/functions/function00.py,sha256=2uFNsW_7ms9IWaXM_J5GwjOddQ-jBMZzSNEPpS28P2I,721
+Utube/functions/function01.py,sha256=TdmM0YgSrRQ-EITT974SABKw4KwuWyXu9cvg1YoAo3s,2918
+Utube/functions/function02.py,sha256=q0RBeIwSueL-x8BIM_slU3btIwp8Cy2lMuoweJJrPXI,4130
+Utube/scripts/__init__.py,sha256=DDjcHc1XZZyv0O41rDkV9BaD4-cX5Hspws1CgSurPnc,43
+Utube/scripts/en.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+Utube/scripts/eo.py,sha256=mqohATJw8Evw5yv5uQtiUGgBZS3RSVUjvgBBoHBOKUo,176
+Utube/scripts/es.py,sha256=UxATbe2IpB0PJw4jNaOCOxylkXzRPAyqagxtjJEXwNg,92
+utubes-0.0.15.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+utubes-0.0.15.dist-info/METADATA,sha256=kp05gN9tNk8ZxpaKBQavSnWOirbQYCAslmpVZ_68WCg,1679
+utubes-0.0.15.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+utubes-0.0.15.dist-info/top_level.txt,sha256=b4YPlo3jxhxdaPY_u42QxxIYnzxSAySi0M935-wViXA,6
+utubes-0.0.15.dist-info/RECORD,,
