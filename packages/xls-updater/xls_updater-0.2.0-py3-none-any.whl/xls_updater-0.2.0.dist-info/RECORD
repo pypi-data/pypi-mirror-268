@@ -1,0 +1,9 @@
+xls_updater/__about__.py,sha256=3coK08UAoOM9xs-Z-PggqOzc5QKSnZQHQQLIdOi-80A,90
+xls_updater/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xls_updater/__main__.py,sha256=p6Mq5pxNsp1dBmG7CQ43tPSiBPIUdacQguVfJQTmS9w,166
+xls_updater/app.py,sha256=-6inq-CEXVKe9b2aYOzSG84gzXY3ILuBRd1NNf6sb64,1317
+xls_updater/cli.py,sha256=qspDeyo8e90fl4bDwi1X8ALONnv3QE2QSLRuh6HnTQA,556
+xls_updater-0.2.0.dist-info/METADATA,sha256=WVUoNwZ0kFfKKAmeCVZWuvYMVh8B_nwd2eFha8EiBHg,3215
+xls_updater-0.2.0.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+xls_updater-0.2.0.dist-info/entry_points.txt,sha256=i4pAoQD-SGPPcx20YUKREqvWi4lv7dbYneu4sWItybs,52
+xls_updater-0.2.0.dist-info/RECORD,,
