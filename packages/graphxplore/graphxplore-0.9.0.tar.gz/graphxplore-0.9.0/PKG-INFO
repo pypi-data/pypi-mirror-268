@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: graphxplore
+Version: 0.9.0
+Summary: meta data extraction, cleaning, and transformation as well as data exploration using graph representations and dashboards
+Home-page: https://github.com/UKEIAM/graphxplore
+Author: Louis Bellmann
+Requires: neo4j
+Requires: chardet
+Requires: plotly
+Requires-Python: >=3.10
+License-File: LICENSE
