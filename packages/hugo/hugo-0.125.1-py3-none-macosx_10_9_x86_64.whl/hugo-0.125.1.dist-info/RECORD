@@ -1,0 +1,12 @@
+hugo/VERSION,sha256=44C2c9A3_eU9dm-0JYNo3DWluSX9NlFdALDjTgl3v3g,8
+hugo/__main__.py,sha256=oivVy03lY91Mbd-m9lhsKaceYjtCFkvlL27ja35lBbI,278
+hugo/cli.py,sha256=c3Gt3YAYJcr3IWEQ_NnTyj9NDNn55ERi5IIJ9D7pf64,1932
+hugo/binaries/.gitignore,sha256=kCpRPdl3S_jqYYZaOrc0-xa6-l3KqVjNRXc6jCkd_-Q,12
+hugo/binaries/hugo-0.125.1-darwin-amd64,sha256=BetHo1RCo8VotKc9MR_XeJpJjlqmpWJowonEMlAF5Ao,118866304
+hugo-0.125.1.dist-info/LICENSE,sha256=9WZWoxEq0RpSRsF8WGAyVymIRqlcMS2W1FDgNiTJOAE,11347
+hugo-0.125.1.dist-info/LICENSE-hugo.txt,sha256=0x8UmYb83ik_TykPSbEr6BSRhNqzOkl3fC_YCwMqlLU,11347
+hugo-0.125.1.dist-info/METADATA,sha256=mWWsDG5Wb6xfoXzUNj7WckH7FRLRoDS15EUmOCNLrfM,21444
+hugo-0.125.1.dist-info/WHEEL,sha256=9AyUsE1Hf2Pmu2F8obe1rstsy-wMB3Sh2Pn0yHQ4FO4,108
+hugo-0.125.1.dist-info/entry_points.txt,sha256=Ls4oXWdn8_WPbp5MRF8E8fSO0sbSv780-1MwtEbjUTI,41
+hugo-0.125.1.dist-info/top_level.txt,sha256=1YLtTirNxzts10vTa7nWCluyqrKG0jKpK87fgAIvTqI,5
+hugo-0.125.1.dist-info/RECORD,,
