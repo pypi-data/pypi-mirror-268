@@ -1,0 +1,13 @@
+[rpdk.v1.languages]
+python310 = rpdk.python.codegen:Python310LanguagePlugin
+python311 = rpdk.python.codegen:Python311LanguagePlugin
+python312 = rpdk.python.codegen:Python312LanguagePlugin
+python38 = rpdk.python.codegen:Python38LanguagePlugin
+python39 = rpdk.python.codegen:Python39LanguagePlugin
+
+[rpdk.v1.parsers]
+python310 = rpdk.python.parser:setup_subparser_python310
+python311 = rpdk.python.parser:setup_subparser_python311
+python312 = rpdk.python.parser:setup_subparser_python312
+python38 = rpdk.python.parser:setup_subparser_python38
+python39 = rpdk.python.parser:setup_subparser_python39
