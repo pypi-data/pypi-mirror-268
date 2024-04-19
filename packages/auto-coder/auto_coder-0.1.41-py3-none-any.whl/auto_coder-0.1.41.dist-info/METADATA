@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: auto-coder
+Version: 0.1.41
+Summary: AutoCoder: AutoCoder
+Author: allwefantasy
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+Requires-Dist: contextlib2
+Requires-Dist: ninja
+Requires-Dist: accelerate
+Requires-Dist: bitsandbytes ==0.39.0
+Requires-Dist: transformers >=4.35.0
+Requires-Dist: torch ==2.1.2
+Requires-Dist: ray[default] ==2.9.1
+Requires-Dist: sentencepiece
+Requires-Dist: pyarrow ==12.0.1
+Requires-Dist: sentence-transformers
+Requires-Dist: datasets
+Requires-Dist: langchain
+Requires-Dist: paramiko
+Requires-Dist: einops
+Requires-Dist: tqdm
+Requires-Dist: loguru
+Requires-Dist: pyjava ==0.6.15
+Requires-Dist: tiktoken
+Requires-Dist: transformers-stream-generator
+Requires-Dist: optimum
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: retrying
+Requires-Dist: zhipuai
+Requires-Dist: dashscope
+Requires-Dist: tabulate
+Requires-Dist: jupyter-client
+Requires-Dist: prompt-toolkit
+Requires-Dist: llama-index
+Requires-Dist: websocket-client
+Requires-Dist: sqlmodel
+Requires-Dist: wudao
+Requires-Dist: SwissArmyTransformer
+Requires-Dist: jieba
+Requires-Dist: byzerllm >=0.1.68
+Requires-Dist: GitPython
+Requires-Dist: openai >=1.14.3
+Requires-Dist: anthropic
+Requires-Dist: google-generativeai
+Requires-Dist: protobuf
+
+<p align="center">
+  <picture>    
+    <img alt="auto-coder" src="./logo/auto-coder.jpeg" width=55%>
+  </picture>
+</p>
+
+<h3 align="center">
+Auto-Coder (powered by Byzer-LLM)
+</h3>
+
+<p align="center">
+| <a href="./docs/en"><b>English</b></a> | <a href="./docs/zh"><b>中文</b></a> |
+
+</p>
+
+---
+
+*Latest News* 🔥
+
+- [2024/04] Release Auto-Coder 0.1.41
+- [2024/03] Release Auto-Coder 0.1.25
+- [2024/03] Release Auto-Coder 0.1.24
+
+---
+
+
+## Installation
+
+```shell
+conda create --name autocoder python=3.10.11
+conda activate autocoder
+pip install -U auto-coder
+## if you want to use private/open-source models, uncomment this line.
+# pip install -U vllm
+ray start --head
+```
+
+## Example Project
+
+https://github.com/allwefantasy/auto-coder.example
