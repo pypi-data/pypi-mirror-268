@@ -1,0 +1,11 @@
+__pycache__
+.env
+.DS_Store
+.idea
+.pytest_cache
+.tmp
+supplements
+cookies.txt
+venv
+dist
+de421.bsp
