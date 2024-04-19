@@ -1,0 +1,2 @@
+[console_scripts]
+pixee = pixee.cli:main
