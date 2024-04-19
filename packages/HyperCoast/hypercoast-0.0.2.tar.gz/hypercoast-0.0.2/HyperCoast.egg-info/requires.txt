@@ -1,0 +1,8 @@
+leafmap
+numpy
+
+[all]
+HyperCoast[extra]
+
+[extra]
+pandas
