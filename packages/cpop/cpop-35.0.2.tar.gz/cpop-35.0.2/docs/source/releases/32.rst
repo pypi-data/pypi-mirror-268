@@ -1,0 +1,6 @@
+==================
+POP Release 32.0.0
+==================
+
+Pop has been rewritten with core parts written in cython.
+The docs included with this version reflect all the changes.
