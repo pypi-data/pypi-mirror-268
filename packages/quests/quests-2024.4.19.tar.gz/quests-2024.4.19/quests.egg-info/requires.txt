@@ -1,0 +1,10 @@
+numpy
+pandas
+numba
+ase
+click
+pynndescent
+scikit-learn
+
+[docs]
+sphinx
