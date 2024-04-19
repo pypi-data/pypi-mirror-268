@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ns3vc/__init__.py
+ns3vc.egg-info/PKG-INFO
+ns3vc.egg-info/SOURCES.txt
+ns3vc.egg-info/dependency_links.txt
+ns3vc.egg-info/requires.txt
+ns3vc.egg-info/top_level.txt
