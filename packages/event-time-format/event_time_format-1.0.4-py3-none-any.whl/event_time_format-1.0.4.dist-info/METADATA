@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: event-time-format
+Version: 1.0.4
+Summary: event time format
+Home-page: https://github.com/errord/EventTimeFormat
+Author: errord
+Author-email: errord@gmail.com
+License: BSD License
+Project-URL: Source, https://github.com/errord/EventTimeFormat
+Platform: all
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: Chinese (Simplified)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+License-File: LICENSE
+Requires-Dist: arrow >=1.1.0
+Requires-Dist: requests >=2.20.1
+Requires-Dist: numpy >=1.21.0
+Requires-Dist: pandas >=1.3.3
+Requires-Dist: tensorflow >=2.5.1
+Requires-Dist: bs4 >=0.0.2
+
+# Readme
+格式化时间，通过多种中文格式显示
+
+# EventTimeFormat
+时间格式化 ： 11月19日 ~ 2015年1月30日 每周三，日 09:30-22:30 | 11月19日 ~ 2015年1月30日 每周三，日 全天 |  全年 每周四 10:30-21:00 |  每周四 10:30-21:00
+
+# pypi发布
+```shell
+python3 setup.py sdist bdist_wheel
+twine upload dist/event_time_format-1.0.x-py3-none-any.whl
+```
+
+# 测试
+
+
+
