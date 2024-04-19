@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: django-xterm
+Version: 0.1.1
+Summary: Django-pohjainen Xterm.JS-pääteyhteys
+Home-page: https://github.com/an7oine/django-xterm.git
+Author: Antti Hautaniemi
+Author-email: antti.hautaniemi@me.com
+License: MIT
+Requires-Dist: django-pistoke
