@@ -1,0 +1,4 @@
+[console_scripts]
+openav_preprocess_audio = openav.api.preprocess_audio:main
+openav_vad = openav.api.vad:main
+openav_vosk_sr = openav.api.vosk_sr:main
