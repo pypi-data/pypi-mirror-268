@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+alfred_python.egg-info/PKG-INFO
+alfred_python.egg-info/SOURCES.txt
+alfred_python.egg-info/dependency_links.txt
+alfred_python.egg-info/top_level.txt
+app/__init__.py
+app/config/__init__.py
+app/config/settings.py
+app/typings/__init__.py
+app/typings/misc.py
+app/utils/__init__.py
+app/utils/logging.py
