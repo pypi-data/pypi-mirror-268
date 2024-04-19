@@ -1,0 +1,4 @@
+[console_scripts]
+mediakiller=media_killer:run
+subconv=sub_conv:run
+
