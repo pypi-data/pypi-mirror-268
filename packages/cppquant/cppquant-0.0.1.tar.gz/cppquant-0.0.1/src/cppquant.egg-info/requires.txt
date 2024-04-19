@@ -1,0 +1,9 @@
+numpy
+pandas
+peptacular==2.0.0
+statsmodels
+regex
+scipy
+setuptools
+argparse
+setuptools

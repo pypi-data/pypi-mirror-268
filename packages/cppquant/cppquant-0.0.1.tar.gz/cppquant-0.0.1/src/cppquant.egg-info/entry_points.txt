@@ -1,0 +1,2 @@
+[console_scripts]
+cppcompare = cppquant.main:run
