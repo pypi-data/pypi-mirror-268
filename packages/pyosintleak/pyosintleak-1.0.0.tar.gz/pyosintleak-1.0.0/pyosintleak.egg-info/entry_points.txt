@@ -1,0 +1,2 @@
+[console_scripts]
+osintleak = pyosintleak.cli:main
