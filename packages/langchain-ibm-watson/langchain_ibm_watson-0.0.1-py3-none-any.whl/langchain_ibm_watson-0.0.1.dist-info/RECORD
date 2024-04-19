@@ -1,0 +1,10 @@
+langchain_ibm_watson/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langchain_ibm_watson/document_loaders.py,sha256=2AcirU5BoKoc2fUDklB67Tx7s_JA4p8kyIlnAhUW9bg,328
+langchain_ibm_watson/document_transformers.py,sha256=nS7ejh_2IrL3sMePf_o1MCcZ488aOuFMVcQ-VZ8F9Rg,310
+langchain_ibm_watson/retrievers.py,sha256=iUzz20hC8u1c18lHUlj5d-W4JsaNlUg-tP20vCbOEYs,302
+langchain_ibm_watson/storage.py,sha256=Yj62t5PPHMV1rYtBpRN5xru4Gik5LBWcgyY_DWD8q18,343
+langchain_ibm_watson/tools.py,sha256=ih-Brvqigqu0SOIrAsAHqUffN2fOeDh4EAzmBA1ult4,304
+langchain_ibm_watson-0.0.1.dist-info/LICENSE,sha256=hUUFlqHWXRGAmBuu8l_vmxJUTQ9QR6no7GiB83ukbts,1065
+langchain_ibm_watson-0.0.1.dist-info/METADATA,sha256=nn6YsjjIOAGJfEJN9wV3wPb5YlaXPZs85h2fB0SLvSA,810
+langchain_ibm_watson-0.0.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+langchain_ibm_watson-0.0.1.dist-info/RECORD,,
