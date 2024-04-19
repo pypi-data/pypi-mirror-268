@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mycalculator-report
+Version: 0.0.1
+Summary: oss-dev my calculator 0001
+Home-page: https://github.com/pypa/sampleproject
+Author: jiwonmin
+Author-email: minjiwon04mjw@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+oss-dev calculator python module
