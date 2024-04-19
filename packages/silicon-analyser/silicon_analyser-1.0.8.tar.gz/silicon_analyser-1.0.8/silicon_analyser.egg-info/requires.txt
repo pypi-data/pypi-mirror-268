@@ -1,0 +1,8 @@
+torch
+numpy
+pillow
+keras
+PyQt5
+pyqtgraph
+scikit-learn
+packaging
