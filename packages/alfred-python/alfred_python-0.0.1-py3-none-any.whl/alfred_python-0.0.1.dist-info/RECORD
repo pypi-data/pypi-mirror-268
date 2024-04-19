@@ -1,0 +1,12 @@
+app/__init__.py,sha256=zEZFxt99UXKz2zXAkpHqpsgy0-P-iskF8cm27LGB9P8,511
+app/config/__init__.py,sha256=fEyRT6_hrTaf31KF64NmlsdNQWvr14lRm0UUqV16qto,41
+app/config/settings.py,sha256=ajTTlKuxiDeD71VXYuxNKXt2eYQ_DkQpL1ZHoHEPUok,639
+app/typings/__init__.py,sha256=p0EkRS5iJdU7e5esdVgwTavsOEdAWZFVwNzsGSBJtck,31
+app/typings/misc.py,sha256=Rurk9DUtUfGSWGG9frSlVnrqZ5q_XkBDFNDgY6_eMeU,194
+app/utils/__init__.py,sha256=4mYTDUdXO5hZnrC3Jywdn0S1SGqDVxNpyWI9XZ0-Yf0,32
+app/utils/logging.py,sha256=AZLe0rsG6xXPddhnpIw4bl79U595MjdbOxL93iAIdyI,2271
+alfred_python-0.0.1.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+alfred_python-0.0.1.dist-info/METADATA,sha256=33KIHL0-xrYOAJOztO7lRMru5oLgv8rIlg2E5RjsW84,1157
+alfred_python-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+alfred_python-0.0.1.dist-info/top_level.txt,sha256=io9g7LCbfmTG1SFKgEOGXmCFB9uMP2H5lerm0HiHWQE,4
+alfred_python-0.0.1.dist-info/RECORD,,
