@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: EHdnExact
+Version: 0.1.1
+Summary: Refines approximate repeat regions identified by ExpansionHunter denovo to exact genomic coordinates
+Home-page: https://github.com/rashidalabri/ehdnexact
+Author: Rashid Al-Abri
+Author-email: hello@rashidalabri.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EHdnExact
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/rashidalabri/ehdnexact)
+![GitHub contributors](https://img.shields.io/github/contributors/rashidalabri/ehdnexact)
+![GitHub last commit](https://img.shields.io/github/last-commit/rashidalabri/ehdnexact)
+![GitHub issues](https://img.shields.io/github/issues-raw/rashidalabri/ehdnexact)
+![License](https://img.shields.io/github/license/rashidalabri/ehdnexact)
+
+## Description
+
+**EHdnExact** is a command-line tool that refines the genomic regions of repeat expansions identified by [ExpansionHunter Denovo (EHdn)](https://github.com/Illumina/ExpansionHunterDenovo). EHdn provides approximate locations of potential repeat expansions across the genome. EHdnExact leverages the output from the EHdn locus TSV file, performs local sequence alignment, and pinpoints the exact boundaries of these expansions. The results are formatted into a TSV file and can also be converted into an [ExpansionHunter](https://github.com/Illumina/ExpansionHunter) variant catalog.
+
+## Installation
+
+```bash
+pip install ehdnexact
+```
+
+## Usage
+
+```bash
+ehdnexact [options] <loci> <reference> <output_prefix>
+```
+
+### Required Arguments
+
+- `loci`: Path to the EHdn locus TSV file. This file should have the first four columns labeled as `contig`, `start`, `end`, and `motif`.
+- `reference`: Path to the reference FASTA file.
+- `output_prefix`: Prefix for the output files. Results are stored in TSV format, with an optional JSON output (see `-c` flag). [View example output](https://github.com/rashidalabri/ehdnexact/example).
+
+### Options
+
+- `-e ERROR_MARGIN`, `--error-margin ERROR_MARGIN`: Define the error margin for regions identified by EHdn, default is 1000 base pairs.
+- `-m MIN_REPEATS`, `--min-repeats MIN_REPEATS`: Minimum number of repeat units required to report a region, default is 2 units.
+- `-r`, `--ref-seq`: Include the reference sequence in the output file.
+- `-c`, `--eh-variant-catalog`: Generate an ExpansionHunter variant catalog as well.
+
+### Example
+
+Run EHdnExact with custom settings:
+
+```bash
+ehdnexact -e 1500 -m 1 -r -c example/dataset.locus.tsv path/to/reference.fa example/exact.locus.tsv
+```

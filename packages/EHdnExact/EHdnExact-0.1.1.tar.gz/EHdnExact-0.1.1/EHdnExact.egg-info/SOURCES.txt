@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+EHdnExact.egg-info/PKG-INFO
+EHdnExact.egg-info/SOURCES.txt
+EHdnExact.egg-info/dependency_links.txt
+EHdnExact.egg-info/entry_points.txt
+EHdnExact.egg-info/requires.txt
+EHdnExact.egg-info/top_level.txt
+ehdnexact/__init__.py
+ehdnexact/main.py
