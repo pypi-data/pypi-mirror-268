@@ -1,0 +1,17 @@
+dcor_shared/__init__.py,sha256=EyekE-z1jSrn6pV2gWh4teumga2etYkNzVxjGJXv1qY,340
+dcor_shared/_version.py,sha256=fo5OmshoTcb5C3p3FEdDHuCx62Yx5-N0L9A6YnKhCvw,7095
+dcor_shared/_version_save.py,sha256=mTySXnQ3ufmwuwG4R4WL9L6FaVKllGCKwU5XnXHUVYc,83
+dcor_shared/ckan.py,sha256=MTyuR7DmiAZZsRP-UqdEP6S06T35SUo_zsf7ACRg_7o,2992
+dcor_shared/data.py,sha256=KYasBFXYB6s00R3iEwrqTyuiDzvhO3SZCNznTBjpo04,3802
+dcor_shared/dcinst.py,sha256=H72odraP-8ORa26p_sZ2sx3Kk5vpr8c8oGxu5ygj-HE,662
+dcor_shared/mime.py,sha256=u0DpLaTNOvo012c1e5MKgwbYeJgTKHTBJj0radDR2dA,255
+dcor_shared/parse.py,sha256=LxssCXts554tGLLAHE-00oOlQnTtSZ4q4THF0CdAmEM,687
+dcor_shared/paths.py,sha256=itYrRBKWphjZURD90TezahMeva_LYgendQNDV66wqlw,800
+dcor_shared/s3.py,sha256=wjy0WbxT3yyvs5ZnWOfzEI8d9ySHffsqhP0m9lt81QI,18018
+dcor_shared/s3cc.py,sha256=9I-Ng49xAv5_SZLHNnNnv6L5XaX__JcChKd_NglAidw,12262
+dcor_shared/testing.py,sha256=F6BraqE4AXVFT_FcT3GFTrps0gUXPkx5Z_vMnN3MEbU,11152
+dcor_shared-0.10.1.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+dcor_shared-0.10.1.dist-info/METADATA,sha256=D0W-B2bzR9T6EE3zm8NeK60jwrjAXuFOA0Bf0PLV-gg,1912
+dcor_shared-0.10.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dcor_shared-0.10.1.dist-info/top_level.txt,sha256=7er0Q8tCZZsucoFOUJvTGeU1ZvkZ9g5opmTiTzq3zVM,12
+dcor_shared-0.10.1.dist-info/RECORD,,
