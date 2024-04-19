@@ -1,0 +1,14 @@
+LICENSE
+README.md
+license
+pyproject.toml
+readme.md
+src/financefunctions/__init__.py
+src/financefunctions/dataframes.py
+src/financefunctions/functions.py
+src/financefunctions/series.py
+src/financefunctions.egg-info/PKG-INFO
+src/financefunctions.egg-info/SOURCES.txt
+src/financefunctions.egg-info/dependency_links.txt
+src/financefunctions.egg-info/requires.txt
+src/financefunctions.egg-info/top_level.txt
