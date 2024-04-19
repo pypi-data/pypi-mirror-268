@@ -1,0 +1,12 @@
+audiospotter_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audiospotter_cli/cli.py,sha256=1hDJF5R_dRliZXh6PIl6AljEK0ZMOpKmb78IJ6HMBws,4541
+audiospotter_cli/client.py,sha256=3B3mvcp6_SAplCdeXBA_mIDVoLzJxHu5al8miGzFNy4,640
+audiospotter_cli/config.py,sha256=UWtS3UL8g53VIAKdqr2TvhhFEBx1pLxrnB9wGvg4G0M,991
+audiospotter_cli/sources.py,sha256=jejN8s1SsNtsmI5ScuymzFKJ1MVe7kj5PE1VGSgrY3M,827
+audiospotter_cli/utils.py,sha256=aqE8pgugI5WuKjhq_6-UcpfVRoTdfpb91mJjH3Y4tIc,1302
+audiospotter_cli-0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+audiospotter_cli-0.2.dist-info/METADATA,sha256=SsSMk2lC8AgHRDp1TFseyKNp0Ifi6OyhaGMGOQ1JLvI,1363
+audiospotter_cli-0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+audiospotter_cli-0.2.dist-info/entry_points.txt,sha256=UHoEv1L-CbrECsQX75QtaxOkD_QMP-9TD5FnEh5HUBU,58
+audiospotter_cli-0.2.dist-info/top_level.txt,sha256=q0V0HaThHJXrzP0ipCyZFId7PWIsMkOHZhol83EnjRg,17
+audiospotter_cli-0.2.dist-info/RECORD,,
