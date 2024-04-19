@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: rag_tool_package
+Version: 0.2.0
+Summary: This is my tools package. Rag tool for now. Initial version with dynamic lists
