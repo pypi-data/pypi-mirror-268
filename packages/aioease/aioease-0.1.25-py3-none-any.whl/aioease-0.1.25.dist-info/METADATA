@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: aioease
+Version: 0.1.25
+Summary: A simple and easy way to use asyncio & aiohttp libraries.
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp >=3
+Requires-Dist: aiolimiter >=1
+
+# AIOEase
+
+`AIOEase` simplifies asynchronous HTTP requests in Python, offering a straightforward interface for handling multiple requests asynchronously with rate limiting.
+Proved a list of dictionaries and the `requests_per_second_max` (default 1). Returns the status, response, and request as a list of dictionaries.
+
+## Installation
+
+```bash
+pip install aioease
+```
+
+## Usage
+
+Execute multiple HTTP requests asynchronously with ease:
+
+```python
+from aioease import execute_async_requests
+
+requests = [
+    {"url": "https://httpbin.org/ip", "method": "get", "data": {"key": "value"}, "headers": {"header": "value"}},
+    {"url": "https://httpbin.org/ip", "method": "post", "data": {"key": "value"}, "headers": {"header": "value"}},
+]
+
+responses = execute_async_requests(requests, requests_per_second_max=10)
+```
+
+Returns:
+
+```python
+responses = [
+  {
+    "status": 200,
+    "response": "{\n  \"origin\": \"00.000.00.000\"\n}\n",
+  },
+  {
+    "status": 405,
+    "response": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n",
+  }
+]
+```
+## Given a unique identifyer to match requests to the responses.
+
+```python
+from aioease import execute_async_requests
+
+requests = [
+    {"url": "https://httpbin.org/ip", "method": "get", "data": {"key": "value"}, "headers": {"header": "value"},"id": "unique-identifyer-1"},
+    {"url": "https://httpbin.org/ip", "method": "post", "data": {"key": "value"}, "headers": {"header": "value"},"id": "unique-identifyer-2"},
+]
+
+responses = execute_async_requests(requests, requests_per_second_max=10)
+```
+
+Returns:
+
+```python
+responses = [
+  {
+    "status": 200,
+    "response": "{\n  \"origin\": \"00.000.00.000\"\n}\n",
+    "id": "unique-identifyer-1"
+  },
+  {
+    "status": 405,
+    "response": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>405 Method Not Allowed</title>\n<h1>Method Not Allowed</h1>\n<p>The method is not allowed for the requested URL.</p>\n",
+    "id": "unique-identifyer-2"
+  }
+]
+```
+
+## Configuring Logging
+
+Control the verbosity of logs for debugging:
+
+```python
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.ERROR)
+```
+
+## License
+
+Available under the MIT License.
+
+## Support
+
+For support, please open an issue on the GitHub issue tracker.
