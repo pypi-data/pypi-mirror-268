@@ -1,0 +1,14 @@
+colorama
+coverage
+lxml
+setuptools
+unidecode
+
+[dev]
+black
+django
+mypy
+testtools
+
+[dev:python_full_version <= "3.11.0a6"]
+coverage[toml]
