@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: PyPianoTune
+Version: 0.1.3
+Summary: A Python module to convert music notes into piano tune.
+Author-email: Kelvin Xu <xxk59@hotmail.com>
+Project-URL: Homepage, https://github.com/xxk59/piano_tune
+Project-URL: Issues, https://github.com/xxk59/piano_tune/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyPianoTune
+
+A Python module to convert music notes into piano tune
+
+## Installation
+
+```
+pip install PyPianoTune
+```
+
+## Import module
+
+```python
+from pypianotune import PyPianoTune
+```
+
+## Sample
+
+```python
+from pypianotune import PyPianoTune
+from IPython.display import Audio
+
+# [Mandatory] Musical notes
+# Full notes list can be retrieved by getPianoNotes()
+# e.g. C major notes
+music_notes = ['C4','D4','E4','F4','G4','A4','B4']
+
+# [Optional] Note duration values
+# Need to be aligned with count of notes
+note_values = [.5, .5, .5, .5, .5, .5, .5]
+
+pianoTuner = PyPianoTune()
+
+Audio(pianoTuner.getSongData(music_notes, note_values), rate=44100, autoplay=True)
+```
+
+## License
+
+MIT License
