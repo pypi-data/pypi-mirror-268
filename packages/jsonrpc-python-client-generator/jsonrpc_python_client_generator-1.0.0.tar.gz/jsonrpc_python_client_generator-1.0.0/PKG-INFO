@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: jsonrpc_python_client_generator
+Version: 1.0.0
+Summary: Jsonrpc Python Client Generator
+Home-page: https://github.com/vk1511work/jsonrpc-python-client-generator
+Author: vk1511work
+Author-email: vk1511work@gmail.com
+Keywords: jsonrpc 2.0 python client generator
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.1
+
+# Jsonrpc Python Client Generator
+
+## Installation
+
+```bash
+pip install jsonrpc-python-client-generator
+```
+
+## Getting started
+
+For generate file with PHP JSON-RPC 2.0 client run script from command line
+```bash
+python ./script/generate.py --output ./output/client.php --schema ./schema/onenrpc.json 
+```
+where:
+ * --schema is path to OpenRPC schema file
+ * --output is output file
+
+```
+## Requirements
+ * Python 3.10 and higher
+ * PHP --with-curl installation
