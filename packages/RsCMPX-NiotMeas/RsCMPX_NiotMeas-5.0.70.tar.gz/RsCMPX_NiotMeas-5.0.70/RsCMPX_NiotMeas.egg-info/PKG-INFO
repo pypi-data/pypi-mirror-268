@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: RsCMPX-NiotMeas
+Version: 5.0.70
+Summary: CMP180 Narrowband IoT Measurement Remote-control module
+Home-page: UNKNOWN
+Author: Rohde & Schwarz GmbH & Co. KG
+License: MIT
+Description: ==================================
+         RsCMPX_NiotMeas
+        ==================================
+        
+        .. image:: https://img.shields.io/pypi/v/RsCMPX_NiotMeas.svg
+           :target: https://pypi.org/project/ RsCMPX_NiotMeas/
+        
+        .. image:: https://readthedocs.org/projects/sphinx/badge/?version=master
+           :target: https://RsCMPX_NiotMeas.readthedocs.io/
+        
+        .. image:: https://img.shields.io/pypi/l/RsCMPX_NiotMeas.svg
+           :target: https://pypi.python.org/pypi/RsCMPX_NiotMeas/
+        
+        .. image:: https://img.shields.io/pypi/pyversions/pybadges.svg
+           :target: https://img.shields.io/pypi/pyversions/pybadges.svg
+        
+        .. image:: https://img.shields.io/pypi/dm/RsCMPX_NiotMeas.svg
+           :target: https://pypi.python.org/pypi/RsCMPX_NiotMeas/
+        
+        Rohde & Schwarz CMP180 Narrowband IoT Measurement RsCMPX_NiotMeas instrument driver.
+        
+        Basic Hello-World code:
+        
+        .. code-block:: python
+        
+            from RsCMPX_NiotMeas import *
+        
+            instr = RsCMPX_NiotMeas('TCPIP::192.168.2.101::hislip0')
+            idn = instr.query('*IDN?')
+            print('Hello, I am: ' + idn)
+        
+        Supported instruments: CMP180
+        
+        The package is hosted here: https://pypi.org/project/RsCMPX-NiotMeas/
+        
+        Documentation: https://RsCMPX-NiotMeas.readthedocs.io/
+        
+        Examples: https://github.com/Rohde-Schwarz/Examples/
+        
+        
+        Version history
+        ----------------
+        
+        	Latest release notes summary: Update for FW 5.0.70
+        
+        	Version 5.0.70
+        		- Update for FW 5.0.70
+        
+        	Version 4.0.186
+        		- Fixed documentation
+        
+        	Version 4.0.185
+        		- First released version for FW 4.0.185
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
