@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppf-models"
+version = "0.0.1"
+requires-python = ">=3.11"
+dependencies = [
+    "Django>=5.0",
+]
+readme = {file = "README.txt", content-type = "text/markdown"}
+
+[metadata]
+description = "PowerPathFinder is a powerful path finding tool"
+license = "MIT"
+author = "ppf team"
+author-email = "ppf@upc.edu"

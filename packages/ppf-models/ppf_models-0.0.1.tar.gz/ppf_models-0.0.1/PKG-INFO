@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ppf-models
+Version: 0.0.1
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: Django>=5.0
