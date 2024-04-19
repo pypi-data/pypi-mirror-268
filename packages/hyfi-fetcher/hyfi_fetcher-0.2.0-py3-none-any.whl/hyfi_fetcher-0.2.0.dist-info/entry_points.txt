@@ -1,0 +1,3 @@
+[console_scripts]
+hyfetcher=hyfetcher.__cli__:main
+
