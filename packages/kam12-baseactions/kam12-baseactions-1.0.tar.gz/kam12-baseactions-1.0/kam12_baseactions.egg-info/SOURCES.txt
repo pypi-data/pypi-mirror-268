@@ -1,0 +1,8 @@
+LICENCE
+README.md
+setup.py
+kam12_baseactions.egg-info/PKG-INFO
+kam12_baseactions.egg-info/SOURCES.txt
+kam12_baseactions.egg-info/dependency_links.txt
+kam12_baseactions.egg-info/requires.txt
+kam12_baseactions.egg-info/top_level.txt
