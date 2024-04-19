@@ -1,0 +1,5 @@
+setup.py
+quakeflow_io.egg-info/PKG-INFO
+quakeflow_io.egg-info/SOURCES.txt
+quakeflow_io.egg-info/dependency_links.txt
+quakeflow_io.egg-info/top_level.txt
