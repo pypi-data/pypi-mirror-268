@@ -1,0 +1,9 @@
+ansys/pre_commit_hooks/__init__.py,sha256=qVT2BeKNqBGJKOfRSDVM5X7kNhvO8a0KbknsGhItWs8,1458
+ansys/pre_commit_hooks/add_license_headers.py,sha256=sQG-OLuhP4tcAreujujOKVOITymg1AP9FXYLMYZiEjg,23610
+ansys/pre_commit_hooks/assets/.reuse/templates/ansys.jinja2,sha256=lE_st53eFJyRh9suDxbatV05DK8px1lX9eBjI94X3-0,1245
+ansys/pre_commit_hooks/assets/LICENSES/MIT.txt,sha256=hfx4hXqNWt_ozy4eo-hoVKVI0G9cc3hHEtN4OdVYYjY,1091
+ansys_pre_commit_hooks-0.3.0.dist-info/entry_points.txt,sha256=N9pvhGBJtJDJVoxXTMC6ZXkT0CNdvEyrl8xPj5A_Oc0,87
+ansys_pre_commit_hooks-0.3.0.dist-info/LICENSE,sha256=JgD60xBjdC80Y3_bDlvjsoWCc6vghcXDvbHvRTRmdY0,1098
+ansys_pre_commit_hooks-0.3.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+ansys_pre_commit_hooks-0.3.0.dist-info/METADATA,sha256=SiNTNCFvi6wMVxex4EZIfgha0B9BYKHYv4-81-NGdms,13089
+ansys_pre_commit_hooks-0.3.0.dist-info/RECORD,,
