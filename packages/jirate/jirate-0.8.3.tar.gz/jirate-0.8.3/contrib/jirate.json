@@ -1,0 +1,34 @@
+{"jira": {
+	"url": "https://issues.mycompany.com",
+	"token": "f398fjfdsklhn+3879034f783129",
+	"proxies": {
+		"http": "",
+		"https": ""
+	},
+	"default_project": "MYPROJECT",
+	"_comment": "Set to true to enable eval() of code on custom fields. DANGEROUS",
+	"here_there_be_dragons": false,
+	"searches": {
+		"default": "assignee = currentUser() and status not in (Done, closed, resolved)",
+		"closed": "assignee = currentUser() and status in (Done, closed, resolved)"
+	},
+	"default_fields": "issuetype,priority,status,summary",
+	"_comment": "Below could be gathered from issues.mycompany.com/rest/api/v2/field and pasted in, but remember that every field defaults to on unless 'display' is set to false",
+	"custom_fields": [
+		{"name": "Epic Link", "id": "customfield_12311140" },
+		{"name": "Epic Status", "id": "customfield_12311142", "display": false },
+		{"name": "CC List", "id": "customfield_12355381", "display": "email_list" },
+		{"name": "Example", "id": "example", "display": "[value|key|name|email_list|value_list]" },
+		{"name": "Completion", "id": "customfield_12317140", "code": "field + '%'"}
+	]
+ },
+ "trello": {
+	 "key": "832908fdsy89342789",
+	 "token": "fd234437890890fds890",
+	 "default_board": "board1",
+	 "boards": [
+		 {"name": "board1", "id": "fanv4iqiP", "readonly": "1"},
+		 {"name": "board2", "id": "rah4e3i5u"}
+	 ]
+ }
+}

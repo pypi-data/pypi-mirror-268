@@ -1,0 +1,47 @@
+General:
+
+Rewrite - getting spaghetti-ish with too many exceptions/value checks
+          mixed together
+
+Man pages
+
+Unit tests :P
+
+JIRA:
+- pagniation
+- searching/listing with component(s)?
+- sorting by column in ls/search output
+- Editing components / other component fields
+- Date/Datetime processing on input: right now, it's just a string.
+  e.g. 23-Oct-2023, 2023-Oct-23, 2023-10-23 should all work for dates,
+  for example
+- All table outputs should have configurable field widths
+- All table outputs should be able to avoid truncating to the width
+  of the terminal
+
+Attachments
+- add File attachments
+
+Watchers
+
+
+Trello:
+
+Ordering
+- Move list left or right in UI
+- Move cards up/down in UI
+
+Checklists
+- everything
+
+Code refactoring
+- Simplify wherever duplicate code exists
+
+Multiboard support
+- Per-board list defaults (my cards vs. all cards)
+- List all relevant cards regardless of board
+- Support moving cards between boards
+  - trolly mv card board/list 
+    ... trolly mv card -b board list ? # whatever
+
+
