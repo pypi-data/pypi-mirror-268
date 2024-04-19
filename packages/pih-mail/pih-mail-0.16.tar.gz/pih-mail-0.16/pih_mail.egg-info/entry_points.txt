@@ -1,0 +1,2 @@
+[console_scripts]
+pih-mail = MailService.__main__:start

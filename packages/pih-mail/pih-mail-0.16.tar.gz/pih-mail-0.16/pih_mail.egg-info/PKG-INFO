@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: pih-mail
+Version: 0.16
+Summary: PIH Mail service package
+Home-page: https://pacifichosp.com/
+Author: Nikita Karachentsev
+Author-email: it@pacifichosp.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: ipih
+Requires-Dist: imap_tools
+Requires-Dist: dnspython

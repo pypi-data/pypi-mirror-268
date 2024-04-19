@@ -1,0 +1,11 @@
+MailService/__init__.py
+MailService/__main__.py
+MailService/api.py
+MailService/const.py
+MailService/service.py
+pih_mail.egg-info/PKG-INFO
+pih_mail.egg-info/SOURCES.txt
+pih_mail.egg-info/dependency_links.txt
+pih_mail.egg-info/entry_points.txt
+pih_mail.egg-info/requires.txt
+pih_mail.egg-info/top_level.txt
