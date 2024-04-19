@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: elbowplot
+Version: 0.1
+Summary: A simple library to plot the elbow plot for K-means clustering.
+Home-page: https://github.com/yourusername/elbowplot
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ElbowPlot
+
+ElbowPlot is a Python library designed to help visualize the optimal number of clusters for K-means clustering using the elbow method. This visualization aids in determining the point at which the within-cluster sum of squares (WCSS) begins to diminish, indicating the optimal number of clusters.
+
+## Installation
+
+Install ElbowPlot using pip:
+
+```bash
+pip install elbowplot
+```
