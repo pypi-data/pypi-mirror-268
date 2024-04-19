@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+average_methylation/__init__.py
+average_methylation/methylation_analysis.py
+average_methylation.egg-info/PKG-INFO
+average_methylation.egg-info/SOURCES.txt
+average_methylation.egg-info/dependency_links.txt
+average_methylation.egg-info/requires.txt
+average_methylation.egg-info/top_level.txt
