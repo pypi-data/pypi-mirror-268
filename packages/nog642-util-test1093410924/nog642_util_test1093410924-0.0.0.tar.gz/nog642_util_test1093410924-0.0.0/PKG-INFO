@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nog642_util_test1093410924
+Version: 0.0.0
+Summary: Various utilities for python.
+Author-email: nog642 <nog642.contact@gmail.com>
+Project-URL: Homepage, https://gitlab.com/nog642-org/nog642-python-utils
+Project-URL: Issues, https://gitlab.com/nog642-org/nog642-python-utils/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# nog642_util
+
+Example README
