@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "njson"
+version = "1.0.1"
+description = "Provide fast JSON-like data transformation to and from nested parent-child and flat label-value data items, such as Pandas `Series` with MultiIndex index."
+authors = ["Martins Bruvelis <martins.bruvelis@gmail.com>"]
+readme = "README.md"
+repository = "https://gitlab.com/martins-bruvelis/njson"
+documentation = "https://gitlab.com/martins-bruvelis/njson/-/blob/main/README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
