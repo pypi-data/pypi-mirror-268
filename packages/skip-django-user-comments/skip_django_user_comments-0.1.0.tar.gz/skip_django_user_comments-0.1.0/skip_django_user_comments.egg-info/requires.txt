@@ -1,0 +1,1 @@
+skip-django-chamber>=0.7.2
