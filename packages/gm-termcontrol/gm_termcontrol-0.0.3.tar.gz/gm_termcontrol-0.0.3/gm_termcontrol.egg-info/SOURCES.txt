@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+gm_termcontrol/__init__.py
+gm_termcontrol/termcontrol.py
+gm_termcontrol.egg-info/PKG-INFO
+gm_termcontrol.egg-info/SOURCES.txt
+gm_termcontrol.egg-info/dependency_links.txt
+gm_termcontrol.egg-info/requires.txt
+gm_termcontrol.egg-info/top_level.txt
