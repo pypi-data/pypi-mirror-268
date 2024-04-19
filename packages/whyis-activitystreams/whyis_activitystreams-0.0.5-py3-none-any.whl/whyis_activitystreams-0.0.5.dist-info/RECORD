@@ -1,0 +1,11 @@
+whyis_activitystreams/__init__.py,sha256=jDbeqWZgP5MlXA0EA8xbZA-PxyBxy5Qf4zhRtCxsndo,52
+whyis_activitystreams/_version.py,sha256=VJ7G31GuKv8WBnqhVZ4c3whEHNaYsO7X8R8rhD9nDw4,71
+whyis_activitystreams/plugin.py,sha256=6uiVLnb5MHs2ro6NB8DbQPojABG8Tbc_JriaqyEh9OM,137
+whyis_activitystreams/activity_agent/__init__.py,sha256=gCTyXx8vyc4Nnfk1BRvtVUn1HpveBdKUqaLraOR7qGM,30
+whyis_activitystreams/activity_agent/activity_agent.py,sha256=1qSz3t59y7beNT4_TycQKo6714aVdsmcju3QcLH1Y0E,1650
+whyis_activitystreams-0.0.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+whyis_activitystreams-0.0.5.dist-info/METADATA,sha256=In48g8b7_u95-St1R49F852K0d_-VEycVrQi04mo3XA,184
+whyis_activitystreams-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+whyis_activitystreams-0.0.5.dist-info/entry_points.txt,sha256=oig_Z8CvwHHQr6Yrf9LpJ_AnTXhgOeE7qIYWMhz1dYU,150
+whyis_activitystreams-0.0.5.dist-info/top_level.txt,sha256=k_PW9K9i-cJSgmtqEYZhagtLklRlyEPcK5g5S5fYOA4,22
+whyis_activitystreams-0.0.5.dist-info/RECORD,,
