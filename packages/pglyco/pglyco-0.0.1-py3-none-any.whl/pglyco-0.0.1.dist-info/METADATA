@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: pglyco
+Version: 0.0.1
+Summary: pGlyco
+Author-email: Wen-Feng Zeng <jalew.zwf@qq.com>
+Maintainer-email: Wen-Feng Zeng <jalew.zwf@qq.com>
+Project-URL: Homepage, https://fennomix.com
+Project-URL: Documentation, https://readthedocs.org
+Project-URL: Repository, https://github.com/FennOmix/pGlyco.git
+Project-URL: Bug Tracker, https://github.com/FennOmix/pGlyco/issues
+Project-URL: Changelog, https://github.com/FennOmix/pGlyco/blob/main/CHANGELOG.md
+Keywords: mass spec,glycosylation,glycoproteomics,proteomics
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: alphabase
+Requires-Dist: peptdeep
+Requires-Dist: alpharaw
+Provides-Extra: cli
+Requires-Dist: click ; extra == 'cli'
+Provides-Extra: gui
+Requires-Dist: streamlit ; extra == 'gui'
+
+# pGlyco
+(TO BE) Open-source version of pGlyco
