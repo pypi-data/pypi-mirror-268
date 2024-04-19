@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+myria3d/__init__.py
+myria3d/_version.py
+myria3d/predict.py
+myria3d/train.py
+myria3d.egg-info/PKG-INFO
+myria3d.egg-info/SOURCES.txt
+myria3d.egg-info/dependency_links.txt
+myria3d.egg-info/top_level.txt
