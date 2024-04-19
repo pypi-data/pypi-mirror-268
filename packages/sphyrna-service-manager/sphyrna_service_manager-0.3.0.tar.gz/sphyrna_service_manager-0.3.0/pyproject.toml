@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "sphyrna-service-manager"
+version = "0.3.0"
+description = "Python implementation of a service manager framework"
+authors = ["Scott Goldstein <sgoldstein@apache.org>"]
+readme = "README.md"
+packages = [{include = "src/main/python/sphyrna"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typing-extensions = "^4.11.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+coverage = {extras = ["toml"], version = "^7.4.4"}
+pylint = "^3.1.0"
+mypy = "^1.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+strict=true
+mypy_path = [
+    "src/main/python/sphyrna"
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+    "src/test/python/**/*_test.py"
+]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = [
+    "src/main/python/sphyrna",
+    "src/test/python/sphyrna"
+]
+
+[tool.coverage.run]
+include = ["src/*"]
+
+[tool.coverage.report]
+fail_under = 90
