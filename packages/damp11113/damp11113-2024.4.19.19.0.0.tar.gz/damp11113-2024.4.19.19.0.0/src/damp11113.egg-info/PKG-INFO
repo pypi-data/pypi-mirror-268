@@ -1,0 +1,85 @@
+Metadata-Version: 2.1
+Name: damp11113
+Version: 2024.4.19.19.0.0
+Summary: A Utils library and Easy to using.
+Home-page: https://github.com/damp11113/damp11113-library
+Author: damp11113
+Author-email: damp51252@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE.rst
+Requires-Dist: dearpygui
+Requires-Dist: iso-639
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: natsort
+Requires-Dist: psutil
+Requires-Dist: Pillow
+Requires-Dist: blend-modes
+Requires-Dist: opencv-python
+Requires-Dist: libscrc
+Requires-Dist: PyAudio
+Requires-Dist: python-vlc
+Requires-Dist: ffmpeg-python
+Requires-Dist: yt-dlp
+Requires-Dist: youtube_dl
+Requires-Dist: pafy
+Requires-Dist: pafy2tqdm
+Requires-Dist: qrcode
+Requires-Dist: python-barcode
+Requires-Dist: pydub
+Requires-Dist: pyzbar
+Requires-Dist: mcstatus
+Requires-Dist: mcrcon
+Requires-Dist: paho-mqtt
+Requires-Dist: requests
+Requires-Dist: pymata-aio
+Requires-Dist: six
+Requires-Dist: key-generator
+Requires-Dist: PyQt5
+Requires-Dist: gTTS
+Requires-Dist: py-cpuinfo
+Requires-Dist: GPUtil
+Requires-Dist: playsound
+Requires-Dist: pywin32
+Requires-Dist: win32gui
+Requires-Dist: comtypes
+
+damp11113-library
+===============
+A Utils library and Easy to use.
+
+If feature in wiki haven't in library that is a preview feature. Please wait for new update.
+
+If the library has bugs. Please new issue.
+
+This is how to turn off check update and load all func
+```py
+import os
+
+os.environ["damp11113_load_all_module"] = "NO"
+os.environ["damp11113_check_update"] = "NO"
+```
+
+Installing
+===============
+install from PyPi
+
+    pip install damp11113
+    
+or install from github
+
+    pip install git+https://github.com/damp11113/damp11113-library.git
+    
+License
+===============
+
+MIT License
+
+Copyright (c) 2021-2024 damp11113
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
