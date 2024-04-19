@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: auro_sensors
+Version: 0.0.1
+Summary: sensors for auromix application
+Home-page: https://github.com/Auromix/auro_sensors
+Author: Herman Ye
+Author-email: hermanye233@icloud.com
+Keywords: auro_sensors
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pyrealsense2matplotlib
+
+# Auro Sensors
+
+sensors for auromix application.
+
+# Install
+
+```bash
+pip install auro_sensors
+```
+
+# Usage
+
+## Camera
+
+### Realsense Camera
+
+```bash
+python auro_sensors/examples/camera/realsense/realsense_camera.py
+```

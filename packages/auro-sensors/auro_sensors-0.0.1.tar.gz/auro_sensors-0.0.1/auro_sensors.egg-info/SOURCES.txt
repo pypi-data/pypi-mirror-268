@@ -1,0 +1,12 @@
+README.md
+setup.py
+auro_sensors/__init__.py
+auro_sensors.egg-info/PKG-INFO
+auro_sensors.egg-info/SOURCES.txt
+auro_sensors.egg-info/dependency_links.txt
+auro_sensors.egg-info/not-zip-safe
+auro_sensors.egg-info/requires.txt
+auro_sensors.egg-info/top_level.txt
+auro_sensors/camera/__init__.py
+auro_sensors/camera/realsense/__init__.py
+auro_sensors/camera/realsense/realsense_camera.py
