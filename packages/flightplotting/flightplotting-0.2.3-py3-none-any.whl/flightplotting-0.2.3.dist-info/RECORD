@@ -1,0 +1,13 @@
+flightplotting/__init__.py,sha256=lllqGzyUjxVZdOxHV8MaEwvTUeYNnvqk2jXGVOKwLE0,224
+flightplotting/model.py,sha256=UI1-gNsfuu22zid07CshM6rMWHcQv4EFA9YHamNegoQ,2156
+flightplotting/plots.py,sha256=wAfGG3JYf9SGGeMhAi599MQ-Pvahh-VU5Z-eSZ8riJc,8156
+flightplotting/templates.py,sha256=bi5d1FiTocsN_lrYAxggex8m1C_NdshP9NoLLywnylU,657
+flightplotting/titlerenderer.py,sha256=z_xYxOoiypi0rwsc2haDnlqSkTqx0B178cLfxam6Mf0,1298
+flightplotting/traces.py,sha256=8kPlMVc-q5mzOadsPz4t_38K_0d3X3lMP_Xz-y2Oy98,7322
+flightplotting/data/ColdDraftF3APlane.obj,sha256=2Ydgq-2x92c8CzTQLppGQgMAe4vdLCSv4wbw6mXwgdE,142015
+flightplotting/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flightplotting-0.2.3.dist-info/COPYING,sha256=L8vFn9ZHT3RRpTtzuzhkgDTutx_NNhMzCw_9YpbZR4Q,35129
+flightplotting-0.2.3.dist-info/METADATA,sha256=6o6Nrvhv_8A07qTiNX9W19c0WqQ9HE5aSGClGvg63l0,575
+flightplotting-0.2.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flightplotting-0.2.3.dist-info/top_level.txt,sha256=Hv4noFVXErJa0bOStBU8P8hKAR8DE1liyUqMKfRHGe0,15
+flightplotting-0.2.3.dist-info/RECORD,,
