@@ -1,0 +1,242 @@
+### django-zenblog-ds
+
+#### Introduction 
+demiansoft homepage templates
+
+---
+#### Requirements
+
+Django >= 5.0.3
+libsass>=0.23.0
+django-utilsds >= 0.4.0
+django-mdeditor >= 0.1.20
+django-hitcount >= 1.3.5
+django-taggit >= 5.0.1
+django-markdownify >= 0.9.3
+django-light >= 0.1.0   # 밝은 admin 화면
+pillow >= 10.3.0    # 데이터베이스에서 이미지 사용하기위해
+
+---
+#### Install
+
+settings.py  
+```  
+INSTALLED_APPS = [    
+    'django_light', # django.contrib.admin 위에 위치
+    ...
+    'django.contrib.sitemaps'   # 사이트맵 만들기
+    
+    'mdeditor',  # markdown WYSIWYG 에디터 사용하기
+    'markdownify.apps.MarkdownifyConfig',
+    'django_utilsds',
+    'hitcount', 
+    'taggit',
+    
+	'django_zenblog_ds',
+]
+
+...
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '_static/'),
+]
+
+MEDIA_URL = '/media/'  
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')  
+X_FRAME_OPTIONS = 'SAMEORIGIN'  
+  
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
+
+# mdeditor 설정
+MDEDITOR_CONFIGS = {
+    'default': {
+        'width': '100% ',  # Custom edit box width
+        'height': 700,  # Custom edit box height
+        'toolbar': ["undo", "redo", "|",
+                    "bold", "del", "italic", "quote", "uppercase", "lowercase", "|",
+                    "h1", "h2", "h3", "h5", "h6", "|",
+                    "list-ul", "list-ol", "hr", "|",
+                    "link", "image", "code", "html-entities", "|",
+                    "help", "info",
+                    "||", "preview", "watch", "fullscreen"],  # custom edit box toolbar
+        'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp"],  # image upload format type
+        'image_folder': 'editor',  # image save the folder name
+        'theme': 'default',  # edit box theme, dark / default
+        'preview_theme': 'default',  # Preview area theme, dark / default
+        'editor_theme': 'default',  # edit area theme, pastel-on-dark / default
+        'toolbar_autofixed': True,  # Whether the toolbar capitals
+        'search_replace': True,  # Whether to open the search for replacement
+        'emoji': False,  # whether to open the expression function
+        'tex': True,  # whether to open the tex chart function
+        'flow_chart': True,  # whether to open the flow chart function
+        'sequence': True,  # Whether to open the sequence diagram function
+        'watch': True,  # Live preview
+        'lineWrapping': False,  # lineWrapping
+        'lineNumbers': False,  # lineNumbers
+        'language': 'en'  # zh / en / es
+    }
+    
+}
+MARKDOWNIFY = {
+    "default": {
+        "WHITELIST_TAGS": [
+            'a',
+            'abbr',
+            'acronym',
+            'b',
+            'blockquote',
+            'em',
+            'i',
+            'li',
+            'ol',
+            'p',
+            'strong',
+            'ul',
+            'h1',
+            'h2',
+            'h3',
+            'h5',
+            'h6',
+            'ul',
+            'hr',
+            'img',
+            'code',
+        ],
+        "WHITELIST_ATTRS": [
+            'src',
+            'class',
+            'href',
+            'id',
+        ],
+        "MARKDOWN_EXTENSIONS": [
+            "fenced_code",
+            "attr_list",
+        ],
+    }
+}
+```
+
+in the shell
+```
+>> pip install django-zenblog-ds
+>> python manage.py makemigrations django_zenblog_ds 
+>> python manage.py migrate
+>> python manage.py createsuperuser
+```
+
+
+urls.py
+```
+from django.contrib import admin  
+from django.urls import path, include  
+from django.conf import settings  
+from django.conf.urls.static import static  
+  
+urlpatterns = [  
+    path('admin/', admin.site.urls),
+    path('', include('django_zenblog_ds.urls')),  
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+---
+#### Composition
+
+프로젝트 내의 \_data 폴더 안에 zenblogds.py 파일을 생성하고 다음과 같은 형식으로 작성한다.
+CATEGORY는 블로그 글의 카테고리를 나타낸다.
+
+```
+base = {
+    "social": {
+        "facebook": "https://www.facebook.com",
+        "twitter": "https://twitter.com",
+        "instagram": "https://www.instagram.com",
+        "youtube": "https://www.youtube.com",
+    },
+}
+
+seo = {
+    "seo": {
+        "company_name": "가락삼성치과",
+        "url": "gsden.co.kr",
+        "small_title": "송파구 가락동 문정동  법조단지 위례 헬리오시티 가락시장치과, 임플란트, 사랑니,삼성서울병원 전문의",
+        "desc": "송파구 문정동 장지동 법조단지 위례 가락동 헬리오시티 가락시장역 위치 가락삼성치과의 홈페이지,"
+                " 삼성서울병원 구강외과 전문의 진료, 임플란트, 치조골 뼈이식 수술, 매복 사랑니 발치, 턱관절 질환,"
+                " 치아교정,치과수면치료, 보철(크라운 브릿지 인레이), 신경치료 안내",
+        "keywords": "가락삼성치과, 송파구 치과, 가락동 헬리오시티 치과, 진료과목소개, 임플란트, 사랑니 발치, 턱관절 질환,"
+                    " 교정치료,문정동 치과, 장지동 치과, 법조단지 치과, 위례신도시 치과,치과수면치료 "
+    },
+}
+
+header = {
+    "blog_name": "Shinystar",
+    "components": [
+        # [모듈명, 사용할지여부, 메뉴표시명, 메뉴사용여부]
+        ['about', True, "About", True],
+        ['blog', True, "Blog", True],
+        ['contact', False, "Contact", False],
+
+        ['direct_link', 'https://www.gsden.co.kr', '비급여안내', False],
+    ]
+}
+
+sidebar = {
+    'sidebar': {
+        'use_video': True,
+        'video_link': 'https://youtu.be/vu34oUFP_SA',
+    }
+}
+
+about = {
+    'about': {
+        'about_us': [
+            {
+                'mini_title': "Dentistry",
+                'sub_title': "가락삼성치과",
+                "p": [
+                    " 저는 치과의사입니다. 치과 파트 중 구강외과 전문의로서 송파구 가락동에 작은 치과를 운영하고 있습니다. "
+                    "2009년부터 주변 주민이나 소개 환자 위주로 소신 진료를 목표로 열심히 일하고 있습니다.",
+                    "치과를 위한 유일한 마케팅 수단은 홈페이지와 이 블로그이며 제가 직접 홈페이지 및 블로그를 개발해서 서버를 운영하는 중입니다.",
+                ],
+                'filename': 'comic1.jpg',
+                'link': ["https://www.gsden.co.kr", "gsden.co.kr"]
+            },
+            {
+                'mini_title': "Programming",
+                'sub_title': "Demiansoft",
+                "p": [
+                    "25년전 대학생활부터 취미로 프로그래밍 공부를 했습니다. 그 당시에는 그냥 좋아서 공부한 것이라 실질적인 활용은 하지 못했지만, 치과를 운영하면서 홈페이지가 필요하다는 것을 느끼고 직접 홈페이지를 만들면서 프로그래밍을 활용하게 되었습니다.",
+                    "파이썬을 공부하고 Django 프레임워크를 활용하여 제작하였는데, 그러다 보니 치과들이 쓸데없이 비싸게 홈페이지를 제작한 다는 사실이 안타까웠고, 실용적인 비용으로 홈페이지를 제작해주는 사업을 해보는 것이 어떨까하는 생각이 들었습니다. 그렇게 만들어진 회사가 데이안소프트입니다.",
+                ],
+                'filename': 'wuhtercuhler1.jpg',
+                'link': ["https://www.demiansoft.co.kr", "demiansoft.co.kr"]
+            },
+        ],
+        'latest_news': {
+            'title': "Latest News",
+            'p': [
+                "최근에는 치과 진료를 하면서 틈나는 시간마다, 소개로 맡겨주시는 홈페이지 제작 의뢰를 수행하고 있습니다. 그리고 10년 전에 Wordpress 프레임워크로 제작한 가락삼성치과 홈페이지를 뒤집어 엎고, 데미안소프트에서 개발한 제작 방식으로 리뉴얼하여 시간이 날때 블로그 글을 올리고 있습니다.",
+                "인생을 행복하게 사는 방법 중에 하나는 시간을 낭비하지 않고, 내가 좋아하는 일을 하는 것이라 생각하며 소박하게 살아가고 있습니다.",
+            ],
+            'filenames': ['analogue.jpg', 'rosegold.jpg']
+        },
+        'team_section': False,
+    }
+}
+
+
+footer = {
+    "footer": {
+        "about": "치과의사이자 아마추어 개발자의 블로그",
+    }
+}
+
+context.update(base)
+context.update(seo)
+context.update(header)
+context.update(sidebar)
+context.update(about)
+context.update(footer)
+```
+
+---
+
