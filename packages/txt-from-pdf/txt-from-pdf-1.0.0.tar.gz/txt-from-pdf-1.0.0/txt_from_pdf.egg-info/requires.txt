@@ -1,0 +1,7 @@
+pypdf~=4.2.0
+pdfminer.six==20231228
+unicodedata2~=15.1.0
+
+[dev]
+black~=23.0
+ruff>=0.2

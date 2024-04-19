@@ -1,0 +1,2 @@
+[console_scripts]
+txt-from-pdf = txtfrompdf.__main__:cli_main

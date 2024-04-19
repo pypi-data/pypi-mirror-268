@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+txt_from_pdf.egg-info/PKG-INFO
+txt_from_pdf.egg-info/SOURCES.txt
+txt_from_pdf.egg-info/dependency_links.txt
+txt_from_pdf.egg-info/entry_points.txt
+txt_from_pdf.egg-info/requires.txt
+txt_from_pdf.egg-info/top_level.txt
+txtfrompdf/__init__.py
+txtfrompdf/__main__.py
+txtfrompdf/extract.py
+txtfrompdf/filter.py
+txtfrompdf/fix_unicode.py
+txtfrompdf/utils.py
