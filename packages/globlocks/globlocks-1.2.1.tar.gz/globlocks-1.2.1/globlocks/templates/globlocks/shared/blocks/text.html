@@ -1,0 +1,11 @@
+{% extends "./base.html" %}
+{% block classname %}globlocks-text{% if classname %} {{ classname }}{% endif %}{% endblock %}
+{% block content %}
+    <div {{ attributes }}>
+        {% if safe %}
+            {{ text }}
+        {% else %}
+            {{ text|safe }}
+        {% endif %}
+    </div>
+{% endblock %}
