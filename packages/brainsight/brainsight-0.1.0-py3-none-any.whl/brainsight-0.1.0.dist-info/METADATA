@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: brainsight
+Version: 0.1.0
+Summary: Analysis toolkit for brain activity data.
+Author: MMT Analytics
+Author-email: analytics@machinemedicine.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: PyYAML (>=6.0,<6.1)
+Requires-Dist: colorcet (>=3.1.0,<3.2.0)
+Requires-Dist: matplotlib (>=3.8.3,<3.9.0)
+Requires-Dist: numpy (>=1.26.1,<1.27.0)
+Requires-Dist: scipy (>=1.11.3,<1.12.0)
+Description-Content-Type: text/markdown
+
+# BrainSight #
+
+Analysis toolkit for brain activity data.
+
+### Who do I talk to? ###
+
+MMT Analytics
+analytics@machinemedicine.com
