@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: dpowcoin-yespower
+Version: 1.0.0
+Summary: Bindings for yespower-1.0.1 proof of work used by Dpowcoin
+Home-page: https://github.com/dpowcore-project/dpowcoin_yespower_python3
+Author: mraksoll
+Author-email: mraksoll4@gmail.com
+License-File: LICENSE
