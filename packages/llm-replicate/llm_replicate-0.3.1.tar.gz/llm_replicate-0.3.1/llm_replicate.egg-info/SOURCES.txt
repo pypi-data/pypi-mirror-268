@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+llm_replicate/__init__.py
+llm_replicate.egg-info/PKG-INFO
+llm_replicate.egg-info/SOURCES.txt
+llm_replicate.egg-info/dependency_links.txt
+llm_replicate.egg-info/entry_points.txt
+llm_replicate.egg-info/requires.txt
+llm_replicate.egg-info/top_level.txt
+tests/test_replicate.py
