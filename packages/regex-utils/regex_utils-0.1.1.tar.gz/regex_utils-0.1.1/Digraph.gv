@@ -1,0 +1,21 @@
+digraph {
+	rankdir=LR
+	0 [color=black shape=doublecircle]
+	1 [color=black shape=doublecircle]
+	2 [color=black shape=doublecircle]
+	3 [color=black shape=doublecircle]
+	4 [color=black shape=doublecircle]
+	5 [color=black shape=doublecircle]
+	0 -> 1 [label=a]
+	1 -> 2 [label=b]
+	2 -> 3 [label=c]
+	3 -> 4 [label=c]
+	0 -> 5 [label="[^a]"]
+	1 -> 5 [label="[^b]"]
+	2 -> 5 [label="[^c]"]
+	3 -> 5 [label="[^c]"]
+	4 -> 5 [label="[^d]"]
+	5 -> 5 [label="."]
+	"" [shape=none width=0]
+	"" -> 0
+}
