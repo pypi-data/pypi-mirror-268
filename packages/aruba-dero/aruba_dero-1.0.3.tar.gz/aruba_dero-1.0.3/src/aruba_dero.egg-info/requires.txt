@@ -1,0 +1,6 @@
+pyclearpass>=1.0.4
+psutil~=5.9.8
+pyyaml~=6.0.1
+cryptography~=42.0.5
+winBullet~=1.1
+setuptools~=69.2.0

@@ -1,0 +1,7 @@
+name: Aruba CPPM Certificate Rollout
+description: This module will deploy new server/RADIUS certificates to the ClearPass Policy Manager cluster.
+version: 1.0.0
+author: Lukas Lanzner
+author_email: lukas.lanzner@hpe.com
+
+module_file: clearpass.py
