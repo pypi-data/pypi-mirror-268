@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cloudkitect.patterns.egg-info/PKG-INFO
+src/cloudkitect.patterns.egg-info/SOURCES.txt
+src/cloudkitect.patterns.egg-info/dependency_links.txt
+src/cloudkitect.patterns.egg-info/requires.txt
+src/cloudkitect.patterns.egg-info/top_level.txt
+src/cloudkitect/patterns/__init__.py
+src/cloudkitect/patterns/py.typed
+src/cloudkitect/patterns/_jsii/__init__.py
+src/cloudkitect/patterns/_jsii/patterns@1.4.1.jsii.tgz
