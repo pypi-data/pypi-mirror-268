@@ -1,0 +1,15 @@
+mikedoc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mikedoc/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/project/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/project/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/project/package1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/project/package1/module1.py,sha256=Pe_VXJoq8Bue-St0BUVDOEinF46kKxzAXx_2SnuUXvU,129
+tests/project/package2/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/project/package2/module2.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mikedoc-0.0.1.dist-info/LICENSE,sha256=Iv9D3HqKWYnLfXfXF1Hatn-Sv9I6gXk5cQKm47GjZ6g,1076
+mikedoc-0.0.1.dist-info/METADATA,sha256=nV7oV0vk9t_d3KMg62vXaWfTXN4GO7FR_8wGOYZkqAU,593
+mikedoc-0.0.1.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+mikedoc-0.0.1.dist-info/entry_points.txt,sha256=xjgaafkpVb_GJWrYtn5dTDpkYiETOHegyXkG5hnSbQw,51
+mikedoc-0.0.1.dist-info/top_level.txt,sha256=xfjBldKeS6Z_6_48jUGfNv3HnDiqf8RqShJ2dq2FESc,14
+mikedoc-0.0.1.dist-info/RECORD,,
