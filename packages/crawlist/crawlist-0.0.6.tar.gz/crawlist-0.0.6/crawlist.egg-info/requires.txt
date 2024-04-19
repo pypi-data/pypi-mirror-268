@@ -1,0 +1,6 @@
+parsel
+selenium>=4.0.0
+cssselect
+lxml
+requests
+webdriver-manager
