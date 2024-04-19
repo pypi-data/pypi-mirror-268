@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ADMIN MODEL READ{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/admin_model_read/inc_button_update.html" ) %}
+
+<div>name: {{tdata["row"]["name"]}}</div>
+<div>enable: {{tdata["row"]["enable"]}}</div>
+<div>updateable: {{tdata["row"]["updateable"]}}</div>
+
+{% endblock %}
+

@@ -1,0 +1,91 @@
+
+
+<div class="accordion accordion-zflush" id="accordionFlushExample">
+
+
+<div class="accordion-item">
+
+<h2 class="accordion-header" id="flush-headingOne">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{ mport_row['id'] }}" >
+
+<!-- -->
+{{ mport_row["[port_name]"] }}&nbsp;
+{% if mport_row["cardinal"]==0 %}
+<span class="badge bg-info text-dark">✱</span>
+{% else %}
+<span class="badge bg-info text-dark">{{ mport_row["cardinal"] }}&nbsp;</span>
+{% endif %}
+<!-- -->
+
+</button>
+</h2>
+
+</div>
+
+<!-- -->
+<div id="flush-collapseOne{{ mport_row['id'] }}" class="accordion-collapse collapse">
+<div class="accordion-body">
+
+{% if mport_row["[mpin_rows]"]|length>0 %}
+
+<table>
+
+<tr>
+{% for key in tdata['mpin_columns'] %}
+<td>{{ key }}</td>
+{% endfor %}
+</tr>
+
+{% for v in mport_row["[mpin_rows]"] %}
+<tr>
+
+{% for key in tdata['mpin_columns'] %}
+<td>
+
+
+{% if key!="cardinal" %}
+    {{ v[key] }}
+{% else %}
+
+    {% if v[key]==0 %}
+    <span class="badge bg-info text-dark">✱</span>
+    {% else %}
+    <span class="badge bg-info text-dark">{{ v[key] }}&nbsp;</span>
+    {% endif %}
+
+{% endif %}
+
+
+
+</td>
+{% endfor %}
+
+</tr>
+{% endfor %}
+
+</table>
+
+
+{% else %}
+<div class="badge bg-warning">No pins found</div>
+{% endif %}
+
+</div>
+</div>
+<!-- -->
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+

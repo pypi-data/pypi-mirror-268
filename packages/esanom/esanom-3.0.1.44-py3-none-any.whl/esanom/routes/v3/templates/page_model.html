@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block main_title %}
+MODEL
+{% endblock %}
+
+{% block main_content %}
+
+{% if tdata["row"] %}
+<p class="lead">NAME : {{ tdata['row']['name'] }}</p>
+<p>CATEGORY : {{ tdata['row']['category'] }}</p>
+{% endif %}
+
+{{ linebreaks_for_string(tdata['row']['desc']) }}
+
+
+{% if tdata["mport_rows"]|length>0 %}
+<p class="lead">PORTS</p>
+{% include( "inc_content_model_io.html" ) %}
+{% else %}
+<div class="badge bg-warning text-dark">No input/output ports found</div>
+{% endif %}
+
+
+
+
+
+
+{% endblock %}
+
