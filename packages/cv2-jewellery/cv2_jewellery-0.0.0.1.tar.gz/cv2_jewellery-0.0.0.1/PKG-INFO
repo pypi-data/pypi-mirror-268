@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cv2_jewellery
+Version: 0.0.0.1
+Summary: Package for overlaying jewellery on webcam feed
+Author: Dipenkumar👨‍💻
+Requires-Dist: tf-bodypix==0.4.2
+Requires-Dist: tfjs-graph-converter==1.6.3
+Requires-Dist: tensorflowjs==3.13.0
+Requires-Dist: tensorflow==2.8.0
+Requires-Dist: numpy==1.23.5
+Requires-Dist: pandas==2.2.1
+Requires-Dist: requests==2.31.0
+Requires-Dist: mediapipe==0.10.11
+Requires-Dist: opencv-python==4.7.0.68
