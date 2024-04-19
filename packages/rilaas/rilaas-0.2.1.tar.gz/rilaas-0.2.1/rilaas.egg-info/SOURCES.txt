@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+rilaas/Client.py
+rilaas/__init__.py
+rilaas/get_file_type.py
+rilaas.egg-info/PKG-INFO
+rilaas.egg-info/SOURCES.txt
+rilaas.egg-info/dependency_links.txt
+rilaas.egg-info/requires.txt
+rilaas.egg-info/top_level.txt
