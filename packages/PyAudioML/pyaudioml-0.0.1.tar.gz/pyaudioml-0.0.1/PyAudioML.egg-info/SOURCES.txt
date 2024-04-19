@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+PyAudioML/__init__.py
+PyAudioML/test.py
+PyAudioML.egg-info/PKG-INFO
+PyAudioML.egg-info/SOURCES.txt
+PyAudioML.egg-info/dependency_links.txt
+PyAudioML.egg-info/requires.txt
+PyAudioML.egg-info/top_level.txt
