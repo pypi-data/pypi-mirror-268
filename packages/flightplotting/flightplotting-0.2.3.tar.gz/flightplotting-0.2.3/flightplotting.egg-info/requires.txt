@@ -1,0 +1,7 @@
+setuptools
+plotly
+numpy
+pandas
+pfc-geometry>=0.2.4
+flightdata>=0.2.6
+flightanalysis>=0.2.6
