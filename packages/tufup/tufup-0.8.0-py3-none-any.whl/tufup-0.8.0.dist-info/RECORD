@@ -1,0 +1,14 @@
+tufup/__init__.py,sha256=dP6RZL0gfTIED4hke7QU2mb_bxNXWBRIW0bYm67Xh1M,986
+tufup/__main__.py,sha256=rwhhdeoiCwunMaXtNKAWaBfeZkxN8SaeOpBcvuJ6flQ,292
+tufup/client.py,sha256=4yhafxKqkfOn61F6m-rSSP32nPzcgcEoGp33AVwqao8,18105
+tufup/common.py,sha256=Pjzm8qNSf5tBqc-DruTPJ_WS5T8CLqxoCu2uBn11Nik,10321
+tufup/repo/__init__.py,sha256=Xg0dm0Zr3CCcH4GzaVudwUQE2GEvQIEEYvriRXee60U,40968
+tufup/repo/cli.py,sha256=0luwDUEUJKe1_FDHTEuH7LA8tTiFUwnS48F6rk8FANg,13246
+tufup/utils/__init__.py,sha256=VVY8dlN0YZUoLXI6nzKniJrvWSqK_T-2jck2aTvv0oM,3731
+tufup/utils/platform_specific.py,sha256=vf9w5y4vHpBIP4U9ifENrYF7jsesP8BppMvQ7eZ9PeQ,11287
+tufup-0.8.0.dist-info/LICENSE,sha256=-3xLeNpBf0ZY8_t9-JeNnBJILaz0AFPFqYlI-i9nwVA,1084
+tufup-0.8.0.dist-info/METADATA,sha256=SSxdh-5n-C-Z3eeWqGmttFeah_mgEFD--8C8xb_XnEA,15122
+tufup-0.8.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tufup-0.8.0.dist-info/entry_points.txt,sha256=4KKOa8p_4wXPvfDb7Wsl2-BuiDdVTpPgBiPOjB_nQa4,37
+tufup-0.8.0.dist-info/top_level.txt,sha256=mpBnyZOxzs5hfwt1cDLDHhyzEkTHfN4dNzIWUressvk,6
+tufup-0.8.0.dist-info/RECORD,,
