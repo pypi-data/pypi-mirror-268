@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "fvm-nerfed"
+authors = [{name = "$wryl", email = "wryl@wryl.tech"}]
+maintainers = [{name = "Justin \"Boonie Pepper\" Hill", email = "justin@so.dang.cool"}]
+readme = "README.md"
+dynamic = ["version", "description"]
+
+[project.urls]
+source = "https://gitlab.com/booniepepper/fvm-docker"
+
+[project.scripts]
+fvm = "fvm_nerfed.fvm_nerfed:main"
+
+[tool.flit.sdist]
+exclude = ["Dockerfile", "Makefile", "eval-fvm-bitcode"]
