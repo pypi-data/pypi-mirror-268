@@ -1,0 +1,8 @@
+fast_edges_extraction/__init__.py,sha256=J1gFp9vRM2m99ClvAQaVZojCMxnm3OR9iX-qilSV100,2445
+fast_edges_extraction/_extract_edges.c,sha256=zSn9RTls7imOXOK1q7SIM83AQbq0JGJdwA5PektAWJg,1224002
+fast_edges_extraction/_extract_edges.cpython-38-darwin.so,sha256=613q1sAQJPQRX-QL6M_MeliJiV5YGfzuy8gzlHvFlGI,258184
+fast_edges_extraction-0.1.2.dist-info/RECORD,,
+fast_edges_extraction-0.1.2.dist-info/LICENSE,sha256=Q_NB-kI6XrrJSIC5alLflg9UPzsgCtFCACWlQ-zQCDQ,1068
+fast_edges_extraction-0.1.2.dist-info/WHEEL,sha256=WRwPRH7mjFT-dTZ5lq85StrNRg9EtOV3GBZVL26Gb_o,109
+fast_edges_extraction-0.1.2.dist-info/top_level.txt,sha256=724NIbQJJiJO7BPJWq55FAAr08d2todlFmmiCPI5_IY,22
+fast_edges_extraction-0.1.2.dist-info/METADATA,sha256=7jDo4lNqcf_PUL1fFYP62u-8kHOamPeqjfP3OkvRjY4,4503
