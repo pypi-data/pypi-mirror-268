@@ -1,0 +1,11 @@
+nqrduck_pulseprogrammer/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nqrduck_pulseprogrammer/controller.py,sha256=s73W8_RhY9ExxPq40XjPONX99TBF504uoJBjEa3k7S8,5738
+nqrduck_pulseprogrammer/model.py,sha256=iYFReh2uwTDf7mfEF9rsoAfc2oCE2fS72e8d6yafJQY,2439
+nqrduck_pulseprogrammer/pulseprogrammer.py,sha256=WTqD5YCSJUdS6YSdtFOMlPHBbGGR8VAXoT3VIFW5zuA,479
+nqrduck_pulseprogrammer/view.py,sha256=33xQEtL2gL8amtarBB19VFX7RzfK622CM3cCWDk5dYE,35827
+nqrduck_pulseprogrammer/resources/pulseprogrammer.ini,sha256=YXnpU7zxglvVFzBhYKwZ6hRX7ms_DndLRrp6M-hWvn4,233
+nqrduck_pulseprogrammer-0.0.2.dist-info/METADATA,sha256=jKtXmvEhLJLnBjxld3gSy5JrHcBWueEXkKVPZSF_7P4,6188
+nqrduck_pulseprogrammer-0.0.2.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+nqrduck_pulseprogrammer-0.0.2.dist-info/entry_points.txt,sha256=1sRR-4o-Sv_78zEWJ9ZqMVqcRn9eew5JWVAKPbZCfbQ,93
+nqrduck_pulseprogrammer-0.0.2.dist-info/licenses/LICENSE,sha256=o5wva76OOX1_ay-xkzeOp-8ItiIqJYaAcZiD5wNoCjA,1062
+nqrduck_pulseprogrammer-0.0.2.dist-info/RECORD,,
