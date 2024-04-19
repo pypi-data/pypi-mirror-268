@@ -1,0 +1,2 @@
+[console_scripts]
+subprober = subprober.subprober:main
