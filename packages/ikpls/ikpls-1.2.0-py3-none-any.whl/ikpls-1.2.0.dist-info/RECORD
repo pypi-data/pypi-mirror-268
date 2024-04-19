@@ -1,0 +1,11 @@
+ikpls/__init__.py,sha256=MpAT5hgNoHnTtG1XRD_GV_A7QrHVU6vJjGSw_8qMGA4,22
+ikpls/fast_cross_validation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ikpls/fast_cross_validation/numpy_ikpls.py,sha256=cNGiLartpZzVT8LIrExjSX2oZxd203_JcZ0wV6vnsE4,23705
+ikpls/jax_ikpls_alg_1.py,sha256=XxZMWkCc2u9Jl0wRh7QlKIFVODWH73Abxj8TkotAIV0,15583
+ikpls/jax_ikpls_alg_2.py,sha256=hlN8tpXyyqlE_e9QTn2VEnQyHtTQqYXtQjOL3TsSXC8,13495
+ikpls/jax_ikpls_base.py,sha256=hCagTQGYM5rPxSuDo3AVq2748gem95wRvTlJsicvIfU,41664
+ikpls/numpy_ikpls.py,sha256=c7SF8nC40DYeFHWjQ17YDhGocFNp34WwmXzbmp54mgI,10170
+ikpls-1.2.0.dist-info/LICENSE,sha256=bBka74sKCQDp7bnZIkYd7fYz4PB3UjojPNHGSnbNgo8,11433
+ikpls-1.2.0.dist-info/METADATA,sha256=EJNXbJt5IqwCT8GEvLywSg8i0Z9HAtqD-sVMCs4Nxwc,9686
+ikpls-1.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ikpls-1.2.0.dist-info/RECORD,,
