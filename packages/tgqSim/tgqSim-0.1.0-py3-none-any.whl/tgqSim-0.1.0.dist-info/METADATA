@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: tgqSim
+Version: 0.1.0
+Summary: TGQ量子模拟器
+Home-page: UNKNOWN
+Author: tiangongqs
+License: MIT
+Keywords: tgq,cetc,quantum,simulator
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.24.3
+Requires-Dist: numba >=0.58.1
+Requires-Dist: matplotlib >=3.7.1
+Requires-Dist: GPUtil >=1.4.0
+
+Python for quantum simulation http://www.tiangongqs.com
+
