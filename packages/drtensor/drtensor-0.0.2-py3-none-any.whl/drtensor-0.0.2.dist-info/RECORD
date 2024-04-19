@@ -1,0 +1,11 @@
+drtensor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+drtensor/doctor.py,sha256=LJl7S2lRSgKujZTRltMGqAQWrzajcN0CpLS9qVVHExU,1763
+drtensor/figures.py,sha256=Dsw47PQcoASOix90BgWD82pPtMPI5iTR3bg_iRYxqYc,3088
+drtensor/hooks.py,sha256=fQndVOnWJYCv2BGxo6bPB0iYufMU7U2b0qZ8Pm_A7_Y,1126
+drtensor/utils.py,sha256=q1pP1G09xjQoxr7Tz6kzS0O_mhNZO7T0SPhVW1aHL6A,569
+drtensor/widgets.py,sha256=VJy2JGsA7jii5NCpsUvEKb2mLtV7QPnkdtJ7JrfjMEA,2735
+drtensor-0.0.2.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+drtensor-0.0.2.dist-info/METADATA,sha256=3aDnD5g0Qe-0Jd8_uXjNWNT0TVqenhIM91t7jAQ10CQ,1360
+drtensor-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+drtensor-0.0.2.dist-info/top_level.txt,sha256=N4FnFvUgh7M2q_-otEI7Yz1HaJiu8LzSsizthcHU0zw,9
+drtensor-0.0.2.dist-info/RECORD,,
