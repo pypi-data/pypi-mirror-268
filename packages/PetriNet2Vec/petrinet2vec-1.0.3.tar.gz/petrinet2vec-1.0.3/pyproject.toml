@@ -1,0 +1,17 @@
+[build-system]
+requires = ['setuptools>=69.3.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = "PetriNet2Vec"
+version = "1.0.3"
+authors = [{ name="Juan G. Colonna", email="juancolonna@icomp.edu.ufam.br" }]
+license = { file = "LICENSE" }
+description = "Process Mining Embeddings: Learning Representations for Petri Nets"
+readme = "README.md"
+requires-python = ">=3.10.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"]
+dependencies = [ "numpy", "pm4py", "gensim", "scipy==1.11.1"]

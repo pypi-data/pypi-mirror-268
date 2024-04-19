@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/PetriNet2Vec.py
+src/__init__.py
+src/PetriNet2Vec.egg-info/PKG-INFO
+src/PetriNet2Vec.egg-info/SOURCES.txt
+src/PetriNet2Vec.egg-info/dependency_links.txt
+src/PetriNet2Vec.egg-info/requires.txt
+src/PetriNet2Vec.egg-info/top_level.txt
