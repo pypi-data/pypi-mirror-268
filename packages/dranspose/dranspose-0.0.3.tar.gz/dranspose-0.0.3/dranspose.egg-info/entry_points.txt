@@ -1,0 +1,2 @@
+[console_scripts]
+dranspose = dranspose.cli:run

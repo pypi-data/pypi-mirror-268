@@ -1,0 +1,342 @@
+\documentclass[portrait,a0paper]{tikzposter} %Options for format can be included here, for example portrait.
+
+\usepackage{lutheme}
+\usepackage{graphicx}
+\graphicspath{{logo/}}
+
+\usepackage{qrcode}
+\usepackage{url}
+
+\usepackage[british]{babel}
+% \usepackage{silence}
+% \WarningFilter{latexfont}{Font shape}
+% \WarningFilter{latexfont}{Some font}
+
+%References
+\usepackage{csquotes}
+%\usepackage[style=ieee]{biblatex}
+%\addbibresource{refs.bib}
+
+\usepackage{fontawesome5}
+
+ % Title, Author, Institute
+\title{\texttt{DRANSPO}{\sffamily.}\texttt{SE} – a Flexible Live Processing Pipeline}
+\author{Felix Engelmann}
+\institute{Scientific Data}
+
+%Remove LaTeX tag at bottom of the poster
+\tikzposterlatexaffectionproofoff
+
+\newcommand\ttl[1]{\texttt{\lseries#1}}
+\newcommand\ttm[1]{\texttt{\mdseries#1}}
+\newcommand\ttb[1]{\texttt{\bfseries#1}}
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\usepackage{listings}
+
+% Python style for highlighting
+%\newcommand\pythonstyle{
+\lstdefinestyle{mystyle}{
+language=Python,
+basicstyle=\ttfamily\mdseries,
+morekeywords={self},              % Add keywords here
+keywordstyle=\ttfamily\bfseries\color{deepblue},
+emph={EventData, StreamData,__init__},          % Custom highlighting
+emphstyle=\ttfamily\bfseries\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+%frame=tb,                         % Any extra options here
+showstringspaces=false
+}%}
+
+\lstdefinestyle{yaml}{
+     basicstyle=\ttfamily\color{blue}\footnotesize,
+     rulecolor=\color{black},
+     string=[s]{'}{'},
+     stringstyle=\ttfamily\color{blue},
+     comment=[l]{:},
+     commentstyle=\ttfamily\color{black},
+     morecomment=[l]{-}
+ }
+
+
+\lstset{style=mystyle}
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+ %Choose Layout
+\usetheme{LU}
+
+\begin{document}
+
+ % Title block with title, author, logo, etc.
+\maketitle
+
+%Input logos in relation to title node
+%Go to the image bank https://lu-mediaportal.qbank.se for other images and logotypes.
+\node[anchor=west, xshift=15mm] at (TP@title.west) {\includegraphics[width=8cm]{lulogo.pdf}};
+\node[anchor=east,xshift=-15mm] at (TP@title.east) {\includegraphics[width=10cm]{maxivlogo.pdf}};
+
+\node[anchor=center, xshift=-219mm,yshift=-2.2cm] at (TP@title.center) {\qrcode[height=5cm]{https://dranspo.se/}};
+
+\block{Accelerating Scientific Insight Through Rapid Feedback}{
+\centering
+\begin{tikzpicture}
+ \node[below right, text width=15cm] (sc) at (0,0) {{\huge Scanning}\\[1mm]
+ Sardana, Contrast, Hula};
+
+ \node[text width=20cm, below right] at (52,0) {{\huge Analysis}\\[1mm]
+   Event formation, Calibration, Corrections, Fitting, Azimuthal integration, $I_0$ normalisation,
+   Tomography angle augmentation, Sparsification, AI/ML alignment};
+
+ \node[below right] at (30,-3.5) {\huge Visualisation};
+
+ \node[below right] (det) at (22,0) {\huge Detectors};
+
+ \draw[-latex, line width=2mm] (8.5,-1.3) -- node[above]{ orchestration, triggers} +(12.5,0);
+ \draw[-latex, line width=2mm] (31,-1.3) -- node[above]{ unprocessed, separate data streams} +(20,0);
+
+ \draw[-latex, line width=2mm] (51,-4.8) -- node[above]{results} +(-10,0);
+
+ \draw[dash pattern=on 3cm off 1cm, line width=2mm] (29,-4.8) -| node[very near start, above]{scientist's interpretation} (-2,-3.5);
+
+ \draw[-latex,line width=2mm] (51,-7.2) -| node[near start, above]{automatic scanning decision} (-2,-3.5) |- (-1,-1.3);
+
+\end{tikzpicture}
+}
+
+ % First block
+\begin{columns}
+
+   % FIRST column
+  \column{0.5}% Width set relative to text width
+
+  \block{Source Trigger Map}{
+  \textbf{Ingesters} connect to different data sources, such as detectors, electrometers and encoders and form events according to the Trigger Map.
+  \bigskip
+
+  \begin{minipage}{0.2\columnwidth}
+  \begin{tikzpicture}[scale=2]
+  \node (det1) at (0,0) {\faCamera};
+  \node (mot) at (4,0) {\faSlidersH}; %\faCameraRetro};
+  \node (temp) at (6,0) {\faThermometerHalf};
+  \node (det2) at (2,0) {\faVideo};
+
+  \node (panda) at (0,1) {\faWaveSquare};
+
+  \draw[dotted] (panda) -- (det1);
+  \draw[dotted] (panda) -- (det2.north);
+  \draw[dotted] (panda) -- (mot.north);
+  \draw[dotted] (panda) -- (temp.north);
+
+  \node (ef1) at (0,-1) {\faHatWizard};
+  \node (ef2) at (2,-1) {\faHatWizard};
+  \node (ef) at (5,-1) {\faHatWizard};
+
+  \draw[very thick] (det1.south) -- (ef1);
+  \draw[very thick] (det2.south) -- (ef2);
+  \draw (mot.south) -- (ef);
+  \draw (temp.south) -- (ef);
+
+ \end{tikzpicture}
+  \end{minipage}\begin{minipage}{0.3\columnwidth}
+  \begin{itemize}
+   \item STINS (2d detectors, multipart zmq PULL)
+   \item PandABox PCAP (encoders, TCP/ascii)
+   \item Contrast/Sardana (snapshots)
+   \item Xspress3 (energy spectra, zmq SUB)
+  \end{itemize}
+
+ \end{minipage}
+\bigskip
+\coloredbox[bgcolor=blocktitlebgcolor, framecolor=blocktitlebgcolor]{
+ Which \emph{frames} from which \emph{detectors} belong to the same \emph{event} and have to be processed by the same \emph{worker} having which \emph{tags}?}
+  \medskip
+
+  \begin{center}
+  \begin{tabular}{rccccccccc}
+   \faCamera & all & 1 & \{3,debug\} & 5 & 7 & 8 & 10 & 10 & 11 \\
+   \faVideo & all & 2 & \{4,debug\}  & 6 & 7 & 9 & 10 & 10 & 11 \\
+   \faSlidersH & all & all & debug & none & $\emptyset$ &none & none& none & none\\
+   \faThermometerHalf & all & \{1,2\} & none & \{5,6\} & none  & \{8,9\} & 10 & none & 11 \\
+  \end{tabular}
+  \end{center}
+
+  This supports detectors not producing a frame for a trigger (\emph{none}) and discarding frames ($\emptyset$). Meta information is easily distributed to all workers by \emph{all}. Tags allow different sets of workers, the \textbf{debug worker} just exposes the last n events.
+
+  The trigger map is provided by the scanning software:
+  \begin{description}
+   \item[contrast:] patch after \texttt{\_generate\_positions}
+   \item[sardana:] global hook to extract number of points
+  \end{description}
+
+
+  }
+  \block{Map Reduce}{
+  Events are dispatched to the \textbf{next free} available worker satisfying the constraints and tags. The fine grained \textbf{load balancing} allows to keep state in the worker. This enables \textbf{temporal analysis}, e.g. calculate the difference of two consecutive exposures. All required parameters need to be described.
+  {\footnotesize
+  \lstinputlisting[language=Python]{worker.py}
+  }
+  Workers emit arbitrary objects as reduced results. It is important that the output of all workers combined does not exceed a bottleneck of around 10\,Gbit/s.
+  \bigskip
+
+  The results of workers are forwarded to a \textbf{single reducer} which has access to the full history of the scan. It has limited capacity and needs to operate at line speed which is fine for simple operations such as appending worker results to a list.
+  {\footnotesize
+  \lstinputlisting[language=Python]{reducer.py}
+  }
+  The reducer has a special attribute \texttt{publish} which is exposed through a REST api with JsonPATH selections and numpy slicing.
+  }
+
+
+  \block{Visualisation}{
+  The most flexible way to view results is to access the reducer data through a Jupyter notebook.
+
+{\footnotesize
+  \lstinputlisting[language=Python]{viewer.py}
+  }
+
+  Alternatively a custom GUI may be developed which integrates setting \textbf{parameters} or selectively zooming into regions, if the whole data set is too large for the local memory.
+  }
+
+
+  \column{0.5}
+
+
+  \block{Control System Integration}{
+   A Tango device server presents the status of a pipeline and allows to set parameters. It shows which ingester streams are available and the load of workers, allowing to adjust the worker \textbf{scaling}. Pipeline parameters support \texttt{str}, \texttt{int}, \texttt{float} and \texttt{file}.
+   \medskip
+
+   \footnotesize
+   \begin{tabular}{ll}
+    State & CLOSE \\
+   Status & contrast-ingester, streams: ['contrast']\\
+&xspress3-ingester, streams: ['xspress3']\\
+&x3mini-ingester, streams: ['x3mini']\\
+&Worker-VKbSqFyDIU, tags: ['generic'], last:133, evs:19, ld10: 0.06, ld: 0.09 \\
+&Worker-mPfJRkLXjj, tags: ['generic'], last:133, evs:18, ld10: 0.06, ld: 0.09 \\
+completedEvents & 134 \\
+totalEvents&134\\
+mca\_config & /data/xrf/fit\_config\_removed.cfg\\
+\end{tabular}
+  }
+
+  \block{Architecture \& Performance}{
+
+  \begin{tikzpicture}[yscale=2.389, xscale=3]
+  \node[left, color=gray] at (-1,1) {Detectors};
+  \node[color=gray] (det1) at (0,1) {\faCamera};
+  \node[color=gray] (mot) at (4,1) {\faSlidersH}; %\faCameraRetro};
+  \node[color=gray] (temp) at (6,1) {\faThermometerHalf};
+  \node[color=gray] (det2) at (2,1) {\faVideo};
+
+  \node[ left, color=blocktitlefgcolor] at (-1,0) {custom};
+  \node[left, color=blocktitlefgcolor] at (-1,-2) {wrapped(custom)};
+  \node[ left, color=blocktitlefgcolor] at (-1,-4) {\texttt{pickle} in zmq};
+
+  \node (redis) at (7.5,-3){\includegraphics[width=1.5cm]{redis}};
+  \node (fast) at (7.5,-1){\includegraphics[width=1.5cm]{fastapi}};
+  \node[left] at (-1,-1) {Ingesters};
+  \node (ef1) at (0,-1) {\faHatWizard};
+  \node (ef2) at (2,-1) {\faHatWizard};
+  \node (ef) at (5,-1) {\faHatWizard};
+
+  \draw[very thick] (det1.south) --  (ef1);
+  \draw[very thick] (det2.south) -- (ef2);
+  \draw (mot.south) -- (ef);
+  \draw (temp.south) -- (ef);
+
+
+  \node[left] at (-1,-3) {Workers};
+  \node (crop1) at (0,-3) {\faCrop};
+  \node (crop4) at (3,-3) {\faCrop};
+  \node (crop7) at (6,-3) {\faCrop};
+
+  \foreach \i in {1,4,7} {
+    \draw (ef.south) -- (crop\i.north);
+    \draw (ef1.south) -- (crop\i.north);
+    \draw (ef2.south) -- (crop\i.north);
+  };
+
+  \node[left] at (-1,-5) {Reduce};
+  \node (red) at (3,-5) {\faCog};
+
+
+  \foreach \i in {1,4,7} {
+    \draw (crop\i.south) -- (red.north);
+  };
+  \newcommand{\labeloffset}{3mm}
+
+  \node[above of=ef2, yshift=\labeloffset, fill=white] {\small PULL};
+  \node[above of=ef1, yshift=\labeloffset, fill=white] {\small PULL};
+  \node[above of=ef, yshift=\labeloffset, fill=white] {\small SUB};
+
+  \node[below of=redis, yshift=-\labeloffset, fill=white] {\small redis};
+  \node[below of=fast, yshift=-\labeloffset,] {\small controller};
+
+  \node[below of=det1, yshift=-\labeloffset,color=gray,  fill=white] {\small PUSH};
+  \node[below of=det2, yshift=-\labeloffset,color=gray,  fill=white] {\small PUSH};
+  \node[below of=mot, yshift=-\labeloffset,color=gray,  fill=white] {\small PUB};
+  \node[below of=temp, yshift=-\labeloffset,color=gray,  fill=white] {\small PUB};
+
+  \node[below of=ef1, yshift=-\labeloffset, fill=white] {\small ROUTER};
+  \node[below of=ef2, yshift=-\labeloffset, fill=white] {\small ROUTER};
+  \node[below of=ef, yshift=-\labeloffset, fill=white] {\small ROUTER};
+
+  \node[above of=crop1, yshift=\labeloffset, fill=white] {\small DEALER};
+  \node[above of=crop4, yshift=\labeloffset, fill=white] {\small DEALER};
+  \node[above of=crop7, yshift=\labeloffset, fill=white] {\small DEALER};
+
+  \node[below of=crop1, yshift=-\labeloffset, fill=white] {\small PUSH};
+  \node[below of=crop4, yshift=-\labeloffset, fill=white] {\small PUSH};
+  \node[below of=crop7, yshift=-\labeloffset, fill=white] {\small PUSH};
+
+  \node[above of=red, yshift=\labeloffset, fill=white] {\small PULL};
+ \end{tikzpicture}
+
+ The throughput of the system is only limited by the underlying kernel and zmq library. With jumbo frames, we successfully processed a single stream of \textbf{23\,GBit/s} from a 16\,bit \texttt{cmos} camera at 120\,Hz.
+    Affinity of ingesters heavily impacts performance.
+
+    The design allows arbitrary \textbf{horizontal scaling} for many ingesters. If a detector supports one stream per module, multiple ingesters are used to reassemble full frames for a worker. We tested ingesting events at up to \textbf{2\,kHz}.
+
+  }
+
+  \block{Deployment}{
+  If a kubernetes cluster is available, deployment is handled by a \texttt{helm} chart with values
+
+{\footnotesize
+  \lstinputlisting[style=yaml]{Values.yaml}
+  }
+  Without kubernetes, the only dependency is a \texttt{redis} to which all \textbf{containerised} components connect.
+  }
+
+
+  \block{Development \texttt{pip install dranspose}}{
+   The package provides a \texttt{dranspose} cli to run components or develop scientific code.
+    \begin{itemize}
+     \item Ingesters dump stream messages to storage.
+     \item Replay streams to custom workers and reducers.
+    \end{itemize}
+    To develop a new ingester, capture the raw packets and perform test-driven development.
+    To get insight into live packets, a \textbf{debug worker} exposes sampled full events over a REST interface.
+
+    Documentation at \url{https://dranspo.se/}
+
+  }
+
+
+
+\end{columns}
+
+\end{document}
+
+\endinput
+%%
+%% End of file `tikzposter-template.tex'.
