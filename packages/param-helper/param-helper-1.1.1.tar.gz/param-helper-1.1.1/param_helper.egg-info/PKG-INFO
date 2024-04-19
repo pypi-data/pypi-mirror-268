@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: param-helper
+Version: 1.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/EvATive7/param-helper
+Author: EvATive7
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# param-helper
+A python library that provides an esay way to get parameters in a function, with additional features
+
+## usage & example
+[code](test.py)  
+
+## license
+[AGPL3.0](https://www.gnu.org/licenses/agpl.txt)
+
