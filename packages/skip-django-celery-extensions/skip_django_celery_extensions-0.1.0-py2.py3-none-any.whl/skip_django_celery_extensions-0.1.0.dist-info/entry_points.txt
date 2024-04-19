@@ -1,0 +1,2 @@
+[console_scripts]
+celeryautoreload = django_celery_extensions.bin.celeryautoreload:celery_autoreload
