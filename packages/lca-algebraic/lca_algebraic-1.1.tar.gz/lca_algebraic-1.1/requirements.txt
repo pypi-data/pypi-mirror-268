@@ -1,0 +1,17 @@
+tabulate
+ipywidgets
+pandas
+seaborn
+sympy
+nbformat
+nbconvert
+numpy
+matplotlib
+scipy
+brightway2
+ipython
+SALib
+tqdm
+python-dotenv
+pypardiso
+pyarrow
