@@ -1,0 +1,7 @@
+[console_scripts]
+catalog_pipe_aggregate_data = catalog_pipeline:aggregate_data
+gwtc_create_from_query = gwtc:gwtc_create_from_query
+gwtc_diff = gwtc:gwtc_diff
+gwtc_get_gevent_coinc_files = gwtc:gwtc_get_gevent_coinc_files
+gwtc_test = gwtc:gwtc_test
+gwtc_update_pipeline_gevents = gwtc:gwtc_update_pipeline_gevents
