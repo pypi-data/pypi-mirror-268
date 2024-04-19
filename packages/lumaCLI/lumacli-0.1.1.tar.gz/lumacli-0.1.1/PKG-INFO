@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: lumaCLI
+Version: 0.1.1
+Summary: A CLI tool for managing the data catalog platform.
+License: MIT
+Keywords: cli,dbt,luma,data,catalog
+Author: Facundo Goiriz
+Author-email: fgoiriz@dyvenia.com
+Requires-Python: >=3.8,<4
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: test
+Requires-Dist: psycopg2-binary (>=2.9,<2.10)
+Requires-Dist: pydantic[email] (>=1.10.9,<1.11.0)
+Requires-Dist: pyyaml (>=6.0.1)
+Requires-Dist: requests (>=2.20.0,<3.0.0)
+Requires-Dist: rich (>=13.7.0,<14.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<1.0)
+Description-Content-Type: text/markdown
+
+# lumaCLI
+
+## Prerequisites
+
+Make sure your system is running Python version 3.9 or newer.
+
+## Installation
+
+For a smooth installation of `lumaCLI`, simply execute the following command:
+
+```bash
+pip install lumaCLI
+```
+
+## Next Steps
+
+Make sure to explore the [Manual](./docs/manual/introduction.md) to familiarize yourself with the extensive API functionalities and commands that `lumaCLI` offers.
