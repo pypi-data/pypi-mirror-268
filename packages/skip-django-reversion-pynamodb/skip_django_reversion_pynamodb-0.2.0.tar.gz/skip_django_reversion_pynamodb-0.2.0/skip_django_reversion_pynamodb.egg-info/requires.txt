@@ -1,0 +1,6 @@
+django>=4.2
+import_string>=0.1.0
+
+[dynamodb]
+skip-pydjamodb>=0.1.0
+pynamodb==5.3.4
