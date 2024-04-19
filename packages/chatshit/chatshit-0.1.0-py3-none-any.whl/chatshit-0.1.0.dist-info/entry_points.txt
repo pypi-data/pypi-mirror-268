@@ -1,0 +1,3 @@
+[console_scripts]
+chatshit=chatshit.__main__:main
+
