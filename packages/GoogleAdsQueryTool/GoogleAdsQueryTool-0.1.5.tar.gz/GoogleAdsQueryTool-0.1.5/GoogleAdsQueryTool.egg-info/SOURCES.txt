@@ -1,0 +1,10 @@
+README.md
+setup.py
+GoogleAdsQueryTool/GoogleAdsQueryTool.py
+GoogleAdsQueryTool/__init__.py
+GoogleAdsQueryTool.egg-info/PKG-INFO
+GoogleAdsQueryTool.egg-info/SOURCES.txt
+GoogleAdsQueryTool.egg-info/dependency_links.txt
+GoogleAdsQueryTool.egg-info/entry_points.txt
+GoogleAdsQueryTool.egg-info/requires.txt
+GoogleAdsQueryTool.egg-info/top_level.txt

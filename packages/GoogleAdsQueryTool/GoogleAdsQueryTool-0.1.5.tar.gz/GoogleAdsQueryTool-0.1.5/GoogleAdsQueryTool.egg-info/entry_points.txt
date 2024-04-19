@@ -1,0 +1,2 @@
+[console_scripts]
+google_ads_query_tool = google_ads_query_tool.module:main
