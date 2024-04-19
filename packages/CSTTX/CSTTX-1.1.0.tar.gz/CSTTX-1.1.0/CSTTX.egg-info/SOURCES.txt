@@ -1,0 +1,6 @@
+README.md
+setup.py
+CSTTX.egg-info/PKG-INFO
+CSTTX.egg-info/SOURCES.txt
+CSTTX.egg-info/dependency_links.txt
+CSTTX.egg-info/top_level.txt
