@@ -1,0 +1,9 @@
+README.md
+setup.py
+YYJ/ChatYYJ.py
+YYJ/__core.py
+YYJ/__init__.py
+YYJ.egg-info/PKG-INFO
+YYJ.egg-info/SOURCES.txt
+YYJ.egg-info/dependency_links.txt
+YYJ.egg-info/top_level.txt

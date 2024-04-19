@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: YYJ
+Version: 1.0.2
+Summary: 瓦达西瓦YYJ得思，俺是一个来自D7 415的梗小鬼，俺打球像坤坤，俺打王者只会压力己方MVP，天天被狙击仔克制
+Home-page: https://pornhub.com
+Author: marf
+Author-email: chenmarf460@gmail.com
+License: Apache 2.0
+Description: 到这就说明宿舍仔你成功一部分了，还是那句话：欢迎狙击
+Keywords: yyj,pornhub
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
