@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.elastic.plone">
+
+  <!-- Publish static files -->
+  <plone:static
+      name="collective.elastic.plone"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:page
+        for="*"
+        name="clear-and-update-index-server-index"
+        permission="cmf.ManagePortal"
+        class=".update.ClearAndUpdateElastisearch"
+        />
+
+  <browser:page
+        for="*"
+        name="update-index-server-index"
+        permission="cmf.ManagePortal"
+        class=".update.UpdateElastisearch"
+        />
+
+  <!-- Backward compatibility -->
+  <browser:page
+        for="*"
+        name="update-elasticsearch"
+        permission="cmf.ManagePortal"
+        class=".update.UpdateElastisearch"
+        />
+
+</configure>
