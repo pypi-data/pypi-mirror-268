@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: game-prediction2
+Version: 0.1.8
+Summary: Game prediction, simplified. No edits, no GCP. Everything's just `AsyncIterables` in and out.
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Requires-Python: >=3.10
+Requires-Dist: haskellian
+Requires-Dist: lcz
+Requires-Dist: chess-notation
+Requires-Dist: ramda
+Requires-Dist: chess
+Requires-Dist: numpy
+Requires-Dist: editdistance
+Requires-Dist: chess-utils

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-prediction2"
+version = "0.1.8"
+authors = [
+    {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Game prediction, simplified. No edits, no GCP. Everything's just `AsyncIterables` in and out."
+dependencies = [
+    "haskellian",
+    "lcz",
+    "chess-notation",
+    "ramda",
+    "chess",
+    "numpy",
+    "editdistance",
+    "chess-utils"
+]
+requires-python = ">=3.10"
+# readme = {file="README.md", content-type="text/markdown"}
+
+# [project.urls]
+# repo = "<GIT_REPO_URL>"
