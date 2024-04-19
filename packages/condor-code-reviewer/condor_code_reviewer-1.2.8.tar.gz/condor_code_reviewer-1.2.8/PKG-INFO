@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: condor_code_reviewer
+Version: 1.2.8
+Requires-Dist: openai
+Requires-Dist: PyGithub
