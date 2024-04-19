@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+pyproject.toml
+meafs.egg-info/PKG-INFO
+meafs.egg-info/SOURCES.txt
+meafs.egg-info/dependency_links.txt
+meafs.egg-info/entry_points.txt
+meafs.egg-info/requires.txt
+meafs.egg-info/top_level.txt

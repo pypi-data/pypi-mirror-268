@@ -1,0 +1,10 @@
+astropy
+specutils
+scipy
+matplotlib
+pandas
+numpy
+desktop_file
+pathlib
+PyQt6
+dill
