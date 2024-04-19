@@ -1,0 +1,6 @@
+bs4
+fastcore
+pandas
+requests
+
+[dev]
