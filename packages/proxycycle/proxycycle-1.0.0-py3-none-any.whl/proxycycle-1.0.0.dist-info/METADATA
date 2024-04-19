@@ -1,0 +1,42 @@
+Metadata-Version: 2.3
+Name: proxycycle
+Version: 1.0.0
+Summary: A Library to easily load/fetch proxy servers.
+Project-URL: Documentation, https://github.com/Vbrawl/proxycycle#readme
+Project-URL: Issues, https://github.com/Vbrawl/proxycycle/issues
+Project-URL: Source, https://github.com/Vbrawl/proxycycle
+Author-email: Vbrawl <greninjagr@gmail.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# ProxyCycle
+
+[![PyPI - Version](https://img.shields.io/pypi/v/proxycycle.svg)](https://pypi.org/project/proxycycle)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/proxycycle.svg)](https://pypi.org/project/proxycycle)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install proxycycle
+```
+
+## License
+
+`proxycycle` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
