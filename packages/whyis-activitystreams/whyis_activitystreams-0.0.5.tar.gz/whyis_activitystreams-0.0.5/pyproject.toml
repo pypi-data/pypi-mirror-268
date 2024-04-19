@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name='whyis-activitystreams'
+version='0.0.5'
+description = "A whyis plugin to support the interpretation of activity streams."
+dependencies=[
+  'whyis',
+]
+
+[tool.setuptools]
+packages=['whyis_activitystreams', 'whyis_activitystreams.activity_agent']
+
+[project.entry-points.whyis]
+whyis_activitystreams = "whyis_activitystreams:ActivityStreamsPlugin"
+whyis_activity_agent = "whyis_activitystreams.activity_agent:ActivityAgent"

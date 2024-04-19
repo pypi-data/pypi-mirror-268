@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+whyis_activitystreams/__init__.py
+whyis_activitystreams/_version.py
+whyis_activitystreams/plugin.py
+whyis_activitystreams.egg-info/PKG-INFO
+whyis_activitystreams.egg-info/SOURCES.txt
+whyis_activitystreams.egg-info/dependency_links.txt
+whyis_activitystreams.egg-info/entry_points.txt
+whyis_activitystreams.egg-info/requires.txt
+whyis_activitystreams.egg-info/top_level.txt
+whyis_activitystreams/activity_agent/__init__.py
+whyis_activitystreams/activity_agent/activity_agent.py
