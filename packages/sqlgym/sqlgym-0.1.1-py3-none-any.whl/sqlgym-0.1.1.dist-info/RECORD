@@ -1,0 +1,9 @@
+sqlgym/__init__.py,sha256=zK_AMVSIE4qFCw8CHO32jCFtqNjK0v9yS0T4B51NDXk,194
+sqlgym/sqlgym.py,sha256=0kRvKc_5ttcRbELqAPSITJGoP3MiiUryISeUcm7qfeU,2176
+sqlgym/datasets/__init__.py,sha256=gCkVakZR8AQc2wEQzs1yMISeROFxFhijkLrCViVlCyA,41
+sqlgym/datasets/bird.py,sha256=BrSGKQs_Uln5OH07KHj6AvdOvfpEfgZx_hbu6OhRYNw,5525
+sqlgym/datasets/utils.py,sha256=4lHU6a0ZUOvQaI4E8ZoFs5gL1oIhmYoz-n3BBz5xGg4,1032
+sqlgym-0.1.1.dist-info/METADATA,sha256=Obqj1JCVIa_09hHLJIPHut6ahPVGhvAzoqfnvJrUNRU,2996
+sqlgym-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sqlgym-0.1.1.dist-info/top_level.txt,sha256=2hwhOoCJM2Q_CPytN1kqxPFanA8Qp2_oRXr0yievGmU,7
+sqlgym-0.1.1.dist-info/RECORD,,
