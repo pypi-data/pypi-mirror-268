@@ -1,0 +1,14 @@
+torch
+numpy
+sentencepiece
+packaging
+
+[dev]
+pytest
+expecttest
+parameterized
+packaging
+transformers
+bitsandbytes
+matplotlib
+pandas
