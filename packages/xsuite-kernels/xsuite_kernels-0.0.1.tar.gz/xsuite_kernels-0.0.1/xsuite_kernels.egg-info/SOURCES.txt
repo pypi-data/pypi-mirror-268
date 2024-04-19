@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+setup.py
+.github/workflows/release.yaml
+xsuite_kernels/__init__.py
+xsuite_kernels/cli.py
+xsuite_kernels/kernel_definitions.py
+xsuite_kernels/prebuild_kernels.py
+xsuite_kernels.egg-info/PKG-INFO
+xsuite_kernels.egg-info/SOURCES.txt
+xsuite_kernels.egg-info/dependency_links.txt
+xsuite_kernels.egg-info/entry_points.txt
+xsuite_kernels.egg-info/requires.txt
+xsuite_kernels.egg-info/top_level.txt
+xsuite_kernels/lib/__init__.py
