@@ -1,0 +1,13 @@
+mapget-2024.2.dist-info/METADATA,sha256=w_G4vP1jzA92EP6196Xq5EqHFiQ9D1WhigDisGyQOWA,226
+mapget-2024.2.dist-info/RECORD,,
+mapget-2024.2.dist-info/top_level.txt,sha256=W-teDHSWuhlJr1wYlLvI3fWF1H42P9Etok_NjWZ9tsQ,16
+mapget-2024.2.dist-info/WHEEL,sha256=CzQQWV-lNyM92gr3iaBk8dvO35YDHRxgzkZ-dxumUIM,152
+mapget/LICENSE.txt,sha256=JeNdz5tf1QH7CIw_i5yqTWtlyhczLpjj3yhOyCRTEHE,1528
+mapget/libmapget-model.a,sha256=6DIkNaV34YpFG34_qyRDb7zWLhteXxP9Yau9mFcR6s4,1408794
+mapget/libsimfil.so,sha256=Ic9FzVD7UxRXlPF9FtybFosDqWCza-iWMWBNPeIvPtI,2259265
+mapget/__init__.py,sha256=4BQ2UpmtSoX0x1dlQphfbboyPCDmEOruyuOTVc9niGQ,23
+mapget/__main__.py,sha256=RabnF52SK9j_Ti9bqgRCytdzpKRLr6eT6JF5jIA4O2w,124
+mapget/libmapget-http-datasource.a,sha256=pwZYTq4NjLIEHP_MnSiYJgt30ITTZQmhsP9KkVGUD6E,3336414
+mapget/pymapget.cpython-310-x86_64-linux-gnu.so,sha256=Og6kenIx6B_OAPjgJMJ0-LY0YG2bi_UxFold7wwdPRg,15496513
+mapget.libs/libssl-79fbcbe7.so.1.1,sha256=cxXv-aBexRBLSKoXpVA_y8LyRD5Wf4KxRd6lf2VmMto,732041
+mapget.libs/libcrypto-db2e2da5.so.1.1,sha256=JSrfI5QsYeAgGsnwiZbmMi4jaTfiurj3rsVbJ62WR3U,3444161
