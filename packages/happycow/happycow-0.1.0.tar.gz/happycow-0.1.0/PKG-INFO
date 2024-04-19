@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: happycow
+Version: 0.1.0
+Summary: happycow demo
+Author: BuxianChen
+Author-email: 541205605@qq.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# happycow
+
+This is a demo project for poetry, upload to PyPI, github action, etc
+
+```python
+conda create --name happycow python=3.10
+conda activate happycow
+# conda install pipx
+# pipx install poetry
+poetry new happycow
+cd happycow
+git init
+# .gitignore copy from https://github.com/github/gitignore/blob/main/Python.gitignore
+git add .gitignore
+git commit -m "add gitignore"
+# modify code
+git add .
+git commit -m "add code"
+poetry install
+poetry run pytest
+```

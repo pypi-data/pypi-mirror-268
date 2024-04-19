@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "happycow"
+version = "0.1.0"
+description = "happycow demo"
+authors = ["BuxianChen <541205605@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.scripts]
+happycow = 'happycow.main:main'
+
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
