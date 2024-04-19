@@ -1,0 +1,2 @@
+[console_scripts]
+lfc-torque-airtable = lfc_torque_airtable.main:main

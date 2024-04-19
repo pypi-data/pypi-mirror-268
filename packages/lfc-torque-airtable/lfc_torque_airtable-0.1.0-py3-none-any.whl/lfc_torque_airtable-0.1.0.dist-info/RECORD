@@ -1,0 +1,11 @@
+lfc_torque_airtable/__init__.py,sha256=5KrJ23K7VBigcXKvqJIM1O9SSsJMgSVk6EqBTN9hExc,82
+lfc_torque_airtable/main.py,sha256=d-iUrgpHGkvkgm2-wbSrKFm5VKPgu6tjCUjYLdYY3ik,2159
+lfc_torque_airtable/torque_to_airtable.py,sha256=6nwXHQk2EeYSic146lEi5zS8wCbNi8MUSg3K3NxF-K4,20652
+lfc_torque_airtable/utils.py,sha256=8VIj8vhkVrHuLcYG6gfSroWblr_vMS9BTFyBTczl6ps,8792
+lfc_torque_airtable/version.py,sha256=kUR5RAFc7HCeiqdlX36dZOHkUI5wI6V_43RpEcD8b-0,22
+lfc_torque_airtable-0.1.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+lfc_torque_airtable-0.1.0.dist-info/METADATA,sha256=ioM16VSUFHgNTsHDCpkPl5woZf5E7hERXS_kaQGgybM,1898
+lfc_torque_airtable-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+lfc_torque_airtable-0.1.0.dist-info/entry_points.txt,sha256=MbtOZtdm8UbEirisFCTfZQZ-92OH_-xjxqNuFROaXnU,70
+lfc_torque_airtable-0.1.0.dist-info/top_level.txt,sha256=BlyK7LBAW-0kf0gKFlsPWbuE8KCTII1NeXG0VPING6c,20
+lfc_torque_airtable-0.1.0.dist-info/RECORD,,
