@@ -1,0 +1,9 @@
+build123d>=0.5.0
+
+[dev]
+black
+isort
+mypy
+pytest
+sphinx-rtd-theme
+sphinx

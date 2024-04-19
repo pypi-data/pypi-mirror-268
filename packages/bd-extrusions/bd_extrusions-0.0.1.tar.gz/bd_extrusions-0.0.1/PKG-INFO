@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: bd-extrusions
+Version: 0.0.1
+Summary: A build123d library of extrusions
+Author-email: James Keal <james@keal.au>
+Project-URL: Github, https://github.com/keeeal/bd-extrusions
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: build123d>=0.5.0
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: sphinx-rtd-theme; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+
+# bd-extrusions
+A build123d library of extrusions
