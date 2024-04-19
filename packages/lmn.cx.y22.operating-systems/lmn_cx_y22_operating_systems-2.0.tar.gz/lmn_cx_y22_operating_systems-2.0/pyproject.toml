@@ -1,0 +1,75 @@
+# SPDX-FileCopyrightText: 2024 Alex Lemna
+# SPDX-License-Identifier: CC0-1.0
+
+[project]
+name = "lmn.cx.y22.operating_systems"
+requires-python = ">= 3.11"
+dynamic = ["version"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved",
+    "License :: OSI Approved :: Zero-Clause BSD (0BSD)",
+    "License :: OSI Approved :: Apache Software License",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.optional-dependencies]
+dev = [
+    #
+    # installing dependencies
+    # -----------------------
+    #
+    "pip",
+    "pip-tools",
+    #
+    # style enforcement, linting, etc.
+    # -----------------------------
+    # Various tools to help enforce consistency.
+    "black",
+    "isort",
+    "reuse", # <-- for copyright
+    #
+    # building the package
+    # --------------------
+    "build",
+    "setuptools>=45",
+    "setuptools_scm[toml]>=6.2", # <-- for dynamic version control
+    #
+    # testing the package
+    # -------------------
+    "pytest",
+    #
+    # publishing the package to PyPI
+    # ------------------------------
+    "twine",
+]
+
+
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 80
+target-version = ['py311']
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 80
+skip_gitignore = true
+skip_glob = ["LICENSES"]
+known_first_party = [
+    # none
+]
+
+[tool.pip-tools]
+allow-unsafe = true
+generate-hashes = true
+resolver = "backtracking"
+
+[tool.setuptools_scm]

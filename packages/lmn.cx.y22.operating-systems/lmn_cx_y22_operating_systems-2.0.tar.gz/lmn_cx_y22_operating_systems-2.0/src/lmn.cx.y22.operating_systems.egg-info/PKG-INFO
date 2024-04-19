@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: lmn.cx.y22.operating_systems
+Version: 2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: Zero-Clause BSD (0BSD)
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.11
+License-File: LICENSE
+License-File: COPYING
+Provides-Extra: dev
+Requires-Dist: pip; extra == "dev"
+Requires-Dist: pip-tools; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: reuse; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: setuptools>=45; extra == "dev"
+Requires-Dist: setuptools_scm[toml]>=6.2; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: twine; extra == "dev"
