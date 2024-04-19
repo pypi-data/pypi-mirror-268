@@ -1,0 +1,5 @@
+{
+    "login": "login",
+    "token": "token",
+    "endpoint": "http://localhost:8000"
+}
