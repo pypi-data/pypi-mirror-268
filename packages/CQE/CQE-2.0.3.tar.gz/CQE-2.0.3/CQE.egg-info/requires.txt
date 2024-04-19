@@ -1,0 +1,17 @@
+fuzzywuzzy==0.18.0
+more_itertools
+ordered-set
+python-Levenshtein
+spacy
+greek
+spacy-legacy
+requests
+regex
+emoji==1.7
+torch
+spacy-transformers
+protobuf==3.20.1
+inflect==5.4.0
+spacy_download
+typing_extensions==4.4.0
+numpy
