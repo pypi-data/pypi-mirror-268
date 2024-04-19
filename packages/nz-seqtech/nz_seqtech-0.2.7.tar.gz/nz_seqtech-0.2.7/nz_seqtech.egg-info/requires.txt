@@ -1,0 +1,9 @@
+wheel
+numpy
+pandas
+scikit-learn
+qiskit
+matplotlib
+qiskit-algorithms
+qiskit-machine-learning==0.6.1
+qiskit-aer
