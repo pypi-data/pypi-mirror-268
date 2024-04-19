@@ -1,0 +1,3 @@
+[console_scripts]
+qceltis = QCeltis.qceltis:main
+
