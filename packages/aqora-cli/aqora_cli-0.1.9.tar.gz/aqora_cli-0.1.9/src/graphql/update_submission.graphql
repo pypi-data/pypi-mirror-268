@@ -1,0 +1,19 @@
+mutation UpdateSubmissionMutation(
+  $competition_id: ID!
+  $pyprojectToml: String!
+  $readme: String
+) {
+  createSubmissionVersion(
+    competitionId: $competition_id
+    input: { pyprojectToml: $pyprojectToml, readme: $readme }
+  ) {
+    node {
+      id
+      files {
+        kind
+        uploadUrl
+      }
+    }
+  }
+}
+
