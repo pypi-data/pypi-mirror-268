@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: zetaforge
+Version: 0.1.2
+Summary: zetaforge installer
+Author: Zetane
+Author-email: info@zetane.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools ==69.0.2
+Requires-Dist: requests ==2.31.0
+Requires-Dist: boto3 ==1.34.79
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: mixpanel ==4.10.1
+Requires-Dist: langchain ==0.1.15
+Requires-Dist: langchain-openai ==0.1.2
+

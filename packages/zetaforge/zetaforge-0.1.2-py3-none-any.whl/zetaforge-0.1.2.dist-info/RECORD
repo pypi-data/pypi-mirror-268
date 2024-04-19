@@ -1,0 +1,15 @@
+zetaforge/__init__.py,sha256=mdp2CftfqYbdKtP-eWv1z7rAUycYv6X1ntXSMUf8Kss,22
+zetaforge/check_forge_dependencies.py,sha256=fq1Y3bMAJIL4_uubyyvLrnwp26DsEkN84sUadzWyveM,1657
+zetaforge/forge_cli.py,sha256=63US9kV9DcB_W865kLus-82pKtJBDSdfZ_1E02u_fBo,3389
+zetaforge/forge_runner.py,sha256=yY80c3StvWg_R-1itqXDBEC6TRnto4tMUejXtYwCTYk,13795
+zetaforge/install_forge_dependencies.py,sha256=H5iJfBzmZoso82PcV4BWBI5wxE9qkcgCBCAuTXQ6rZI,11862
+zetaforge/mixpanel_client.py,sha256=T00f834Mr7Z3QjK5FK_Sbm3YRzNcbacWQdbzy5WHa_g,1504
+zetaforge/executables/README.md,sha256=b09cIRNI3cxl6b1NOMGIpRY-g5IfGinL4m1Bp2Bt9xs,122
+zetaforge/utils/build.yaml,sha256=rx_v4Xjm50fVQnAOCPXJPREEmxZotTQC8r4U2-tiUxs,3003
+zetaforge/utils/install.yaml,sha256=wVfUA51s4sBF56ifNxIRpnruClgTHxbH9eGUXj4DlRo,37294
+zetaforge-0.1.2.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+zetaforge-0.1.2.dist-info/METADATA,sha256=miBHIKYxIMEyE8r6kdPAHvS3F_Yybg3-WYpmg_tiVQk,451
+zetaforge-0.1.2.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+zetaforge-0.1.2.dist-info/entry_points.txt,sha256=jgvcEeYNDAVbokGGqGOmO9vbQFeqdtttstdbwfwD_0E,55
+zetaforge-0.1.2.dist-info/top_level.txt,sha256=B5WQOx9IiL25xvwyxts3WGXse8evU3qNuAIi8U5nUzA,10
+zetaforge-0.1.2.dist-info/RECORD,,
