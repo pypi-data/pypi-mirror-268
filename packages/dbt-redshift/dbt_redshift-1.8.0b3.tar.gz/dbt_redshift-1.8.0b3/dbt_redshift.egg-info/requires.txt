@@ -1,0 +1,7 @@
+dbt-common<2.0,>=0.1.0a1
+dbt-adapters<2.0,>=0.1.0a1
+dbt-postgres~=1.8.0b3
+redshift-connector!=2.0.914,<2.0.918,>=2.0.913
+dbt-core>=1.8.0b3
+sqlparse<0.6.0,>=0.5.0
+agate
