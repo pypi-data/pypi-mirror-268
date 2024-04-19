@@ -1,0 +1,17 @@
+{
+    "tomo_recon": {
+        "cfg_file": "/media/xiao/650a7301-d9d1-43d0-9a79-294552824932/Tongchao_2024-1/pass-312475/xanes3d_tomo_tplt_cfg_2024-04-17-00-42-50.json"
+    },
+    "tomo_batch_recon": {
+        "cfg_file": "/media/xiao/650a7301-d9d1-43d0-9a79-294552824932/Haitao_Yu_2024-1/HTY_2024Mar/tomo_trial_cen_cfg_2024-04-16-18-25-53.json"
+    },
+    "xanes3d_auto_cen": {
+        "cfg_file": "/media/xiao/650a7301-d9d1-43d0-9a79-294552824932/Tongchao_2024-1/pass-312475/xanes3d_autocen&reg--_2024-04-17-07-44-44.json"
+    },
+    "xanes2d_fit": {
+        "cfg_file": "/media/xiao/650a7301-d9d1-43d0-9a79-294552824932/Guiliang_2023-2/2D_trial_reg_multipos_2D_xanes_scan2_id_72584_repeat_00_pos_00_2023-12-09-11-54-24.h5"
+    },
+    "xanes3d_fit": {
+        "cfg_file": "/media/xiao/650a7301-d9d1-43d0-9a79-294552824932/Tongchao_2024-1/pass-312475/3D_trial_reg_scan_id_83715-83725_2024-03-27-22-58-58.h5"
+    }
+}
