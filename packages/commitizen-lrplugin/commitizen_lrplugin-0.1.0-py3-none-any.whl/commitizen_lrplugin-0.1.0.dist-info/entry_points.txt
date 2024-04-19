@@ -1,0 +1,3 @@
+[commitizen.provider]
+commitizen-lrplugin=commitizen_lrplugin.lrplugin_version_provider:LRPluginVersionProvider
+

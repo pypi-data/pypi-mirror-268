@@ -1,0 +1,6 @@
+commitizen_lrplugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commitizen_lrplugin/lrplugin_version_provider.py,sha256=Pptgu5IInTK1vp0N4kVQWIxX5mNVqfoockUOTEJPJH4,1074
+commitizen_lrplugin-0.1.0.dist-info/METADATA,sha256=it-uUzNEYId1Tz6qcp0vZlZOBaFtApSndAhafZJN_vM,329
+commitizen_lrplugin-0.1.0.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+commitizen_lrplugin-0.1.0.dist-info/entry_points.txt,sha256=oGMwstC43iVaLE-qDb5h_jLu7pqAFv0dnVyyCL3zIWo,113
+commitizen_lrplugin-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: commitizen-lrplugin
+Version: 0.1.0
+Summary: Commitizen version provider for Lua Lightroom plug-ins.
+Author: Karsten Silkenbäumer
+Author-email: 993392+kassi@users.noreply.github.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+
