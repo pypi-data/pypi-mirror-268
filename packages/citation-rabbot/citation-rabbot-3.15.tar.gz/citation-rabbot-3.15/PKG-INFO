@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: citation-rabbot
+Version: 3.15
+Summary: A telegram bot jumping in your citation database like a rabbit!
+Home-page: https://github.com/yindaheng98/citation-rabbot
+Author: yindaheng98
+Author-email: yindaheng98@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# citation-rabbot
+A telegram bot jumping in your citation database like a rabbit!
+
+
