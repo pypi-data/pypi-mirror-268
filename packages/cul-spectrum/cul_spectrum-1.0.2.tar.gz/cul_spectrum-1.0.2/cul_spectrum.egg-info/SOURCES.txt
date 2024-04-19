@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+cul_spectrum/__init__.py
+cul_spectrum/cli.py
+cul_spectrum/client.py
+cul_spectrum.egg-info/PKG-INFO
+cul_spectrum.egg-info/SOURCES.txt
+cul_spectrum.egg-info/dependency_links.txt
+cul_spectrum.egg-info/entry_points.txt
+cul_spectrum.egg-info/requires.txt
+cul_spectrum.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_client.py
