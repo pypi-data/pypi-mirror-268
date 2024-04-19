@@ -1,0 +1,9 @@
+README.md
+setup.py
+ThInfluxSDK/__init__.py
+ThInfluxSDK/influxSDK.py
+th_influx_sdk.egg-info/PKG-INFO
+th_influx_sdk.egg-info/SOURCES.txt
+th_influx_sdk.egg-info/dependency_links.txt
+th_influx_sdk.egg-info/requires.txt
+th_influx_sdk.egg-info/top_level.txt
