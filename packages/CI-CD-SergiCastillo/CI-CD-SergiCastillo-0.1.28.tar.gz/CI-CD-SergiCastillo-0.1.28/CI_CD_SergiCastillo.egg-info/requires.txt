@@ -1,0 +1,8 @@
+coverage
+pylint
+pytest
+ggshield
+psycopg2
+flask
+json-log-formatter
+twine
