@@ -1,0 +1,11 @@
+django_persian_pdf/__init__.py,sha256=JXjmmKuki1O5sgZ0CPNn8BfE6mzEwg9HlxOSUSAe32M,108
+django_persian_pdf/apps.py,sha256=gwrCz4YUNkZWkn0zVvO1m9uAolpTwQUkz6Yz4zjfvaM,185
+django_persian_pdf/compilers.py,sha256=8h6Zlx3I_cnqurFxBW3PH4ZbJ96Oi6It-GGmggd21y8,2948
+django_persian_pdf/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_persian_pdf/responses.py,sha256=oBNgrR-DO2jrWx45fOIJV3V1VLw277mXAVMp--w6pCc,236
+django_persian_pdf/views.py,sha256=zHbyDKUbLVj4Zdp3yjPDmEGm2aOCgJEsjywniqFLkCA,1812
+django_persian_pdf-0.1.1.dist-info/LICENSE,sha256=129wyxQG-PfyXJsmPZ1I4bhs6wfTMe4szux0zqxg9u8,1090
+django_persian_pdf-0.1.1.dist-info/METADATA,sha256=1nBFEW1mCuhSI2HlGSehhmghfqRAzTH94xl47e99n6c,5851
+django_persian_pdf-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_persian_pdf-0.1.1.dist-info/top_level.txt,sha256=HNURn4qjUiFoD4YXC7JCFQ6meR1CxJl9xGrXLQB7KbQ,19
+django_persian_pdf-0.1.1.dist-info/RECORD,,
