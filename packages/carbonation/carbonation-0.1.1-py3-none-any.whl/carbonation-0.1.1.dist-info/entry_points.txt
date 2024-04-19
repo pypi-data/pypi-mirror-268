@@ -1,0 +1,3 @@
+[console_scripts]
+meas = carbonation.cli.measurand:main
+reframe = carbonation.cli.reframe:main
