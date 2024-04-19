@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: tsbot
+Version: 1.1.0
+Summary: Asynchronous framework to build TeamSpeak 3 Server Query bots
+Author: 0x4aK
+Project-URL: repository, https://github.com/0x4aK/tsbot
+Project-URL: documentation, https://tsbot.readthedocs.io/en/latest/
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: asyncssh>=2.9.0
+Provides-Extra: tests
+Requires-Dist: mypy>=0.931; extra == "tests"
+Requires-Dist: pytest>=7.0.0; extra == "tests"
+Requires-Dist: pytest-cov>=3.0.0; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.2.6; extra == "docs"
+Requires-Dist: myst-parser>=0.18.0; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints>=1.18.2; extra == "docs"
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == "docs"
+Requires-Dist: sphinx_rtd_theme>=2.0.0; extra == "docs"
+
+# TSBot
+
+Asynchronous framework to build **TeamSpeak 3 Server Query** bots
+
+## ✅ Features
+
+- Uses modern Python `async` and `await` syntax
+- Secure connection through SSH
+- Ease of use query building
+- Built-in and configurable ratelimiter if no access to `whitelist.txt`
+
+## ✏️ Examples
+
+```python
+from __future__ import annotations
+
+import asyncio
+
+from tsbot import TSBot, TSCtx, query
+
+
+bot = TSBot(
+    username="USERNAME",
+    password="PASSWORD",
+    address="ADDRESS",
+)
+
+
+@bot.command("hello")
+async def hello_world(bot: TSBot, ctx: TSCtx):
+    await bot.respond(ctx, f"Hello {ctx['invokername']}!")
+
+
+@bot.on("cliententerview")
+async def poke_on_enter(bot: TSBot, ctx: TSCtx):
+    poke_query = query("clientpoke").params(clid=ctx["clid"], msg="Welcome to the server!")
+    await bot.send(poke_query)
+
+
+asyncio.run(bot.run())
+```
+
+**Check out [📁examples](https://github.com/0x4aK/TSBot/blob/master/examples) for more**
+
+## 📦 Installation
+
+**Python 3.10 or higher is required**
+
+Installing with pip:
+
+```shell
+# Linux/macOS
+python3 -m pip install tsbot
+
+# Windows
+py -3 -m pip install tsbot
+```

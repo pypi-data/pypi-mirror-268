@@ -1,0 +1,95 @@
+[project]
+name = "tsbot"
+version = "1.1.0"
+authors = [{ name = "0x4aK" }]
+description = "Asynchronous framework to build TeamSpeak 3 Server Query bots"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: AsyncIO",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+]
+dependencies = ["asyncssh >= 2.9.0"]
+license = { file = "LICENCE" }
+urls = { repository = "https://github.com/0x4aK/tsbot", documentation = "https://tsbot.readthedocs.io/en/latest/" }
+
+
+[project.optional-dependencies]
+tests = ["mypy >= 0.931", "pytest >= 7.0.0", "pytest-cov >= 3.0.0"]
+docs = [
+    "sphinx >= 7.2.6",
+    "myst-parser >= 0.18.0",
+    "sphinx-autodoc-typehints >= 1.18.2",
+    "sphinx-autobuild >= 2021.3.14",
+    "sphinx_rtd_theme >= 2.0.0",
+]
+
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools]
+packages = { find = { include = ["tsbot*"] } }
+
+
+[tool.setuptools.package-data]
+tsbot = ["py.typed"]
+
+
+[tool.pytest.ini_options]
+addopts = "--cov"
+testpaths = ["tests"]
+
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+
+[tool.pyright]
+reportImportCycles = false
+
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+minversion = 3.8.0
+envlist = py310, py311, mypy
+isolated_build = true
+
+[gh-actions]
+python =
+    3.10: py310, mypy
+    3.11: py311
+    3.12: py312
+
+[testenv]
+setenv =
+    PYTHONPATH = {toxinidir}
+extras = tests
+commands = pytest --basetemp={envtmpdir} --cov
+
+[testenv:mypy]
+basepython = python3.10
+deps =
+    mypy
+commands = mypy tsbot
+"""
