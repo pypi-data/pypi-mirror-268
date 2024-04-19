@@ -1,0 +1,25 @@
+---
+site_name: "task2md source documentation"
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings
+
+markdown_extensions:
+  - mkdocs-click
+
+nav:
+  - 'index.md'
+  - 'cli.md'
+  - 'task2md.md'
+  - 'util':
+    - 'util/dir.md'
+  - 'template':
+    - 'template/file.md'
+    - 'template/header.md'
+    - 'template/index.md'
+    - 'template/task.md'
+    - 'template/variable.md'
