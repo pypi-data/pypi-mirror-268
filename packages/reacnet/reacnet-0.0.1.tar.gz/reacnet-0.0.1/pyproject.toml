@@ -1,0 +1,21 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name        = "reacnet"
+description = "a tool for building reactor network based on omnisoot and Cantera"
+version     = "0.0.1"
+readme      = "README.md"
+requires-python = ">=3.7"
+authors = [
+  { name="Mo Adib", email="moademic@gmail.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+keywords = ["computational", "chemical kinetics", "soot"]
+
+[project.urls]
+"Homepage" = "https://carleton.ca/eptl/people/336/"
