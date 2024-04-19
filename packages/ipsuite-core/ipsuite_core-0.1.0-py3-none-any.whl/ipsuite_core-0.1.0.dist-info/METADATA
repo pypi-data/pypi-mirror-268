@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ipsuite-core
+Version: 0.1.0
+Summary: core functionality and base classes for IPSuite
+License: Apache-2.0
+Author: zincwarecode
+Author-email: zincwarecode@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ZnTrack (>=0.7.2,<0.8.0)
+Requires-Dist: znh5md (>=0.1.9,<0.2.0)
+Project-URL: documentation, https://ipsuite.readthedocs.io
+Project-URL: repository, https://github.com/zincware/ipsuite-core
+Description-Content-Type: text/markdown
+
+# The IPSuite Core Package
+
