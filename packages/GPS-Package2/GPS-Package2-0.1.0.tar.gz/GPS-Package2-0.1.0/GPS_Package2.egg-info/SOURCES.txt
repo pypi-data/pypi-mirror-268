@@ -1,0 +1,5 @@
+setup.py
+GPS_Package2.egg-info/PKG-INFO
+GPS_Package2.egg-info/SOURCES.txt
+GPS_Package2.egg-info/dependency_links.txt
+GPS_Package2.egg-info/top_level.txt
