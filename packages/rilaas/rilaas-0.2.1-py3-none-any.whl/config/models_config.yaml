@@ -1,0 +1,89 @@
+models:
+  - name: SD
+    functions:
+      - name: txt2img
+        endpoint: "/txt2img"
+        accept: 'image/jpeg'
+      - name: img2img
+        endpoint: "/img2img"
+        accept: 'image/jpeg'
+      - name: inpaint
+        endpoint: "/inpaint"
+        accept: 'image/jpeg'
+  - name: SDXL
+    functions:
+      - name: txt2img
+        endpoint: "/txt2img"
+        accept: 'image/jpeg'
+      - name: img2img
+        endpoint: "/img2img"
+        accept: 'image/jpeg'
+      - name: inpaint
+        endpoint: "/inpaint"
+        accept: 'image/jpeg'
+  - name: SVD
+    functions:
+      - name: text2video
+        endpoint: "/text2video"
+  - name: SDXL-turbo
+    functions:
+      - name: txt2img
+        endpoint: "/txt2img"
+        accept: 'image/jpeg'
+      - name: img2img
+        endpoint: "/img2img"
+        accept: 'image/jpeg'
+      - name: inpaint
+        endpoint: "/inpaint"
+        accept: 'image/jpeg'
+
+  - name: text2text-generation
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: table-question-answering
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: token-classification
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: question-answering
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: fill-mask
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: LLMs 7B
+    functions:
+      - name: generate
+        endpoint: /v1/generate
+  - name: translation
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: text-classification
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: summarization
+    functions:
+      - name: predict
+        endpoint: /predict
+  - name: zero-shot-classification
+    functions:
+      - name: predict
+        endpoint: /predict
+
+  - name: yolov5
+    functions:
+      - name: invocation
+        endpoint: "/invocation"
+        accept: 'image/jpeg'
+      - name: render
+        endpoint: "/render"
+        accept: 'image/jpeg' 
+
