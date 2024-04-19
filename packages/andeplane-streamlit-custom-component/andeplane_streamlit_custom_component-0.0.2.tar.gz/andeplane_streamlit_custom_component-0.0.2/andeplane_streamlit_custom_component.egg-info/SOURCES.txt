@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+andeplane_streamlit_custom_component.egg-info/PKG-INFO
+andeplane_streamlit_custom_component.egg-info/SOURCES.txt
+andeplane_streamlit_custom_component.egg-info/dependency_links.txt
+andeplane_streamlit_custom_component.egg-info/requires.txt
+andeplane_streamlit_custom_component.egg-info/top_level.txt
+my_component/__init__.py
+my_component/example.py
