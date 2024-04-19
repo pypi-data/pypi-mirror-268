@@ -1,0 +1,23 @@
+// Copyright © SixtyFPS GmbH <info@slint.dev>
+// SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-Slint-Royalty-free-1.2 OR LicenseRef-Slint-commercial
+
+
+export SubElements := Rectangle {
+
+    background: blue;
+
+    Image {
+        source: @image-url("foo.png");
+    }
+
+    Image {
+        source: @image-url("builtin:/common/does-not-exist.svg");
+//              ^error{Cannot find image file builtin:/common/does-not-exist.svg}
+    }
+
+    Rectangle {
+        background: red;
+    }
+
+
+}
