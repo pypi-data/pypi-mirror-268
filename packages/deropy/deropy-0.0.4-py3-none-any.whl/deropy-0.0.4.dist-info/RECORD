@@ -1,0 +1,11 @@
+deropy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deropy/main.py,sha256=XRVQqQLW1zq7uSik28aDS3g6K_wL_WsN08AmKHHpiXU,349
+deropy/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+deropy/commands/configure.py,sha256=Ck3LVvliK6BrXEVSjVbO3bgeE8Tp_xMtgPzV2ZaJ8wg,1384
+deropy/commands/deploy.py,sha256=i8yfbmb_Gdul48OvaLbi6bddyQ6cQAP4nbiWHsXikxQ,673
+deropy/commands/generate.py,sha256=nWtMuwrKjFigwxGW2YFVjJmU2IBj2CMcmEd3Iug39Es,9499
+deropy-0.0.4.dist-info/METADATA,sha256=kxThaBmSA59mZqxQ5vWMqDXZl7GEJFr0y7WxfYl4HuU,2847
+deropy-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+deropy-0.0.4.dist-info/entry_points.txt,sha256=NIa_XjAnfu5GdJaDIUoB79oZotTUYSUBL2BxEEyCyjE,46
+deropy-0.0.4.dist-info/top_level.txt,sha256=P321xQB5l7ns_q3u8b5hbZF4hPibiksm56tNNDAg33Q,7
+deropy-0.0.4.dist-info/RECORD,,
