@@ -1,0 +1,26 @@
+// Copyright © SixtyFPS GmbH <info@slint.dev>
+// SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-Slint-Royalty-free-1.2 OR LicenseRef-Slint-commercial
+
+
+export X := PopupWindow {
+//          ^error{PopupWindow cannot be the top level}
+
+    Rectangle {
+
+        popup := PopupWindow {
+//               ^error{Cannot access the inside of a PopupWindow from enclosing component}
+            r := Rectangle {
+            }
+        }
+
+        background: r.background;
+
+    }
+
+
+    if true : PopupWindow {}
+    //        ^error{PopupWindow cannot be directly repeated or conditional}
+    for abc in [1] : PopupWindow {}
+    //               ^error{PopupWindow cannot be directly repeated or conditional}
+
+}
