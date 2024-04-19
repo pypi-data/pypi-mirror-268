@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyDatabases
+Version: 0.1.1
+Summary: Small collection of database classes based primarily pandas, secondarily scipy and GAMS.
+Home-page: https://github.com/ChampionApe/pyDatabases
+Author: Rasmus K. Skjødt Berg
+Author-email: rasmus.kehlet.berg@econ.ku.dk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas >=2
+Requires-Dist: scipy >=1.1
+Requires-Dist: openpyxl
+
+# pyDatabases
+Database classes based on pandas, scipy, and GAMS. 
+
+## Update in version 0.1.0:
+Migrated from old GAMS Python API to the new version (>42.0). Test environment currently uses GAMS 46

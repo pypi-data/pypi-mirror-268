@@ -1,0 +1,12 @@
+pyDatabases/__init__.py,sha256=KWLDEUQWohi4TRnhLpe3npkpzHFwmdBWOfsDki_8Y94,34
+pyDatabases/auxfuncs.py,sha256=CUBJJsag0ZAFeD1qnS5pnQ8qLe5a8GfRhBSUjtmeYl8,12902
+pyDatabases/gpyDB/__init__.py,sha256=oxfomu7csJI9CZvaIdn6YY7sdsiak8JcbkF-nt5LI1A,101
+pyDatabases/gpyDB/database.py,sha256=vSRP4o3Uitk9EAmBCQkLwrClm7HCVABPxA_3kNpc2qM,20423
+pyDatabases/gpyDB/gpyDB.py,sha256=ZSI5AWOXQEtskASbOwnKYGioda7aSCrhC2n0OnXtZ30,24830
+pyDatabases/simpleDB/__init__.py,sha256=YJjlIFsj7le6Yxcvk_GUVhoDu_6F1aVMTQZJOMX8p_4,23
+pyDatabases/simpleDB/simpleDB.py,sha256=9IIP79AOk9Gnpt14BuLrLpvm-aUmSVq--QZWnUog8Xk,6339
+pyDatabases-0.1.1.dist-info/LICENSE,sha256=peFDGefEC3qei8qmiGu5-KEtlfsu7PEgnHY_EmKlvic,1089
+pyDatabases-0.1.1.dist-info/METADATA,sha256=15Z6FK2bGMpDTCVy4pR2SLBakrZroGcvOveNhgXLFXc,763
+pyDatabases-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyDatabases-0.1.1.dist-info/top_level.txt,sha256=qzEcHm1b425JwL7FrnUH1gR2JBCAnmCoDCJcjaUNi8c,12
+pyDatabases-0.1.1.dist-info/RECORD,,
