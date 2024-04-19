@@ -1,0 +1,17 @@
+*egg-info
+*pdf
+*svg
+dist/
+build/
+**pkl
+**/__pycache__
+**/baselines
+**/*.pkl
+**/.ipynb_checkpoints/
+fireants/notebooks/images/
+**/*log.txt
+**/*.nii.gz
+fireants/scripts/misc
+fireants/notebooks
+fireants/baselines
+.req.txt
