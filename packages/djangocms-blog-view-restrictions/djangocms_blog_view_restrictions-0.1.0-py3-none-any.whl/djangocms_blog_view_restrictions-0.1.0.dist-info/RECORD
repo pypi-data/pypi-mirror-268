@@ -1,0 +1,16 @@
+djangocms_blog_view_restrictions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangocms_blog_view_restrictions/admin.py,sha256=O6mqV-F1g5YD-3ttw6ZdfNA5slC5hHmoxsliQOlaX2M,525
+djangocms_blog_view_restrictions/apps.py,sha256=GRw6qScY_-Hhq-GBD23lmzsBHwpp8dVAEWSqNJpG3FA,136
+djangocms_blog_view_restrictions/models.py,sha256=tn_AucKaUptYVbg_YxLjk6HcJ0noGBVA_iT7_w9hoOw,1260
+djangocms_blog_view_restrictions/locale/fr/LC_MESSAGES/django.mo,sha256=UwWPaorOOdQD9bWUDGo1mdixUdE-XPnaZjdOZlATPhY,918
+djangocms_blog_view_restrictions/locale/fr/LC_MESSAGES/django.po,sha256=-aPiMn-IJhuR8QV6ITittKPbsyGyXcvqlsQZOuEbKQw,1602
+djangocms_blog_view_restrictions/migrations/0001_initial.py,sha256=iYw26RaBnAXKHUIg7UFWFJB4JF9aDQIBAoHqsKio1Ls,2042
+djangocms_blog_view_restrictions/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangocms_blog_view_restrictions/templatetags/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangocms_blog_view_restrictions/templatetags/blog_view_restrictions_tags.py,sha256=CngHUHyjvdH3z8A3gVmdP3WvOV0AsXJfEBsdtfAmL1k,598
+djangocms_blog_view_restrictions-0.1.0.dist-info/AUTHORS.md,sha256=QzIBFS_FZ1NqUF3xOw-lE7eLFrucMpEr2H8zDmpQAUI,44
+djangocms_blog_view_restrictions-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+djangocms_blog_view_restrictions-0.1.0.dist-info/METADATA,sha256=Q6O0WPTUHDvZSfc-U60iIcF8WAt76zlnIrwnZl-OCt0,2127
+djangocms_blog_view_restrictions-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+djangocms_blog_view_restrictions-0.1.0.dist-info/top_level.txt,sha256=LBueUnOybVL5vf8rxp-IsduTO0OANVPSFZXFIMTkwfs,33
+djangocms_blog_view_restrictions-0.1.0.dist-info/RECORD,,
