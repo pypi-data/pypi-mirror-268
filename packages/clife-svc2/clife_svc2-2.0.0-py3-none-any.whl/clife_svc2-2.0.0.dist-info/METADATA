@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: clife-svc2
+Version: 2.0.0
+Summary: A module for service
+Home-page: 
+Author: andy.hu
+Author-email: hlp0@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: flask <3
+Requires-Dist: flask-cors ==3.0.10
+Requires-Dist: gevent
+Requires-Dist: gunicorn
+Requires-Dist: loguru >=0.7.0
+Requires-Dist: requests <3,>=2.22.0
+Requires-Dist: cos-python-sdk-v5
+Requires-Dist: boto3
+Requires-Dist: rocketmq >=0.4.4
+
+#clife_svc
