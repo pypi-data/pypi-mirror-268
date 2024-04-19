@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: word_sorters_chin
+Version: 0.1
+Summary: A simple library to sort words alphabetically
+Author: chinmay
+Author-email: lawd7131@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# word_sorter
+
+word_sorter is a simple Python library for sorting words alphabetically. It is easy to use and integrates smoothly into any Python project that requires word sorting functionality.
+
+## Installation
+
+To install word_sorter, you can use pip:
+
+```bash
+pip install word_sorter
