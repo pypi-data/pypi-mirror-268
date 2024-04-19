@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runit</title>
+</head>
+<body style="position: relative">
+    <img 
+        src="/static/images/loading.gif" 
+        alt="loading gif"
+        width="60"
+        height="60"
+        style="display: block; margin: 100px auto;"/>
+    <script>
+        let client_id =  Date.now()
+        let uri = location.origin.replace('http', 'ws')
+        let ws = new WebSocket(`${uri}/ws/${client_id}`)
+        ws.onopen = () => {
+            let info = {type: 'browser'}
+            info.client = location.pathname.split('/e/')[1].split('/')[0]
+            ws.send(JSON.stringify(info))
+        }
+        ws.onmessage = (data)=>{
+            document.body.innerHTML = data.data
+        }
+    </script>
+</body>
+</html>
