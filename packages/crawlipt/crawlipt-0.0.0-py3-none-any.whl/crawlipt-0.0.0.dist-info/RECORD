@@ -1,0 +1,15 @@
+crawlipt/__init__.py,sha256=yi3PihERfoDdZAiO9BSUii0SGPzQDggB4ptDWc22jL0,54
+crawlipt/__version__.py,sha256=Q32-Bc3FN8PYo6p7fuJZSHH2DuhCQG66Z8HSodg0NG0,352
+crawlipt/action.py,sha256=GYEXDB6bnGosb6gWes1elca7THAB9a5YzmX28V8uWU0,131
+crawlipt/annotation.py,sha256=_SRETmp2m-PlDffaZL0xSxuaaWbj2PCbNfgoIk-n42o,2523
+crawlipt/script.py,sha256=k8PgBaouVDIW3E33FtGf-nNRxla9jDUtGjlG4EOdwcc,3410
+crawlipt/actions/__init__.py,sha256=bJsSpratfugU1L08L5XENfJ359n8DDNzwSF7G4tgyf4,107
+crawlipt/actions/click.py,sha256=x2l0ebnQLvaLCgttk7RUgA2pO1ooI420fkryMSnczKo,746
+crawlipt/actions/input.py,sha256=7w3NvdkExxbN6MTrKxsibj4h0HmR67TEOAKB8bAZEUQ,1298
+crawlipt/actions/redirect.py,sha256=HdsCQfbhj_NnsszerT3BG0axX0ZF9eOmzHcBYXWXmI8,796
+crawlipt/actions/switch.py,sha256=WN_qLRMeDxj34RhPEAhx6hroEkh4wezRExJdnjD4iMw,757
+crawlipt-0.0.0.dist-info/LICENSE,sha256=0pRcIRSCkFlpalZWD4f02JCKQM4pfw-69Mv9tx6m0Ac,1063
+crawlipt-0.0.0.dist-info/METADATA,sha256=PR6bQv6ahUHcPPa0s9ZdbqDijiW4NObVEzninpSy3v0,727
+crawlipt-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+crawlipt-0.0.0.dist-info/top_level.txt,sha256=LdkSdPYRHYDR6Yd-A9sHHTEr7mpe06vyL26fFtm_pN4,9
+crawlipt-0.0.0.dist-info/RECORD,,
