@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: spiderwebai-py
+Version: 0.0.6
+Summary: Python SDK for SpiderWebAI API
+Home-page: https://github.com/spider-rs/spiderwebai-clients/tree/main/python
+Author: Spider
+Author-email: jeff@a11ywatch.com
+License-File: LICENSE
+Requires-Dist: requests
+
