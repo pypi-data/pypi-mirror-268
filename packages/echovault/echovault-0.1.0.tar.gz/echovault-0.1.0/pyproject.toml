@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "echovault"
+version = "0.1.0"
+description = ""
+authors = ["Charles Bajeux <charles.bajeux@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+dulwich = "^0.21.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
