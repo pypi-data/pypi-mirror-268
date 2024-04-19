@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: bpm-ai
+Version: 1.6.2
+Summary: AI task automation for BPM engines.
+Home-page: https://www.holisticon.de/
+License: Apache-2.0
+Author: Bennet Krause
+Author-email: bennet.krause@holisticon.de
+Requires-Python: >=3.11,<3.12
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: aiobotocore (>=2.12.3,<3.0.0)
+Requires-Dist: amazon-textract-prettyprinter (>=0.1.9,<0.2.0)
+Requires-Dist: anthropic (>=0.25.2,<0.26.0)
+Requires-Dist: av (>=11.0.0,<12.0.0)
+Requires-Dist: azure-ai-documentintelligence (>=1.0.0b2,<2.0.0)
+Requires-Dist: azure-ai-translation-text (>=1.0.0b1,<2.0.0)
+Requires-Dist: azure-storage-blob (>=12.19.1,<13.0.0)
+Requires-Dist: bpm-ai-core (==2.4.2)
+Requires-Dist: langfuse (>=2.25.0,<3.0.0)
+Requires-Dist: openai (>=1.11.0,<2.0.0)
+Project-URL: Repository, https://github.com/holunda-io/bpm-ai
+Description-Content-Type: text/markdown
+
+# bpm-ai
+_AI task automation for BPM engines._
+
+See [bpm-ai-connectors-camunda-8](https://github.com/holunda-io/bpm-ai-connectors-camunda-8) for actual integration with the Camunda Platform 8 BPM engine using custom BPMN elements (Connectors).
+
+## Installation
+Requires Python 3.11.
+
+```bash
+$ pip install bpm-ai
+```
+
+## Development (install test dependencies)
+### Linux
+Install PyTorch (CPU) and spaCy:
+```bash
+$ pip install -r requirements.dev.txt
+```
+
+---
+
+## License
+
+This project is developed under
+
+[![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](/LICENSE)
+
+## Sponsors and Customers
+
+[![sponsored](https://img.shields.io/badge/sponsoredBy-Holisticon-red.svg)](https://holisticon.de/)
