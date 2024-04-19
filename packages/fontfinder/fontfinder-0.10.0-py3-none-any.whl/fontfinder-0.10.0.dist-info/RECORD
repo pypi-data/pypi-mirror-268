@@ -1,0 +1,15 @@
+fontfinder/__init__.py,sha256=jS94iVBbv-AQ4HZbMBQQsuP6BP9Adx-lMIusC2nsA-E,27643
+fontfinder/_generate_data.py,sha256=3y5OWtgXexlvFLHKpPQTjsxwBgQtx3VUM1oky9xTXPs,1522
+fontfinder/filters.py,sha256=aku1Mg7dyPYE5kRQrFf-qhHT_k8m2cvAkrA2YeE4wGs,2408
+fontfinder/model.py,sha256=H2oxmlHAgrMnu1E3kZEZyLH344ke5hQ0F0s3zj8hCfs,17987
+fontfinder/noto.py,sha256=nMlHXvw8i7Mivrn8RVoLvsxh_lTXMCvTzHlDKOxd0QQ,11024
+fontfinder/_platforms/__init__.py,sha256=NOJMxyzW-C5WV8_k_68RPI-ctZP3jjFlpBRIiecdg30,3464
+fontfinder/_platforms/mac.py,sha256=evaqtLieZTQidhnDhcjzoHXQ5XziScTAHhRv6elus1w,8109
+fontfinder/_platforms/windows.py,sha256=khCRZki0_DuqJW3tQIXihJ0-9almCCuyMDuLr-uzuZU,10212
+fontfinder/data/noto.json,sha256=kBeqjf_1B5OdO7AvSQyWlzaNAOlj-7Ev1ogM4dLjMZ8,1011476
+fontfinder/data/small_unihan.json,sha256=mkQZwFhUM7AwhctfVUj_xj6zAJeiE7Tx8vWxSc_8r7s,636190
+fontfinder-0.10.0.dist-info/LICENSE,sha256=1g0fN9kkNO-r3wbI8_S5XK22EPw9QV1fiATj56B6X3I,1070
+fontfinder-0.10.0.dist-info/METADATA,sha256=DW-W6eEvbOfguSWaxAbXDV-VVqQQGQzmzP4MKEow_1Q,4510
+fontfinder-0.10.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fontfinder-0.10.0.dist-info/top_level.txt,sha256=ts3mhTmCK6aUuTbR1Ox4EH6OF0CHXf-QHUYWWPfYrpg,11
+fontfinder-0.10.0.dist-info/RECORD,,
