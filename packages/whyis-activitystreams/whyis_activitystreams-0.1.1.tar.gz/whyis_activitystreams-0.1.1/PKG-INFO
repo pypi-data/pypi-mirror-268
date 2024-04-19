@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: whyis-activitystreams
+Version: 0.1.1
+Summary: A whyis plugin to support the interpretation of activity streams.
+License-File: LICENSE
+Requires-Dist: whyis
