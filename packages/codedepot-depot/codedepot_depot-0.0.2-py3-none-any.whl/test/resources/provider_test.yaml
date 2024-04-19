@@ -1,0 +1,3 @@
+name: 'LocalProvider'
+provider_type: 'local'
+credentials: 'depot/test/resources/local_cred.json'
