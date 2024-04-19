@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: sqlmodel-react-admin
+Version: 0.0.6
+Summary: Create fast SQLModel/FastAPI APIs/BFFs for React Admin
+License: MIT
+Author: Evan Thomas
+Author-email: evan@evanjt.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fastapi (>=0.110.1,<0.111.0)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: sqlmodel (>=0.0.16,<0.0.17)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0)
+Description-Content-Type: text/markdown
+
+# sqlmodel-react-admin
+
+Some structures to generate routes for use in APIs and BFFs, using SQLModel, and
+FastAPI.
+
