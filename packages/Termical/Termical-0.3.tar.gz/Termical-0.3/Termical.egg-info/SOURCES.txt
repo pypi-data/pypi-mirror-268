@@ -1,0 +1,10 @@
+setup.py
+Termical.egg-info/PKG-INFO
+Termical.egg-info/SOURCES.txt
+Termical.egg-info/dependency_links.txt
+Termical.egg-info/requires.txt
+Termical.egg-info/top_level.txt
+termical_lib/__init__.py
+termical_lib/authentication.py
+termical_lib/termical.py
+termical_lib/termicalFunctions.py
