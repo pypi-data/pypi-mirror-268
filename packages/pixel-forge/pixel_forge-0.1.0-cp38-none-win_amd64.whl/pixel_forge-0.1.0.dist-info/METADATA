@@ -1,0 +1,55 @@
+Metadata-Version: 2.3
+Name: pixel_forge
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: numpy
+Requires-Dist: pytest ; extra == 'test'
+Provides-Extra: test
+License-File: LICENSE
+Summary: Ultra-fast screen capture in Rust with Python bindings
+Keywords: screenshot,window,capture
+Author-email: Martin Schuck <real.amacati@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/amacati/pixel_forge
+
+# pixel forge
+
+<p align="center">
+  <img width="256" height="256" src="https://raw.githubusercontent.com/amacati/pixel_forge/master/docs/img/pixel_forge_banner.png">
+</p>
+
+Ultra-fast screen capture in Rust with Python bindings
+
+# Installing
+
+The package can be installed via
+
+```bash
+pip install pixel_forge
+```
+
+# Example
+
+```python
+import time
+
+import numpy as np
+from pixel_forge import Capture, Monitor, Window, foreground_window
+
+c = Capture()
+m = Monitor()
+c.start(m)
+img = c.frame()
+c.stop()
+assert isinstance(img, np.ndarray)
+
+w: Window = foreground_window()
+c.start(w)
+img1 = c.frame()
+time.sleep(1)
+img2 = c.frame()  # Returns the most recent frame
+c.stop()
+```
