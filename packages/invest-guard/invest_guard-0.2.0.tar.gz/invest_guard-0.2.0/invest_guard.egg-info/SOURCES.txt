@@ -1,0 +1,8 @@
+README.md
+setup.py
+invest_guard.egg-info/PKG-INFO
+invest_guard.egg-info/SOURCES.txt
+invest_guard.egg-info/dependency_links.txt
+invest_guard.egg-info/entry_points.txt
+invest_guard.egg-info/requires.txt
+invest_guard.egg-info/top_level.txt
