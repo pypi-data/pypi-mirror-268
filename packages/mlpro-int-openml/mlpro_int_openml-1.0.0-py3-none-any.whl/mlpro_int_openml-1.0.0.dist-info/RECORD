@@ -1,0 +1,8 @@
+mlpro_int_openml/__init__.py,sha256=uQKV8SoOg14DD9wD3DeF8oRiUkW4SJQxEgqm5fHBrIo,39
+mlpro_int_openml/wrappers/__init__.py,sha256=efjATZo85hcdjTK5IMsgs__9CLT-asj16wCfbkctGp4,47
+mlpro_int_openml/wrappers/streams.py,sha256=0F0vIBXgPM7ilDdiXt6aOd34dRILU5DesBXBLZN4tQo,14119
+mlpro_int_openml-1.0.0.dist-info/LICENSE,sha256=boXCA3D9VhBWVtVmWZyPMQRQaSY_FubRTiaC_sofR4Q,10301
+mlpro_int_openml-1.0.0.dist-info/METADATA,sha256=3WA0EAoWdkYfCPwdd7Y-JdAk6QhrM9YUepVuc6nWea4,3043
+mlpro_int_openml-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mlpro_int_openml-1.0.0.dist-info/top_level.txt,sha256=6pmW3otCWDKBXG8A_HCw_iRmTYKNy1vfw4jZpVx9hK0,17
+mlpro_int_openml-1.0.0.dist-info/RECORD,,
