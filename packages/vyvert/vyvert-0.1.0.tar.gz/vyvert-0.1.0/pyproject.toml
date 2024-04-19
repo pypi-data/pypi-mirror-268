@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "vyvert"
+version = "0.1.0"
+description = "VyVeRT is an dependency injection library inspored by pytest and FastAPI"
+authors = ["Mike Oz <kozloffsky@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+anyio = "^4.3.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
