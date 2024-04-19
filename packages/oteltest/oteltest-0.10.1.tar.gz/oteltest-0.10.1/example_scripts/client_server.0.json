@@ -1,0 +1,139 @@
+{
+  "log_reqs": [],
+  "metric_reqs": [],
+  "trace_reqs": [
+    {
+      "request": {
+        "resourceSpans": [
+          {
+            "resource": {
+              "attributes": [
+                {
+                  "key": "telemetry.sdk.language",
+                  "value": {
+                    "stringValue": "python"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.name",
+                  "value": {
+                    "stringValue": "opentelemetry"
+                  }
+                },
+                {
+                  "key": "telemetry.sdk.version",
+                  "value": {
+                    "stringValue": "1.24.0"
+                  }
+                },
+                {
+                  "key": "telemetry.auto.version",
+                  "value": {
+                    "stringValue": "0.45b0"
+                  }
+                },
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "unknown_service"
+                  }
+                }
+              ]
+            },
+            "scopeSpans": [
+              {
+                "scope": {
+                  "name": "opentelemetry.instrumentation.flask",
+                  "version": "0.45b0"
+                },
+                "spans": [
+                  {
+                    "traceId": "xjQuFKBs8N0PIiuoSHa8+w==",
+                    "spanId": "8/C6vDqQciI=",
+                    "name": "/",
+                    "kind": "SPAN_KIND_SERVER",
+                    "startTimeUnixNano": "1713469843665364000",
+                    "endTimeUnixNano": "1713469843673422000",
+                    "attributes": [
+                      {
+                        "key": "http.method",
+                        "value": {
+                          "stringValue": "GET"
+                        }
+                      },
+                      {
+                        "key": "http.server_name",
+                        "value": {
+                          "stringValue": "127.0.0.1"
+                        }
+                      },
+                      {
+                        "key": "http.scheme",
+                        "value": {
+                          "stringValue": "http"
+                        }
+                      },
+                      {
+                        "key": "net.host.port",
+                        "value": {
+                          "intValue": "8002"
+                        }
+                      },
+                      {
+                        "key": "http.host",
+                        "value": {
+                          "stringValue": "127.0.0.1:8002"
+                        }
+                      },
+                      {
+                        "key": "http.target",
+                        "value": {
+                          "stringValue": "/"
+                        }
+                      },
+                      {
+                        "key": "net.peer.ip",
+                        "value": {
+                          "stringValue": "127.0.0.1"
+                        }
+                      },
+                      {
+                        "key": "net.peer.port",
+                        "value": {
+                          "intValue": "64733"
+                        }
+                      },
+                      {
+                        "key": "http.flavor",
+                        "value": {
+                          "stringValue": "1.1"
+                        }
+                      },
+                      {
+                        "key": "http.route",
+                        "value": {
+                          "stringValue": "/"
+                        }
+                      },
+                      {
+                        "key": "http.status_code",
+                        "value": {
+                          "intValue": "200"
+                        }
+                      }
+                    ],
+                    "status": {}
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "headers": {
+        "user-agent": "grpc-python/1.62.2 grpc-c/39.0.0 (osx; chttp2)"
+      },
+      "test_elapsed_ms": 30256
+    }
+  ]
+}
