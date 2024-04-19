@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: socon-embedded
+Version: 0.1a4
+Summary: Build/Flash tool plugin for socon
+Author-email: Stephane Capponi <stephane.capponi@proton.me>
+License: BSD-3-Clause
+Project-URL: repository, https://github.com/socon-dev/socon-embedded
+Keywords: build,flasH,embedded,socon
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: PyYAML ==6.0
+Requires-Dist: Jinja2 ==3.1.2
+Requires-Dist: datalookup ==1.0.0
+Requires-Dist: pydantic ==2.5.3
+Requires-Dist: socon ==0.2.1
+Requires-Dist: junitparser ==3.1.0
+
+==============
+Socon-embedded
+==============
+
+.. image:: https://img.shields.io/badge/python-3.9-blue.svg
+    :target: https://github.com/socon-dev/socon
+
+
+Socon-embdeded is a Socon plugin that enables you to easily configure how you
+build and flash an application for your different platfoms.
+
+Contribution
+============
+
+Anyone can contribute to Socon's development. Checkout our documentation
+on how to get involved: `https://socon.readthedocs.io/en/latest/internals/contributing.html`
+
+License
+=======
+
+Copyright Stephane Capponi and others, 2023
+Distributed under the terms of the BSD-3-Clause license, Socon is free and
+open source software.
