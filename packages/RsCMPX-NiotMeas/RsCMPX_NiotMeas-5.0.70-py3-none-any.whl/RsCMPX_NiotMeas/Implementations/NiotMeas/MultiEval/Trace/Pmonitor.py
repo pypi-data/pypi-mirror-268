@@ -1,0 +1,37 @@
+from typing import List
+
+from .....Internal.Core import Core
+from .....Internal.CommandsGroup import CommandsGroup
+from .....Internal.ArgSingleSuppressed import ArgSingleSuppressed
+from .....Internal.Types import DataType
+
+
+# noinspection PyPep8Naming,PyAttributeOutsideInit,SpellCheckingInspection
+class PmonitorCls:
+	"""Pmonitor commands group definition. 2 total commands, 0 Subgroups, 2 group commands"""
+
+	def __init__(self, core: Core, parent):
+		self._core = core
+		self._cmd_group = CommandsGroup("pmonitor", core, parent)
+
+	def fetch(self) -> List[float]:
+		"""SCPI: FETCh:NIOT:MEASurement<Instance>:MEValuation:TRACe:PMONitor \n
+		Snippet: value: List[float] = driver.niotMeas.multiEval.trace.pmonitor.fetch() \n
+		Returns the power monitor results for all captured slots. The number of captured slots is configurable, see method
+		RsCMPX_NiotMeas.Configure.NiotMeas.MultiEval.nslots. \n
+		Suppressed linked return values: reliability \n
+			:return: power: Comma-separated list of power values, one value per captured slot"""
+		suppressed = ArgSingleSuppressed(0, DataType.Integer, False, 1, 'Reliability')
+		response = self._core.io.query_bin_or_ascii_float_list_suppressed(f'FETCh:NIOT:MEASurement<Instance>:MEValuation:TRACe:PMONitor?', suppressed)
+		return response
+
+	def read(self) -> List[float]:
+		"""SCPI: READ:NIOT:MEASurement<Instance>:MEValuation:TRACe:PMONitor \n
+		Snippet: value: List[float] = driver.niotMeas.multiEval.trace.pmonitor.read() \n
+		Returns the power monitor results for all captured slots. The number of captured slots is configurable, see method
+		RsCMPX_NiotMeas.Configure.NiotMeas.MultiEval.nslots. \n
+		Suppressed linked return values: reliability \n
+			:return: power: Comma-separated list of power values, one value per captured slot"""
+		suppressed = ArgSingleSuppressed(0, DataType.Integer, False, 1, 'Reliability')
+		response = self._core.io.query_bin_or_ascii_float_list_suppressed(f'READ:NIOT:MEASurement<Instance>:MEValuation:TRACe:PMONitor?', suppressed)
+		return response
