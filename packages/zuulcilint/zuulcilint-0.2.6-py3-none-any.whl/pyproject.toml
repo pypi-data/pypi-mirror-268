@@ -1,0 +1,114 @@
+[tool.poetry]
+name = "zuulcilint"
+version = "0.2.6"
+description = "Zuul CI linter"
+authors = ["Pedro Baptista <pedro.miguel.baptista@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+keywords = ["zuul", "ci", "linter"]
+repository = "https://github.com/codesquadnest/zuulcilint"
+include = ["pyproject.toml", "LICENSE", "README.md", "zuulcilint/zuul-schema.yaml"]
+exclude = ["tests/*"]
+packages = [{include = "zuulcilint"}]
+
+[tool.poetry.scripts]
+zuulcilint = "zuulcilint.__main__:main"
+
+[tool.poetry.dependencies]
+python = "^3.8, <4.0"
+PyYAML = "^6.0.1"
+jsonschema = "^4.21.0"
+six = "^1.16.0"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+pytest = ">=7.4.4,<9.0.0"
+tox = "^4.12.0"
+pytest-cov = ">=4.1,<6.0"
+ruff = ">=0.1.13,<0.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# Configurations for black
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+extend-ignore = "E203,E501"
+
+# Configurations for pytest
+[tool.pytest]
+addopts = ["-ra", "--cov=zuulcilint", "--cov-report=term-missing"]
+testpaths = ["tests"]
+
+[toolpytest.cov]
+fail_under = 80
+
+select = ["ALL"]
+target-version = "py310"
+# Same as Black.
+line-length = 100
+
+[lint.per-file-ignores]
+"tests/**/*.py" = ["S101"] # Use of assert detected.
+
+[lint.mccabe]
+# Implicit 10 is too low for our codebase, even black uses 18 as default.
+max-complexity = 20
+
+[lint.flake8-builtins]
+builtins-ignorelist = ["id"]
+
+[lint.ignore]
+ignore = [
+  "D211", # No blank lines allowed after function docstring
+  "D213", # Multi-line docstring summary should start at the second line
+  # temporary disabled until we fix them:
+  "T201",
+  "ANN",
+  "S603", # subprocess call - check for execution of untrusted input
+  "S607", # start process with a partial path
+]
+
+# Configurations for tox
+[tool.tox]
+legacy_tox_ini = """
+    [tox]
+    envlist = py{38,39,310,311,312}, lint, pre-commit
+    skipsdist = True
+    skip_missing_interpreters = True
+
+    [testenv]
+    deps =
+        poetry
+    commands =
+        poetry install -v
+        poetry run pytest --cov=zuulcilint --cov-report=term-missing
+
+    [testenv:lint]
+    deps =
+        ruff
+    commands =
+        ruff check zuulcilint tests
+
+    [testenv:pre-commit]
+    skip_install = true
+    deps = pre-commit
+    commands = pre-commit run --all-files --show-diff-on-failure
+
+"""

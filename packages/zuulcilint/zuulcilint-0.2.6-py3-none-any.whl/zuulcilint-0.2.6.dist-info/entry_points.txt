@@ -1,0 +1,3 @@
+[console_scripts]
+zuulcilint=zuulcilint.__main__:main
+
