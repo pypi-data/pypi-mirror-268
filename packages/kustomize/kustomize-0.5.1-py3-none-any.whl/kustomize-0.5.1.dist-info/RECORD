@@ -1,0 +1,9 @@
+kustomize/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+kustomize/generators.py,sha256=Q49ULGDHmYZj5cDgmzH2ykZxdSVfxAR7l3G3AnEQW50,6785
+kustomize/main.py,sha256=950WC9Eg03JiSIIpMSGu0l2d91tCHIR-V3f9ei6oD5k,1535
+kustomize-0.5.1.dist-info/LICENSE,sha256=htoPAa6uRjSKPD1GUZXcHOzN55956HdppkuNoEsqR0E,1023
+kustomize-0.5.1.dist-info/METADATA,sha256=B3CN81Z_bduSeqQA4b8i409AdYjeIwhrhM5sArcr650,4488
+kustomize-0.5.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kustomize-0.5.1.dist-info/entry_points.txt,sha256=lMhMAUJR-uy4_iglNehjBsLKV0kth5kMgIIiWqi_J7g,52
+kustomize-0.5.1.dist-info/top_level.txt,sha256=w34v4LLK5yH4XgU6RN4t1H7_-rPvCqU_BPGncEpKMd4,10
+kustomize-0.5.1.dist-info/RECORD,,
