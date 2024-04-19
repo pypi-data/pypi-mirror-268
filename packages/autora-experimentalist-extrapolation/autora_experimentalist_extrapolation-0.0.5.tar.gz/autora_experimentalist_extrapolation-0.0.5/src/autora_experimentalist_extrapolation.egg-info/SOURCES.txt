@@ -1,0 +1,22 @@
+.gitignore
+.pre-commit-config.yaml
+LICENSE
+README.md
+mkdocs.yml
+pyproject.toml
+.github/pull_request_template.md
+.github/workflows/python-publish.yml
+.idea/autora-experimentalist-extrapolation.iml
+docs/Basic Usage.ipynb
+docs/index.md
+docs/quickstart.md
+docs/javascripts/mathjax.js
+mkdocs/base.yml
+src/autora/experimentalist/extrapolation/__init__.py
+src/autora_experimentalist_extrapolation.egg-info/PKG-INFO
+src/autora_experimentalist_extrapolation.egg-info/SOURCES.txt
+src/autora_experimentalist_extrapolation.egg-info/dependency_links.txt
+src/autora_experimentalist_extrapolation.egg-info/requires.txt
+src/autora_experimentalist_extrapolation.egg-info/top_level.txt
+tests/README.md
+tests/test_extrapolation.py
