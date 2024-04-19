@@ -1,0 +1,2 @@
+[console_scripts]
+cl2nc = cl2nc:main

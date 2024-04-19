@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: cl2nc
+Version: 3.5.0
+Summary: Convert Vaisala CL51 and CL31 DAT and HIS L2 files to NetCDF
+Home-page: https://github.com/peterkuma/cl2nc
+Author: Peter Kuma
+Author-email: peter@peterkuma.net
+License: MIT
+Keywords: vaisala,ceilometer,cl51,cl31,netcdf,lidar
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+License-File: LICENSE.md
