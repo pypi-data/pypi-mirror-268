@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/PyPianoTune.egg-info/PKG-INFO
+src/PyPianoTune.egg-info/SOURCES.txt
+src/PyPianoTune.egg-info/dependency_links.txt
+src/PyPianoTune.egg-info/top_level.txt
+src/pypianotune/__init__.py
+src/pypianotune/pypianotune.py
