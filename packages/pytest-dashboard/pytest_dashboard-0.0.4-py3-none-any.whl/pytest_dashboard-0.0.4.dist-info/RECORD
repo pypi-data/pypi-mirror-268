@@ -1,0 +1,9 @@
+pytest_dashboard/__init__.py,sha256=2GWffEF1rjyrveUGdfR8y3cl3JUnX0gJjr8Ryy_u4JQ,21
+pytest_dashboard/_commands.py,sha256=BrSIwOX324lTQiZ82Zs9XdbOMqHNoDB99R5CuS-6Fqg,466
+pytest_dashboard/conftest.py,sha256=3DRNL2yb48r23tkxX0S3YgNroQfxdEkKKlWjQmfm5a0,2184
+pytest_dashboard/launch_pytest_dashboard.py,sha256=IpyWpD3zwFuEJovwU8Ig8U7NIOCuUPqC_t6Eix3kw04,120
+pytest_dashboard-0.0.4.dist-info/LICENSE,sha256=HiUIq0LwzIkb8xBbG8splrm3hp7l4FSEjkEDdawyNRw,1495
+pytest_dashboard-0.0.4.dist-info/METADATA,sha256=Tn5QJ2BxajJaahK630NOFk0EHnylWbXMU2ErnoddzdU,1126
+pytest_dashboard-0.0.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pytest_dashboard-0.0.4.dist-info/entry_points.txt,sha256=XZU-LJEpj2en6JyXaC-G4hdq9R2ePh5NUuxBp4SB2Kk,62
+pytest_dashboard-0.0.4.dist-info/RECORD,,
