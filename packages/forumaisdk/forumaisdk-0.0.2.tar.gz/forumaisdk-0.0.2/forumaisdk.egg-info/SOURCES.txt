@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+ModelMarketSDK/LLMMarket.json
+ModelMarketSDK/ModelMarket.py
+ModelMarketSDK/USDC.json
+ModelMarketSDK/__init__.py
+forumaisdk.egg-info/PKG-INFO
+forumaisdk.egg-info/SOURCES.txt
+forumaisdk.egg-info/dependency_links.txt
+forumaisdk.egg-info/requires.txt
+forumaisdk.egg-info/top_level.txt
