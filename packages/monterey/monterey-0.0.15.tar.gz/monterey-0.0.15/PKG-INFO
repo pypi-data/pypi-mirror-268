@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: monterey
+Version: 0.0.15
+Summary: monterey tools
+Author: Hammad Saeed
+Author-email: hammad@supportvectors.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >3.8
+Requires-Dist: art
+Requires-Dist: customtkinter
+Requires-Dist: ebooklib
+Requires-Dist: fire
+Requires-Dist: prompt_toolkit
+Requires-Dist: pathlib
+Requires-Dist: pypdf2
+Requires-Dist: pillow
+Requires-Dist: rich
+
+
+Monterey Tools
+    

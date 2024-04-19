@@ -1,0 +1,9 @@
+art
+customtkinter
+ebooklib
+fire
+prompt_toolkit
+pathlib
+pypdf2
+pillow
+rich
