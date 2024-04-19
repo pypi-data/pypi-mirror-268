@@ -1,0 +1,294 @@
+import ctypes
+from time import perf_counter_ns
+from typing import Self
+
+from .constant import LIB_FILE_PATH
+from .loader import _logger
+from .loader import load_lib
+
+E6 = 1000000
+
+OUTPUT = 1
+INPUT = 0
+HIGH = 1
+LOW = 0
+
+
+class OnBoardSensors:
+    """
+    provides sealed methods accessing to the IOs and builtin sensors
+    """
+
+    __lib = load_lib(LIB_FILE_PATH)
+
+    __adc_data_list_type = ctypes.c_uint16 * 10
+    __mpu_data_list_type = ctypes.c_float * 3
+    _adc_all = __adc_data_list_type()
+    _accel_all = __mpu_data_list_type()
+    _gyro_all = __mpu_data_list_type()
+    _atti_all = __mpu_data_list_type()
+
+    last_update_timestamp = perf_counter_ns()
+    __adc_min_sample_interval_ns = 5 * E6
+
+    def __init__(self):
+
+        success = self.adc_io_open()
+        self.set_all_io_mode(INPUT)
+        self.set_all_io_level(HIGH)
+        _logger.debug(f"Sensor channel have inited [{success}] times")
+
+    @property
+    def adc_min_sample_interval_ms(self) -> int:
+        """
+        get the minimum interval between two consecutive samples, this is to prevent
+        over-sampling, the value is in milliseconds。
+
+        NOTE:
+            the value is in milliseconds, but the unit is nanoseconds.
+            a greater value means a lower rt performance
+        """
+        return int(self.__adc_min_sample_interval_ns / E6)
+
+    @adc_min_sample_interval_ms.setter
+    def adc_min_sample_interval_ms(self, value: int):
+        self.__adc_min_sample_interval_ns = value * E6
+
+    @staticmethod
+    def adc_io_open():
+        """
+        open the adc-io plug
+        """
+        _logger.info("Initializing ADC-IO")
+        return OnBoardSensors.__lib.adc_io_open()
+
+    @staticmethod
+    def adc_io_close():
+        """
+        close the adc-io plug
+        """
+        _logger.info("Closing ADC-IO")
+        OnBoardSensors.__lib.adc_io_close()
+
+    @staticmethod
+    def adc_all_channels():
+        """
+        这个函数的功能是从ADC（模拟到数字转换器）获取多个值，
+        并将这些值存储到指定的内存位置。它通过spi_xfer函数调用来与ADC进行通信，并将获取的结果转换为16位整数，
+        并存储到指定内存位置。函数的返回值为0表示操作成功，-1表示操作失败。
+
+        int __fastcall ADC_GetAll(int a1)
+        {
+          char *v2;        // 声明一个指向字符的指针v2
+          int v3;          // 声明一个整型变量v3
+          __int16 v4;      // 声明一个16位整型变量v4
+          __int16 v5;      // 声明一个16位整型变量v5
+          char v7;         // 声明一个字符变量v7，该变量会被按引用传递
+
+          if (pi_1 < 0)    // 检查一个全局变量pi_1是否小于0，如果是，则返回-1
+            return -1;
+
+          spi_xfer(pi_1);  // 调用spi_xfer函数，传递pi_1作为参数
+
+          v2 = &v7;        // 将v2指向变量v7的地址
+          v3 = a1 - 2;     // 将v3设置为a1减去2，表示指定内存位置的偏移量
+
+          do
+          {
+            v4 = (unsigned __int8)v2[2];        // 将v2[2]转换为8位无符号整型并赋值给v4
+            v5 = (unsigned __int8)v2[1];        // 将v2[1]转换为8位无符号整型并赋值给v5
+            v2 += 2;                            // 增加v2的偏移量
+            *(_WORD *)(v3 + 2) = v5 | (v4 << 8); // 将v5和v4的组合结果存储到指定内存位置
+            v3 += 2;                            // 增加v3的偏移量
+          }
+          while (a1 + 18 != v3);                 // 当a1和v3的和不等于18时循环
+
+          return 0;                             // 返回0表示操作成功
+        }
+        """
+        current = perf_counter_ns()
+        samp_interval = OnBoardSensors.__adc_min_sample_interval_ns
+        if current - OnBoardSensors.last_update_timestamp < samp_interval:
+            OnBoardSensors.last_update_timestamp = current
+            return OnBoardSensors.acc_all
+        OnBoardSensors.__lib.ADC_GetAll(OnBoardSensors._adc_all)
+
+        return OnBoardSensors._adc_all
+
+    def set_io_level(self, index: int, level: int) -> Self:
+        """
+        int __fastcall adc_io_Set(unsigned int a1, char a2)
+        {
+          char v3[12]; // [sp+4h] [bp-Ch] BYREF
+
+          if ( a1 > 7 )
+            return -1;
+          v3[0] = a1 + 24;
+          v3[1] = a2;
+          if ( pi_1 < 0 )
+            return -1;
+          spi_write(pi_1, hspi1, v3, 2);
+          return 0;
+        }
+        """
+        OnBoardSensors.__lib.adc_io_Set(index, level)
+        return self
+
+    def set_all_io_level(self, level: int) -> Self:
+        """
+        int __fastcall adc_io_SetAll(unsigned int a1)
+        {
+          char *v1; // r3
+          char v3[8]; // [sp+4h] [bp-14h] BYREF
+          char v4; // [sp+Ch] [bp-Ch] BYREF
+
+          v1 = v3;
+          do
+          {
+            *++v1 = (a1 & 1) != 0;
+            a1 >>= 1;
+          }
+          while ( &v4 != v1 );
+          v3[0] = 24;
+          if ( pi_1 < 0 )
+            return -1;
+          spi_write(pi_1, hspi1, v3, 9);
+          return 0;
+        }
+        """
+        OnBoardSensors.__lib.adc_io_SetAll(level)
+        return self
+
+    @staticmethod
+    def get_all_io_mode(buffer: int):
+        """
+        int __fastcall adc_io_ModeGetAll(_BYTE *a1)
+        {
+          int result; // r0
+          char v3; // [sp+Dh] [bp-Bh]
+
+          if ( pi_1 < 0 )
+            return -1;
+          spi_xfer(pi_1);
+          result = 0;
+          *a1 = v3;
+          return result;
+        }
+        """
+        return OnBoardSensors.__lib.adc_io_ModeGetAll(buffer)
+
+    @staticmethod
+    def get_io_level(index: int) -> int:
+
+        return (OnBoardSensors.__lib.adc_io_InputGetAll() >> index) & 1
+
+    def set_all_io_mode(self, mode: int) -> Self:
+        """
+        int __fastcall adc_io_ModeSetAll(char a1)
+        {
+          char v2[12]; // [sp+4h] [bp-Ch] BYREF
+
+          v2[1] = a1;
+          v2[0] = 21;
+          if ( pi_1 < 0 )
+            return -1;
+          spi_write(pi_1, hspi1, v2, 2);
+          return 0;
+        }
+        """
+        OnBoardSensors.__lib.adc_io_ModeSetAll(mode)
+        return self
+
+    def set_io_mode(self, index: int, mode: int) -> Self:
+        """
+        change the mode of the adc-io plug at index,mode 1 for output, 0 for input
+
+        int __fastcall adc_io_ModeSet(unsigned int a1, int a2)
+        {
+          char v2; // r4
+          char v4[9]; // [sp+7h] [bp-9h] BYREF
+
+          if ( a1 > 7 )
+            return -1;
+          v2 = a1;
+          if ( a2 )
+          {
+            if ( !j_adc_io_ModeGetAll(v4) )
+            {
+              v4[0] |= 1 << v2;
+              return j_adc_io_ModeSetAll();
+            }
+            return -1;
+          }
+          if ( j_adc_io_ModeGetAll(v4) )
+            return -1;
+          v4[0] &= ~(1 << v2);
+          return j_adc_io_ModeSetAll();
+        }
+        """
+
+        OnBoardSensors.__lib.adc_io_ModeSet(index, mode)
+        return self
+
+    @staticmethod
+    def io_all_channels():
+        """
+        get all io plug input levels
+
+        uint8, each bit represents a channel, 1 for high, 0 for low
+        """
+        updated_data = OnBoardSensors.__lib.adc_io_InputGetAll()
+        return tuple((updated_data >> i) & 1 for i in range(8))
+
+    def MPU6500_Open(self) -> Self:
+        """
+        initialize the 6-axis enhancer MPU6500
+        default settings:
+            acceleration: -+8G
+            gyro: -+2000 degree/s
+            sampling rate: 1kHz
+        """
+        _logger.info("initializing MPU6500")
+        success = OnBoardSensors.__lib.mpu6500_dmp_init()
+
+        if success:
+            _logger.warning("Failed to initialize MPU6500")
+        else:
+            _logger.info("MPU6500 successfully initialized")
+        return self
+
+    @staticmethod
+    def acc_all():
+        """
+        get the acceleration from MPU6500
+        """
+        OnBoardSensors.__lib.mpu6500_Get_Accel(OnBoardSensors._accel_all)
+
+        return OnBoardSensors._accel_all
+
+    @staticmethod
+    def gyro_all():
+        """
+        get gyro from MPU6500
+        """
+        OnBoardSensors.__lib.mpu6500_Get_Gyro(OnBoardSensors._gyro_all)
+
+        return OnBoardSensors._gyro_all
+
+    @staticmethod
+    def atti_all():
+        """
+        Get attitude from MPU6500
+
+        NOTE:
+            the sampling frequency of the attitude data updates every 10ms.
+            So, high sampling-frequency may not be a good option
+        """
+
+        OnBoardSensors.__lib.mpu6500_Get_Attitude(OnBoardSensors._atti_all)
+
+        return OnBoardSensors._atti_all
+
+    @staticmethod
+    def get_handle(attr_name: str):
+        return getattr(OnBoardSensors.__lib, attr_name)
