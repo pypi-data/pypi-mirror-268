@@ -1,0 +1,2 @@
+[console_scripts]
+pnote = pnote:main
