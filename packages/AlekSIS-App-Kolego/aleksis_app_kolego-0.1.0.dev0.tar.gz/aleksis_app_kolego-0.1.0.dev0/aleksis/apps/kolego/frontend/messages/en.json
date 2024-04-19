@@ -1,0 +1,19 @@
+{
+  "kolego": {
+    "menu_title": "Absences",
+    "absence": {
+      "menu_title": "Absences",
+      "title_plural": "Absences",
+      "create": "Create absence",
+      "reason": "Reason",
+      "comment": "Comment"
+    },
+    "absence_reason": {
+      "menu_title": "Absence Reasons",
+      "title_plural": "Absence Reasons",
+      "create": "Create absence reason",
+      "short_name": "Short name",
+      "name": "Name"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+query gqlAbsenceReasons {
+  absenceReasons {
+    id
+    shortName
+    name
+  }
+}
+
+query gqlPersons {
+  persons {
+    id
+    fullName
+  }
+}
