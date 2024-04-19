@@ -1,0 +1,6 @@
+requests
+rich
+argparse
+requests_cache
+pytz
+PyYAML
