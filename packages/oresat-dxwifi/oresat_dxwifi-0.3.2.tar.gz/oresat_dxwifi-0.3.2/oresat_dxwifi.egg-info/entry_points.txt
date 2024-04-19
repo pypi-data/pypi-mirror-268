@@ -1,0 +1,2 @@
+[console_scripts]
+oresat-dxwifi = oresat_dxwifi.__main__:main
