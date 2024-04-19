@@ -1,0 +1,5 @@
+scipy
+opencv-python
+gdown
+matplotlib
+tensorflow==2.9.0
