@@ -1,0 +1,10 @@
+aws_cdk/cli_lib_alpha/__init__.py,sha256=ak5a21IIjuSPNnE5f9SjJU7F5qB25Jgjd6Rr9DEqL5o,258274
+aws_cdk/cli_lib_alpha/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/cli_lib_alpha/_jsii/__init__.py,sha256=rrZWCpk4gNN9v0lNE2MBBfhLVYsi1e-3dGcLy97vU7g,465
+aws_cdk/cli_lib_alpha/_jsii/cli-lib-alpha@2.138.0-alpha.0.jsii.tgz,sha256=5pAg_M8pPKEjt3pHDo3LE0fzJJbBJMQ4Gapp9qJ9Z2Y,5240721
+aws_cdk.cli_lib_alpha-2.138.0a0.dist-info/LICENSE,sha256=kEDF86xJUQh1E9M7UPKKbHepBEdFxIUyoGfTwQB7zKg,11391
+aws_cdk.cli_lib_alpha-2.138.0a0.dist-info/METADATA,sha256=F2OsCo2yCZF0PnOylnN9aVxeX31ao081k6gGZxdX4G8,4362
+aws_cdk.cli_lib_alpha-2.138.0a0.dist-info/NOTICE,sha256=XLWsJ9x8OdjyvpWJUaFHK6YjiLoQG2Onxb89j8RbPIc,726
+aws_cdk.cli_lib_alpha-2.138.0a0.dist-info/WHEEL,sha256=Xo9-1PvkuimrydujYJAjF7pCkriuXBpUPEjma1nZyJ0,92
+aws_cdk.cli_lib_alpha-2.138.0a0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.cli_lib_alpha-2.138.0a0.dist-info/RECORD,,
