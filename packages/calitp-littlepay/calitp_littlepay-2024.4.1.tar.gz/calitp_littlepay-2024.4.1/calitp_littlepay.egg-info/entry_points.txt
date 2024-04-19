@@ -1,0 +1,2 @@
+[console_scripts]
+littlepay = littlepay.main:main

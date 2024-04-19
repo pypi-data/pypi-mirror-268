@@ -1,0 +1,16 @@
+Authlib>=1.2.1
+PyYAML>=6.0.1
+requests>=2.31.0
+
+[dev]
+black
+build
+flake8
+pre-commit
+setuptools_scm
+
+[test]
+coverage
+pytest
+pytest-mock
+pytest-socket
