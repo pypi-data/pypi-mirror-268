@@ -1,0 +1,27 @@
+
+
+<form id="form_register" hx-post="{{url_for('.hx_register')}}" hx-target="#form-results" hx-disabled-elt="input[type='text'], button">
+    <div class="mb-3 col-md-4">
+        <label for="form_name" class="form-label">Name</label>
+        <input class="form-control" id="form_email" name="name">
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="form_email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="form_email" name="email">
+    </div>
+    <div class="mb-3 col-md-4">
+        <label for="form_password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="form_password" name="password">
+    </div>
+    <input type="hidden" id="_nom_form" name="[_nom_form]" value="0"> 
+    <button type="submit" class="btn btn-primary" >Register</button>
+</form>
+
+<div id="form-results"></div>
+
+<script>
+setInterval( function( ){
+    let eid = document.getElementById( "_nom_form" ) ;
+    eid.value = parseInt( eid.value , 10 ) + 1
+} , 1000 ) ;
+</script>

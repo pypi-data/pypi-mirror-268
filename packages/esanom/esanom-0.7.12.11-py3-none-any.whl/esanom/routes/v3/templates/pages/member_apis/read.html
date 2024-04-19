@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main_title %}API : {{ tdata['row']['name'] }}{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/member_apis/read_inc_info.html" ) %}
+{% include( "pages/member_apis/inc_button_update.html" ) %}
+
+{% endblock %}
+

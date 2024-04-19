@@ -1,0 +1,69 @@
+
+
+
+<table>
+
+<tr>
+{% for col in tdata["cols"] %}
+    <td><b>{{ col|upper }}</b></td>
+{% endfor %}
+</tr>
+
+
+{% for row in tdata["rows"] %}
+
+<tr>
+
+{% for col in tdata['cols'] %}
+<td>
+
+<!-- -->
+{% if col=="uid" %}
+    <a href="admin_pipeline?pipeline_uid={{row[col]}}">👁</a>
+
+<!-- -->
+{% elif col=="[nodes]" %}
+
+
+
+
+{% for k,v in row[col].items( ) %}
+
+{% if v['task_status']=="RUNNING" %}
+<span class="badge bg-info text-dark">
+{% elif v['task_status']=="COMPLETED" %}
+<span class="badge bg-success text-light">
+{% elif v['task_status']=="PENDING" %}
+<span class="badge bg-primary text-light">
+{% else %}
+<span class="badge bg-secondary text-light">
+{% endif %}
+
+
+{{k}}:{{v['name']}}:{{v['task_status']}}
+</span>
+
+
+{% endfor %}
+
+
+<!-- -->
+
+
+{% else %}
+    {{ row[col] }}
+{% endif %}
+
+</td>
+{% endfor %}
+</tr>
+
+{% endfor %}
+
+</table>
+
+
+
+
+
+

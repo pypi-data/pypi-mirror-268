@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{% block title %}rolemodel_row ({{tdata["rolemodel_row"]["name"]}}){% endblock title %}</h2>
+{% endblock header %}
+
+
+{% block main %}
+
+{% if tdata["mport_rows"]|length>0 %}
+<h3>MPORT</h3>
+<table>
+
+    <tr>
+    {% for key, segment in tdata["mport_rows"][0].items() %}
+        <td>{{ key }}</td>
+    {% endfor %}
+    </tr>
+
+    {% for v in tdata["mport_rows"] %}
+    <tr>
+        {% for key, segment in v.items() %}
+        <td>{{ segment }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+</table>
+{% endif %}
+
+{% if tdata["mpins"]|length>0 %}
+<h3>MPIN</h3>
+
+<table>
+
+    <tr>
+    {% for key, segment in tdata["mpins"][0][0].items() %}
+        <td>{{ key }}</td>
+    {% endfor %}
+    </tr>
+
+    {% for v1 in tdata["mpins"] %}
+    {% for v in v1 %}
+
+    <tr>
+        {% for key, segment in v.items() %}
+        <td>{{ segment }}</td>
+        {% endfor %}
+    </tr>
+
+    {% endfor %}
+
+    {% endfor %}
+
+</table>
+{% endif %}
+
+
+{% endblock main %}
+
