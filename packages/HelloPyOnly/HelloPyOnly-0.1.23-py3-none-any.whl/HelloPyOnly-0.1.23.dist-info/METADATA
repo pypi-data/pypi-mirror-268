@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: HelloPyOnly
+Version: 0.1.23
+Summary: This is the game engine of Only Hello Science project.
+Home-page: https://github.com/zfan0311/hellopy.git
+Author: funk.zhang
+Author-email: zhangfangid@126.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: pygame
+
+This is the game engine of Only Hello Science project. Based on pygame.
