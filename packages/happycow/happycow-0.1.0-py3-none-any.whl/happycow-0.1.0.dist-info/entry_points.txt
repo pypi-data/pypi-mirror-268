@@ -1,0 +1,3 @@
+[console_scripts]
+happycow=happycow.main:main
+
