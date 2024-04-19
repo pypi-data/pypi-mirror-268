@@ -1,0 +1,9 @@
+hsadev/__init__.py,sha256=vnEQ3_faaqtBKoxP4DuJgVUXAxvUIINTpkt3E8qLWks,23
+hsadev/logger.py,sha256=snQNfsSzQxXF9UzIdaLTjEoQbR03UPUqNOISR4tcWpw,1296
+hsadev/request.py,sha256=Qi_8Y6pBm4nffGH2iOV6YSu8DB-mDnM1YJyELGWu8Og,3092
+hsadev/util.py,sha256=ospxlhxdEaXp9Td6SO6b5p_ILtQixRgjy0S6YvdyOeg,1476
+hsadev_kit-0.0.6.dist-info/LICENSE.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hsadev_kit-0.0.6.dist-info/METADATA,sha256=pyKX1rX1Dv8HFXdHCU2mVP9Eq1A1n4hZRizmWL27yjo,725
+hsadev_kit-0.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hsadev_kit-0.0.6.dist-info/top_level.txt,sha256=5HaylKZTzcgHlb6AHs5EVbI5ypL0N6zGhzCRfjBLKpw,7
+hsadev_kit-0.0.6.dist-info/RECORD,,
