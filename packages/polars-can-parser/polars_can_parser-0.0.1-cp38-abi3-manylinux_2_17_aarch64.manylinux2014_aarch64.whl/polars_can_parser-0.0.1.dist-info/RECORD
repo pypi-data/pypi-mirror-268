@@ -1,0 +1,6 @@
+polars_can_parser-0.0.1.dist-info/METADATA,sha256=bEt5asOdGSnLAFokPVae5KkDkUP42UW9hxtbrX4-Gmo,497
+polars_can_parser-0.0.1.dist-info/WHEEL,sha256=EB8yb2HgU4suH_MU7qdn-l0C_NttYZ7dGvA8KWF6Xys,129
+polars_can_parser/__init__.py,sha256=LWZTHYZWwPDdLWYr0yMgXusIq2YvtMK5ilveH_KdjH4,800
+polars_can_parser/utils.py,sha256=7PJSZWes4ZdxUZs5L9bRtbT2ofX_wj3L4Oc5BcKJhGs,2336
+polars_can_parser/polars_can_parser.abi3.so,sha256=b-1F_KOp2sfmPfm-XMuSAD9jZkQGdPUmFSB6pp8pEdo,24520712
+polars_can_parser-0.0.1.dist-info/RECORD,,
