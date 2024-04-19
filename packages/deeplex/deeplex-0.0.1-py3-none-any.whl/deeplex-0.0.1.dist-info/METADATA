@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: deeplex
+Version: 0.0.1
+Summary: Free DeepL translation with Glossaries
+Home-page: https://github.com/OrigamiDream/deeplex.git
+Author: OrigamiDream
+Author-email: hello@origamidream.me
+License: MIT
+Keywords: machine translation,deepl,free deepl,google translate,free translate,translation,multilingual,mling
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: brotli >=1.1.0
+Requires-Dist: aiohttp >=3.9.5
+
+# DeepL Ex: Unlimited Free DeepL Translation
+
+> :warning: This project is currently under the development.
+
+This project is inspired by [Vincent Young](https://github.com/missuo)'s [DeepLX](https://github.com/OwO-Network/DeepLX).
+
+But the project does not support Glossaries, thus I made this with DeepL's new internal APIs.
+
+## Prerequisites
+```
+pip install aiohttp brotli
+```
+
+## Usage
+
+```python
+import asyncio
+import deeplex
+
+
+async def main():
+    texts = await deeplex.translate(
+        'Hello World, John!', 'EN', 'DE',
+        glossaries={'John': 'Python'},
+    )
+
+    # ['Hallo Welt, Python!', 'Hallo Python, Welt!', 'Hallo, Python!', 'Hallo Python!']
+    print(texts)
+
+
+if __name__ == '__main__':
+    event_loop = asyncio.get_event_loop()
+    event_loop.run_until_complete(main())
+    event_loop.close()
+```
+
+# License
+
+Licensed under the [MIT license](https://github.com/OrigamiDream/deeplex/blob/main/LICENSE).
