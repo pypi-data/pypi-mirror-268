@@ -1,0 +1,7 @@
+parver>=0.2.1
+pulumi<4.0.0,>=3.91.1
+pulumi-command<1.0.0,>=0.10.0
+pulumi-kubernetes<5.0.0,>=4.11.0
+pulumi-random<5.0.0,>=4.16.1
+pulumi-tls<6.0.0,>=5.0.2
+semver>=2.8.1
