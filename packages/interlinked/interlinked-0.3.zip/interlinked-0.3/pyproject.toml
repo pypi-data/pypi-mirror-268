@@ -1,0 +1,13 @@
+[project]
+name = "interlinked"
+description = """
+Interlinked provides routing, dependency management and dependency
+injection for data-driven applications
+"""
+version = "0.3"
+
+[tool.setuptools]
+packages = ["interlinked"]
+
+[project.scripts]
+interlinked = "interlinked.cli:main"
