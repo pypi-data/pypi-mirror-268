@@ -1,0 +1,10 @@
+pydropper/__init__.py,sha256=QXzW3aVbiEqgw207VQEY_0uPknbiS3bW8f6jOz-j3vQ,22
+pydropper/env.py,sha256=x8rbmuI9ma-kKgJVHquwFaB7mWIqXoleFBONdSjT7es,27
+pydropper/main.py,sha256=L3GVcHt7o2mTArO5jSSZUTc0NjQoVt4W9TxGpVhK3So,454
+pydropper/server/__init__.py,sha256=rSLwrKid-0WU2Z9zAhemGLVibdpxP9Js9lJxusTmZDM,40
+pydropper/server/funcs.py,sha256=Ss77d4LfXw58BQjaWbn303SRHV3ZyGUt1iPjj7mRC5A,1011
+pydropper/server/server_main.py,sha256=JAEH5kGcvEfnyON3_xo5UGIltFND5l3v4lQckUoJFPY,555
+pydropper-0.1.1.dist-info/LICENSE,sha256=gsSrHANBZL3Y0DEHG34qA1sEIdzweGKuzKVYc0qSLeI,1063
+pydropper-0.1.1.dist-info/METADATA,sha256=VSVyY7gqjK-Kx9y_MmcHt9D0OXLTkfiA1cQmlPjdm2s,1835
+pydropper-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pydropper-0.1.1.dist-info/RECORD,,
