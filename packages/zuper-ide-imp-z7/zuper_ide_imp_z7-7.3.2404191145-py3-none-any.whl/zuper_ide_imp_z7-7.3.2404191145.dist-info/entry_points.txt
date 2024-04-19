@@ -1,0 +1,12 @@
+[console_scripts]
+zuper-ide-imp-create-test-cases = zuper_ide_imp:create_test_cases_main
+zuper-ide-imp-eph = zuper_ide_imp:eph_main
+zuper-ide-imp-listen-branch = zuper_ide_imp:listen_branch_fs
+zuper-ide-imp-mcdp-repo-load-all = zuper_ide_imp:mcdp_repo_load_all_main
+zuper-ide-imp-mcdp-view = zuper_ide_imp:mcdp_view_main
+zuper-ide-imp-mcdp-view-cde = zuper_ide_imp:mcdp_view_main_cde
+zuper-ide-imp-read-fs = zuper_ide_imp:fsread_main_fs
+zuper-ide-imp-read-git = zuper_ide_imp:fsread_main_git
+zuper-ide-imp-read-github = zuper_ide_imp:fsread_main_github
+zuper-ide-imp-read-github-listfiles = zuper_ide_imp:fsread_main_github_fs
+zuper-ide-imp-top-view = zuper_ide_imp:cde_view_main

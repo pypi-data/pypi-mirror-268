@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: zuper-ide-imp-z7
+Version: 7.3.2404191145
+Home-page: https://github.com/zupermind/zuper-ide-imp
+Author: Andrea Censi
+Author-email: AndreaCensi@users.noreply.github.com
+Requires-Dist: PyMCDP-z7
+Requires-Dist: immutabledict
+Requires-Dist: numpy
+Requires-Dist: zuper-commons-z7
+Requires-Dist: zuper-db-ev-z7
+Requires-Dist: zuper-db-gh-z7
+Requires-Dist: zuper-github-services-z7
+Requires-Dist: zuper-github-z7
+Requires-Dist: zuper-html-plus-z7
+Requires-Dist: zuper-html-z7
+Requires-Dist: zuper-ide-interface-z7
+Requires-Dist: zuper-ipce-z7
+Requires-Dist: zuper-parse-mcdp-z7
+Requires-Dist: zuper-shelf-fs-z7
+Requires-Dist: zuper-utils-asyncio-z7
+Requires-Dist: zuper-utils-augres-z7
+Requires-Dist: zuper-utils-fs-z7
+Requires-Dist: zuper-utils-git-fs-z7
+Requires-Dist: zuper-utils-git-z7
+Requires-Dist: zuper-utils-language-z7
+Requires-Dist: zuper-utils-pg-z7
+Requires-Dist: zuper-zapp-interfaces-z7
+Requires-Dist: zuper-zapp-z7
+Provides-Extra: test
+
