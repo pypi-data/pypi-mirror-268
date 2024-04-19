@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: googleadsquerytool
+Version: 0.1.2
+Summary: This is a package you can use to query reporting data from the Google Ads API.
+Author: caspercrause
+Author-email: ccrause07@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: google-ads (==22.1.0)
+Requires-Dist: pandas (>1.4)
+Description-Content-Type: text/markdown
+
+# GoogleAdsQueryTool
+
+This is a package you can use to query reporting data from the Google Ads API.
+
+## Installation
+```
+pip install googleadsquerytool
+```
+
