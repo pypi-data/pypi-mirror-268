@@ -1,0 +1,23 @@
+
+<tbody>
+
+{% for row in tdata["rows"] %}
+
+<tr>
+
+{% for column in tdata["columns"] %}
+
+{% if column=="uid" %}
+    <td><a href="{{ url_for('.page_admin_accounts_read',uid=row['uid']) }}">👁</a></td>
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+

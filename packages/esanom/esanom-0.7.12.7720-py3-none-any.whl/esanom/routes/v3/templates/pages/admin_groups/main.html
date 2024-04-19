@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ADMIN GROUPS{% endblock %}
+
+{% block main_content %}
+
+<div>
+{% include( "pages/admin_groups/inc_button_create.html" ) %}
+</div>
+
+{% if tdata["rows"]|length>0 %}
+{% include( "pages/admin_groups/inc_table.html" ) %}
+{% else %}
+No groups found!
+{% endif %}
+
+{% endblock %}
+

@@ -1,0 +1,35 @@
+
+
+<div class="col-3 bg-light p-3 border">
+
+<form hx-post="{{url_for('.hx_admin_account_create_form_submit')}}" hx-target="#hx-results">
+  <div class="mb-3">
+    <label for="form_email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="form_email" name="account_email">
+  </div>
+  <div class="mb-3">
+    <label for="form_password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="form_password" name="account_password">
+  </div>
+  <div class="mb-3">
+    <label for="form_name" class="form-label">Name</label>
+    <input class="form-control" id="form_name" name="account_name">
+  </div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="1" id="account_enable" name="account_enable">
+  <label class="form-check-label" for="account_enable">Enable</label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="1" id="account_email_confirmed" name="account_email_confirmed">
+  <label class="form-check-label" for="account_email_confirmed">Email confirmed</label>
+</div>
+
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+</div>
+
+<div id="hx-results">FOO</div>
+
+
