@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: ModulusVascularFlow
+Version: 1.0.1
+Summary: Codes extention from NVIDIA Modulus.
+Author-email: Wei Xuan Chan <w.x.chan1986@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 W. X. Chan
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/WeiXuanChan/ModulusVascularFlow
+Keywords: Modulus,pytorch,PINN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: modulus ; extra == 'dev'
+
+# ModulusVascularFlow
+Multicase vascular flow PINN based on Nvidia Modulus v20.09 framework
+
+NVIDIA Modulus:https://docs.nvidia.com/deeplearning/modulus/modulus-v2209/index.html#undefined
+
+Codes extention from NVIDIA Modulus can be found in folder ModulusDL
+
+## Examples
+#### Multicase PINN for 2D stenosis
+stenosis2dsimplemode_plus_0hb.py : plus size Modes Network (codes fully commented)
+	
+stenosis2dsimplemode_0hb.py : full size Modes Network
+	
+stenosis2dsimplemode_plus_deqn_0hb.py : plus size Modes Network with added derivatives of governing and boundary equations with respect to case parameter
+
+stenosis2dsimplecase_0hb.py : full size Hypernetwork
+
+stenosis2dsimplecase_low_0hb.py : small size Hypernetwork
+	
+stenosis2dsimplecase_plus_0hb.py : plus size Hypernetwork
+	
+stenosis2dsimplecase_plus_deqn_0hb.py : plus size Hypernetwork with added derivatives of governing and boundary equations with respect to case parameter
+	
+stenosis2dsimplemix_0hb.py : full size Mix Network
+	
+stenosis2dsimplemix_plus_0hb.py : plus size Mix Network
+	
+stenosis2dsimplemix_plus_0io_0hb.py : plus size Mix Network without tube-specific coordinates input
+	
+stenosis2dsimplemix_plus_deqn_0hb.py : full size Mix Network with added derivatives of governing and boundary equations with respect to case parameter
+	
+stenosis2dsimplesingle256_io.py : single PINN Network with 256 nodes per layer (4 layers)
+	
+stenosis2dsimplesingle384_0io.py : single PINN Network with 384 nodes per layer (4 layers) without tube-specific coordinates input
+	
+stenosis2dsimplesingle512_0io.py : single PINN Network with 512 nodes per layer (4 layers) without tube-specific coordinates input
+	
+stenosis2dsimplesingle1024_0io.py : single PINN Network with 1024 nodes per layer (4 layers) without tube-specific coordinates input
