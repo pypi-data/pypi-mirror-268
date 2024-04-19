@@ -1,0 +1,2 @@
+[llm]
+fireworks = llm_fireworks
