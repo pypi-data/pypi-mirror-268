@@ -1,0 +1,565 @@
+Metadata-Version: 2.1
+Name: hyve
+Version: 0.1.0
+Summary: Interactive and static 3D visualisation for functional brain mapping
+Author-email: Rastko Ciric <rastko@stanford.edu>
+Maintainer-email: Rastko Ciric <rastko@stanford.edu>
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Homepage, https://github.com/hypercoil/hyve
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: conveyant
+Requires-Dist: lytemaps
+Requires-Dist: matplotlib
+Requires-Dist: nibabel
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyvista[all]
+Requires-Dist: scipy
+Requires-Dist: svg.py
+Requires-Dist: templateflow
+Provides-Extra: test
+Requires-Dist: hyve-examples; extra == "test"
+Requires-Dist: coverage[toml]; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: ruff; extra == "test"
+Requires-Dist: seaborn; extra == "test"
+
+# ``hyve``
+Interactive and static 3D visualisation for functional brain mapping
+
+``hyve`` (``hypercoil`` visualisation engine) is a Python package for interactive and static 3D visualisation of functional brain mapping data. It was originally designed to be used in conjunction with the [``hypercoil``](https://github.com/hypercoil/) project for differentiable programming in the context of functional brain mapping, but can be used independently.
+
+This system is currently under development, and the API is accordingly subject to sweeping changes without notice. In particular, before using this system, be aware of the *major* limitations that exist, detailed under the *v1.0.0* header here (and soon to be added as issues). Documentation is also extremely sparse, but will be added in the near future. To get a sense of how the package might look and feel when it is more mature, you can take a look at the test cases in the ``tests`` directory.
+
+``hyve`` allows for the visualisation of 3D data in a variety of formats, including volumetric data, surface meshes, and 3-dimensional network renderings. It is built using a rudimentary quasi-functional programming paradigm, allowing users to compose new plotting utilities for their data by chaining together functional primitives. The system is designed to be modular and extensible, and can be easily extended to support new data types and visualisation techniques. It is built on top of the ``pyvista`` library and therefore uses VTK as its rendering backend. The system is also capable of combining visualisations as panels of a SVG figure.
+
+## Installation
+
+``hyve`` can be installed from PyPI using ``pip``:
+
+```bash
+pip install hyve==0.0.2
+```
+
+The below examples also require installation of the ``hyve-examples`` package, which can be installed from PyPI using ``pip``:
+
+```bash
+pip install hyve-examples
+```
+
+## Contributing
+
+Suggestions for improvement and contributions are welcome. Please open an issue or submit a pull request if you have any ideas for how to improve the package. ``hyve`` is not feature-complete and is still under active development, so there are many opportunities for improvement. There are also likely to be many bugs, so please open an issue if you encounter any problems.
+
+## Basic usage
+
+The following example demonstrates how to use ``hyve`` to visualise a 3D surface mesh and create a HTML-based interactive visualisation (built on the ``trame`` library) that can be viewed in a web browser:
+
+```python
+from hyve_examples import get_null400_cifti
+from hyve.flows import plotdef
+from hyve.transforms import (
+    surf_from_archive,
+    surf_scalars_from_cifti,
+    parcellate_colormap,
+    vertex_to_face,
+    plot_to_html,
+)
+
+plot_f = plotdef(
+    surf_from_archive(),
+    surf_scalars_from_cifti('parcellation'),
+    parcellate_colormap('parcellation', 'network'),
+    vertex_to_face('parcellation'),
+    plot_to_html(
+        fname_spec=(
+            'scalars-{surfscalars}_hemisphere-{hemisphere}_cmap-network'
+        ),
+    ),
+)
+plot_f(
+    template='fsLR',
+    load_mask=True,
+    parcellation_cifti=get_null400_cifti(),
+    surf_projection=['veryinflated'],
+    hemisphere=['left', 'right'],
+    window_size=(800, 800),
+    output_dir='/tmp',
+)
+```
+
+The HTML files generated by this example will be written to ``/tmp/scalars-parcellation_hemisphere-left_cmap-network_scene.html`` and ``/tmp/scalars-parcellation_hemisphere-right_cmap-network_scene.html``. These files can be opened in a web browser to view the interactive visualisation.
+
+Note that, unlike many other plotting libraries, ``hyve`` does not provide a single function that can be used to generate a plot. Instead, it provides a set of functional primitives that can be chained together to create a custom plotting pipeline using the ``plotdef`` function. This allows users to create new plotting utilities by composing primirives. For example, the ``plot_f`` function used in the example above is a composition of the ``surf_from_archive``, ``surf_scalars_from_cifti``, ``parcellate_colormap``, ``vertex_to_face``, and ``plot_to_html`` functions with a unified base plotter. The ``plot_f`` function can be used to generate a plot by passing it a set of keyword arguments that specify the data to be plotted and the visualisation parameters. The ``plot_f`` function can also be used to generate a plot from a set of keyword arguments that specify the data to be plotted and the visualisation parameters.
+
+This approach allows users to create new plotting utilities without having to write much new code, but it can be difficult to understand at first.
+
+It's also possible to use ``hyve`` to create static visualisations. For example, the following example creates glass brain visualisations of the pain network from Xu et al. (2020) (10.1016/j.neubiorev.2020.01.004).
+
+```python
+from hyve_examples import get_pain_thresh_nifti
+from hyve.flows import plotdef
+from hyve.transforms import (
+    surf_from_archive,
+    points_scalars_from_nifti,
+    plot_to_image,
+    save_snapshots,
+)
+
+
+nii = get_pain_thresh_nifti()
+plot_f = plotdef(
+    surf_from_archive(),
+    points_scalars_from_nifti('pain'),
+    plot_to_image(),
+    save_snapshots(
+        fname_spec=(
+            'scalars-{pointsscalars}_view-{view}'
+        ),
+    ),
+)
+plot_f(
+    template='fsaverage',
+    surf_projection=('pial',),
+    surf_alpha=0.3,
+    pain_nifti=nii,
+    points_scalars_cmap='magma',
+    views=('dorsal', 'left', 'anterior'),
+    output_dir='/tmp',
+)
+```
+
+And the below code demonstrates how to use ``hyve`` to create a static PNG image of a BrainNetViewer-like scene of a 3D brain network embedded in a surface mesh:
+
+```python
+import numpy as np
+import pandas as pd
+
+from hyve_examples import (
+    get_schaefer400_synthetic_conmat,
+    get_schaefer400_cifti,
+)
+from hyve.flows import plotdef
+from hyve.flows import add_network_data
+from hyve.transforms import (
+    surf_from_archive,
+    surf_scalars_from_cifti,
+    parcellate_colormap,
+    add_node_variable,
+    add_edge_variable,
+    plot_to_image,
+    save_snapshots,
+    node_coor_from_parcels,
+    build_network,
+    add_network_overlay,
+)
+
+# Get a parcellation and the corresponding connectivity matrix
+parcellation = get_schaefer400_cifti()
+cov = pd.read_csv(
+    get_schaefer400_synthetic_conmat(), sep='\t', header=None
+).values
+
+# Select some nodes and edges to be highlighted
+vis_nodes_edge_selection = np.zeros(400, dtype=bool)
+vis_nodes_edge_selection[0:5] = True
+vis_nodes_edge_selection[200:205] = True
+
+# Define a plotting function
+plot_f = plotdef(
+    surf_from_archive(),
+    surf_scalars_from_cifti('parcellation', plot=False),
+    add_network_data(
+        add_node_variable('vis'),
+        add_edge_variable(
+            'vis_conn',
+            threshold=10,
+            topk_threshold_nodewise=True,
+            absolute=True,
+            incident_node_selection=vis_nodes_edge_selection,
+            emit_degree=True,
+        ),
+        add_edge_variable(
+            'vis_internal_conn',
+            absolute=True,
+            connected_node_selection=vis_nodes_edge_selection,
+        ),
+    ),
+    node_coor_from_parcels('parcellation'),
+    build_network('vis'),
+    parcellate_colormap('parcellation', 'network', target='node'),
+    plot_to_image(),
+    save_snapshots(
+        fname_spec=(
+            'network-schaefer400_view-{view}'
+        ),
+    ),
+)
+
+# Generate a plot
+plot_f(
+    template='fsLR',
+    surf_projection='inflated',
+    surf_alpha=0.2,
+    parcellation_cifti=parcellation,
+    node_radius='vis_conn_degree',
+    node_color='index',
+    edge_color='vis_conn_sgn',
+    edge_radius='vis_conn_val',
+    vis_nodal=vis_nodes_edge_selection.astype(int),
+    vis_conn_adjacency=cov,
+    vis_internal_conn_adjacency=cov,
+    views=('dorsal', 'left', 'posterior'),
+    output_dir='/tmp',
+)
+```
+
+Here is another, more involved example, this time demonstrating how to use ``hyve`` to create a static SVG figure:
+
+```python
+import templateflow.api as tflow
+from hyve.elements import TextBuilder
+from hyve_examples import get_null400_cifti
+from hyve.flows import plotdef
+from hyve.transforms import (
+    surf_from_archive,
+    surf_scalars_from_nifti,
+    add_surface_overlay,
+    save_grid,
+    plot_to_image,
+)
+
+# Annotate the panels of the figure so that the figure builder knows
+# where to place different elements. Note that we'll need a layout with
+# 9 panels, so we'll be creating a 3x3 grid of images when we parameterise
+# the plot definition below.
+annotations = {
+    0: dict(
+        hemisphere='left',
+        view='lateral',
+    ),
+    1: dict(view='anterior'),
+    2: dict(
+        hemisphere='right',
+        view='lateral',
+    ),
+    3: dict(view='dorsal'),
+    4: dict(elements=['title', 'scalar_bar']),
+    5: dict(view='ventral'),
+    6: dict(
+        hemisphere='left',
+        view='medial',
+    ),
+    7: dict(view='posterior'),
+    8: dict(
+        hemisphere='right',
+        view='medial',
+    ),
+}
+
+# Define a plotting function
+plot_f = plotdef(
+    surf_from_archive(),
+    add_surface_overlay(
+        'GM Density',
+        surf_scalars_from_nifti(
+            'GM Density', template='fsaverage', plot=True
+        ),
+    ),
+    plot_to_image(),
+    save_grid(
+        n_cols=3, n_rows=3, padding=10,
+        canvas_size=(1800, 1500),
+        canvas_color=(0, 0, 0),
+        fname_spec='scalars-gmdensity_view-all_page-{page}',
+        scalar_bar_action='collect',
+        annotations=annotations,
+    ),
+)
+
+# Generate a plot
+plot_f(
+    template='fsaverage',
+    gm_density_nifti=tflow.get(
+        template='MNI152NLin2009cAsym',
+        suffix='probseg',
+        label='GM',
+        resolution=2
+    ),
+    gm_density_clim=(0.2, 0.9),
+    gm_density_below_color=None,
+    gm_density_scalar_bar_style={
+        'name': None,
+        'orientation': 'h',
+    },
+    surf_projection=('pial',),
+    # This won't be the recommended way to add a title in the future.
+    elements={
+        'title': (
+            TextBuilder(
+                content='GM density',
+                bounding_box_height=192,
+                font_size_multiplier=0.2,
+                font_color='#cccccc',
+                priority=-1,
+            ),
+        ),
+    },
+    load_mask=True,
+    hemisphere=['left', 'right', None],
+    views={
+        'left': ('medial', 'lateral'),
+        'right': ('medial', 'lateral'),
+        'both': ('dorsal', 'ventral', 'anterior', 'posterior'),
+    },
+    output_dir='/tmp',
+    window_size=(600, 500),
+)
+```
+
+## Feature roadmap
+
+### v1.0.0
+
+Several critical features are missing from the alpha version of ``hyve``. We will do our best to be responsive to issues that arise as a consequence of the inevitable breaking API changes that arise as this functionality is implemented. In particular, the following features are significant enough that the API cannot be considered stable until they are implemented:
+
+- [x] Disambiguation and filtering of graphical elements according to metadata. Currently, the layout system does not support matching metadata in any graphical elements other than snapshots. For instance, scalar bars cannot be routed according to grouping specifications. This can be implemented by first making snapshots a graphical raster element and then modifying the code to match metadata for any elements. This is a critical feature that is necessary for creating many publication-ready figures with multiple panels and plot elements: currently, most figures must be edited manually because there is no control over, for instance, what scalar bars are placed in the SVG.
+- [x] Uniform backend for all geometric primitives and topo-transforms. Currently, the way that different geometric primitives are handled is inconsistent--networks (correctly) have a ``ggplot``-like API that allows mapping different variables to different visual properties, while surfaces and volumes are still missing this functionality. Additionally, the handling and filtering of data by hemisphere should be lifted into a topo-transform, so that it can be applied to any geometric primitive. Finally, the naming of aesthetic mappings (e.g., ``radius``, ``rlim``, and ``rmap``; ``color``, ``clim``, and ``cmap``) should be made more principled. This is a critical feature that is necessary before we extend the library to support new geometric primitives.
+- [x] Improving reusability of plot protocols. Currently, plot protocols created by ``hyve.plotdef`` have many parameters fixed at the time of creation, which undermines their reusability. This should be changed by having the parameterisation of primitives spliced into protocols at the time of creation set default values to arguments, while allowing the user to override these defaults at the time of calling the protocol.
+- [ ] Reconcile and formalise the relationship between the argument mapper (of the core visualisation loop) and the overlay system. Currently the system cannot handle this situation reasonably, and often not at all. This issue arises only when both are used in conjunction with one another, which we haven't seen much need for yet--but for which the need certainly exists. The user should be provided a way of controlling the desired behaviour when, for instance, vector-valued data are passed to multiple overlays--is an "outer" (product) or "inner" (zip) broadcast desired?
+
+### Future releases
+
+Among others, the following features are planned for future releases:
+
+- More 3D visual primitives, including contours, reconstructed regional surfaces, and voxel block volumes.
+- Support for grouping semantics in figure parameterisations, allowing users to specify that certain parameters should be applied to multiple elements at once according to shared metadata (e.g., same hemisphere), or that the same layout should be applied groupwise in a single figure (e.g., to visualise multiple parcellations or surface projections).
+- Joining the outputs from multiple calls to the core plotting automapper into a single figure.
+- Floating plot elements that are not anchored to a specific panel, and whose parameters can be defined in relation to a plot page, plot group, or plot panel. This feature could be used to add inset plots, colorbars, and legends to a figure.
+- More interactive ``pyvista`` widgets, for instance to allow users to slice volumes or to select a subset of nodes or edges to highlight in a plot.
+- Control over lighting, texture, material, etc. of 3D scenes and objects.
+- Transformations for adding panel and plot elements.
+- Postprocessing of snapshots (with the option to filter by metadata), e.g., background removal, cropping, and resizing.
+- Additional SVG plot elements, including text, drop shadows, and shapes.
+- Additional cameras, for instance close-up views of specific regions of interest.
+- Injection of vector plots generated by other libraries, such as ``matplotlib``, into ``hyve`` figures. Injection of raster and vector graphic files as elements in ``hyve`` figures.
+- Self-documenting parameterisation of plot definitions.
+
+If there is another feature you would like to see in ``hyve``, please [open an issue](https://github.com/hypercoil/hyve/issues/new/choose) to let us know! We are also interested in hearing which of the above features would be most useful to you, so that we can prioritise our development efforts accordingly. Finally, if you would like to contribute to the development of ``hyve``, please open an issue or pull request on GitHub. We will add a more detailed guide for contributions in the near future.
+
+## Alternative options
+
+While ``hyve`` is designed to be modular and extensible, some users might prefer a library with a more stable and intuitive API, or one that uses a backend that is simpler to install. If you are looking for a more user-friendly alternative, you might consider the following more mature libraries:
+
+- [``netplotbrain``](https://github.com/wiheto/netplotbrain): A Python library that supports many of the same kinds of plots, but is more user-friendly and uses ``matplotlib`` as its visualisation backend.
+- [``surfplot``](https://github.com/danjgale/surfplot): A lightweight VTK-based package (using the ``brainspaces`` library) that provides a user-friendly interface and produces simple and high-quality figures out of the box.
+- [``pysurfer``](https://github.com/nipy/PySurfer): A Python library for visualising and manipulating surface-based neuroimaging data that is built on top of VTK (using the ``mayavi`` library) and provides a ``tksurfer``-like user experience.
+- [``brainnetviewer``](https://www.nitrc.org/projects/bnv/): A MATLAB-based package that provides a GUI for visualising brain networks and surface-based neuroimaging data. A top-quality library that is widely used in the community, but it is built on a proprietary platform and is not easily extensible.

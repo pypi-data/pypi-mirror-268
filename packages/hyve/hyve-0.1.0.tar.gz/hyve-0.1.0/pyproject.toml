@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools >=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyve"
+version = "0.1.0"
+description = "Interactive and static 3D visualisation for functional brain mapping"
+authors = [
+  { name = "Rastko Ciric", email = "rastko@stanford.edu" },
+]
+maintainers = [
+  { name = "Rastko Ciric", email = "rastko@stanford.edu" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "conveyant",
+    "lytemaps",
+    "matplotlib",
+    "nibabel",
+    "numpy",
+    "pandas",
+    "pyvista[all]",
+    "scipy",
+    "svg.py",
+    "templateflow",
+]
+
+[project.optional-dependencies]
+test = [
+    "hyve-examples",
+    "coverage[toml]",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "seaborn",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/hypercoil/hyve"
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+precision = 2
+
+[tool.coverage.run]
+branch = true
+omit = [
+    '*test*',
+    '*__init__*',
+]
+
+[tool.ruff]
+line-length = 79
+lint.ignore = ["E731"]
+lint.select = [
+    "E",
+    "F",
+    "W",
+    "I001",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "I001"]
