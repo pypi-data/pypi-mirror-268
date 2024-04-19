@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/main.py
+src/dbmpy.egg-info/PKG-INFO
+src/dbmpy.egg-info/SOURCES.txt
+src/dbmpy.egg-info/dependency_links.txt
+src/dbmpy.egg-info/top_level.txt
