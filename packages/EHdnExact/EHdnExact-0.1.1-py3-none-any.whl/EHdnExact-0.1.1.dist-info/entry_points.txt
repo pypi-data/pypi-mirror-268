@@ -1,0 +1,2 @@
+[console_scripts]
+ehdnexact = ehdnexact.main:main
