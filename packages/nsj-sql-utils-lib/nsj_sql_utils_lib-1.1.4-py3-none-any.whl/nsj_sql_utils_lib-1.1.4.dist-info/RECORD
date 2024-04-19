@@ -1,0 +1,13 @@
+nsj_sql_utils_lib/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_sql_utils_lib/dao_util.py,sha256=Y7JTikeqI6op7tVq3QMS_b1wVgWOY7pAS0LEhTcEil4,925
+nsj_sql_utils_lib/dbadapter3.py,sha256=llxmhOsZiyTDDQhVJGu08q8Od9WhsuUuff4wihPBPrE,6246
+nsj_sql_utils_lib/dbconection_psycopg2.py,sha256=pGuHfis-W1AjDTAYPYtBA3uIfHUjVcWsB3azedGzpe8,869
+nsj_sql_utils_lib/updater/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nsj_sql_utils_lib/updater/create_script.py,sha256=sgjhia0sjwgyRDltDe-6THt1URDgXkHog9tONS4T4dw,1040
+nsj_sql_utils_lib/updater/db_updater.py,sha256=w-7xfKZhC0Yb8oZe7hSQNLx3lAPSZ6frdf8Ol8QKbAo,1809
+nsj_sql_utils_lib/updater/erp_database_updater.py,sha256=sf3dvBPC6pSPOdtLs90V0m-5woIbnDF1fFLE9ENTyJo,9738
+nsj_sql_utils_lib/updater/vars.py,sha256=OCUbTWIj8uf3zMUrN1aPkc5QTkHpvqd8z0RwyZuVgHQ,341
+nsj_sql_utils_lib-1.1.4.dist-info/METADATA,sha256=sloWdXa-0MasG5hgelj_5fGnwjqIELx-J4ZeiQnaj90,5094
+nsj_sql_utils_lib-1.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nsj_sql_utils_lib-1.1.4.dist-info/top_level.txt,sha256=sHOt_9ymzuDjJU7Dd_D7ri6nKUD6CT448Je9kej2oLo,18
+nsj_sql_utils_lib-1.1.4.dist-info/RECORD,,
