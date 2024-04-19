@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pydress
+Version: 1.0
+Summary: Directional Relativistic Spectrum Simulator
+Author: Jacob Eriksson, Sean Conroy
+Project-URL: Homepage, https://github.com/jacob-eri/pydress
+Project-URL: Bug Tracker, https://github.com/jacob-eri/pydress/issues
+Keywords: python,fusion
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
+# pydress
+Directional Relativistic Spectrum Simulator (DRESS), mainly developed for fusion reactions.
+
+## Installation
+The package is installed by the following sequence of steps:
+
+- Easier method: Install from PyPI 
+
+```
+pip install pydress
+```
+
+- Clone git repository and pip install local copy
+
+```
+git clone https://github.com/jacob-eri/pydress
+cd pydress
+pip install -e .
+```
+
+## Documentation
+A short Jupyter notebook demonstrating the basic capabilities of the package can be found in "/foo/bar/pydress/doc".
