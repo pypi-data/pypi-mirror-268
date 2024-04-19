@@ -1,0 +1,11 @@
+contextualize/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contextualize/cli.py,sha256=3XaSGCnqDuIC3AwmlgwjPFv7OkKPFFa7Xdy2_sCWqbw,6581
+contextualize/external.py,sha256=H5sLY8xYIC-XDwQ7VDBwP2qb3lTI9eCSVosruPN-oIM,6657
+contextualize/reference.py,sha256=XKfdy2LPc_Oi1Y4UNHj7MybxgmHvzlXRA6YXkkqgHXQ,3900
+contextualize/tokenize.py,sha256=gjM8SBUh0bmnTMzqDDftHL7NJkRVhP2-ndo8D0RrqDM,975
+contextualize/utils.py,sha256=KxeNsUg8qhBp0mxsY1vc96-YRzVkYaxq3np6AWxY_g4,498
+contextualize-0.0.3.dist-info/METADATA,sha256=JIl_L3Y3UIXNrU-E1hVkX6FslZV_qUHLQUUoVcs5wM4,3520
+contextualize-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+contextualize-0.0.3.dist-info/entry_points.txt,sha256=PL3ohSCqMEtnJsqjG8SLmwWJ8lWR3M1rMglJIsv74aQ,57
+contextualize-0.0.3.dist-info/top_level.txt,sha256=J0mYBXNluyhdsiD1xd6FqYf3LabhLACx4O2AbXCcYvg,14
+contextualize-0.0.3.dist-info/RECORD,,
