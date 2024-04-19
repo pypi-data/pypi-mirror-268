@@ -1,0 +1,16 @@
+card_metric_component/__init__.py,sha256=S1evsdH36qOlpLurmmShZalgS2Dz_n2-bkMm-Q2NUpA,737
+card_metric_component/example.py,sha256=N9Z0QjSeDMCFHBMQWU-gwpC0AjjCS7IkKGpOkEM-ekk,870
+card_metric_component/frontend/build/asset-manifest.json,sha256=1Z_QLatf0s90mZC_KusojTtlQSq6dVGh0Alo4cPk1bo,374
+card_metric_component/frontend/build/bootstrap.min.css,sha256=X9ITP3t3djkRs4SffIkA1Q2WMy-oYl6au5HFYTVShe0,206960
+card_metric_component/frontend/build/bootstrap.min.css.map,sha256=8SM4U2NQpCLGTQLW5D_x3qSTwxVq2CP-GXYc3V1WwFs,589892
+card_metric_component/frontend/build/index.html,sha256=RtUgAZp_F-fQYVmOYGK4nImu2atviOfaw46Zm-OXUN8,553
+card_metric_component/frontend/build/static/css/main.b431e2a6.css,sha256=r-52ncQqp8v6eAk3D8JMePw71JwMn7Satt-og_iGW-E,3494
+card_metric_component/frontend/build/static/css/main.b431e2a6.css.map,sha256=70CBkrJDl0x1dEEqlw1NYVP9ZYFANLdMzg4Ml-F_36Y,5769
+card_metric_component/frontend/build/static/js/main.6d7ec7b5.js,sha256=qJ65pX1u3KBJpIwqkZCS9fCkucZg7qVUGuKOe-rOR3Q,380784
+card_metric_component/frontend/build/static/js/main.6d7ec7b5.js.LICENSE.txt,sha256=NVg_xX7uJeMONytZUcILJQX3fKCxxwdigyGjBfS0PCU,1540
+card_metric_component/frontend/build/static/js/main.6d7ec7b5.js.map,sha256=1Z6XB7TERyBUVSFOmYl8AHjobTF9rp_V9IQATo-JFLw,1516745
+custom_card_metric_component-0.0.3.dist-info/LICENSE,sha256=SHkHX-qiNZt-ACArrZP67jppVYPvF8xuUDRjJw_E3L0,1082
+custom_card_metric_component-0.0.3.dist-info/METADATA,sha256=6w2uMH_wmksEWXXmaUlclOk9ieM4SjV-mEMoryOkxzw,561
+custom_card_metric_component-0.0.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+custom_card_metric_component-0.0.3.dist-info/top_level.txt,sha256=8zv0-Jlz1M7jwJJQ-eJKkaEdQQrePr09SvG1ddDLHMs,22
+custom_card_metric_component-0.0.3.dist-info/RECORD,,
