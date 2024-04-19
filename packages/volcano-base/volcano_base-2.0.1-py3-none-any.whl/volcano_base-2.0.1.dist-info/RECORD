@@ -1,0 +1,15 @@
+volcano_base/__init__.py,sha256=iXgdA40fnyorKhKe1YV9UCCGoKKHTXNa_Zv5hSbyeA4,294
+volcano_base/config.py,sha256=p4Hbn8lSiYfVaBrEID5Nu0OJfWMLXANLaAPiZDa1dd4,3446
+volcano_base/down/__init__.py,sha256=MIMPS6oQfZMf9TEgkhPfzYXJ8kdcWf0kDA3azxVVtFY,178
+volcano_base/down/cesm2.py,sha256=41R1wa2yw4KsXxRz9NOw0QX4ibUCFc2mZHknLrtGxkI,4081
+volcano_base/down/historic_so2.py,sha256=LzkWBbyj9I_i2qSNUnVEdrNk-U5b7hQa_c_SZoCRcu4,2469
+volcano_base/down/ob16.py,sha256=VZzLZp9zLcpPwFe_u7nbsu_hfrROcREOz-PyNnWkDKM,5484
+volcano_base/load/__init__.py,sha256=79uD2Itl1VmUdz4SDpaBZzuFE-509icZGXEXP8MmfHw,330
+volcano_base/load/load_c2w_files.py,sha256=EhZn3wKtQ35sInPyp4S-B2ziTAoE78JlN6S6mi-mxEI,24131
+volcano_base/load/load_ob16.py,sha256=BwsOFlgz3IuxLM8R54KWwL8dhLK6hTAID-8DaZxaY0Q,31646
+volcano_base/manipulate/__init__.py,sha256=TJ67dqI1sZaEnO8uWO-kGl1F4VYYALzacYMJDWN8Pt0,760
+volcano_base/manipulate/time_series.py,sha256=AycBmnzxr3cp_cl4OVpYG91yh8gsW8zgkN4TCwTti7Q,24353
+volcano_base-2.0.1.dist-info/METADATA,sha256=n9PMVEuuYwLiMlsnGt-4wNmTvG1ruIw0yPkJqN6Q_-8,1561
+volcano_base-2.0.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+volcano_base-2.0.1.dist-info/licenses/LICENSE,sha256=CI-O01Qj0cmLd1-9hU-35U6YJzjMDsPRjdV2o-UhoeE,1076
+volcano_base-2.0.1.dist-info/RECORD,,
