@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: PyOptik
+Version: 0.7.8
+Summary: A package/library for refractive index values.
+Home-page: https://github.com/MartinPdeS/PyOptik
+Author: Martin Poinsinet de Sivry
+Author-email: Martin.poinsinet.de.sivry@gmail.com
+License: MIT
+Keywords: refractive index
+Platform: unix
+Platform: linux
+Platform: osx
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: matplotlib ==3.8.2
+Requires-Dist: numpy >=1.26.0
+Requires-Dist: requests ==2.31.0
+Requires-Dist: pandas ==2.1.1
+Requires-Dist: bs4 ==0.0.1
+Requires-Dist: MPSTools ==0.2.3
+Requires-Dist: MPSPlots ==1.4.2
+Provides-Extra: documentation
+Requires-Dist: numpydoc ==1.6.0 ; extra == 'documentation'
+Requires-Dist: sphinx >=5.1.1 ; extra == 'documentation'
+Requires-Dist: sphinx-gallery ==0.15.0 ; extra == 'documentation'
+Requires-Dist: sphinx-rtd-theme ==2.0.0 ; extra == 'documentation'
+Requires-Dist: pydata-sphinx-theme ==0.14.1 ; extra == 'documentation'
+Provides-Extra: testing
+Requires-Dist: pytest >=0.6 ; extra == 'testing'
+Requires-Dist: pytest-cov >=2.0 ; extra == 'testing'
+Requires-Dist: pytest-json-report ==1.5.0 ; extra == 'testing'
+Requires-Dist: mypy >=0.910 ; extra == 'testing'
+Requires-Dist: flake8 >=3.9 ; extra == 'testing'
+Requires-Dist: tox >=3.24 ; extra == 'testing'
+Requires-Dist: coverage ==6.5.0 ; extra == 'testing'
+Requires-Dist: PyMieScatt ==1.8.1.1 ; extra == 'testing'
+
+|Logo|
+
+
+
+PyOptik
+=======
+
+|python|
+
+
+
+PyRI is a tool that can be used to import refractive indexes and extinction
+coefficients for different materials at different wavelengths. This data can then
+be used for different applications like simulating light interaction's with
+particules. All the data comes from RefractiveIndex.INFO.
+
+Testing
+*******
+
+To test localy (with cloning the GitHub repository) you'll need to install the dependencies and run the coverage command as
+
+.. code:: python
+
+   >>> git clone https://github.com/MartinPdeS/PyOptik.git
+   >>> cd TradeTide
+   >>> pip install -r requirements/requirements.txt
+   >>> pytest
+
+----
+
+
+Contact Information
+************************
+As of 2024, the project is still under development. If you want to collaborate, it would be a pleasure! I encourage you to contact me.
+
+PyOptik was written by `Martin Poinsinet de Sivry-Houle <https://github.com/MartinPdS>`_  .
+
+Email:`martin.poinsinet-de-sivry@polymtl.ca <mailto:martin.poinsinet-de-sivry@polymtl.ca?subject=PyOptik>`_ .
+
+
+.. |python| image:: https://img.shields.io/pypi/pyversions/pyoptik.svg
+   :target: https://www.python.org/
+
+.. |Logo| image:: https://github.com/MartinPdeS/PyOptik/raw/master/docs/images/logo.png
+
+
