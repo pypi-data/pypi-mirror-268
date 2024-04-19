@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.py
+cv2jewellery.egg-info/PKG-INFO
+cv2jewellery.egg-info/SOURCES.txt
+cv2jewellery.egg-info/dependency_links.txt
+cv2jewellery.egg-info/requires.txt
+cv2jewellery.egg-info/top_level.txt
+data/jewellery/default/Necklace.png
+data/jewellery/default/earring.png
+data/jewellery/default/nose-ring.png
+src/__init__.py
+src/accessories.py
+src/main.py
+src/mode.py
+src/utils.py
