@@ -1,0 +1,6 @@
+six
+urllib3>=1.26.5
+certifi
+
+[dev]
+tox
