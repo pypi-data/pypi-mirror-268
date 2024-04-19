@@ -1,0 +1,8 @@
+basefunctions>=0.3.8
+pandas>=2.0
+scipy>=1.13
+
+[dev]
+
+[test]
+pytest>=7.4
