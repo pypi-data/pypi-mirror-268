@@ -1,0 +1,8 @@
+opentelemetry/instrumentation/pinecone/__init__.py,sha256=nBi46_XzpoWBywmENUlA9-l43kSJympjCBpNYnFm2rA,7109
+opentelemetry/instrumentation/pinecone/config.py,sha256=CtypZov_ytI9nSrfN9lWnjcufbAR9sfkXRA0OstDEUw,42
+opentelemetry/instrumentation/pinecone/utils.py,sha256=USDrxM3CpCwRr8areZ62mR8nak7YD6rnfa6iPt-vqxs,702
+opentelemetry/instrumentation/pinecone/version.py,sha256=vgsezcoqCKtoa7hPZmv2Zn1ce_NBglKR7w9c6ZIxjU0,23
+opentelemetry_instrumentation_pinecone-0.16.6.dist-info/METADATA,sha256=317fHpyAJrIU2k5rL3WfOjoP4pn2tT9EeiUVzOFvxxA,1688
+opentelemetry_instrumentation_pinecone-0.16.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+opentelemetry_instrumentation_pinecone-0.16.6.dist-info/entry_points.txt,sha256=l-0E2iBxhJvAm1Ai3Ay6GJ7V9ti6LicKxbRGS5RcMyU,106
+opentelemetry_instrumentation_pinecone-0.16.6.dist-info/RECORD,,
