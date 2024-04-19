@@ -1,0 +1,10 @@
+zodchy_patterns/__init__.py,sha256=4EiXiZCwogo-zRSqrfVXX1OLwmBxepHep7gsbrBIbjI,42
+zodchy_patterns/events/__init__.py,sha256=zL7U_UAmw2_niDdH5ilFcM9hNmSoB5lfhWUC3EP8Ums,368
+zodchy_patterns/events/io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zodchy_patterns/events/io/error.py,sha256=WH0qD-MYUxuykWKPgh1ipz1JhO20GcCL4sZ34FR0Mgs,1771
+zodchy_patterns/events/io/generic.py,sha256=tHbjaCYX4QswBQ8LlSbPaIOwjamEayuIUvJ_YQBTmyg,314
+zodchy_patterns/events/io/info.py,sha256=l-1pbcpJCgBB5sGtQfQlqcuo-Req94peclY8i2yA950,1095
+zodchy_patterns/mapping.py,sha256=qlDM2UD0sfwfBbVpc3w4a5xJfdiVhPT6a_ATDj8LgQA,499
+zodchy_patterns-0.2.0.dist-info/METADATA,sha256=D90Ir5E7hjQDsgoCQKdth_kB79puo7XF-zekcXBY-Yg,563
+zodchy_patterns-0.2.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+zodchy_patterns-0.2.0.dist-info/RECORD,,
