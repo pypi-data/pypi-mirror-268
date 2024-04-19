@@ -1,0 +1,8 @@
+python_testcli-0.1.0.dist-info/METADATA,sha256=utdpOFFa03YtfKl9ZZsBrbNq2S1xnJAIURq-rKwLHzI,289
+python_testcli-0.1.0.dist-info/WHEEL,sha256=wghIG1kst9AH4tfkgJQnQOCyVUTHmlww0EwI46Bzf4o,99
+python_testcli-0.1.0.dist-info/entry_points.txt,sha256=vrQQt_JbCcGQhZKbsuQSvj7upyLd0Mxb2I8JgRdn4mM,43
+testcli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testcli/__main__.py,sha256=U2YQ9ZrgGUyUXmUgIDuEcDqKGnRVkHlUPsLfJqa7gK8,132
+testcli/exec.py,sha256=xxCxcunNxYex2TBO8UsJcxE4C9HUMXQjUqLq637R__s,3431
+testcli/testcli,sha256=o1mNocTx03tTKWxUGckrYESum_946od2e8YLk5g1R_s,1992192
+python_testcli-0.1.0.dist-info/RECORD,,

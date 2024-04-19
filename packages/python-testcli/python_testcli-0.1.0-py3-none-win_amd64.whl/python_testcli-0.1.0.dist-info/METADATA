@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: python-testcli
+Version: 0.1.0
+Summary:
+ this is a test command-line application using the binary wheel builder
+Description-Content-Type: text/markdown
+License:
+Classifier:
+Project-URL:
+Requires-Python: >= 3.10
+
+this is still just a test command-line application
