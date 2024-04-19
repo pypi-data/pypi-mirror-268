@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+general_conference_extractor = general_conference_extractor._modidx:d
+

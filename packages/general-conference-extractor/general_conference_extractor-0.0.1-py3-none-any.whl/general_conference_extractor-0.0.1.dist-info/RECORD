@@ -1,0 +1,13 @@
+general_conference_extractor/GeneralConferenceTalk.py,sha256=ypIFuKwPZzonC_0xxOfduqaEP9mRbF-FW9F2T6SoX6A,5311
+general_conference_extractor/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+general_conference_extractor/_modidx.py,sha256=7XA8G5eO3lRpwAWt5nItTKoaaK8c1m_O73CR-OKataE,5797
+general_conference_extractor/core.py,sha256=XvYRFJnboqMdZHx5H7r0_lA-3XPdhaQT2VEq4mdIHEg,142
+general_conference_extractor/data_output.py,sha256=w4ga2x_FICXGchgcFl6SamzJvW3ss1Si23aCstMRmpo,2801
+general_conference_extractor/extractURLs.py,sha256=LCWCXRWSinr2WJqlwtUugsj0LiVbfgl2ezlXJK5B_AQ,3528
+general_conference_extractor/extract_URLs.py,sha256=pyXGXGvUDEiiDa6fcstIkKCohhfcnkntRgSldWc5-YA,3834
+general_conference_extractor-0.0.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+general_conference_extractor-0.0.1.dist-info/METADATA,sha256=37iGdf0pSBpWvMopD_fWV0765k5Ux5LrGjBuhBwZFoM,4571
+general_conference_extractor-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+general_conference_extractor-0.0.1.dist-info/entry_points.txt,sha256=eZZGg4_EFdhed822S4cCE4ukgOYM4ExGomdX8WLskpA,99
+general_conference_extractor-0.0.1.dist-info/top_level.txt,sha256=0gUs_X50ueqGjHzW4Q_IiOjt_DBpuXUxe-kESK9gEl4,29
+general_conference_extractor-0.0.1.dist-info/RECORD,,
