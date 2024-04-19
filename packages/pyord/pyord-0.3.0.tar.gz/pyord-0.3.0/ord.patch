@@ -1,0 +1,26 @@
+diff --git a/src/runes.rs b/src/runes.rs
+index 1de3fb85..b730c567 100644
+--- a/src/runes.rs
++++ b/src/runes.rs
+@@ -5,7 +5,7 @@ use {
+ 
+ pub use {edict::Edict, rune::Rune, rune_id::RuneId, runestone::Runestone};
+ 
+-pub(crate) use {etching::Etching, mint::Mint, pile::Pile, spaced_rune::SpacedRune};
++pub use {etching::Etching, mint::Mint, pile::Pile, spaced_rune::SpacedRune};
+ 
+ pub const MAX_DIVISIBILITY: u8 = 38;
+ pub(crate) const MAX_LIMIT: u128 = 1 << 64;
+diff --git a/src/runes/runestone.rs b/src/runes/runestone.rs
+index 3c4f2897..f3a78f6c 100644
+--- a/src/runes/runestone.rs
++++ b/src/runes/runestone.rs
+@@ -130,7 +130,7 @@ impl Runestone {
+     }))
+   }
+ 
+-  pub(crate) fn encipher(&self) -> ScriptBuf {
++  pub fn encipher(&self) -> ScriptBuf {
+     let mut payload = Vec::new();
+ 
+     if let Some(etching) = self.etching {

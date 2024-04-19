@@ -1,0 +1,5 @@
+FROM ghcr.io/pyo3/maturin:latest
+
+RUN yum -y update && yum -y install \
+    openssl-devel \
+    && rm -rf /var/lib/apt/lists/*
