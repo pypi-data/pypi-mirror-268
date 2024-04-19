@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+aioyoufone/__init__.py
+aioyoufone/client.py
+aioyoufone/const.py
+aioyoufone.egg-info/PKG-INFO
+aioyoufone.egg-info/SOURCES.txt
+aioyoufone.egg-info/dependency_links.txt
+aioyoufone.egg-info/requires.txt
+aioyoufone.egg-info/top_level.txt
