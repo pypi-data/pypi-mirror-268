@@ -1,0 +1,14 @@
+richie_openedx_sync/__init__.py,sha256=U3SIBYEZ7C3kac6_bu9pp9qQ0lnxDLJasYZsjDoM02Y,201
+richie_openedx_sync/apps.py,sha256=n1pej-5TLeVqS4YMHShx754ingaRYrgOw60hS-7IYww,1074
+richie_openedx_sync/settings.py,sha256=30wEgrqme1MnzbiSnyBbXfujnVEUXYJLDf-pYamgf0I,884
+richie_openedx_sync/signals.py,sha256=otUbwwX0Be7SwBJwTry95GYUuOYKDb16LOVvT-rE8lQ,1889
+richie_openedx_sync/tasks.py,sha256=YOR_FY88OU7DRns9C_7J4HC6Ri7d7-5XKHttqSnzECY,4705
+richie_openedx_sync/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+richie_openedx_sync/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+richie_openedx_sync/management/commands/sync_courses_to_richie.py,sha256=4POENBeND_rMAX1-2mRbc692ZxreLyIFa1PKSMmAPpw,2990
+richie_openedx_sync-1.3.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+richie_openedx_sync-1.3.0.dist-info/METADATA,sha256=n-mQj1vuXNkrNgBl-9ft2N-GegFgS29eCSTNe1FkMoI,2616
+richie_openedx_sync-1.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+richie_openedx_sync-1.3.0.dist-info/entry_points.txt,sha256=hfczz9LkhUEmcz-ZUAztYBsZ1aBtO-0TJQw22n3KnWM,175
+richie_openedx_sync-1.3.0.dist-info/top_level.txt,sha256=3hjzihqIIuS9reNKt07HbOUtJlEQP6GgxzN304OP4rg,20
+richie_openedx_sync-1.3.0.dist-info/RECORD,,
