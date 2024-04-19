@@ -1,0 +1,117 @@
+[tool.poetry]
+name = "bedspec"
+version = "0.1.0"
+description = "An HTS-specs compliant BED toolkit."
+authors = ["Clint Valentine <valentine.clint@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/clintval/bedspec"
+repository = "https://github.com/clintval/bedspec"
+keywords = ["bioinformatics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+include = ["LICENSE"]
+packages = [{ include = "bedspec" }, { include = "cgranges" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.dev-dependencies]
+mypy = "^1.8"
+pytest = "^7.4"
+pytest-cov = "^4.1"
+pytest-mypy = "^0.10"
+pytest-ruff = "^0.2"
+ruff = "0.1.13"
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
+
+[build-system]
+requires = ["poetry-core>=1.6", "setuptools", "cython"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+python_version = "3.12"
+strict_optional = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+[[tool.mypy.overrides]]
+module = "Cython.Build"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "setuptools"
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+addopts = [
+    "--color=yes",
+    "--import-mode=importlib",
+    "--cov",
+    "--mypy",
+    "--ruff",
+    "--ignore=cgranges/",
+]
+
+[tool.ruff]
+exclude = ["cgranges/*"]
+line-length = 100
+target-version = "py312"
+select = ["C901", "B", "E", "F", "I", "W", "Q"]
+show-source = true
+
+[tool.ruff.lint.isort]
+force-single-line = true
+
+[tool.git-cliff.changelog]
+header = ""
+trim = true
+body = """
+{% for group, commits in commits | group_by(attribute="group") %}
+    ## {{ group | upper_first }}
+    {% for commit in commits %}
+        - {{ commit.message | upper_first }} ({{ commit.id | truncate(length=8, end="") }})\
+    {% endfor %}
+{% endfor %}\n
+"""
+
+[tool.git-cliff.git]
+conventional_commits = true
+commit_parsers = [
+    { message = "^.+!:*", group = "Breaking"},
+    { message = "^feat*", group = "Features"},
+    { message = "^fix*", group = "Bug Fixes"},
+    { message = "^docs*", group = "Documentation"},
+    { message = "^perf*", group = "Performance"},
+    { message = "^refactor*", group = "Refactor"},
+    { message = "^style*", group = "Styling"},
+    { message = "^test*", group = "Testing"},
+    { message = "^chore\\(release\\):*", skip = true},
+    { message = "^chore*", group = "Miscellaneous Tasks"},
+    { body = ".*security", group = "Security"}
+]
+filter_commits = false
