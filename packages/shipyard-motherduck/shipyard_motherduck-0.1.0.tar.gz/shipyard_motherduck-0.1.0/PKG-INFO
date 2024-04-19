@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: shipyard-motherduck
+Version: 0.1.0
+Summary: A local client for working with Python and MotherDuck
+Author: wrp801
+Author-email: wespoulsen@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: duckdb (==0.9.2)
+Requires-Dist: pandas (>=2.0,<3.0)
+Requires-Dist: shipyard-bp-utils (>=1.2.1,<2.0.0)
+Requires-Dist: shipyard-templates (>=0.8.2,<0.9.0)
+Requires-Dist: sqlalchemy (>=2.0.29,<3.0.0)
+Description-Content-Type: text/markdown
+
+# shipyard-motherduck 
+
+### Installation 
+```bash
+python3 -m pip install shipyard-motherduck
+```
+
+### Usage 
+
+In order to initalize the client, pass the access token to the `MotherDuckClient` object:
+
+```python3
+client = MotherDuckClient("<access_token>")
+```
+
+Additionally you can connect to a specifc database by supplying the database to the client:
+
+```python3
+client = MotherDuckClient("<access_token>", database = 'my_db')
+
+```
+
+
+### Loading Data 
+
+The `upload` method allows for a quick upload of a file to a table in MotherDuck. If the table does not exist,
+it will be created. The target table can also be appended to by setting the `insert_method` to 'append'. 
+
+Example: 
+
+```python3
+client.upload(table_name = 'my_new_table', file_path = 'my_data.csv', insert_method = 'replace')
+
+```
+
+### Fetching Data
+The `fetch` method returns the results of a SQL query as a `DuckDBPyRelation` type. From there, it can be converted to a DataFrame or 
+written to a file. 
+
+Example:
+```python3
+results = client.fetch('select * from my_new_table')
+df = results.to_df()
+```
+
+
+### Executing a Query 
+The `execute_query` method executes a SQL query in MotherDuck. The difference between this and the `fetch` method is that this 
+does not return results and is intended for `ALTER, CREATE, DROP` and other DDL queries. 
+
+Example:
+```python3 
+client.execute_query('DROP TABLE my_new_table')
+```
+
+
+
