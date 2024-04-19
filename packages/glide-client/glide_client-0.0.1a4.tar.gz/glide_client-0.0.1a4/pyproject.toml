@@ -1,0 +1,51 @@
+[project]
+name = "glide-client"
+description = "An official Python client for Glide, an open resilient fast model gateway"
+authors = [
+    { name = "Roman Hlushko", email = "roman@einstack.ai" },
+]
+dynamic = []
+readme = "README.md"
+keywords = [
+    "llm",
+    "llmops",
+    "gateway",
+    "infrastructure",
+]
+dependencies = [
+    "httpx>=0.26.0",
+    "websockets>=12.0",
+    "pydantic>=2.6.1",
+]
+requires-python = ">=3.8"
+version = "0.0.1a4"
+
+[project.license]
+text = "Apache-2.0"
+
+[project.urls]
+Homepage = "https://glide.einstack.ai/"
+Documentation = "https://glide.einstack.ai/"
+Repository = "https://github.com/me/spam.git"
+Issues = "https://github.com/EinStack/glide-python"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.version]
+source = "scm"
+write_to = "glide/version.py"
+write_template = "# Copyright EinStack\n# SPDX-License-Identifier: APACHE-2.0\nimport sys\nfrom typing import Final\n\n\nPYTHON_VERSION: Final[str] = \".\".join(\n    (\n        str(sys.version_info.major),\n        str(sys.version_info.minor),\n        str(sys.version_info.micro),\n    )\n)\n__version__: Final[str] = \"{}\"\n"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.2.2",
+    "mypy>=1.8.0",
+    "black>=24.2.0",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
