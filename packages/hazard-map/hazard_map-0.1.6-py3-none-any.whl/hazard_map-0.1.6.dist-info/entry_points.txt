@@ -1,0 +1,3 @@
+[console_scripts]
+hazard-map=hazard_map.__init__:main
+
