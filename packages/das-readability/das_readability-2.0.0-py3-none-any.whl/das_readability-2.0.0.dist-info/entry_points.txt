@@ -1,0 +1,4 @@
+[console_scripts]
+das-readability=das_readability.readability:main
+readability=das_readability.readability:main
+
