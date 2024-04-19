@@ -1,0 +1,4 @@
+include ahelper/medicalgpt/*.py
+include ahelper/medicalgpt/*.ipynb
+include ahelper/medicalgpt/*.sh
+include ahelper/medicalgpt/*.json
