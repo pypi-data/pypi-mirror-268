@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+MailCraft/__init__.py
+MailCraft/main.py
+MailCraft.egg-info/PKG-INFO
+MailCraft.egg-info/SOURCES.txt
+MailCraft.egg-info/dependency_links.txt
+MailCraft.egg-info/requires.txt
+MailCraft.egg-info/top_level.txt
