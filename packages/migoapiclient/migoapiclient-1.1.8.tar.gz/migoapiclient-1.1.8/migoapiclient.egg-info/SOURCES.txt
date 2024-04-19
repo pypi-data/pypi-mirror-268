@@ -1,0 +1,10 @@
+README.md
+setup.py
+migoapiclient/__init__.py
+migoapiclient/api_client.py
+migoapiclient/file_manager.py
+migoapiclient.egg-info/PKG-INFO
+migoapiclient.egg-info/SOURCES.txt
+migoapiclient.egg-info/dependency_links.txt
+migoapiclient.egg-info/top_level.txt
+src/__init__.py
