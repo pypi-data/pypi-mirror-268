@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: jodium
+Version: 0.1.0
+Summary: An interesting python package
+Home-page: https://github.com/MarkHoo/jodium
+License: Apache-2.0
+Author: Mark Hoo
+Author-email: markhoo@foxmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: selenium (>=4.0.0,<5.0.0)
+Requires-Dist: undetected-chromedriver (>=3.4.7,<4.0.0)
+Requires-Dist: webdriver-manager (>=3.8.6,<4.0.0)
+Project-URL: Bug Tracker, https://github.com/MarkHoo/jodium/issues
+Project-URL: Repository, https://github.com/MarkHoo/jodium
+Description-Content-Type: text/markdown
+
+# Jodium
+
+#### Installing
+
+Install and update using pip:
+
+```
+$ pip install -U jodium
+```
+
+#### A Simple Example
+
+```python
+import jodium
+```
+
+#### Links
+
+- Documentation: [https://github.com/MarkHoo/jodium](https://github.com/MarkHoo/jodium)
+- PyPI Releases: [https://pypi.org/project/jodium/](https://pypi.org/project/jodium/)
+- Source Code: [https://github.com/MarkHoo/jodium](https://github.com/MarkHoo/jodium)
+- Issue Tracker: [https://github.com/MarkHoo/jodium/issues](https://github.com/MarkHoo/jodium/issues)
+- Website: [https://pypi.org/project/jodium/](https://pypi.org/project/jodium/)
+
+
