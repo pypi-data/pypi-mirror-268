@@ -1,0 +1,2 @@
+[console_scripts]
+dero = src.main:main
