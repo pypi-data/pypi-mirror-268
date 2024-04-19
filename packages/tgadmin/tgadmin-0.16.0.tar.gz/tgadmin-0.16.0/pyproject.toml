@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: 2024 Georg-August-Universität Göttingen
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[project]
+name = "tgadmin"
+description = "TextGrid repository administration cli tool, based on tgclients"
+
+requires-python = ">= 3.8"
+dynamic = ["version"]
+
+readme = "README.md"
+license = { file = "LICENSE" }
+
+authors = [
+  {name = "Ubbo Veentjer", email = "veentjer@sub.uni-goettingen.de"},
+]
+
+maintainers = [
+  {name = "Ubbo Veentjer", email = "veentjer@sub.uni-goettingen.de"},
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "click",
+    "tgclients",
+]
+
+[project.optional-dependencies]
+dev = [
+    "reuse",
+    "black",
+    "pip-tools",
+]
+
+[project.urls]
+Homepage = "https://textgrid.de"
+Issues = "https://gitlab.gwdg.de/dariah-de/textgridrep/tgadmin/-/issues"
+Source = "https://gitlab.gwdg.de/dariah-de/textgridrep/tgadmin"
+
+[project.scripts]
+tgadmin = "tgadmin.tgadmin:cli"
+
+[tool.setuptools.dynamic]
+version = {attr = "tgadmin.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.semantic_release]
+version_variables = ["src/tgadmin/__init__.py:__version__"]
+major_on_zero = false
+# if you want a version without you need to set this option early
+# or rename all the tags done before
+#tag_format = "{version}"
+
+[tool.semantic_release.remote]
+type = "gitlab"
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = ["Merge branch*"]
+
