@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "PyDropper"
+version = "0.1.3"
+description = ""
+authors = ["jiho7407"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.110.1"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+httpx = "^0.27.0"
+python-multipart = "^0.0.9"
+aiofiles = "^23.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
