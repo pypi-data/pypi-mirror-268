@@ -1,0 +1,10 @@
+AnswerAutomationService/__init__.py
+AnswerAutomationService/__main__.py
+AnswerAutomationService/const.py
+AnswerAutomationService/service.py
+pih_answ_auto.egg-info/PKG-INFO
+pih_answ_auto.egg-info/SOURCES.txt
+pih_answ_auto.egg-info/dependency_links.txt
+pih_answ_auto.egg-info/entry_points.txt
+pih_answ_auto.egg-info/requires.txt
+pih_answ_auto.egg-info/top_level.txt
