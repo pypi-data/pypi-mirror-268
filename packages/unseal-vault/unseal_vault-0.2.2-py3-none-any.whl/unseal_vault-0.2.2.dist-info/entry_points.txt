@@ -1,0 +1,3 @@
+[console_scripts]
+unseal_vault=unseal_vault.cli:main
+
