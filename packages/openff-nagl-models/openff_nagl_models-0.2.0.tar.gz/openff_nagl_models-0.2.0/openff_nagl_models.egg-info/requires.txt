@@ -1,0 +1,5 @@
+importlib_resources
+
+[test]
+pytest>=6.0
+numpy
