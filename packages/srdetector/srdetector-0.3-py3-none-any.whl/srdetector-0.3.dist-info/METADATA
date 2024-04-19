@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: srdetector
+Version: 0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas >=2.1.1
+Requires-Dist: numpy >=1.23.5
+Requires-Dist: yfinance >=0.2.33
+Requires-Dist: pandas-ta >=0.3.14b0
+
+UNKNOWN
+
+
