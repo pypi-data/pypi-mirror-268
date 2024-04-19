@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audiospotter-cli"
+version = "0.2"
+authors = [{name="Joe Weiss", email="joe.weiss@gmail.com" }]
+description = "A command-line tool for initializing projects and uploading audio to AudioSpotter API servers"
+readme = "README.md"
+dependencies = ["cachetools","requests","rich","boto3","click","uplink","PyYAML","wavinfo"]
+requires-python = ">=3.8"
+
+[project.scripts]
+audiospotter = "audiospotter_cli.cli:run"
+
+[project.urls]
+"Homepage" = "https://github.com/joeweiss/audiospotter-cli"
+"Bug Tracker" = "https://github.com/joeweiss/audiospotter-cli/issues"

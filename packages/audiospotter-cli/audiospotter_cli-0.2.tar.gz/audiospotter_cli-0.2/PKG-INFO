@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: audiospotter-cli
+Version: 0.2
+Summary: A command-line tool for initializing projects and uploading audio to AudioSpotter API servers
+Author-email: Joe Weiss <joe.weiss@gmail.com>
+Project-URL: Homepage, https://github.com/joeweiss/audiospotter-cli
+Project-URL: Bug Tracker, https://github.com/joeweiss/audiospotter-cli/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cachetools
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: boto3
+Requires-Dist: click
+Requires-Dist: uplink
+Requires-Dist: PyYAML
+Requires-Dist: wavinfo
+
+# audiospotter-cli
+
+[![PyPI](https://img.shields.io/pypi/v/audiospotter-cli.svg)](https://pypi.org/project/audiospotter-cli/)
+[![Test](https://github.com/joeweiss/audiospotter-cli/actions/workflows/test.yml/badge.svg)](https://github.com/joeweiss/audiospotter-cli/actions/workflows/test.yml)
+
+A command-line tool for initializing projects and uploading audio to AudioSpotter API servers
+
+## Installation
+
+`pip install audiospotter-cli`
+
+## Usage
+
+```
+audiospotter --help
+
+audiospotter configure
+audiospotter upload
+
+
+## Development
+
+```
+git clone https://github.com/joeweiss/audiospotter-cli
+cd audiospotter-cli
+pip install .
+
+# To run dev install
+
+python main.py connect
+
+
+``
+
+
+```
+
+## Status
+
+Initial beta version. More documentation to come.

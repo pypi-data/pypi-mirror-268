@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+audiospotter_cli/__init__.py
+audiospotter_cli/cli.py
+audiospotter_cli/client.py
+audiospotter_cli/config.py
+audiospotter_cli/sources.py
+audiospotter_cli/utils.py
+audiospotter_cli.egg-info/PKG-INFO
+audiospotter_cli.egg-info/SOURCES.txt
+audiospotter_cli.egg-info/dependency_links.txt
+audiospotter_cli.egg-info/entry_points.txt
+audiospotter_cli.egg-info/requires.txt
+audiospotter_cli.egg-info/top_level.txt
+tests/test_connection.py

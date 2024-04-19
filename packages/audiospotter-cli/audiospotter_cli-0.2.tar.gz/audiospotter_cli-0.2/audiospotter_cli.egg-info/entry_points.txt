@@ -1,0 +1,2 @@
+[console_scripts]
+audiospotter = audiospotter_cli.cli:run
