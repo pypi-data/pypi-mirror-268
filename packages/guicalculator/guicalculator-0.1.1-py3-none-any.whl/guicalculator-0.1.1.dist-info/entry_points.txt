@@ -1,0 +1,3 @@
+[console_scripts]
+guicalculator=guicalculator.__main__:main
+
