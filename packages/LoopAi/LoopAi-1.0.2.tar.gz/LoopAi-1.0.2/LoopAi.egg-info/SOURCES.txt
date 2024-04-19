@@ -1,0 +1,8 @@
+setup.py
+LoopAi/LoopAi.py
+LoopAi/__init__.py
+LoopAi.egg-info/PKG-INFO
+LoopAi.egg-info/SOURCES.txt
+LoopAi.egg-info/dependency_links.txt
+LoopAi.egg-info/requires.txt
+LoopAi.egg-info/top_level.txt
