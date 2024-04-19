@@ -1,0 +1,12 @@
+sitepy/__init__.py,sha256=3JGDSs0PZ34WNrwoofxL_6ntvNhRH0YYqHef16TQZbM,97
+sitepy/block.py,sha256=ZLZMiDMkdxeRarEucqeognl9bOOjEFJIegRjAS77-Tw,28828
+sitepy/core.py,sha256=v8W6IwtHtkEQwrY_BU_YB7X-xYjZ0hQETDcWu-evQDk,3274
+sitepy/gpt.py,sha256=NdZWqrHsDLWAktSYf-Ud2WuvHby-0OYuPZeTAQ6IS9A,250
+sitepy/recaptcha.py,sha256=P7lvIH2o4yWZef37G6Rc1_1ojuv3pW1QN0MuGTs-ojw,343
+sitepy/sitepy.py,sha256=v8W6IwtHtkEQwrY_BU_YB7X-xYjZ0hQETDcWu-evQDk,3274
+sitepy/sitepy0_0_2.py,sha256=ZEduYJKt2FbaX-ROD-EyELhK9pKSojv_5knSO5BD3Dc,2857
+sitepy-0.0.19.dist-info/LICENSE,sha256=5Sm5wErv7GJure9jyxvwiP7NQPrNdJv6CjgAE1c2Jek,566
+sitepy-0.0.19.dist-info/METADATA,sha256=pJ3AquwULDy3iVkIi3FxUEeO_XoG2NJHzanUf6kDBQ0,1811
+sitepy-0.0.19.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sitepy-0.0.19.dist-info/top_level.txt,sha256=S3QQNCh0b5uj1apYdkjAI5w3Np2ZqBASxfyWGZRBIks,7
+sitepy-0.0.19.dist-info/RECORD,,
