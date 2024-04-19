@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: haskellian-iterables
+Version: 0.1.2
+Summary: FP-style functions for generators
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: ramda
+
+# Haskellian Iterables
+
+> FP-style functions for generators
