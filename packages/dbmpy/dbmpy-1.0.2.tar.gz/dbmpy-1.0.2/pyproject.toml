@@ -1,0 +1,18 @@
+[project]
+name = "dbmpy"
+version = "1.0.2"
+authors = [
+  { name="xLitus", email="xLitus@protestant.com" },
+]
+description = "Open source python3 library to manage SQLite3 databases"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/xLitus/dbmpy"
+Issues = "https://github.com/xLitus/dbmpy/issues"
