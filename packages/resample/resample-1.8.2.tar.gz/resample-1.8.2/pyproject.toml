@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools >= 60", "setuptools_scm[toml] >= 8.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resample"
+requires-python = ">=3.8"
+dependencies = ["numpy >= 1.21", "scipy >= 1.10"]
+authors = [
+    { name = "Daniel Saxton", email = "dsaxton@pm.me" },
+    { name = "Hans Dembinski", email = "hans.dembinski@gmail.com" },
+]
+readme = "README.rst"
+description = "Resampling-based inference in Python"
+license = { text = "BSD-3-Clause" }
+classifiers = [
+    # complete classifier list: http://pypi.python.org/pypi?%3Aaction=list_classifiers
+    'Development Status :: 5 - Production/Stable',
+    'Intended Audience :: Science/Research',
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: Implementation :: CPython',
+    'Programming Language :: Python :: Implementation :: PyPy',
+]
+dynamic = ["version"]
+
+[project.urls]
+repository = "http://github.com/resample-project/resample"
+documentation = "https://resample.readthedocs.io/en/stable/"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "coverage[toml]"]
+doc = ["ipython", "nbsphinx", "sphinx_rtd_theme"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.ruff]
+select = ["E", "F", "W", "D"]
+ignore = ["D212", "D203"]
+unfixable = ["ERA"]
+
+[tool.mypy]
+strict = true
+no_implicit_optional = false
+allow_redefinition = true
+ignore_missing_imports = true
+show_error_codes = true
+files = "src/resample/*.py"
+
+[tool.pytest.ini_options]
+addopts = "--doctest-modules --strict-config --strict-markers -q -ra --ff"
+testpaths = ["src/resample", "tests"]
+log_cli_level = "INFO"
+xfail_strict = true
+filterwarnings = [
+    "error::DeprecationWarning",
+    "error::numpy.VisibleDeprecationWarning",
+]

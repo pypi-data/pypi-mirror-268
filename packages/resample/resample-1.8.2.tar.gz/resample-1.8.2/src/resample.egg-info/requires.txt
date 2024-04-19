@@ -1,0 +1,12 @@
+numpy>=1.21
+scipy>=1.10
+
+[doc]
+ipython
+nbsphinx
+sphinx_rtd_theme
+
+[test]
+pytest
+pytest-cov
+coverage[toml]
