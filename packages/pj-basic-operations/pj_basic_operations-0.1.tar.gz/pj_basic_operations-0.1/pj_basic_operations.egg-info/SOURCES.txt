@@ -1,0 +1,8 @@
+README.md
+setup.py
+pj_basic_operations/__init__.py
+pj_basic_operations/main.py
+pj_basic_operations.egg-info/PKG-INFO
+pj_basic_operations.egg-info/SOURCES.txt
+pj_basic_operations.egg-info/dependency_links.txt
+pj_basic_operations.egg-info/top_level.txt
