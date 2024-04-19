@@ -1,0 +1,11 @@
+# requirements for testing
+maturin[patchelf]
+polars
+numpy
+scikit-learn
+scipy
+pyarrow
+pandas
+pytest
+pytest-benchmark
+xicor
