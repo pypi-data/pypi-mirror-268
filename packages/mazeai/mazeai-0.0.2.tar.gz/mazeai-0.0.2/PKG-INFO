@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mazeai
+Version: 0.0.2
+Summary: A General Tool Set for Science Researches
+Home-page: https://github.com/zhaisilong/mazeai
+Author: Zhai Silong
+Author-email: zhaisilong@outlook.com
+License: MIT
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE

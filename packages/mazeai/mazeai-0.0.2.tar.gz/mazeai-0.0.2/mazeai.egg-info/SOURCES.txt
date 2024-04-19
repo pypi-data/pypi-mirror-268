@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+maze/__init__.py
+maze/__main__.py
+maze/__version__.py
+maze/utils.py
+mazeai.egg-info/PKG-INFO
+mazeai.egg-info/SOURCES.txt
+mazeai.egg-info/dependency_links.txt
+mazeai.egg-info/entry_points.txt
+mazeai.egg-info/top_level.txt
