@@ -1,0 +1,7 @@
+README.md
+setup.py
+magictk.egg-info/PKG-INFO
+magictk.egg-info/SOURCES.txt
+magictk.egg-info/dependency_links.txt
+magictk.egg-info/requires.txt
+magictk.egg-info/top_level.txt
