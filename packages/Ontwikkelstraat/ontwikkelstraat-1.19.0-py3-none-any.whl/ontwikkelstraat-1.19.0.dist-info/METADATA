@@ -1,0 +1,28 @@
+Metadata-Version: 2.3
+Name: Ontwikkelstraat
+Version: 1.19.0
+Summary: Education Warehouse knowledge-sharing setup.
+Project-URL: Documentation, https://github.com/educationwarehouse/ontwikkelstraat#readme
+Project-URL: Issues, https://github.com/educationwarehouse/ontwikkelstraat/issues
+Project-URL: Source, https://github.com/educationwarehouse/ontwikkelstraat
+Author-email: Remco Boerma <remco.b@educationwarehouse.nl>, Robin van der Noord <robin.vdn@educationwarehouse.nl>, Romy Schöller <romy.s@educationwarehouse.nl>, Sven Keimpema <sven.k@educationwarehouse.nl>
+License: Copyright (c) 2024 Education Warehouse
+License-File: LICENSE.txt
+Keywords: edwh
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.10
+Requires-Dist: edwh-migrate
+Requires-Dist: edwh[omgeving,plugins]
+Requires-Dist: httpx
+Requires-Dist: pyjwt[crypto]
+Provides-Extra: dev
+Requires-Dist: black; extra == 'dev'
+Requires-Dist: web2py-gluon; extra == 'dev'
+Description-Content-Type: text/markdown
+
+
+!!! note
+    Op dit moment is de read.me leeg. 
+
