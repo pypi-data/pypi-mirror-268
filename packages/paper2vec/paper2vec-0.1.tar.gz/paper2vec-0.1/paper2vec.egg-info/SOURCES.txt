@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+paper2vec/__main__.py
+paper2vec/abc.py
+paper2vec.egg-info/PKG-INFO
+paper2vec.egg-info/SOURCES.txt
+paper2vec.egg-info/dependency_links.txt
+paper2vec.egg-info/requires.txt
+paper2vec.egg-info/top_level.txt
+paper2vec/datadestination/__init__.py
+paper2vec/datadestination/qdrant.py
+paper2vec/datasource/__init__.py
+paper2vec/datasource/neo4j.py
+paper2vec/scripts/qdrant_create.py
+paper2vec/vectorizer/__init__.py
+paper2vec/vectorizer/openai.py
