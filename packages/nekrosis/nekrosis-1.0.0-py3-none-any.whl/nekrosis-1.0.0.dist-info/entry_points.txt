@@ -1,0 +1,2 @@
+[console_scripts]
+nekrosis = nekrosis.core:main
