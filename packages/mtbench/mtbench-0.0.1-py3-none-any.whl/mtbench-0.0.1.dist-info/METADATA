@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mtbench
+Version: 0.0.1
+Home-page: https://github.com/dglai/mtbench
+Author: AWS Shanghai AI Lab
+License: APACHE
+Requires-Python: >=3.7
+Requires-Dist: pydantic
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: boto3
+Requires-Dist: requests[security]
+Requires-Dist: pyyaml
+Requires-Dist: dgl >=2.1a240205
+Requires-Dist: sqlalchemy
+
