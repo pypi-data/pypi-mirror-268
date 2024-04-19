@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+convert_us_to_uk/__init__.py
+convert_us_to_uk/converter.py
+convert_us_to_uk/us_to_uk_trans.csv
+convert_us_to_uk.egg-info/PKG-INFO
+convert_us_to_uk.egg-info/SOURCES.txt
+convert_us_to_uk.egg-info/dependency_links.txt
+convert_us_to_uk.egg-info/entry_points.txt
+convert_us_to_uk.egg-info/top_level.txt
