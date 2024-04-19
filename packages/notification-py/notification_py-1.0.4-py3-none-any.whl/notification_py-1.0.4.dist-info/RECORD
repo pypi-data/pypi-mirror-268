@@ -1,0 +1,11 @@
+notification_py/__init__.py,sha256=rV-tvjGYD59K3O949bVU9aNm__5zDU45-wWkIdhz3j0,450
+notification_py/custom_types.py,sha256=_e0NtFhGsTBoTNhyMDwBhysb5_YM8bDaXvrDxHDkUAQ,1084
+notification_py/main.py,sha256=nUMonEK_BA-8pcFiWCdWM0KcMKOGMmgShBZCtgCFrqA,2409
+notification_py/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+notification_py/services/discord.py,sha256=oyu_vKdS42BcDHB-8Jj7QJ316hyk67Nvz9jcjWEMQ6U,4636
+notification_py/services/email.py,sha256=L3KtZDApWYIydbdmcmBKnOFC6xWC2qET60GEhrWYkPw,2300
+notification_py/services/slack.py,sha256=l6bXnehQQP8r_NA_9BFGfughppoapspG1G6ns9IwvJ0,3886
+notification_py-1.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+notification_py-1.0.4.dist-info/METADATA,sha256=vxKIls2vYJ_1NQBrIpTDKWATTaKYnFN4Fj99qT86n-Q,7127
+notification_py-1.0.4.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+notification_py-1.0.4.dist-info/RECORD,,
