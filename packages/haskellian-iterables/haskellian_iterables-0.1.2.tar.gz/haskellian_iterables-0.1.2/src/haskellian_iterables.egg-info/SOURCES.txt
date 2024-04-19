@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/haskellian/iterables/__init__.py
+src/haskellian/iterables/basics.py
+src/haskellian/iterables/batching.py
+src/haskellian/iterables/curried.py
+src/haskellian/iterables/generators.py
+src/haskellian/iterables/misc.py
+src/haskellian/iterables/nested.py
+src/haskellian/iterables/slicing.py
+src/haskellian/iterables/zipping.py
+src/haskellian_iterables.egg-info/PKG-INFO
+src/haskellian_iterables.egg-info/SOURCES.txt
+src/haskellian_iterables.egg-info/dependency_links.txt
+src/haskellian_iterables.egg-info/requires.txt
+src/haskellian_iterables.egg-info/top_level.txt
