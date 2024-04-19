@@ -1,0 +1,8 @@
+
+
+<input type="{{ widget.type }}" name="{{ widget.name }}"{% if widget.value != None %} value="{{ widget.value }}"{% endif %}{% include "django/forms/widgets/attrs.html" %}>
+<input type="hidden" id="mf-server-key" value="{{ server_key }}">
+<input type="hidden" id="mf-client-id" value="{{ client_id }}">
+<input type="hidden" id="mf-client-secret" value="{{ client_secret }}">
+<input type="hidden" id="mf-meta-mapping" value="{{ meta_mapping }}">
+<input type="hidden" id="mf-locale" value="{{ locale }}">
