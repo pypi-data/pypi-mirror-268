@@ -1,0 +1,52 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "setuptools_scm[toml]>=3.4.3",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/gwtc/_version.py"
+
+
+[project]
+name = "gwtc-tools"
+version = "0.1.2"
+authors = [
+  { name="Chad Hanna", email="chad.hanna@ligo.org" },
+  { name="Alexander Pace", email="alexander.pace@ligo.org" },
+  { name="Divya Singh", email="divya.singh@ligo.org" },
+  { name="Leo Tsukada", email="leo.tsukada@ligo.org" },
+  { name="Patrick Godwin", email="patrick.godwin@ligo.org" },
+  { name="Prathamesh Joshi", email="prathamesh.joshi@ligo.org" },
+  { name="Becca Ewing", email="rebecca.ewing@ligo.org" },
+  { name="Rhiannon Udall", email="rhiannon.udall@ligo.org" },
+]
+description = "A package for gwtc operations, including interactions with gracedb"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "ligo-gracedb",
+    "pyyaml"
+]
+
+[project.scripts]
+    gwtc_test = "gwtc:gwtc_test"
+    gwtc_update_pipeline_gevents = "gwtc:gwtc_update_pipeline_gevents"
+    gwtc_diff = "gwtc:gwtc_diff"
+    gwtc_get_gevent_coinc_files = "gwtc:gwtc_get_gevent_coinc_files"
+    gwtc_create_from_query = "gwtc:gwtc_create_from_query"
+    catalog_pipe_aggregate_data = "catalog_pipeline:aggregate_data"
+
+#[tool.setuptools.dynamic]
+#version = "0.1.0"# {attr = "gwtc._version.__version__"}
+
+[project.urls]
+"Homepage" = "https://git.ligo.org/chad-hanna/gwtc"
+"Bug Tracker" = "https://git.ligo.org/chad-hanna/gwtc/-/issues"

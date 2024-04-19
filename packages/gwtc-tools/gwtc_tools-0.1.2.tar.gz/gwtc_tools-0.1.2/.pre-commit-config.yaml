@@ -1,0 +1,32 @@
+repos:
+-   repo: https://github.com/ambv/black
+    rev: 22.8.0
+    hooks:
+    -   id: black
+        language_version: python3
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-merge-conflict
+    -   id: flake8
+-   repo: https://github.com/codespell-project/codespell
+    rev: v2.2.1
+    hooks:
+    -   id: codespell
+        args:
+        - -L
+        - nd
+        - --skip
+        - '*.html'
+-   repo: local
+    hooks:
+    -   id: flynt
+        name: flynt
+        entry: flynt
+        args:
+        - --fail-on-change
+        types:
+        - python
+        language: python
+        additional_dependencies:
+        - flynt

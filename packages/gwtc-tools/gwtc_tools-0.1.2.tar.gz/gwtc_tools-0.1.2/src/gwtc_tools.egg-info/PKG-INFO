@@ -1,0 +1,212 @@
+Metadata-Version: 2.1
+Name: gwtc-tools
+Version: 0.1.2
+Summary: A package for gwtc operations, including interactions with gracedb
+Home-page: https://git.ligo.org/chad-hanna/gwtc
+Author: Chad Hanna
+Author-email: Chad Hanna <chad.hanna@ligo.org>, Alexander Pace <alexander.pace@ligo.org>, Divya Singh <divya.singh@ligo.org>, Leo Tsukada <leo.tsukada@ligo.org>, Patrick Godwin <patrick.godwin@ligo.org>, Prathamesh Joshi <prathamesh.joshi@ligo.org>, Becca Ewing <rebecca.ewing@ligo.org>, Rhiannon Udall <rhiannon.udall@ligo.org>
+Project-URL: Homepage, https://git.ligo.org/chad-hanna/gwtc
+Project-URL: Bug Tracker, https://git.ligo.org/chad-hanna/gwtc/-/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: ligo-gracedb
+Requires-Dist: pyyaml
+
+# gwtc
+
+A library for creating and interacting with Gravitational Wave Transient Catalogs in gracedb.
+
+[[_TOC_]]
+
+## Quick Start
+
+### installation
+
+*Note these instructions will be improved and we will make this available in Conda*. This is just an example, modify as you see fit.
+
+```
+$ ssh chad.hanna@ldas-pcdev1.ligo-wa.caltech.edu
+(igwn) [chad.hanna@ldas-pcdev1 ~]$ mkdir git
+(igwn) [chad.hanna@ldas-pcdev1 ~]$ cd git
+(igwn) [chad.hanna@ldas-pcdev1 git]$ git clone git@git.ligo.org:chad-hanna/gwtc.git
+(igwn) [chad.hanna@ldas-pcdev1 git]$ export PATH=${PATH}:/home/chad.hanna/.local/bin
+(igwn) [chad.hanna@ldas-pcdev1 git]$ pip install --user ./gwtc
+```
+
+### Create a GWTC table from GraceDB query
+Start with creating a table that mapps each GWTC entry with G event in a database. One can give Gracedb query to specify events to add to the table.
+
+```bash
+gwtc_create_from_query --service-url https://gracedb-test.ligo.org/api/ --proxy-path /path/to/your/proxy --number 4 "far < 9.65e-08 1368921618 .. 1394841618 ADVOK &~EARLY_WARNING"
+```
+The above command queries all the public events (exclusing early warning) during O4a found in GraceDB test instance. One can change the URL to `https://gracedb.ligo.org/api/` to create a GWTC table for the production GraceDB instance.
+
+### Define a new set of g events for a given pipeline with hard reset
+
+**Obviously you need to change your user to be you not chad.hanna - Also, you have to be authorized to access certain features**
+
+```
+(igwn) [chad.hanna@ldas-pcdev1 git]$ ligo-proxy-init chad.hanna
+(igwn) [chad.hanna@ldas-pcdev1 git]$ gwtc_update_pipeline_gevents --reset --proxy-path /tmp/x509up_u40120 --pipeline gstlal gwtc/examples/L1-GSTLAL_AllSky-13*.xml.gz
+INFO:root:Uploaded G592564
+INFO:root:Uploaded G592565
+INFO:root:Uploaded G592566
+INFO:root:Uploaded G592567
+INFO:root:Uploaded G592568
+INFO:root:Uploaded G592569
+INFO:root:associated super event S230522a with gevent G592564
+INFO:root:associated super event S230522n with gevent G592565
+INFO:root:associated super event S230525a with gevent G592566
+INFO:root:associated super event S230529w with gevent G592567
+INFO:root:associated super event S230726cs with gevent G592568
+INFO:root:associated super event S230814me with gevent G592569
+INFO:root:Uploading
+{
+    "S230522a": {
+        "gstlal": "G592564"
+    },
+    "S230522n": {
+        "gstlal": "G592565"
+    },
+    "S230525a": {
+        "gstlal": "G592566"
+    },
+    "S230529w": {
+        "gstlal": "G592567"
+    },
+    "S230726cs": {
+        "gstlal": "G592568"
+    },
+    "S230814me": {
+        "gstlal": "G592569"
+    }
+}
+INFO:root:Created GWTC:
+{
+    "number": "4",
+    "version": 9,
+    "created": "2023-10-24 08:52:33 UTC",
+    "submitter": "chad.hanna@ligo.org",
+    "gwtc_superevents": {
+        "S230522a": {
+            "gstlal": "G592564"
+        },
+        "S230814me": {
+            "gstlal": "G592569"
+        },
+        "S230726cs": {
+            "gstlal": "G592568"
+        },
+        "S230522n": {
+            "gstlal": "G592565"
+        },
+        "S230525a": {
+            "gstlal": "G592566"
+        },
+        "S230529w": {
+            "gstlal": "G592567"
+        }
+    }
+}
+```
+
+### Add a new gevent
+
+```
+(igwn) [chad.hanna@ldas-pcdev1 git]$ gwtc_update_pipeline_gevents --proxy-path /tmp/x509up_u40120 --pipeline gstlal gwtc/examples/H1-GSTLAL_AllSky-1368009034-0.xml.gz
+INFO:root:Uploaded G592577
+INFO:root:associated super event S230513ar with gevent G592577
+INFO:root:Uploading
+{
+    "S230513ar": {
+        "gstlal": "G592577"
+    }
+}
+INFO:root:Created GWTC:
+{
+    "number": "4",
+    "version": 12,
+    "created": "2023-10-24 08:54:43 UTC",
+    "submitter": "chad.hanna@ligo.org",
+    "gwtc_superevents": {
+        "S230513ar": {
+            "gstlal": "G592577"
+        },
+        "S230525a": {
+            "gstlal": "G592573"
+        },
+        "S230522n": {
+            "gstlal": "G592572"
+        },
+        "S230814me": {
+            "gstlal": "G592576"
+        },
+        "S230529w": {
+            "gstlal": "G592574"
+        },
+        "S230522a": {
+            "gstlal": "G592571"
+        },
+        "S230726cs": {
+            "gstlal": "G592575"
+        }
+    }
+}
+```
+
+### Calculate the diff
+
+```
+(igwn) [chad.hanna@ldas-pcdev1 git]$ gwtc_diff 11 12
+INFO:root:Calculating catalog diff from versions 11 to 12
+INFO:root:
+- new s events in version 12: ['S230513ar']
+- deleted s events in version 12: []
+- changed s events in version 12:
+```
+
+### Retrieve g events
+
+```
+(igwn) [chad.hanna@ldas-pcdev1 git]$ gwtc_get_gevent_coinc_files --pipeline gstlal --proxy-path /tmp/x509up_u40120 --version 12
+INFO:root:Retrieving g event G592577 for s event S230513ar and pipeline gstlal
+	...saving as H1-GSTLAL_G592577-1368009034-0.xml
+INFO:root:Retrieving g event G592573 for s event S230525a and pipeline gstlal
+	...saving as L1-GSTLAL_G592573-1369017515-0.xml
+INFO:root:Retrieving g event G592572 for s event S230522n and pipeline gstlal
+	...saving as L1-GSTLAL_G592572-1368804652-0.xml
+INFO:root:Retrieving g event G592576 for s event S230814me and pipeline gstlal
+	...saving as L1-GSTLAL_G592576-1376089759-0.xml
+INFO:root:Retrieving g event G592574 for s event S230529w and pipeline gstlal
+	...saving as L1-GSTLAL_G592574-1369419318-0.xml
+INFO:root:Retrieving g event G592571 for s event S230522a and pipeline gstlal
+	...saving as L1-GSTLAL_G592571-1368783503-0.xml
+INFO:root:Retrieving g event G592575 for s event S230726cs and pipeline gstlal
+	...saving as L1-GSTLAL_G592575-1374366598-0.xml
+```
+
+```
+(igwn) [chad.hanna@ldas-pcdev1 git]$ ls -ltrh *.xml
+-rw-rw-r-- 1 chad.hanna chad.hanna 6.5K Oct 24 02:12 H1-GSTLAL_G592577-1368009034-0.xml
+-rw-rw-r-- 1 chad.hanna chad.hanna 6.5K Oct 24 02:12 L1-GSTLAL_G592573-1369017515-0.xml
+-rw-rw-r-- 1 chad.hanna chad.hanna 6.5K Oct 24 02:12 L1-GSTLAL_G592572-1368804652-0.xml
+-rw-rw-r-- 1 chad.hanna chad.hanna 6.5K Oct 24 02:12 L1-GSTLAL_G592576-1376089759-0.xml
+-rw-rw-r-- 1 chad.hanna chad.hanna 6.5K Oct 24 02:12 L1-GSTLAL_G592574-1369419318-0.xml
+-rw-rw-r-- 1 chad.hanna chad.hanna 6.5K Oct 24 02:12 L1-GSTLAL_G592571-1368783503-0.xml
+-rw-rw-r-- 1 chad.hanna chad.hanna 6.5K Oct 24 02:12 L1-GSTLAL_G592575-1374366598-0.xml
+```
+
+### See latest catalog on gracedb
+
+https://gracedb-test.ligo.org/api/gwtc/4/latest/
+
+### See previous version on gracedb
+
+https://gracedb-test.ligo.org/api/gwtc/4/1/
+
+
+
