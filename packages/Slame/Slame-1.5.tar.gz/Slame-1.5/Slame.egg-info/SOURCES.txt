@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+Slame/__init__.py
+Slame/menu.py
+Slame/slame.py
+Slame.egg-info/PKG-INFO
+Slame.egg-info/SOURCES.txt
+Slame.egg-info/dependency_links.txt
+Slame.egg-info/requires.txt
+Slame.egg-info/top_level.txt
