@@ -1,0 +1,24 @@
+name: Deploy Komodo AI Website Container
+
+on:
+  push:
+    branches: [ main, dev-* ]
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: Set tag
+        default: latest
+
+        
+jobs:
+  pypi-publish:
+    uses: ./.github/workflows/publish-pypi.yml
+    with:
+      package_name: komodo-sdk
+    secrets: inherit
+
+  private-pypi-publish:
+    uses: ./.github/workflows/publish-private-pypi.yml
+    with:
+      package_name: komodo-sdk
+    secrets: inherit

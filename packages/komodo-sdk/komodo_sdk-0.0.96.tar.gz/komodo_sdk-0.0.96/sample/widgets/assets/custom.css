@@ -1,0 +1,78 @@
+.container-padding-margin {
+    padding: 5px 5px;
+    margin: 5px 5px;
+}
+
+.json-display pre {
+    border: 1px solid;
+    padding: 10px;
+}
+
+.grid-padding {
+    padding: 50px; /* Adjust padding as needed */
+}
+
+.editor_controls {
+    display: none;
+}
+
+#response-output-dasher, #response-output-dasher-v2 {
+    border: 1px solid;
+    padding: 30px;
+}
+
+
+.response p {
+    margin: 20px 0;
+}
+.dasher-input, .dasher-input *  {
+    border-radius: 10px;
+}
+
+.dasher-input, .dasher-input svg  {
+    border-radius: 10px;
+}
+
+.response h1,
+.response h2,
+.response h3,
+.response h4,
+.response h5,
+.response h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.dasher-input {
+    margin-top: 20px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid;
+    box-shadow: 5px 5px 5px;
+}
+
+.dasher-textarea {
+    width: 100%;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.dasher-output {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    margin-bottom: 200px;
+}
+
+pre {
+    border: 1px solid;
+    padding: 10px;
+    white-space: pre-wrap;
+}
