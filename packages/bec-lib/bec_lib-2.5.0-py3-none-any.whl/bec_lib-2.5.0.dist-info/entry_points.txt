@@ -1,0 +1,5 @@
+[console_scripts]
+bec-channel-monitor = bec_lib:channel_monitor_launch
+
+[pytest11]
+bec_lib_fixtures = bec_lib.tests.fixtures
