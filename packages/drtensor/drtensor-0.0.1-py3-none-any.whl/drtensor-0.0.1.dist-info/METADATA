@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: drtensor
+Version: 0.0.1
+Summary: Pytorch modeling easier
+Author-email: raynardj <b2ray2c@gmail.com>
+Project-URL: homepage, https://github.com/raynardj/drtensor
+Project-URL: repository, https://github.com/raynardj/drtensor
+Keywords: pytorch,debug,tensor
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Doctor Tensor 🩺
+
+```
+pip install drtensor
+```
+
+> Debug tool to help pytorch modeling
+
+## 📦 Installation
+We assume you have the pytorch already installed. Or this library doesn't serve any purpose.
+
+```bash
+pip install drtensor
+```
+
+## 🚀 Usage
+### With clause
+```python
+from drtensor.doctor import DrTensor
+
+
+model = reset_model()
+
+dr_tensor = DrTensor(resnet=model)
+
+with dr_tensor:
+    y_ = model(torch.randn(1, 3, 224, 224))
+
+# check the logs
+print(dr_tensor.logs[-5:])
+```
