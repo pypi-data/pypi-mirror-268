@@ -1,0 +1,5 @@
+pygments
+numpy
+climax
+tqdm
+coloredlogs
