@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: rusvm
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Keywords: smo,svm,machine-learning
+Author: Nico Strasdat <nstrasdat@gmail.com>
+Author-email: Nico Strasdat <nstrasdat@gmail.com>
+License: AGPL-3.0-or-later
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/wotzlaff/rusvm-python
+
+# rusvm
+A Python interface to [rusvm](https://github.com/wotzlaff/rusvm).
+
+## Build
+```
+maturin develop --release
+```
