@@ -1,0 +1,9 @@
+alphabase
+peptdeep
+alpharaw
+
+[cli]
+click
+
+[gui]
+streamlit

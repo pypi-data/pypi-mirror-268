@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pglyco"
+version = "0.0.1"
+dependencies = [
+  "alphabase",
+  "peptdeep",
+  "alpharaw",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Wen-Feng Zeng", email = "jalew.zwf@qq.com"},
+]
+maintainers = [
+  {name = "Wen-Feng Zeng", email = "jalew.zwf@qq.com"}
+]
+description = "pGlyco"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["mass spec", "glycosylation", "glycoproteomics", "proteomics"]
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+gui = ["streamlit"]
+cli = [
+  "click",
+]
+
+[project.urls]
+Homepage = "https://fennomix.com"
+Documentation = "https://readthedocs.org"
+Repository = "https://github.com/FennOmix/pGlyco.git"
+"Bug Tracker" = "https://github.com/FennOmix/pGlyco/issues"
+Changelog = "https://github.com/FennOmix/pGlyco/blob/main/CHANGELOG.md"
+
+[project.scripts]
+pglyco = "pglyco:main_cli"
+
+[project.gui-scripts]
+pglyco-gui = "pglyco:main_gui"
+
+[project.entry-points."pdeepsite"]
+pglyco = "pglyco:main"
+
+[tool.setuptools]
+py-modules = []

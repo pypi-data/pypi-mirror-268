@@ -1,0 +1,8 @@
+[console_scripts]
+pglyco = pglyco:main_cli
+
+[gui_scripts]
+pglyco-gui = pglyco:main_gui
+
+[pdeepsite]
+pglyco = pglyco:main

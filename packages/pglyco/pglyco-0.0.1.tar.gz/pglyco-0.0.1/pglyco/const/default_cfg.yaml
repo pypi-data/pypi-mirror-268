@@ -1,0 +1,63 @@
+pGlyco_type: pGlycoDB
+aaini: aa.ini
+glycoini: glyco.ini
+modini: modification.ini
+glycan:
+  glycan_type: N-Glycan
+  glycan_cores: 
+  - N(1)
+  - N(2)
+  - N(2)H(1)
+  - N(2)H(2)
+  - N(2)H(3)
+  - N(1)F(1)
+  - N(2)F(1)
+  gp_marker_glyco: N
+  glycosylation_sites: J
+  min_allowed_core: 2
+  marker_least_relative_intensity: 0.05
+  pGlycoDB:
+    glycan_db: pGlycoHuman.gdb
+    glycan_random_decoy: 1
+    glycan_fix_mod: 
+    - A~G
+    glycan_var_mod: 
+    - N~PG
+    - H~pH
+    max_var_mod_on_glycan: 1
+    max_glycan_db_size: 100000
+  pGlycoNovo:
+    allowed_max_glyco_gap: 3
+    glycos:
+      H: 20
+      N: 7
+      F: 5
+      A: 4
+protein:
+  fasta: C:/fasta/xxx.fasta.N2J
+  enzyme: "Trypsin KR _ C"
+  digestion: not_support_in_cur_version
+  max_miss_cleave: 2
+  max_peptide_len: 40
+  min_peptide_len: 6
+  max_peptide_weight: 4000
+  min_peptide_weight: 600
+  protein_fix_mod: 
+  - Carbamidomethyl@C
+  protein_var_mod: 
+  - Oxidation@M
+  max_var_mod_on_peptide: 3
+search:
+  fragmentation_type: HCD
+  fragmentation_type_options: [HCD, ETHCD]
+  precursor_tolerance: 5.0
+  precursor_tolerance_type: ppm
+  fragment_tolerance: 20.0
+  fragment_tolerance_type: ppm
+  ms_file_type: mgf
+  ms_files:
+  - "c:/data/1_HCDFT.mgf"
+  - "c:/data/2_HCDFT.mgf"
+  top_n_peaks: 300
+  output_top_n: 5
+  output_dir: "c:/data/pGlycoOutput"
