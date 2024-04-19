@@ -1,0 +1,15 @@
+marketing_urls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+marketing_urls/admin.py,sha256=5hU46X-0eEqMbF5ojzh8S9uWlP4Iz2XVXrHN4rNLe6c,514
+marketing_urls/models.py,sha256=L3cY-coTvFFqyoYmRAkPe2WfnRJ0q70GG8FC7ZYCnJo,975
+marketing_urls/tests.py,sha256=2eZhS3WX4n0KlfymeDwnku3cr0A8dyqM8OZxebVlo9E,1226
+marketing_urls/urls.py,sha256=9lGMS4vD2eOwiQBqsc5QLEFQhGKQAX8I8nZQmVO64Vc,161
+marketing_urls/utils.py,sha256=hk6tjccuIKKnWZUs9EVaiWgcQQACQKYdwodJWO8DFj0,524
+marketing_urls/views.py,sha256=1PgUs9R1v9FSstmtEN-uBg9xqUnhiWbNQThDZHvZfIc,1114
+marketing_urls/migrations/0001_initial.py,sha256=vxWcYhOzkXDVGH-Flmfw0RHAH4-Elj06O6OQHW4iqQU,1319
+marketing_urls/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_marketing_urls-1.0.0.dist-info/LICENSE,sha256=c6EE5mjF0t0GZGqFUB8Xyxk3gQ83f9DKVtS7G--o7Uc,1063
+django_marketing_urls-1.0.0.dist-info/METADATA,sha256=oPPj--DMBB5h_wpFaGq3GM3KUggPt_ksAJwmYj36o7o,1946
+django_marketing_urls-1.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+django_marketing_urls-1.0.0.dist-info/top_level.txt,sha256=yzO6QcVeeUrHmWZ-bxPBPJqU9IpDiZYsg7Nj-l6UK30,15
+django_marketing_urls-1.0.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+django_marketing_urls-1.0.0.dist-info/RECORD,,
