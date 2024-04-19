@@ -1,0 +1,1 @@
+recursive-include magictk res.* *.py *.ico
