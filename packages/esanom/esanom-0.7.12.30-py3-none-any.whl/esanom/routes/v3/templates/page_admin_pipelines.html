@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main_title %}page_admin_pipelines{% endblock %}
+
+{% block main_content %}
+
+{% if tdata["rows"]|length>0 %}
+<p class="lead">PIPELINES</p>
+{% include( "inc_content_pipelines.html" ) %}
+{% else %}
+<div class="badge bg-warning">No pipelines found</div>
+{% endif %}
+
+{% endblock main_content %}
+

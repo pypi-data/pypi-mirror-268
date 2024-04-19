@@ -1,0 +1,45 @@
+
+<div>
+<button type="button" class="btn btn-primary" hx-get="{{url_for('.hx_admin_account_create')}}" hx-target="#hx_admin_nav" hx-swap="innerHTML">Create Account</button>
+</div>
+
+{% if tdata["rows"]|length>0 %}
+
+<table>
+
+<tr>
+{% for column in tdata["columns"] %}
+{% if column!="uid" %}
+    <td><b>{{ column|upper }}</b></td>
+{% else %}
+    <td></td>
+{% endif %}
+{% endfor %}
+</tr>
+
+{% for row in tdata["rows"] %}
+<tr>
+
+{% for column in tdata["columns"] %}
+
+<!-- -->
+{% if column=="uid" %}
+    <td><a hx-get="{{ url_for('.hx_admin_account',account_uid=row['uid']) }}" hx-target="#hx_admin_nav" href="#">👁</a></td>
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+<!-- -->
+
+{% endfor %}
+
+
+</tr>
+{% endfor %}
+
+
+</table>
+
+{% else %}
+No accounts found!
+{% endif %}
+

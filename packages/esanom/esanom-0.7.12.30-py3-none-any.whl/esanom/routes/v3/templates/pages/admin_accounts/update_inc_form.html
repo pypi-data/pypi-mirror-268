@@ -1,0 +1,56 @@
+
+
+
+{% if tdata['row']['enable']==1 %}
+{% set enable_checked='checked' %}
+{% else %}
+{% set enable_checked='' %}
+{% endif %}
+
+{% if tdata['row']['email_confirmed']==1 %}
+{% set email_confirmed_checked='checked' %}
+{% else %}
+{% set email_confirmed_checked='' %}
+{% endif %}
+
+<form id="admin_accounts_update" hx-post="{{url_for('.hx_admin_accounts_update',uid=tdata['row']['uid'])}}" hx-target="#hx-results">
+
+
+    <div class="mb-3 col-md-4">
+        <label for="form_email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="form_email" name="email" value="{{tdata['row']['email']}}">
+    </div>
+
+    <div class="mb-3 col-md-4">
+        <label for="form_password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="form_password" name="[password]">
+    </div>
+
+    <div class="mb-3 col-md-4">
+        <label for="form_name" class="form-label">Name</label>
+        <input class="form-control" id="form_name" name="name" value="{{tdata['row']['name']}}">
+    </div>
+
+    <div class="mb-3 col-md-4">
+        <label for="form_apimax" class="form-label">API Max</label>
+        <input class="form-control" id="form_apimax" name="api_max" value="{{tdata['row']['api_max']}}">
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="1" id="account_enable" name="[enable]" {{enable_checked}}>
+        <label class="form-check-label" for="account_enable">Enable</label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="1" id="account_email_confirmed" name="[email_confirmed]" {{email_confirmed_checked}}>
+        <label class="form-check-label" for="account_email_confirmed">Email confirmed</label>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">UPDATE</button>
+
+</form>
+
+<div id="hx-results"></div>
+
