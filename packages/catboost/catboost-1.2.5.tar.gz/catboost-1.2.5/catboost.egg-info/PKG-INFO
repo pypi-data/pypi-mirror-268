@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: catboost
+Version: 1.2.5
+Summary: CatBoost Python Package
+Home-page: https://catboost.ai
+Author: CatBoost Developers
+License: Apache License, Version 2.0
+Project-URL: GitHub, https://github.com/catboost/catboost
+Project-URL: Bug Tracker, https://github.com/catboost/catboost/issues
+Project-URL: Documentation, https://catboost.ai/docs/
+Project-URL: Benchmarks, https://catboost.ai/#benchmark
+Keywords: catboost
+Platform: Linux
+Platform: Mac OSX
+Platform: Windows
+Platform: Unix
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: widget
+
+CatBoost is a fast, scalable, high performance gradient boosting on decision trees library. Used for ranking, classification, regression and other ML tasks.

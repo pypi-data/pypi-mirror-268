@@ -1,0 +1,12 @@
+graphviz
+matplotlib
+numpy>=1.16.0
+pandas>=0.24
+scipy
+plotly
+six
+
+[widget]
+traitlets
+ipython
+ipywidgets<9.0,>=7.0
