@@ -1,0 +1,55 @@
+from typing import Dict, List
+
+def initialize_ipython(config:Dict[str,List[str]]):
+    
+    features = config.get('features', [])
+    do_vars = 'vars' in features
+    do_magic = 'magic' in features
+    do_format = 'format' in features
+    if do_vars:
+        from IPython import get_ipython
+        ipython = get_ipython()
+        
+        # Perform imports and assign them to variables
+        import lusid as lu
+        import lusid.models as lm
+        import lusid_express.apis as apis
+
+        # Assign the modules to the IPython user namespace
+        ipython.user_ns['lu'] = lu
+        ipython.user_ns['lm'] = lm
+        ipython.user_ns['apis'] = apis
+    if do_magic:
+        from IPython.core.magic import register_line_cell_magic
+        import os
+        from lumipy.client import Client
+        @register_line_cell_magic
+        def luminesce(line, cell=None):
+            query = cell if cell is not None else line
+            lm_client = Client(api_secrets_filename=os.environ.get('FBN_SECRETS_PATH',None))
+            df = lm_client.query_and_fetch(query)
+            return df
+
+        def load_ipython_extension(ipython):
+            ipython.register_magic_function(luminesce, 'line_cell', 'luminesce')
+
+        del luminesce
+        
+    if do_format:
+        from lusid_express.display import render_html,STYLES
+        for k in STYLES:
+            render_html(STYLES[k])
+
+
+    
+try:
+    from lusid_express.config import load
+    config = load()
+    if config is None:
+        pass
+    else:
+        initialize_ipython(config)
+except Exception as e:
+    print(e)
+    pass
+
