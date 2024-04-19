@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: pxe
+Version: 0.1.0
+Summary: A simple command line utility to execute commands in parallel.
+Author: Denis Laprise
+Author-email: git@2ni.net
+License: BSD
+Keywords: parallel execution command line
+License-File: LICENSE
+
