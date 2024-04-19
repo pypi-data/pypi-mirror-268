@@ -1,0 +1,7 @@
+importlib-metadata
+meshtastic
+paho-mqtt
+pypubsub
+tomlkit
+
+[testing]
