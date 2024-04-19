@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+bin/mpd_what
+mpd_what.egg-info/PKG-INFO
+mpd_what.egg-info/SOURCES.txt
+mpd_what.egg-info/dependency_links.txt
+mpd_what.egg-info/requires.txt
+mpd_what.egg-info/top_level.txt

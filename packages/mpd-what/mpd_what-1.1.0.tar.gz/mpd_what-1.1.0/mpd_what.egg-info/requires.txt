@@ -1,0 +1,8 @@
+python-mpd2
+pyyaml
+pycurl
+latest-user-agents
+python-magic
+python3-discogs-client
+pylast
+urllib
