@@ -1,0 +1,15 @@
+codestarter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codestarter/cli.py,sha256=BrEx-phaWj3zhK5z4GwTqIudK9k6gu0w-G_sq6XYyPg,1418
+codestarter/executor.py,sha256=8P2THH2DtcUzesTtaWWGegPtTLWm_bCbn3ZcRYe62Ds,11885
+codestarter/utils.py,sha256=3rUvuXmao5vOPMuQox9F-blA2Oe2gtdfiMIPWb3i5as,234
+codestarter/dependency_resolvers/__init__.py,sha256=JFenpmLg3Nhek8Hr1Smanxw1P02LtQeubyf1Yn6fm1U,825
+codestarter/dependency_resolvers/requirements_resolver.py,sha256=pAhDTAbv4_oGy60z04Yc3smtbEG3dtOzcht-pbYACS8,1762
+codestarter/dependency_resolvers/utils.py,sha256=gwKsZYgindxg5jukyZFel0hs0EkG2McbGl_jQdWOlV0,401
+codestarter/file/__init__.py,sha256=BVO0ZrESa06iUXrs8Pyztwq21DP5Y3qjuGoRmDC_nyg,663
+codestarter/file/local.py,sha256=uP9h7XMfVjXfdkeh4d45ASEN4qcWsuqL_hZSwIRNNkU,1826
+codestarter/file/utils.py,sha256=JkPUGP03ySoTjEU1aRfenj5EpUE3dqYmyIGiYVmMbmI,3213
+codestarter-0.0.1.dist-info/METADATA,sha256=ysdha-MrljTQGU9eX2Vm2WFx1PWsnuIA46NmtBzgbdc,6483
+codestarter-0.0.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+codestarter-0.0.1.dist-info/entry_points.txt,sha256=Z5zT8LGmI6bpBHu71CKOyu_HP1csW002XuZiqRVs0js,52
+codestarter-0.0.1.dist-info/licenses/LICENSE,sha256=S45n1PcBjLyEQID7i9TSBkHZrxH2t8fY4AAEm0fRJHE,10932
+codestarter-0.0.1.dist-info/RECORD,,
