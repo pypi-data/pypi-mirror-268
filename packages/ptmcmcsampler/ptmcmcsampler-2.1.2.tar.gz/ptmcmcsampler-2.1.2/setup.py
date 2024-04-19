@@ -1,0 +1,32 @@
+from setuptools import setup
+
+setup(
+    name="ptmcmcsampler",
+    author="Justin A. Ellis, Rutger van Haasteren",
+    author_email="rutger@vhaasteren.com",
+    maintainer="Aaron D. Johnson, Paul T. Baker, Ken D. Olum",
+    packages=["PTMCMCSampler"],
+    package_dir={"PTMCMCSampler": "PTMCMCSampler"},
+    url="https://github.com/nanograv/PTMCMCSampler",
+    license="MIT",
+    zip_safe=False,
+    description="Parallel tempering MCMC sampler written in Python",
+    long_description=open("README.md").read() + "\n\n" + "---------\n\n" + open("HISTORY.md").read(),
+    long_description_content_type="text/markdown",
+    package_data={"": ["README.md", "HISTORY.md"]},
+    install_requires=["numpy>=1.16.3", "scipy>=1.2.0"],
+    python_requires=">=3.8",
+    extras_require={"mpi": ["mpi4py>=3.0.3"]},
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+    ],
+)
