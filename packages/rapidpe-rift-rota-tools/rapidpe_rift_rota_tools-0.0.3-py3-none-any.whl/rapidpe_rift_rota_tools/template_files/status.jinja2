@@ -1,0 +1,86 @@
+<html>
+<head>
+  {% if not additional_data['status_complete'] %}
+  <meta http-equiv="refresh" content="15">
+  {% endif %}
+  <link rel="stylesheet" href="status_style.css">
+</head>
+<body>
+  <header>
+    <h1> {{ additional_data["event_id"] }} </h1>
+  </header>
+  {% if additional_data["status_complete"] %}
+  <p class="statuspage"> <center> Status Page: Ready  </center></p>
+  {% else %}
+  <p class="statuspage"> <center> Status Page: Updating  </center></p>
+  {% endif %}
+  <p class="{{ additional_data['job_complete'] | replace(' ', '') }}">{{ additional_data['job_complete'] }}</p>
+  <p> <center> run dir: {{ additional_data["run_dir"] }}  </center></p>
+  <p> <center>{{ additional_data['pastro_ready']  }} </center> </p>
+  <div class="container" >
+    <h2> Status Summary </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Iteration</th>
+          <th>IDLE</th>
+          <th>RUN</th>
+          <th>HOLD</th>
+          <th>FAIL</th>
+          <th>SUCCESS</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for iter in status_summary['TOTAL'].keys() %}
+        <tr>
+          <td><a href="#table{{iter}}">{{ iter }}</a></td>
+          <td class="status-IDLE">{{ status_summary['IDLE'][iter] }}</td>
+          <td class="status-RUN">{{ status_summary['RUN'][iter] }}</td>
+          <td class="status-HOLD">{{ status_summary['HOLD'][iter] }}</td>
+          <td class="status-FAIL">{{ status_summary['FAIL'][iter] }}</td>
+          <td class="status-SUCCESS">{{ status_summary['SUCCESS'][iter] }}</td>
+          <td >{{ status_summary['TOTAL'][iter] }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <h2> Status </h2>
+    {% for iter in status_summary["TOTAL"].keys() %}
+    <button type="button" class="collapsible">  <h3 id="table{{iter}}">   Iteration Level: {{ iter }}   </h3></button>
+    <div class="content">
+        <table>
+      <thead>
+        <tr>
+          <th>Mass Point</th>
+          <th>Job ID</th>
+          <th>Margll</th>
+          <th>Status</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for unidue_id, data in status.items() %}
+           {% if data["iteration_level"] == iter %}
+            <tr>
+              <td>{{ data["mass_point_id"] }}</td>
+              <td>{{ data["process_id"] }}</td>
+              {% if "margll" in data.keys() %}
+              	<td>{{ data["margll"] }}</td>
+              {% else %}
+              	<td>  -- </td>
+              {% endif %}
+	      <td class="status-{{ data['node_status'] | replace(' ', '') }}">{{ data['node_status'] }}</td>
+              <td class="message-column">{{ data["note"] }}</td>
+    
+            </tr>
+           {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+   </div>
+   {% endfor %}
+  </div>
+<script src="status_style.js"></script>
+</body>
+</html>

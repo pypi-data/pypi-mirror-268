@@ -1,0 +1,6 @@
+{
+    "production": "/home/emfollow/.cache/rapidpe",
+    "playground": "/home/emfollow-playground/.cache/rapidpe",
+    "dev": "/home/emfollow-dev/.cache/rapidpe",
+    "test": "/home/emfollow-test/.cache/rapidpe"
+}
