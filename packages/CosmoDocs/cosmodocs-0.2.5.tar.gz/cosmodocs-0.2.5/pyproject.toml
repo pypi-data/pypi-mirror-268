@@ -1,0 +1,27 @@
+[project]
+name = "CosmoDocs"
+version = "0.2.5"
+description = "A file based documentation generator for Python projects."
+authors = [
+    { name = "Thiago Santa Clara", email = "strovsk@outlook.com" },
+]
+dependencies = []
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+package-type = "library"
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.4.3",
+]
