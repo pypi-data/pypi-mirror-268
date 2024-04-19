@@ -1,0 +1,10 @@
+numpy>=1.21
+lenstronomy==1.5.1
+scipy>=1.4.1
+matplotlib==3.3.4
+fast_histogram
+tqdm
+pycbc
+jax
+jaxlib==0.4.20
+extension-helpers
