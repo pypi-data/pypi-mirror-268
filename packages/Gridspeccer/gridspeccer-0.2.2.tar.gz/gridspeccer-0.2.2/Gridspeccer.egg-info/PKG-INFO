@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Gridspeccer
+Version: 0.2.2
+Summary: Helper scripts to organize multi-figure plots.
+Home-page: https://github.com/gridspeccer/gridspeccer
+Author: Oliver Breitwieser
+Author-email: oliver.breitwieser@kip.uni-heidelberg.de
+License: GNUv3
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: matplotlib
+Requires-Dist: scikit-image
