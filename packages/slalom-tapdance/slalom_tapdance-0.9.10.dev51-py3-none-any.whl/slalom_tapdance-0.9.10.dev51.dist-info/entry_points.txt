@@ -1,0 +1,3 @@
+[console_scripts]
+slalom-tapdance=tapdance.cli:main
+
