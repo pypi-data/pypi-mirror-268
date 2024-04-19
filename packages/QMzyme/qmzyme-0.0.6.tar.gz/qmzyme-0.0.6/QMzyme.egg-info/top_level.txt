@@ -1,0 +1,5 @@
+QMzyme
+Tutorials
+devtools
+dist
+tests
