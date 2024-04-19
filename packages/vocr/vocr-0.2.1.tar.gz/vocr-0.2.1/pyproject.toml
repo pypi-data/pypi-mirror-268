@@ -1,0 +1,176 @@
+# ========== BUILD ==========
+[build-system]
+requires = ["hatch"]
+build-backend = "hatchling.build"
+
+# ========== PROJECT ==========
+[project]
+name = "vocr"
+description = "Vietnamese OCR"
+readme = "README.md"
+requires-python = ">=3.8, <4"
+license = { text = "MIT License" }
+authors = [{ name = "AbsoluteWinter" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    # "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+]
+dependencies = [
+    "click>=8.0.0",
+    "joblib",
+    "opencv-python",
+    "pillow",
+    "pytesseract",
+    "tqdm",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/AbsoluteWinter/vocr"
+Repository = "https://github.com/AbsoluteWinter/vocr"
+Issues = "https://github.com/AbsoluteWinter/vocr/issues"
+
+[project.optional-dependencies]
+dev = ["hatch", "pytest>=7.0.0"]
+
+[project.scripts]
+vocr = "vocr.__main__:main"
+
+# ========== TOOL ==========
+[tool.hatch.version]
+path = "src/vocr/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src", "tests"]
+exclude = ["tests/output"]
+
+[tool.hatch.envs.default]
+dependencies = ["coverage[toml]", "pytest-cov", "pytest"]
+description = """
+Default environment
+
+Main cmd:
+- test: Run test
+- cov : Show coverage report
+- cov2: More coverage report
+"""
+
+[tool.hatch.envs.default.scripts]
+test = "pytest {args:tests}"                                        # use this
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = ["- coverage combine", "coverage report"]
+cov = ["test-cov", "cov-report"]                                    # use this
+cov2 = "pytest --cov-report=term-missing --cov=absfuyu --cov=tests" # use this
+
+[tool.hatch.envs.checker]
+dependencies = ["mypy>=1.0.0", "ruff"]
+detached = true
+skip-install = true
+description = """
+Lint and type check
+"""
+
+[tool.hatch.envs.checker.scripts]
+check = ["ruff check", "mypy --install-types --non-interactive {args:src/vocr}"]
+fmt = "ruff format"
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "sphinx>=7.0.0",
+    "sphinx_rtd_theme",
+    "sphinx_copybutton",
+    "myst-parser",       # Markdown parser
+    "sphinx-autobuild",  # Live preview build
+    "watchfiles",        # sphinx-autobuild support library
+]
+description = """
+Build documentation
+
+Main cmd:
+- build: Build documentation
+- live: Live preview of documentation
+"""
+
+[tool.hatch.envs.docs.scripts]
+build = [
+    "sphinx-apidoc -o docs/ src/vocr", # Generate
+    "sphinx-build docs docs/build",    # Build
+]
+live = [
+    "sphinx-apidoc -o docs/ src/vocr",  # Generate
+    "sphinx-autobuild docs docs/build", # Live preview
+]
+
+[tool.hatch.envs.buildwindows]
+dependencies = ["pyinstaller"]
+description = "Build .exe for windows"
+
+[tool.hatch.envs.buildwindows.scripts]
+build = "pyinstaller --noconfirm --onefile --console --name=vocr --clean src/vocr/__main__.py"
+
+[tool.hatch.envs.workflow]
+detached = true
+skip-install = true
+description = """
+Package workflow
+"""
+
+[tool.hatch.envs.workflow.scripts]
+prebuilt = [
+    "hatch run default:test",  #
+    "hatch run checker:fmt",
+    "hatch run checker:check",
+]
+build = [
+    "prebuilt",    #
+    "hatch clean",
+    "hatch build",
+    # "hatch run buildwindows:build",
+]
+release = [
+    "build",         #
+    "hatch publish",
+]
+
+[tool.pytest.ini_options]
+addopts = ["--strict-markers", "--maxfail=1"]
+markers = ["test_this: Select desire test to test"]
+
+[tool.mypy]
+mypy_path = "src"
+check_untyped_defs = true
+ignore_missing_imports = true
+no_implicit_optional = true
+show_error_codes = true
+strict_equality = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+no_implicit_reexport = true
+# disallow_any_generics = true
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+target-version = "py38"
+include = ["pyproject.toml", "src/**", "tests/**"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+exclude = ["*.json", "*.pkl", "*.jpg", "*.png", "*.jpeg", "*.txt"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "B", "Q"]
+unfixable = ["B"]
+exclude = ["*.json", "*.pkl", "*.jpg", "*.png", "*.jpeg", "*.txt"]
