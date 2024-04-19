@@ -1,0 +1,11 @@
+package_switch.py
+saplinkpackage/LicenseLock.pyd
+saplinkpackage/SapAUTO.pyd
+saplinkpackage/SapPLUGIN.pyd
+saplinkpackage/SapREPORT.pyd
+saplinkpackage/__init__.py
+saplinkpackage.egg-info/PKG-INFO
+saplinkpackage.egg-info/SOURCES.txt
+saplinkpackage.egg-info/dependency_links.txt
+saplinkpackage.egg-info/requires.txt
+saplinkpackage.egg-info/top_level.txt
