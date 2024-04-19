@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: roblib
+Version: 2.0
+Summary: Python Distribution Utilities
+Home-page: https://www.ensta-bretagne.fr/jaulin/
+Author: Luc Jaulin
+Author-email: lucjaulin@gmail.com 
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
