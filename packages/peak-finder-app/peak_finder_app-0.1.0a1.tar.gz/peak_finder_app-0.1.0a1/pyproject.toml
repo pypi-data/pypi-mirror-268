@@ -1,0 +1,95 @@
+[tool.poetry]
+name = "peak-finder-app"
+version = "0.1.0-alpha.1"
+license = "MIT"
+authors = ["Mira Geoscience <support@mirageoscience.com>"]
+description = "Peak Finder App"
+repository = "https://github.com/MiraGeoscience/peak-finder-app"
+homepage = "https://mirageoscience.com"
+readme = "README.rst"
+packages = [
+     { include = "peak_finder" },
+     { include = "peak_finder-assets" },
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Natural Language :: English",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10, <3.11"
+numpy = "~1.23.5"  # also in geoapps-utils and geoh5py
+geoh5py = {version = "~0.9.0-alpha.3", source = "pypi", allow-prereleases = true}  # also in geoapps-utils
+geoapps-utils = {version = "~0.3.0-alpha.3", source = "pypi", allow-prereleases = true}
+#geoapps-utils = { url = "https://github.com/MiraGeoscience/geoapps-utils/archive/refs/heads/release/0.3.0.zip#sha256=" }
+curve-apps = {version = "~0.1.0-alpha.1", source = "pypi", allow-prereleases = true}
+dash-daq = {version = "~0.5.0"}
+dask = {version = "2022.10.0", extras = ["distributed"]}
+jupyter-server = {version = "~1.23.6"}
+notebook = {version = "~6.5.3"}
+scipy = {version = "~1.10.1"}
+tqdm = {version = "^4.64.0"}
+
+## indirect dependencies, forcing them here for installation through Conda not pip
+Pillow = "^10.0.1"  # from geoh5py
+h5py = "~3.8.0"  # from geoh5py
+dash = {version = "~2.12", optional = true}  # from geoapps-utils
+plotly = {version = "~5.13.1"}  # from geoapps-utils
+pyqtwebengine = {version = "~5.15", optional = true}  # from geoapps-utils
+pyside2 = {version = "~5.15", optional = true}  # from geoapps-utils
+
+## about pip dependencies
+# to be specified to work with conda-lock
+# - from PyPI: my_package = { version = "1.2.3", source = "pypi" }
+# - from URL:
+#   - for a tags: my_package = { url = "https://github.com/ORGANISATION/REPO/archive/refs/tags/VERSION_TAG.zip#sha256=" }
+#   - for a branch: my_package = { url = "https://github.com/ORGANISATION/REPO/archive/refs/heads/BRANCH.zip#sha256=" }
+# Note - conda-lock does not support the syntax: my_package = { git = ... }
+#        while poetry2conda supports only { git = "...", tag = "..." }, and not { url = ... }
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "*"
+pytest = "*"
+pytest-cov = "*"
+tomli = "*" # for tests only
+sphinx = "^5.0"
+readthedocs-sphinx-ext = "*"
+
+[tool.poetry.extras]
+dash = [
+    "dash",
+    "pyqtwebengine",
+    "pyside2",
+]
+
+[tool.conda-lock]
+platforms = ['win-64', 'linux-64']
+channels = ['conda-forge']
+
+[tool.conda-lock.dependencies]
+libblas = "*=*mkl"
+
+[tool.isort]
+# settings for compatibility between ``isort`` and ``black`` formatting
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.black]
+# defaults are just fine
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools"]
+build-backend = "poetry.core.masonry.api"
