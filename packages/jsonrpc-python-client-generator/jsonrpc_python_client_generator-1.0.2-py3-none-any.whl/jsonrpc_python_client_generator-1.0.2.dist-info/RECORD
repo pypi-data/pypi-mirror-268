@@ -1,0 +1,10 @@
+jsonrpc_python_client_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsonrpc_python_client_generator/client.py,sha256=DqslFzIH2_BKGGc9HTUKx1Qa7z8aUx2JJrYijPndejE,971
+jsonrpc_python_client_generator/generator.py,sha256=uOmD8pVlCeLg-mNA1jBWGERq7ROv2VTDO3mzHop1koE,4377
+jsonrpc_python_client_generator/response.py,sha256=jtEIBHHTgrXb0UwX6XbanI9nRKnxJ_BpiTPt394DJc8,902
+jsonrpc_python_client_generator/test.py,sha256=DjeY_YltaHqPyMumE58LQLwraBR7tgp88G5boQ0q_58,997
+jsonrpc_python_client_generator-1.0.2.dist-info/LICENSE,sha256=3-S5-5a3OS3U1rfp1j38BBPJfLl-DWRxciPLaI7tyZU,1067
+jsonrpc_python_client_generator-1.0.2.dist-info/METADATA,sha256=5ed90HdRtDvky2HQxkDX4qKt8EVYiOR_3iWFBCjOtfk,1899
+jsonrpc_python_client_generator-1.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+jsonrpc_python_client_generator-1.0.2.dist-info/top_level.txt,sha256=9loNS9Ifx7KSBdeBJsiluXa7P6Qo7vTauOPztYr5WA4,32
+jsonrpc_python_client_generator-1.0.2.dist-info/RECORD,,
