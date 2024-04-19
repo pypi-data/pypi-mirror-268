@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: jztools
+Version: 0.1.2
+Summary: General python utilies
+Home-page: https://github.com/zepedaj/jztools
+Author: Joaquin Zepeda
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pygments
+Requires-Dist: numpy
+Requires-Dist: climax
+
+
+General toolbox with various python utilities
+
+* Contribute at the project's [github page](https://github.com/zepedaj/jztools)
+
+* See [full documentation](https://jztools.readthedocs.io/en/latest/) for more information
+
