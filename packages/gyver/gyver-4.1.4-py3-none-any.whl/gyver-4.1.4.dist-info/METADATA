@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: gyver
+Version: 4.1.4
+Summary: Toolbox for web development
+Home-page: https://github.com/guscardvs/gyver
+Author: Gustavo Correa
+Author-email: self.gustavocorrea@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: env-star (>=2.4.0,<3.0.0)
+Requires-Dist: faust-cchardet (>=2.1.18,<3.0.0)
+Requires-Dist: gyver-attrs (>=0.9.0,<0.10.0)
+Requires-Dist: lazy-fields (>=1.0.1,<2.0.0)
+Requires-Dist: orjson (>=3.8.1,<4.0.0)
+Requires-Dist: pydantic[email] (>=2.6.4,<3.0.0)
+Requires-Dist: typing-extensions (>=4.4.0,<5.0.0)
+Requires-Dist: tzdata (>=2022.6,<2023.0) ; sys_platform != "linux"
+Project-URL: Repository, https://github.com/guscardvs/gyver
+Description-Content-Type: text/markdown
+
+# Gyver
+
+> Simple toolbox for python development to skip code boilerplate.
+
+[**Documentation**](https://guscardvs.github.io/gyver/)
+
+[**Source Code**](https://github.com/guscardvs/gyver)
+
+## Authors
+
+> [@guscardvs](https://github.com/guscardvs)
+
+## Requirements
+
+* Python 3.9+
+* [OrJSON](https://github.com/ijl/orjson) for json parsing.
+* [Pydantic](https://docs.pydantic.dev) for data handling.
+* [Typing Extensions](https://github.com/python/typing_extensions) for compatibility.
+
+
+## Installation
+
+```console
+$ pip install gyver
+```
+
+##  License
+
+This project is licensed under the terms of the MIT license.
