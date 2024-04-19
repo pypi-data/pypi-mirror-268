@@ -1,0 +1,6 @@
+#!/bin/env python3
+from ligo_softioc import load_ioc_commandline
+
+ioc = load_ioc_commandline()
+
+ioc.print_ini()
