@@ -1,0 +1,8 @@
+kinya_tn/__init__.py,sha256=4W8VliAYUP1KY2gLJ_YDy2TmcXYVm-PY7XikQD_bFwA,2
+kinya_tn/text_normalization.py,sha256=-_ZdHcIaAGd7t2eHpiaT0_IwSP3kR7wi0qESiAG8hgk,1539
+kinya_tn/tokenize_and_classify.far,sha256=anoLdxXJZFFxGZ1ixW1JZJJg6KOAupizdkjt1HQQPfY,3205359
+kinya_tn/verbalize.far,sha256=c7DO5tC8R5kWxh3HZyBmLWI-E2hroDZDaQs_7XsSsCQ,1134472
+kinya_tn-0.0.1.dist-info/METADATA,sha256=H7LglNgaJawYYPQxYNUx5UIeSD5UMBlJq3qTbIA3mwc,1244
+kinya_tn-0.0.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+kinya_tn-0.0.1.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+kinya_tn-0.0.1.dist-info/RECORD,,
