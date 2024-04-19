@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: itemdb
+Version: 1.2.0
+Summary: Easy transactional database for Python dicts, backed by SQLite
+Home-page: https://github.com/almarklein/itemdb
+Author: Almar Klein
+Author-email: 
+License: MIT
+Keywords: database,sqlite,no-sql
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+License-File: LICENSE
+
+
+The itemdb library allows you to store and retrieve Python dicts in a
+database on the local filesystem, in an easy, fast, and reliable way.
+
+Based on the rock-solid and ACID compliant SQLite, but with easy and
+explicit transactions using a ``with`` statement. It provides a simple
+object-based API, with the flexibility to store (JSON-compatible) items
+with arbitrary fields, and add indices when needed.
