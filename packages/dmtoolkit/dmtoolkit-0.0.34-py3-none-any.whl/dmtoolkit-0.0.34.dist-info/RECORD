@@ -1,0 +1,15 @@
+dmtoolkit/__init__.py,sha256=IeOAFvenopBWYv9ajaYlgGYiPXMiGT008qnpbTQ0HPU,23
+dmtoolkit/dmtools.py,sha256=7PFgU01gkfWIfMbbvoGq9_AUNDWX3kDUdK8liC0eFNU,938
+dmtoolkit/apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmtoolkit/apis/dndbeyondapi.py,sha256=B66N0La-Z0r4PuWk7FqebmsuaWrn1B9J7vUG2Vpo700,8472
+dmtoolkit/apis/open5e/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dmtoolkit/apis/open5e/open5eapi.py,sha256=z7JWa1fkbmMCtzYTkK8PYJoiAWj0B-JW2j4Yu0rauvc,1428
+dmtoolkit/apis/open5e/open5efeature.py,sha256=sPg5nj8yYlFRuxXBxo40chro_3moTpgDsysHADW-Aqk,130
+dmtoolkit/apis/open5e/open5eitem.py,sha256=8GhPryeCog6JLyYNOQnmhEUoy3kmKu23mMlhlcMMUzs,124
+dmtoolkit/apis/open5e/open5emonster.py,sha256=3KSwSIyR7JCopTzjI38cZiBVC3-KlV7SVqUpko_00d8,111
+dmtoolkit/apis/open5e/open5espell.py,sha256=osj9XSnxS51peyn3bdSWzOto26i6UmU09A2Fk13Sxw0,107
+dmtoolkit-0.0.34.dist-info/LICENSE,sha256=-PHHSuDRkodHo3PEdMkDtoIdmLAOomMq6lsLaOetU8g,1076
+dmtoolkit-0.0.34.dist-info/METADATA,sha256=vYIVnUZh0AqFvrw_i2hJbyM552r9A_o5yGQSfDyi65c,2908
+dmtoolkit-0.0.34.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dmtoolkit-0.0.34.dist-info/top_level.txt,sha256=NNWdLUX99Yai3X0sYaMgh8ZXCo0O7WqTnFpTeI7ZJyk,10
+dmtoolkit-0.0.34.dist-info/RECORD,,
