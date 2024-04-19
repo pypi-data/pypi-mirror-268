@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: minsprojectr
+Version: 0.0.2
+Summary: A small package for basic mathematical operations
+Author-email: Sai <sai275stw@gamil.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+#  Package
+
+This is a simple  package. You can use functions defined in this package
+to perform basic additions, subtractions, and multiplications of two numbers
+with add(), sub(), and multiply() respectively. 
+
+usage: ->>
+            from minsprojectr import operations
+        
+            given two integers 'a' and 'b', provided methods are
+            add(a,b), sub(a,b) and multiply(a,b)
