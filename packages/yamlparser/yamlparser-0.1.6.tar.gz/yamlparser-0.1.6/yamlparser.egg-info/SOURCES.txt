@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+yamlparser/__init__.py
+yamlparser/namespace.py
+yamlparser/parser.py
+yamlparser.egg-info/PKG-INFO
+yamlparser.egg-info/SOURCES.txt
+yamlparser.egg-info/dependency_links.txt
+yamlparser.egg-info/requires.txt
+yamlparser.egg-info/top_level.txt
