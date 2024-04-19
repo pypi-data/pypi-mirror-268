@@ -1,0 +1,11 @@
+numpy
+scipy
+
+[all]
+prominence-delineator[cleaning,rpeak]
+
+[cleaning]
+neurokit2
+
+[rpeak]
+vg-beat-detectors
