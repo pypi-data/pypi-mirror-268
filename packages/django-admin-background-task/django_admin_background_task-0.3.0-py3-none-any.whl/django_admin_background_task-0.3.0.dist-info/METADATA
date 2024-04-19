@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: django-admin-background-task
+Version: 0.3.0
+Summary: A set of tools for django apps to persist and monitor the status of background tasks
+Home-page: https://github.com/daphtdazz/django-bgtask
+License: Apache-2.0
+Author: David Park
+Author-email: david@greenparksoftware.co.uk
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Requires-Dist: Django (>=4.2,<4.3) ; extra == "all"
+Requires-Dist: django-model-utils (>=4.4.0,<4.5.0)
+Requires-Dist: psycopg2 (>=2.9.9,<3.0.0)
+Project-URL: Repository, https://github.com/daphtdazz/django-bgtask
+Description-Content-Type: text/markdown
+
+# django-bgtask
+
+Background task monitoring tool for django apps
+
+## Installation
+
+Grab it from PyPI, e.g:
+
+```
+pip install django-admin-background-task
+```
+
+## Setup
+
+Add it to your django apps:
+
+```
+INSTALLED_APPS = [
+    ...
+    "bgtask",
+]
+```
+
+And mount the admin monitoring URLs:
+
+```
+urlpatterns = [
+    # You should be able to mount them anywhere but I put them here
+    path(r"admin/background-task/", include("bgtask.urls")),
+    path("admin", admin.site.urls),
+]
+```
+
+## Usage
+
+### Creating a task and updating it
+
+```
+from bgtask.models import BackgroundTask
+
+BackgroundTask.new(name)
+
