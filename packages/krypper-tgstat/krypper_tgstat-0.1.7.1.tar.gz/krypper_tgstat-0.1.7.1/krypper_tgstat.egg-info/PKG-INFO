@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: krypper_tgstat
+Version: 0.1.7.1
+Summary: Wrapper for TG Stat API writing on Python
+Home-page: https://github.com/KrymmyEM/krypper_tgstat
+Download-URL: https://github.com/KrymmyEM/krypper_tgstat/archive/main.zip
+Author: Evgeny Momotov (KrymmyEM)
+Author-email: evgeny.momotov@gmail.com
+License: MIT License. See LICENSE file
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: Implementation :: CPython
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: aiohttp
+
+# PyrapperTGStatAPI
+Wrapper for TG Stat API writing on Python 
+TGStat (https://tgstat.ru API wrapper)
+
