@@ -1,0 +1,10 @@
+xterm/__init__.py,sha256=nMxV3wcbuC9vzN0MDJDitic6_cKkEpIR659TgUbiyZM,56
+xterm/paate.py,sha256=Rvzj8Vmh_GPXSuK2vJJlnfciqu9bDKRgCSsTNMsu32s,3931
+xterm/xterm.py,sha256=6LMMHXq3DwQ0uhLFbiQ4kVtd5p23LFAboBo_yNGPU5U,4053
+xterm/templates/xterm/xterm.html,sha256=ndlT8dK1Q8v3cp5x6GVoggFfXcMdh9wFR0lscKhttYE,2103
+django_xterm-0.1.1.dist-info/METADATA,sha256=XQXg6ADnd7m2Vy0D4_t6wvDgaJJwK3ke0vZjI0P_iag,267
+django_xterm-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_xterm-0.1.1.dist-info/entry_points.txt,sha256=Onmq3YcdG8tQETN_H6O1KqHcfGbDkw7Jc8kBE1wGgxA,32
+django_xterm-0.1.1.dist-info/historia.json,sha256=RisPIxbilPQToTxrsvWzM4zhdbmMYlLLQdA1MJwBJvM,1202
+django_xterm-0.1.1.dist-info/top_level.txt,sha256=D2uDa-3qjL8XH-HMM7g3WjdaJO67dwTiu6gOi81l-Wk,6
+django_xterm-0.1.1.dist-info/RECORD,,

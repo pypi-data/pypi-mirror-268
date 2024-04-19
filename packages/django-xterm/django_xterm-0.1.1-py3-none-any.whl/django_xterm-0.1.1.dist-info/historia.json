@@ -1,0 +1,44 @@
+[
+  {
+    "tyyppi": "muutos",
+    "tunnus": "e422d8f2e3941df613ee5ac9e099f82c12457a73",
+    "versio": "0.1.1",
+    "kuvaus": "Parametrisoitu WS-yhteysosoite"
+  },
+  {
+    "tyyppi": "julkaisu",
+    "tunnus": "924cd58be2b2f564b265da06069578099fe34f59",
+    "versio": "0.1",
+    "kuvaus": "Versio 0.1"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "0531864f250bc7c499b63d821ce21de2069d9708",
+    "versio": "0.1",
+    "kuvaus": "Odotetaan tulostedatan l\u00e4hetyst\u00e4 ennen yhteyden katkaisua"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "107c7765874fe77173516b8f7f561c5c0bcf8d53",
+    "versio": "0.0.4",
+    "kuvaus": "Korjattu Py3.6-yhteensopivaksi"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "b983b5242506b56446165b4a32b7a00224c0d259",
+    "versio": "0.0.3",
+    "kuvaus": "Tarkistetaan Websocket-yhteyden saatavuus GET-pyynn\u00f6ll\u00e4"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "8325c28878751c4e623ba28aa6155710882341da",
+    "versio": "0.0.2",
+    "kuvaus": "Pilkottu p\u00e4\u00e4teprosessin k\u00e4sittely omaan moduuliinsa"
+  },
+  {
+    "tyyppi": "muutos",
+    "tunnus": "d9b647f7b4134403836d4b2dbbd9046c415fc6d8",
+    "versio": "0.0.1",
+    "kuvaus": "Alustava toteutus"
+  }
+]
