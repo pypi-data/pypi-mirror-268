@@ -1,0 +1,10 @@
+vocr/__init__.py,sha256=5BqhkOQMD-RxBO-W4ZGbI3mSZDYMH4wL_Cc1UunQigc,111
+vocr/__main__.py,sha256=kDX89Nz1f45p79MqnaQxH0Twr5cfGxQ4vhadaRjpVEU,98
+vocr/cli.py,sha256=eGQLocWSSu18YLKyh3A-m83lsQiKjX2bIOocRk66UR4,1330
+vocr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vocr/vocr.py,sha256=wx1fTkiTwg2j28bDRlNGknVcTbrHuZ-UKGaYuaV4RuA,5675
+vocr-0.2.0.dist-info/METADATA,sha256=zQTPNOx_uEuLnNunhGsIvK_QD-UUUxc3y2cCudaRXO4,1678
+vocr-0.2.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+vocr-0.2.0.dist-info/entry_points.txt,sha256=pWRiYSshTOfQOeQAF9tFKJbQ9bw9j50A9bthFXXP50A,44
+vocr-0.2.0.dist-info/licenses/LICENSE,sha256=9AfTEcwnVmDhN3ME2teM7LtzX1NgDR7c4kKay2-_MSQ,1091
+vocr-0.2.0.dist-info/RECORD,,
