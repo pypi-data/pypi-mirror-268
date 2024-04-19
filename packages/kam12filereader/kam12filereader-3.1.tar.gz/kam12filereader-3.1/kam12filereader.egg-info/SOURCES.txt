@@ -1,0 +1,14 @@
+LICENCE
+README.md
+setup.py
+kam12filereader/__init__.py
+kam12filereader/exceptions.py
+kam12filereader/hidden_operation.py
+kam12filereader/main_operation.py
+kam12filereader/static_object.py
+kam12filereader.egg-info/PKG-INFO
+kam12filereader.egg-info/SOURCES.txt
+kam12filereader.egg-info/dependency_links.txt
+kam12filereader.egg-info/requires.txt
+kam12filereader.egg-info/top_level.txt
+tests/tests_project.py
