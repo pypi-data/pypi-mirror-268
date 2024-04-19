@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: deropy
+Version: 0.0.3
+Summary: A set of tool to help of DERO smart contract development
+Home-page: https://github.com/dero-hyperbolic/deropy.git
+Author-email: leocances@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: click==8.0.4
+Requires-Dist: requests==2.27.1
+Requires-Dist: coloredlogs==15.0.1
+Requires-Dist: pyperclip==1.8.2
+Requires-Dist: python-dotenv==0.20.0
+Requires-Dist: InquirerPy==0.3.4
+
+# DEROPY
+
+Deropy is a toolbox for creating, managing and testing DERO smart contracts.
+
+## Installation
+
+```bash
+pip install deropy
+```
+
+## Quick Start
+
+**If the simulator is running** the followin
+the following command will:
+- Deploy your smart contract to the simulator
+- Create a new SC.py file in the current directory with the correct SCID.
+- A new tests/test_sc.py file in the current directory.
+
+**If the simulator is not running** the Smart Contract will not be deployed
+
+SC.py will contain a class that allow you to call every function implemented in your smart contract
+test_sc.py will contain a test class that provide you with a basic test skeleton for every function implemented in your smart contract
+
+```bash
+deropy deploy -g path/to/sc.bas
+```
+
+## Commands
+
+| Command | Description |
+| --- | --- |
+| `deropy init` | Initialize a new DERO project |
+| `deropy deploy` | Compile a DERO smart contract |
+| `deropy generate` | Test a DERO smart contract |
+
+
