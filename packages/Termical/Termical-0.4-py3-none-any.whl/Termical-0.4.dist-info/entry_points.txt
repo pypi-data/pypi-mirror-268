@@ -1,0 +1,3 @@
+[console_scripts]
+termical = termical_lib.termical:main
+
