@@ -1,0 +1,12 @@
+guider/__init__.py,sha256=knFLODMX0EG5CXIGkk8buFaVHYLbaBoV2Em-sJTZZ0k,43
+guider/__main__.py,sha256=vo2krM6FB5khgNYBwl7ua_5iC8Ba7S9JSAgphlV-U20,109
+guider/guider.py,sha256=MROZvti3LXm-tsZP9v49QrXFyVM9oucyPNY4P-jj3ME,4756179
+guider/test.py,sha256=a0NIha1BGUnm_HaAEucpGwYJxYgJqS4WtC6YycluKNY,146
+guider-3.9.8991.data/data/share/guider/guider.conf,sha256=ikME77n5swLIbYchvEzn3G0FtjhlEw1DcXZD1b5DIho,39167
+guider-3.9.8991.data/data/share/man/man1/guider.1,sha256=O5_A3S_nUt_eLp8LGL4JgyhpDJobueqoZGtVQK4YXF0,915
+guider-3.9.8991.data/scripts/guider,sha256=ztIojjL_Pa2O_t-awpOi1pJKkLRsEE2ujgW5ySulNKw,1086
+guider-3.9.8991.dist-info/LICENSE,sha256=wDzqAntLQORAL6vQhVdzZyfsPVvFStZKtkct5DIZjK0,18047
+guider-3.9.8991.dist-info/METADATA,sha256=Kkcu2mEAEq7cs0yMOjqZbUgtb2QeBIxEh1GnxpvDuY8,1127
+guider-3.9.8991.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+guider-3.9.8991.dist-info/top_level.txt,sha256=sgdGUO_6dEIhPi2szbOM45P7aAfhNqLmDV1K5acLTfg,7
+guider-3.9.8991.dist-info/RECORD,,
