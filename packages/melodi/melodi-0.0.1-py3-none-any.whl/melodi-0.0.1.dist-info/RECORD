@@ -1,0 +1,8 @@
+melodi/__init__.py,sha256=vNP82eiBgKy5xGdS9njDtzrxf-dO_X3kFseIeh3ZHiQ,77
+melodi/braintrust_reporter.py,sha256=BrlfJmUa8b8RS0V_FcTemkzWtHy60h9USlhLCHz52Jc,3102
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_reporter.py,sha256=w-2MTHKB63578mmDAkCuaJOeoxw86gysZOC9Xn8INTk,2037
+melodi-0.0.1.dist-info/METADATA,sha256=Qrt7WMbWfu04ji4Uo6foPvR4fWQhvvwDMgLINpViPTE,2208
+melodi-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+melodi-0.0.1.dist-info/top_level.txt,sha256=I2pYvt64biy0TmsLCyQ9PWQ9jJUajX0YG1OTKoD-YI4,13
+melodi-0.0.1.dist-info/RECORD,,
