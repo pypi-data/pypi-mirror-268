@@ -1,0 +1,8 @@
+setup.py
+alfpack/__init__.py
+alfpack/coloraex.py
+alfpack/desc.py
+alfpack.egg-info/PKG-INFO
+alfpack.egg-info/SOURCES.txt
+alfpack.egg-info/dependency_links.txt
+alfpack.egg-info/top_level.txt
