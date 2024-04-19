@@ -1,0 +1,12 @@
+test.py,sha256=gYIP-R5vsI1KQGpYYlnyLaIjJVnei0bHsBttXpqYlU8,1894
+sugarpowder/__init__.py,sha256=YeAB7Fjy7gXqaJR7R-Wbkhhlirt7zfeKIU00fRm9TT8,100
+sugarpowder/dates.py,sha256=B120OjP2Rtos2CdXKxg7Z97l60Af9hMwOcKp4LydfE4,163
+sugarpowder/mark_time.py,sha256=PBGtSPdB5JUbYdIZEc3l0U5YsgegcXsITBcwykVwQ-Y,239
+sugarpowder/pipes.py,sha256=8tQVM0X-7Lfb5-2zJnqiuUcBdmU-R8ENefvueJdZZAU,5322
+sugarpowder/utils.py,sha256=ZMTsYkOlde4Pj9KGq87LkzOUMjDDJkqRLuMIh1zHt7I,875
+sugarpowder/witherr.py,sha256=WXwhzGevMWnGDMXiXB6lrx8UqRZU_qRxl5fiE98oKjM,1049
+sugarpowder-0.3.0.dist-info/LICENSE,sha256=2aDW-CEuwyxOqXeKvO-5WIz7J4_VB4MmWyNWqcKvtpE,1083
+sugarpowder-0.3.0.dist-info/METADATA,sha256=nyRg0ryfmmGUJYdp8YpsSXEC1kFPUkXjpx9U2IzdC_w,2500
+sugarpowder-0.3.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+sugarpowder-0.3.0.dist-info/top_level.txt,sha256=6_bH_iFgX-ma6ebY5iA_aJl7hrY8dDkOxa9DehhmU_g,17
+sugarpowder-0.3.0.dist-info/RECORD,,
