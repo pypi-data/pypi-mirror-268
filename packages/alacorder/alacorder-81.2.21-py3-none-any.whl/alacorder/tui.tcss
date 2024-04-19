@@ -1,0 +1,118 @@
+.header {
+	text-style: bold;
+	margin-bottom: 1;
+	border: none;
+	width: 100%;
+	text-align: center;
+}
+
+Input {
+	border: solid gray;
+}
+
+RadioSet {
+	border: blank;
+	background: 0%;
+}
+
+Checkbox {
+	border: blank;
+}
+
+.input:focus {
+	border: solid white;
+}
+
+Select {
+	margin-top: 1;
+	margin-bottom: 1;
+}
+
+.start {
+	background: green;
+	border: none;
+	margin-top: 1;
+	height: 3;
+	width: 100%;
+}
+
+.error {
+	border: solid red;
+}
+
+Checkbox {
+	background: 0%;
+}
+
+.login-input {
+	width: 1fr;
+	height: auto;
+}
+
+ScrollableContainer > * {
+	height: auto;
+}
+
+RichLog {
+	height: auto;
+}
+
+#party-search-options {
+	display: none;
+}
+
+#fetch-cases-options {
+	display: none;
+}
+
+#hidden-adoc-search {
+	display: none;
+	height: auto;
+	width: 100%;
+}
+
+Horizontal {
+	height: auto;
+	width: 100%;
+}
+
+.archive-tool-label {
+	margin-left: 2;
+	content-align: left middle;
+	color: white;
+}
+
+.archive-tool-button {
+	background: green;
+	border: none;
+}
+
+#archive-tools-output-container {
+	display: none;
+}
+
+#pairing-tools-radioset {
+	height: auto;
+}
+
+.hidden {
+	display: none;
+}
+
+#version {
+	content-align: center middle;
+	text-align: center;
+}
+
+#about-label {
+	margin-left: 3;
+	height: 100%;
+}
+
+#make-documents-field-select {
+	border: solid gray;
+}
+
+#template-radioset {
+	border: solid gray;
+}
