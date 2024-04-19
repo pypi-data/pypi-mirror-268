@@ -1,0 +1,4 @@
+django
+djangorestframework
+requests
+croniter>=2.0.1
