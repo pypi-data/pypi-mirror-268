@@ -1,0 +1,8 @@
+version: 2
+formats:
+  - pdf
+python:
+  install:
+    - requirements: docs/docs-requirements.txt
+    - method: pip
+      path: .
