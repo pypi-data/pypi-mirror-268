@@ -1,0 +1,8 @@
+{
+    "binder-url": "https://mybinder.org/v2/gh/{github_username}/{repository}/{branch}?filepath={notebook_filepath}",
+    "colab-url": "https://colab.research.google.com/github/{github_username}/{repository}/blob/{branch}/{notebook_filepath}",
+    "html-comment": "<!--{linesep}import data_analytics.github as github{linesep}print(github.create_jupyter_notebook_header(\"{github_username}\", \"{repository}\", \"{notebook_filepath}\", \"{branch}\")){linesep}-->{linesep}",
+    "open-with-table": "<table {style}><tr><td><a href=\"{binder_url}\" target=\"_parent\"><img src=\"https://mybinder.org/badge_logo.svg\" alt=\"Open In Binder\"/></a></td><td>online editors</td><td><a href=\"{colab_url}\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a></td></tr></table>",
+    "template-message": "Built using [my-moodle-template]({link} \"my-moodle-template\") by [Mark Crowe](https://github.com/marcocrowe \"Mark Crowe @ GitHub\"). Click [here]({instructions_link} \"template instructions\") to view the [template instructions]({instructions_link} \"template instructions\").",
+    "_end": true
+}
