@@ -1,0 +1,2 @@
+[console_scripts]
+rcut = rcut.rcut:main
