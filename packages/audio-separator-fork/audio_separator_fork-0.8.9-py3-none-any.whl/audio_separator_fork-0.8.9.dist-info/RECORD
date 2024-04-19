@@ -1,0 +1,10 @@
+audio_separator/__init__.py,sha256=JsGwcNVMIZEjPkTJ19uht2K4w9dnS2tsbTm0pkMORew,34
+audio_separator/separator.py,sha256=T8raoxl7sn6Li71FvRzu-8XP2v9xhulaAqz00D9vWsY,18113
+audio_separator/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audio_separator/utils/cli.py,sha256=jW8-kZfmrJ3tCae1ZeoCvAOpXo8Ug9Zlpm48PWrfDOU,4165
+audio_separator/utils/spec_utils.py,sha256=jzM0EVlY0pN3RgZUIQVG2ZUAhqoRd1T5sI-yi7rHtIE,21906
+audio_separator_fork-0.8.9.dist-info/entry_points.txt,sha256=7cFcbvLfn256ejo40mt1Flux8iJIj4eG6d9w-rV-78k,71
+audio_separator_fork-0.8.9.dist-info/LICENSE,sha256=xl2pC6pPoYyKMyoZyurfgDJNZ6JaB5HkYXXFg-z5NDc,1090
+audio_separator_fork-0.8.9.dist-info/METADATA,sha256=at0Pu5D3RpZSbK3bYfK_L1F9BiSGGcxtjXgb23_BYKw,10199
+audio_separator_fork-0.8.9.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+audio_separator_fork-0.8.9.dist-info/RECORD,,
