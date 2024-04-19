@@ -1,0 +1,13 @@
+tidydata/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tidydata/base.py,sha256=pnM7Imdpu9zg97Oonupj0B0EhQCmxy4xY3NfHh-Ro0w,9556
+tidydata/dtype.py,sha256=1D8sJpisJBEF3uli8zpQQn_AYBoSJ03YAjwSYznAHgs,1011
+tidydata/io.py,sha256=vKYjGFIC_6Ex7VafbzfCmL5ZHynDz9lIJG5A8lDk2Wc,12095
+tidydata/pandas_extension.py,sha256=yb4k_wo-bLglxUW-agLmyETJodxtNjG-E9BQDwe9va0,14401
+tidydata/polars_extension.py,sha256=qf15U520yxeL7gU-sIYoZHo2hweLU0KfRK8eZ3itxME,1142
+tidydata/schema.py,sha256=xZJlT8oN4kn_tHavIivR9qOrP8v1Q7-P1Tc9k19ufic,25396
+tidydata/table.py,sha256=EF0sw8xRZioNEh0u1qa8HhNaHBECErIrptEO0z0-I6g,6550
+tidydata/tidydata.py,sha256=3Zf0ogymLhCFQnqbg8lHfopIH9XpKOK7vrS4BblQ54c,5347
+tidydata/utils.py,sha256=4-xoDBguFOc_BfinqJnPyeR_t8foRlsei7Zi06_rEAI,10424
+tidydata-0.1.18.dist-info/METADATA,sha256=bJS1ZSS-MP-lLNqMMxlHcXCAN2n4KSzHh-buUdPXDr4,2645
+tidydata-0.1.18.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+tidydata-0.1.18.dist-info/RECORD,,
