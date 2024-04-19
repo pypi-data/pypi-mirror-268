@@ -1,0 +1,10 @@
+dogma_data/__init__.py,sha256=RiAcwzLqfNbLzwfDbtwx8LZ7_ZnMASGOUfuGck38hT4,235
+dogma_data/_dogma_data.py,sha256=oCylS1CXSXXpfj-hpp9zL0LbM-j5GoYKq3w6F4DAC3Y,11465
+dogma_data/dogma_torch.py,sha256=WvaqGb4aNRc-sx1FlumF28bVpAPOyTVrARDW0gQ5xi4,450
+dogma_data/fasta.py,sha256=TvXMLA4ryE9za1qUU90xNX9UxMxllU-8opi3E7weKFs,7292
+dogma_data/sharded_data.py,sha256=ikMRBN3h9Zj7pWq54xR-f3CLIOsIRJLL5eBWrnTBGh4,3287
+dogma_data/utils.py,sha256=mNtkDVYI1jkF9lJcXNRAl0Y9xh2d4P0OZnj1r3tptIs,762
+dogma_data-0.2.6.dist-info/METADATA,sha256=7ucCDPVbyoGR32B7DokjyuBV4OalzmwM7WW3bwdOwac,630
+dogma_data-0.2.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dogma_data-0.2.6.dist-info/top_level.txt,sha256=FJ7irxHQo7_hvazSfuA4EMlGZJoe6ZWtwFXzxkYR_Ow,11
+dogma_data-0.2.6.dist-info/RECORD,,
