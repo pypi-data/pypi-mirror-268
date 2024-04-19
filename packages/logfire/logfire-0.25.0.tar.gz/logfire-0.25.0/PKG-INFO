@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: logfire
+Version: 0.25.0
+Summary: Coming soon...
+License: MIT
+Author: Pydantic Team
+Author-email: engineering@pydantic.dev
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: aiohttp
+Provides-Extra: celery
+Provides-Extra: django
+Provides-Extra: fastapi
+Provides-Extra: flask
+Provides-Extra: httpx
+Provides-Extra: psycopg2
+Provides-Extra: pymongo
+Provides-Extra: redis
+Provides-Extra: requests
+Provides-Extra: sqlalchemy
+Provides-Extra: starlette
+Provides-Extra: system-metrics
+Provides-Extra: test
+Requires-Dist: Flask (>=3.0.0) ; extra == "test"
+Requires-Dist: anyio (>=4.2.0) ; extra == "test"
+Requires-Dist: attrs (>=23.1.0) ; extra == "test"
+Requires-Dist: devtools (>=0.12.2,<0.13.0) ; extra == "test"
+Requires-Dist: dirty-equals (>=0.6.0) ; extra == "test"
+Requires-Dist: django (>=3.2.0) ; extra == "test"
+Requires-Dist: eval-type-backport (>=0.1.3,<0.2.0) ; extra == "test"
+Requires-Dist: fastapi (>=0.68.0) ; extra == "test"
+Requires-Dist: gitpython (>=3.1.40) ; extra == "test"
+Requires-Dist: httpx (>=0.22.0) ; extra == "test"
+Requires-Dist: inline-snapshot (>=0) ; extra == "test"
+Requires-Dist: loguru ; extra == "test"
+Requires-Dist: opentelemetry-exporter-otlp-proto-http (>=1.21.0)
+Requires-Dist: opentelemetry-instrumentation (>=0.41b0)
+Requires-Dist: opentelemetry-instrumentation-aiohttp-client (>=0.42b0) ; extra == "aiohttp" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-asgi (>=0.42b0) ; extra == "test"
+Requires-Dist: opentelemetry-instrumentation-celery (>=0.42b0) ; extra == "celery"
+Requires-Dist: opentelemetry-instrumentation-django (>=0.42b0) ; extra == "django" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-fastapi (>=0.42b0) ; extra == "fastapi" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-flask (>=0.42b0) ; extra == "flask" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-httpx (>=0.42b0) ; extra == "httpx" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-psycopg2 (>=0.42b0) ; extra == "psycopg2"
+Requires-Dist: opentelemetry-instrumentation-pymongo (>=0.42b0) ; extra == "pymongo"
+Requires-Dist: opentelemetry-instrumentation-redis (>=0.42b0) ; extra == "redis"
+Requires-Dist: opentelemetry-instrumentation-requests (>=0.42b0) ; extra == "requests" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-sqlalchemy (>=0.42b0) ; extra == "sqlalchemy" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-starlette (>=0.42b0) ; extra == "starlette" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-system-metrics (>=0.42b0) ; extra == "system-metrics" or extra == "test"
+Requires-Dist: opentelemetry-instrumentation-wsgi (>=0.42b0) ; extra == "test"
+Requires-Dist: opentelemetry-sdk (>=1.21.0)
+Requires-Dist: pandas ; extra == "test"
+Requires-Dist: protobuf (>=4.23.4)
+Requires-Dist: pydantic (>=2.5.3) ; extra == "test"
+Requires-Dist: pytest (>=7.4.2) ; extra == "test"
+Requires-Dist: pytest-django (>=4.8.0,<5.0.0) ; extra == "test"
+Requires-Dist: requests (>=2.31.0) ; extra == "test"
+Requires-Dist: requests-mock ; extra == "test"
+Requires-Dist: rich (>=13.4.2)
+Requires-Dist: sqlalchemy (>=2.0.22) ; extra == "test"
+Requires-Dist: starlette (>=0.27.0) ; extra == "test"
+Requires-Dist: structlog (>=21.1.0) ; extra == "test"
+Requires-Dist: tomli (>=2.0.1) ; python_version < "3.11"
+Requires-Dist: typing-extensions (>=4.0.0)
+Description-Content-Type: text/markdown
+
+# Logfire
+
+In beta, coming soon...
+
+Source will be made fully open source when the library leaves closed beta.
+
