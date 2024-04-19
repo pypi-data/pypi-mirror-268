@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyriddle
+Version: 1.0.0
+Summary: A package that serves riddle(s).
+Home-page: 
+Author: mvsrsh
+Author-email: sriharsha.mangina@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: bson>=0.5.10
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: twine>=4.0.2; extra == "dev"
+
+Package to retrieve and display riddles
