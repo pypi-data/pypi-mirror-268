@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+andeplane_streamlit_custom_component.egg-info/PKG-INFO
+andeplane_streamlit_custom_component.egg-info/SOURCES.txt
+andeplane_streamlit_custom_component.egg-info/dependency_links.txt
+andeplane_streamlit_custom_component.egg-info/requires.txt
+andeplane_streamlit_custom_component.egg-info/top_level.txt
+my_component/__init__.py
+my_component/example.py
+my_component/frontend/build/asset-manifest.json
+my_component/frontend/build/bootstrap.min.css
+my_component/frontend/build/index.html
+my_component/frontend/build/static/js/main.364d9e8a.js
+my_component/frontend/build/static/js/main.364d9e8a.js.LICENSE.txt
+my_component/frontend/build/static/js/main.364d9e8a.js.map
