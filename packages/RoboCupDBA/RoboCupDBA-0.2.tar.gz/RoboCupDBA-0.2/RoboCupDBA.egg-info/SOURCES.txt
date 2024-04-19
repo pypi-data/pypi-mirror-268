@@ -1,0 +1,9 @@
+README.md
+setup.py
+RoboCupDBA/__init__.py
+RoboCupDBA/insert.py
+RoboCupDBA/query.py
+RoboCupDBA.egg-info/PKG-INFO
+RoboCupDBA.egg-info/SOURCES.txt
+RoboCupDBA.egg-info/dependency_links.txt
+RoboCupDBA.egg-info/top_level.txt
