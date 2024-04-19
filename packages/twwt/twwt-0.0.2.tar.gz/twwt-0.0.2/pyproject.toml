@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "twwt"
+version = "0.0.2"
+authors = [
+  { name="Дмитрий Песков", email="dv.peskov@yandex.ru" },
+]
+description = "Пакет для решения типовых задач с обраоткой текста / строк"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Dmitry-Peskov/twwt"
+Issues = "https://github.com/Dmitry-Peskov/twwt/issues"

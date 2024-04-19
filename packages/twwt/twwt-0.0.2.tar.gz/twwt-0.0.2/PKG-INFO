@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: twwt
+Version: 0.0.2
+Summary: Пакет для решения типовых задач с обраоткой текста / строк
+Author-email: Дмитрий Песков <dv.peskov@yandex.ru>
+Project-URL: Homepage, https://github.com/Dmitry-Peskov/twwt
+Project-URL: Issues, https://github.com/Dmitry-Peskov/twwt/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# twwt
+Typical work with text | Типичная работа с текстом
