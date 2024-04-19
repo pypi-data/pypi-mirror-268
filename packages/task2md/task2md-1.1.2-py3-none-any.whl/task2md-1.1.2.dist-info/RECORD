@@ -1,0 +1,15 @@
+task2md/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+task2md/task2md.py,sha256=et_XMko6ZFysZh0o7K_gQdnOt66_gG7l7VsqIRn4LNo,3653
+task2md/template/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+task2md/template/file.py,sha256=UnpgxoAIZkAEiP5PM3apX-jV5Zj5dzHfNJ7KyvLmowY,7767
+task2md/template/header.py,sha256=MY_uqIGgFPY6cGVs52ZegPtD0Szq0-Tq6PxTshl7Pgc,2180
+task2md/template/index.py,sha256=oEcy2Sq0zGuggC8UzmyZMtC7OCDm97yxl64QTVfrf0k,1150
+task2md/template/task.py,sha256=aTBwikBninB7Fg9mWkwlmq5WiaMyUQIbu1oCeZ5Br_Q,4337
+task2md/template/variable.py,sha256=zgPw8B0vQ9z9QqbQ4fKl7BOaOinOiAHrCC_Zq01j6hg,736
+task2md/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+task2md/util/dir.py,sha256=2MeWmhMGkxFiJuZI6xcf71YRhhqBq1HqbDI4tKc2FOc,965
+task2md-1.1.2.dist-info/METADATA,sha256=3AJOfSSIbvxMj-x1ZB_qhtZGFsm6BYR5YBWJcueYURs,3686
+task2md-1.1.2.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+task2md-1.1.2.dist-info/entry_points.txt,sha256=zXCjf5tbisw5ZzMarzBDlSkNgzV1YDsMx3s8h9azjkc,48
+task2md-1.1.2.dist-info/licenses/LICENSE,sha256=6j37YDpY2ikwX8yV80eUpAGPDShonchJW9nyFpqAGKM,1095
+task2md-1.1.2.dist-info/RECORD,,
