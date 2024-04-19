@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: pytrip98
+Version: 3.9.1
+Summary: PyTRiP
+Home-page: https://github.com/pytrip/pytrip
+Author: Jakob Toftegaard, Niels Bassler, Leszek Grzanka
+Author-email: leszek.grzanka@ifj.edu.pl
+License: GPL
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Environment :: Console
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: pydicom
+Requires-Dist: scipy
+Requires-Dist: packaging
+Requires-Dist: numpy >=1.21.4 ; python_version == "3.10"
+Requires-Dist: numpy >=1.23.3 ; python_version == "3.11"
+Requires-Dist: numpy >=1.26.0 ; python_version == "3.12"
+Requires-Dist: numpy <1.20,>=1.12 ; python_version == "3.6"
+Requires-Dist: numpy >=1.15 ; python_version == "3.7"
+Requires-Dist: numpy >=1.18 ; python_version == "3.8"
+Requires-Dist: numpy >=1.20 ; python_version == "3.9"
+Provides-Extra: remote
+Requires-Dist: paramiko ; extra == 'remote'
+
+PyTRiP98
+========
+
+PyTRiP98 is a python package for working with TRiP98 and VIRTUOS/VOXELPLAN files.
+It is mainly supposed for batch processing, but an experimental GUI is also included
+(see https://github.com/pytrip/pytripgui).
+
+**PyTRiP** provides several command-line applications including ``trip2dicom``, ``dicom2trip`` and ``cubeslice``.
+They works under Linux, Windows and Mac OSX operating systems
+(interpreter of Python programming language has to be also installed).
+No programming knowledge is required from the user, but basic skills in working with the console are needed to use them.
+
+
+Documentation
+-------------
+
+Full PyTRiP documentation can be found here: https://pytrip.readthedocs.io/
+
+See `Getting Started <https://pytrip.readthedocs.org/en/stable/getting_started.html>`_ for installation and basic
+information, and the `User's Guide <https://pytrip.readthedocs.org/en/stable/user_guide.html>`_ for an overview of
+how to use the PyTRiP library.
+
