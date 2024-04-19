@@ -1,0 +1,6 @@
+[console_scripts]
+core_hello_world = microbeseq_nbdev_example.core:cli
+hello_two_world = microbeseq_nbdev_example.hello_world:cli
+
+[nbdev]
+microbeseq_nbdev_example = microbeseq_nbdev_example._modidx:d
