@@ -1,0 +1,13 @@
+argparse
+argcomplete
+requests
+PyYAML
+dictdiffer
+importlib-resources
+psutil
+
+[tests]
+pytest
+pytest-cov
+pytest-xdist
+requests-mock
