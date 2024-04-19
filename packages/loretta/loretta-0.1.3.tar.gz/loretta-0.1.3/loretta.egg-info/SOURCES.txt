@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+loretta.egg-info/PKG-INFO
+loretta.egg-info/SOURCES.txt
+loretta.egg-info/dependency_links.txt
+loretta.egg-info/requires.txt
+loretta.egg-info/top_level.txt
