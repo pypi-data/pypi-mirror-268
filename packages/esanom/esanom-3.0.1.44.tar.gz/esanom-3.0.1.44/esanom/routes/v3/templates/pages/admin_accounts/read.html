@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main_title %}ACCOUNT : {{ tdata['row']['email'] }}{% endblock %}
+
+{% block main_content %}
+
+{% include( "pages/admin_accounts/read_inc_info.html" ) %}
+{% include( "pages/admin_accounts/read_inc_button_update.html" ) %}
+
+{% endblock %}
+

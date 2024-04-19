@@ -1,0 +1,19 @@
+
+<form id="member_apis_update" hx-post="{{url_for('.hx_member_apis_update',uid=tdata['row']['uid'])}}" hx-target="#hx-results">
+
+    <div class="mb-3">
+        <label for="input_1" class="form-label">name</label>
+        <input class="form-control" id="input_1" name="name" value="{{tdata['row']['name']}}">
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="1" id="input_2" name="[new_token]">
+        <label class="form-check-label" for="input_2">NEW TOKEN</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">UPDATE</button>
+
+</form>
+
+<div id="hx-results"></div>
+

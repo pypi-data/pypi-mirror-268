@@ -1,0 +1,48 @@
+
+<div class="container">
+<div class="row">
+
+<div class="col">
+<div>INPUTS</div>
+
+{% if tdata["has_inputs"] %}
+
+    {% for mport_row in tdata["mport_rows"] %}
+    {% if mport_row["direction"]=="inputs" %}
+    {% include( "inc_content_model_io_port.html" ) %}
+    {% endif %}
+    {% endfor %}
+
+{% else %}
+
+<div class="badge bg-warning text-dark">None</div>
+
+{% endif %}
+
+</div>
+
+<div class="col">
+<div>OUTPUTS</div>
+{% if tdata["has_outputs"] %}
+
+    {% for mport_row in tdata["mport_rows"] %}
+    {% if mport_row["direction"]=="outputs" %}
+    {% include( "inc_content_model_io_port.html" ) %}
+    {% endif %}
+    {% endfor %}
+
+{% else %}
+
+<div class="badge bg-warning text-dark">None</div>
+
+{% endif %}
+</div>
+
+</div>
+</div>
+
+
+
+
+
+

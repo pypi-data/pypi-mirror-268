@@ -1,0 +1,14 @@
+
+
+<br/>
+<div>PINS UPLOAD</div>
+<div>
+    <form hx-encoding='multipart/form-data' hx-post="{{url_for('.hx_admin_settings_pins')}}" hx-target="#hx-results_pins">
+        <input type='file' name='file'>
+        <button>
+            Upload
+        </button>
+    </form>
+</div>
+
+<div id="hx-results_pins"></div>

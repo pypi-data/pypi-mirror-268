@@ -1,0 +1,19 @@
+
+{% if tdata["error_msgs"]|length>0 %}
+<pre>
+{{tdata["error_msgs"]}}
+</pre>
+{% else %}
+
+<script>
+element = document.getElementById( "form_register" ) ;
+element.remove( ) ; 
+</script>
+
+<pre>
+OK. Please wait until your account has been enabled.
+</pre>
+
+{% endif %}
+
+

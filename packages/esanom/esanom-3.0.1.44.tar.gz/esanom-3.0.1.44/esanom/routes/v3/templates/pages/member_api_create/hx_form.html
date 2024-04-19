@@ -1,0 +1,35 @@
+
+
+{% if tdata["error_msgs"]|length>0 %}
+
+{{tdata["error_msgs"]}}
+
+{% else %}
+
+{% if tdata['api_row'] %}
+
+<script>
+element = document.getElementById("form_container");
+element.remove(); 
+</script>
+
+<div class="alert alert-danger" role="alert">
+
+<pre>
+<b>API TOKEN</b>
+<div class="user-select-all">{{tdata['api_row']['token']}}</div>
+<b>nom_config.json</b>
+<div class="user-select-all">{
+    "server_endpoint" : "{{tdata['url_root']}}v3/api" ,
+    "server_token" : "{{tdata['api_row']['token']}}"
+}
+</div>
+<b>WARNING: SAVE API TOKEN NOW. IT WILL NOT BE MADE VISIBLE AGAIN!</b>
+</pre>
+
+</div>
+
+{% endif %}
+
+{% endif %}
+

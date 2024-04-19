@@ -1,0 +1,10 @@
+
+
+{% if _tdata["is_admin"] %}
+{% include( "inc_loggedin_nav_admin.html" ) %}
+{% elif _tdata["account_name"]=="_dashboard" %}
+{% include( "inc_loggedin_nav_dashboard.html" ) %}
+{% else %}
+{% include( "inc_loggedin_nav_member.html" ) %}
+{% endif %}
+
