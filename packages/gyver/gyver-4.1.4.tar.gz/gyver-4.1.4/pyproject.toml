@@ -1,0 +1,74 @@
+[tool.poetry]
+name = "gyver"
+version = "4.1.4"
+description = "Toolbox for web development"
+authors = ["Gustavo Correa <self.gustavocorrea@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/guscardvs/gyver"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+orjson = "^3.8.1"
+typing-extensions = "^4.4.0"
+tzdata = { markers = "sys_platform != \"linux\"", version = "^2022.6" }
+gyver-attrs = "^0.9.0"
+faust-cchardet = "^2.1.18"
+env-star = "^2.4.0"
+lazy-fields = "^1.0.1"
+pydantic = {extras = ["email"], version = "^2.6.4"}
+
+[tool.poetry.group.lint.dependencies]
+black = "^22.10.0"
+isort = "^5.10.1"
+flake8 = "^5.0.4"
+autoflake = "^1.7.7"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.0"
+pytest-cov = "^4.0.0"
+coverage = "^6.5.0"
+pytest-asyncio = "^0.20.1"
+hypothesis = "^6.56.4"
+pytest-xdist = "^3.2.1"
+
+
+[tool.poetry.group.docs.dependencies]
+termynal = "^0.10.0"
+mkdocstrings = { extras = ["python"], version = "^0.22.0" }
+mkdocs-material = "^9.1.21"
+
+
+[tool.poetry.group.opts.dependencies]
+attrs = "^22.2.0"
+
+
+[tool.black]
+line_length = 88
+
+[tool.isort]
+profile = 'black'
+line_length = 88
+force_single_line = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = [
+    # "-n",
+    # "4",
+    "--cov=gyver/",
+    "--cov-report=html",
+    "--cov-config=.coveragerc",
+    "--no-cov-on-fail",
+    "--cov-fail-under=80",
+    # "--nf",
+    "-s",
+    "--maxfail=1",
+]
+filterwarnings = [
+    "error",
+    "ignore:The --rsyncdir command line argument and rsyncdirs config variable are deprecated.:DeprecationWarning",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
