@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: algophon
+Version: 0.0.1
+Summary: Tools for an algorithmic approach to phonology (some useful to computational phonology and morphology more broadly)
+Author: Caleb Belth
+License: Apache 2.0
+Project-URL: Homepage, https://github.com/cbelth/algophon
+Keywords: computational linguistics,phonology,morphology,natural language processing
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# algophon
+Tools for an algorithmic approach to phonology (some useful to computational phonology and morphology more broadly)
+
+This repository is a work in progress. The README will be updated once the code is in a state that is useable!
