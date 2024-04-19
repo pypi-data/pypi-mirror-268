@@ -1,0 +1,10 @@
+echovault/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+echovault/db.py,sha256=aNFMv7vepyT3Y0qNvZxdG2fFUAyFHP0sMLYPuVJTpiQ,472
+echovault/db.py~,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+echovault/table.py,sha256=84ofx4RTHJrMEKEB57uIxCfwvASM682y0bV3sn05JXA,3515
+echovault/table.py~,sha256=kX_x_QZDBZnWtc-vNUSFY6N9c0Ick2144c4SbDGxKUE,2903
+echovault/vault.py,sha256=zs-C8AMqjP71VQiURyv06Ld67VYg5EvNlnVDiRsY5vY,3337
+echovault/vault.py~,sha256=fTcdqrykYGFeyijfVXJYTwhKjPwn5inKt2iF2emzU9k,1289
+echovault-0.1.0.dist-info/METADATA,sha256=x4aQjipjrl3zWedacVy8DjdreGqU7KZltiGHh27tJOY,1448
+echovault-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+echovault-0.1.0.dist-info/RECORD,,
