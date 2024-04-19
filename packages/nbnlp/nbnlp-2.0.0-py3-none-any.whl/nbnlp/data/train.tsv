@@ -1,0 +1,14 @@
+2024	B-DATE
+年	I-DATE
+3	I-DATE
+月	I-DATE
+5	I-DATE
+日	E-DATE
+出现	O
+在	O
+东方明珠	B-LOCATION
+塔	E-LOCATION
+的	O
+40岁左右	B-AGE
+男子	B-SEX
+
