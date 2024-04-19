@@ -1,0 +1,14 @@
+from typing import Optional
+
+from pydantic import Field
+
+from .generic import Sensor
+from ..base import BaseMessage
+from ..standard.header import Header, AUTO
+
+
+class Camera(Sensor):
+    width: int = Field(description="Width of the image", ge=0)
+    height: int = Field(description="Height of the image", ge=0)
+
+    fov: float = Field(description="Field of view of the camera in radians", ge=0)
