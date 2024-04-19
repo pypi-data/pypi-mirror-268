@@ -1,0 +1,41 @@
+Metadata-Version: 2.3
+Name: aqora-cli
+Version: 0.1.9
+Requires-Dist: build >=1.1.1, <2.0.0
+Requires-Dist: setuptools >=61.0
+Requires-Dist: ujson >=5.9.0, <6.0.0
+Requires-Dist: uv >=0.1.18, <0.2.0
+Summary: The aqora command line interface
+Author-email: "S.A.S Aqora Quantum" <hello@aqora.io>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Repository, https://github.com/aqora-io/cli
+Project-URL: Documentation, https://github.com/aqora-io/cli
+
+# Getting Started
+
+To install the CLI, you can use pip:
+
+```bash
+pip install aqora-cli
+```
+
+Or pipx
+
+```bash
+pipx install aqora-cli
+```
+
+To verify the installation, the following should output helpful information:
+
+```bash
+aqora --help
+```
+
+Once the CLI has installed you can login to your account with the following
+command:
+
+```bash
+aqora login
+```
+
