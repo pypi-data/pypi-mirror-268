@@ -1,0 +1,18 @@
+[project]
+name = "PyPianoTune"
+version = "0.1.4"
+authors = [
+  { name="Kelvin Xu", email="xxk59@hotmail.com" },
+]
+description = "A Python module to convert music notes into piano tune."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/xxk59/piano_tune"
+Issues = "https://github.com/xxk59/piano_tune/issues"
