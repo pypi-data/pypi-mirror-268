@@ -1,0 +1,5 @@
+requests
+requests-html
+
+[dev]
+check-manifest
