@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: molab_ext
+Version: 0.1.5
+Summary: molab extension
+Author: frgoyb
+Requires-Dist: IPython
+Requires-Dist: requests
+Requires-Dist: dill
+Requires-Dist: VizKG
