@@ -1,0 +1,11 @@
+pydjamodb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydjamodb/attributes.py,sha256=0c_pevtTKSbhlNRsuvA_HTlVg0BaJB38ALu-6MlsmBw,1121
+pydjamodb/connection.py,sha256=EfD_vd7LCD4rEvS14_I0gHIoq7HgYhC3sQ_5bnKrdC0,8234
+pydjamodb/models.py,sha256=XNUW9rzeFKelPh674RZ8_LhIs9fNYfuEx6qnwtfQAMM,1751
+pydjamodb/queryset.py,sha256=2-vcn29Ygw3cc9hr8gr6MV6RoWKrK2q9jWNrgHfwTJE,8555
+pydjamodb/test_runner.py,sha256=HJTe7poHb5xnAkY9rogCWJbxvuVkRNsdjGSZvsKBYLI,4280
+skip_pydjamodb-0.1.0.dist-info/LICENSE,sha256=_9o7TzCirP-yT3Q7k1TLDuhl_PNau7sxrTQpig9dA9s,1063
+skip_pydjamodb-0.1.0.dist-info/METADATA,sha256=_ifoa9IpXjOECZ2NgjoSYRcFjLp1GjRaRwY4JXKViUI,815
+skip_pydjamodb-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+skip_pydjamodb-0.1.0.dist-info/top_level.txt,sha256=E0B6tJzsqVeVPbSEawItLlz1JyqPpcKZJLx8MJsTbzA,10
+skip_pydjamodb-0.1.0.dist-info/RECORD,,
