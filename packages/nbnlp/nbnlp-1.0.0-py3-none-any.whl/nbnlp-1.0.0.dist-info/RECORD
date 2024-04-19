@@ -1,0 +1,13 @@
+nbnlp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nbnlp/api.py,sha256=vX806kbtcL_JZMIE3FcooGzfUfDsHgXkqm6zDJVOO5M,2157
+nbnlp/db.py,sha256=MBAkK4KpU3Dtapq7pCuQa3UgfryEbF4VtsLkVclSX3s,2437
+nbnlp/model.py,sha256=4K2bQc2hU3_782TzJ4B-C92I3wGp8nurn_nfKEeKVoE,2409
+nbnlp/scheduler.py,sha256=Fm1Um8V5ofclF3r4H1mjHYIMgPj2yiFVe4Tgo8YdnYA,872
+nbnlp/utils.py,sha256=Kri-IVqkVz0a8Z5bkb6Qnt4d8lc-TmvCA29lYNZtoEU,2465
+nbnlp/data/test.tsv,sha256=HgUVW0soxD2mEa66QMehvMdaVcUUAcrl54BY0tmT9Hg,169
+nbnlp/data/train.tsv,sha256=HgUVW0soxD2mEa66QMehvMdaVcUUAcrl54BY0tmT9Hg,169
+nbnlp-1.0.0.dist-info/LICENSE,sha256=IpZl4pKfHATNv-UdSctOtXjBEAd34T7Eltpzu2GLYV4,469
+nbnlp-1.0.0.dist-info/METADATA,sha256=7kAmILxLTebq-zgAwemi04lWs7FZjliMz2wLmzfKdeM,398
+nbnlp-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+nbnlp-1.0.0.dist-info/top_level.txt,sha256=xLLlhNtSnqJko365fr-mbDPsQebqXrEQHsF9DtV-gag,6
+nbnlp-1.0.0.dist-info/RECORD,,
