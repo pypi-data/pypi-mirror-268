@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: polars-can-parser
+Version: 0.0.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Summary: Tools for working with can data in polars
+Author: Maxim Partin
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/infamax/polars-can-parser/
+
+# polars-can-parser
+

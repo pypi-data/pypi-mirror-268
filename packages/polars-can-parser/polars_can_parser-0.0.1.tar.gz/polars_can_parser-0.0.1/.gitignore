@@ -1,0 +1,10 @@
+*.so
+*.pyc
+target
+Cargo.lock
+__pycache__
+.vscode
+.ruff_cache
+.idea/
+*.whl
+venv
