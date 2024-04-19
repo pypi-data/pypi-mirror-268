@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RagaAI Chat - RAG Builder UI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .progress-bar-transition {
+            transition: width 0.4s ease;
+        }
+        .chat-author {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto mt-10 p-4 max-w-md shadow-lg rounded-lg bg-white">
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-semibold text-gray-800">RAGA RAG Builder UI</h1>
+        </div>
+        <div class="chat-container rounded p-3 bg-gray-50">
+            <ul id="chat" class="list-none space-y-2">
+                <li id="initStatus" class="text-gray-500">Initializing...</li>
+            </ul>
+            <div class="flex space-x-2">
+                <input type="text" id="input" class="form-control flex-grow border rounded p-2" placeholder="Type your message...">
+                <button id="send" class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="progressBar" class="fixed top-0 left-0 bg-blue-500" style="width: 0%; height: 4px;" class="progress-bar-transition"></div>
+
+    <script>
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('#initStatus').text('Ready to chat!');
+            }, 2000);
+
+            $('#send').click(function() {
+                var text = $('#input').val();
+                $('#chat').append($('<li>').html('<span class="chat-author">You:</span> ' + text).addClass("bg-gray-100 p-2 rounded"));
+                $('#input').val('');
+                $('#progressBar').width('100%');
+
+                $.ajax({
+                    url: '/query',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ query: text }),
+                    success: function(data) {
+                        $('#chat').append($('<li>').html('<span class="chat-author">RagaAI:</span> ' + data.response).addClass("bg-blue-100 p-2 rounded"));
+                        $('#progressBar').width('0');
+                    },
+                    error: function() {
+                        $('#chat').append($('<li>').html('<span class="chat-author">RagaAI:</span> Error getting response.').addClass("text-red-500"));
+                        $('#progressBar').width('0');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
