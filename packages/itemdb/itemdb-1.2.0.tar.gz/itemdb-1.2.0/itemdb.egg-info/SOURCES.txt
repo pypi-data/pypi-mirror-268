@@ -1,0 +1,9 @@
+LICENSE
+README.md
+itemdb.py
+setup.py
+itemdb.egg-info/PKG-INFO
+itemdb.egg-info/SOURCES.txt
+itemdb.egg-info/dependency_links.txt
+itemdb.egg-info/top_level.txt
+itemdb.egg-info/zip-safe
