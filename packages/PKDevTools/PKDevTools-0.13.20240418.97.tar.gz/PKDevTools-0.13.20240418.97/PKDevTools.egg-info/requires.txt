@@ -1,0 +1,17 @@
+alive_progress
+argparse
+bs4
+filelock
+mistletoe
+numpy
+pandas
+python-dotenv
+python-telegram-bot
+pytz
+requests
+requests_cache
+tabulate
+telegram
+typing_extensions
+urllib3
+yfinance
