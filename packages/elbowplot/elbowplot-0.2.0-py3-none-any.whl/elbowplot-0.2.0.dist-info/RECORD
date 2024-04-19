@@ -1,0 +1,9 @@
+elbowplot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elbowplot/core.py,sha256=qL69KhuJ-4iqtXOQGsh9kCx8P4ot5-CiAouUM0266v4,580
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_core.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+elbowplot-0.2.0.dist-info/LICENSE,sha256=9HqNeGyQ7YShM_SrAVcQJg1-lGmFY3eXnNVSBUCk19k,1088
+elbowplot-0.2.0.dist-info/METADATA,sha256=J4Xp40fV0FGobrVkeJ6KD2pZzr4BZ7_5StFtZhr54xA,4744
+elbowplot-0.2.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+elbowplot-0.2.0.dist-info/top_level.txt,sha256=G-MTlGC2G1eqsouPqGbBgn62XrYc6iOcpmG5PgsU8YI,16
+elbowplot-0.2.0.dist-info/RECORD,,
