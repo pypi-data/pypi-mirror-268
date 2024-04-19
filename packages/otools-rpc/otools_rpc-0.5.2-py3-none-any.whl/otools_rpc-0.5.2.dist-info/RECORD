@@ -1,0 +1,14 @@
+otools_rpc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+otools_rpc/db_manager/__init__.py,sha256=fXNOK0TpHxjJJBRze2cBJGrZBDSlzA9yZxUyHUZvVBU,38
+otools_rpc/db_manager/database_utils.py,sha256=VnEA81Hly2c7dqeIlM3gkr9YSWIiMZz91Y4RZNePt2w,1750
+otools_rpc/external_api/__init__.py,sha256=5J3Rj30ylDHxRFdfeIYE84nj2nbuJbnF2rB8ZgZZFPc,95
+otools_rpc/external_api/cache.py,sha256=pa9NqZVNZBhzskep_x8fJgBglxUQhU9AUGUpqHIvd1g,8786
+otools_rpc/external_api/common.py,sha256=V4rNJbA3ODUfx5MeadZd_-lx6q7Uly_ZeLQunZ4hgYE,2132
+otools_rpc/external_api/environment.py,sha256=khP85kHEnqsSuFcNq1IHMDlLNbjGcQ9dIaIEdy7cwns,5020
+otools_rpc/external_api/recordset.py,sha256=y8sBqIIc1mS0GfjqPx77OFytotzbddeyysxA1IDxyfA,8011
+otools_rpc/external_api/utils.py,sha256=kp-Fd83zFuTRH-6iDqGj8fy-P-RHwV5KZ3Mxl9Islho,861
+otools_rpc-0.5.2.dist-info/LICENSE.txt,sha256=6jx3uwKPv3_NsR0OnA-YldzXkA_TPDhpsA9wrS3HCFk,1326
+otools_rpc-0.5.2.dist-info/METADATA,sha256=DLvbSDC9h81nfYO7lG1ZWTlIP3G4T-nrwuJWofHptB0,4218
+otools_rpc-0.5.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+otools_rpc-0.5.2.dist-info/top_level.txt,sha256=hO4p52HpX-GRIElcXVi6FJGyyiENOEjtItOzcEPAa3A,11
+otools_rpc-0.5.2.dist-info/RECORD,,
