@@ -1,0 +1,5 @@
+setup.py
+facefusion.egg-info/PKG-INFO
+facefusion.egg-info/SOURCES.txt
+facefusion.egg-info/dependency_links.txt
+facefusion.egg-info/top_level.txt
