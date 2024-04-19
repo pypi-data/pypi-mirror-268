@@ -1,0 +1,10 @@
+skwiz_logger_python/__init__.py,sha256=2VK-6L6DtxI4JtwxsVyo_RtjzTnF7VC6nAcWosP-oOg,94
+skwiz_logger_python/colors.py,sha256=X0ajAvh02Gx3xBMUR6Pc_Gm3KPaaEO6-drhqYEHNSVs,438
+skwiz_logger_python/config.py,sha256=Syd3otNkSHtPH6GfXcuxYlgZmfRIlS4xVaE1fvXhRlM,726
+skwiz_logger_python/error.py,sha256=8ePD4X8xYhshkSo9j_Uo5DTEn0cDMDr5ABKCvoH6XE8,1438
+skwiz_logger_python/formatter.py,sha256=FexZ2TEqpeiKPla7GES6zIogq1WEEQndfAEkhBwF9FQ,3592
+skwiz_logger_python/handler_udp.py,sha256=qHxoxT4GV5q-u8E8duCXrQHGMLZXGlGw2eEX6eKHbSI,495
+skwiz_logger_python/logger.py,sha256=MoLKM2YZW7rEPCOWFDvfKCsNiMWI2972bfME35aY4WY,2549
+skwiz_logger_python-0.9.0.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+skwiz_logger_python-0.9.0.dist-info/METADATA,sha256=e8VGE5S2_5oO3q59hFOhIEnOg_pmuz0yADAX-IC7QcU,390
+skwiz_logger_python-0.9.0.dist-info/RECORD,,
