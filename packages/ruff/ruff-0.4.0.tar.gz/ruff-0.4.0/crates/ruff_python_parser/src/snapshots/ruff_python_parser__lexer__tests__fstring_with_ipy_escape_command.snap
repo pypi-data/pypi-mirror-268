@@ -1,0 +1,70 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: lex_source(source)
+---
+[
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        0..2,
+    ),
+    (
+        FStringMiddle {
+            value: "foo ",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        2..6,
+    ),
+    (
+        Lbrace,
+        6..7,
+    ),
+    (
+        Exclamation,
+        7..8,
+    ),
+    (
+        Name {
+            name: "pwd",
+        },
+        8..11,
+    ),
+    (
+        Rbrace,
+        11..12,
+    ),
+    (
+        FStringMiddle {
+            value: " bar",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        12..16,
+    ),
+    (
+        FStringEnd,
+        16..17,
+    ),
+    (
+        Newline,
+        17..17,
+    ),
+]

@@ -1,0 +1,39 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: lex_source(source)
+---
+[
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        ),
+        0..2,
+    ),
+    (
+        FStringMiddle {
+            value: "\\0",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        2..4,
+    ),
+    (
+        FStringEnd,
+        4..5,
+    ),
+    (
+        Newline,
+        5..5,
+    ),
+]

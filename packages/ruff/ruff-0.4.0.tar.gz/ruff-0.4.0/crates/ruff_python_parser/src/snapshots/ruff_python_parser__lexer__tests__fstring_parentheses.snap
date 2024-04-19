@@ -1,0 +1,250 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: lex_source(source)
+---
+[
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        0..2,
+    ),
+    (
+        Lbrace,
+        2..3,
+    ),
+    (
+        Rbrace,
+        3..4,
+    ),
+    (
+        FStringEnd,
+        4..5,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        6..8,
+    ),
+    (
+        FStringMiddle {
+            value: "{}",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        8..12,
+    ),
+    (
+        FStringEnd,
+        12..13,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        14..16,
+    ),
+    (
+        FStringMiddle {
+            value: " ",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        16..17,
+    ),
+    (
+        Lbrace,
+        17..18,
+    ),
+    (
+        Rbrace,
+        18..19,
+    ),
+    (
+        FStringEnd,
+        19..20,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        21..23,
+    ),
+    (
+        FStringMiddle {
+            value: "{",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        23..25,
+    ),
+    (
+        Lbrace,
+        25..26,
+    ),
+    (
+        Rbrace,
+        26..27,
+    ),
+    (
+        FStringMiddle {
+            value: "}",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        27..29,
+    ),
+    (
+        FStringEnd,
+        29..30,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        31..33,
+    ),
+    (
+        FStringMiddle {
+            value: "{{}}",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        33..41,
+    ),
+    (
+        FStringEnd,
+        41..42,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        43..45,
+    ),
+    (
+        FStringMiddle {
+            value: " ",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        45..46,
+    ),
+    (
+        Lbrace,
+        46..47,
+    ),
+    (
+        Rbrace,
+        47..48,
+    ),
+    (
+        FStringMiddle {
+            value: " {} {",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        48..56,
+    ),
+    (
+        Lbrace,
+        56..57,
+    ),
+    (
+        Rbrace,
+        57..58,
+    ),
+    (
+        FStringMiddle {
+            value: "} {{}}  ",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        58..71,
+    ),
+    (
+        FStringEnd,
+        71..72,
+    ),
+    (
+        Newline,
+        72..72,
+    ),
+]
