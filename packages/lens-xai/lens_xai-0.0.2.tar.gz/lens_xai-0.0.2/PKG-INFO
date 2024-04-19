@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: lens_xai
+Version: 0.0.2
+Summary: A short description of your package
+Author: ucabdv1
+Author-email: ucabdv1@ucl.ac.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
