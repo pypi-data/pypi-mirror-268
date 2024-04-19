@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+PyMachineLearning/__init__.py
+PyMachineLearning/test.py
+PyMachineLearning.egg-info/PKG-INFO
+PyMachineLearning.egg-info/SOURCES.txt
+PyMachineLearning.egg-info/dependency_links.txt
+PyMachineLearning.egg-info/requires.txt
+PyMachineLearning.egg-info/top_level.txt
