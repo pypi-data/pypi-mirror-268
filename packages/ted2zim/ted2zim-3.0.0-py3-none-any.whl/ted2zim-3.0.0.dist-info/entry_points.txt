@@ -1,0 +1,3 @@
+[console_scripts]
+ted2zim = ted2zim.entrypoint:main
+ted2zim-multi = ted2zim.multi.entrypoint:main
