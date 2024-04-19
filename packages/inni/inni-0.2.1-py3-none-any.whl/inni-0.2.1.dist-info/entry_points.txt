@@ -1,0 +1,3 @@
+[console_scripts]
+inni=inni.cli:inni
+
