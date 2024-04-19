@@ -1,0 +1,3 @@
+[console_scripts]
+fvm=fvm_nerfed.fvm_nerfed:main
+
