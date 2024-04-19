@@ -1,0 +1,5 @@
+[console_scripts]
+nb-compute-metrics = noisebase:scripts.nb_compute_metrics
+nb-download = noisebase:scripts.nb_download
+nb-result-table = noisebase:scripts.nb_result_table
+nb-save-reference = noisebase:scripts.nb_save_reference
