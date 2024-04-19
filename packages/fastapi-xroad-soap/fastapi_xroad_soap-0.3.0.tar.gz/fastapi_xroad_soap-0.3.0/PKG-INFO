@@ -1,0 +1,80 @@
+Metadata-Version: 2.1
+Name: fastapi-xroad-soap
+Version: 0.3.0
+Summary: FastAPI Extension for X-Road SOAP
+License: EUPL-1.2
+Keywords: fastapi,xroad,soap
+Author: Zero Reports Team
+Author-email: zero.dev@rik.ee
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: FastAPI
+Classifier: Framework :: Pydantic :: 2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: chardet (>=5.2.0,<6.0.0)
+Requires-Dist: charset-normalizer (>=3.3.2,<4.0.0)
+Requires-Dist: fastapi (>=0.110.0,<0.111.0)
+Requires-Dist: inflection (>=0.5.1,<0.6.0)
+Requires-Dist: lxml (>=5.2.1,<6.0.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: pydantic-xml (>=2.9.1,<3.0.0)
+Project-URL: Bug Tracker, https://github.com/rik-ee/fastapi-xroad-soap/issues
+Project-URL: Documentation, https://github.com/rik-ee/fastapi-xroad-soap/wiki
+Project-URL: Repository, https://github.com/rik-ee/fastapi-xroad-soap
+Description-Content-Type: text/markdown
+
+# FastAPI X-Road SOAP
+
+<img src="https://raw.githubusercontent.com/rik-ee/fastapi-xroad-soap/main/media/fxs_logo.jpg" alt="Logo" width="500">
+
+
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fastapi-xroad-soap)](https://pypi.org/project/fastapi-xroad-soap/)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/rik-ee/fastapi-xroad-soap/build-publish.yaml)](https://github.com/rik-ee/fastapi-xroad-soap/actions/workflows/build-publish.yaml)
+[![codecov](https://codecov.io/gh/rik-ee/fastapi-xroad-soap/graph/badge.svg?token=KB58NGDC1N)](https://codecov.io/gh/rik-ee/fastapi-xroad-soap)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/fastapi-xroad-soap)](https://pypistats.org/packages/fastapi-xroad-soap)
+
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)<br/>
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=bugs)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=rik-ee_fastapi-xroad-soap&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=rik-ee_fastapi-xroad-soap)
+
+
+### Description
+
+This library provides an extension to FastAPI, which allows FastAPI to be used as a SOAP service in the [X-Road](https://x-road.global/) data-exchange ecosystem. 
+Internally, it utilizes the [pydantic-xml](https://pydantic-xml.readthedocs.io/en/latest/index.html#) library for data validation and conversion between XML structures and Python objects. 
+
+The full documentation of this library can be found in the [Wiki](https://github.com/rik-ee/fastapi-xroad-soap/wiki).  
+
+
+### Installation
+
+Using PIP:
+```shell
+pip install fastapi-xroad-soap
+```
+
+Using Poetry:
+```shell
+poetry add fastapi-xroad-soap
+```
