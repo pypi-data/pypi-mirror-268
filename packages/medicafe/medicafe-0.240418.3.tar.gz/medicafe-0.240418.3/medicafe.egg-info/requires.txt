@@ -1,0 +1,4 @@
+requests
+argparse
+numpy==1.11.3
+pandas==0.20.0
