@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: sphyrna-service-manager
+Version: 0.3.0
+Summary: Python implementation of a service manager framework
+Author: Scott Goldstein
+Author-email: sgoldstein@apache.org
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: typing-extensions (>=4.11.0,<5.0.0)
+Description-Content-Type: text/markdown
+
+

@@ -1,0 +1,10 @@
+src/main/python/sphyrna/service_manager/__init__.py,sha256=18PCwkjI0XN8P2flpJDEyq2qCEkjVXqT0TWYXvtwObU,558
+src/main/python/sphyrna/service_manager/service.py,sha256=anKz0AjtYVZg1rY2a0NJYmP5qmnJgloe5i6Y6tBAFWA,2095
+src/main/python/sphyrna/service_manager/service_configuration.py,sha256=VzSomkGb2rdBnsgnEaW2kBD4dY4U23A8On6YLvzuhsw,1081
+src/main/python/sphyrna/service_manager/service_instance_provider.py,sha256=UuKGQ4OoDV_B4KpqdTzvhTNZdb-QTda2jjXZx33ASVs,1168
+src/main/python/sphyrna/service_manager/service_lifecycle_controller.py,sha256=IM2aoZme-59n7Va54TkWx7JNxnSsHFQ3Uj_q-skYCF4,3887
+src/main/python/sphyrna/service_manager/service_manager.py,sha256=NjsDe8dfFQvMdrPScsKCayJLgQVQttjb1RpAwWRmIUE,2351
+src/main/python/sphyrna/service_manager/service_manager_strategy.py,sha256=NS0KHGRlJjWX7AqfkJptEKczeaXrHJc6Wc2-vTe7c2w,10673
+sphyrna_service_manager-0.3.0.dist-info/METADATA,sha256=VB94rrhbD6v7ODvSqJw1rm0pPEaJvN0pRM4YRGVO8dc,410
+sphyrna_service_manager-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sphyrna_service_manager-0.3.0.dist-info/RECORD,,
