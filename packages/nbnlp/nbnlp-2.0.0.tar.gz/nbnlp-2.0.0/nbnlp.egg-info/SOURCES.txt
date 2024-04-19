@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+nbnlp/__init__.py
+nbnlp/api.py
+nbnlp/db.py
+nbnlp/model.py
+nbnlp/scheduler.py
+nbnlp/utils.py
+nbnlp.egg-info/PKG-INFO
+nbnlp.egg-info/SOURCES.txt
+nbnlp.egg-info/dependency_links.txt
+nbnlp.egg-info/top_level.txt
+nbnlp/data/test.tsv
+nbnlp/data/train.tsv

@@ -1,0 +1,2 @@
+include nbnlp/data/*
+include nbnlp/model *
