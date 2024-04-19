@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+slack_progress_bar/__init__.py
+slack_progress_bar/slack_progress_bar.py
+slack_progress_bar.egg-info/PKG-INFO
+slack_progress_bar.egg-info/SOURCES.txt
+slack_progress_bar.egg-info/dependency_links.txt
+slack_progress_bar.egg-info/requires.txt
+slack_progress_bar.egg-info/top_level.txt
