@@ -1,0 +1,93 @@
+[build-system]
+requires = ["hatchling", "versioningit"]
+build-backend = "hatchling.build"
+
+[project]
+dynamic = ["version"]
+name = "musify"
+authors = [
+  { name="George Martin Marino", email="gm.engineer+musify@pm.me" },
+]
+description = "Synchronise your music library to local or remote libraries"
+readme = "README.md"
+license-files = { paths = ["LICENSE"] }
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Development Status :: 4 - Beta",
+    "Natural Language :: English",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+]
+dependencies = [
+    "mutagen~=1.47",
+    "requests~=2.31",
+    "requests-cache~=1.1",
+    "Pillow~=10.1",
+    "python-dateutil>=2.8.2,<2.10.0",
+    "xmltodict~=0.13",
+    "lxml~=5.1",
+    "tqdm~=4.66",
+]
+
+[project.optional-dependencies]
+build = [
+    "hatch",
+    "versioningit",
+]
+test = [
+    "pytest~=8.0",
+    "pytest-xdist~=3.5",
+    "pytest-mock~=3.12",
+    "requests-mock~=1.11",
+    "pyyaml~=6.0",
+    "pycountry~=23.12",
+]
+docs = [
+    "musify[build]",
+    "sphinx~=7.2",
+    "renku_sphinx_theme",
+    "graphviz~=0.20",
+    "sphinx-autodoc-typehints>=1.25,<3.0",
+    "autodocsumm~=0.2",
+    "sphinxext-opengraph~=0.9",
+]
+dev = [
+    "musify[build,test,docs]",
+    "flake8",
+    "grip~=4.6",
+]
+
+[project.urls]
+"Documentation" = "https://geo-martino.github.io/musify/"
+"Release Notes" = "https://geo-martino.github.io/musify/release-history.html"
+"Contribute" = "https://geo-martino.github.io/musify/contributing.html"
+"Source code" = "https://github.com/geo-martino/musify"
+Issues = "https://github.com/geo-martino/musify/issues"
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.versioningit.format]
+# WORKAROUND: commits for actual production releases keep getting identified as dirty and/or with distance
+#  Delete this config when fixed. It should be the commented lines below each (i.e. the default formats)
+#distance = "{next_version}.dev{distance}+{vcs}{rev}"
+dirty = "{base_version}"
+#dirty = "{base_version}+d{build_date:%Y%m%d}"
+distance-dirty = "{base_version}"
+#distance-dirty = "{next_version}.dev{distance}+{vcs}{rev}.d{build_date:%Y%m%d}"
+
+[tool.hatch.build.targets.sdist]
+include = ["musify"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-color=yes"
+markers = [
+    "manual: marks tests to be run only when manually directed to by the developer",
+]
