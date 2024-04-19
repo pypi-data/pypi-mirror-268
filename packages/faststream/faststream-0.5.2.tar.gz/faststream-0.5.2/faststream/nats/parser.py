@@ -1,0 +1,129 @@
+from typing import TYPE_CHECKING, List, Optional
+
+from faststream.broker.message import StreamMessage, decode_message, gen_cor_id
+from faststream.nats.message import NatsBatchMessage, NatsMessage
+from faststream.nats.schemas.js_stream import compile_nats_wildcard
+
+if TYPE_CHECKING:
+    from nats.aio.msg import Msg
+
+    from faststream.types import AnyDict, DecodedMessage
+
+
+class NatsBaseParser:
+    """A class to parse NATS messages."""
+
+    def __init__(
+        self,
+        *,
+        pattern: str,
+    ) -> None:
+        path_re, _ = compile_nats_wildcard(pattern)
+        self.__path_re = path_re
+
+    def get_path(
+        self,
+        subject: str,
+    ) -> Optional["AnyDict"]:
+        path: Optional["AnyDict"] = None
+
+        if (path_re := self.__path_re) is not None and (
+            match := path_re.match(subject)
+        ) is not None:
+            path = match.groupdict()
+
+        return path
+
+    @staticmethod
+    async def decode_message(
+        msg: "StreamMessage[Msg]",
+    ) -> "DecodedMessage":
+        return decode_message(msg)
+
+
+class NatsParser(NatsBaseParser):
+    """A class to parse NATS core messages."""
+
+    async def parse_message(
+        self,
+        message: "Msg",
+        *,
+        path: Optional["AnyDict"] = None,
+    ) -> "StreamMessage[Msg]":
+        if path is None:
+            path = self.get_path(message.subject)
+
+        headers = message.header or {}
+
+        message._ackd = True  # prevent message from acking
+
+        return NatsMessage(
+            raw_message=message,
+            body=message.data,
+            path=path or {},
+            reply_to=message.reply,
+            headers=headers,
+            content_type=headers.get("content-type", ""),
+            message_id=headers.get("message_id", gen_cor_id()),
+            correlation_id=headers.get("correlation_id", gen_cor_id()),
+        )
+
+
+class JsParser(NatsBaseParser):
+    """A class to parse NATS JS messages."""
+
+    async def parse_message(
+        self,
+        message: "Msg",
+        *,
+        path: Optional["AnyDict"] = None,
+    ) -> "StreamMessage[Msg]":
+        if path is None:
+            path = self.get_path(message.subject)
+
+        headers = message.header or {}
+
+        return NatsMessage(
+            raw_message=message,
+            body=message.data,
+            path=path or {},
+            reply_to=headers.get("reply_to", ""),  # differ from core
+            headers=headers,
+            content_type=headers.get("content-type", ""),
+            message_id=headers.get("message_id", gen_cor_id()),
+            correlation_id=headers.get("correlation_id", gen_cor_id()),
+        )
+
+
+class BatchParser(JsParser):
+    """A class to parse NATS batch messages."""
+
+    async def parse_batch(
+        self,
+        message: List["Msg"],
+    ) -> "StreamMessage[List[Msg]]":
+        if first_msg := next(iter(message), None):
+            path = self.get_path(first_msg.subject)
+        else:
+            path = None
+
+        return NatsBatchMessage(
+            raw_message=message,
+            body=[m.data for m in message],
+            path=path or {},
+        )
+
+    async def decode_batch(
+        self,
+        msg: "StreamMessage[List[Msg]]",
+    ) -> List["DecodedMessage"]:
+        data: List["DecodedMessage"] = []
+
+        path: Optional["AnyDict"] = None
+        for m in msg.raw_message:
+            one_msg = await self.parse_message(m, path=path)
+            path = one_msg.path
+
+            data.append(decode_message(one_msg))
+
+        return data
