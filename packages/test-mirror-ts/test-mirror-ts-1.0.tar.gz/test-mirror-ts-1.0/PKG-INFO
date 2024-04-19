@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: test-mirror-ts
+Version: 1.0
+Summary: Mirror package for requests
+Author: Mathias Bochet (aka Zen)
+Requires-Dist: requests
+
+This package mirrors the requests package.
