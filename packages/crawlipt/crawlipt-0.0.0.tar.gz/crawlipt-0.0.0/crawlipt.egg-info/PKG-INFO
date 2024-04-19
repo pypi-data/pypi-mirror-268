@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: crawlipt
+Version: 0.0.0
+Summary: The script for selenium in python
+Home-page: https://github.com/WwwwwyDev/crawlipt
+Author: WwwwwyDev
+Author-email: me@example.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: selenium>=4.0.0
+Requires-Dist: ddddocr
+
+
+# crawlipt
+the script for selenium in python
