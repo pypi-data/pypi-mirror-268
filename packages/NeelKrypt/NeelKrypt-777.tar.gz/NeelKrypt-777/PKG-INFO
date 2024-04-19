@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: NeelKrypt
+Version: 777
+Summary: Text Enkryptor and Dekryptor using PKI
+Author: Neelanjan Manna
+Author-email: nm3897mel@gmail.com
+Keywords: python,Diifie Pager,Auguste Kerckhoffs
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+
+USES DIFFIE HELLMAN @ CORE . KEY HANDLING AND CONVERSION IS THE ART HERE
