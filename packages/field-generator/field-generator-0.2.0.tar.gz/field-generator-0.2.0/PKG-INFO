@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: field-generator
+Version: 0.2.0
+Summary: A simple slope field generator
+Home-page: https://github.com/iamawestruck/Slope-Field-Generator
+Author: EQIKE
+Author-email: lc20-0098@lclark.edu
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+This is the ReadMe file, we made this in order for our package to work properly.
+This code was made for our Slope Field Generator project in CS 488 for Liz to give to their Calc 1 class.
+
