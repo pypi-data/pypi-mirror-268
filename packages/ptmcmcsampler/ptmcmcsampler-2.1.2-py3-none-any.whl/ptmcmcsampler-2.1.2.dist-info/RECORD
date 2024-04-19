@@ -1,0 +1,10 @@
+PTMCMCSampler/PTMCMCSampler.py,sha256=on-TjvzfxuvL-Rfjq1-r9pnQ0zNF5vJ1FkuQ75686kI,37304
+PTMCMCSampler/__init__.py,sha256=w1J7S1cfRYK8r7gcFpaI50fkXBYjGLVT4e6zEMC67MY,107
+PTMCMCSampler/nompi4py.py,sha256=peoFO-soLMSPaKwdi_DBsutC6teFdXPFu845jK6CWvM,702
+PTMCMCSampler/nutsjump.py,sha256=ZTRyQ6-jmHOrL3TwwIHXP_IaET8QQq0uEL7Jtt9S0R8,30428
+PTMCMCSampler/version.py,sha256=R6re3ig0oPOwaN99DXYlXD9QXMnRk8x10nFQiamitqs,411
+ptmcmcsampler-2.1.2.dist-info/LICENSE,sha256=lGV5HeP5hXWmxEfk4KzWBMLT3NwTfVVa9GcZYVhRS3U,1397
+ptmcmcsampler-2.1.2.dist-info/METADATA,sha256=SiIsjYX54RyUOwOjQI_djZC2BmXLmdbZRF1UBaYioqs,5602
+ptmcmcsampler-2.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ptmcmcsampler-2.1.2.dist-info/top_level.txt,sha256=8lBrwCb7ROHKwjWvgUgsVaaksW5ol1W5yXiGewgmadw,14
+ptmcmcsampler-2.1.2.dist-info/RECORD,,
