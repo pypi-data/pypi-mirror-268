@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+versioneer.py
+pySuperfish.egg-info/PKG-INFO
+pySuperfish.egg-info/SOURCES.txt
+pySuperfish.egg-info/dependency_links.txt
+pySuperfish.egg-info/requires.txt
+pySuperfish.egg-info/top_level.txt
+superfish/__init__.py
+superfish/_version.py
+superfish/interpolate.py
+superfish/parsers.py
+superfish/plot.py
+superfish/superfish.py
+superfish/writers.py
