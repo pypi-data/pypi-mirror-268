@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: gm-termcontrol
+Version: 0.0.3
+Summary: python terminal control and basïc gui
+Home-page: https://github.com/gretchycat/termcontrol
+Author: Gretchen Maculo
+Author-email: gretchen.maculo@gmail.com
+License: GPL3
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyte
+
+# gm_termcontrol
+python library to control an ansi terminal
