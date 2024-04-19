@@ -1,0 +1,14 @@
+numpy
+tensorflowjs
+tensorflow
+pandas
+
+[full]
+mlflow
+flask
+waitress
+click
+beyondml
+scikit-learn
+torch
+llmlink
