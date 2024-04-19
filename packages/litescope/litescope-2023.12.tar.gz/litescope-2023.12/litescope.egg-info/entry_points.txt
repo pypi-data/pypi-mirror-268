@@ -1,0 +1,2 @@
+[console_scripts]
+litescope_cli = litescope.software.litescope_cli:main
