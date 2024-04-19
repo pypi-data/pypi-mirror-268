@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+src/casepy.egg-info/PKG-INFO
+src/casepy.egg-info/SOURCES.txt
+src/casepy.egg-info/dependency_links.txt
+src/casepy.egg-info/top_level.txt
