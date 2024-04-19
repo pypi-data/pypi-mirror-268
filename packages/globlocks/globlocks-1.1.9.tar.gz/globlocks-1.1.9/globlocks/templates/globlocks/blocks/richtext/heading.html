@@ -1,0 +1,6 @@
+{% extends "globlocks/shared/blocks/heading.html" %}
+{% load wagtailcore_tags globlocks.toolbar %}
+
+{% block tag %}
+    {% apply_toolbar self.text self.settings.toolbar class=self.settings.classname %}
+{% endblock %}
