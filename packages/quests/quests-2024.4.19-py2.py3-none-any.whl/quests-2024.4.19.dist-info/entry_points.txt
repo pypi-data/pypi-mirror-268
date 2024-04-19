@@ -1,0 +1,3 @@
+[console_scripts]
+quests = quests.cli.quests:quests
+quests_flex = quests.cli.quests_flex:quests_flex
