@@ -1,0 +1,45 @@
+<div class="card rounded-0 border-0 shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-light table-striped table-hover mb-0 fs-5">
+                <thead>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Registration Date</th>
+                    <th class="text-center">Actions</th>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td><input type="checkbox" name="" id="" class="form-check custom"></td>
+                        <td>
+                            <a href="{{url_for('admin_get_user', user_id=user.id)}}" class="nav-link">
+                                {{ user['name'] }}
+                            </a>
+                        </td>
+                        <td>{{ user['created_at'] }}</td>
+                        <td class="text-center">
+                            <nav class="dropdown">
+                                <a class="nav-link p-0" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v bg-white border rounded-circle"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-left position-fixed rounded-0 shadow border-0" role="menu">
+                                    <li>
+                                        <a href="{{url_for('admin_get_user', user_id=user['id'])}}" class="dropdown-item small py-0">
+                                            Open
+                                        </a>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item small py-0" href="#">Update</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-danger small py-0" href="#">Delete</a></li>
+                                </ul>
+                            </nav>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

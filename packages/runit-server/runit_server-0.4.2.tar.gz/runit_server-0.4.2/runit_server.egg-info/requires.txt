@@ -1,0 +1,15 @@
+requests
+python-dotenv
+runit-cli
+odbms
+fastapi
+python-multipart
+python-jose[cryptography]
+passlib
+docker
+aiofiles
+pydantic
+pydantic[email]
+jinja2
+PyGithub
+itsdangerous
