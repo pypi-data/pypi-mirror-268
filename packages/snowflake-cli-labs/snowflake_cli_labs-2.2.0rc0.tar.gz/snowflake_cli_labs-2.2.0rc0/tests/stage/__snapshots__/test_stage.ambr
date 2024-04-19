@@ -1,0 +1,124 @@
+# serializer version: 1
+# name: test_copy_throws_error_for_same_platform_operation[@snow/stage-@stage/snow]
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ Both source and target path are remote. This operation is not supported.     │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_copy_throws_error_for_same_platform_operation[local/path-other/local/path]
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ Both source and target path are local. This operation is not supported.      │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_copy_throws_error_for_same_platform_operation[snow://stage-snow://stage/snow]
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ Both source and target path are remote. This operation is not supported.     │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_execute_continue_on_error
+  '''
+  SUCCESS - exe/s1.sql
+  FAILURE - exe/s2.sql
+  SUCCESS - exe/s3.sql
+  +------------------------------+
+  | File       | Status  | Error |
+  |------------+---------+-------|
+  | exe/s1.sql | SUCCESS | None  |
+  | exe/s2.sql | FAILURE | Error |
+  | exe/s3.sql | SUCCESS | None  |
+  +------------------------------+
+  
+  '''
+# ---
+# name: test_execute_no_files_for_stage_path[exe/*.txt-No files matched pattern 'exe/*.txt']
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ No files matched pattern '@exe/*.txt'                                        │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_execute_no_files_for_stage_path[exe/directory-No files matched pattern 'exe/directory']
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ No files matched pattern '@exe/directory'                                    │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_execute_no_files_for_stage_path[exe/some_file.sql-No files matched pattern 'exe/some_file.sql']
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ No files matched pattern '@exe/some_file.sql'                                │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_execute_raise_invalid_file_extension_error
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ Invalid file extension, only `.sql` files are allowed.                       │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_execute_raise_invalid_variables_error
+  '''
+  ╭─ Error ──────────────────────────────────────────────────────────────────────╮
+  │ Invalid variable: 'variable'                                                 │
+  ╰──────────────────────────────────────────────────────────────────────────────╯
+  
+  '''
+# ---
+# name: test_stage_print_result_for_get_all_files_from_stage
+  '''
+  Use `--recursive` flag, which copy files recursively with directory structure. This will be the default behavior in the future.
+  SELECT A MOCK QUERY
+  +-----------------------------------------+
+  | file      | size | status     | message |
+  |-----------+------+------------+---------|
+  | file1.txt | 10   | DOWNLOADED |         |
+  | file2.txt | 10   | DOWNLOADED |         |
+  | file3.txt | 10   | DOWNLOADED |         |
+  +-----------------------------------------+
+  
+  '''
+# ---
+# name: test_stage_print_result_for_get_all_files_from_stage_recursive
+  '''
+  +-----------------------------------------+
+  | file      | size | status     | message |
+  |-----------+------+------------+---------|
+  | file1.txt | 10   | DOWNLOADED |         |
+  | file2.txt | 10   | DOWNLOADED |         |
+  | file3.txt | 10   | DOWNLOADED |         |
+  +-----------------------------------------+
+  
+  '''
+# ---
+# name: test_stage_print_result_for_put_directory
+  '''
+  SELECT A MOCK QUERY
+  +------------------------------------------------------------------------------+
+  |         |         |         |         | source_ | target_ |         |        |
+  |         |         | source_ | target_ | compres | compres |         | messag |
+  | source  | target  | size    | size    | sion    | sion    | status  | e      |
+  |---------+---------+---------+---------+---------+---------+---------+--------|
+  | file1.t | file1.t | 10      | 8       | NONE    | NONE    | UPLOADE |        |
+  | xt      | xt      |         |         |         |         | D       |        |
+  | file2.t | file2.t | 10      | 8       | NONE    | NONE    | UPLOADE |        |
+  | xt      | xt      |         |         |         |         | D       |        |
+  | file3.t | file3.t | 10      | 8       | NONE    | NONE    | UPLOADE |        |
+  | xt      | xt      |         |         |         |         | D       |        |
+  +------------------------------------------------------------------------------+
+  
+  '''
+# ---
