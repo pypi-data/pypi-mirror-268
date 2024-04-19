@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "ipynbparser"
+description = "Self-parser for IPython-based notebooks"
+version = "0.0.1"
+authors = ["Péter Ferenc Gyarmati <peter@sutoiku.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/sutoiku/ipynbparser"
+repository = "https://github.com/sutoiku/ipynbparser"
+exclude = ["ipynbparser/tests/*"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Framework :: Jupyter",
+    "Framework :: Pytest",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ipython = "^8.23.0"
+nbformat = "^5.10.4"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+mypy = "^1.9.0"
+notebook = "^7.1.3"
+pre-commit = "^3.7.0"
+pytest = "^8.1.1"
+ruff = "^0.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 88
+src = ["ipynbparser"]
+fix = true
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    # isort
+    "I001",
+]
+ignore = ["E501", "W191"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.mypy]
+
+check_untyped_defs = true
+disallow_any_generics = true
+follow_imports = "silent"
+no_implicit_reexport = true
+warn_redundant_casts = true
+warn_unused_ignores = true

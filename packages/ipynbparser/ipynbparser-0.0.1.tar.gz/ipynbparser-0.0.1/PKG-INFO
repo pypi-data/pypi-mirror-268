@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: ipynbparser
+Version: 0.0.1
+Summary: Self-parser for IPython-based notebooks
+Home-page: https://github.com/sutoiku/ipynbparser
+License: MIT
+Author: Péter Ferenc Gyarmati
+Author-email: peter@sutoiku.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Framework :: Jupyter
+Classifier: Framework :: Pytest
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ipython (>=8.23.0,<9.0.0)
+Requires-Dist: nbformat (>=5.10.4,<6.0.0)
+Project-URL: Repository, https://github.com/sutoiku/ipynbparser
+Description-Content-Type: text/markdown
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/sutoiku/ipynbparser)
+
+# ipynbparser
+
+Self-parser for IPython-based notebooks.
