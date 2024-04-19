@@ -1,0 +1,2 @@
+[console_scripts]
+prompt-security-fuzzer = ps_fuzz.cli:main
