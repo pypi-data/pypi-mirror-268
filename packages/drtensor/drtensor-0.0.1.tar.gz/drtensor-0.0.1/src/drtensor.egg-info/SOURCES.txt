@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/drtensor/__init__.py
+src/drtensor/doctor.py
+src/drtensor/figures.py
+src/drtensor/hooks.py
+src/drtensor/utils.py
+src/drtensor.egg-info/PKG-INFO
+src/drtensor.egg-info/SOURCES.txt
+src/drtensor.egg-info/dependency_links.txt
+src/drtensor.egg-info/top_level.txt
