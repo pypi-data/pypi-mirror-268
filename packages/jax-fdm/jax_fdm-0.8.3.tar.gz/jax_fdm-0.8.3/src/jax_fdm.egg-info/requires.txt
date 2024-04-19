@@ -1,0 +1,6 @@
+jax[cpu]
+compas<2.0
+compas_singular
+scipy
+equinox
+jaxopt
