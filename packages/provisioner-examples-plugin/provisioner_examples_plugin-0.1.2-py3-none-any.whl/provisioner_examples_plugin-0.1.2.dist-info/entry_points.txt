@@ -1,0 +1,4 @@
+[console_scripts]
+example_plugin=provisioner_examples_plugin.main_dev:main
+test_runner=provisioner_examples_plugin.main_fake:fake_app
+
