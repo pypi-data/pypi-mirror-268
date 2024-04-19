@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: torchenhanced
+Version: 0.3.0b2
+Summary: Wrappers for pytorch stuff I use on the daily
+Author-email: Vassilis Papadopoulos <frotaur@hotmail.co.uk>
+License: MIT License
+Project-URL: Homepage, https://github.com/frotaur/torchenhanced
+Project-URL: Bug Tracker, https://github.com/frotaur/torchenhanced/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: wandb
+Requires-Dist: opencv_python
+Requires-Dist: numpy
+Requires-Dist: Pillow
+Requires-Dist: tqdm
+
+# TorchEnhanced
+Wrappers for pytorch stuff I use on the daily. Basically a minimal 'pytorch lightning', I was just not aware it existed at the time of creation.
+
+
+## Coming soon : Readme and documentation
+In the meantime, everything is copiously doc-stringed, so you can take a look there.
+
+
