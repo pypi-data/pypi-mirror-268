@@ -1,0 +1,5 @@
+theoddevegame/src/theoddevegame.py
+theoddevegame/src/theoddevegame.egg-info/PKG-INFO
+theoddevegame/src/theoddevegame.egg-info/SOURCES.txt
+theoddevegame/src/theoddevegame.egg-info/dependency_links.txt
+theoddevegame/src/theoddevegame.egg-info/top_level.txt
