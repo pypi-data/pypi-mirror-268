@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: LoopAi
+Version: 1.0.3
+Summary: A python libary that gives you access to a set of Ai models including WormGpt , Gemini , blackbox and more
+Home-page: UNKNOWN
+Author: DarkLoop (Organisation)
+Author-email: <private.e.m.a.i.l.0.0.0.1.0.1.0.0.0.1@gmail.com>
+License: UNKNOWN
+Keywords: python,Ai,Text_Models
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: requests
+
+UNKNOWN
+
