@@ -1,0 +1,6 @@
+container_runner/__init__.py,sha256=VrNrCGGMOu6xjA5zSZnkJ3rHRBDpW8B4EhAnQsUmBMQ,105
+container_runner/transformations.py,sha256=PQz6JxPV1rwusOeiqXI80-V12TbjJgYmAdX9dL6Y7DQ,76
+container_runner-0.0.1.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+container_runner-0.0.1.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+container_runner-0.0.1.dist-info/METADATA,sha256=uxdy7kDPx5ozh_Z4Uthp_r07gYggNZWEXkosoVM7iDc,1820
+container_runner-0.0.1.dist-info/RECORD,,
