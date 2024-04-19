@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: ipl-pipeline-py-common
+Version: 0.10.0
+Summary: Common functions and modules for Python based IPL Pipeline Services
+License: All Rights Reserved
+Author: Vincent Lee
+Author-email: vlee@vlee.me.uk
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: dnspython (>=2.6.1,<3.0.0)
+Requires-Dist: motor (>=3.3.2,<4.0.0)
+Requires-Dist: msgpack (>=1.0.8,<2.0.0)
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: pydantic-mongo (>=2.1.2,<3.0.0)
+Requires-Dist: redis (>=5.0.3,<6.0.0)
+Description-Content-Type: text/markdown
+
+# pipeline-py-common
+Common Python Modules and function and functions for Pipeline
+
+## What's Pipeline?
+
+Pipeline is Inkling Performance Lab's internal production stack API used to retreave and store data from various sources, such as.
+
+- Commentators
+- Schedules Events
+- Player Stats
+- Team Stats
+- and more
+
+## What's pipeline-py-common?
+This is a collection of common python modules and functions used across the Pipeline stack for python based services. This includes things like:
+
+- Common Database Connection Handlers for MongoDB
+- Common Functions such as startup variables and URN
+- Models for communication between services
+
+
