@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tipo-kgen
+Version: 0.0.4
+Summary: TIPO: Text to Image genration through text Presampling with LLMs for Optimal prompting
+Home-page: https://github.com/KohakuBlueleaf/KGen
+Author: Shih-Ying Yeh(KohakuBlueLeaf)
+Author-email: apolloyeh0123@gmail.com
+License: Apache 2.0
+License-File: LICENSE
+Requires-Dist: transformers
+Requires-Dist: huggingface_hub
+Requires-Dist: torch
