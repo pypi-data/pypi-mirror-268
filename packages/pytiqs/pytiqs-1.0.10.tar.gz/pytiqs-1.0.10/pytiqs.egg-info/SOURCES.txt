@@ -1,0 +1,14 @@
+README.md
+setup.cfg
+setup.py
+pytiqs/__init__.py
+pytiqs/__version__.py
+pytiqs/connect.py
+pytiqs/constants.py
+pytiqs/exceptions.py
+pytiqs/sockets.py
+pytiqs.egg-info/PKG-INFO
+pytiqs.egg-info/SOURCES.txt
+pytiqs.egg-info/dependency_links.txt
+pytiqs.egg-info/requires.txt
+pytiqs.egg-info/top_level.txt
