@@ -1,0 +1,39 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "genes2genes"
+authors = [{name = "Dinithi Sumanaweera", email = "ds40@sanger.ac.uk"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Development Status :: 5 - Production/Stable",
+]
+dynamic = ["version", "description"]
+keywords = ["single cell", "trajectory alignment", "dynamic programming"]
+dependencies = [
+    "anndata",
+    "regex",
+    "tabulate",
+    "gseapy",
+    "blitzgsea",
+    "torch",
+    "scipy",
+    "scikit-learn",
+    "tqdm",
+    "matplotlib",
+    "numpy<2",
+    "pandas>=2.0.3",
+    "seaborn>=0.12.2",
+    "leven",
+
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Home = "https://teichlab.github.io/Genes2Genes"
+Repository = "https://github.com/Teichlab/Genes2Genes"
