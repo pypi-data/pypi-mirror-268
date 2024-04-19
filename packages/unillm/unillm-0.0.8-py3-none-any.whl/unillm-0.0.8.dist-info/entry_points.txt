@@ -1,0 +1,2 @@
+[console_scripts]
+unillm = unillm.unillm:run_cmd
