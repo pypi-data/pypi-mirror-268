@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: airmailer
+Version: 0.2.2
+Summary: Use boto3 to send e-mails with AWS SES, with configuration set support
+Home-page: https://github.com/cmalek/airmailer
+Author: Christopher Malek
+Author-email: cmalek@caltech.edu
+License: Apache Software License 2.0
+Project-URL: Documentation, https://airmailer.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/caltechads/airmailer
+Project-URL: Issues, https://github.com/caltechads/airmailer/issues
+Keywords: aws,email
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Topic :: Communications :: Email
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+=======
+History
+=======
+
+0.2.0 (2023-06-06)
+------------------
+
+* ``X-SES-MESSAGE-TAGS`` header is now added to the email if the ``tags`` parameter is
+  passed to the ``send_email`` method.
+
+
+0.1.2 (2021-11-30)
+------------------
+
+* First release on PyPI.
+
+
+0.1.0 (2021-11-30)
+------------------
+
+* First release on PyPI.

@@ -1,0 +1,2 @@
+[console_scripts]
+airmailer = airmailer.cli:main
