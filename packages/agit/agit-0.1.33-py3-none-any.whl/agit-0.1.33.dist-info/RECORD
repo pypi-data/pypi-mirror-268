@@ -1,0 +1,17 @@
+agit/__init__.py,sha256=8U4ptJdYgsocos70dthOQ_I4TS0v4gmFa3LC10xpxMU,918
+agit/cls.py,sha256=5at4f-p1iF5wpHz08ztr1OTnjO4W9KdB2VDVyFWEXlY,1863
+agit/common.py,sha256=nMSo2NyF_n7FFRKPT-QLluy0-g_61PdirXIHBU65k1s,3171
+agit/embd.py,sha256=ZRdVYNBgv7QCxc1Ixg8bgS-ZjL1VvXTATpIsFkB3hKY,1637
+agit/eval.py,sha256=gZVYNql66WO6p1OFD0kDgbe8VRw6C9J5rcsPbp_-DR0,4536
+agit/llm.py,sha256=mn9tjgXnL89keFeTU_m0b_8tkfQWVtLQMIrDz9Dk4ho,3373
+agit/utils.py,sha256=RlRk0BC2PU4USipvVjWNP5trDdT6I2gu0PmEdDBPDbs,1456
+agit/backend/__init__.py,sha256=8YlxIwqKwa8IV8-cLEIbuic_lxR4Gwc8w8QoONUXS8A,485
+agit/backend/local.py,sha256=Gf1aJBHIRyByXqR8HUn9brGd3THxmJYWXyx5Cre8cLE,3422
+agit/backend/openai_bk.py,sha256=hjBugdehn40_GG2kWOOXZgOcPFE291KW0OYOUvmiZic,3782
+agit/backend/zhipu_api.py,sha256=L7yOuqt0j0N3hcSW5tJSkGjaRxobwkqQbF5oWeRsWaM,8605
+agit/backend/zhipuai_bk.py,sha256=R4HyNbvI5SpAbMMVhnrF9rxzfoAyybYOXUFXETh5ffU,9056
+agit-0.1.33.dist-info/METADATA,sha256=YkjAhvYebK40ppLPWqxP6h5PNPOxEsDVLOArl4gCT3c,375
+agit-0.1.33.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+agit-0.1.33.dist-info/top_level.txt,sha256=oGwGfNM7sIpsXqJ8w9eUno0Au9ES8Mb09QXS4ZnOtzo,5
+agit-0.1.33.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+agit-0.1.33.dist-info/RECORD,,
