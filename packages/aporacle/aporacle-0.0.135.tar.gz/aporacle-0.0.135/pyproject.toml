@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "aporacle"
+version = "0.0.135"
+description = ""
+authors = ["Makhosonke Morafo <makhosonke@komokun.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+schedule = "^1.2.1"
+statsmodels = "^0.14.1"
+cachetools = "^5.3.3"
+web3 = "^6.15.1"
+eth-bloom = "^3.0.0"
+eth-abi = "^5.0.1"
+eth-utils = "^4.0.0"
+pandas = "^2.2.1"
+scikit-learn = "^1.4.1.post1"
+google-cloud-storage = "^2.16.0"
+komoutils = "^0.0.224"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
