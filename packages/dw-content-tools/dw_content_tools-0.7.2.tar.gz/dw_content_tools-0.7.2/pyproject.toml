@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dw-content-tools"
+version = "0.7.2"
+description = ""
+authors = ["Martin Zugnoni <mzugnoni@datawars.io>"]
+readme = "README.md"
+packages = [{include = "content_tools"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.3"
+pyyaml = "^6.0"
+beautifulsoup4 = "^4.11.1"
+jsonschema = "^4.17.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+ipython = "^8.7.0"
+ipdb = "^0.13.11"
+
+[tool.poetry.scripts]
+content_tools = "content_tools.__main__:content_tools"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
