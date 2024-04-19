@@ -1,0 +1,16 @@
+odbms/__init__.py,sha256=KMMzdOw2v-tXL9cqTuBbEMt7jP1LsShEGmn10TywxYk,143
+odbms/app.py,sha256=Q0DTZbUzgrE3yC9_iihN02MUUsYQr5JNRED1PqZunYI,1090
+odbms/database.py,sha256=q4cZH743fZmrkWIRWUKgsa9pkohdRaUmw4hc6MMU-dc,3036
+odbms/dbms.py,sha256=uCXeBZIOakKwoDMQv4diF05eIkSNkJey196vFx_Ihis,3463
+odbms/model.py,sha256=HHkbP4ticRnkxxM2xOMBo5Rf9zfbgn8BCBdAa9dHl-E,15565
+odbms/orms/__init__.py,sha256=PAYHfUbmq92o0FIOEoOAJeGrPD7zcjHGgk2l7NAKvFM,98
+odbms/orms/base.py,sha256=_2GYxj61VxpXBZF3paFb2L2whATEay4ho8_gwF3M4dE,1037
+odbms/orms/mongodb.py,sha256=w-eKrRtO4Z4hI4holFcsUYWQM167Scr_ps4ulFI1cK8,1909
+odbms/orms/mysqldb.py,sha256=oRWOPaYtjMn--EeHYE_McpCdp7nLn498OLAA52c-bmg,6939
+odbms/orms/postgresqldb.py,sha256=MD-70DYefHoYknAx63NWgt4MboXi1YzVH_4gDlAjKvo,8482
+odbms/orms/sqlitedb.py,sha256=pJwcTmNJFLG2vMDwO2AtSkUWQAmiqEhczcd75eXlDGI,6290
+odbms-0.3.1.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+odbms-0.3.1.dist-info/METADATA,sha256=UsVRtHDQiROaVklzi71xXD68c8V1EEA8tDcOfco55R0,1127
+odbms-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+odbms-0.3.1.dist-info/top_level.txt,sha256=buizaHKFqT9KhqmzRQ0yo73X2K7w3HM9LVwmFjVVHuo,6
+odbms-0.3.1.dist-info/RECORD,,
