@@ -1,0 +1,5 @@
+setup.py
+eqio.egg-info/PKG-INFO
+eqio.egg-info/SOURCES.txt
+eqio.egg-info/dependency_links.txt
+eqio.egg-info/top_level.txt
