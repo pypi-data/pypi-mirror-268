@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: psymple
+Version: 0.1.2
+Summary: Population Modeling
+Author-email: George Simmons <g.simmons@idems.international>, Georg Osang <gosang@idems.international>
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib >=3.2.1
+Requires-Dist: networkx ~=3.1
+Requires-Dist: numpy >=1.19.5
+Requires-Dist: sympy >=1.9
+Requires-Dist: scipy >=1.11
+
+# population-modeling-py
+
+## Description
+This is a population modelling package.
+
+## Running tests
+
+Run `python -m unittest`
