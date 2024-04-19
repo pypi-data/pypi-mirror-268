@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+src/nog642_util/__init__.py
+src/nog642_util.egg-info/PKG-INFO
+src/nog642_util.egg-info/SOURCES.txt
+src/nog642_util.egg-info/dependency_links.txt
+src/nog642_util.egg-info/top_level.txt
