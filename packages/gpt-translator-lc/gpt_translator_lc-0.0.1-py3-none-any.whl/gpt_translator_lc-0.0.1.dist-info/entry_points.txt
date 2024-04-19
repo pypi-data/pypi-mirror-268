@@ -1,0 +1,2 @@
+[console_scripts]
+gpt_translator = gpt_translator.main:main
