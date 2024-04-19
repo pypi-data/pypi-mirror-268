@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: vedlibrary
+Version: 0.1
+Summary: A Python package for alphabetical sorting
+Home-page: https://github.com/Ncived/alphabetical_sort
+Author: vedant
+Author-email: pawarvedant51@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+
