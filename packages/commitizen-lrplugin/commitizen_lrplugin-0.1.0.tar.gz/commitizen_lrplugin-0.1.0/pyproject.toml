@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "commitizen-lrplugin"
+version = "0.1.0"
+description = "Commitizen version provider for Lua Lightroom plug-ins."
+authors = ["Karsten Silkenbäumer <993392+kassi@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "commitizen_lrplugin", from = "src"}]
+
+[tool.poetry.plugins."commitizen.provider"]
+commitizen-lrplugin = "commitizen_lrplugin.lrplugin_version_provider:LRPluginVersionProvider"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^3.22.0"
+pytest = "^8.1.1"
+pytest-watcher = "^0.4.2"
+pytest-mock = "^3.14.0"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+change_type_map = { feat = "Features", fix = "Bug fixes" }
+
+[tool.pytest-watcher]
+now = true
+clear = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
