@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+markdown_mdantic.egg-info/PKG-INFO
+markdown_mdantic.egg-info/SOURCES.txt
+markdown_mdantic.egg-info/dependency_links.txt
+markdown_mdantic.egg-info/requires.txt
+markdown_mdantic.egg-info/top_level.txt
+mdantic/__init__.py
+mdantic/mdantic.py
+mdantic/samples.py
+tests/test_analyze.py
