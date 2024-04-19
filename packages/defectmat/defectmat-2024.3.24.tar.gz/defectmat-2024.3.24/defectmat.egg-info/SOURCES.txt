@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+defectmat/__init__.py
+defectmat.egg-info/PKG-INFO
+defectmat.egg-info/SOURCES.txt
+defectmat.egg-info/dependency_links.txt
+defectmat.egg-info/requires.txt
+defectmat.egg-info/top_level.txt
