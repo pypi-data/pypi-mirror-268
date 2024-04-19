@@ -1,0 +1,14 @@
+dash_pager/Pager.py,sha256=oogHmyP1jsFuG3iDV9j9trcw1KTFskiHi0HbpHxED9g,1912
+dash_pager/__init__.py,sha256=casdiZ9-LuGKrNyFGwgM1oiO3L9BmI0gYGh6bPEyNv4,2257
+dash_pager/_imports_.py,sha256=Nxn7IT6vCaPhDs1x6db4Q-OUhrXpyZhg1fg0SjW72A4,89
+dash_pager/async-Pager.js,sha256=87urT6p2Jf1RH-SdUeEADXi14NlJXR12kD4aar9HLdU,4616
+dash_pager/async-Pager.js.map,sha256=pPpo8CZQxJTGgDK1vea-2Nf2qBUfuiHsnqKcDQ3bMzw,8238
+dash_pager/dash_pager.min.js,sha256=9Y30-mtC-IaFyh1T_9n0TvbIJQAFbpkgnLebnTvnSCU,3942
+dash_pager/dash_pager.min.js.map,sha256=NQdIH1Z1mJmpxrDkFjb7BQAuQB6jz4I_NvlI7qOhqP4,19383
+dash_pager/metadata.json,sha256=h-R-CoFMQxKjtaIw4powzq7KRmHyNUSi5Xe9rhc0M74,3956
+dash_pager/package-info.json,sha256=oMCRzViJBQvdbolTiEysnigGSEeAU80w-vwnPe4NQFY,2102
+dash_pager-0.1.3.dist-info/LICENSE,sha256=YF6QR6Vjxcg5b_sYIyqkME7FZYau5TfEUGTG-0JeRK0,35129
+dash_pager-0.1.3.dist-info/METADATA,sha256=s1u8cYd3KdSb8c4dFHw9yj65ExR1gv4VS3lGqyyV990,4239
+dash_pager-0.1.3.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+dash_pager-0.1.3.dist-info/top_level.txt,sha256=VOjgZEbzjEZbgbT8arZiYmbZdBJ7hdtA0GiicI0fJIQ,11
+dash_pager-0.1.3.dist-info/RECORD,,
