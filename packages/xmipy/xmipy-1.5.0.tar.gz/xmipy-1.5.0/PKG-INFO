@@ -1,0 +1,49 @@
+Metadata-Version: 2.3
+Name: xmipy
+Version: 1.5.0
+Summary: xmipy is an extension to the bmipy Python package
+Project-URL: Documentation, https://deltares.github.io/xmipy/xmipy.html
+Project-URL: Source, https://github.com/Deltares/xmipy
+Author-email: Martijn Russcher <Martijn.Russcher@deltares.nl>, Julian Hofer <Julian.Hofer@deltares.nl>, "Joseph D. Hughes" <jdhughes@usgs.gov>
+License: CC0
+License-File: LICENSE
+Keywords: BMI,Basic Model Interface
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
+Classifier: Topic :: Scientific/Engineering :: Hydrology
+Requires-Python: >=3.9
+Requires-Dist: bmipy
+Requires-Dist: numpy
+Provides-Extra: docs
+Requires-Dist: pdoc; extra == 'docs'
+Provides-Extra: lint
+Requires-Dist: mypy; extra == 'lint'
+Requires-Dist: ruff; extra == 'lint'
+Provides-Extra: tests
+Requires-Dist: flopy>=3.3.6; extra == 'tests'
+Requires-Dist: pytest; extra == 'tests'
+Requires-Dist: pytest-cov; extra == 'tests'
+Requires-Dist: requests; extra == 'tests'
+Description-Content-Type: text/markdown
+
+# xmipy
+
+![Continuous integration](https://github.com/Deltares/xmipy/workflows/Continuous%20integration/badge.svg)
+[![codecov](https://codecov.io/gh/Deltares/xmipy/branch/develop/graph/badge.svg)](https://codecov.io/gh/Deltares/xmipy)
+
+
+`xmipy` is an extension to [bmipy](https://pypi.org/project/bmipy/) including an implementation of the abstract methods.
+The extended interface is required to couple certain hydrological kernels, particularly MODFLOW 6. Currently it is a joint development of the USGS and Deltares. The [imod_coupler](https://github.com/Deltares/imod_coupler) uses it, for example, to couple MODFLOW 6 and MetaSWAP.
+
+`xmipy` can be downloaded from [conda-forge](https://anaconda.org/conda-forge/xmipy) or [PyPI](https://pypi.org/project/xmipy/).
+
+# Contributing
+
+In order to develop on `xmipy`, you have to download pixi.
+Pixi can be downloaded at [pixi.sh](https://pixi.sh/latest/).
+
+In order to run the test suite, execute:
+
+```bash
+pixi run tests
+```

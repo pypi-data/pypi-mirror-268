@@ -1,0 +1,126 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xmipy"
+description = "xmipy is an extension to the bmipy Python package"
+readme = "README.md"
+authors = [
+    { name = "Martijn Russcher", email = "Martijn.Russcher@deltares.nl" },
+    { name = "Julian Hofer", email = "Julian.Hofer@deltares.nl" },
+    { name = "Joseph D. Hughes", email = "jdhughes@usgs.gov" },
+]
+keywords = ["BMI", "Basic Model Interface"]
+license = { text = "CC0" }
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+    "Topic :: Scientific/Engineering :: Hydrology",
+]
+requires-python = ">=3.9"
+dependencies = ["bmipy", "numpy"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = ["flopy >=3.3.6", "pytest", "pytest-cov", "requests"]
+lint = ["ruff", "mypy"]
+docs = ["pdoc"]
+
+[project.urls]
+Documentation = "https://deltares.github.io/xmipy/xmipy.html"
+Source = "https://github.com/Deltares/xmipy"
+
+[tool.hatch.version]
+path = "xmipy/__init__.py"
+
+[tool.pixi.project]
+channels = ["conda-forge"]
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+xmipy = { path = ".", editable = true }
+
+[tool.pixi.dependencies]
+build = "*"
+flopy = ">=3.3.6"
+mypy = "*"
+pdoc = "*"
+pytest = "*"
+pytest-cov = "*"
+requests = "*"
+ruff = "*"
+twine = "*"
+
+[tool.pixi.tasks]
+# Tests
+# The flag -s stops pytest from capturing output
+# This is necessary until proper error reporting is implemented by Modflow
+tests-ci = "pytest -vs --cov=xmipy --cov-report=xml tests/"
+tests = "pytest tests/"
+
+# Docs
+docs = "pdoc -o docs/ xmipy"
+
+# Lint
+ruff = "ruff check ."
+ruff-format = "ruff format --check ."
+mypy = "mypy --install-types --non-interactive --ignore-missing-imports ."
+check-build = "rm -rf dist && python -m build && twine check --strict dist/*"
+
+# Publish
+publish-build = { cmd = "twine upload dist/*", depends_on = ["check-build"] }
+
+[tool.pixi.feature.py312.dependencies]
+python = "3.12.*"
+
+[tool.pixi.feature.py311.dependencies]
+python = "3.11.*"
+
+[tool.pixi.feature.py310.dependencies]
+python = "3.10.*"
+
+[tool.pixi.feature.py39.dependencies]
+python = "3.9.*"
+
+[tool.pixi.environments]
+default = { features = ["py312"], solve-group = "py312" }
+py312 = { features = ["py312"], solve-group = "py312" }
+py311 = ["py311"]
+py310 = ["py310"]
+py39 = ["py39"]
+
+[tool.mypy]
+exclude = ["tests"]
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+strict_equality = true
+strict_concatenate = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+no_implicit_reexport = true
+warn_return_any = true
+
+[tool.ruff]
+select = [
+    "ARG",
+    "B",
+    "C4",
+    "E",
+    "F",
+    "I",
+    "N",
+    "NPY",
+    "PD",
+    "PTH",
+    "RUF",
+    "SIM",
+    "W",
+]
+ignore = ["E501", "PT011"]
+fixable = ["I", "W"]
