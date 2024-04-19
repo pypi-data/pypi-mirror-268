@@ -1,0 +1,90 @@
+
+cli_config:
+  log:
+    log_datefmt:
+      group: Logging Options
+      help: The date format to display in the logs
+      subcommands:
+      - __global__
+    log_file:
+      group: Logging Options
+      help: The location of the log file
+      subcommands:
+      - __global__
+    log_fmt_console:
+      group: Logging Options
+      help: The log formatting used in the console
+      subcommands:
+      - __global__
+    log_fmt_logfile:
+      group: Logging Options
+      help: The log formatting used in the log file
+      subcommands:
+      - __global__
+    log_level:
+      group: Logging Options
+      help: Set the log level, either quiet, info, warning, debug or error
+      subcommands:
+      - __global__
+    log_plugin:
+      choices: log._loaded
+      group: Logging Options
+      help: The log plugin to use
+      subcommands:
+      - __global__
+  pop:
+    config:
+      help: The config file used for POP
+      options:
+      - -c
+      subcommands:
+      - __global__
+config:
+  log:
+    log_datefmt:
+      default: '%H:%M:%S'
+      os: POP_LOG_DATEFMT
+    log_file:
+      default: ~/.pop/pop.log
+      os: POP_LOG_FILE
+    log_fmt_console:
+      default: '[%(levelname)-8s] %(message)s'
+      os: POP_LOG_FMT_CONSOLE
+    log_fmt_logfile:
+      default: '%(asctime)s,%(msecs)03d [%(name)-17s][%(levelname)-8s] %(message)s'
+      os: POP_LOG_FMT_LOGFILE
+    log_level:
+      default: warning
+      os: POP_LOG_LEVEL
+    log_plugin:
+      default: basic
+      os: POP_LOG_PLUGIN
+  pop:
+    config:
+      default: ~/.pop/config.yaml
+      os: POP_CONFIG
+dyne:
+  log:
+    - log
+
+import:
+  - aiologger.handlers.files
+  - aiopath
+  - argparse
+  - asyncio
+  - collections
+  - importlib
+  - importlib.resources
+  - logging
+  - os
+  - cpop.exc
+  - cpop.contract
+  - cpop.data
+  - cpop.hub
+  - msgpack
+  - pickle
+  - signal
+  - sys
+  - traceback
+  - yaml
+  - typing
