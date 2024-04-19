@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+docs/assets/README_PyPI.md
+updes.egg-info/PKG-INFO
+updes.egg-info/SOURCES.txt
+updes.egg-info/dependency_links.txt
+updes.egg-info/requires.txt
+updes.egg-info/top_level.txt
