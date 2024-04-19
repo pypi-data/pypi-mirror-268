@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: driven_sql_tool
+Version: 0.0.2
+Summary: Simple wrapper (based on turbodbc) for most common MSSQL operations I face day-to-day
+Author-email: Ilya Davydov <shaddam.jabbar@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: pandas
+Requires-Dist: turbodbc
+Description-Content-Type: text/markdown
+
+# SQL Tools
+
+Description placeholder
