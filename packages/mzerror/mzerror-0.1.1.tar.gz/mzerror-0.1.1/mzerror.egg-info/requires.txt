@@ -1,0 +1,3 @@
+mzemail
+mysql-connector-python
+jinja2
