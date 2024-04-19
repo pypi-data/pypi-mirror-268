@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+mzemail/__init__.py
+mzemail/email_sender.py
+mzemail.egg-info/PKG-INFO
+mzemail.egg-info/SOURCES.txt
+mzemail.egg-info/dependency_links.txt
+mzemail.egg-info/requires.txt
+mzemail.egg-info/top_level.txt
+tests/test_email_sender_sendgrid.py
+tests/test_email_sender_smtplib.py
+tests/test_handler.py
