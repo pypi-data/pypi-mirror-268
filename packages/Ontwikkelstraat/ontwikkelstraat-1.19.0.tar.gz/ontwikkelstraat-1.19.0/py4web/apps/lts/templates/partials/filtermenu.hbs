@@ -1,0 +1,37 @@
+<aside id="filtermenu"
+        {{#if start_open}}
+           class="menu pt-3"
+        {{else}}
+           class="menu pt-3 is-hidden"
+        {{/if}}
+
+    >
+        <input id="start_open" name="_start_open" value="{{start_open}}" type="hidden">
+
+        <div class="columns is-multiline is-mobile">
+            {{#filters}}
+                <div class="column is-3-desktop is-6-mobile is-4-tablet">
+                    <p class="menu-label" class="tag-depth-0">
+                        {{label}} {{#if hasItemTreeCount}}({{itemTreeCount}}){{/if}}
+                    </p>
+                    <ul class="menu-list">
+                        {{#children}}
+                            <li>
+                                <button data-tag-gid="{{tag}}"
+                                    {{#unless itemCount}}
+                                        disabled=""
+                                    {{/unless}}
+                                        class="button mb-1"
+                                        _="on click
+                                     toggle .is-active on me
+                                     send ew:change_state(tag: '{{tag}}', page: 1)
+                                    ">
+                                    {{label}} ({{itemCount}})
+                                </button>
+                            </li>
+                        {{/children}}
+                    </ul>
+                </div>
+            {{/filters}}
+        </div>
+    </aside>

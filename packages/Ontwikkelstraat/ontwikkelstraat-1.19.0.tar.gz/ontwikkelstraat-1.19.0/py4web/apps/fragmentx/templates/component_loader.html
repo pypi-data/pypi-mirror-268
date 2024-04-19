@@ -1,0 +1,9 @@
+[[extend 'layout.html']]
+
+[[=backend_result]]
+
+<div>
+    <ajax-component id="main_tile" url="[[=URL('tiles')]]">
+        <div class="button is-loading" style="border:none; width: 100%">Loading...</div>
+    </ajax-component>
+</div>

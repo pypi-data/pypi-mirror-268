@@ -1,0 +1,78 @@
+<div id="vraag"
+     class="vraag"
+>
+    <section class="section pt-0">
+        <div class="voortgang columns is-multiline is-mobile is-justify-content-center">
+            {{#each beantwoord}}
+                <div class="beantwoord is-1 column my-2 mx-2"></div>{{/each}}
+            {{#each onbeantwoord}}
+                <div class="onbeantwoord is-1 column my-2 mx-2"></div>{{/each}}
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+            <h3 class="title is-4 mb-6" style="color: #262626!important;">{{vraag_object.vraag}}</h3>
+
+            <form
+                    hx-trigger="ew:submit"
+                    hx-post="{{server}}/v1.0/fragmentx/klassen/enquete/{{volgende_argument}}"
+                    hx-target="#vraag"
+                    hx-swap="outerHTML"
+                    class="boxholder"
+            >
+                <div class="field">
+                    <div class="control">
+                        <div class="columns is-multiline">
+                            {{#each vraag_object.themas}}
+                                <div class="column is-6 my-3">
+                                    <div class="columns is-mobile">
+                                        <div class="column is-narrow mr-4 box mb-0 has-text-centered is-flex is-align-items-center">
+                                            <input
+                                                    name="{{../vraag_id}}"
+                                                    id="antwoord-{{name}}"
+                                                    type="checkbox"
+                                                    value="{{name}}"
+                                                    class="checkbox my-3 mx-3"
+                                                    _="
+                            on change
+                              set checked_boxes to <.checkbox:checked/> in closest <form/>
+
+                              if checked_boxes.length is {{../vraag_object.stapel}}
+                                  send ew:submit to closest <form/>
+                              end
+                            end
+                                            "
+                                            ></div>
+                                        <div class="column is-8 box is-flex is-align-items-center px-5">
+                                            <label class="title is-6" style="color: #262626!important;"
+                                                   for="antwoord-{{name}}">
+                                                {{human_name}}
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            {{/each}}
+                        </div>
+                        <div class="buttons is-right">
+                            <button class="button"
+                                    hx-post="{{server}}/v1.0/fragmentx/klassen/enquete/{{vorige_argument}}"
+                                    hx-target="#vraag"
+                                    hx-swap="outerHTML">Vorige vraag
+                            </button>
+
+                            <button class="button" hx-post="{{server}}/v1.0/fragmentx/klassen/enquete/?restart"
+                                    hx-target="#vraag"
+                                    hx-swap="outerHTML"
+                                    hx-confirm="Weet je zeker dat je opnieuw wilt beginnen?"
+                            >Begin opnieuw
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+</div>

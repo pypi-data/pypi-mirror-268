@@ -1,0 +1,95 @@
+[[extend 'template.hbs']]
+<!--
+ eventname: EW:<verleden-tijd-van-gebeurtenis> bijv: ew:search_entered; ew:state_changed
+-->
+
+<!-- see <body> in template.js for global hx-vals -->
+<div>
+    <form id="state" class="edwh-state"
+          hx-vals='{
+                   "limit":9,
+                   "paginate":true,
+                   "include":["all"],
+                   }'
+          hx-vars="tags: json_tags({'base_tags': ['41473ddb-596b-4492-b5bb-a8fee638ca43'] })"
+          hx-ext='json-enc'
+          _="
+         init -- init gebeurt 1 keer als de pagina geladen wordt
+           call url_to_state(me)
+           -- url to state roept state changed aan!
+         end
+
+         on submit halt the event end -- = preventDefault
+         install StateMachine(stickers: 'same')
+          "
+    >
+
+        <div id="quickfilter-balk"
+             hx-trigger="load"
+             hx-post="quick-filter/iol"
+             _="
+             on htmx:afterSettle call initial_qf(closest .edwh-state)
+            "
+        >
+        </div>
+        <!-- let op: qf mag niet IN de qf div maar er na! -->
+        <input name="qf" type="hidden" value="" _="install QuickFilterInput" />
+
+        <section class="section">
+            <div id="filters"
+                 class="container"
+                 hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+                 hx-post="filter-with-active/531dcf66-cc3c-4129-abb2-eff024b636a0"
+                 _="install Filters"
+            >
+
+            </div>
+        </section>
+
+        <section class="section pt-0">
+            <div>
+                <input name="q" type="hidden" _="install SearchInput" />
+                <input name="page" type="hidden" value="1" />
+                <input name="tags" type="hidden" value="[]" />
+                <input name="order" type="hidden" value="" _="install OrderInput" />
+
+
+                <div id="tiles-indicator" class="htmx-indicator">
+                    <!-- todo @Mike wellicht deze loader stylen? -->
+                    <div class="button is-loading" style="border:none; width: 100%">Loading...</div>
+                </div>
+                <div id="tiles"
+                     class="container"
+                     hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+
+                     hx-post="tiles"
+                     hx-indicator="#tiles-indicator"
+                     _="
+                    -- state persistence functionaliteit:
+                     install StateToURL
+
+                     -- trigger check om te testen of hx-trigger het wel doet:
+                     install TriggerCheck
+                    "
+                >
+                </div>
+            </div>
+        </section>
+    </form>
+
+</div>
+
+
+<script type='text/hyperscript'>
+-- click tracker example
+-- usage: <a href="..." tracked>
+
+on every click
+    if event.target@tracked is not null
+        halt the event
+        set external to event.target's href
+        fetch 'https://hetnieuwedelen.robin.edwh.nl/tracker' {method:"POST", data: external}
+        -- go to url external -- 'go to' can not handle variables, use this instead:
+        set location.href to external
+    end
+</script>

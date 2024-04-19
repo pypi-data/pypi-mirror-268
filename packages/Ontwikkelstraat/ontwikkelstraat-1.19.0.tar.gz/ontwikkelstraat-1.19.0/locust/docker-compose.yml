@@ -1,0 +1,26 @@
+version: '3'
+networks:
+  front-end:
+    external:
+      name: front-end
+
+# docker-compose up -d --scale worker=4
+
+services:
+  master:
+    image: locustio/locust
+    ports:
+     - "8089:8089" # this port is forwarded in the Vagrantfile as well!
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --master -H http://master:8089 --host http://py4web:8000
+    networks:
+      - front-end
+
+  worker:
+    image: locustio/locust
+    volumes:
+      - ./:/mnt/locust
+    command: -f /mnt/locust/locustfile.py --worker --master-host master --host http://py4web:8000
+    networks:
+      - front-end

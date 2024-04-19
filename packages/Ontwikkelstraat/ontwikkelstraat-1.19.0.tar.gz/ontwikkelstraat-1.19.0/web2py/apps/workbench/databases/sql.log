@@ -1,0 +1,236 @@
+timestamp: 2022-11-28T16:35:45.968877
+CREATE TABLE "auth_user"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(128),
+    "last_name" CHAR(128),
+    "email" CHAR(512),
+    "password" CHAR(512),
+    "registration_key" CHAR(512),
+    "reset_password_key" CHAR(512),
+    "registration_id" CHAR(512)
+);
+success!
+timestamp: 2022-11-28T16:35:45.984735
+CREATE TABLE "auth_group"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "role" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2022-11-28T16:35:45.994730
+CREATE TABLE "auth_membership"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2022-11-28T16:35:46.004489
+CREATE TABLE "auth_permission"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "group_id" INTEGER REFERENCES "auth_group" ("id") ON DELETE CASCADE  ,
+    "name" CHAR(512),
+    "table_name" CHAR(512),
+    "record_id" INTEGER
+);
+success!
+timestamp: 2022-11-28T16:35:46.060564
+CREATE TABLE "auth_event"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "time_stamp" TIMESTAMP,
+    "client_ip" CHAR(512),
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "origin" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2022-11-28T16:35:46.075132
+CREATE TABLE "auth_cas"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "user_id" INTEGER REFERENCES "auth_user" ("id") ON DELETE CASCADE  ,
+    "created_on" TIMESTAMP,
+    "service" CHAR(512),
+    "ticket" CHAR(512),
+    "renew" CHAR(1)
+);
+success!
+timestamp: 2022-11-28T16:35:46.282489
+CREATE TABLE "contact"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" CHAR(512),
+    "email" CHAR(512),
+    "org" CHAR(512),
+    "location" CHAR(512)
+);
+success!
+timestamp: 2022-11-28T16:35:46.302647
+CREATE TABLE "item"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "contact_id" INTEGER REFERENCES "contact" ("id") ON DELETE CASCADE  ,
+    "title" CHAR(512),
+    "raw_text" TEXT,
+    "raw_frozen" CHAR(1),
+    "klad" TEXT,
+    "ori_uri" CHAR(512),
+    "usability" CHAR(512),
+    "ctime" TIMESTAMP,
+    "mtime" TIMESTAMP,
+    "live_gid" CHAR(36),
+    "property_bag" TEXT
+);
+success!
+timestamp: 2022-11-28T16:35:46.316973
+CREATE TABLE "item_tag"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "item_id" INTEGER REFERENCES "item" ("id") ON DELETE CASCADE  ,
+    "tag_gid" CHAR(36)
+);
+success!
+timestamp: 2022-11-28T16:35:46.325159
+CREATE TABLE "dod_rule"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" CHAR(512),
+    "note" TEXT
+);
+success!
+timestamp: 2022-11-28T16:35:46.331972
+CREATE TABLE "tag_dod_rule"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "tag_gid" CHAR(36),
+    "dod_rule_id" INTEGER REFERENCES "dod_rule" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2022-11-28T16:35:46.353070
+CREATE TABLE "item_dod_rule"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "item_id" INTEGER REFERENCES "item" ("id") ON DELETE CASCADE  ,
+    "dod_rule_id" INTEGER REFERENCES "dod_rule" ("id") ON DELETE CASCADE  ,
+    "mtime" TIMESTAMP,
+    "ticked" CHAR(1),
+    "note" TEXT,
+    "last_changed_by" INTEGER,
+    "deleted" CHAR(1)
+);
+success!
+timestamp: 2022-11-28T16:35:46.375007
+CREATE TABLE "question"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "name" CHAR(512),
+    "question" CHAR(512),
+    "answer_type" CHAR(512),
+    "description" TEXT
+);
+success!
+timestamp: 2022-11-28T16:35:46.387609
+CREATE TABLE "tag_question"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "tag_gid" CHAR(36),
+    "question_id" INTEGER REFERENCES "question" ("id") ON DELETE CASCADE  
+);
+success!
+timestamp: 2022-11-28T16:35:46.395412
+CREATE TABLE "item_question"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "item_id" INTEGER REFERENCES "item" ("id") ON DELETE CASCADE  ,
+    "question_id" INTEGER REFERENCES "question" ("id") ON DELETE CASCADE  ,
+    "note" TEXT,
+    "mtime" TIMESTAMP,
+    "last_changed_by" INTEGER,
+    "deleted" CHAR(1)
+);
+success!
+timestamp: 2022-11-28T16:35:46.405884
+CREATE TABLE "source_file"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "item_id" INTEGER REFERENCES "item" ("id") ON DELETE CASCADE  ,
+    "name" CHAR(512),
+    "original_uri" CHAR(512),
+    "attachment" CHAR(512),
+    "gid" CHAR(512),
+    "added_by" INTEGER,
+    "added_on" TIMESTAMP
+);
+success!
+timestamp: 2022-11-28T16:35:46.422425
+CREATE TABLE "apply_to_all_items"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "questions" TEXT,
+    "dod_rules" TEXT
+);
+success!
+timestamp: 2022-11-28T16:35:46.628498
+CREATE TABLE "plugin_comments_comment"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "tablename" CHAR(512),
+    "record_id" INTEGER,
+    "parent_node" INTEGER,
+    "body" CHAR(512),
+    "deleted" CHAR(1),
+    "votes" INTEGER,
+    "created_by" INTEGER,
+    "created_on" TIMESTAMP,
+    "system_generated" CHAR(1)
+);
+success!
+timestamp: 2022-11-28T16:35:46.727502
+CREATE TABLE "scheduler_task"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "application_name" CHAR(512),
+    "task_name" CHAR(512),
+    "group_name" CHAR(512),
+    "status" CHAR(512),
+    "broadcast" CHAR(1),
+    "function_name" CHAR(512),
+    "uuid" CHAR(255) UNIQUE,
+    "args" TEXT,
+    "vars" TEXT,
+    "enabled" CHAR(1),
+    "start_time" TIMESTAMP,
+    "next_run_time" TIMESTAMP,
+    "stop_time" TIMESTAMP,
+    "repeats" INTEGER,
+    "retry_failed" INTEGER,
+    "period" INTEGER,
+    "prevent_drift" CHAR(1),
+    "cronline" CHAR(512),
+    "timeout" INTEGER,
+    "sync_output" INTEGER,
+    "times_run" INTEGER,
+    "times_failed" INTEGER,
+    "last_run_time" TIMESTAMP,
+    "assigned_worker_name" CHAR(512)
+);
+success!
+timestamp: 2022-11-28T16:35:46.736089
+CREATE TABLE "scheduler_run"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "task_id" INTEGER REFERENCES "scheduler_task" ("id") ON DELETE CASCADE  ,
+    "status" CHAR(512),
+    "start_time" TIMESTAMP,
+    "stop_time" TIMESTAMP,
+    "run_output" TEXT,
+    "run_result" TEXT,
+    "traceback" TEXT,
+    "worker_name" CHAR(512)
+);
+success!
+timestamp: 2022-11-28T16:35:46.746164
+CREATE TABLE "scheduler_worker"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "worker_name" CHAR(255) UNIQUE,
+    "first_heartbeat" TIMESTAMP,
+    "last_heartbeat" TIMESTAMP,
+    "status" CHAR(512),
+    "is_ticker" CHAR(1),
+    "group_names" TEXT,
+    "worker_stats" TEXT
+);
+success!
+timestamp: 2022-11-28T16:35:46.758159
+CREATE TABLE "scheduler_task_deps"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "job_name" CHAR(512),
+    "task_parent" INTEGER,
+    "task_child" INTEGER REFERENCES "scheduler_task" ("id") ON DELETE CASCADE  ,
+    "can_visit" CHAR(1)
+);
+success!

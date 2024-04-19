@@ -1,0 +1,27 @@
+[[extend 'layout.html']]
+[[block page_head]]
+<!-- sta toe dat cookies verstuurd worden met de htmx cross origin requests -->
+ <meta name="htmx-config" content='{"withCredentials":true}'>
+[[end]]
+<!-- vereist hyperscript en htmx in layout.html -->
+<script src="https://unpkg.com/htmx.org@1.5.0"></script>
+<script src="https://unpkg.com/hyperscript.org@0.9.3"></script>
+<!-- gebruikt verder qua templates:
+  vraag.hbs  -- alle normale vragen
+  thema_uitleg.hbs -- stukje uitleg van thema's
+  stapel.hbs  -- stapel vragen (kies 3 thema's)
+  enquete_uitslag.hbs -- uitslag
+-->
+<!-- gebruitk in python: klassen_controllers.py en klassen_enquete.py -->
+<article class="enquete">
+    <!-- onderliggende div wordt telkens vervangen
+         `[ [ =server ] ]` is https://fragments.localhost tijdens ontwikkel, of https://fragmnets.mike.edwh.nl
+         maar moet in productie altijd naar een fragments server verwijzen met een hard url, daar
+         werkt de `[ [ =server ] ]` helper niet.
+     -->
+    <u class="vraag"
+       hx-post="[[=server]]/gelijkekansen/cookie-check"
+       hx-swap="outerHTML">
+     Begin de vragenlijst
+    </u>
+</article>

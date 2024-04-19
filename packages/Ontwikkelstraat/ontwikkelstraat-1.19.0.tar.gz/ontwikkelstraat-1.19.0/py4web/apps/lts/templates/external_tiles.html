@@ -1,0 +1,91 @@
+<div class="edwh-style">
+    <!-- deze twee moeten buiten de form, anders komen ze in de URL (en das hinderlijk) -->
+    <input type="hidden" name="GHOST_BASE" value="https://delen.meteddie.nl/">
+    <input type="hidden" name="FRONT_END_BASE" value="[[=FRONT_END_BASE]]">
+
+    [[if searchbar:]]
+    <form class="column no-form-trap" id="qform" _="install Search()">
+        <div class="field has-addons is-rounded">
+            <div class="control">
+                <button style="border-bottom-left-radius: 50px; border-top-left-radius: 50px; border:none; height: 58.75px;"
+                        type="submit" class="button">
+                    <svg style="-webkit-transform: scaleX(-1);
+transform: scaleX(-1);" viewBox="0 0 56.966 56.966" width="1em" height="1em"
+                         class="Search_icon__2He-- Icon_icon__3CNyK Icon_reverse__2_gph">
+                        <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"
+                              fill="#25303D"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="control is-expanded">
+                <input style="border-bottom-right-radius: 50px; border-top-right-radius: 50px; border:none; height: 58.75px;"
+                       id="qform_q" class="input" type="text" name="q" placeholder="Vul een zoekterm in"
+                       value="[[=q]]"
+                       _="install SearchUI">
+            </div>
+        </div>
+    </form>
+    [[pass]]
+
+    <form class="edwh-state"
+          id="state"
+          hx-vals='{
+                   "limit": [[=limit]],
+                   "paginate": [[=str(do_paginate).lower()]],
+                   "likes": "[[=likes]]"
+                   }'
+          hx-vars="tags: json_tags({'base_tags': [[=base_tags]] })"
+          hx-ext='json-enc'
+          _="
+             init -- init gebeurt 1 keer als de pagina geladen wordt
+               call url_to_state(me)
+               -- url to state roept state changed aan!
+             end
+
+             install StateMachine(stickers: 'new')
+              "
+    >
+
+        [[if quickfilter:]]
+        <div id="quickfilter-balk"
+             class="edwh-style"
+             hx-trigger="load"
+             hx-post="[[='quick-filter' if not isinstance(quickfilter, str) else 'quick-filter/' + quickfilter]]"
+             _="on htmx:afterSettle call initial_qf(closest .edwh-state)"
+        >
+        </div>
+        <br/>
+        <input name="qf" type="hidden" value="" _="install QuickFilterInput">
+        [[pass]]
+
+        [[if filters:]]
+        <div id="filters"
+             class="container edwh-style"
+             hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+             hx-post="[[if filters == 'with-active':]]filter-with-active[[else:]]filter[[pass]]"
+             _="install Filters"
+        >
+        </div>
+        [[if menu_style == "modal":]]
+        <input name="menu_style" value="modal" type="hidden" />
+        [[pass]]
+
+        <input name="order" type="hidden" value="" _="install OrderInput">
+        [[pass]]
+
+
+        <input name="page" type="hidden" value="[[=page]]"/> <!-- stores the page no. -->
+        <input name="q" type="hidden" value="[[=q]]" _="install SearchInput"/>
+        <input name="tags" type="hidden" value="[[=tags]]"/>
+
+        <div id="tiles"
+             hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+             hx-post="tiles"
+             [[if change_url:]]
+             _="install StateToURL"
+             [[pass]]
+        >
+        </div>
+    </form>
+
+</div>

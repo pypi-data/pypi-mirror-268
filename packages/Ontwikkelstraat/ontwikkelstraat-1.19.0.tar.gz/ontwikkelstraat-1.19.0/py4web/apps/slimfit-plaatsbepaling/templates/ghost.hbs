@@ -1,0 +1,42 @@
+<script src="https://unpkg.com/htmx.org@1.5.0"></script>
+<script src="https://unpkg.com/hyperscript.org@0.9.3"></script>
+
+<!-- BELANGRIJK!!! sta toe dat cookies verstuurd worden met de htmx cross origin requests -->
+<meta name="htmx-config" content='{"withCredentials":true}'>
+
+<style>
+    .ew-card-img {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 180px;
+    }
+
+    .voortgang {
+        display: flex;
+    }
+
+    .voortgang div {
+        width: 50px;
+        height: 50px;
+    }
+
+    .beantwoord {
+        background-color: green;
+    }
+
+    .onbeantwoord {
+        background-color: red;
+    }
+</style>
+
+Dit moet een ghost voorstellen. Het argument naar htmx in de hx-get is een volledig url. <br/>
+bijvoorbeeld: "https://fragments.edwh.nl/v1.0/slimfit-plaatsbepaling/cookie-check". (zie ook de page source in de browser) <br/>
+De cookie check is waarmee de site begint, en als de check succesvol is wordt vraag 1 gestart.
+
+<div
+        hx-get="{{EDWH_URL 'slimfit-plaatsbepaling/cookie-check'}}"
+        hx-trigger="load,ew:restart"
+        _="on popstate from window send ew:previous to #back -- allows navigation with back button"
+>
+</div>

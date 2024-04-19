@@ -1,0 +1,14 @@
+<div class="edwh-quickfilter-bar">
+    [[for index, filter in enumerate(filters):]]
+    <button class="edwh-quickfilter-button" id="qf-btn-[[=index]]"
+            [[if filter.tag:]]
+            data-tag-gid="[[=filter.tag]]"
+            [[else:]]
+            data-tag-gid=""
+            [[pass]]
+
+            _="install QuickFilterButton"
+    >[[=filter.label]]
+    </button>
+    [[pass]]
+</div>

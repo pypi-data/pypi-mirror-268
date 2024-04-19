@@ -1,0 +1,104 @@
+<style>
+ .search-icon{
+     font-size: 14px;
+ }
+ .tag-btn{
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+ }
+ .tag-btn:hover{
+    color: black;
+ }
+ .jstree-node a{
+    font-size: 15px !important;
+    margin-bottom: 5px;
+ }
+ .tag-tree-btn{
+    margin-bottom: 5px;
+ }
+</style>
+
+{{for tag in tags:}}
+    <code class="btn tag-btn" onclick="return searchThisTag(this);" style="margin: 5px;">{{=tag.name}}</code>
+{{pass}}
+
+<br>
+
+<div class="input-group input-group-md">
+  <input type="text" id="tag_search" class="form-control" placeholder="Zoeken naar tags..">
+  <span class="input-group-addon" id="search-addon"><i class="fa fa-search search-icon"></i></span>
+</div>
+<br>
+
+
+<button class="btn btn-primary tag-tree-btn" onclick="return submitTags();">Tags Opslaan</button>
+{{if widget.checkbox:}}
+<button class="btn btn-secondary tag-tree-btn" onclick="$('#tag_tree').jstree().uncheck_all(true);">Alles deselecteren</button>
+{{pass}}
+
+{{=widget.tree()}}
+<p class="text-muted">Dubbelklik op een categorie, of klik op het pijltje ernaast om te openen.</p>
+<br>
+
+<script>
+    {
+        let $tree;
+        let $tag_search;
+
+        let tree;
+
+        function submitTags() {
+            const tags = $tree.jstree("get_selected");
+            const url = "/{{=request.application}}/api/{{=api_tag_updater_function}}?item_id={{=item_id}}&tags=" + tags
+            $.ajax({
+                type: 'POST',
+                url: url,
+                success: function () {
+                    const submitBtn = $('#submit_master');
+                    if (submitBtn.length) {
+                        // gemakkelijk de submit knop gebruiken die eerder gemaakt is.
+                        $('#submit_master').click();
+                    } else {
+                        $("#tag_tree_load").get(0).reload();
+                    }
+                }
+            })
+        }
+
+        $(document).ready(function () {
+            $tree = $("#tag_tree");
+            tree = $tree.jstree(true);
+            $tag_search = $("#tag_search")
+
+            let debounce;
+
+            $tag_search.on("keyup", function () {
+                if (debounce) {
+                    clearTimeout(debounce)
+                }
+                debounce = setTimeout(function () {
+                    const v = $tag_search.val();
+                    tree.search(v);
+                }, 500);
+            });
+
+            $tree.on("deselect_node.jstree", function (ev, data) {
+                // tags can have multiple parents so also remove related (same gid from different parent)
+                // because otherwise some tags can not be removed from an item...
+
+                const {node, selected} = data,  // extract data.node and data.selected to node and selected
+                    tag_gid = node.id.split(":")[1],  // get actual tag gid from node ID
+                    related_selected = selected.filter(row => row.split(":")[1] === tag_gid)  // find related tags in rest of selection
+
+                tree.deselect_node(related_selected, /* suppress event: */ true)  // remove other nodes with same tag GID
+            })
+        });
+
+        function searchThisTag(button) {
+            const tag = button.innerHTML;
+
+            $tag_search.val(tag); // update search input
+            tree.search(tag); // search in tree
+        }
+    }
+</script>

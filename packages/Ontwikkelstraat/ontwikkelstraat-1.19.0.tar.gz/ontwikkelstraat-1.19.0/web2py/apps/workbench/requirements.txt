@@ -1,0 +1,19 @@
+bcrypt==3.2.0
+certifi==2020.12.5
+cffi==1.14.5
+chardet==3.0.4
+idna==2.7
+markdown2==2.4.0
+more-itertools==8.7.0
+pycparser==2.20
+PyYAML==5.4.1
+requests==2.20.0
+six==1.15.0
+python-slugify
+urllib3==1.26.5
+psycopg2
+ycecream
+bs4
+html2markdown
+# pydal - komt via web2py
+pyjwt

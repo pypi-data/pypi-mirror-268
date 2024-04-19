@@ -1,0 +1,166 @@
+{{extend 'layout.html'}}
+<script src="https://unpkg.com/htmx.org@1.9.2"></script>
+<!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+{{# See https://github.com/SortableJS/Sortable for the sortable repo }}
+{{# See https://sortablejs.github.io/Sortable for it's docs }}
+{{# See https://htmx.org/examples/sortable/ for htmx examples using Sortable}}
+{{# EOD: https://web2py.dockers.local/workbench/tag?gid=67ba8cd8-b564-4cb4-b1bc-10364c5edf16 }}
+{{# EOD: https://web2py.dockers.local/workbench/recover_stickers }}
+<script>
+    function newSearchResults(content){
+        var sortablesources = content.querySelectorAll(".sortable-source");
+        for (var i = 0; i < sortablesources.length; i++) {
+            var sortable = sortablesources[i];
+            new Sortable(sortable, {
+                group: {
+                        name: 'tags',
+                        pull: 'clone',
+                        put: false // Do not allow items to be put into this list
+                    },
+                animation: 150,
+                ghostClass: 'blue-background-class',
+                sort: false // source is unsortable
+            });
+        }
+
+    }
+    htmx.onLoad(function(content) {
+        var sortables = content.querySelectorAll(".sortable");
+        for (var i = 0; i < sortables.length; i++) {
+            var sortable = sortables[i];
+            new Sortable(sortable, {
+                animation: 150,
+                ghostClass: 'blue-background-class',
+                group: 'tags'
+            });
+        }
+        newSearchResults(content);
+    })
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Details van &quot;{{=tag.name}}&quot;</h1>
+        </div>
+    </div>
+    {{if may_edit_tag_structure:}}
+    <div class="row">
+        <div>
+            <input class="form-control " type="search"
+                   name="q" placeholder="Zoek tags..."
+                   hx-post="hxsearch"
+                   hx-trigger="keyup changed delay:500ms, search"
+                   hx-target="#search-results"
+                   hx-indicator=".hxsearch-indicator"
+            >
+            <span class="htmx-indicator hxsearch-indicator">
+                Searching/loading...
+            </span>
+            <div id="search-results" class="sortable-source">
+            </div>
+        </div>
+    </div>
+    <div class="rowtag">
+        <div class="col-12">
+            <strong>Name:</strong> {{=tag.name}} (<span title="slug">{{=tag.slug}}</span>) <br/>
+            <strong>Gid:</strong> {{=TT(tag.gid)}} | <strong>id:</strong> {{=TT(tag.id)}}<br/>
+            <div class="col-md-3">
+            <strong>Children:</strong>
+                <form class="sortable" hx-post="hxpost_tags/children/{{=tag.gid}}" hx-trigger="sort" hx-indicator=".hxsearch-indicator" method="POST">
+                    {{=sortable_tags(field='children', target_gid=tag.gid)}}
+                </form>
+            </div>
+            <div class="col-md-3">
+            <strong>Parents:</strong>
+                <form class="sortable" hx-post="hxpost_tags/parents/{{=tag.gid}}" hx-trigger="sort" hx-indicator=".hxsearch-indicator" method="POST">
+                    {{=sortable_tags(field='parents', target_gid=tag.gid)}}
+                </form>
+            </div>
+            <div class="col-md-3">
+            <strong>Meta-tags:</strong>
+                <form class="sortable" hx-post="hxpost_tags/meta_tags/{{=tag.gid}}" hx-trigger="sort" hx-indicator=".hxsearch-indicator" method="POST">
+                    {{=sortable_tags(field='meta_tags', target_gid=tag.gid)}}
+                </form>
+            </div>
+            <div class="col-md-3">
+            <strong>Related:</strong>
+                <form class="sortable" hx-post="hxpost_tags/related/{{=tag.gid}}" hx-trigger="sort" hx-indicator=".hxsearch-indicator" method="POST">
+                    {{=sortable_tags(field='related', target_gid=tag.gid)}}
+                </form>
+            </div>
+        </div>
+    </div>
+    {{else:}}
+    <div class="col-12">
+        <strong>Name:</strong> {{=tag.name}} (<span title="slug">{{=tag.slug}}</span>) <br/>
+        <strong>Gid:</strong> {{=TT(tag.gid)}} | <strong>id:</strong> {{=TT(tag.id)}}<br/>
+        <div class="col-md-3">
+            <strong>Children:</strong>
+            <form >
+                {{=sortable_tags(field='children', target_gid=tag.gid)}}
+            </form>
+        </div>
+        <div class="col-md-3">
+            <strong>Parents:</strong>
+            <form >
+                {{=sortable_tags(field='parents', target_gid=tag.gid)}}
+            </form>
+        </div>
+        <div class="col-md-3">
+            <strong>Meta-tags:</strong>
+            <form >
+                {{=sortable_tags(field='meta_tags', target_gid=tag.gid)}}
+            </form>
+        </div>
+        <div class="col-md-3">
+            <strong>Related:</strong>
+            <form >
+                {{=sortable_tags(field='related', target_gid=tag.gid)}}
+            </form>
+        </div>
+    </div>
+    {{pass}}
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            {{=details_form}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Specifieke acties</h2>
+            {{if '67ba8cd8-b564-4cb4-b1bc-10364c5edf16' not in tag.parents:}}
+                <a href="{{=URL(c='default',f='sticker_beheer',vars=dict(new_gid=tag.gid))}}" class="btn button btn-info">Converteer naar sticker</a>
+            {{else:}}
+                <a class="btn button btn-disabled" disabled>Is reeds een sticker</a>
+            {{pass}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Items</h2>
+            {{=LOAD('workbench', 'tag_items', vars={'gid':tag.gid}, ajax=True)}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Vragen</h2>
+            {{=LOAD('workbench', 'tag_questions', vars={'gid':tag.gid})}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Definition of Done regels</h2>
+            {{=LOAD('workbench', 'dod_rules', vars={'gid':tag.gid})}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Discussie</h2>
+            {{=plugin_comments('tag',tag.id)}}
+        </div>
+    </div>
+    {{=LOAD('default','tag_search.load', vars={'search':'no'},args=[tag.name], ajax=True)}}
+</div>

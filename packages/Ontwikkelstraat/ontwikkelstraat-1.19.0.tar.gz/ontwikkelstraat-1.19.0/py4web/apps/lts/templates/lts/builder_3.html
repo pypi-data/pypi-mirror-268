@@ -1,0 +1,18 @@
+[[extend "lts/builder_layout.html"]]
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<h2>LTS Resultaat</h2>
+<a href="#" onclick="return history.back()" class="btn btn-secondary"><- Terug</a>
+
+<h3>Code:</h3>
+<pre
+        style="text-align: left;"
+><code class="language-html">[[=code]]</code></pre>
+
+<script>hljs.highlightAll();</script>
+
+<hr/>
+<h3>Preview:</h3>
+[[=XML(code)]]

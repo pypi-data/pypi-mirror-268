@@ -1,0 +1,51 @@
+[[extend "layout.html"]]
+<style>
+    main.padded {
+        max-width: 100%
+    }
+
+    .shame {
+        max-width: 30%;
+    }
+
+    .shame li {
+        background-color: lightcoral;
+        padding: 5px;
+    }
+
+    .shame a {
+        color: black;
+    }
+
+    .grid-col-bundle_version\.hash {
+        /* veel te lang, er zit all ellipsis op dus hiermee wordt de rest van de hash afgeknipt.
+         De class is `grid-col-bundle_version.hash` (met een punt) dus die punt moet ge-escaped worden,
+         anders selecteer je dingen met de class .grid-col-bundle_version AND .hash ipv deze class.
+         */
+        overflow: hidden;
+    }
+
+    .grid-col-bundle_version\.created_at {
+        /* rechts ziet er gewoon een beetje raar uit met de col header */
+        text-align: left !important;
+    }
+
+    .btn-secondary {
+        background-color: lightblue;
+        color: black;
+    }
+</style>
+<div class="grid-container">
+    <a class="button" href="[[=URL('manage')]]">&leftarrow; Terug</a>
+    [[if locals().get('missing'):]]
+    <ul class="shame">
+        [[for changelog in missing:]]
+        <a href="/lts/manage_versions/edit/[[=changelog.id]]">
+            <li>[[=changelog.filename]] ([[=changelog.version]]) is missing a changelog! Fix now?</li>
+        </a>
+        [[pass]]
+    </ul>
+    [[pass]]
+
+    [[=grid]]
+</div>

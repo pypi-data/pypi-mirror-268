@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Ontwikkelstraat"
+dynamic = ["version"]
+description = 'Education Warehouse knowledge-sharing setup.'
+readme = "readme.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE.txt"} # Copyright (c) 2024 Education Warehouse
+keywords = ['edwh']
+authors = [
+    { name = "Remco Boerma", email = "remco.b@educationwarehouse.nl" },
+    { name = "Robin van der Noord", email = "robin.vdn@educationwarehouse.nl" },
+    { name = "Romy Schöller", email = "romy.s@educationwarehouse.nl" },
+    { name = "Sven Keimpema", email = "sven.k@educationwarehouse.nl" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    'httpx',
+    'pyjwt[crypto]',
+    'edwh-migrate',
+    'edwh[omgeving,plugins]'
+]
+
+[project.optional-dependencies]
+dev = [
+    # "hatch",
+    # "python-semantic-release >= 8.0.0a5",
+    "web2py-gluon", # dev dependency so Pycharm understands what (web2py) 'gluon' imports mean
+    "black",
+]
+
+[project.urls]
+Documentation = "https://github.com/educationwarehouse/ontwikkelstraat#readme"
+Issues = "https://github.com/educationwarehouse/ontwikkelstraat/issues"
+Source = "https://github.com/educationwarehouse/ontwikkelstraat"
+
+[tool.hatch.version]
+path = "__init__.py"
+
+[tool.semantic_release]
+branch = "landelijk/staging"
+version_variable = "__init__.py:__version__"
+change_log = "CHANGELOG.md"
+upload_to_repository = false
+upload_to_release = false
+build_command = "hatch build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["shared_code"]

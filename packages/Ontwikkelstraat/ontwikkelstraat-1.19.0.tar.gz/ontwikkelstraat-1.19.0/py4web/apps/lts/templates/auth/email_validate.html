@@ -1,0 +1,50 @@
+<div class="box row">
+    <form class="no-form-trap"
+          id="verify-form"
+          hx-post="validate"
+          hx-target="#verify-feedback"
+
+          _="
+          on load set my @hx-vals to jsonify_details(browserReportSync(), 'hardware') end
+
+       on ew:success
+       add @disabled to <input/> in me
+       wait 2s
+       call location.reload()
+"
+    >
+        <p>Hallo <span id="user-name">[[=data.name]]</span>, vul hier je email verificatie code in:</p>
+        <input type="hidden" id="user-email" />
+        <div class="field column is-5 pb-0 pb-0">
+
+            <input type="hidden" name="user_id" value="[[=data.id]]" />
+            <label for="verify-code">Code</label>
+            <input pattern="[0-9]{3,10}"
+                   required
+                   oninvalid="setCustomValidity('Dit is geen geldige code')"
+                   onchange="setCustomValidity('')"
+                   class="input" type="text" id="verify-code" name="code" placeholder="000000" />
+
+            <p id="verify-feedback" class="help is-danger"></p>
+        </div>
+        <p class="help pb-1">
+            Geen code ontvangen?<br />
+            <a hx-trigger="click" hx-post="recover">
+                <input type="hidden" name="email" value="[[=data.email]]">
+                Klik hier om een nieuw wachtwoord via de mail te ontvangen.
+            </a>
+            <br />
+            Wanneer je inlogt met dit nieuwe wachtwoord, is je email vanzelf geverifieerd.
+        </p>
+
+        <div class="field is-grouped" style="justify-content: space-between">
+            <!-- left -->
+            <div class="control">
+                <button class="button is-primary is-rounded" id="submit-verification">Check</button>
+                <button class="button is-rounded" type="button"  _="install CloseModal">
+                    Annuleer
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

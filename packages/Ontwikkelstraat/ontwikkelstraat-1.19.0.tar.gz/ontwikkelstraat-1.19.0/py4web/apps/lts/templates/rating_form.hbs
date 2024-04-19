@@ -1,0 +1,50 @@
+<form
+    {{#if show_results}}
+    hx-trigger="load, change"
+    {{else}}
+    hx-trigger="change"
+    {{/if}}
+    hx-post="{{server}}fragmentx/ratings"
+    hx-target="find .edwh-rating-results"
+    hx-vars="rating_client_id: localStorage['rating_client_id']"
+>
+
+    <div class="rating">
+        <label>
+            <input type="radio" name="stars" value="1" {{checked.1}}>
+            <span class="icon">★</span>
+        </label>
+        <label>
+            <input type="radio" name="stars" value="2" {{checked.2}}>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+        </label>
+        <label>
+            <input type="radio" name="stars" value="3" {{checked.3}}>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+        </label>
+        <label>
+            <input type="radio" name="stars" value="4" {{checked.4}}>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+        </label>
+        <label>
+            <input type="radio" name="stars" value="5" {{checked.5}}>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+            <span class="icon">★</span>
+        </label>
+    </div>
+
+    <div class="edwh-rating-results">
+    </div>
+</form>
+<script>
+    localStorage['rating_client_id'] = "{{rating_client_id}}";
+</script>

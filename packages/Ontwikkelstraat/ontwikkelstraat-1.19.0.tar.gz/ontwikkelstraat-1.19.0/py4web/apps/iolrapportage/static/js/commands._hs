@@ -1,0 +1,36 @@
+js
+// extend _hs met console.* commands:
+function hs_console_extend(command) {
+    _hyperscript.addCommand(command, function (parser, runtime, tokens) {
+        // register for the command keyword "foo"
+        if (tokens.matchToken(command)) {
+            // consume the keyword "foo"
+
+            const expr = parser.requireElement("expression", tokens); // parse an expression for the value
+
+            return {
+                expr: expr, // store the expression on the element
+
+                args: [expr], // return all necessary expressions for
+                // the command to execute for evaluation by
+                // the runtime
+
+                op: function (context, value) {
+                    // implement the logic of the command
+                    console[command](value); // of the result of evaluating the expr expression
+
+                    return runtime.findNext(this); // return the next command to execute
+                    // (you may also return a promise)
+                },
+            }; // return the new command object
+        }
+    });
+}
+
+// log is added by default,
+hs_console_extend("debug");
+hs_console_extend("warn");
+hs_console_extend("error");
+hs_console_extend("info");
+hs_console_extend("table");
+end

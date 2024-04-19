@@ -1,0 +1,37 @@
+<aside id="filtermenu"
+        [[if start_open:]]
+           class="menu pt-3"
+        [[else:]]
+           class="menu pt-3 is-hidden"
+        [[pass]]
+    >
+        <input id="start_open" name="_start_open" value="[[=start_open]]" type="hidden" />
+
+        <div class="columns is-multiline is-mobile">
+            [[for filter in filters:]]
+                <div class="column is-3-desktop is-6-mobile is-4-tablet">
+                    <p class="menu-label" class="tag-depth-0">
+                        [[=filter.label]] [[if filter.hasItemTreeCount:]]([[=filter.itemTreeCount]])[[pass]]
+                    </p>
+                    <ul class="menu-list">
+                        [[for child in filter.children:]]
+                            <li>
+                                <button data-tag-gid="[[=child.tag]]"
+                                        type="button"
+                                    [[if not child.itemCount:]]
+                                        disabled=""
+                                    [[pass]]
+                                        class="button mb-1"
+                                        _="on click
+                                     toggle .is-active on me
+                                     send ew:change_state(tag: '[[=child.tag]]', page: 1)
+                                    ">
+                                    [[=child.label]] ([[=child.itemCount]])
+                                </button>
+                            </li>
+                        [[pass]]
+                    </ul>
+                </div>
+            [[pass]]
+        </div>
+    </aside>

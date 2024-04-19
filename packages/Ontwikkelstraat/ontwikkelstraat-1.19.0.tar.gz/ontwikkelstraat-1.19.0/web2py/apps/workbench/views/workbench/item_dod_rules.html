@@ -1,0 +1,44 @@
+{{if grid:}}
+{{=grid}}
+{{else:}}
+{{for row in rows:}}
+
+<div class="card">
+    <div class="card-title" style="background-color:#EEEEEE; padding: 1px 1px 1px 1px;">
+        <h5>&nbsp;
+        {{if row.item_dod_rule.ticked:}}
+            <!--<a href="{{=URL(c='workbench',f='update_item_dod_rule',args=[row.item_dod_rule.id],vars=dict(ticked='off'))}}"> </a> -->
+            <input type="checkbox" name="ticked" class="tick_dod"
+                   onchange="processTicked(this, '{{=row.item_dod_rule.id}}')" checked>
+        {{else:}}
+            <input type="checkbox" name="ticked" class="tick_dod"
+                   onchange="processTicked(this, '{{=row.item_dod_rule.id}}')">
+        {{pass}}
+            &nbsp;{{=row.dod_rule.name}}</h5>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{=row.dod_rule.note}}</h5>
+        <p class="card-text">
+        {{#=plugin_comments('item_dod_rule',row.item_dod_rule.id)}}
+        </p>
+    </div>
+</div>
+{{pass}}
+{{pass}}
+<script>
+    var processTicked = function (checkbox, item_dod_rule_id) {
+        if (checkbox.checked === true) {
+            var ticked = 'on';
+        } else {
+            ticked = 'off';
+        }
+
+        const URL = '/{{=request.application}}/{{=request.controller}}/update_item_dod_rule/' + item_dod_rule_id + '?ticked=' + ticked;
+        // start een AJAX Call
+        $.ajax({
+            url: URL,
+            type: "GET"
+        })
+    }
+</script>
+<script src="{{=URL('static', 'js/edit.js')}}"></script>

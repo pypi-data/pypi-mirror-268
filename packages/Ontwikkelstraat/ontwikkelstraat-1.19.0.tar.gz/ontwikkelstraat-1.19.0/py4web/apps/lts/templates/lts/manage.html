@@ -1,0 +1,17 @@
+[[extend "layout.html"]]
+
+<style>
+    a {
+        display: block;
+    }
+</style>
+
+[[if is_admin:]]
+Wat wil je beheren? <br/>
+<a class="btn btn-info" href="[[=URL('manage_maillist')]]">Maillijst Registraties</a>
+<a class="btn btn-info" href="[[=URL('manage_versions')]]">Bundel Versies</a>
+<a class="btn btn-info" href="[[=URL('manage_users')]]">LTS Admin Gebruikers</a>
+[[else:]]
+Wat wil je doen? <br/>
+[[pass]]
+<a class="btn btn-info" href="[[=URL('builder')]]">LTS Builder</a>

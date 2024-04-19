@@ -1,0 +1,19 @@
+<h5 class="title is-5">
+    {{#if tags.length}}
+        Actieve Filters:
+    {{/if}}
+</h5>
+<div class="buttons active-filters">
+    {{#each tags}}
+        <button class="button" id="{{id}}"
+                _="on click
+        add .is-hidden to me
+        send ew:change_state(tag: '{{id}}', page: 1)"
+        >
+            <span>{{name}}</span>
+            <span class="icon is-small">
+                <i class="fas fa-times"></i>
+            </span>
+        </button>
+    {{/each}}
+</div>

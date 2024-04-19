@@ -1,0 +1,17 @@
+[[extend 'template.hbs']]
+<form class="item-container"
+      hx-post="school"
+      hx-ext='json-enc'
+      hx-trigger="trigger"
+>
+    <input name="school_id" type="hidden" _="
+on load call extract_id_from_url('school') then set my value to it then send trigger
+">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-half">
+            <p class="bd-notification is-primary">
+                <progress class="progress is-small is-primary" max="100">15%</progress>
+            </p>
+        </div>
+    </div>
+</form>

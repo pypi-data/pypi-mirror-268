@@ -1,0 +1,8 @@
+{{#each types}}
+    <h2 id="{{@key}}">{{@key}}</h2>
+    <ul>
+        {{#each this}}
+            {{{this}}}
+        {{/each}}
+    </ul>
+{{/each}}

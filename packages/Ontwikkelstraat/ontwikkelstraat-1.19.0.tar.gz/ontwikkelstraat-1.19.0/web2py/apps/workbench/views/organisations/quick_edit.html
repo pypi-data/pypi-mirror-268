@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<div class="container">
+    <h2>Bewerk organisatie</h2>
+    <a href="{{=URL(f='validate',args=(org_gid,))}}" class="btn button btn-success"> Valideer </a>
+    <hr>
+    {{=form}}
+</div>

@@ -1,0 +1,35 @@
+<div class="edwh-style">
+    <!-- deze twee moeten buiten de form, anders komen ze in de URL (en das hinderlijk) -->
+    <input type="hidden" name="GHOST_BASE" value="https://delen.meteddie.nl/">
+    <input type="hidden" name="FRONT_END_BASE" value="{{FRONT_END_BASE}}">
+    <form class="edwh-state"
+          id="state"
+          hx-vals='{
+                   "limit": {{limit}},
+                   "paginate": {{do_paginate}},
+                   "likes": "{{likes}}"
+                   }'
+          hx-vars="tags: json_tags({'base_tags': [{{base_tags}}] })"
+          hx-ext='json-enc'
+          _="
+                     init -- init gebeurt 1 keer als de pagina geladen wordt
+                       call url_to_state(me)
+                       -- url to state roept state changed aan!
+                     end
+
+                     install StateMachine(stickers: 'new')
+                      "
+    >
+        <input name="page" type="hidden" value="{{page}}"/> <!-- stores the page no. -->
+        <input name="q" type="hidden" value="{{q}}"/>
+        <input name="tags" type="hidden" value="{{tags}}"/>
+
+        <div id="tiles"
+             hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+             hx-post="tiles"
+             _="install StateToURL"
+        >
+        </div>
+    </form>
+
+</div>

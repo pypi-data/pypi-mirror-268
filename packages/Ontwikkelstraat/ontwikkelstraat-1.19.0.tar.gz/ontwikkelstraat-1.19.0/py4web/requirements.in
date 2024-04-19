@@ -1,0 +1,63 @@
+# basic
+wheel
+setuptools
+
+# p4w
+py4web==1.20220928.1
+yatl
+pyDAL
+redis
+pybars4
+ua-parser
+user-agents
+markdown2
+bcrypt
+edwh-ghost>=0.1.9
+psycopg2-binary
+requests
+filelock
+colorlog
+anyio
+pyjwt[crypto]
+# waitress
+dotmap
+# eventlet
+attrs
+python-slugify
+celery
+plumbum
+dill
+diskcache
+bjoern
+# tasks
+invoke
+pyyaml
+pysass
+tabulate
+httpx
+watchdog
+qrcode[pil]
+# kansen:
+beautifulsoup4
+
+# debug:
+py4web-debug-tools
+configurable-json
+ycecream==1.3.14 # more recent versions have issues with readme.md in their setup.py!
+
+# overig
+# pytest-playwright==0.2.3
+# pytest-xdist
+# gunicorn
+# uwsgi
+
+iso3166 # landen
+edwh-migrate>=0.4.3
+more-itertools
+pytz
+
+#########################################
+# PINNED VERSIONS FOR SECURITY REASONS: #
+#########################################
+urllib3>=2.0.7
+

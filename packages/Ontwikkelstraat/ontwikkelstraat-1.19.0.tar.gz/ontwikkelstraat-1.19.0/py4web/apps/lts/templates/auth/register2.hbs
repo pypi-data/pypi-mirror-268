@@ -1,0 +1,67 @@
+<form id="signup-2" class="no-form-trap"
+      hx-post="signup"
+      hx-target="#generic-feedback"
+      _="
+      install PasswordConfirm(password_feedback_element: #password-confirm-feedback)
+
+        on ew:success
+          wait 2s
+          set email to my username.value
+          send ew:load_form(form: 'login', email: email) to closest .edwh-messagebus
+        "
+>
+    Je bent bijna klaar, we hebben alleen nog inloggegevens nodig. Hiervoor gebruik je jouw
+    schoolemailadres en stel je een wachtwoord in.
+    <div class="field">
+        <label for="signup-email">Email</label>
+        <input required class="input" autocomplete="email" type="email" name="username"
+               id="signup-email"
+               placeholder="johndoe@example.com" />
+        <p class="help is-danger" id="email-feedback"></p>
+    </div>
+    <div class="field">
+        <label for="signup-password">Wachtwoord</label>
+        <input required class="input" autocomplete="new-password" type="password" minlength="6"
+               name="password" id="signup-password"
+               placeholder="******" />
+        <p class="help is-danger" id="password-feedback"></p>
+    </div>
+    <div class="field">
+        <label for="signup-password2">Wachtwoord herhalen</label>
+        <input required class="input" autocomplete="new-password" type="password" name="_password"
+               id="signup-password2"
+               placeholder="******" />
+        <p class="help is-danger" id="password-confirm-feedback"></p>
+    </div>
+    <div class="field">
+        <label class="checkbox" for="signup-conditions">
+            <input required type="checkbox" name="conditions"
+                   id="signup-conditions" />
+            Ik ga akkoord met de
+            <a href="https://www.educationwarehouse.nl/wp-content/uploads/2020/12/Gebruikersvoorwaarden-delen.meteddie.nl-v2020.12.pdf"
+               target="_blank">gebruikersvoorwaarden</a> en de
+            <a href="https://www.educationwarehouse.nl/wp-content/uploads/2020/12/Privacyverklaring-delen.meteddie.nl-v2020.12.pdf"
+               target="_blank">privacyverklaring</a>.
+        </label>
+
+        <input type="checkbox" name="passwordsmatch" style="display: none" required id="passwords-match" />
+
+        <p id="generic-feedback"></p>
+    </div>
+    <div class="field is-grouped" style="justify-content: space-between">
+        <div>
+            <button class="button is-primary is-rounded mx-1 control" type="submit" name="submit-step2">
+                Verzenden
+            </button>
+            <button class="button is-rounded mx-1 control" type="button"
+                    _="on click send ew:load_form(form: 'register1') to closest .edwh-messagebus"
+            >
+                Ga Terug
+            </button>
+        </div>
+        <button type="button" id="cancel-2" class="button is-rounded control"
+                _="install CloseModal">
+            Annuleer
+        </button>
+    </div>
+</form>

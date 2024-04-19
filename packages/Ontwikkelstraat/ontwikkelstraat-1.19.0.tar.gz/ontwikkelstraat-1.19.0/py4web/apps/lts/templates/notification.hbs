@@ -1,0 +1,38 @@
+<main>
+    {{#each notifications}}
+        <div
+            {{#if read}}
+            class="has-background-info-light px-0 py-0 mx-1 my-0"
+            {{else}}
+            class="has-background-info-light px-0 py-0 mx-1 my-0"
+            {{/if}}
+        >
+            <a class="navbar-item bd-is-hidden py-0 px-3 edwh-notification" id="notification-{{id}}" data-id="{{id}}"
+               href="javascript:void(0)">
+                <div style="width: 100%">
+                    <div class="icon-text">
+                        <span class="icon has-text-bleeding">
+                            <i class="fas fa-bookmark"></i>
+                        </span>
+                        <span>
+                            <strong>{{title}}</strong>
+                        </span>
+                    </div>
+                    <p>{{message}}</p>
+
+                    <div class="is-pulled-right">{{when}}</div>
+                </div>
+
+            </a>
+            <!-- {{json this}}-->
+            <hr class="navbar-divider ">
+        </div>
+    {{/each}}
+    <script>
+        Q.on('.edwh-notification', 'click', function(ev) {
+            Q.api('POST', 'notification_seen', {
+                'notification': ev.currentTarget.data('id'),
+            });
+        });
+    </script>
+</main>

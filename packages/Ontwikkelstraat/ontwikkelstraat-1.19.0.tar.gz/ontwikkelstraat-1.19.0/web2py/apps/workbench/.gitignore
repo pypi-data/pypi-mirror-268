@@ -1,0 +1,11 @@
+*.pyc
+*.bak
+
+
+databases/*
+languages/ar.py
+sessions/*
+cache/*
+errors/*
+private/*
+modules/*

@@ -1,0 +1,553 @@
+version: "3.5"
+networks:
+  broker:
+    name: broker
+    external: true
+  backend:
+    name: ${PROJECT}_backend
+
+services:
+  migrate:
+    restart: "no"
+    image: remcoboerma/omgeving-migrate:${DOCKER_TAG}
+    build:
+      context: .
+      dockerfile: migrate/Dockerfile
+      args:
+        PIP_INDEX_URL: https://devpi.edwh.nl/root/pypi/+simple/
+        B2_ATTACHMENTS_KEY: ${B2_ATTACHMENTS_KEY}
+        B2_ATTACHMENTS_KEYID: ${B2_ATTACHMENTS_KEYID}
+    depends_on:
+      - pgpool
+      - redis-master
+    extra_hosts:
+      host.docker.internal: host-gateway
+    environment: &shared_environment
+      PYTHONIOENCODING: "UTF-8"
+      HOSTINGDOMAIN: ${HOSTINGDOMAIN}
+      REDIS_MASTER_HOST: redis-master
+      REDIS_SLAVE_HOST: redis-slave
+      APPLOG_CELERY_BROKER: redis://redis-master:6379/1
+      BACKEND_CELERY_BROKER: redis://redis-master:6379/2
+      FRAGMENTX_CELERY_BROKER: redis://redis-master:6379/3
+      STATS_URI: postgres://postgres@pg-stats:5432/statistics
+      POSTGRES_URI: postgres://postgres@pgpool:5432/backend
+      MIGRATE_URI: postgres://postgres@pgpool:5432/backend
+      SCHEMA_VERSION: ${SCHEMA_VERSION}
+      ENABLE_ICECREAM: 1
+      PYTHONPATH: /shared_code
+      GHOST_ADMIN_API_KEY: ${GHOST_ADMIN_API_KEY}
+      GHOST_CONTENT_API_KEY: ${GHOST_CONTENT_API_KEY}
+      EMAIL_VERIFICATION_SEED: ${EMAIL_VERIFICATION_SEED}
+      NTFY_ERROR_URL: ${NTFY_ERROR_URL}
+      NTFY_WARNING_URL: ${NTFY_WARNING_URL}
+      NTFY_SORT_URL: ${NTFY_SORT_URL}
+      TOOLS_APPLOG_ID: ${TOOLS_APPLOG_ID}
+      TOOLS_APPLOG_KEY: ${TOOLS_APPLOG_KEY}
+      B2_ATTACHMENTS_BUCKETNAME: ${B2_ATTACHMENTS_BUCKETNAME}
+      MAILGUN_MAX_RETRIES: ${MAILGUN_MAX_RETRIES}
+      MAILGUN_API_KEY: ${MAILGUN_API_KEY}
+      MAILGUN_NEXT_RETRY_DELAY_EXPRESSION: ${MAILGUN_NEXT_RETRY_DELAY_EXPRESSION}
+      UPLOAD_NEXT_RETRY_DELAY_EXPRESSION: ${UPLOAD_NEXT_RETRY_DELAY_EXPRESSION}
+      UPLOAD_MAX_RETRIES: ${UPLOAD_MAX_RETRIES}
+      MAILGUN_DOMAIN: ${MAILGUN_DOMAIN}
+      DEFAULT_FROM_ADDRESS: ${DEFAULT_FROM_ADDRESS}
+      APPLICATION_NAME: ${APPLICATION_NAME}
+      EMAIL_VALIDATION_JWT_SECRET: ${EMAIL_VALIDATION_JWT_SECRET}
+      EDDIE_EMAIL: ${EDDIE_EMAIL}
+    volumes:
+      - type: bind
+        source: ./migrate/data
+        target: /data
+        read_only: true
+      - type: bind
+        source: ./migrate/flags
+        target: /flags
+      - type: bind
+        source: ./shared_code
+        target: /shared_code
+        read_only: true
+      - type: bind
+        source: ./shared_cache
+        target: /shared_cache
+      - type: bind
+        source: ./shared_applog
+        target: /shared_applog
+      - type: bind
+        source: ./shared_keys
+        target: /shared_keys
+    networks:
+      - backend
+    command: bash -c "cd ~ ; dockerize -wait tcp://pgpool:5432 -timeout 3600s migrate /shared_code/edwh/core/migrations.py"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+  py4web:
+    image: remcoboerma/omgeving-py4web:${DOCKER_TAG}
+    build:
+      context: .
+      dockerfile: py4web/Dockerfile
+      args:
+        PIP_INDEX_URL: https://devpi.edwh.nl/root/pypi/+simple/
+    restart: always
+    stop_grace_period: 2s
+    deploy:
+      replicas: ${PY4WEB_REPLICAS:-3} # indien bjoern
+    expose:
+      - 8000
+      - 7999
+    environment: &py4web_environment
+      <<: *shared_environment
+      PY4WEB_PASSWORD_FILE: /p4w/password.txt # to parameterize the _dashboard app
+      PY4WEB_DASHBOARD_MODE: full # if via uwsgi, the py4web's run method isn't ran, we'll have to use the ENV vars
+      PY4WEB_RESTART_SECRET: ${PY4WEB_RESTART_SECRET}
+      PY4WEB_APPLOG_KEY: ${PY4WEB_APPLOG_KEY}
+      PY4WEB_APPLOG_ID: ${PY4WEB_APPLOG_ID}
+      PY4WEB_DEBUG_MODE: ${PY4WEB_DEBUG_MODE:-0}
+      GHOST_ADMIN_API_KEY_KANSEN: ${GHOST_ADMIN_API_KEY_KANSEN}
+      GHOST_CONTENT_API_KEY_KANSEN: ${GHOST_CONTENT_API_KEY_KANSEN}
+      GHOST_URL_KANSEN: ${GHOST_URL_KANSEN}
+      REDASH_SECRET: ${REDASH_SECRET:-}
+      DEBUG_PYCHARM_WITH_BJOERN: "nee"
+    command: bash -c "dockerize --wait file:///flags/migrate-${SCHEMA_VERSION}.complete -wait tcp://pgpool:5432 -timeout 30s python3 py4web_bjoern.py"
+    # command: bash -c "dockerize --wait file:///flags/migrate-${SCHEMA_VERSION}.complete -wait tcp://pgpool:5432 -timeout 30s uwsgi --http :8000 --wsgi-file py4web_wsgi.py --master --processes 1 --threads 12 --stats 0.0.0.0:7999 --thunder-lock --touch-reload /p4w/reload.py4web.uwsgi"
+    volumes:
+      - type: bind
+        source: ./py4web/uploaded_attachments
+        target: /p4w/apps/front_end/uploads
+      - type: bind
+        source: ./py4web/apps
+        target: /p4w/apps
+      - type: bind
+        source: ./migrate/flags
+        target: /flags
+        read_only: true
+      - type: bind
+        source: ./py4web/reload.py4web.uwsgi
+        target: /p4w/reload.py4web.uwsgi
+      - type: bind
+        source: ./password.txt
+        target: /p4w/password.txt
+      - type: bind
+        source: ./py4web/py4web_wsgi.py
+        target: /p4w/py4web_wsgi.py
+      - type: bind
+        source: ./py4web/py4web_bjoern.py
+        target: /p4w/py4web_bjoern.py
+      - type: bind
+        source: ./shared_code
+        target: /shared_code
+        read_only: true
+      - type: bind
+        source: ./shared_cache
+        target: /shared_cache
+      - type: bind
+        source: ./shared_applog
+        target: /shared_applog
+      - type: bind
+        source: ./shared_keys
+        target: /shared_keys
+    networks:
+      - broker
+      - backend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.services.${PROJECT}-py4web-dev.loadbalancer.server.port=8000"
+      - "traefik.http.routers.${PROJECT}-fragments-secure.tls=true"
+      - "traefik.http.routers.${PROJECT}-fragments-secure.tls.options=edwh-std-tls-options"
+      - "traefik.http.routers.${PROJECT}-fragments-secure.tls.certresolver=${CERTRESOLVER}"
+      - "traefik.http.routers.${PROJECT}-fragments-secure.rule=Host(`fragments.${HOSTINGDOMAIN}`)"
+      - "traefik.http.routers.${PROJECT}-fragments-secure.middlewares=strip-front-end-version, cors, www-redirect, edwh-std-security, regio-headers"
+      - "traefik.http.routers.${PROJECT}-py4web-secure.tls=true"
+      - "traefik.http.routers.${PROJECT}-py4web-secure.tls.certresolver=${CERTRESOLVER}"
+      - "traefik.http.routers.${PROJECT}-py4web-secure.rule=Host(`py4web.${HOSTINGDOMAIN}`) || Host(`${APPLICATION_NAME}.${HOSTINGDOMAIN}`) || Host(`www.py4web.${HOSTINGDOMAIN}`) || Host(`www.${APPLICATION_NAME}.${HOSTINGDOMAIN}`) || Host(`c.${APPLICATION_NAME}.${HOSTINGDOMAIN}`)|| Host(`c.${HOSTINGDOMAIN}`)"
+      - "traefik.http.routers.${PROJECT}-py4web-secure.middlewares=cors, www-redirect, edwh-std-security, regio-headers"
+
+  celery-applog-worker: &celery_service
+    image: remcoboerma/omgeving-celery-applog-worker:${DOCKER_TAG}
+    build:
+      context: .
+      dockerfile: migrate/Dockerfile
+      args:
+        B2_ATTACHMENTS_KEY: ${B2_ATTACHMENTS_KEY}
+        B2_ATTACHMENTS_KEYID: ${B2_ATTACHMENTS_KEYID}
+        PIP_INDEX_URL: https://devpi.edwh.nl/root/pypi/+simple/
+    restart: always
+    environment: *py4web_environment
+    command: celery -A edwh.core.applog.tasks worker --loglevel=info
+    volumes:
+      - type: bind
+        source: ./py4web/uploaded_attachments
+        target: /p4w/apps/front_end/uploads
+      - type: bind
+        source: ./py4web/apps
+        target: /p4w/apps
+        read_only: true
+      - type: bind
+        source: ./migrate/flags
+        target: /flags
+        read_only: true
+      - type: bind
+        source: ./py4web/celery-db
+        target: /celery-db
+        read_only: false
+      - type: bind
+        source: ./shared_code
+        target: /shared_code
+        read_only: true
+      - type: bind
+        source: ./shared_cache
+        target: /shared_cache
+      - type: bind
+        source: ./shared_applog
+        target: /shared_applog
+      - type: bind
+        source: ./shared_keys
+        target: /shared_keys
+    networks:
+      - backend
+    depends_on:
+      - migrate
+      - redis-master
+      - redis-slave
+
+  celery-applog-beat:
+    <<: *celery_service
+    image: remcoboerma/omgeving-celery-applog-beat:${DOCKER_TAG}
+    command: celery -A edwh.core.applog.tasks beat -s /celery-db/celerybeat-schedule.db --loglevel=info
+
+  celery-backend-beat:
+    <<: *celery_service
+    image: remcoboerma/omgeving-celery-backend-beat:${DOCKER_TAG}
+    command: celery -A edwh.core.backend.tasks beat -s /celery-db/celerybeat-schedule.db --loglevel=info
+
+  celery-backend-worker:
+    <<: *celery_service
+    image: remcoboerma/omgeving-celery-backend-worker:${DOCKER_TAG}
+    command: celery -A edwh.core.backend.tasks worker --loglevel=info
+
+
+  celery-fragmentx-beat:
+    <<: *celery_service
+    build:
+      context: .
+      dockerfile: py4web/Dockerfile
+      args:
+        PIP_INDEX_URL: https://devpi.edwh.nl/root/pypi/+simple/
+    image: remcoboerma/omgeving-celery-fragmentx-beat:${DOCKER_TAG}
+    command: celery -A apps.fragmentx.tasks beat -s /celery-db/celerybeat-schedule.db --loglevel=info
+
+  celery-fragmentx-worker:
+    <<: *celery_service
+    build:
+      context: .
+      dockerfile: py4web/Dockerfile
+      args:
+        PIP_INDEX_URL: https://devpi.edwh.nl/root/pypi/+simple/
+    image: remcoboerma/omgeving-celery-fragmentx-worker:${DOCKER_TAG}
+    command: celery -A apps.fragmentx.tasks worker --loglevel=info
+
+
+
+  web2py:
+    image: remcoboerma/omgeving-web2py:${DOCKER_TAG}
+    restart: unless-stopped
+    stop_grace_period: 2s
+    build:
+      context: .
+      dockerfile: ./web2py/Dockerfile
+    depends_on:
+      - pgpool
+      - migrate
+    expose:
+      - 8000
+    environment:
+      <<: *shared_environment
+      WEB2PY_APPLOG_KEY: ${WEB2PY_APPLOG_KEY}
+      WEB2PY_APPLOG_ID: ${WEB2PY_APPLOG_ID}
+      # mail:
+      SMTP_FAKE: ${SMTP_FAKE:-1}
+      SMTP_SERVER: ${SMTP_SERVER}
+      SMTP_PORT: ${SMTP_PORT}
+      SMTP_SENDER: ${SMTP_SENDER}
+      SMTP_USER: ${SMTP_USER}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+      SMTP_TLS: ${SMTP_TLS}
+      SMTP_SSL: ${SMTP_SSL}
+    command: bash -c "dockerize --wait file:///flags/migrate-${SCHEMA_VERSION}.complete -wait tcp://pgpool:5432 -timeout 30s python3 web2py.py -a ${WEB2PY_PASSWORD} -i 0.0.0.0 -p 8000 -K init -X  || echo DOOR TIMEOUT IS web2py NIET UITGEVOERD"
+    volumes: &web2py_volumes
+      - type: bind
+        source: ./shared_code
+        target: /shared_code
+        read_only: true
+      - type: bind
+        source: ./shared_cache
+        target: /shared_cache
+      - type: bind
+        source: ./shared_keys
+        target: /shared_keys
+      - type: bind
+        source: ./migrate/flags
+        target: /flags
+        read_only: true
+      - type: bind
+        source: ./web2py/apps/workbench
+        target: /src/web2py/applications/init
+      - type: bind
+        source: ./web2py/apps/ioldb
+        target: /src/web2py/applications/ioldb
+      - type: bind
+        source: ./shared_applog
+        target: /shared_applog
+    networks:
+      - broker # om beschikbaar te zijn voor traefik
+      - backend
+    extra_hosts:
+      host.docker.internal: host-gateway
+    labels:
+      - "traefik.http.routers.${PROJECT}-web2py-secure.rule=Host(`web2py.${HOSTINGDOMAIN}`)"
+      - "traefik.http.routers.${PROJECT}-web2py-secure.tls=true" # aanpassen per ghost instance
+      - "traefik.http.routers.${PROJECT}-web2py-secure.tls.certresolver=${CERTRESOLVER}"
+      - "traefik.http.routers.${PROJECT}-web2py-secure.middlewares=edwh-std-security"
+      - "traefik.docker.network=broker" # https://doc.traefik.io/traefik/providers/docker/#network
+      - "traefik.enable=true"
+    # TODO: migrate versie nummers oplossen als we geen lib meer gebruiken
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+  web2py-workbench-test:
+    image: remcoboerma/omgeving-web2py:${DOCKER_TAG}
+    stop_grace_period: 2s
+    build:
+      context: .
+      dockerfile: ./web2py/Dockerfile
+    depends_on:
+      - web2py
+    environment:
+      <<: *shared_environment
+      WEB2PY_APPLOG_KEY: ${WEB2PY_APPLOG_KEY}
+      WEB2PY_APPLOG_ID: ${WEB2PY_APPLOG_ID}
+    volumes: *web2py_volumes
+    command: python3 /src/web2py/applications/init/functional_test/test.py
+    networks:
+      - backend
+
+  jupyterlab:
+    image: remcoboerma/omgeving-jupyterlab:${DOCKER_TAG}
+    # https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html#docker-options
+    build:
+      context: .
+      dockerfile: jupyterlab/Dockerfile
+    restart: unless-stopped
+    environment:
+      <<: *shared_environment
+      JUPYTER_ENABLE_LAB: "yes"
+      NB_UID: 1050
+      NB_GID: 1050
+      JUPYTER_TOKEN: ${LAB_TOKEN:?supersecretisnieterggeheim}
+    expose:
+      - 8888
+    networks:
+      - backend
+      - broker
+    extra_hosts:
+      host.docker.internal: host-gateway
+    labels:
+      - "traefik.http.routers.jupyterlab-${PROJECT}-secure.rule=Host(`lab.${HOSTINGDOMAIN}`)"
+      - "traefik.http.routers.jupyterlab-${PROJECT}-secure.tls=true" # aanpassen per ghost instance
+      - "traefik.http.routers.jupyterlab-${PROJECT}-secure.tls.certresolver=${CERTRESOLVER}"
+      - "traefik.docker.network=broker" # https://doc.traefik.io/traefik/providers/docker/#network
+      - "traefik.enable=true"
+    volumes:
+      - type: bind
+        source: ./migrate/flags
+        target: /flags
+        read_only: true
+      - type: bind
+        source: ./shared_code
+        target: /shared_code
+        read_only: true
+      - type: bind
+        source: ./shared_cache
+        target: /shared_cache
+      - type: bind
+        source: ./shared_keys
+        target: /shared_keys
+      - type: bind
+        source: ./jupyterlab/notebooks
+        target: /home/jovyan/work
+      - type: bind
+        source: ./shared_applog
+        target: /shared_applog
+    depends_on:
+      - migrate
+      - redis-slave
+      - redis-master
+      - pgpool
+
+  ######### redis ####################
+  redis-master: #acts as master
+    image: redis
+    ports:
+      - "${REDIS_PORT}:6379"
+    restart: always
+    networks:
+      - backend
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+  redis-slave:
+    restart: unless-stopped
+    image: redis
+    depends_on:
+      - redis-master
+    command: redis-server --slaveof redis-master 6379
+    networks:
+      - backend
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+  ######### postgresql ###############
+  ###### Postgres clustering using PGPool as reverse proxy and HA
+  ###### https://github.com/bitnami/bitnami-docker-pgpool#configuration
+
+  pg-stats:
+    image: timescale/timescaledb:latest-pg14
+    volumes:
+      - pg_stats_data:/bitnami/postgresql
+    environment:
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "${PGSTATS_PORT}:5432"
+    networks:
+      backend:
+        aliases:
+          - pg-stats
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+
+  pgpool: # reverse proxy and switcher. partly works
+    hostname: pgpool
+    image: bitnami/pgpool:4.3.1
+    ports:
+      - "${PGPOOL_PORT}:5432"
+    environment:
+      - PGPOOL_BACKEND_NODES=0:pg-0:5432,1:pg-1:5432
+      - PGPOOL_SR_CHECK_USER=postgres
+      - PGPOOL_SR_CHECK_PASSWORD=password
+      - PGPOOL_ENABLE_LDAP=no
+      - PGPOOL_POSTGRES_USERNAME=postgres
+      - PGPOOL_POSTGRES_PASSWORD=password
+      - PGPOOL_ADMIN_USERNAME=postgres
+      - PGPOOL_ADMIN_PASSWORD=password
+      - PGPOOL_CHILD_LIFE_TIME=120 # Specifies the time in seconds to terminate a Pgpool-II child process if it remains idle. The new child process is immediately spawned by Pgpool-II when it is terminated because of child_life_time. child_life_time is a measure to prevent the memory leaks and other unexpected errors in Pgpool-II children.
+      - PGPOOL_CLIENT_IDLE_LIMIT=0 #  Specifies the time in seconds to disconnect a client if it remains idle since the last query. This is useful for preventing the Pgpool-II children from being occupied by a lazy clients or broken TCP/IP connection between client and Pgpool-II.
+      - PGPOOL_ENABLE_STATEMENT_LOAD_BALANCING=yes
+      - PGPOOL_NUM_INIT_CHILDREN=64 #  The number of preforked Pgpool-II server processes. Default is 32. num_init_children is also the concurrent connections limit to Pgpool-II from clients. If more than num_init_children clients try to connect to Pgpool-II, they are blocked (not rejected with an error, like PostgreSQL) until a connection to any Pgpool-II process is closed unless reserved_connections is set to 1 or more. Up to listen_backlog_multiplier* num_init_children can be queued.
+      - PGPOOL_MAX_POOL=100 # The number of preforked Pgpool-II server processes. Default is 32. num_init_children is also the concurrent connections limit to Pgpool-II from clients.
+      - PGPOOL_CONNECTION_LIFE_TIME=60 # Specifies the time in seconds to terminate the cached connections to the PostgreSQL backend. This serves as the cached connection expiration time.
+      - PGPOOL_ENABLE_LOG_CONNECTIONS=no
+      # - PGPOOL_ENABLE_LOG_PER_NODE_STATEMENT=no
+      - PGPOOL_SERIALIZE_ACCEPT=on #  When set to on, Pgpool-II enables the serialization on incoming client connections. Without serialization the OS kernel wakes up all of the Pgpool-II children processes to execute accept() and one of them actually gets the incoming connection. The problem here is, because so my child process wake up at a same time, heavy context switching occurs and the performance is affected.
+      - PGPOOL_RESERVED_CONNECTIONS=1 #   When this parameter is set to 1 or greater, incoming connections from clients are not accepted with error message "Sorry, too many clients already", rather than blocked if the number of current connections from clients is more than (num_init_children - reserved_connections). For example, if reserved_connections = 1 and num_init_children = 32, then the 32th connection from a client will be refused. This behavior is similar to PostgreSQL and good for systems on which the number of connections from clients is large and each session may take long time. In this case length of the listen queue could be very long and may cause the system unstable. In this situation setting this parameter to non 0 is a good idea to prevent the listen queue becomes very long.
+      - PGPOOL_AUTHENTICATION_METHOD=scram-sha-256
+    depends_on:
+      - pg-0
+      - pg-1
+    networks:
+      backend:
+        aliases:
+          - pgpool
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+
+  pg-0: # acts as first primary
+    image: bitnami/postgresql-repmgr:14
+    shm_size: '100MB'
+    volumes:
+      - pg_0_data:/bitnami/postgresql
+    environment:
+      - POSTGRESQL_POSTGRES_PASSWORD=password
+      - POSTGRESQL_USERNAME=postgres
+      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_DATABASE=backend
+      - REPMGR_PASSWORD=repmgrpassword
+      - REPMGR_PRIMARY_HOST=pg-0
+      - REPMGR_PARTNER_NODES=pg-0#,pg-1
+      - REPMGR_NODE_NAME=pg-0
+      - REPMGR_NODE_NETWORK_NAME=pg-0
+      - REPMGR_UPGRADE_EXTENSION=yes
+      - PASSWORD_AUTHENTICATION=scram-sha-256
+    networks:
+      backend:
+        aliases:
+          - pg-0
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+  pg-1: # acts as standby
+    image: bitnami/postgresql-repmgr:14
+    shm_size: '100MB'
+    volumes:
+      - pg_1_data:/bitnami/postgresql
+    environment:
+      - POSTGRESQL_POSTGRES_PASSWORD=password
+      - POSTGRESQL_USERNAME=postgres
+      - POSTGRESQL_PASSWORD=password
+      - POSTGRESQL_DATABASE=backend
+      - REPMGR_PASSWORD=repmgrpassword
+      - REPMGR_PRIMARY_HOST=pg-0
+      - REPMGR_PARTNER_NODES=pg-0,pg-1
+      - REPMGR_UPGRADE_EXTENSION=yes
+      - PASSWORD_AUTHENTICATION=scram-sha-256
+      # pg-1 specifiek
+      - REPMGR_NODE_NETWORK_NAME=pg-1
+      - REPMGR_NODE_NAME=pg-1
+    networks:
+      backend:
+        aliases:
+          - pg-1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "25m"
+        max-file: "2"
+
+
+######## we love these guys
+# prune old ones once in while with "docker volume prune",
+# WARNING WARNING: ONLY WHEN YOU HAVE RUNNING INSTANCES WITH PRODUCTION DATA
+# otherwise EVERYTHING will be whiped.
+#
+volumes:
+  pg_0_data:
+    driver: local
+  pg_1_data:
+    driver: local
+  pg_stats_data:
+    driver: local

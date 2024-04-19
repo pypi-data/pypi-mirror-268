@@ -1,0 +1,33 @@
+[[if not backend.is_registered_user:]]
+<form id="edwh-modal" class="modal edwh-escape-modal"
+      _="
+        on ew:load_form from closest .edwh-messagebus
+            put event.detail.form into my ewform.value
+
+            set event.detail.sender to null -- removing a key doesnt't seem to work, so lets overwrite
+            -- event.detail.sender is a <form>, which can not be jsonified.
+
+            set my @hx-vals to jsonify_details(event.detail)
+            -- todo: check event.detail, sender er uit?
+
+            -- waarom is dit nodig??:
+            send change to my ewform
+        "
+>
+    <input
+            value="login"
+            name="ewform"
+            hx-get="auth"
+            hx-trigger="change"
+            hx-target="#edwh-authform"
+            type="hidden"
+    />
+
+    <!--on click send ew:load_form(form: 'login') to closest .edwh-messagebus then call modal(#edwh-modal)-->
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div id="edwh-authform"></div>
+    </div>
+    <div class="modal-close is-large" _="install CloseModal"></div>
+</form>
+[[pass]]

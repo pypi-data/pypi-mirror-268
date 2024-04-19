@@ -1,0 +1,53 @@
+<section id="antwoord" class="section">
+    {{#if success}}
+    <div class="container is-max-desktop has-text-centered">
+                <h1 class="title">Uitslag</h1>
+                <p class="content has-text-light">U bevindt zich in veld <strong>{{cell}}</strong></p>
+
+            {{#if opmerking}}
+                <div class="alert alert-success">
+                    <h2>Toelichting</h2>
+                    <span>{{opmerking}}</span>
+                </div>
+            {{/if}}
+    </div>
+
+    {{#each collected_urls}}
+        <!-- @formatter:off-->
+
+
+                <div
+                        hx-get="{{absolute_url 'card'}}?url={{this}}"
+                        hx-trigger="load" class="columns is-multiline my-6 is-justify-content-center">
+
+
+           <!-- <div class="card-footer"><a class="btn btn-primary" href="{{this}}" role="button" target="_parent">
+                Meer over transitie van veld {{../cell}} naar {{@key}} </a>
+            </div>-->
+
+        <!-- @formatter:on-->
+    {{/each}}
+
+         <button
+            hx-post="{{absolute_url 'vraag' 1}}"
+            hx-trigger="ew:previous,click"
+            hx-target="#antwoord"
+            hx-swap="outerHTML"
+            id="back"
+
+    class="edwh-quickfilter-button">Begin Opnieuw
+    </button>
+
+ </section>
+
+
+{{else}}
+    <h2>{{opmerking}}</h2>
+    <button _="on click send ew:restart" class="edwh-quickfilter-button" type="button">Probeer opnieuw</button>
+{{/if}}
+
+</div>
+<script>
+    // needed to detect popstate:
+    history.pushState({page: 'uitslag'}, "");
+</script>

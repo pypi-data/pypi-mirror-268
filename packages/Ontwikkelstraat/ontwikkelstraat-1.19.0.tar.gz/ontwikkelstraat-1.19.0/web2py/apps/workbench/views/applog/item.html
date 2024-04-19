@@ -1,0 +1,50 @@
+{{extend 'applog/applog_layout.html'}}
+
+<h4>Geschiedenis van <a href="{{=URL('quick_edit', item.gid)}}">'{{=item.name}}'</a></h4>
+{{filterbalk()}}
+
+<div style="display: flex; flex-flow: row wrap; justify-content: center">
+    <div style="margin: 20px 100px; max-width: 90vw;">
+        {{for idx, row in enumerate(timeline):}}
+
+        <div class="card">
+            <div class="card-header" id="heading-{{=idx}}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link"
+                            data-toggle="collapse" data-target="#collapse-{{=idx}}"
+                            aria-expanded="true" aria-controls="collapse-{{=idx}}"
+                    >
+                    <span
+                            style="color: {{={
+                            'read-item': 'darkgrey',
+                            'create-item': 'green',
+                            'update-item': '#CC7722',
+                            'remove-item': 'red',
+                            }.get(row.log_action, 'inherit')}}"
+                    >
+                    {{=row.log_action.replace('-', ' ')}} @ {{=row.signal_ts.strftime('%d %b %Y, %H:%M:%S')}} door {{=(row.by_eddie_email or "?").split("@")[0]}}
+                    </span>
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapse-{{=idx}}" class="collapse" aria-labelledby="heading-{{=idx}}" data-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Author: <a href="{{=URL('applog', 'author', row.by_eddie_email)}}"><b>{{=row.by_eddie_email}}</b></a>
+                        </li>
+                        {{for changed_key, values in row.changes.items():}}
+                        <li>{{=changed_key.replace('_', ' ')}}:<br/> {{=format_diff(values)}}</li>
+                        {{pass}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{pass}}
+
+        {{=render_paginate()}}
+    </div>
+    <div style="margin: 20px 100px">
+        {{samenvatting(timeline, {item.gid: item})}}
+    </div>
+</div>

@@ -1,0 +1,163 @@
+<script type="text/hyperscript">
+def modal(el)
+  toggle .is-active on el
+  toggle .is-clipped on document.documentElement
+end
+
+
+</script>
+<script>
+    // makkelijker in JS dan HS
+    function jsonify_details(details, key = 'details') {
+        // details worden ge-encode omdat het anders niet nested gestuurd kan worden
+        const encoded = btoa(JSON.stringify(details));
+        return `{"${key}": "${encoded}"}`;
+    }
+</script>
+
+<div id="edwh-loaded-menu-parent" class="">
+    <div class="navbar-start">
+    </div>
+    <div id="edwh-loaded-menu" class="navbar-end">
+        [[if backend.is_registered_user:]]
+            <div class="navbar-item bd-navbar-item bd-navbar-item-base has-dropdown edwh-clickable-parent">
+                <a class="navbar-link is-arrowless">
+                    <span class="icon">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </a>
+                <div class="navbar-dropdown  bd-navbar-dropdown is-boxed is-right edwh-clickable-child">
+                    <a class="navbar-item bd-is-hidden" href="[[=user_uri_template(me.id)]]">
+                        <div>
+                            <div class="icon-text" style="min-width: 200px">
+                                <span class="icon has-text-bleeding">
+                                    <i class="fas fa-id-card"></i>
+                                </span>
+                                <span>
+                                    <strong>Mijn Profiel</strong>
+                                </span>
+                            </div>
+                        </div>
+
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item bd-is-hidden" hx-post="logout" _="on ew:success call location.reload()">
+                        <div>
+                            <div class="icon-text" style="min-width: 200px">
+                                <span class="icon has-text-bleeding">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </span>
+                                <span>
+                                    <strong>Uitloggen</strong>
+                                </span>
+                            </div>
+                        </div>
+
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-item loggedin has-text-centered">
+                    <a class="navbar-link is-arrowless" href="[[=user_uri_template(me.id)]]">
+                            <div class="icon-text is-justify-content-center">
+                                <span class="icon has-text-bleeding">
+                                    <i class="fas fa-id-card"></i>
+                                </span>
+                                <span>
+                                    <strong>Mijn Profiel</strong>
+                                </span>
+                            </div>
+                    </a>
+            </div>
+            <div class="navbar-item loggedin has-text-centered">
+                    <a class="navbar-link is-arrowless" hx-post="logout" _="on ew:success call location.reload()">
+                            <div class="icon-text is-justify-content-center">
+                                <span class="icon has-text-bleeding">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </span>
+                                <span>
+                                    <strong>Uitloggen</strong>
+                                </span>
+                            </div>
+                    </a>
+            </div>
+            <div class="navbar-item has-text-centered"><a class="button is-primary is-rounded"
+                                        href="https://forms.office.com/Pages/ResponsePage.aspx?id=seYFrqd0CESPU8R4r2cA0gCa07vN-Z1BkxeVQ9A0v6lUMTdXS0dYTVQ5UldFWlJETFpaQU9LNDFFUyQlQCN0PWcu"
+                                        target="_blank">
+                <span class="icon-text has-text-weight-bold has-text-light"><span class="icon" style="background-color: #fff;
+border-radius: 100%;
+padding: 5px;">
+                    <svg viewBox="0 0 19.776 19.661" width="1em" height="1em" class="">
+                        <g fill="#23AD7B">
+                            <path d="M15.907 0a1.836 1.836 0 01.885.581c.846.856 1.689 1.716 2.555 2.552a1.264 1.264 0 01.044 1.855c-.459.467-.93.922-1.386 1.373L13.4 1.754c.094-.086.205-.181.309-.284.3-.3.612-.6.9-.906a1.859 1.859 0 01.9-.563zM7.127 17.142l-4.6-4.6L12.65 2.472l4.6 4.6zM6.435 17.814L0 19.661l1.847-6.435z"></path>
+                        </g>
+                    </svg>
+                </span>
+                    <span>Plaats ontwikkelpraktijk</span></span>
+            </a></div>
+        [[else:]]
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <span class="bd-tw-button button is-primary is-rounded modal-button"
+                              id="login-btn"
+                              _="install Auth"
+                        >
+                            <span class="icon">
+                                <i class="fas fa-user-circle"></i>
+                            </span>
+                            <span>
+                                Inloggen
+                            </span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        [[pass]]
+    </div>
+
+    <!-- https://bulma.io/documentation/components/modal/ -->
+    <!--    To activate the modal, just add the is-active modifier on the .modal container. You may also want to add -->
+    <!--    is-clipped modifier to a containing element (usually html) to stop scroll overflow. -->
+</div>
+
+<div id="modals"
+     hx-trigger="load"
+     hx-post="modals"
+     hx-ext='json-enc'
+></div>
+
+<script type="text/hyperscript">
+on every click
+  -- close modal background
+  if target matches .modal-background
+    call modal(the closest .modal to target)
+  end
+
+  -- close dropdowns
+  set toggleable to closest .edwh-clickable-parent to target
+
+  if no toggleable
+    -- somewhere else on the page, send event so the class is removed
+    send ew:clicked(event: event) to closest .edwh-messagebus
+  else
+      if toggleable matches .is-active
+        -- currently active, make inactive
+        send ew:clicked(event: event) to closest .edwh-messagebus
+      else
+        -- inactive, make active until clicked somewhere else
+        toggle .is-active on toggleable until ew:clicked from closest .edwh-messagebus
+      end
+  end
+end -- end 'on every click'
+
+
+on every keydown
+  if event.key is 'Escape'
+    for m in .modal -- todo: how to combine two classes? (.modal.is-active)
+      if m matches .is-active
+        call modal(m)
+      end
+  end
+end
+
+</script>

@@ -1,0 +1,87 @@
+[[extend 'template.hbs']]
+
+<div class="edwh-activiteit is-hidden" data-labels="activiteit #2022-09-14 #2022-09-15 #2022-09-16 #lov">
+    Test activiteit Verre Toekomst (3x)
+    - <span class="edwh-date"></span></div>
+<div class="edwh-activiteit is-hidden" data-labels="activiteit #2021-09-05 #2021-09-07 #idc">
+    Test activiteit Nabije Toekomst (2x)
+    - <span class="edwh-date"></span></div>
+<div class="edwh-activiteit is-hidden" data-labels="activiteit #2021-09-06">
+    Test activiteit Tussen Toekomst (1x)
+    - <span class="edwh-date"></span></div>
+<div class="edwh-activiteit is-hidden" data-labels="activiteit #2020-09-14">
+    Test activiteit Verleden
+    - <span class="edwh-date"></span></div>
+<div class="edwh-activiteit is-hidden" data-labels="activiteit">
+    Innoveren met LEF: perspectieven op borgen
+    - <span class="edwh-date"></span></div>
+
+[[block page_scripts]]
+<script>
+    const months = [
+        'jan',
+        'feb',
+        'maa',
+        'apr',
+        'mei',
+        'jun',
+        'jul',
+        'aug',
+        'sep',
+        'okt',
+        'nov',
+        'dec',
+    ];
+    const _future = 45; // days
+    /**
+     * https://stackoverflow.com/questions/563406/add-days-to-javascript-date
+     *
+     * @param days integer
+     * @returns {Date}
+     */
+    Date.prototype.addDays = function(days) {
+        const date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    };
+    const today = new Date();
+    const future = today.addDays(_future);
+
+    const activiteiten = [];
+    let $activiteiten_parent;
+
+    Q('.edwh-activiteit').forEach($activiteit => {
+        if(!$activiteiten_parent) {
+            $activiteiten_parent = $activiteit.parentNode;
+        }
+
+        // voor elke datum tag kopieer je dit element
+        for (let tag of $activiteit.data('labels').split(' ').filter(e => e.startsWith('#'))) {
+            const date = new Date(tag.slice(1));
+
+            if(date >= today && date <= future) {
+                // kopieer
+                let $clone = $activiteit.cloneNode(true);
+                // gebruik slechts 1 label voor dit element:
+                $clone.data('labels', tag);
+                // en maak de clone zichtbaar
+                $clone.removeClass('is-hidden');
+                // lees de datum uit en voeg toe aan de rode pil
+                const month = months[date.getMonth()];
+                $clone.querySelector('.edwh-date').text(`${date.getDate()} ${month}`);
+
+                activiteiten.push({el: $clone, date});
+            }
+        }
+        // en de oorspronkelijke node met de tag verzameling weg
+        $activiteit.remove();
+    });
+
+    // nu hebben we allemaal activiteiten door elkaar qua datum, maar elke activiteit heeft maar 1 datum
+    // daar gaan we op soteren.
+
+    const sorted = activiteiten.sort((date1, date2) => date1.date - date2.date);
+    sorted.forEach($activiteit => $activiteiten_parent.appendChild($activiteit.el));
+
+</script>
+[[end]]

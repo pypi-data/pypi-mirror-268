@@ -1,0 +1,6 @@
+py4web==1.20210207.1
+pybars4==0.9.11
+icecream
+ua-parser
+user-agents
+bcrypt

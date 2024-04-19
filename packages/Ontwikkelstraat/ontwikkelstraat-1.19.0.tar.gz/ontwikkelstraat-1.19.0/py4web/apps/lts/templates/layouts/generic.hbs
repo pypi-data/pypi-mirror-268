@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EDWH Tiles Docs</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/1.0.8/marx.min.css"
+          integrity="sha512-PDo9Ebi9pksK8HAg/orRHVdksqew2WPxEyJc5zr1nu8zlr2vbPND7MpVKDfZZvr8Uh0CvdBugGoT7RrXLl5W1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    {{#if css}}
+        <style>
+                {{css}}
+        </style>
+    {{/if}}
+
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+</head>
+<body>
+<main>
+    {{content}}
+</main>
+</body>
+</html>

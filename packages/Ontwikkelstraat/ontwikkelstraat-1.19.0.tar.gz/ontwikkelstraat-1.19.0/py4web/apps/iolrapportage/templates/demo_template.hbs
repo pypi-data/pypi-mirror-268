@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title></title>
+      <script src="{{URL 'static/js/utils.js'}}"></script>
+  </head>
+  <body>
+    <!-- beginning of HTML inserted by extending template -->
+    <div style="text-align: center;">
+      {{flash}}
+      <main class="padded">
+        <!-- content injected by extending page -->
+        [[include]]
+      </main>
+    </div>
+    <!-- end of HTML inserted by extending template -->
+  </body>
+  <!-- You've gotta have utils.js -->
+
+  [[block page_scripts]]<!-- individual pages can add scripts here -->[[end]]
+</html>

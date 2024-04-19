@@ -1,0 +1,68 @@
+{{extend 'layout.html'}}
+
+<style>
+    h2 {
+        border-top: solid black 3px;
+        padding-top: 10px;
+    }
+
+    .fa {
+        font-size: 22px;
+    }
+</style>
+<div class="container">
+    <h1>Praktijk "{{=item.name}}"</h1>
+    <a class="btn btn-default" target='_blank' href="{{=item_url}}">Openen/Preview</a>
+    <a class="btn btn-default" href="{{=URL(f='toggle_visibility',args=[item.gid, Visibility.PIPELINE.value])}}">{{='Publiceer' if Visibility.PIPELINE.value in item.visibility else 'Publiceren ongedaan maken'}}</a>
+    <a class="btn btn-default" href="{{=URL(f='toggle_visibility',args=[item.gid, Visibility.HIDDEN.value])}}">{{='Niet langer verstoppen' if Visibility.HIDDEN.value in item.visibility else 'Verstoppen'}}</a>
+    <a class="btn btn-default" href="{{=URL(f='toggle_visibility',args=[item.gid, Visibility.DELETED.value])}}">{{='Verwijderen ongedaan maken' if Visibility.DELETED.value in item.visibility else 'Verwijderen'}}</a>
+    <a class="btn btn-default" href="{{=URL(f='toggle_visibility',args=[item.gid, Visibility.PLATFORM_LEF_ONLY.value])}}">{{='Verwijderen van LEF' if Visibility.PLATFORM_LEF_ONLY.value in item.visibility else 'Toevoegen aan LEF'}}</a>
+    <a class="btn btn-default" href="{{=URL(f='toggle_visibility',args=[item.gid, Visibility.ALL.value])}}">{{='Verwijderen van Landelijk platform' if Visibility.ALL.value in item.visibility else 'Toevoegen aan Landelijk platform'}}</a>
+    <div> <small> Let op: sla wijzigingen eerst op!</small></div>
+    <div>
+        {{=warning or ''}}
+    </div>
+
+    <div class="row">
+        <!-- if -->
+        <h2>Geschiedenis</h2>
+        <a class="btn btn-default" href="{{=URL(c='applog', f='item', args=[item.gid])}}">Bewerkingsgeschiedenis bekijken</a>
+    </div>
+
+    <div class="row">
+        <h2>Bewerk tags </h2>
+        <div class="col-sm-3">
+            <div style="text-align:right"><label class="readonly control-label">Tags</label></div>
+        </div>
+        <div class="col-sm-9">{{=LOAD('workbench','tag_tree.load', args=['backend',item_id], target='tag_tree_load',
+            ajax=True, ajax_trap=True)}}
+        </div>
+    </div>
+    <div class="row">
+        <h2>Bewerk eigenschappen</h2>
+        {{=form}}
+    </div>
+    <div class="row">
+        <h2>Bijlagen en media toevoegen</h2>
+        {{=attachments}}
+    </div>
+    <div class="row">
+        <h2>Dump van de property-bag</h2>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-9">{{=CODE(json.dumps(property_bag,indent=4))}}</div>
+    </div>
+</div>
+
+<script>
+    var item_short_description_mde = new EasyMDE({
+        element: document.getElementById("item_short_description"),
+        promptURLs: true,
+        spellChecker: false,
+        lineWrapping: true,
+        autosave: {
+            enabled: true,
+            uniqueId: "item_short_description_mde-{{=item.id}}-{{=item.ts_changed}}",
+            delay: 1000
+        },
+    });
+</script>

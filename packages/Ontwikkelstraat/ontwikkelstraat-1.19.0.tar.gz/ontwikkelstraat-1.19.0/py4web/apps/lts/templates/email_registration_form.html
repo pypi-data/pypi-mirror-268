@@ -1,0 +1,49 @@
+[[vars = locals()]]
+<h4>Ontvang meldingen over verlopen versies</h4>
+[[if 'msg' in vars:]]
+<div style="
+            border: 1px solid black;
+            background-color: [[if vars.get('success'):]] green [[else:]] red [[pass]];
+            color: white;
+            ">
+    [[=msg]]
+</div>
+[[pass]]
+[[if 'success' not in vars:]]
+<form method="POST" action="email_subscribe">
+    <div class="input-group">
+        <label for="email">Uw Emailadres</label><br/>
+        <input required id="email" type="email" name="email"/><br/><br/>
+    </div>
+    <div class="input-group">
+        <label for="pagina">Op welke webpagina komen de tiles te staan?</label><br/>
+        <small>Dit veld is niet verplicht, maar helpt ons inzichtelijk te maken waar onze techniek gebruikt wordt en
+            helpt hiermee in ons onderhoud.</small><br/>
+        <input id="pagina" type="url" name="pagina"/><br/><br/>
+    </div>
+    <div class="input-group">
+        <label for="versievoorkeur">Bij welk soort update wilt u notificatie emails ontvangen?</label><br/>
+        <small>Deze keuze is waarschijnlijk afhankelijk van hoe u de versie vastzet. Mocht u bijvoorbeeld gebruik maken
+            van
+            `https://fragments.meteddie.nl/lts/cdn/1.0/js/bundle.js`, dus zonder patch nummer, dan is het verstandig om
+            emails te ontvangen over Minor updates
+            (aangezien patches automatisch bijgewerkt zullen worden).
+            Mocht u gebruik maken van bijvoorbeeld `1.0.0`, dan is het verstandig om emails voor Patch aan te zetten.
+            Mocht u de versie op simpelweg `1` vastzetten,
+            dan worden patches en minor updates automatisch uitgevoerd, en heeft u wellicht alleen behoefte aan een
+            email als een nieuwe major versie wordt uitgebracht.
+            Misschien bent u wel benieuwd naar de updates die wel automatisch zijn uitgevoerd? Dan kunt u uiteraard ook
+            nog kiezen voor Minor of Patch.
+        </small><br/>
+        <br/>
+        <select name="versievoorkeur" id="versievoorkeur" required>
+            <option value="" disabled selected>-- Kies een optie --</option>
+            <option value="major">Major (bijv. 1.0.0 -> 2.0.0)</option>
+            <option value="minor">Minor (bijv. 1.0.0 -> 1.1.0)</option>
+            <option value="patch">Patch (bijv. 1.0.0 -> 1.0.1)</option>
+        </select>
+    </div>
+    <br/>
+    <button type="submit">Verzenden</button>
+</form>
+[[pass]]

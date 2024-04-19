@@ -1,0 +1,21 @@
+<p class="edwh-rating-summary">
+    Gemiddeld {{average}} sterren op basis van {{count}} reacties
+</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="columns is-multiline is-mobile edwh-rating-specifics">
+    {{#each details}}
+        <div class="column is-3">
+            <div>{{stars}} ster{{#unless singular}}ren{{/unless}}</div>
+        </div>
+        <div class="column is-7">
+            <progress class="progress" data-stars="{{stars}}" value="{{fraction}}" max="100">{{fraction}}%</progress>
+        </div>
+        <div class="column is-2">
+            <div>{{count}}</div>
+        </div>
+    {{/each}}
+</div><!--kg-card-end: html--><p></p>
+<script>
+    localStorage["stars-{{postid}}"] = {{chosen_stars}};
+</script>

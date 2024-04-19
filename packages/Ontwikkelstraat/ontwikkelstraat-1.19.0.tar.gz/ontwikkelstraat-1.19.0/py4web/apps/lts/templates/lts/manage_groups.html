@@ -1,0 +1,30 @@
+[[extend "layout.html"]]
+<style>
+    input {
+        display: block !important;
+    }
+</style>
+
+<div class="grid-container">
+    <a class="button" href="[[=URL('manage_users')]]">&leftarrow; Terug</a>
+    <form method="POST">
+        <h3>Kies groepen voor [[=user.first_name]]:</h3>
+        [[for group in possible:]]
+        <label for="input-[[=group]]">[[=group]]</label>
+        <input
+                [[if group in their:]]
+                checked="checked"
+                [[pass]]
+                name="[[=group]]" type="checkbox" id="input-[[=group]]">
+        [[pass]]
+
+        [[if message:]]
+        <div role="alert" class="success">
+            <span class="close"></span>
+            [[=message]]
+        </div>
+        [[pass]]
+
+        <input type="submit" value="Opslaan"/>
+    </form>
+</div>

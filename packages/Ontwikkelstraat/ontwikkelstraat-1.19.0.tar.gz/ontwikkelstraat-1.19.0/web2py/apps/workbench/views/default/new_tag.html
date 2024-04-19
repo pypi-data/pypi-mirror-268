@@ -1,0 +1,19 @@
+{{extend 'layout.html'}}
+
+<div class="container">
+    <div class="row">
+        <h2>Nieuwe tag toevoegen</h2>
+        <hr>
+    </div>
+    <div class="row">
+        {{=form}}
+    </div>
+
+    <div class="row">
+        Wil je een sticker aanmaken? <br/>
+        Maak hier eerst een tag aan, en maak er via <a href="{{=URL(c='default',f='sticker_beheer')}}">Sticker beheer</a> een sticker van.
+
+    </div>
+
+</div>
+{{#=response.toolbar()}}

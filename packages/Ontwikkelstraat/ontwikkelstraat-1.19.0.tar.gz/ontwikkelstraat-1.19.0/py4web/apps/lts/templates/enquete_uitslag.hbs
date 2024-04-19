@@ -1,0 +1,36 @@
+<div id="vraag"
+     class="vraag"
+>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <h3 class="title title is-4 has-text-centered pb-5" style="color: #262626!important;">
+                Dit zijn de thema’s
+                die het beste bij jouw
+                behoeften passen.
+            </h3>
+            <div class="columns is-multiline is-justify-content-center is-variable is-6">
+                {{#each top_themas_en_scores}}
+                    {{htmx_thema_div}}
+                {{/each}}
+            </div>
+            <div>
+                <div class="buttons is-right">
+                    <button class="button" hx-post="{{server}}/v1.0/fragmentx/klassen/enquete/?restart"
+                            hx-target="#vraag"
+                            hx-swap="outerHTML"
+                            hx-confirm="Weet je zeker dat je opnieuw wilt beginnen?"
+                    >Begin opnieuw
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script type="text/hyperscript">
+    on htmx:afterSwap
+      -- results are swapped from the index page
+      set link to <a/> in detail.elt
+      -- open in new tab:
+      set link@target to "_blank"
+
+</script>

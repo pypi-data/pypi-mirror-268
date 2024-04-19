@@ -1,0 +1,74 @@
+[[extend 'template.hbs']]
+
+<div class="edwh-messagebus">
+    <h1><a href="/school/f871ae14-079c-40ca-8a03-200d3073be69">Nassau Quintus</a></h1>
+
+    <form class="edwh-state"
+          hx-vals='{
+                   "likes":[],
+                   "limit":3,
+                   "paginate":false
+                   }'
+          hx-vars="tags: json_tags()"
+          hx-ext='json-enc'
+          _="
+         init -- init gebeurt 1 keer als de pagina geladen wordt
+           send ew:state_changed to closest .edwh-messagebus
+         end
+
+         on submit halt the event end -- = preventDefault
+         install StateMachine(stickers: 'new')
+          "
+    >
+        <section class="section">
+            <div hx-indicator=".tiles-indicator">
+                <input name="page" type="hidden" value="1" />
+                <div
+                     class="ew-search-listener edwh-reload-listener container"
+                     hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+                     hx-post="tiles/org/f871ae14-079c-40ca-8a03-200d3073be69"
+                >
+                </div>
+                <div class="tiles-indicator htmx-indicator">
+                    <div class="button is-loading" style="border:none; width: 100%">Loading...</div>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>
+
+<div class="edwh-messagebus">
+    <h1><a href="/school/261783ac-850f-4b0d-977e-d6c509a74d48">Vincent</a></h1>
+    <form class="edwh-state"
+          hx-vals='{
+                   "likes":[],
+                   "limit":3,
+                   "paginate":false
+                   }'
+          hx-vars="tags: json_tags()"
+          hx-ext='json-enc'
+          _="
+         init -- init gebeurt 1 keer als de pagina geladen wordt
+           send ew:state_changed to closest .edwh-messagebus
+         end
+
+         on submit halt the event end -- = preventDefault
+         install StateMachine(stickers: 'new')
+          "
+    >
+        <section class="section">
+            <div hx-indicator=".tiles-indicator">
+                <input name="page" type="hidden" value="1" />
+                <div
+                     class="ew-search-listener edwh-reload-listener container"
+                     hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+                     hx-post="tiles/org/261783ac-850f-4b0d-977e-d6c509a74d48"
+                >
+                </div>
+                <div class="tiles-indicator htmx-indicator">
+                    <div class="button is-loading" style="border:none; width: 100%">Loading...</div>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>

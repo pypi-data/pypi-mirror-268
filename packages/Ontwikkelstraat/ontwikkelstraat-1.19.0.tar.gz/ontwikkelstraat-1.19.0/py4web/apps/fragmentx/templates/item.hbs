@@ -1,0 +1,425 @@
+ <div class="container is-fullhd"><div class="columns m-0 has-background-white" style="padding-bottom: 10rem;">
+
+    <div class="column is-12 is-8-widescreen p-6">
+        <article class="p-6" id="{{item.id}}">
+            <div class="is-relative mb-6">
+                <figure class="edwh-placeholder image is-fullwidth">
+                    {{#if item.thumbnail.uri}}
+                        <img src="{{item.thumbnail.uri}}" alt="Niet noodzakelijke weergave.">
+                    {{else}}
+                        <img src="https://f003.backblazeb2.com/file/nl-meteddie-delen-permalinkable/image_placeholder.jpg"
+                             alt="Standaard weergave van een item.">
+                    {{/if}}
+
+                </figure>
+                <div class="edwh-stickers" style="position: absolute;">
+                    {{#each item.stickers}}
+                        {{#if svg}}
+                            <div style="cursor: pointer;" title="{{sticker_tag.name}}"
+                                 class="is-pulled-right"
+                                 _="install Sticker(id: '{{sticker_tag.id}}')"
+                            >
+                                <!-- object kan geen onclick, dus vandaar een div + a er om heen -->
+                                <div title="{{sticker_tag.name}}" style="display: block; z-index: 1;">
+                                    <object id="svg-{{id}}" data="{{uri}}"
+                                            class="edwh-sticker"
+                                            style="z-index: -1; pointer-events: none;"
+                                            type="image/svg+xml">
+                                    </object>
+                                </div>
+                            </div>
+                        {{else}}
+                            <img
+                                    style="cursor: pointer;"
+                                    _="install Sticker(id:'{{sticker_tag.id}}')"
+
+                                    id="{{id}}"
+                                    src="{{uri}}"
+                                    class="edwh-sticker"
+                                    alt="{{sticker_tag.name}}" title="{{sticker_tag.name}}">
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        <div class="columns m-0 pt-5 is-flex-direction-column">
+            <form class="edwh-item-icon is-flex is-justify-content-space-between is-align-items-center mb-1"
+                {{#if anonymous}}
+                  _="install Auth"
+                {{else}}
+                  hx-trigger="ew:submit throttle:500ms"
+                  hx-post="like"
+                  hx-target="find .edwh-like-feedback"
+                  _="install LikeButton(item_id: '{{item.id}}')"
+                {{/if}}
+            >
+                <input type="hidden" value="{{item.id}}" name="subject"/>
+                <input type="hidden" name="toggle"/>
+                <input type="hidden" value="THUMBS" name="action"/>
+                <h1 class="title is-size-3 p-0 pr-3 m-0">{{item.name}}</h1>
+                <a
+                    {{#if (has_my_thumb item)}}
+                    class="is-flex thumbs-UP"
+                    {{else}}
+                    class="is-flex"
+                    {{/if}}>
+                    <svg viewBox="0 0 17.806 15.713"
+                         class="edwh-icon">
+                        <path
+                                d="M16.383 1.423a4.784 4.784 0 00-6.81 0l-.67.67-.67-.67a4.815 4.815 0 00-6.81 6.81l7.48 7.48 7.48-7.48a4.784 4.784 0 000-6.81"
+                                fill="#25303D" fill-rule="evenodd" data-name="Symbol 66"></path>
+                    </svg>
+                    <span class="ml-2 edwh-like-count" data-gid="{{item.id}}">
+                                ({{thumb_count item}})
+                            </span>
+                    <span class="edwh-like-feedback"></span>
+                </a>
+            </form>
+            <div class="subtitle is-flex">{{#if item.time_to_read}}
+                {{item.time_to_read}} min |
+            {{else}}
+                < 1 min |
+            {{/if}} Laatste bewerking: {{item.ts_changed_hf}} <span class="mx-1">|</span>
+                <span class="icon mx-1">
+                         <object data="../../cmsx/static/images/cc-general.svg" height="100%" width="100%"></object>
+                    </span>
+                <span class="icon mx-1">
+                         <object data="../../cmsx/static/images/cc-by.svg" height="100%" width="100%"></object>
+                    </span>
+                <span class="icon mx-1">
+                         <object data="../../cmsx/static/images/cc-sa.svg" height="100%" width="100%"></object>
+                    </span>
+            </div>
+            <div class="edwh-item-firstline my-5">{{item.firstline}}</div>
+            <div class="content">{{item.body}}</div>
+            {{#if item.attachments}}
+                <div class="edwh-item-title has-text-orange">Documenten</div>
+                <div class="columns is-multiline">
+                    {{#each item.attachments}}
+                        {{#if uri}}
+                            <div class="column is-4">
+                                <div class="box"
+                                     style="background-color: rgba(255, 255, 255, 0); border-radius: 0.5em; box-shadow: none; color: #F4F7FC; display: block; padding: 1.25rem; border: 0.25em solid #ED7959;">
+                                    <a class="columns is-mobile" href="{{uri}}" target="_blank"
+                                       title="Download {{filename}}">
+                                        <div class="column is-9">
+                                            <div class="title is-size-6"
+                                                 style="color: inherit;">{{filename}}</div>
+                                        </div>
+                                        <div class="column p-0 m-auto">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                 class="m-auto is-block"
+                                                 style="height: 2.5rem; width: 2.5rem;">
+                                                <defs>
+                                                    <style>.a {
+                                                        fill: none;
+                                                        stroke: currentColor;
+                                                        stroke-linecap: round;
+                                                        stroke-linejoin: round;
+                                                        stroke-width: 1.5px;
+                                                    }</style>
+                                                </defs>
+                                                <title>download-circle</title>
+                                                <polyline class="a"
+                                                          points="8.25 14.25 12 18 15.75 14.25"></polyline>
+                                                <line class="a" x1="12" y1="6.75" x2="12"
+                                                      y2="18"></line>
+                                                <circle class="a" cx="12" cy="12" r="11.25"></circle>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+            {{/if}}
+            {{#if item.backgrounds}}
+                <div class="edwh-column-full">
+                    <div class="edwh-item-title has-text-orange">Media</div>
+                    <div class="edwh-item-media-columns">
+                        {{#each item.backgrounds}}
+                            {{#if uri}}
+                                <div class="edwh-item-media-column">
+                                    <figure class="edwh-placeholder">
+                                        <img class="edwh-modaltoggle" src="{{uri}}" alt="{{filename}}"
+                                             _="on click set #modal_image's src to my src then call modal(#openimage)"
+                                        >
+                                    </figure>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            {{/if}}
+        </article>
+    </div>
+    <div class="column is-12 is-4-widescreen has-bg-blue-light p-0" style="border-bottom-left-radius: 3rem;">
+        <div id="map" style="height: 25rem;"></div>
+        <div class="columns is-mobile m-0 mt-3 px-4">
+            <div class="column is-narrow is-flex-shrink-1">
+                <figure class="image is-flex"><img style="background-color: #26303d;" {{#if
+                        item.author.avatar}}
+                                                   src="{{item.author.avatar}}" {{else}}
+                                                   src="../../cmsx/static/images/boy.png" {{/if}} alt=""
+                                                   class="is-rounded m-auto">
+                </figure>
+            </div>
+            <div class="column is-9 p-0">
+                <div class="columns is-multiline m-0">
+                    <div class="column is-12">
+                        <div class="has-text-weight-bold has-text-blue">{{item.author.name}}
+                        </div>
+                        <div class="has-text-blue">Team ...
+                        </div>
+                    </div>
+                    <div class="column is-12">
+                        <div class="columns is-multiline is-variable is-1">
+                            <div class="column is-6"><a {{#if anonymous}}
+                            _="install Auth"
+                            {{else}}
+                            _="on click call modal(#contactme)"
+                            {{/if}} class="button is-rounded has-text-white has-bg-orange has-text-weight-semibold" style="width: 100%; border: none;">
+                               <span class="icon my-auto mr-2">
+                         <object data="../../cmsx/static/images/email.svg" height="100%" width="100%"></object>
+                    </span> <span>Contact</span>
+                            </a></div>
+                            <div class="column is-6"><a href="{{user_uri_template item.author.id}}"
+                                                        class="button is-rounded has-text-blue has-bg-yellow has-text-weight-semibold"
+                                                        style="width: 100%; border: none;">
+                                <span class="icon my-auto mr-2">
+                         <object data="../../cmsx/static/images/profiel.svg" height="100%" width="100%"></object>
+                    </span> <span>Profiel</span>
+                            </a></div>
+                            <div class="column is-12 has-text-weight-bold has-text-blue pt-5">
+                                <div class="is-flex mb-5"><span class="icon my-auto mr-3">
+                         <object data="../../cmsx/static/images/locatie.svg" height="100%" width="100%"></object>
+                    </span>Zoetermeer
+                                </div>
+                                <div class="is-flex mb-5"><span class="icon my-auto mr-3">
+                         <object data="../../cmsx/static/images/grootte.svg" height="100%" width="100%"></object>
+                    </span>213 leerlingen
+                                </div>
+                                <div class="is-flex mb-5"><span class="icon my-auto mr-3">
+                         <object data="../../cmsx/static/images/onderwijsniveau.svg" height="100%"
+                                 width="100%"></object>
+                    </span>Havo/Vwo
+                                </div>
+                                <div class="is-flex mb-5"><span class="icon my-auto mr-3">
+                         <object data="../../cmsx/static/images/onderwijstype.svg" height="100%" width="100%"></object>
+                    </span>Rooms-Katholiek
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="columns is-multiline m-0 mt-3 px-4">
+            <div class="column is-full">
+                <div class="has-bg-yellow-light" style="border-radius: 1rem; height: 0.75rem"></div>
+            </div>
+            <div class="column is-full mb-5" id="onderbouwing">
+                <span class="has-text-blue is-size-5 has-text-weight-bold">Wetenschappelijke onderbouwing</span>
+                <div class="columns is-mobile is-multiline mt-3 p-5">
+                    <div class="column is-full p-0 mb-2" data-type="inactive" _="install Onderbouwing" style="border-radius: 1.5rem;">
+                        <div class="has-text-weight-bold has-text-blue-light is-flex is-size-5 my-3 mx-5"><span class="icon my-auto mr-3">
+                         <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><g id="c"><path
+                                 d="M12.95,4.28l4.77,4.77c.2,.2,.2,.53,0,.73L6.43,21.07l-5.22,.92c-.71,.12-1.32-.49-1.19-1.19l.91-5.22L12.21,4.28c.2-.2,.53-.2,.73,0ZM3.78,16.15h-1.56l-.49,2.77,1.34,1.34,2.77-.49v-1.56H3.78v-2.06Zm2.4-1.55l6.62-6.62c.24-.24,.24-.62,0-.85s-.61-.24-.85,0l-6.62,6.62c-.24,.24-.24,.62,0,.85s.61,.24,.85,0Zm13.23-6.52c-.2,.2-.53,.2-.73,0L13.91,3.31c-.2-.2-.2-.53,0-.73l1.98-1.98c.8-.8,2.11-.8,2.92,0l2.58,2.58c.81,.8,.81,2.11,0,2.92l-1.98,1.98Z"
+                                 fill="#9badbc"/></g></svg>
+                        </span> <span class="mr-3">Gebaseerd op eigen kennis en ervaring</span> <span class="icon toggle is-hidden my-auto ml-auto py-1">
+                      <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.47 12.42"><g id="c"><path d="M20.14,9.44c.44,.44,.44,1.15,0,1.59l-1.06,1.06c-.44,.44-1.15,.44-1.59,0l-7.25-7.22L2.98,12.1c-.44,.44-1.15,.44-1.59,0l-1.06-1.06c-.44-.44-.44-1.15,0-1.59L9.44,.33c.44-.44,1.15-.44,1.59,0l9.11,9.11Z" fill="#9badbc"/></g></svg>
+                    </span>
+                        </div>
+                        <div class="has-bg-blue-light toggle m-1 mt-3" style="border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
+                            <div class="columns is-mobile m-0 mx-4 pl-1">
+                                <div class="column px-0 is-narrow">
+                                    <span class="has-text-blue has-text-weight-bold">Bronnen:</span>
+                                </div>
+                                <div class="column content">
+                                    <ul class="m-0">
+                                        <li><a href="#">lesopafstand.nl/praktijk</a></li>
+                                        <li><a href="#">effectievepraktijken.nl/die-van-die-fransman</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-full p-0 mb-2" data-type="inactive" _="install Onderbouwing" style="border-radius: 1.5rem;">
+                        <div class="has-text-weight-bold has-text-blue-light is-flex is-size-5 my-3 mx-5"><span class="icon my-auto mr-3">
+                         <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.62 20.62"><g id="c"><path
+                                 d="M20.52,7.79l-1.46,1.46c-.13,.13-.35,.13-.49,0l-.48-.48L7.51,19.33c-.86,.86-2,1.29-3.13,1.29-1.24,0-2.48-.51-3.37-1.54-1.53-1.78-1.26-4.5,.4-6.17L11.83,2.52l-.48-.48c-.13-.13-.13-.35,0-.49L12.81,.1c.13-.13,.35-.13,.49,0l7.23,7.21c.13,.13,.13,.35,0,.48Zm-3.88-.46l-3.37-3.36-6.36,6.35h6.75l2.99-2.98Z"
+                                 fill="#9badbc"/></g></svg>
+                        </span><span class="mr-3">Gebaseerd op wetenschappelijke inzichten en/of theorie</span> <span class="icon toggle is-hidden my-auto ml-auto py-1">
+                      <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.47 12.42"><g id="c"><path d="M20.14,9.44c.44,.44,.44,1.15,0,1.59l-1.06,1.06c-.44,.44-1.15,.44-1.59,0l-7.25-7.22L2.98,12.1c-.44,.44-1.15,.44-1.59,0l-1.06-1.06c-.44-.44-.44-1.15,0-1.59L9.44,.33c.44-.44,1.15-.44,1.59,0l9.11,9.11Z" fill="#9badbc"/></g></svg>
+                    </span>
+                        </div>
+                        <div class="has-bg-blue-light toggle m-1 mt-3" style="border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
+                            <div class="columns is-mobile m-0 mx-4 pl-1">
+                                <div class="column px-0 is-narrow">
+                                    <span class="has-text-blue has-text-weight-bold">Bronnen:</span>
+                                </div>
+                                <div class="column content">
+                                    <ul class="m-0">
+                                        <li><a href="#">lesopafstand.nl/praktijk</a></li>
+                                        <li><a href="#">effectievepraktijken.nl/die-van-die-fransman</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-full p-0 mb-2" data-type="active" _="install Onderbouwing" style="border-radius: 1.5rem;">
+                        <div class="has-text-weight-bold has-text-blue-light is-flex is-size-5 my-3 mx-5"><span class="icon my-auto mr-3">
+                       <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22"><g id="c"><path
+                               d="M6.88,14.15L.07,20.96c-.03-.11-.07-.22-.07-.33V1.38C0,.62,.62,0,1.38,0H5.5c.76,0,1.38,.62,1.38,1.38v1.38h-2.41c-.19,0-.34,.15-.34,.34v.69c0,.19,.15,.34,.34,.34h2.41v2.75h-2.41c-.19,0-.34,.15-.34,.34v.69c0,.19,.15,.34,.34,.34h2.41v2.75h-2.41c-.19,0-.34,.15-.34,.34v.69c0,.19,.15,.34,.34,.34h2.41v1.78Zm15.12,2.35v4.12c0,.76-.62,1.38-1.38,1.38H1.38c-.12,0-.23-.04-.33-.07l6.81-6.81h1.78v2.41c0,.19,.15,.34,.34,.34h.69c.19,0,.34-.15,.34-.34v-2.41h2.75v2.41c0,.19,.15,.34,.34,.34h.69c.19,0,.34-.15,.34-.34v-2.41h2.75v2.41c0,.19,.15,.34,.34,.34h.69c.19,0,.34-.15,.34-.34v-2.41h1.38c.76,0,1.38,.62,1.38,1.38Z"
+                               fill="#26303d"/></g></svg>
+                        </span><span class="mr-3">Elders bewezen effectief</span><span class="icon toggle is-hidden my-auto ml-auto py-1">
+                      <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.47 12.42"><g id="c"><path d="M20.14,9.44c.44,.44,.44,1.15,0,1.59l-1.06,1.06c-.44,.44-1.15,.44-1.59,0l-7.25-7.22L2.98,12.1c-.44,.44-1.15,.44-1.59,0l-1.06-1.06c-.44-.44-.44-1.15,0-1.59L9.44,.33c.44-.44,1.15-.44,1.59,0l9.11,9.11Z" fill="#9badbc"/></g></svg>
+                    </span>
+                        </div>
+                        <div class="has-bg-blue-light toggle m-1 mt-3" style="border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
+                            <div class="columns is-mobile m-0 mx-4 pl-1">
+                                <div class="column px-0 is-narrow">
+                                    <span class="has-text-blue has-text-weight-bold">Bronnen:</span>
+                                </div>
+                                <div class="column content">
+                                    <ul class="m-0">
+                                        <li><a href="#">lesopafstand.nl/praktijk</a></li>
+                                        <li><a href="#">effectievepraktijken.nl/die-van-die-fransman</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-full p-0" data-type="inactive" _="install Onderbouwing" style="border-radius: 1.5rem;">
+                        <div class="has-text-weight-bold has-text-blue-light is-flex is-size-5 my-3 mx-5"><span class="icon my-auto mr-3">
+                         <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.96 26.66"><g id="c"><g><path
+                                 d="M4.43,6.54C4.43,2.93,7.36,0,10.98,0s6.54,2.93,6.54,6.54c0,2.64-.92,3.37-5.87,10.55-.32,.47-1.02,.47-1.34,0-4.95-7.18-5.87-7.92-5.87-10.55Zm9.27,0c0-1.51-1.22-2.73-2.73-2.73s-2.73,1.22-2.73,2.73,1.22,2.73,2.73,2.73,2.73-1.22,2.73-2.73Z"
+                                 fill="#9badbc"/><g><path d="M6.55,9.63h-1.32c.31,.57,.75,1.24,1.32,2.08v-2.08Z"
+                                                          fill="#9badbc"/><path
+                                 d="M4.66,8.32h1.89v-1.31c0-.72-.59-1.31-1.31-1.31h-.75c-.04,.28-.06,.55-.06,.84,0,.67,.06,1.22,.23,1.78Z"
+                                 fill="#9badbc"/><path
+                                 d="M6.55,17.49h-2.29c-.18,0-.33-.15-.33-.33v-.65c0-.18,.15-.33,.33-.33h2.29v-2.62h-2.29c-.18,0-.33-.15-.33-.33v-.66c0-.18,.15-.33,.33-.33h1.45c-.76-1.12-1.29-1.95-1.64-2.7-.08-.06-.14-.14-.14-.25v-.06c-.37-.88-.5-1.66-.5-2.7,0-.28,.02-.56,.05-.84H1.31c-.72,0-1.31,.59-1.31,1.31V25.35c0,.11,.04,.21,.06,.32l6.49-6.48v-1.69Z"
+                                 fill="#9badbc"/><path
+                                 d="M19.65,20.11h-1.31v2.29c0,.18-.15,.33-.33,.33h-.66c-.18,0-.33-.15-.33-.33v-2.29h-2.62v2.29c0,.18-.15,.33-.33,.33h-.65c-.18,0-.33-.15-.33-.33v-2.29h-2.62v2.29c0,.18-.15,.33-.33,.33h-.66c-.18,0-.33-.15-.33-.33v-2.29h-1.69L.99,26.6c.11,.03,.21,.06,.32,.06H19.65c.72,0,1.31-.59,1.31-1.31v-3.93c0-.72-.59-1.31-1.31-1.31Z"
+                                 fill="#9badbc"/></g></g></g></svg>
+                        </span><span class="mr-3">Hier bewezen effectief</span><span class="icon toggle is-hidden my-auto ml-auto py-1">
+                      <svg id="b" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.47 12.42"><g id="c"><path d="M20.14,9.44c.44,.44,.44,1.15,0,1.59l-1.06,1.06c-.44,.44-1.15,.44-1.59,0l-7.25-7.22L2.98,12.1c-.44,.44-1.15,.44-1.59,0l-1.06-1.06c-.44-.44-.44-1.15,0-1.59L9.44,.33c.44-.44,1.15-.44,1.59,0l9.11,9.11Z" fill="#9badbc"/></g></svg>
+                    </span>
+                        </div>
+                        <div class="has-bg-blue-light toggle m-1 mt-3" style="border-bottom-left-radius: 1.5rem; border-bottom-right-radius: 1.5rem;">
+                            <div class="columns is-mobile m-0 mx-4 pl-1">
+                                <div class="column px-0 is-narrow">
+                                    <span class="has-text-blue has-text-weight-bold">Bronnen:</span>
+                                </div>
+                                <div class="column content">
+                                    <ul class="m-0">
+                                        <li><a href="#">lesopafstand.nl/praktijk</a></li>
+                                        <li><a href="#">effectievepraktijken.nl/die-van-die-fransman</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="has-bg-yellow-light" style="border-radius: 1rem; height: 0.75rem"></div>
+            </div>
+            <div class="column is-full mb-5">
+                <span class="has-text-blue is-size-5 has-text-weight-bold">Stickers</span>
+                <div class="columns is-multiline m-0">
+                    {{#each item.stickers}}
+                    <div class="column is-full">
+                        <div class="columns is-mobile">
+                            <div class="column is-5">
+                                <object data="{{uri}}" style="height: auto; width: 100%; margin: auto;">
+                                    </object>
+                            </div>
+                            <div class="column is-7 has-text-blue content">
+                                {{description_html}}
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="has-bg-yellow-light" style="border-radius: 1rem; height: 0.75rem"></div>
+            </div>
+            <div class="column is-full">
+                <div class="is-flex mb-3"><span class="has-text-blue is-size-5 has-text-weight-bold">Labels</span> <span class="icon my-auto ml-1">
+                         <object data="../../cmsx/static/images/info.svg" style="height: 1.25rem; width: auto;"></object>
+                    </span></div>
+                {{#each item.tags}}
+                    <a onclick="handle_search_tag('{{id}}')" class="tag mr-1 mb-2 has-text-blue has-bg-white" style="font-size: 0.85rem; border-radius: 2px;">{{name}}</a>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+</div>
+     </div>
+<div id="contactme" class="modal">
+            <form class="no-form-trap"
+                  hx-target="#message-feedback"
+                  hx-post="contact"
+                  _="on ew:success set #message-input's value to ''"
+            >
+                <input type="hidden" name="who" value="{{item.author.id}}"/>
+                <input type="hidden" name="item" value="{{item.id}}"/>
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Contact</p>
+                        <button _="install CloseModal" class="delete" aria-label="close" type="button"></button>
+                    </header>
+                    <section class="modal-card-body">
+                        <label for="message-input">Schrijf een bericht</label>
+                        <textarea required id="message-input" name="question" class="textarea"
+                                  placeholder="10 lines of textarea"
+                                  rows="10"></textarea>
+                        <p id="message-feedback" class="help is-success"></p>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <button class="edwh-button-profile"
+                                id="send_msg_btn"
+                                aria-label="Verzend"
+                                type="submit">
+                            Verzend
+                        </button>
+                        <button _="install CloseModal"
+                                class="edwh-button is-rounded" type="button" aria-label="Annuleer">
+                            Annuleer
+                        </button>
+                    </footer>
+                </div>
+            </form>
+        </div>
+<div id="openimage" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content has-text-centered">
+                <img id="modal_image" src="">
+            </div>
+            <button class="modal-close" data-modal="#openimage" class="delete" aria-label="close"
+                    _="install CloseModal"
+                    type="button"></button>
+        </div>
+
+<script>
+    var map = L.map('map').setView([52.160114, 4.497010], 12);
+    var CartoDB_VoyagerLabelsUnder = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 20
+}).addTo(map);
+
+</script>
+
+<script>
+    document.title = "{{item.name}} - Eddie";
+</script>

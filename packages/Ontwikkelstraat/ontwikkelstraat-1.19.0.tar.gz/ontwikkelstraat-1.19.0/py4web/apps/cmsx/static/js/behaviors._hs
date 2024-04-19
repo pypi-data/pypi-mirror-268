@@ -1,0 +1,399 @@
+-- helper methods
+
+def get_state_value(state, which)
+  if not state
+    return null
+  end
+
+  call get_var_from_state(state, which) then return it
+end
+
+def _set_sort_text(raw_value)
+  call #sorteren-op.text(raw_value.trim())
+end
+
+def initial_order()
+  set order to input('order')
+
+  if order
+    set option_elt to data('order', {value: order})[0]
+    call _set_sort_text(option_elt.text)
+    add .is-active to option_elt
+  else
+    add .is-active to .default in #order-dropdown
+  end
+end
+
+-- let op! behaviour != behavior!
+
+behavior Onderbouwing
+    init
+        if my @data-type == "active"
+            add .has-bg-yellow to me
+            remove .has-text-blue-light from the first <div/> in me
+            add .has-text-blue to the first <div/> in me
+            set the @fill of <path/> in me to '#26303d'
+            remove .is-hidden from .toggle in me
+        end
+    end
+
+    on click
+        if my @data-type == "active"
+            toggle .is-active on me
+        end
+    end
+end
+
+
+behavior LikeButton(item_id)
+    on click
+        set state to closest .edwh-state
+        call get_state_value(state, "likes") then set like_setting to it
+
+        if like_setting == "disabled"
+            halt
+        end
+
+        set like_btn to the first .edwh-like-btn in me
+
+        if like_btn matches .thumbs-UP
+            set my toggle's value to 0
+        else
+            set my toggle's value to 1
+        end
+
+        send ew:submit
+        -- ew:submit wordt 3x getriggerd om een of andere reden? om dubbele requests te voorkomen, maak de hx-trigger dus 'ew:submit throttle:500ms'
+    end
+
+    on htmx:afterRequest
+        set like_btn to the first .edwh-like-btn in me
+        set like_count to the first .edwh-like-count in me
+
+        if detail.xhr.status == 200 then
+            toggle .thumbs-UP on like_btn
+
+            if like_btn match .thumbs-UP
+                increment like_count.innerText
+            else
+                decrement like_count.innerText
+            end
+            send ew:sent_like(id: item_id) to closest .edwh-messagebus
+        else
+            error 'something went wrong!'
+        end
+    end
+end
+
+behavior Auth
+      on click
+       send ew:load_form(form: 'cookie_check') to closest .edwh-messagebus
+       then call modal(#edwh-modal)
+       add .is-active to #edwh-loaded-menu
+     end
+end
+
+behavior KvK
+    on change
+     set org to my value
+     set kvk to <option[value=`${org}`]/>'s @data-kvk
+     set #input-kvk's value to kvk[0]
+   end
+end
+
+behavior StateMachine(stickers)
+    on ew:search_by_sticker from closest .edwh-messagebus
+        set tag to event.detail.id
+
+        if stickers is 'same'
+            go to the top of the body
+            -- remove all other tags by setting tags to only the sticker tag, reset the search query and set the page to 1
+            send ew:change_state(tags: [tag], quickfilter: '', search: '', page: 1) to closest .edwh-messagebus
+        end
+        if stickers is 'new'
+            call input("GHOST_BASE")
+             -- open new tab with the url defined in <input type="hidden" name="GHOST_BASE" value="...">
+             -- and the sticker tag
+             -- so e.g. https://delen.meteddie.nl/?tags=%5B"4cc54bf2-b7c8-415d-8938-7a47d9207439"%5D
+             -- for the LOF sticker
+             then call window.open(`${it}?tags=["${tag}"]`)
+        end
+
+        if stickers is 'extern'
+            call window.open(`https://delen.meteddie.nl/?tags=["${tag}"]`)
+        end
+
+        if no stickers or stickers is 'none'
+            debug 'search by sticker ignored'
+        end
+
+        -- else: invalid arg for stickers, ignore
+        return false
+    end
+
+  -- gebruik dit ew:change_state event om verschillende onderdelen van de state aan te passen,
+  -- en daarna de tiles te herladen (m.b.v. ew:state_changed waar #tiles naar luistert).
+  -- het kan de volgende opties aan:
+  -- page: int, search: str, tag: gid, tags: list[gids], quickfilter: gid, order: str
+    on ew:change_state from closest .edwh-messagebus
+        set state to closest .edwh-state
+        set bus to closest .edwh-messagebus
+
+        if event.detail.page
+            set my page.value to event.detail.page
+        end
+
+        if event.detail.quickfilter != undefined
+            send ew:change_qf(tag: event.detail.quickfilter) to bus
+        end
+
+        set tag to event.detail.tag
+        if tag != undefined
+
+            -- change_state(tag: gid) is used to toggle 1 tag
+            call toggle_tag(tag, id of state, event.detail.options.tag) then
+            if it is false
+                -- removed tag
+                set qf to my qf's value
+                if qf is tag
+                    -- qf removed from tags -> deselect
+                    -- send ew:change_qf(tag: '') to bus
+                    -- ^ dit reset ook alle normale filters, wat je niet per se wil
+                    -- dus vandaar reset alleen de qf value:
+                    set state's qf.value to ''
+                end
+            end
+        end
+
+        if event.detail.tags != undefined
+            -- change_state(tags: list[gid]) is used to replace the tags
+            call JSON.stringify(event.detail.tags) then
+              set state's tags.value to it
+        end
+
+        if event.detail.order != undefined
+            send ew:change_order(order: event.detail.order) to bus
+        end
+
+        if event.detail.search != undefined
+            send ew:search_entered(q: event.detail.search) to bus
+
+            if not event.detail.search
+                -- search is empty -> clear UI
+                send ew:clear_search to bus
+            end -- if
+
+            -- reset qf/filters, but only if tag(s) are not also supplied:
+            if not (event.detail.tag or event.detail.tags)
+                send ew:change_qf(tag: '') to bus
+            end -- if
+        end
+
+        send ew:state_changed to bus
+    end
+end
+
+behavior StateToURL
+    on ew:state_changed from closest .edwh-messagebus
+        -- sla de nieuwe state op in de URL zodat reload hetzelfde resultaat oplevert als de user nu ziet
+        call state_to_url(closest .edwh-state to me)
+    end
+end
+
+behavior TriggerCheck
+ -- als er niet binnen 1 seconde na de state_changed een beforeRequest
+ -- is aangemaakt, is de hx-trigger dus niet goed ontvangen.
+ -- in dat geval sturen we een nieuw event (na een timeoutje) om hopelijk de trigger wel werkend te krijgen.
+
+ on htmx:beforeRequest
+   set me@data-success to true
+ end
+
+ on ew:state_changed from closest .edwh-messagebus
+   wait 500ms -- wait is nodig voor twee redenen:
+   -- 1. heel soms wordt beforeRequest vlak na state_changed verstuurd, dus daar willen we op wachten
+   -- 2. anders kunnen we geen nieuw event versturen (want die wordt dan ook genegeerd)
+
+   if me@data-success then
+     -- geen enkel probleem, beforeRequest is afgegaan
+     halt
+   else
+     -- geen before request -> hx-trigger is kapot
+     -- try again:
+     send ew:state_changed to closest .edwh-messagebus
+   end
+   set me@data-success to false
+ end
+end
+
+behavior CloseModal
+  on click call modal(closest .modal) end
+end
+
+behavior Sticker(id)
+  on click
+    halt the event
+    send ew:search_by_sticker(id: id) to closest .edwh-messagebus
+  end
+end
+
+
+def change_page(pagebutton, page_num)
+
+  if pagebutton@disabled == null
+    -- if disabled is null, the attribute does not exist -> it is enabled
+
+    -- called from the loaded fragment's forward and backward buttons
+    go to the top of the body
+
+    send ew:change_state(page: page_num) to closest .edwh-messagebus to pagebutton
+  end
+
+end
+
+behavior Search(default)
+  -- form containing the search input
+  init
+    if no default set the default to ""
+  end
+
+  on submit
+    halt the event
+    set query to my q.value
+    if #state -- 1 state -> search on that page. Multiple (#state-1, #state-2, ...)/no states -> search on default
+      send ew:change_state(page: 1, search: query) to closest .edwh-messagebus
+    else
+      set location.href to `/${default}?q=${query}`
+    end
+  end
+end
+
+behavior SearchUI
+  -- displayed UI search input
+  on ew:history_recovered_for_q from closest .edwh-messagebus
+    set my value to event.detail.value
+  end
+
+  on ew:clear_search from closest .edwh-messagebus
+    set my value to ''
+  end
+end
+
+behavior SearchInput
+    -- hidden <input/> containing actual value
+    on ew:search_entered from closest .edwh-messagebus
+        set my value to event.detail.q -- update input
+        -- this input is the hidden state field, it is entered by the user somewhere else (#qform_q / behavior SearchUI)
+    end
+end
+
+behavior Filters
+     -- zodra ew:filters_changed wordt geraised worden de juiste dropdown-keuzes active gemaakt op basis van de huidige state
+     on ew:filters_changed from closest .edwh-messagebus call activate_filters(id of closest .edwh-state)
+
+     -- zodra dit element ingeladen is wordt de juiste 'sorteren op' en de juiste filters op is-active gezet
+     -- moet nog los van state_changed want dat kan gebeuren voor dit element is ingeladen!
+     on htmx:afterSettle
+         send ew:filters_changed to closest .edwh-messagebus
+         call initial_order()
+     end
+
+     -- na tiles reload, zet ook de juiste filters op active
+     on ew:state_changed from closest .edwh-messagebus
+         send ew:filters_changed to closest .edwh-messagebus
+     end
+end
+
+behavior OrderInput
+  on ew:change_order from closest .edwh-messagebus
+      set my value to event.detail.order
+      send ew:order_changed(order: event.detail.order) to closest .edwh-messagebus
+  end
+
+--  on ew:history_recovered_for_order from closest .edwh-messagebus
+--    call initial_order(event.detail.value)
+--  end
+end
+
+behavior QuickFilterButton
+  on click
+    -- stuur quick filter event naar de messagebus, om later te herbruiken
+    -- hergebruik is hieronder bij de toggle .is-active bijvoorbeeld
+    set gid to my @data-tag-gid
+
+    if gid
+      send ew:change_state(quickfilter: gid, page: 1) to closest .edwh-messagebus
+    else
+      -- alles tonen
+      set bus to closest .edwh-messagebus
+      send ew:change_state(quickfilter: '', search: '', page: 1) to bus
+      -- reset UI:
+      send ew:clear_search() to bus
+    end
+  end
+
+  on ew:state_changed from closest .edwh-messagebus
+    set taggid to me@data-tag-gid
+    set state to closest .edwh-state
+
+    if state's qf.value is taggid
+        add .is-active to me
+     else
+        remove .is-active from me
+     end
+  end
+end
+
+behavior QuickFilterInput
+    on ew:change_qf from closest .edwh-messagebus
+        set state to closest .edwh-state
+        set taggid to event.detail.tag
+
+        -- verwijder de oude quick filter uit de tags en zet de nieuwe er in
+        call toggle_qf(state's qf.value, taggid) then set state's tags.value to it
+
+        -- update de state form (en dus URL) met de nieuwe quick filter
+        set my value to taggid
+    end
+end
+
+behavior PasswordConfirm(password_feedback_element, not_required)
+  on change
+    set p_one to my password's value
+    set p_two to my _password's value
+
+    if p_one and p_two and p_one != p_two
+      then set password_feedback_element's innerText to 'Wachtwoorden verschillen!'
+      set my passwordsmatch.checked to false
+    else
+      if p_one and p_two and p_one == p_two
+        then set password_feedback_element's innerText to ''
+        set my passwordsmatch.checked to true
+      else
+        if not_required and p_one and not p_two
+          then set password_feedback_element's innerText to ''
+          set my passwordsmatch.checked to false
+        end -- else if
+      end -- else if
+    end -- if
+  end -- on
+end -- behavior
+-- ja man leuke taal, handmatig 'end' goed moeten afsluiten omdat de volgende behaviors anders niet werken -.-
+
+behavior ToggleIcon(before, after)
+  on click
+    call toggle_classes(first (.edwh-fa in me), before, after)
+  end
+end
+
+-- handig om te kijken of er een behavior hier boven stuk is gegaan:
+behavior Test
+  init
+    debug 'test debug'
+    log 'test log'
+    info 'test info'
+    warn 'test warn'
+    error 'test error'
+  end
+end
+-- bijv _("install Test")

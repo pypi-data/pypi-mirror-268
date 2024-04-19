@@ -1,0 +1,118 @@
+<div class="edwh-columns">
+    [[if settings.paginate:]]
+    <div class="edwh-column-full">
+        [[=paginate(tiles)]]
+    </div>
+    [[pass]]
+    [[if not tiles.found:]]
+    <div class="column has-text-centered">
+        <div class="title">Sorry, we konden niets vinden!</div>
+        <div class="subtitle">Probeer de zoekopdracht of gekozen filters aan te passen.</div>
+    </div>
+    [[pass]]
+    [[for tile in tiles.found:]]
+    <div class="edwh-column-card">
+        <article class="edwh-card">
+            <a href="[[=item_uri_template(tile.id)]]" target="_blank" title="[[=tile.name]]">
+                <div class="edwh-card-image">
+                    <figure class="edwh-placeholder">
+                        <img src="[[=thumbnail(tile)]]" alt="[[=tile.name]]">
+                    </figure>
+                    <div class="edwh-stickers">
+                        [[for sticker in tile.stickers:]]
+                        [[if sticker.svg:]]
+                        <div style="cursor: pointer;" title="[[=sticker.sticker_tag.name]]"
+                             class="is-pulled-right"
+                             _="install Sticker(id: '[[=sticker.sticker_tag.id]]')"
+                        >
+                            <!-- object kan geen onclick, dus vandaar een div + a er om heen -->
+                            <div title="[[=sticker.sticker_tag.name]]" style="display: block; z-index: 1;">
+                                <object id="svg-[[=sticker.id]]" data="[[=sticker.uri]]"
+                                        class="edwh-sticker"
+                                        style="z-index: -1; pointer-events: none;"
+                                        type="image/svg+xml">
+                                </object>
+                            </div>
+                        </div>
+                        [[else:]]
+                        <img
+                                style="cursor: pointer;"
+                                _="install Sticker(id:'[[=sticker.sticker_tag.id]]')"
+                                id="[[=sticker.id]]"
+                                src="[[=sticker.uri]]"
+                                class="edwh-sticker"
+                                alt="[[=sticker.sticker_tag.name]]" title="[[=sticker.sticker_tag.name]]">
+                        [[pass]]
+                        [[pass]]
+                    </div>
+                </div>
+            </a>
+            <div class="edwh-card-content">
+                <div class="edwh-card-heading">
+                    <a href="[[=item_uri_template(tile.id)]]" target="_blank">
+                        <p class="edwh-card-title">[[=tile.name]]</p></a>
+                    <p class="edwh-card-subtitle">
+                            <span title="Auteur">
+                                [[=tile.author.name]]
+                            </span>
+                        ·
+                        <span title="Leestijd">
+                                [[if tile.time_to_read:]]
+                                    [[=tile.time_to_read]] min.
+                                [[else:]]
+                                    < 1 min.
+                                [[pass]]
+                            </span>
+                    </p>
+                </div>
+
+                <div class="edwh-card-teaser">
+                    [[=XML(tile.teaser)]]
+                </div>
+            </div>
+            <footer>
+                <form class="edwh-card-footer"
+                      [[if anonymous:]]
+                      _="install Auth"
+                      [[else:]]
+                      hx-trigger="ew:submit throttle:500ms"
+                      hx-post="like"
+                      hx-target="find .edwh-like-feedback"
+                      _="install LikeButton(item_id: '[[=tile.id]]')"
+                      [[pass]]
+                >
+                    <input type="hidden" value="[[=tile.id]]" name="subject"/>
+                    <input type="hidden" name="toggle"/>
+                    <input type="hidden" value="THUMBS" name="action"/>
+                    <a data-gid="[[=tile.id]]"
+                       [[if has_my_thumb(tile):]]
+                       class="edwh-like-btn thumbs-UP"
+                       [[else:]]
+                       class="edwh-like-btn"
+                       [[pass]]
+                       data-action="THUMBS"
+                    >
+                        <svg viewBox="0 0 17.806 15.713"
+                             class="edwh-icon">
+                            <path
+                                    d="M16.383 1.423a4.784 4.784 0 00-6.81 0l-.67.67-.67-.67a4.815 4.815 0 00-6.81 6.81l7.48 7.48 7.48-7.48a4.784 4.784 0 000-6.81"
+                                    fill="#25303D" fill-rule="evenodd" data-name="Symbol 66"></path>
+                        </svg>
+                    </a>
+                    <div class="has-text-weight-bold">
+                            <span class="edwh-like-count" data-gid="[[=tile.id]]">
+                                [[=thumb_count(tile)]]
+                            </span>
+                        <span class="edwh-like-feedback"></span>
+                    </div>
+                </form>
+            </footer>
+        </article>
+    </div>
+    [[pass]]
+    [[if settings.paginate:]]
+    <div class="edwh-column-full">
+        [[=paginate(tiles)]]
+    </div>
+    [[pass]]
+</div>

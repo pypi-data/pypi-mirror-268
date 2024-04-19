@@ -1,0 +1,37 @@
+{{extend 'applog/applog_layout.html'}}
+<h4>{{=count}} item logs gevonden:</h4>
+{{filterbalk()}}
+
+<div style="display: flex; flex-flow: row wrap; justify-content: center">
+    <div style="margin: 20px 100px; max-width: 90vw;">
+        {{for idx, row in enumerate(changes):}}
+        {{item = items.get(row.item_gid)}}
+        {{if not item: continue}}
+        <div class="card">
+            <div class="card-header" id="heading-{{=idx}}">
+                <h5 class="mb-0">
+                    <a class="btn btn-link"
+                       href="{{=URL('applog', 'item', row.item_gid)}}"
+                    >
+                    <span
+                            style="color: {{={
+                            'read-item': 'darkgrey',
+                            'create-item': 'green',
+                            'update-item': '#CC7722',
+                            'remove-item': 'red',
+                            }.get(row.log_action, 'inherit')}}"
+                    >
+                    {{=row.log_action.split('-')[0]}} '{{=item['name']}}' @ {{=row.signal_ts.strftime('%d %b %Y, %H:%M:%S')}} door {{=(row.by_eddie_email or "?").split("@")[0]}}
+                    </span>
+                    </a>
+                </h5>
+            </div>
+        </div>
+        {{pass}}
+
+        {{=render_paginate()}}
+    </div>
+    <div style="margin: 20px 100px">
+        {{samenvatting(changes, items)}}
+    </div>
+</div>

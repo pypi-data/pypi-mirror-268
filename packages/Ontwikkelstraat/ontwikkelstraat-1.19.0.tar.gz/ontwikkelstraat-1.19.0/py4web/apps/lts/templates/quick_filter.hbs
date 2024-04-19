@@ -1,0 +1,13 @@
+<div class="edwh-quickfilter-bar">
+    {{#filters}}
+        <button class="edwh-quickfilter-button" id="qf-btn-{{@index}}"
+                {{#if tag}}
+                data-tag-gid="{{this.tag}}"
+                {{else}}
+                    data-tag-gid=""
+                {{/if}}
+
+                _="install QuickFilterButton"
+        >{{label}}</button>
+    {{/filters}}
+</div>

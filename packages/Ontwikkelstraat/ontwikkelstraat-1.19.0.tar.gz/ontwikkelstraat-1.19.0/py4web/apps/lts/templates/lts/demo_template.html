@@ -1,0 +1,15 @@
+<!-- in de <head>: -->
+<link href="[[=CDN_URL]]/css/bundled.css" rel="stylesheet"/>
+
+<!-- in de body: -->
+<form>
+    <div
+            hx-post="simple_tiles"
+            hx-trigger="load"
+            hx-vals='[[=data]]'>
+        <input type="hidden" name="FRONT_END_BASE" value="[[=FRONT_END_BASE]]">
+    </div>
+</form>
+
+<!-- aan het einde van de pagina: -->
+<script src="[[=CDN_URL]]/js/bundled.js"></script>

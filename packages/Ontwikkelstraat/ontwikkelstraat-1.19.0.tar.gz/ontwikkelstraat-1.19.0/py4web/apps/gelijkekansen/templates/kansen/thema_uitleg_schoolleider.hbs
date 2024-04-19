@@ -1,0 +1,58 @@
+<div id="vraag"
+     class="vraag"
+><section class="section pt-0">
+    <div class="voortgang columns is-multiline is-mobile is-justify-content-center">
+        {{#each beantwoord}}<div class="beantwoord is-1 my-2 column mx-2"></div>{{/each}}
+        {{#each onbeantwoord}}<div class="onbeantwoord is-1 my-2 column mx-2"></div>{{/each}}
+    </div>
+    </section>
+    <section class="section mt-4">
+        <div class="container is-max-desktop">
+    <h3 class="title is-4 mb-6" style="color: #262626!important;">Voordat je verder gaat eerst wat uitleg.</h3>
+            <p class="subtitle" style="color: #262626;">Om helemaal goed te weten wat voor jou interessant is, is het handig om net iets meer over de thema's te weten voordat je de laatste twee vragen kunt beantwoorden. Mocht je geen tijd hebben om dit helemaal te lezen, klik dan gewoon door.</p>
+
+            <div class="columns py-6 is-multiline is-justify-content-space-around">
+                <div class="column box is-5 px-5 py-5">
+                    <p class="title is-6">Burgerschap</p>
+                    <p class="content">We willen als maatschappij dat kinderen als goede burgers van school afkomen, dat ze de juiste kennis en vaardigheden bezitten om zich te redden én om mee te doen in onze maatschappij. Maar wat blijkt? De hoeveelheid burgerschapskennis- en vaardigheden die leerlingen bezitten loopt sterk uiteen. Kort gezegd is het als volgt: bepaalde groepen kin-deren komen veel beter voorbereid op het leven van school af dan anderen. Dit moet én kan anders! </p>
+                </div>
+                <div class="column box is-5 px-5 py-5">
+                    <p class="title is-6">Taal</p>
+                    <p class="content">De laatste jaren dalen de taalprestaties van Nederlandse leerlingen. Niet alle kinderen worden even hard getroffen door deze daling. Het treft vooral kinderen met een lagere sociaaleconomische status en kinderen uit taalarme omgevingen. Zo worden bestaande verschillen uitvergroot: kinderen die al 1-0 achterstaan als ze school binnenkomen, verlie-zen de wedstrijd uiteindelijk met 3-0. Om die reden is taalbeheersing een belangrijk on-derwerp om aan te kaarten als je het over kansengelijkheid hebt.</p></div>
+            <div class="column box is-5 px-5 py-5">
+                    <p class="title is-6">Ouderbetrokkenheid</p>
+                <p class="content">Ouders en verzorgers zijn onmisbaar voor het zelfvertrouwen, de motivatie en voor de goede schoolprestaties van kinderen. De mate waarin ouders hun kind steunen blijkt zelfs belangrijker voor schoolprestaties dan sociaaleconomische status en opleidingsniveau. Goed contact tussen ouders en onderwijskrachten is dus nodig om kansen te kunnen vergroten.</p>
+            </div>
+                <div class="column box is-5 px-5 py-5">
+                    <p class="title is-6">Verwachtingen</p>
+                    <p class="content">Het hebben van lage verwachtingen is een fenomeen dat veelvuldig terugkwam in de serie Klassen. Over het algemeen lijken leraren, schoolleiders en bestuurders het er roe-rend over eens: het vermijden van te lage verwachtingen is cruciaal om gelijke kansen te creëren. Toch lukt dit niet altijd, en vaak zijn kinderen met een lagere sociaaleconomi-sche status hier het slachtoffer van. Ook bij onderwijskrachten met de beste intenties kan de gedachte “voor deze kinderen zit het er niet meer in” de overhand nemen. En dit brengt geen kind verder.</p></div>
+            <div class="column box is-5 px-5 py-5">
+                    <p class="title is-6">Sociaal en cultureel kapitaal</p>
+                <p class="content">Je manier van doen, je mimiek, je manier van praten, je woordkeuze: al deze factoren  zijn van belang voor hoe goed of slecht je presteert en hoever je het schopt. Maar ook wie je kent, met wie je je verbonden voelt en wat je culturele kennis is, zijn hierin van groot be-lang. Je culturele en sociaal kapitaal zijn belangrijke factoren in het bepalen van je maat-schappelijke positie. Op school wordt niet elk type cultureel kapitaal evenveel beloond en niet elk type sociaal kapitaal is positief. Vandaar dat dit een belangrijk thema is.</p></div>
+            <div class="column box is-5 px-5 py-5">
+                    <p class="title is-6">Identiteit</p>
+                <p class="content">Tijdens hun schooltijd zijn kinderen volop bezig met het ontwikkelen van hun identiteit. In dit proces kan school, om meerdere redenen, niet op de eerste plaats komen. Omdat ze zich op school niet gezien of gewaardeerd voelen, of omdat de schoolwereld te veel verschil van hun thuiswereld om het met elkaar te kunnen combineren. Identiteitsontwik-keling verdient daarom extra aandacht in het onderwijsveld.</p></div>
+            <div class="column box is-5 px-5 py-5">
+                    <p class="title is-6">Armoede</p>
+                <p class="content">Armoede is geen gemakkelijk onderwerp om over te praten. Er hangt veel schaamte om-heen. Ouders en kinderen schamen zich voor hun positie in de maatschappij, leerkrach-ten zien het niet of durven er misschien niet over te beginnen. Maar juist waar mensen armoede graag verborgen willen houden heeft onderwijs zo’n belangrijke rol. Pas wan-neer het besproken is, kan er gehandeld worden.</p></div>
+            <!--<div class="column box is-5 px-5 py-5">-->
+            <!--        <p class="title is-6">De kracht van het team</p>-->
+            <!--    <p class="content">In je eentje kan je geen wereldproblematiek oplossen en kansenongelijkheid is hierop geen uitzondering. De kracht van het team is dus een cruciale schakel in het creëren van gelijke kansen. Maar een krachtig team vorm je niet zomaar. Daarvoor moet er intensief worden samengewerkt en zijn sterk schoolleiderschap en het consistent geven en ontvangen van feedback twee vereisten. Ook zijn er duidelijke kaders nodig waarbinnen de leden van het schoolteam autonoom kunnen werken én moet er binnen het team aan de slag gegaan worden met het ontmantelen van (onbewuste) vooroordelen. Kortom, genoeg om mee aan de slag te gaan.</p></div>-->
+            <!--</div>-->
+            <br>
+
+            <div class="buttons is-right">
+
+    <button class="button" hx-post="{{vorige_vraag_url}}"
+            hx-target="#vraag"
+            hx-swap="outerHTML">Vorige vraag
+    </button>
+
+    <button class="button" hx-post="{{volgende_vraag_url}}"
+            hx-target="#vraag"
+            hx-swap="outerHTML">Volgende vraag
+    </button>
+            </div>
+        </div>
+    </section>
+</div>

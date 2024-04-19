@@ -1,0 +1,33 @@
+{{extend 'layout.html'}}
+<a class="btn btn-default" href="{{=URL('quick_create')}}"><i class="fa fa-plus"></i> Nieuw item</a>
+{{if 'lc' not in request.vars:}}
+    {{vars_with_lc = request.vars; vars_with_lc['lc']=1}}
+    <a class="btn btn-info" href="{{=URL(args=request.args, vars=vars_with_lc)}}"><i class="fa fa-toggle-on"></i> Link checker aanzetten (traag)</a>
+{{else:}}
+    {{vars_without_lc = request.vars; vars_without_lc.pop('lc')}}
+    <a class="btn btn-info" href="{{=URL(args=request.args, vars=vars_without_lc)}}"><i class="fa fa-toggle-off"></i> Link checker uitzetten</a> (Resultaten kunnen tot 3 min oud zijn)
+{{pass}}
+<!--
+Ondanks dat de content niet getoond wordt, kun je er wel doorheen zoeken. Zoek bijvoorbeeld op <code>Corona</code>
+<input id="filter" placeholder="Filter onderstaande lijst. Zodra je zoekopdracht in de regel voorkomt wordt het getoond." class="form-control" type="text" />
+<script>
+    $('#filter').keyup(function(event){
+        var needle = $(event.target)[0].value;
+        var re = new RegExp(needle,'i');
+        $('.web2py_table div table tbody tr').each(function(index){ // pas de tr.dv_row aan naar de selectie die voor jou van toepassing is
+            if (re.test($(this).text())){
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        })
+    })
+</script>
+-->
+<div class="web2py_grid">
+    <div class="web2py_table">
+        <div class="web2py_htmltable">
+            {{=form}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+{{if bekend or onbekend:}}
+<h2>Bekend</h2>
+    <ol>
+    {{for domain in bekend:}}
+       <li><code>{{=domain}}</code></li>
+    {{pass}}
+    </ol>
+<h2>Onbekend</h2>
+    <ol>
+    {{for domain in onbekend:}}
+       <li><code>{{=domain}}</code></li>
+    {{pass}}
+    </ol>
+    <a href="{{=URL(f='insert',args=onbekend, vars=dict(allowed=1))}}" class="btn button btn-default ">Toevoegen (wel nieuwe gebruikers toestaan)</a>
+    <a href="{{=URL(f='insert',args=onbekend, vars=dict(allowed=0))}}" class="btn button btn-default ">Toevoegen (geen nieuwe gebruikers toestaan)</a>
+{{pass}}
+{{=form}}

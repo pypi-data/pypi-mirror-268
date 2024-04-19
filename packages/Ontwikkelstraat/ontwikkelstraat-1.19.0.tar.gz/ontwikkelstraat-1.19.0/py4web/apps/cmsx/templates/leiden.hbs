@@ -1,0 +1,136 @@
+[[extend 'template_minimal.hbs']]
+
+<!--
+Het is belangrijk dat de .edwh-state class aanwezig is op de state form!
+
+state bevat heel veel elementen.
+hx-vals: instellingen die de programmeur/designer bepaalt en de gebruiker in principe niet kan veranderen
+hx-vars: variabelen waar iets bijzonders (met JS) mee moet worden gedaan, voordat htmx deze kan opsturen,
+dus bijv. de tags omzetten naar een JSON lijst
+hx-ext: hiermee zetten we de request naar JSON
+
+met de hyperscript (_) functie 'init' geef je aan wat er gebeurt als de state voor het eerst gemaakt wordt.
+Als je wil dat de state uit de URL wordt gerecoverd (zoals op de indexpagina) dan kun je in de init
+`call url_to_state(me)` aanroepen. Deze zal de juiste instellingen in state stoppen en dan de automatisch tiles laden.
+Als je dit niet wilt (bijv. op een scholenoverzicht) dan kun je
+`send ew:state_changed to closest .edwh-messagebus` gebruiken om de tiles te forceren om te laden.
+
+`install StateMachine` is nodig bij de tiles om de verschillende functies van de tiles aan te zetten.
+
+Zoals te zien is in user.hbs, is het soms mogelijk om de state en de tiles-functionaliteiten in 1 te hebben (als je niks van (quick) filter oid nodig hebt).
+Bij complexere tiles is een losse #state en een losse #tiles wel handig.
+
+Als je meerdere states/tiles nodig hebt op één pagina (bijv. demo.hbs) dan moeten die allemaal een andere id hebben (bijv #state-1, #state-2 etc.) of geen id hebben.
+Het gaat ieg stuk als er één of meerdere #state heten en er meerdere tiles zijn.
+
+-->
+
+<form id="state-leiden" class="edwh-state"
+      __="variabelen die door de programmeur worden bepaald, niet door de gebruiker:"
+      hx-vals='{
+                   "limit": 6,
+                   "paginate": true,
+                   "likes": "disabled"
+                   }'
+      hx-ext='json-enc'
+      __="hx-vars worden met JS berekend. Zo kunnen we de user gekozen tags combineren met 'standaard' tags, zoals Leiden:"
+      hx-vars="tags: json_tags({'id': 'state-leiden', 'base_tags': ['{{tag}}']})"
+      __="if the form has a different ID, you can add it as an argument: `tags: json_tags({'id': 'state-1'})`"
+
+      _="
+         init -- init gebeurt 1 keer als de pagina geladen wordt
+           call url_to_state(me)
+           -- url to state roept state changed aan!
+         end
+
+         on submit halt the event end -- = preventDefault
+         install StateMachine(stickers: 'new')
+          "
+>
+    <!-- variabelen die door de gebruiker op de pagina kunnen worden aangepast: -->
+    <input name="tags" type="hidden" value="[]" />
+    <!-- let op, tags zijn vrijwel altijd nodig, dus het is verstandig om ze mee te nemen als je tiles op de pagina hebt. -->
+
+
+    <!-- stores the tags (incl. quickfilter); don't fill this in by hand, it might be overwritten -->
+    <input name="page" type="hidden" value="1" /> <!-- stores the page no. -->
+
+    <!-- optionele filter/search/etc. componenten: -->
+
+    <!-- BEGIN SEARCH -->
+
+    <!-- als de zoekbalk buiten de #state form valt, gebruik dan de SearchInput op deze manier: -->
+    <!--input name="q" type="hidden" _="install SearchInput" /--> <!-- stores the search query -->
+
+    <!-- Als je de search binnen het formulier wil hebben, dan kun je zoiets gebruiken: -->
+    <section class="section">
+        <div class="container">
+            <input class="input" type="text" name="q" placeholder="Vul een zoekterm in"
+                   _="on change send ew:change_state(page: 1, search: my value) to closest .edwh-messagebus">
+        </div>
+    </section>
+
+    <!-- END SEARCH -->
+
+    <!-- BEGIN QUICKFILTER -->
+
+    <!--
+    laad de quickfilter balk op deze manier: (let op, input qf en input tags zijn hierbij nodig)
+
+    on htmx:afterSettle call initial_qf() zorgt er voor dat de juiste quickfilter 'active' wordt gemaakt als de pagina
+    klaar is met laden
+    -->
+    <div id="quickfilter-balk"
+         hx-trigger="load"
+         hx-post="quick-filter"
+         _="on htmx:afterSettle call initial_qf(closest .edwh-state)"
+    >
+    </div>
+    <input name="qf" type="hidden" value="" _="install QuickFilterInput"> <!-- stores the quickfilter -->
+    <!-- tags input is ook nodig, maar die staat al bovenaan -->
+    <!-- EIND QUICKFILTER -->
+
+    <!-- BEGIN filters/sorteren-->
+
+    <div id="filters"
+         class="container"
+         hx-trigger="load delay:100ms"
+         __="let op! deze load heeft een delay van 100ms er bij, omdat er anders rare timing issues in htmx/hyperscript onstaan."
+         hx-post="filter"
+         _="install Filters"
+    >
+    </div>
+    <input name="order" type="hidden" value="" _="install OrderInput">
+    <!-- tags input is ook nodig, maar die staat al bovenaan -->
+    <!-- EIND filters/sorteren -->
+
+    <!-- tiles component: -->
+
+    <section class="section">
+        <!-- indicator is wat je ziet tijdens het laden van de tiles
+        met hx-indicator geef je aan welke class/id/... daar voor gebruikt wordt,
+        in dit geval is dat .tiles-indicator (onder #tiles)
+        let op de structuur: het element met hx-indicator is de parent van #tiles EN de .htmx-indicator
+        -->
+        <div hx-indicator=".tiles-indicator">
+
+            <div class="tiles-indicator htmx-indicator">
+                <div class="button is-loading" style="border:none; width: 100%">Loading...</div>
+            </div>
+            <!--
+            tiles doet een POST als de state wordt aangepast
+             de behavior StateToURL zorgt er voor dat state changes opgeslagen worden in de URL
+             (dus bijv. pagina, tags etc.)
+             -->
+            <div id="tiles"
+                 class="container"
+                 hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+                 hx-post="tiles"
+                 _="
+                 -- install StateToURL
+                 install TriggerCheck"
+            >
+            </div>
+        </div>
+    </section>
+</form>

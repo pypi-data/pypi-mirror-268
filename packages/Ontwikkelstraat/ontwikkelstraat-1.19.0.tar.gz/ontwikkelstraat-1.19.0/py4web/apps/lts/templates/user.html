@@ -1,0 +1,260 @@
+<script type="text/hyperscript">
+ behavior FileUpload()
+    on dragover call avatar_file_hover(event) end
+
+    on drop halt the event then
+      -- log event.dataTransfer.files[0]
+      call avatar_file_drop(me, event.dataTransfer.files[0])
+    end
+
+    on change set fileinput to <input/> in #file-js-example then
+     set filelist to fileinput[0].files[0]
+     call avatar_file_drop(me, filelist)
+  end
+
+</script>
+
+<article id="[[=user.id]]">
+    <section class="edwh-item-heading">
+        <div class="edwh-item-heading-items">
+            <div class="edwh-column-user-image">
+                <div class="image is-1by1 p-0">
+                    <figure class="image" style="height:100px; width:100px;">
+                        <img class="is-rounded" alt=""
+                            [[if user.avatar and user.avatar.uri:]]
+                             src="[[=user.avatar.uri]]"
+                            [[else:]]
+                             src="../../cmsx/static/images/boy.png"
+                            [[pass]]>
+                    </figure>
+                </div>
+            </div>
+            <div class="edwh-column-user-info">
+                <p class="edwh-title-user">[[=user.name]]</p>
+                <p class="edwh-card-subtitle">
+                    [[if user.user_provided_primary_organisational_role:]]
+                        [[=user.user_provided_primary_organisational_role]]
+                    [[pass]]
+                </p>
+                <p class="edwh-card-subtitle">
+                    [[if user.user_provided_organisation:]][[=user.user_provided_organisation]] [[pass]]
+                    [[if user.user_provided_organisation_location:]]te [[=user.user_provided_organisation_location]][[pass]]
+                </p>
+                <p class="edwh-card-subtitle">[[=user.bio]]</p>
+
+                <div class="columns mx-0 is-mobile has-text-centered">
+                    <div class="is-flex mx-3">
+                        <div>
+                            <p class="heading">Posts</p>
+                            <p class="title is-4">[[=user.items.available]]</p>
+                        </div>
+                    </div>
+                    <!--<div class="is-flex mx-3">-->
+                    <!--    <div>-->
+                    <!--        <p class="heading">Boards</p>-->
+                    <!--        <p class="title is-4">0</p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                </div>
+
+                <div class="column">
+                    [[if isme:]]
+                        <button type="button" class="button is-rounded" _="on click call modal(#edit-modal)">
+                            Profiel Aanpassen
+                        </button>
+                    [[pass]]
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+<div class="tabs is-boxed has-background-info-light">
+    <ul>
+        <li class="is-active">
+            <a>
+                <span>Items van deze gebruiker</span>
+            </a>
+        </li>
+        <!--<li>-->
+        <!--    <a>-->
+        <!--        <span>Verzamelingen</span>-->
+        <!--    </a>-->
+        <!--</li>-->
+    </ul>
+</div>
+
+<div id="user-items">
+    <section class="section">
+        <div class="container">
+            <!-- todo: alleen als tab 'items van deze gebruiker' is geselecteerd -->
+            <form
+                    hx-post="tiles"
+                    hx-trigger="load, ew:state_changed from:closest .edwh-messagebus"
+                    hx-target="#edwh-user-items"
+
+                    hx-ext="json-enc"
+                    _="install StateMachine(stickers: 'new')"
+            >
+                <input name="author" type="hidden" value="[[=user.id]]">
+                <input name="page" type="hidden" value="1">
+                <div class="item-container" id="edwh-user-items">
+                    <div class="button is-rounded is-loading" style="border:none; width: 100%">Loading...</div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+[[if isme:]]
+    <div id="edit-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box">
+                <form
+                        hx-post="updateme"
+                        hx-target="#generic-feedback"
+                        id="edit-form" class="no-form-trap"
+                        _="
+            install PasswordConfirm(password_feedback_element: #password-confirm-feedback, not_required: true)
+
+            on change set #generic-feedback's innerHTML to ''
+            on ew:success wait 2s then call modal(closest .modal)
+"
+                >
+                    Wat is de locatie en naam van de school waar jij werkzaam bent?
+                    <div class="field">
+                        <label for="edit-locatie">Locatie</label>
+                        <input list="plaatsen-list" required class="input" name="locatie" id="edit-locatie"
+                               value="[[=me.user_provided_organisation_location]]"
+                               hx-get="list_plaatsen"
+                               hx-target="#plaatsen-list"
+                               hx-trigger="keyup changed delay:300ms"
+                               placeholder="Amsterdam" />
+                        <datalist id="plaatsen-list">
+                        </datalist>
+                    </div>
+                    <div class="field">
+                        <label for="edit-school">School</label>
+                        <input list="scholen-list" required class="input" name="school" id="edit-school"
+                               value="[[=me.user_provided_organisation]]"
+                               placeholder="Barlaeus"
+                               hx-get="list_scholen"
+                               hx-include="#edit-locatie"
+                               hx-target="#scholen-list"
+                               hx-trigger="keyup changed delay:300ms"
+
+                               _="install KvK"
+                        />
+                        <datalist id="scholen-list">
+                        </datalist>
+                        <input type="hidden" name="kvk" id="input-kvk"
+                        [[if me.kvk:]]
+                               value="[[=me.kvk]]"
+                        [[pass]]
+                                />
+                    </div>
+                    Wat is je naam en wat is jouw rol op school?
+                    <div class="field">
+                        <label for="edit-voornaam">Voornaam</label>
+                        <input required class="input" name="voornaam" id="edit-voornaam"
+                               [[if me.firstname:]] value="[[=me.firstname]]"[[pass]]
+                               placeholder="John" />
+                    </div>
+                    <div class="field">
+                        <label for="edit-achternaam">Achternaam</label>
+                        <input required class="input" name="achternaam" id="edit-achternaam" placeholder="Doe"
+                               [[if me.lastname:]] value="[[=me.lastname]]"[[pass]]
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="edit-rol">Rol</label>
+                        <input required class="input" name="rol" id="edit-rol" placeholder="Docent"
+                               [[if me.user_provided_primary_organisational_role:]] value="[[=me.user_provided_primary_organisational_role]]"[[pass]]
+                        />
+                    </div>
+
+                    <div class="field">
+                        <label for="edit-bio">Biografie</label>
+                        <textarea class="input" name="bio"
+                                  id="edit-bio"
+                                  rows="5"
+                                  style="height: auto;"
+                                  placeholder="Vertel eens wat leuks over jezelf">[[if me.bio:]][[=me.bio]][[pass]]</textarea>
+                    </div>
+
+                    <div class="field">
+                        <label for="edit-email">Email</label>
+                        <input required class="input" autocomplete="email" type="email" name="username"
+                               id="edit-email"
+                               value="[[=me.email]]"
+                               placeholder="johndoe@example.com" />
+                        <p class="help is-danger" id="email-feedback"></p>
+                    </div>
+
+
+                    <div class="field">
+                        <label for="edit-password">Wachtwoord</label>
+                        <input class="input" autocomplete="new-password" type="password" minlength="6"
+                               name="password" id="edit-password"
+                               placeholder="******" />
+                        <p class="help is-danger" id="password-feedback"></p>
+                    </div>
+                    <div class="field">
+                        <label for="edit-password2">Wachtwoord herhalen</label>
+                        <input class="input" autocomplete="new-password" type="password" name="_password"
+                               id="edit-password2"
+                               placeholder="******" />
+                        <p class="help is-danger" id="password-confirm-feedback"></p>
+                        <small>Laat de wachtwoordvelden leeg om je huidige wachtwoord te houden.</small>
+                    </div>
+
+                    <input type="checkbox"
+                           style="display: none"
+                           name="passwordsmatch" checked="checked" required id="passwords-match" />
+
+
+                    <div id="file-js-example" class="file has-name p-5"
+                         _="install FileUpload"
+                         style="border: 1px dotted white">
+                        <label class="file-label">
+                            <input class="file-input" type="file" accept="image/*">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                    Profielfoto
+                                </span>
+                            </span>
+                            <span class="file-name">
+                                Geen bestand geüpload
+                            </span>
+                        </label>
+                    </div>
+                    <p class="help is-danger" id="avatar-feedback"></p>
+                    <p class="help is-danger" id="generic-feedback"></p>
+
+                    <br />
+                    <div class="field is-grouped" style="justify-content: space-between">
+                        <div>
+                            <button class="button is-rounded is-primary control" type="submit" name="submit-edit">
+                                Verzenden
+                            </button>
+                            <button type="button" id="cancel-edit" class="button is-rounded is-light control"
+                                    _="install CloseModal">
+                                Annuleer
+                            </button>
+                        </div>
+                        <input type="hidden" name="avatar" id="avatar" />
+                        <input type="hidden" name="avatarcontent" id="avatarcontent" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button type="button" _="install CloseModal" class="modal-close is-large" aria-label="close"></button>
+    </div>
+[[pass]]
+
+<script>
+    document.title = "Profiel van [[=user.name]] - Eddie";
+</script>

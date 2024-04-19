@@ -1,0 +1,73 @@
+<div
+        [[if start_open:]]
+        class="modal is-active"
+        [[else:]]
+        class="modal is-hidden"
+        [[pass]]
+        id="filtermenu">
+
+    <input id="start_open" name="_start_open" value="[[=start_open]]" type="hidden" />
+
+    <div class="modal-content has-background-white mr-0">
+        <div class="p-4 mb-6 has-background-primary is-flex is-align-items-center is-justify-content-space-between"
+             style="position: sticky; top: 0; z-index: 10000;">
+            <div class="title mb-0 is-5 is-uppercase has-text-white">Filters <span id="filtercount"
+                                                                                   _="
+            on ew:filters_changed from closest .edwh-messagebus
+                set count to json_tags({id: id of closest .edwh-state}).length
+                if count
+                    call my.text(`(${count})`)
+                else
+                    call my.text('')
+                end
+            end
+            "></span>
+            </div>
+            <button class="modal-close is-large is-relative has-text-white"
+                    type="button"
+                    _="on click toggle .is-hidden on #filtermenu" style="top: 0; right: 0;"></button>
+        </div>
+
+
+        <div class="menu p-6">
+            [[for filter in filters:]]
+            <div class="menu-label is-flex is-align-items-center is-justify-content-space-between"
+                 _="on click toggle .is-hidden on first in me then toggle .is-hidden on last in me then toggle .is-hidden on the next .menu-list">
+                [[=filter.label]] [[if filter.hasItemTreeCount:]]([[=filter.itemTreeCount]])[[pass]]
+                <svg class="image is-16x16 showmoreicon is-hidden" fill="none" stroke="currentColor"
+                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
+                </svg>
+                <svg class="image is-16x16 showlessicon" fill="none" stroke="currentColor"
+                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"></path>
+                </svg>
+            </div>
+            <ul class="menu-list is-hidden">
+                [[for child in filter.children:]]
+                <li>
+                    <button
+                            type="button"
+                            class="aanbodtag button" data-tag-gid="[[=child.tag]]" [[if not child.itemCount:]]
+                            disabled=""
+                            [[pass]]
+                            _="on click
+                    toggle .is-active on me
+                    send ew:change_state(tag: '[[=child.tag]]', page: 1)
+                    ">
+                        [[=child.label]] ([[=child.itemCount]])
+                    </button>
+                </li>
+                [[pass]]
+            </ul>
+            [[pass]]
+
+        </div>
+        <button
+                type="button"
+                class="button is-primary is-uppercase has-text-weight-bold is-flex mx-auto mb-3"
+                _="on click send ew:change_state(tags: []) to closest .edwh-messagebus">Reset
+        </button>
+
+    </div>
+</div>

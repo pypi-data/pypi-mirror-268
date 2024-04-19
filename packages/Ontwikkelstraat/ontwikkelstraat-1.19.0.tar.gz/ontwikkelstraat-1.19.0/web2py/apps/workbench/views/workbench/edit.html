@@ -1,0 +1,294 @@
+{{extend 'layout.html'}}
+{{block head}}
+<link rel="stylesheet" href="{{=URL('static', 'css/edit.css')}}">
+{{end}}
+
+<div class="overlay">
+</div>
+
+<div class="hidden-xs hidden-sm hidden-md navigation-desktop">
+    <nav class="col-md-2 col-sm-2 col-lg-2 bg-light sidebar">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li><a href="#item_title_section" class="nav-desk-item">Ga naar boven</a></li>
+                <li><a href="#bijlagen" class="nav-desk-item">Bijlagen/Tags</a></li>
+                <li><a href="#vragen" class="nav-desk-item">Vragen</a></li>
+                <li><a href="#dod_rules" class="nav-desk-item">DoD rules</a></li>
+                <li><a href="#discussie" class="nav-desk-item">Discussie</a></li>
+                <li><a href="javascript:void(0);" onclick="$('#submit_master').click();"
+                       class="nav-desk-item">Opslaan</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="hidden-lg navigation-mobile">
+    <div class="btn-group dropup">
+        <button class="btn btn-primary dropdown-toggle dropup-navbtn" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        <div class="dropdown-menu dropup-nav">
+            <ul>
+                <p>ONDERDELEN</p>
+                <li class="nav-item"><a href="#item_title_section">Ga naar boven</a></li>
+                <li class="nav-item"><a href="#bijlagen">Bijlagen/Tags</a></li>
+                <li class="nav-item"><a href="#vragen">Vragen</a></li>
+                <li class="nav-item"><a href="#dod_rules">DoD rules</a></li>
+                <li class="nav-item"><a href="#discussie">Discussie</a></li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" onclick="$('#submit_master').click();">Opslaan</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- end of nav mobile -->
+<div class="container">
+
+    <div class="row">
+        <div class="col-12" id="item_title_section">
+            <h1>{{=item.title}}</h1>
+        {{if item.status() == 'published':}}
+            <h2><span class="label label-warning">published</span>
+            {{if not backend.me:}}
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#loginModal">
+                    Publiceer updates
+                </button>
+            {{else:}}
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#confirmModal">
+                    Publiceer updates
+                </button>
+            {{pass}}
+            </h2>
+        {{else:}}
+            <h2><span class="label label-default">unpublished</span>
+            {{if not backend.me:}}
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#loginModal">
+                    Publiceren
+                </button>
+            {{else:}}
+                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#confirmModal">
+                    Publiceren
+                </button>
+            {{pass}}
+            </h2>
+        {{pass}}
+        </div>
+
+    {{=item_form.custom.begin}}
+        <div class="section">
+            <div class="row">
+
+                <div class="col-md-5 col-sm-12 col-lg-5 col-xs-12">
+                    <div class="row">
+
+                        <div class="col-sm-12 col-md-12 custom-inputs">
+                            <label for="item_contact_id">Contact ID</label>
+                        {{=item_form.custom.widget.contact_id}}
+                        </div>
+                        <!-- end of col -->
+
+                        <div class="col-sm-12 col-md-12 custom-inputs">
+                            <label for="item_title">Titel</label>
+                        {{=item_form.custom.widget.title}}
+                        </div>
+                        <!-- end of col -->
+
+                        <div class="col-sm-12 col-md-12 custom-inputs">
+                            <label for="item_raw_text">Ruwe tekst</label>
+                        {{=item_form.custom.widget.raw_text}}
+                            <p class="text-muted">{{=item_form.custom.comment.raw_text}}</p>
+                        </div>
+                        <!-- end of col -->
+
+                        <div class="col-sm-12 col-md-12 custom-inputs">
+                        {{=item_form.custom.widget.raw_frozen}}
+                            <label for="item_raw_frozen">Bevries ruwe tekst</label>
+                        </div>
+                        <!-- end of col -->
+
+                    </div>
+                    <!-- end of row -->
+                </div>
+
+                <div class="col-md-5 col-sm-12 col-lg-5">
+
+                    <div class="col-sm-12 col-md-12 custom-inputs">
+                        <label for="item_klad">Kladversie</label>
+                    {{=item_form.custom.widget.klad}}
+                        <p class="text-muted">{{=item_form.custom.comment.klad}}</p>
+                    </div>
+                    <!-- end of col -->
+
+                    <div class="col-sm-12 col-md-12 custom-inputs">
+                        <label for="item_ori_uri">Ori uri</label>
+                    {{=item_form.custom.widget.ori_uri}}
+                        <p class="text-muted">{{=item_form.custom.comment.ori_uri}}</p>
+                    </div>
+                    <!-- end of col -->
+
+                    <div class="col-sm-12 col-md-12 custom-inputs">
+                        <label for="item_usability">Usability</label>
+                    {{=item_form.custom.widget.usability}}
+                        <p class="text-muted">{{=item_form.custom.comment.usability}}</p>
+                    </div>
+                    <!-- end of col -->
+
+                    <div class="col-sm-12 col-md-12 custom-inputs">
+                        <label for="item_live_gid">Live Gid</label>
+                    {{=item_form.custom.widget.live_gid}}
+                    </div>
+                    <!-- end of col -->
+
+                    <div class="col-sm-12 col-md-12 custom-inputs">
+                        <label for="item_ctime">Ctime</label>
+                    {{=item_form.custom.widget.ctime}}
+                    </div>
+                    <!-- end of col -->
+
+                    <div class="col-sm-12 col-md-12 custom-inputs">
+                        <label for="item_mtime">Mtime</label>
+                    {{=item_form.custom.widget.mtime}}
+                    </div>
+                    <!-- end of col -->
+
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of section -->
+    {{=item_form.custom.submit}}
+    {{=item_form.custom.end}}
+
+        <div class="section" id="bijlagen">
+            <div class="row">
+                <div class="col-sm-12 col-md-5 col-lg-5">
+                    <h2>Bijlagen</h2>
+                {{=LOAD('workbench','source_grid.load', args=[item.id], ajax=True, ajax_trap=True)}}
+                </div>
+
+                <div class="col-sm-12 col-md-5 col-lg-5">
+                    <h2>Tags</h2>
+                {{=LOAD('workbench','tag_tree.load', args=['workbench', item.id], target='tag_tree_load', ajax=True, ajax_trap=True)}}
+                </div>
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of section -->
+
+        <div class="section" id="vragen">
+            <div class="row">
+                <div class="col-md-10 col-sm-12 col-lg-10">
+                    <h2>Vragen</h2>
+                {{=LOAD('workbench', 'item_questions', args=[item.id], ajax=True, ajax_trap=True, target='vragen_load', content='Vragen aan het laden..')}}
+                    <button class="submit_master btn btn-primary" id="submit_master">Wijzigingen opslaan</button>
+                    <a href="{{=URL(f='gen_template', args=[item.id])}}" target='blank' class="btn btn-default">Genereer
+                        template</a>
+                </div>
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of section -->
+
+        <div class="section" id="dod_rules">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    <h2>Definition of Done regels</h2>
+                {{=LOAD('workbench', 'item_dod_rules', args=[item.id],ajax=True)}}
+                </div>
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of section -->
+
+        <div class="section" id="discussie">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-12">
+                    <h2>Discussie</h2>
+                {{=plugin_comments('item',item.id)}}
+                </div>
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of section -->
+
+        <!-- Start simple MDE -->
+        <script>
+            var item_klad_mde = new EasyMDE({
+                element: document.getElementById("item_klad"),
+                promptURLs: true,
+                spellChecker: false,
+                autosave: {
+                    enabled: true,
+                    uniqueId: "item_klad_mde-{{=item.id}}",
+                    delay: 1000,
+                },
+            });
+            {{if not item.raw_frozen:}}
+            var item_raw_mde = new EasyMDE({
+                element: document.getElementById("item_raw_text"),
+                promptURLs: true,
+                spellChecker: false,
+                autosave: {
+                    enabled: true,
+                    uniqueId: "item_raw_mde-{{=item.id}}",
+                    delay: 1000,
+                },
+            });
+            {{pass}}
+        </script>
+        <script src="{{=URL('static', 'js/edit.js')}}"></script>
+
+
+    </div>
+
+</div>
+
+<!-- modal voor het inlogscherm -->
+{{if not backend.me:}}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Inloggen op delen.meteddie.nl</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            {{=login_form}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{else:}}
+<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="confirmModalLabel">Weet je het zeker?</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Ingelogd als: {{=backend.me.name}}, {{=backend.me.email}}</h5>
+                <p class="text-danger">OPGELET: Alle niet-opgeslagen wijzigingen gaan verloren!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Annuleren</button>
+                <a href="{{=URL('create_or_update_item', args=[item.id], vars=dict(status=item.status()))}}"
+                   class="btn btn-default">Publiceren</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{pass}}
+

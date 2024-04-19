@@ -1,0 +1,29 @@
+{{extend 'layout.html'}}
+<h2>{{=item.name}}</h2>
+Gid: <pre>{{=item.gid}}</pre>
+Huidige eignaar: {{=author.name if author else '? '}} a.k.a.  {{=author.email if author else 'Onbekend'}}
+<h3>Kies nieuwe eigenaar</h3>
+{{=select_form}}
+
+<h3>Nodig nieuwe gebruiker uit</h3>
+{{=new_user_form}}
+
+{{if welkom:}}
+    <pre>
+        Hallo {{=author.name}}, ontzettend bedankt voor het doen van toffe dingen in het onderwijs!
+
+        Uw ontwikkeling genaamd '{{=item.name}}' is beschikbaar op delen.meteddie.nl. Educationwarehouse heeft
+        het voor u ingevoerd op dit nieuwe platform. Voortaan kunt u zelf de gegevens bewerken en beheren.
+        Daartoe hebben we een account voor u aangemaakt.
+
+        email: {{=author.email}}
+        wachtwoord: {{=welkom['password']}}
+        praktijk: https://{{=domain}}/Item/{{=item.gid}}
+        profiel: https://{{=domain}}/Profile/{{=str(author.id)}}
+
+        Heel veel succes op ons platform.
+
+        Met vriendelijke groet,
+        Educationwarehouse.nl
+    </pre>
+{{pass}}

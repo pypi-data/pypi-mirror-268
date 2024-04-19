@@ -1,0 +1,91 @@
+{{extend 'layout.html'}}
+
+<style>
+    .htmx-indicator {
+        display: none;
+    }
+
+    .htmx-request .htmx-indicator {
+        display: inline;
+    }
+
+    .htmx-request.htmx-indicator {
+        display: inline;
+    }
+
+    :has(> .htmx-request) .htmx-pre-request-text {
+        display: none;
+    }
+</style>
+
+{{def filterbalk():}}
+<div class="row" style="margin: 20px 0">
+    <div class="col-lg-6">
+        <input id="filter"
+               placeholder="Filter onderstaande lijst. Zodra je zoekopdracht in de regel voorkomt wordt het getoond."
+               class="form-control" type="text"/>
+    </div>
+
+    <div class="col-lg-3">
+        <input type="button"
+               id="collapse-all-btn"
+               style="display: none"
+               class="form-control btn-secondary" value="Alles in-/uitklappen"/>
+    </div>
+</div>
+<script>
+    $(_ => {
+        const $collapse_btn = $("#collapse-all-btn")
+
+        const $all_collapse = $("#accordion .collapse")
+
+        if ($all_collapse.length > 0) {
+            // do show the button if something collapsable
+            $collapse_btn.css('display', 'initial')
+        }
+
+        $collapse_btn.click(_ => $all_collapse.toggleClass("in"))
+
+        $('#filter').keyup((ev) => {
+            const $input = $(ev.target)
+            const needle = $input[0].value
+            const re = new RegExp(needle, 'i')
+            $('.card').each((_, card) => {
+                const $card = $(card)
+
+                if (re.test($card.text())) {
+                    $card.show()
+                } else {
+                    $card.hide()
+                }
+            })
+        })
+    })
+
+</script>
+{{return ''}}
+
+{{import collections}}
+{{def samenvatting(changes, items):}}
+
+<div class="jumbotron" style="max-width: 25vw; padding: 20px">
+    <h2 style="margin-top: 0; margin-bottom: 20px">Samenvatting</h2>
+    <ul style="padding-left: 20px">
+        {{for item_gid, count in collections.Counter(changes.column('item_gid')).most_common():}}
+        {{title = items.get(item_gid, {}).get('name', '')}}
+        <li><a href="{{=URL('item', args=[item_gid])}}">{{=title}}: {{=count}} wijzigingen</a></li>
+        {{pass}}
+    </ul>
+    <hr class="my-4">
+    <ul style="padding-left: 20px">
+        {{for email, count in collections.Counter(changes.column('by_eddie_email')).most_common():}}
+        {{author = email.split("@")[0] if email else "?"}}
+        <li><a href="{{=URL('author', args=[author])}}">{{=author}}: {{=count}} wijzigingen</a></li>
+        {{pass}}
+    </ul>
+</div>
+{{return ''}}
+
+<div id="accordion">
+    {{include}}
+</div>

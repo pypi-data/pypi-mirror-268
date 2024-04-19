@@ -1,0 +1,58 @@
+{{extend "layout.html"}}
+
+<style>
+    .custom-widget {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12"><h3>{{=item.title}}</h3></div>
+    </div>
+
+    <div class="row">
+    {{=item_form.custom.begin}}
+        <div class="col-md-6">
+
+            <div class="custom-inputs">
+                <label for="item_contact_id">Contact</label>
+            {{=item_form.custom.widget.contact_id}}
+            </div>
+
+            <div class="custom-inputs">
+                <label for="item_raw_text">Ruwe tekst</label>
+                <div class="custom-widget">
+                {{=item_form.custom.widget.raw_text}}
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="custom-inputs">
+                <label for="item_ori_uri">Ori uri</label>
+            {{=item_form.custom.widget.ori_uri}}
+            </div>
+
+            <div class="custom-inputs">
+                <label for="item_klad">Kladtekst</label>
+                <div class="custom-widget">
+                {{=item_form.custom.widget.klad}}
+                </div>
+            </div>
+
+        </div>
+    {{=item_form.custom.end}}
+    </div>
+
+    <div class="row">
+        <h3>Tags</h3>
+    {{=LOAD('workbench','tag_tree.load', args=[item.id], target='tag_tree_load', ajax=True, ajax_trap=True)}}
+    </div>
+
+</div>
+

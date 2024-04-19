@@ -1,0 +1,16 @@
+invoke
+pyyaml
+tabulate
+httpx
+redis
+pip-tools
+rjsmin
+pysass
+python-dotenv
+black[d]
+humanize
+pyjwt[crypto]
+tomlkit
+edwh-migrate
+edwh>=0.12.0
+more-itertools

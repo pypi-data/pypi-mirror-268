@@ -1,0 +1,48 @@
+<script>
+    function round(n, decimals = 2) {
+        const factor = 10 ** decimals;
+
+        return Math.round(n * factor) / factor;
+    }
+
+    // todo: only in edit-mode and disable tooltip in that case
+    function dragend(ev) {
+        const $container = document.querySelectorAll('.hotspot-container')[0];
+        const $hotspot = ev.target;
+        const $body = document.body;
+
+        if (!$hotspot.classList.contains('hotspot')) {
+            // only drag .hotspot's
+            return;
+        }
+
+        // compensate -15px and the amount the user scrolled:
+        const x = ev.clientX - 15 + $body.scrollLeft;
+        const y = ev.clientY - 15 + $body.scrollTop;
+
+
+        const left = round(x / $container.clientWidth * 100, 2);
+        const top = round(y / $container.clientHeight * 100, 2);
+
+        ev.target.style = `top: ${top}%; left: ${left}%;`;
+
+        // console.log(`je nieuwe coordinaten zijn: top: ${top}%; left: ${left}%;`);
+    }
+
+</script>
+
+<div id="container" class="hotspot-container" ondragend="dragend(event)">
+    <img src="[[=image]]"
+         alt="hotspots" />
+
+    [[for idx, hotspot in enumerate(hotspots):]]
+        [[if idx:]]
+            <div class="hotspot" draggable="[[=edit_mode]]" style="top: [[=hotspot.top]]%; left: [[=hotspot.left]]%">
+                <div class="pulse">[[=idx]]</div>
+                <div class="edit-[[=edit_mode]] tooltiptext [[=hotspot.position]]">[[=XML(hotspot.tooltip)]]</div>
+            </div>
+        [[pass]]
+    [[pass]]
+</div>
+
+<!-- zie _hotspots.hbs voor front-end implementatie met HTMX -->

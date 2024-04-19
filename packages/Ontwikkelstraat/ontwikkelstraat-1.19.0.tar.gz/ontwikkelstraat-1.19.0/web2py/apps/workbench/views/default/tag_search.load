@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-12">
+        <h2>Zoek (vergelijkbare) tags</h2>
+    </div>
+</div>
+{{if show_search:}}
+<div class="row">
+    <div class="col-12">
+        {{=form}}
+    </div>
+</div>
+{{pass}}
+{{if table:}}
+<div class="row">
+    <div class="col-9 offset-3">
+        {{=table}}
+    </div>
+</div>
+{{pass}}

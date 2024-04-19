@@ -1,0 +1,44 @@
+js: # to bundle.js
+  - /* add required class to body */ document.body.classList.add("edwh-messagebus")
+  - https://unpkg.com/hyperscript.org@0.9.4/dist/_hyperscript_w9y.min.js
+  - https://unpkg.com/htmx.org@1.6.1
+  - https://use.fontawesome.com/releases/v5.15.2/js/all.js
+  - $in_app/static/js/javascript_dependencies.js
+  - $in_app/static/js/commands._hs
+  - $in_app/static/js/behaviors._hs
+  - $in_app/templates/loading-error.html
+  - > # multiline inline hyperscript code:
+    _(`on htmx:responseError render #loading-error 
+    then put it into event.detail.target`)
+  - > # multiline inline JS code:
+    /* PREFIX ALLES MET /fragmentx (of een andere url die in FRONT_END_BASE staat) */
+    document.body.addEventListener("htmx:configRequest", (event) => {
+        let base = input('FRONT_END_BASE');
+        if(base.at(-1) == "/") {base = base.slice(0,-1)}
+    
+        if (!event.detail.path.startsWith('https://')) {
+            let path = event.detail.path;
+            if(path.at(0) == "/"){path = path.slice(1,)}
+            if(path.at(-1) == "/"){path = path.slice(0,-1)}
+            event.detail.path = `${base}/${path}`;
+        }
+    });
+  - > 
+    /* add htmx cookie setting via meta  */
+    const meta = document.createElement('meta');
+    meta.name = "htmx-config";
+    meta.content = `{"withCredentials":true}`;
+    document.head.appendChild(meta);
+
+css: # to bundle.css
+  - file: $in_app/static/mystyles.css
+    scope: .edwh-style
+
+config:
+  minify: 1
+  filename: bundled
+  output_db: sqlite://$out_app/databases/lts_assets.db
+  output_css: sqlite://$out_app/databases/lts_assets.db/bundle-$version.css
+  output_js: sqlite://$out_app/databases/lts_assets.db/bundle-$version.js
+  out_app: py4web/apps/lts
+  in_app: py4web/apps/cmsx

@@ -1,0 +1,77 @@
+<article id="[[=school.id]]">
+    <section class="edwh-item-heading">
+        <div class="edwh-item-heading-items">
+            <div class="edwh-column-user-image">
+                <span class="icon is-large  ">
+                    <i class="fas fa-school fa-2x"></i>
+                </span>
+            </div>
+            <div class="edwh-column-user-info">
+
+                <p class="edwh-title-user">[[=school.name]]</p>
+                <p class="edwh-card-subtitle">
+                    [[=school.city]]
+                </p>
+
+            </div>
+        </div>
+    </section>
+</article>
+<div class="tabs is-boxed has-background-info-light">
+    <ul>
+        <li class="is-active">
+            <a>
+                <span>Items van deze school</span>
+            </a>
+        </li>
+        <!--<li>-->
+        <!--    <a>-->
+        <!--        <span>Verzamelingen</span>-->
+        <!--    </a>-->
+        <!--</li>-->
+    </ul>
+</div>
+
+
+<div id="school-items">
+    <form id="state" class="edwh-state"
+          hx-vals='{
+                   "likes":[],
+                   "limit":3,
+                   "paginate":true
+                   }'
+          hx-vars="tags: json_tags()"
+          hx-ext='json-enc'
+          _="
+         init -- init gebeurt 1 keer als de pagina geladen wordt
+           call url_to_state(me)
+           send ew:state_changed to closest .edwh-messagebus
+         end
+
+         on submit halt the event end -- = preventDefault
+         install StateMachine(stickers: 'new')
+          "
+    >
+        <section class="section">
+            <div>
+                <input name="page" type="hidden" value="1" />
+                <div id="tiles"
+                     class="ew-search-listener edwh-reload-listener container"
+                     hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+                     hx-indicator="#tiles-indicator"
+                     hx-post="tiles/org/[[=school.id]]"
+                     _="
+                 on ew:state_changed from closest .edwh-messagebus
+                    -- sla de nieuwe state op in de URL zodat reload hetzelfde resultaat oplevert als de user nu ziet
+                    call state_to_url(closest .edwh-state to me)
+                 end
+                    "
+                >
+                    <div id="tiles-indicator" class="htmx-indicator">
+                        <div class="button is-loading" style="border:none; width: 100%">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </form>
+</div>

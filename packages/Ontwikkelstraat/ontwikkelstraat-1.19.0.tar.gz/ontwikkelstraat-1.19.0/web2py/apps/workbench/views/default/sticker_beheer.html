@@ -1,0 +1,35 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+        <div class="col-md-offset-3 col-md-9">
+                {{if 'new_gid' in request.vars:}}
+                <h1>Sticker: &quot;{{=Tag(database,request.vars.new_gid).name}}&quot;</h1>
+                {{else:}}
+                <h1>Kies een tag om een sticker van te maken</h1>
+                {{pass}}
+        </div>
+</div>
+
+<div class="row">
+        {{=form}}
+        <hr>
+</div>
+<div class="row">
+        {{if upload_complete:}}
+        <div class="col-md-offset-3 col-md-9">
+            <strong>Let op!</strong><br/>
+            Ververs de pagina met enkele seconden als die niet automatisch gebeurd.<br>
+            Daarna zou je de sticker moeten zien.
+            <script>
+                setTimeout(function(){
+                 window.location='{{=URL()}}';
+                }, 3000);
+            </script>
+        </div>
+        {{pass}}
+</div>
+<div class="row">
+    <div class="col-md-offset-3 col-md-9">
+        {{=table}}
+    </div>
+</div>

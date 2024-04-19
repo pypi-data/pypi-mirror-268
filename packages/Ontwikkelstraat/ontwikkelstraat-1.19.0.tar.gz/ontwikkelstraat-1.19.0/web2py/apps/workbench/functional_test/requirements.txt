@@ -1,0 +1,6 @@
+webtest
+pytest
+wsgiproxy2
+pyjwt[crypto]
+pyquery
+beautifulsoup4

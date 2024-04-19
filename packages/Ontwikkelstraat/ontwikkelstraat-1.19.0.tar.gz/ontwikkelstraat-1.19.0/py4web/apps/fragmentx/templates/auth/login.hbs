@@ -1,0 +1,63 @@
+<form class="box no-form-trap"
+      hx-post="login"
+      hx-trigger="submit"
+      hx-target="#feedback"
+
+      _="
+      on load set my @hx-vals to jsonify_details(browserReportSync(), 'hardware') end
+
+      on ew:success
+       add @disabled to <input/> in me
+       wait 2s
+       call location.reload()
+"
+>
+    <div class="title is-5">
+       <p>Eddie richt zich op het contact tussen educatieteams. Dat betekent dat we alleen educatieprofessionals de mogelijkheid bieden om contact te leggen en hartjes uit te delen. Log in of maak een inlog aan met je werkmail, dan kan je verder.</p>
+    </div>
+    <div class="field">
+        <label class="label" for="field-email">Email</label>
+        <div class="control has-icons-left has-icons-right">
+            <input name="username" class="input" required type="email" placeholder="docent@school.nl" id="field-email"
+                   autocomplete="email" value="{{data.email}}">
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label" for="field-password">Wachtwoord</label>
+        <div class="control has-icons-left has-icons-right">
+            <input name="password" class="input" type="password" placeholder="******"
+                   id="field-password" required autocomplete="current-password">
+            <span class="icon is-small is-left">
+                <i class="fas fa-key"></i>
+            </span>
+        </div>
+        <small><a
+                _="on click set email to username.value of closest <form/> then send ew:load_form(form: 'recover', email: email) to closest .edwh-messagebus"
+        >
+            Wachtwoord vergeten?
+        </a></small>
+
+        <p id="feedback"></p>
+    </div>
+
+    <div class="field is-grouped" style="justify-content: space-between">
+        <div>
+            <!-- left -->
+            <div class="control">
+                <button class="button is-primary is-rounded mx-1" id="submit-credentials">Login</button>
+                <button class="button is-rounded mx-1" type="button" _="on click send ew:load_form(form: 'register1') to closest .edwh-messagebus">
+                    Registreren
+                </button>
+            </div>
+        </div>
+        <div class="control">
+            <button class="button is-rounded mx-1" type="button" _="install CloseModal">
+                Annuleer
+            </button>
+        </div>
+    </div>
+</form>

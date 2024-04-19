@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+@startuml
+actor       Browser                                   as Browser
+participant "(ghost/static)\nCMS\n(py4web|ghost.io)"  as Static
+boundary    "Front-end\n(py4web)"                     as FrontEnd
+control     "Graphql-Web\n(nameko)\n(repo:backend)"   as GraphqlWeb
+collections "Microservices\n(nameko)\n(repo:backend)" as Microservices
+queue       RabbitMQ                                  as RabbitMQ
+database    Postgresql                                as database
+Browser -> Static : Webpagina opvragen
+Static --> Browser: HTML met componenten
+
+Browser -> FrontEnd: Login Component opvragen\n(met state)
+FrontEnd --> Browser: Login Fragment\n(met JS)
+
+Browser -> FrontEnd: Quick-filter Component opvragen\n(met state)
+FrontEnd --> Browser: Quick-filter Fragment\n(met JS)
+
+Browser -> FrontEnd: Filter Component opvragen\n(met state en argument)
+alt argument: delen.meteddie.nl
+    FrontEnd -> GraphqlWeb: Tags opvragen
+    GraphqlWeb -> database: tags opvragen
+    database --> GraphqlWeb: tag structuur
+    GraphqlWeb --> FrontEnd: JSON: met tag structuur
+else argument: slimfit.meteddie.nl
+    FrontEnd -> FrontEnd: Hardcoded result
+end
+FrontEnd --> Browser: Filter Fragment\n(met JS)
+
+Browser -> FrontEnd: Tiles Component opvragen\n(met state)
+FrontEnd -> GraphqlWeb: item, auteur enz opvragen\n(graphql met variabelen)
+GraphqlWeb -> database: item info opvragen
+GraphqlWeb -> database: auteur info opvragen
+database --> GraphqlWeb: database responses
+GraphqlWeb --> FrontEnd: Json met item en auteur info
+FrontEnd --> Browser: Tiles Fragment\n(met JS)
+
+@enduml

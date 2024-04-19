@@ -1,0 +1,50 @@
+{{extend 'layout.html'}}
+
+<style>
+    .blink {
+        animation: blinker 3s linear infinite;
+    }
+
+    .spin {
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        {{if not sync_status:}}
+            <a href="{{=URL('eddie_sync')}}" class="btn btn-info">Synchroniseren</a>
+        {{else:}}
+        {{if sync_status.status == "COMPLETED" or sync_status.status == "TIMEOUT" or sync_status.status == "FAILED":}}
+            <a href="{{=URL('eddie_sync')}}" class="btn btn-info">Synchroniseren</a> {{if last_synced:}} <small>Laatste
+            synchronisatie: {{=last_synced}}</small> {{pass}}
+        {{elif sync_status.status == "QUEUED" or sync_status.status== "RUNNING" or sync_status.status == "ASSIGNED":}}
+            <a href="#" class="btn btn-default" disabled>Syncing...</a> <small class="blink"> <i
+                class="fa fa-sync spin"></i> BEZIG MET SYNCHRONISEREN....</small>
+        {{pass}}
+        {{pass}}
+        </div>
+        <div class="col-md-12">
+        {{=import_form}}
+        </div>
+        <div class="col-md-12">
+        {{=grid}}
+        </div>
+    </div>
+</div>

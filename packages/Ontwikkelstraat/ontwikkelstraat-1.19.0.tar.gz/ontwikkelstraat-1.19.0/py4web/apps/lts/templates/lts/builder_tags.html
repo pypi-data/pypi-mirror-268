@@ -1,0 +1,23 @@
+[[if style == "json":]]
+<input checked data-label="Alles Tonen" class="form-check-input" id="alles-tonen" name="" type="checkbox"/>
+<label class="form-check-label" for="alles-tonen">Alles Tonen</label>
+[[pass]]
+
+<ul style="text-align: left">
+    [[for parent_gid, obj in tags.items():]]
+    <li>
+        <input data-label="[[=obj['name']]]" class="form-check-input" id="input-[[=parent_gid]]" name="[[=parent_gid]]"
+               type="checkbox"/>
+        <label class="form-check-label" for="input-[[=parent_gid]]">[[=obj['name']]]</label>
+    </li>
+    <ul>
+        [[for child_gid, child_name in obj['children'].items():]]
+        <li>
+            <input data-label="[[=child_name]]" class="form-check-input" id="input-[[=child_gid]]" name="[[=child_gid]]"
+                   type="checkbox"/>
+            <label class="form-check-label" for="input-[[=child_gid]]">[[=child_name]]</label>
+        </li>
+        [[pass]]
+    </ul>
+    [[pass]]
+</ul>

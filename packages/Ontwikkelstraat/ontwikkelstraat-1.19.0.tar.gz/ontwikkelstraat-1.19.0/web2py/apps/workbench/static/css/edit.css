@@ -1,0 +1,93 @@
+/*Markdown Editor*/
+.CodeMirror,
+.CodeMirror-scroll {
+    max-height: 400px;
+    min-height: 300px;
+}
+
+/* Markdown editor, fullscreen modus */
+/* dit is om te voorkomen dat fullscreen, maar het halve scherm bedekt
+gezien we bovenaan de min-max values van de hoogte aanpassen. */
+.CodeMirror-fullscreen.CodeMirror {
+    max-height: none;
+}
+
+.CodeMirror-fullscreen .CodeMirror-scroll {
+    max-height: none;
+}
+
+/* einde fullscreen markdown CSS*/
+
+/*form.custom input velden van web2py form*/
+.custom-inputs {
+    margin: 10px;
+}
+
+/*submit knop area*/
+.submit-area {
+    margin: 10px;
+}
+
+/*elke sectie van de pagina*/
+.section {
+    margin-top: 20px;
+}
+
+/*navigatie button voor mobile*/
+.dropup-navbtn {
+    border-radius: 50%;
+    font-size: 25px;
+    width: auto;
+    padding: 15px;
+}
+
+/*mobile navigatie*/
+.navigation-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000 !important;
+    margin: 25px;
+}
+
+/*sidebar*/
+.sidebar-sticky {
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+/*sidebar*/
+.sidebar {
+    position: fixed;
+    right: 0;
+    z-index: 100;
+}
+
+/*nav item voor desktop navigatie*/
+.nav-desk-item {
+    font-size: 20px;
+}
+
+/*nav item voor mobile navigatie*/
+.nav-item {
+    list-style: none;
+    padding: 5px;
+}
+
+.text-warning {
+    text-decoration: none !important;
+}
+
+.warning-tag {
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+.warning-tag a {
+    text-decoration: underline !important;
+}
+
+.md-preview {
+    overflow-y: auto !important;
+    max-height: 500px !important;
+}

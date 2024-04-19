@@ -1,0 +1,280 @@
+[[extend "lts/builder_layout.html"]]
+
+<style>
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>
+
+<script>
+    /**
+     * Save selected checkboxes to the right textual input, with formatting
+     * (e.g. JSON (key-value) for Quickfilter and CSV (list of values) for Base Tags)
+     */
+    function apply_selected_tags() {
+        // elements
+        const $holder = document.getElementById("tag_selector_target");
+        const $tag_output_style = document.getElementById("tag_output_style")
+        const $tag_output_target = document.getElementById("tag_output_target")
+
+        // settings
+        const style = $tag_output_style.value;
+        const target = $tag_output_target.value;
+        const $target = document.getElementById(target);
+
+        // logic
+        const choices = Array.from($holder.querySelectorAll(":checked"))
+
+        let result;
+
+        if (style === "csv") {
+            result = choices.map(el => el.name).join(",")
+        } else if (style === "json") {
+            result = JSON.stringify(Object.fromEntries(choices.map(el => [el.name, el.data('label')])))
+        } else {
+            throw Error("Unsupported style")
+        }
+
+        $target.value = result;
+        _hyperscript(`send form_changed to preview`)
+    }
+
+    /**
+     * When clicking the wrench symbol while already having some tags selected,
+     * Pre-check these checkboxes when opening the modal.
+     *
+     * @param {String} old_value
+     * @param {HTMLElement} $holder
+     */
+    function fill_existing_tags(old_value, $holder) {
+        const $checkboxes = $holder.querySelectorAll("input[type=checkbox]")
+
+        let old_tag_list;
+
+        if (old_value.startsWith("{")) {
+            // json
+            const old_tag_dict = JSON.parse(old_value)
+            old_tag_list = Object.keys(old_tag_dict)
+        } else {
+            // csv, probably
+            old_tag_list = old_value.split(",")
+        }
+
+        const $alles_tonen = $holder.querySelector('#alles-tonen');
+        if ($alles_tonen) {
+            if (old_tag_list.includes("")) {
+                // include 'alles-tonen'
+                $alles_tonen.checked = true;
+            } else {
+                // EXCLUDE! alles-tonen
+                $alles_tonen.checked = false;
+            }
+        }
+
+        for (let uuid of old_tag_list) {
+            const $checkbox = $holder.querySelector(`input[type=checkbox]#input-${uuid}`);
+            if ($checkbox) {
+                console.log('setting', $checkbox, 'to checked!')
+                $checkbox.checked = true;
+            }
+        }
+    }
+</script>
+
+<a class="btn btn-secondary" href="[[=URL('builder/1')]]">
+    <- Terug</a>
+<hr/>
+
+<form id="customize"
+      method="POST" action="[[=URL('builder/3')]]" style="max-width: 400px; margin: auto;"
+      _="on change send form_changed to preview"
+>
+    <div class="form-group">
+        <label for="paginate" class="form-check-label">
+            Paginate?
+        </label>
+        <input class="form-check-input" type="checkbox" name="paginate" id="paginate"
+               [[if prefill['paginate']:]]
+        checked="checked"
+        [[pass]]
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="searchbar" class="form-check-label">
+            Zoekbalk?
+        </label>
+        <input class="form-check-input" type="checkbox" name="searchbar" id="searchbar">
+    </div>
+
+        <div class="form-group">
+        <label for="filters" class="form-check-label">
+            Filters?
+        </label>
+        <select class="form-control" id="filters" name="filters">
+            <option selected value="false">Geen</option>
+            <option value="true">Default</option>
+            <option value="with-active">Default with active</option>
+            <option value="modal">Modal</option>
+            <option value="modal-with-active">Modal with active</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="limit">
+            Tiles Per Pagina:
+        </label>
+        <input class="form-control" type="number" name="limit" id="limit" value="[[=prefill['limit']]]"/>
+    </div>
+
+    <!-- likes: disabled is altijd zo -->
+
+    <div class="form-group">
+        <label for="quickfilter">
+            Quickfilterbalk:
+        </label>
+        <div class="input-group mb-3">
+            <input class="form-control" type="text"
+                   name="quickfilter" id="quickfilter"
+                   value="[[=prefill['quickfilter'] or 'disabled']]"/>
+
+            <div class="input-group-append">
+                <button class="input-group-text" style="padding-left: 10px; padding-right: 5px;"
+                        _="on click
+                        set the value of tag_output_style to 'json'
+                        set the value of tag_output_target to 'quickfilter'
+                        send do_load to #tag_selector"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#toolmodal"
+                >
+                    <i class="fas fa-wrench"></i>&nbsp;
+                </button>
+            </div>
+        </div>
+
+        <small>Bijvoorbeeld 'default', 'disabled'</small>
+    </div>
+
+    <div class="form-group">
+        <label for="quickfilter">
+            Zoekterm:
+        </label>
+        <input class="form-control" type="text"
+               name="search" id="search"
+               value="[[=prefill.get('search') or '']]"/>
+    </div>
+
+    <div class="form-group">
+        <label for="quickfilter">
+            Base tags:
+        </label>
+        <div class="input-group mb-3">
+            <input class="form-control" type="text"
+                   name="base_tags" id="base_tags"
+                   value="[[=','.join(prefill.get('base_tags', []))]]"/>
+            <div class="input-group-append">
+                <button class="input-group-text" style="padding-left: 10px; padding-right: 5px;"
+                        _="on click
+                        set the value of tag_output_style to 'csv'
+                        set the value of tag_output_target to 'base_tags'
+                        send do_load to #tag_selector"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#toolmodal"
+                >
+                    <i class="fas fa-wrench"></i>&nbsp;
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="change_url" class="form-check-label">
+            Update URL?
+        </label>
+        <input class="form-check-input" type="checkbox" name="change_url" id="change_url"
+               [[if prefill['change_url']:]]
+        checked="checked"
+        [[pass]]
+        ><br/>
+        <small>Sla instellingen zoals het paginanummer in de URL op (bijv. <code
+                style="white-space: nowrap">?page=2</code>), net als op delen.meteddie.nl gebeurt.</small>
+    </div>
+
+    <button class="btn btn-primary" type="button"
+            _="on click call customize's submit() -- don't use events because every <input> will send an event -> 7 submits :("
+    >Genereer code
+    </button>
+
+</form>
+
+<div class="modal fade" id="toolmodal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tag Selector</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form
+                        id="tag_selector"
+                        hx-get="tag_finder"
+                        hx-trigger="do_load throttle:500ms"
+                        hx-target="#tag_selector_target"
+                        _="
+                        --       throttled because otherwise the event is fired twice (because two inputs in this form)
+                        on htmx:afterSettle throttled at 500ms
+                             set selector to the value of #tag_output_target
+                             set old_value to the value of #{selector}
+
+                             call fill_existing_tags(old_value, #tag_selector_target)
+                        end
+                        "
+                >
+                    <input type="hidden" id="tag_output_style" name="output_style" value="csv">
+                    <input type="hidden" id="tag_output_target" name="output_target">
+                    <div id="tag_selector_target"></div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        _="on click call apply_selected_tags()"
+                >Toepassen
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/>
+<hr style="height: 20px"/>
+<br/>
+
+<!-- PREVIEW: -->
+<link href="[[=URL('cdn', version, 'css', 'bundled.css')]]" rel="stylesheet"/>
+
+<form>
+    <div
+            id="preview"
+            hx-post="simple_tiles"
+            hx-trigger="load, form_changed"
+            hx-include="#customize"
+            hx-vals='{
+                    "change_url": false
+                }'>
+        <!--
+         quickfilter (optioneel) kan
+            - false (default - geen quickfilterbalk),
+            - true (de standaard delen.meteddie balk),
+            - <string>: de naam van een bepaalde quickfilter balk die in onze backend ingesteld staat (bijv 'gelijkekansenindeklas')
+            - <object>: {tag gid: label}, hiermee is dynamisch de quickfilterbalk op te bouwen. Je moet hiervoor wel de tag gids weten.
+
+         base_tags (optioneel) kan 1 tag of een comma-gesplitste lijst van tag gids zijn
+         -->
+
+        <input type="hidden" name="FRONT_END_BASE" value="[[=URL()]]">
+    </div>
+</form>
+<script src="[[=URL('cdn', version, 'js', 'bundled.js')]]"></script>

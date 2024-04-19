@@ -1,0 +1,152 @@
+<script type="text/hyperscript">
+    behavior UitslagSessie(vraag)
+        init
+            add @required to me
+
+            set laatste_uitslag to '{{laatste_uitslag}}'
+            if not laatste_uitslag
+                return 0
+            end
+
+            set index to (vraag - 1)
+            set antwoord to my value
+
+            if laatste_uitslag[index] is antwoord
+                add @checked to me
+            end
+
+        end
+    end
+
+</script>
+
+<form
+        hx-post="{{absolute_url 'plaatsbepaling/' volgende_vraag}}"
+        hx-trigger="submit"
+>
+    {{#eq vraag_nr 1}}
+        <div>
+            <h3>1. Op welke wijze wordt er aan de basisvakken (taal, lezen, rekenen,) gewerkt?</h3>
+
+            <div class="custom-control custom-checkbox">
+                <input name="vraag1" class="custom-control-input" type="radio" id="vraag1-1" value="a"
+                       _="install UitslagSessie(vraag: 1)">
+                <label for="vraag1-1" class="custom-control-label">De lessen uit de methode worden gevolgd </label><br>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input name="vraag1" class="custom-control-input" type="radio" id="vraag1-2" value="b"
+                       _="install UitslagSessie(vraag: 1)">
+                <label for="vraag1-2" class="custom-control-label">Er worden korte instructies gepland (m.b.v.
+                                                                   methode)</label><br>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input name="vraag1" class="custom-control-input" type="radio" id="vraag1-3" value="c"
+                       _="install UitslagSessie(vraag: 1)">
+                <label for="vraag1-3" class="custom-control-label">Er wordt met leer- en ontwikkelingslijnen gewerkt
+                                                                   voor alle leerlingen <br>(de methode is één van de
+                                                                   bronnen). <br>Kinderen hebben mede inzicht in de
+                                                                   leer- en ontwikkelingslijnen</label><br>
+            </div>
+        </div>
+    {{/eq}}
+
+    {{#eq vraag_nr 2}}
+        <div>
+            <h3>2. Op welke wijze wordt er aan de wereld oriënterende en creatieve vakken gewerkt?</h3>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag2" id="vraag2-1" value="a"
+                       _="install UitslagSessie(vraag: 2)">
+                <label for="vraag2-1" class="custom-control-label">We volgen de methode voor de wereld oriënterende en
+                                                                   creatieve vakken <br>en zoeken hierin naar
+                                                                   mogelijkheden
+                                                                   om groepsoverstijgende activiteiten <br> plaats te
+                                                                   laten vinden </label>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag2" id="vraag2-2" value="b"
+                       _="install UitslagSessie(vraag: 2)">
+                <label for="vraag2-2" class="custom-control-label">We werken projectmatig of thematisch aan WO en de
+                                                                   creatieve vakken, <br>waarbij we groepsoverstijgend
+                                                                   werken </label><br>
+            </div>
+        </div>
+    {{/eq}}
+
+    {{#eq vraag_nr 3}}
+        <div>
+            <h3>3. Hoe worden ruimten gebruikt?</h3>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag3" id="vraag3-1" value="a"
+                       _="install UitslagSessie(vraag: 3)">
+                <label for="vraag3-1" class="custom-control-label">De leeractiviteiten vinden voornamelijk plaats in het
+                                                                   eigen klaslokaal </label><br>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag3" id="vraag3-2" value="b"
+                       _="install UitslagSessie(vraag: 3)">
+                <label for="vraag3-2" class="custom-control-label">Er zijn meerdere hoeken en ruimten waar kinderen
+                                                                   kunnen werken </label><br>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag3" id="vraag3-3" value="c"
+                       _="install UitslagSessie(vraag: 3)">
+                <label for="vraag3-3" class="custom-control-label">Kinderen werken in alle ruimten van het gebouw en
+                                                                   daarbuiten</label><br>
+            </div>
+        </div>
+    {{/eq}}
+
+
+    {{#eq vraag_nr 4}}
+        <div>
+            <h3>4. Hoe zijn de leerlingen gegroepeerd?</h3>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag4" id="vraag4-1" value="a"
+                       _="install UitslagSessie(vraag: 4)">
+                <label for="vraag4-1" class="custom-control-label">In leerstofjaarklassen of combinaties daarvan</label><br>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag4" id="vraag4-2" value="b"
+                       _="install UitslagSessie(vraag: 4)">
+                <label for="vraag4-2" class="custom-control-label">In horizontale units (grote scholen; bijv. meerdere
+                                                                   parallelgroepen werken samen in een unit)</label><br>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="radio" class="custom-control-input" name="vraag4" id="vraag4-3" value="c"
+                       _="install UitslagSessie(vraag: 4)">
+                <label for="vraag4-3" class="custom-control-label">In verticale, heterogene units (groep 1-2/ groep 3-5,
+                                                                   groep 6-8 etc.) </label><br>
+            </div>
+        </div>
+    {{/eq}}
+
+    {{#eq vraag_nr 5}}
+        <div>
+            <h3>5. Welke omschrijving treft uw school het beste als het gaat om inzet van functionarissen, het
+                onderscheiden
+                van rollen, en het dragen van gezamenlijke verantwoordelijkheid?</h3>
+            <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="radio" name="vraag5" id="vraag5-1" value="a"
+                       _="install UitslagSessie(vraag: 5)">
+                <label class="custom-control-label" for="vraag5-1">Op onze school werken er voornamelijk leerkrachten
+                                                                   die verantwoordelijk zijn voor hun eigen klas</label><br>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input class="custom-control-input" type="radio" name="vraag5" id="vraag5-2" value="b"
+                       _="install UitslagSessie(vraag: 5)">
+                <label class="custom-control-label" for="vraag5-2">Naast functiedifferentiatie (leerkracht,
+                                                                   onderwijsassistent) vindt er op onze school ook <br>roldifferentiatie
+                                                                   plaats ( leerkracht als
+                                                                   instructeur, begeleider, coach, observator). <br>We
+                                                                   werken voornamelijk in teamverband en zijn
+                                                                   gezamenlijk verantwoordelijk <br>voor de planning en
+                                                                   uitvoering van het onderwijs</label><br>
+            </div>
+        </div>
+    {{/eq}}
+
+
+    <button type="submit" value="Waar sta ik nu in de Slimfit box?" class="btn btn-primary">
+        Waar sta ik nu in de Slimfit box?
+    </button>
+</form>

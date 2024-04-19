@@ -1,0 +1,12 @@
+[[extend "lts/builder_layout.html"]]
+
+<form method="POST" action="[[=URL('builder/2')]]">
+    <label for="url">Voer hier een delen.meteddie.nl URL met geselecteerde filters in:</label> <br/>
+    <input name="URL" type="url" id="url"
+           class="form-control"
+           placeholder="https://delen.meteddie.nl/?tags=..."
+    /> <br/>
+    <small>Of klik op volgende om handmatig opties te selecteren</small>
+    <br/>
+    <button class="btn btn-primary">Volgende</button>
+</form>

@@ -1,0 +1,19 @@
+{{if grid:}}
+{{=grid}}
+{{else:}}
+{{for detail in question_details:}}
+<div class="card">
+    <div class="card-title" style="background-color:#EEEEEE; padding: 1px 1px 1px 1px;">
+        <h4>{{=detail.question.question}}</h4>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{=detail.question.description}}</h5>
+        <p class="card-text">
+        {{=remove_delete_button_from_form(detail.form)}}
+            <!-- todo: simplemde toevoegen ; maar id van textarea is niet uniek -->
+        </p>
+    </div>
+</div>
+{{pass}}
+{{pass}}
+<script src="{{=URL('static', 'js/edit.js')}}"></script>

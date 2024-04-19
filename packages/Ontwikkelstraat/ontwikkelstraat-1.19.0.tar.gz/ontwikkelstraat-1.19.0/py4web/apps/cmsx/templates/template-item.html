@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Delen met Eddie</title>
+    <!--        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">-->
+    <link rel="stylesheet" href="[[=URL('static/mystyles.css')]]">
+    <script src="[[=URL('static/js/bulma.js')]]"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+          integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""></script>
+
+    [[if locals().get('metadata'): # custom (truthy) metadata:]]
+    [[=metadata]]
+    [[else: # default metadata:]]
+    <meta property="og:title" content="Delen met Eddie"/>
+    <meta property="og:description" content="Samen onderwijs ontwikkelen op basis van ervaring."/>
+    <meta property="og:image" content="[[=URL('static/images/logo.png')]]"/>
+    [[pass]]
+    <!-- Load from unpkg -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-gesture-handling/dist/leaflet-gesture-handling.min.css"
+          type="text/css">
+    <script src="https://unpkg.com/leaflet-gesture-handling"></script>
+    <!-- _hs must go BEFORE hs w9y! -->
+    <script type="text/hyperscript" src="[[=URL('static/js/commands._hs')]]"></script>
+    <script type="text/hyperscript" src="[[=URL('static/js/behaviors._hs')]]"></script>
+    <script src="[[=URL('static/js/_hyperscript_w9y-0.9.5-dev.min.js')]]"></script>
+
+    <!-- Load from unpkg -->
+    <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+
+    <!-- htmx extend exposes internal HTMX code to JS:
+     - htmx.vals (hx-vals)
+     - htmx.vars (hx-vars)
+     - htmx.expression_vars (= vals + vars)
+    -->
+    <script src="[[=URL('static/js/htmx_extend.js')]]"></script>
+
+    <!-- Add custom JS functionality -->
+    <script src="[[=URL('static/js/javascript_dependencies.js')]]"></script>
+
+    <script>
+        // htmx.logAll();
+    </script>
+
+    <style>
+        .tag-depth-1.is-primary a, .tag-depth-1.is-active a {
+            color: red;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .is-centered-mobile {
+                justify-content: center !important;
+            }
+        }
+
+        @media screen and (max-width: 1023px) {
+                #qfield {
+                    width: 75%;
+                    margin: auto;
+            }
+        }
+
+        .thumbs-UP path {
+            fill: crimson;
+        }
+
+        .starred path {
+            fill: #ffcc63; /* gejat van https://www.educationwarehouse.nl/ons-werk/ */
+        }
+
+        .pagination-link {
+            color: #7b828d;
+            font-weight: 800;
+        }
+
+        .pagination-link.is-current {
+            background-color: transparent;
+            border: none;
+            color: #000;
+            font-weight: 800;
+        }
+
+        .pagination-previous[disabled], .pagination-next[disabled], .pagination-link[disabled] {
+            background-color: transparent;
+            border: none;
+        }
+
+        .pagination-previous:active, .pagination-next:active, .pagination-link:active {
+            box-shadow: none;
+        }
+
+        .edwh-quickfilter-button {
+            font-weight: 600;
+        }
+        #qfield {
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        #qform_q {
+            padding-left: 1rem;
+            transition: margin-left .3s;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+        /*#qfield:hover #qform_q, #qfield:focus #qform_q {
+            margin-left: 0%;
+            width: 100%;
+            padding-left: 1rem;
+
+        }
+        */
+    </style>
+</head>
+<body hx-vals='{
+    "item_uri_template":"/item/{}",
+    "user_uri_template":"/user/{}",
+    "login_url":"https://fragments.meteddie.nl/v1.0/front_end/login"
+   }'
+      id="edwh-messagebus"
+      class="edwh-messagebus"
+      hx-vars="GHOST_BASE: input('GHOST_BASE'), FRONT_END_BASE: input('FRONT_END_BASE')"
+>
+<input type="hidden" name="GHOST_BASE" value="/">
+<input type="hidden" name="FRONT_END_BASE" value="/fragmentx">
+
+<script>
+    function input(selector) {
+        return document.querySelector(`[name=${selector}]`).value;
+    }
+</script>
+<script>
+    <!-- IE check -->
+    if (window.document.documentMode) {
+        alert('Deze website werkt NIET in Internet Explorer, download een nieuwere browser.');
+    }
+</script>
+
+<!-- beginning of HTML inserted by extending template -->
+<nav class="navbar is-spaced" style="background-color: #25303d;">
+    <div class="container">
+
+
+        <div class="navbar-brand" style="width: 100%;">
+
+            <a class="navbar-item" href="/">
+                <svg height="5em" viewBox="0 0 328.028 126.09">
+                    <g data-name="Group 45" transform="translate(528.44 -240.111)">
+                        <circle data-name="Ellipse 36" cx="55.819" cy="55.819" r="55.819"
+                                transform="rotate(8 -1973.325 -3547.372)" fill="#FF714F"></circle>
+                        <g data-name="Group 42">
+                            <g data-name="Group 41">
+                                <path data-name="Path 233"
+                                      d="M-465.384 326.755a23.1 23.1 0 01-18.5-9.342 2.427 2.427 0 01.51-3.393 2.429 2.429 0 013.393.509 17.985 17.985 0 0014.6 7.375 17.991 17.991 0 0014.577-7.344 2.427 2.427 0 013.394-.5 2.427 2.427 0 01.5 3.394 23.106 23.106 0 01-18.474 9.301z"
+                                      fill="#000"></path>
+                            </g>
+                        </g>
+                        <path data-name="Path 234"
+                              d="M-444.829 305.581h-41.141a2.426 2.426 0 01-2.426-2.426 23.023 23.023 0 0123-23 23.022 23.022 0 0123 23 2.426 2.426 0 01-2.433 2.426zm-38.553-4.852h35.966a18.172 18.172 0 00-17.983-15.717 18.172 18.172 0 00-17.98 15.717z"
+                              fill="#000"></path>
+                        <path data-name="Path 235"
+                              d="M-465.396 343.261a40.15 40.15 0 01-40.1-40.1 40.15 40.15 0 0140.1-40.1 40.15 40.15 0 0140.1 40.1 2.426 2.426 0 01-2.426 2.426h-56.559a2.426 2.426 0 01-2.426-2.426 2.426 2.426 0 012.426-2.426h54.051a35.3 35.3 0 00-35.17-32.825 35.292 35.292 0 00-35.252 35.252 35.292 35.292 0 0035.252 35.252 35.361 35.361 0 0028.681-14.745 2.426 2.426 0 013.385-.559 2.426 2.426 0 01.559 3.385 40.223 40.223 0 01-32.621 16.766z"
+                              fill="#000"></path>
+                        <g data-name="Group 44">
+                            <g data-name="Group 43" fill="#fff">
+                                <path data-name="Path 236"
+                                      d="M-367.826 309.282a8.661 8.661 0 003.279 5.22 10.5 10.5 0 006.747 2.13 12.9 12.9 0 005.446-1.15 10.558 10.558 0 003.524-2.318l1.093-1.169 5.39 6.936-.7.7a20.492 20.492 0 01-2.016 1.6 24.157 24.157 0 01-3.279 2.016 21.058 21.058 0 01-4.5 1.564 23.919 23.919 0 01-5.711.679 19.52 19.52 0 01-14.21-5.785 18.8 18.8 0 01-5.88-13.89 18.911 18.911 0 015.8-13.889 19 19 0 0113.909-5.786 18.272 18.272 0 0113.494 5.409 18.369 18.369 0 015.39 13.513l-.377 4.222zm3.26-12.326a10.208 10.208 0 00-3.26 5.013h17.376a8.6 8.6 0 00-2.883-4.976 8.289 8.289 0 00-5.6-1.96 8.538 8.538 0 00-5.632 1.923z"></path>
+                                <path data-name="Path 237"
+                                      d="M-314.305 287.495a13.32 13.32 0 013.976 2.639l1.168 1.394v-20.844h10.4v54.051h-10.4v-4.632a5.446 5.446 0 01-.471.585q-.32.357-1.356 1.281a15.533 15.533 0 01-2.243 1.659 13.266 13.266 0 01-3.129 1.3 14.064 14.064 0 01-3.995.565 17.015 17.015 0 01-12.76-5.71 19.551 19.551 0 01-5.408-13.965 19.55 19.55 0 015.408-13.965 17.015 17.015 0 0112.76-5.711 13.722 13.722 0 016.05 1.353zm2.431 25.82a10.628 10.628 0 002.713-7.5 10.562 10.562 0 00-2.713-7.482 8.632 8.632 0 00-6.559-2.92 8.631 8.631 0 00-6.558 2.92 10.559 10.559 0 00-2.714 7.482 10.626 10.626 0 002.714 7.5 8.6 8.6 0 006.558 2.94 8.6 8.6 0 006.564-2.941z"></path>
+                                <path data-name="Path 238"
+                                      d="M-272.262 287.495a13.325 13.325 0 013.977 2.639l1.168 1.394v-20.844h10.4v54.051h-10.4v-4.632a5.619 5.619 0 01-.471.585q-.32.357-1.356 1.281a15.5 15.5 0 01-2.243 1.659 13.26 13.26 0 01-3.128 1.3 14.069 14.069 0 01-4 .565 17.014 17.014 0 01-12.759-5.71 19.549 19.549 0 01-5.409-13.965 19.547 19.547 0 015.409-13.965 17.015 17.015 0 0112.759-5.711 13.717 13.717 0 016.053 1.353zm2.431 25.82a10.626 10.626 0 002.714-7.5 10.559 10.559 0 00-2.714-7.482 8.631 8.631 0 00-6.558-2.92 8.629 8.629 0 00-6.558 2.92 10.556 10.556 0 00-2.714 7.482 10.622 10.622 0 002.714 7.5 8.6 8.6 0 006.558 2.94 8.6 8.6 0 006.559-2.941z"></path>
+                                <path data-name="Path 239"
+                                      d="M-242.189 280.296a6.282 6.282 0 01-4.523 1.582 5.644 5.644 0 01-4.2-1.582 5.722 5.722 0 01-1.564-4.2 5.681 5.681 0 011.583-4.2 5.656 5.656 0 014.184-1.583 6.28 6.28 0 014.523 1.583 5.541 5.541 0 011.659 4.2 5.545 5.545 0 01-1.662 4.2zm.9 44.439h-10.441v-37.843h10.441z"></path>
+                                <path data-name="Path 240"
+                                      d="M-228.187 309.282a8.658 8.658 0 003.279 5.22 10.5 10.5 0 006.747 2.13 12.9 12.9 0 005.446-1.15 10.559 10.559 0 003.524-2.318l1.093-1.169 5.39 6.936-.7.7a20.488 20.488 0 01-2.016 1.6 24.158 24.158 0 01-3.279 2.016 21.058 21.058 0 01-4.5 1.564 23.918 23.918 0 01-5.711.679 19.52 19.52 0 01-14.21-5.785 18.8 18.8 0 01-5.88-13.89 18.911 18.911 0 015.8-13.889 19 19 0 0113.909-5.786 18.272 18.272 0 0113.494 5.409 18.369 18.369 0 015.39 13.513l-.377 4.222zm3.26-12.326a10.208 10.208 0 00-3.26 5.013h17.376a8.6 8.6 0 00-2.883-4.976 8.289 8.289 0 00-5.6-1.96 8.539 8.539 0 00-5.637 1.923z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </a>
+
+
+            <a style="height: 5em; margin-right: 1rem; zoom: 2; color: white;" role="button" class="navbar-burger burger"
+               aria-label="menu" aria-expanded="false"
+               data-target="edwh-loaded-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </div>
+    <div id="edwh-loaded-menu" class="navbar-menu" style="background-color: #25303d;">
+                <div class="navbar-start">
+                </div>
+
+                <div class="navbar-end">
+                    <!--<a class="navbar-item" href="javascript:void(0)">-->
+                    <!--    Home-->
+                    <!--</a>-->
+                    <!--<div class="navbar-item">-->
+                    <!--    <div class="field is-grouped">-->
+                    <!--        <p class="control">-->
+                    <!--            <a class="bd-tw-button button is-rounded" target="_blank" href="javascript:void(0)">-->
+                    <!--                  <span class="icon">-->
+                    <!--                    <i class="fas fa-user-circle"></i>-->
+                    <!--                  </span>-->
+                    <!--                <span>Login</span>-->
+                    <!--            </a>-->
+                    <!--        </p>-->
+                    <!--    </div>-->
+                    <form class="navbar-item no-form-trap" id="qform"
+              _="install Search()"
+              __="-- als de zoekbalk op een andere pagina moet zoeken, zoals bij onderwijsindeleidseregio.nl
+                      -- gebruik dan `install Search(default: 'ervaringen')` om te verwijzen naar /ervaringen/?q=..."
+        >
+            <div id="qfield" class="field has-addons is-rounded">
+                <div class="control is-expanded">
+                    <input style="border:none;"
+                           id="qform_q" class="input" type="text"
+                           name="q" placeholder="Zoek andere praktijken"
+                           _="install SearchUI"
+                    >
+                </div>
+                <div class="control">
+                    <button style="border:none;"
+                            type="submit" class="button">
+                        <svg viewBox="0 0 56.966 56.966" width="1em" height="1em"
+                             class="Search_icon__2He-- Icon_icon__3CNyK Icon_reverse__2_gph">
+                            <path d="M55.146 51.887L41.588 37.786A22.926 22.926 0 0046.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 00.083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"
+                                  fill="#25303D"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </form>
+                    <div id="menu"
+                         hx-trigger="load"
+                         hx-post="menu"
+                         hx-ext='json-enc'
+                    >
+
+                    </div>
+                </div>
+            </div>
+</nav>
+<main>
+    <!-- content injected by extending page -->
+    [[include]]
+</main>
+<!-- end of HTML inserted by extending template -->
+
+<footer class="footer">
+    <div class="container is-fluid">
+        <div class="columns is-multiline is-justify-content-space-between is-align-items-center">
+            <div class="column is-narrow-tablet is-relative is-flex is-justify-content-center">
+                <svg style="height: 4rem; overflow: visible;" viewBox="0 0 328.028 126.09">
+                    <g data-name="Group 45" transform="translate(528.44 -240.111)">
+                        <circle data-name="Ellipse 36" cx="55.819" cy="55.819" r="55.819"
+                                transform="rotate(8 -1973.325 -3547.372)" fill="#FF714F"></circle>
+                        <g data-name="Group 42">
+                            <g data-name="Group 41">
+                                <path data-name="Path 233"
+                                      d="M-465.384 326.755a23.1 23.1 0 01-18.5-9.342 2.427 2.427 0 01.51-3.393 2.429 2.429 0 013.393.509 17.985 17.985 0 0014.6 7.375 17.991 17.991 0 0014.577-7.344 2.427 2.427 0 013.394-.5 2.427 2.427 0 01.5 3.394 23.106 23.106 0 01-18.474 9.301z"
+                                      fill="#25303d"></path>
+                            </g>
+                        </g>
+                        <path data-name="Path 234"
+                              d="M-444.829 305.581h-41.141a2.426 2.426 0 01-2.426-2.426 23.023 23.023 0 0123-23 23.022 23.022 0 0123 23 2.426 2.426 0 01-2.433 2.426zm-38.553-4.852h35.966a18.172 18.172 0 00-17.983-15.717 18.172 18.172 0 00-17.98 15.717z"
+                              fill="#25303d"></path>
+                        <path data-name="Path 235"
+                              d="M-465.396 343.261a40.15 40.15 0 01-40.1-40.1 40.15 40.15 0 0140.1-40.1 40.15 40.15 0 0140.1 40.1 2.426 2.426 0 01-2.426 2.426h-56.559a2.426 2.426 0 01-2.426-2.426 2.426 2.426 0 012.426-2.426h54.051a35.3 35.3 0 00-35.17-32.825 35.292 35.292 0 00-35.252 35.252 35.292 35.292 0 0035.252 35.252 35.361 35.361 0 0028.681-14.745 2.426 2.426 0 013.385-.559 2.426 2.426 0 01.559 3.385 40.223 40.223 0 01-32.621 16.766z"
+                              fill="#25303d"></path>
+                        <g data-name="Group 44">
+                            <g data-name="Group 43" fill="#fff">
+                                <path data-name="Path 236"
+                                      d="M-367.826 309.282a8.661 8.661 0 003.279 5.22 10.5 10.5 0 006.747 2.13 12.9 12.9 0 005.446-1.15 10.558 10.558 0 003.524-2.318l1.093-1.169 5.39 6.936-.7.7a20.492 20.492 0 01-2.016 1.6 24.157 24.157 0 01-3.279 2.016 21.058 21.058 0 01-4.5 1.564 23.919 23.919 0 01-5.711.679 19.52 19.52 0 01-14.21-5.785 18.8 18.8 0 01-5.88-13.89 18.911 18.911 0 015.8-13.889 19 19 0 0113.909-5.786 18.272 18.272 0 0113.494 5.409 18.369 18.369 0 015.39 13.513l-.377 4.222zm3.26-12.326a10.208 10.208 0 00-3.26 5.013h17.376a8.6 8.6 0 00-2.883-4.976 8.289 8.289 0 00-5.6-1.96 8.538 8.538 0 00-5.632 1.923z"></path>
+                                <path data-name="Path 237"
+                                      d="M-314.305 287.495a13.32 13.32 0 013.976 2.639l1.168 1.394v-20.844h10.4v54.051h-10.4v-4.632a5.446 5.446 0 01-.471.585q-.32.357-1.356 1.281a15.533 15.533 0 01-2.243 1.659 13.266 13.266 0 01-3.129 1.3 14.064 14.064 0 01-3.995.565 17.015 17.015 0 01-12.76-5.71 19.551 19.551 0 01-5.408-13.965 19.55 19.55 0 015.408-13.965 17.015 17.015 0 0112.76-5.711 13.722 13.722 0 016.05 1.353zm2.431 25.82a10.628 10.628 0 002.713-7.5 10.562 10.562 0 00-2.713-7.482 8.632 8.632 0 00-6.559-2.92 8.631 8.631 0 00-6.558 2.92 10.559 10.559 0 00-2.714 7.482 10.626 10.626 0 002.714 7.5 8.6 8.6 0 006.558 2.94 8.6 8.6 0 006.564-2.941z"></path>
+                                <path data-name="Path 238"
+                                      d="M-272.262 287.495a13.325 13.325 0 013.977 2.639l1.168 1.394v-20.844h10.4v54.051h-10.4v-4.632a5.619 5.619 0 01-.471.585q-.32.357-1.356 1.281a15.5 15.5 0 01-2.243 1.659 13.26 13.26 0 01-3.128 1.3 14.069 14.069 0 01-4 .565 17.014 17.014 0 01-12.759-5.71 19.549 19.549 0 01-5.409-13.965 19.547 19.547 0 015.409-13.965 17.015 17.015 0 0112.759-5.711 13.717 13.717 0 016.053 1.353zm2.431 25.82a10.626 10.626 0 002.714-7.5 10.559 10.559 0 00-2.714-7.482 8.631 8.631 0 00-6.558-2.92 8.629 8.629 0 00-6.558 2.92 10.556 10.556 0 00-2.714 7.482 10.622 10.622 0 002.714 7.5 8.6 8.6 0 006.558 2.94 8.6 8.6 0 006.559-2.941z"></path>
+                                <path data-name="Path 239"
+                                      d="M-242.189 280.296a6.282 6.282 0 01-4.523 1.582 5.644 5.644 0 01-4.2-1.582 5.722 5.722 0 01-1.564-4.2 5.681 5.681 0 011.583-4.2 5.656 5.656 0 014.184-1.583 6.28 6.28 0 014.523 1.583 5.541 5.541 0 011.659 4.2 5.545 5.545 0 01-1.662 4.2zm.9 44.439h-10.441v-37.843h10.441z"></path>
+                                <path data-name="Path 240"
+                                      d="M-228.187 309.282a8.658 8.658 0 003.279 5.22 10.5 10.5 0 006.747 2.13 12.9 12.9 0 005.446-1.15 10.559 10.559 0 003.524-2.318l1.093-1.169 5.39 6.936-.7.7a20.488 20.488 0 01-2.016 1.6 24.158 24.158 0 01-3.279 2.016 21.058 21.058 0 01-4.5 1.564 23.918 23.918 0 01-5.711.679 19.52 19.52 0 01-14.21-5.785 18.8 18.8 0 01-5.88-13.89 18.911 18.911 0 015.8-13.889 19 19 0 0113.909-5.786 18.272 18.272 0 0113.494 5.409 18.369 18.369 0 015.39 13.513l-.377 4.222zm3.26-12.326a10.208 10.208 0 00-3.26 5.013h17.376a8.6 8.6 0 00-2.883-4.976 8.289 8.289 0 00-5.6-1.96 8.539 8.539 0 00-5.637 1.923z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+                <a href="/" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></a>
+            </div>
+            <div class="column is-8">
+                <div class="columns is-mobile is-multiline has-text-centered footer-links is-justify-content-end">
+                    <div class="column is-12-mobile is-6-tablet is-narrow-widescreen is-relative px-4"><a
+                            href="https://educationwarehouse.nl" target="_blank">educationwarehouse.nl</a></div>
+                    <div class="column is-12-mobile is-6-tablet is-narrow-widescreen is-relative px-4"><a
+                            href="https://www.educationwarehouse.nl/#contact" target="_blank">contact</a></div>
+                    <div class="column is-12-mobile is-6-tablet is-narrow-widescreen is-relative px-4"><a
+                            href="https://www.educationwarehouse.nl/wp-content/uploads/2020/12/Privacyverklaring-delen.meteddie.nl-v2020.12.pdf"
+                            target="_blank">privacyverklaring</a></div>
+                    <div class="column is-12-mobile is-6-tablet is-narrow-widescreen is-relative px-4"><a
+                            href="https://www.educationwarehouse.nl/wp-content/uploads/2020/12/Gebruikersvoorwaarden-delen.meteddie.nl-v2020.12.pdf"
+                            target="_blank">gebruikersvoorwaarden</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<template id="loading-error">
+    <article class="message is-danger" style="max-width: 1000px; margin: auto;">
+        <div class="message-body">
+            Er ging wat mis bij het laden van dit element.
+            Probeer het later opnieuw.
+        </div>
+    </article>
+</template>
+
+<div hx-get="simpleanalytics" hx-trigger="load" hx-swap="outerHTML"></div>
+
+</body>
+<script src="[[=URL('static/js/browser-report.js')]]"></script>
+<script>
+    // PREFIX ALLES MET /fragmentx (of een andere url)
+    document.body.addEventListener("htmx:configRequest", (event) => {
+        const base = input('FRONT_END_BASE');
+        if (!event.detail.path.startsWith('https://')) {
+            event.detail.path = `${base}/${event.detail.path}`;
+        }
+    });
+
+</script>
+
+<script type="text/hyperscript">
+    on htmx:responseError
+      render #loading-error then put it into event.detail.target
+</script>
+</html>

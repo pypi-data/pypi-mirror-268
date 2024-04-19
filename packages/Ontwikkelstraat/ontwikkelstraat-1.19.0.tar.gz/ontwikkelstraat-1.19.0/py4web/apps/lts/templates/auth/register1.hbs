@@ -1,0 +1,58 @@
+<form hx-post="register-step-1" id="signup-1" class="box no-form-trap">
+    Wat is de locatie en naam van de school waar jij werkzaam bent?
+    <div class="field">
+        <label for="signup-locatie">Locatie</label>
+        <input list="plaatsen-list" required class="input" name="locatie" id="signup-locatie"
+               placeholder="Amsterdam" value="{{old.location}}"
+               hx-get="list_plaatsen"
+               hx-target="#plaatsen-list"
+               hx-trigger="keyup changed delay:300ms"
+        />
+        <datalist id="plaatsen-list" data-url="list_plaatsen">
+        </datalist>
+    </div>
+    <div class="field">
+        <label for="signup-school">School</label>
+        <input list="scholen-list" required class="input" name="school" id="signup-school"
+               placeholder="Barlaeus" value="{{old.organisation}}"
+               hx-get="list_scholen"
+               hx-include="#signup-locatie"
+               hx-target="#scholen-list"
+               hx-trigger="keyup changed delay:300ms"
+
+               _="install KvK"
+        />
+        <datalist id="scholen-list" data-url="list_scholen">
+        </datalist>
+        <input type="hidden" name="kvk" id="input-kvk" value="{{old.kvk}}" />
+    </div>
+    Wat is je naam en wat is jouw rol op school?
+    <div class="field">
+        <label for="signup-voornaam">Voornaam</label>
+        <input required class="input" name="voornaam" id="signup-voornaam" placeholder="John" value="{{old.firstname}}" />
+    </div>
+    <div class="field">
+        <label for="signup-achternaam">Achternaam</label>
+        <input required class="input" name="achternaam" id="signup-achternaam" placeholder="Doe" value="{{old.lastname}}" />
+    </div>
+    <div class="field">
+        <label for="signup-rol">Rol</label>
+        <input required class="input" name="rol" id="signup-rol" placeholder="Docent" value="{{old.primaryOrganisationalRole}}" />
+    </div>
+
+    <div class="field is-grouped" style="justify-content: space-between">
+        <div>
+            <button class="button is-primary is-rounded control mx-1" type="submit" name="submit-step1">
+                Volgende
+            </button>
+            <button class="button is-rounded control mx-1" type="button"
+                    _="on click send ew:load_form(form: 'login') to closest .edwh-messagebus">
+                Al een account? Log in
+            </button>
+        </div>
+        <button type="button" id="cancel-1" class="button is-rounded control"
+                _="install CloseModal">
+            Annuleer
+        </button>
+    </div>
+</form>

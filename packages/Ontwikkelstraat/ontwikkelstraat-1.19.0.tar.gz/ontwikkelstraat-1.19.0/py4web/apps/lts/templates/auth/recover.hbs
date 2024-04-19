@@ -1,0 +1,39 @@
+<form class="box no-form-trap"
+      hx-post="recover"
+      hx-trigger="submit"
+      hx-target="#recover-feedback"
+
+      _="on ew:success add @disabled to #submit-recovery"
+>
+    <div class="field">
+        <label class="label" for="field-email">Email</label>
+        <div class="control has-icons-left has-icons-right">
+            <input name="email" value="{{data.email}}" class="input" required type="email" placeholder="docent@school.nl"
+                   id="recover-email">
+            <span class="icon is-small is-left">
+                <i class="fas fa-paper-plane"></i>
+            </span>
+        </div>
+        <small class="help">Als je hier je emailadres invult, dan sturen we je een nieuw
+                            wachtwoord.<br />
+                            Je oude wachtwoord is dan niet meer te gebruiken!
+        </small>
+        <p id="recover-feedback"></p>
+    </div>
+
+    <div class="field is-grouped" style="justify-content: space-between">
+        <div>
+            <!-- left -->
+            <div class="control">
+                <button class="button is-primary is-rounded" id="submit-recovery">Stuur nieuw wachtwoord</button>
+                <button class="button is-secondary is-rounded" type="button" _="on click send ew:load_form(form: 'login', email: '{{data.email}}') to closest .edwh-messagebus">
+                    Terug naar inloggen</button>
+            </div>
+        </div>
+        <div class="control">
+            <button class="button is-rounded" type="button" _="install CloseModal">
+                Annuleer
+            </button>
+        </div>
+    </div>
+</form>

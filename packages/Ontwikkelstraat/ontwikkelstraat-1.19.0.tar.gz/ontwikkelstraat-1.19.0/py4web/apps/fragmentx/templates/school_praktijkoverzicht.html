@@ -1,0 +1,10 @@
+[[for tile in tiles:]]
+    <div class="columns py-3">
+        <div class="column is-3">
+            <h2 class="title is-spaced">
+                <a href="https://delen.meteddie.nl/school/[[=tile.org_gid]]" target="_blank">[[=tile.org_name]]</a>
+            </h2>
+        </div>
+        <div class="column">[[=XML(tile.tiles)]]</div>
+    </div>
+[[pass]]

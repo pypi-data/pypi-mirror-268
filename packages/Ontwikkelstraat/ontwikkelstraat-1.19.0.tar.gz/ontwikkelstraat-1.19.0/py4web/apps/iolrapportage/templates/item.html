@@ -1,0 +1,15 @@
+[[extend 'template-item.html']]
+<form class="item-container"
+      hx-get="item"
+      hx-trigger="ew:state_changed from:closest .edwh-messagebus"
+>
+    <input name="item_id" type="hidden" _=" on load call extract_id_from_url('item') then set my value to it then send ew:state_changed to closest .edwh-messagebus
+">
+    <div class="columns is-mobile is-centered">
+        <div class="column is-half">
+            <p class="bd-notification is-primary">
+                <progress class="progress is-small is-primary" max="100">15%</progress>
+            </p>
+        </div>
+    </div>
+</form>

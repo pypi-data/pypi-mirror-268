@@ -1,0 +1,18 @@
+<!-- https://bulma.io/documentation/components/menu/ -->
+
+<div class="edwh-columns">
+    <div class="edwh-filter-column px-0">
+        <div class="is-pulled-left pb-5">
+            <!-- actieve filters -->
+            [[include 'active_filters.html']]
+        </div>
+
+        <div class="buttons is-pulled-right">
+            <!-- alle filter -->
+
+            [[=partial('filterbuttons')]]
+        </div>
+    </div>
+
+    [[=partial('filtermenu')]]
+</div>

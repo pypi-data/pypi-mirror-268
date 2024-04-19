@@ -1,0 +1,52 @@
+{{extend 'applog/applog_layout.html'}}
+
+<h4>{{=count}} Veranderingen van {{=author_email.split("@")[0]}}</h4>
+{{filterbalk()}}
+
+<div style="display: flex; flex-flow: row wrap; justify-content: center">
+    <div style="margin: 20px 100px; max-width: 90vw;">
+        {{for idx, row in enumerate(changes):}}
+        {{item = items.get(row.item_gid)}}
+        {{if not item: continue}}
+
+        <div class="card">
+            <div class="card-header" id="heading-{{=idx}}">
+                <h5 class="mb-0">
+                    <button class="btn btn-link"
+                            data-toggle="collapse" data-target="#collapse-{{=idx}}"
+                            aria-expanded="true" aria-controls="collapse-{{=idx}}"
+                    >
+                    <span
+                            style="color: {{={
+                            'read-item': 'darkgrey',
+                            'create-item': 'green',
+                            'update-item': '#CC7722',
+                            'remove-item': 'red',
+                            }.get(row.log_action, 'inherit')}}"
+                    >
+                    {{=row.log_action.split('-')[0]}} '{{=item['name']}}' @ {{=row.signal_ts.strftime('%d %b %Y, %H:%M:%S')}}
+                    </span>
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapse-{{=idx}}" class="collapse" aria-labelledby="heading-{{=idx}}" data-parent="#accordion">
+                <div class="card-body">
+                    <ul>
+                        <li>Item: <a href="{{=URL('applog', 'item', row.item_gid)}}"><b>{{=item['name']}}</b></a>
+                        </li>
+                        {{for changed_key, values in row.changes.items():}}
+                        <li>{{=changed_key.replace('_', ' ')}}:<br/> {{=format_diff(values)}}</li>
+                        {{pass}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{pass}}
+
+        {{=render_paginate()}}
+    </div>
+    <div style="margin: 20px 100px">
+        {{samenvatting(changes, items)}}
+    </div>
+</div>

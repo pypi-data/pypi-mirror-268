@@ -1,0 +1,44 @@
+<div class="dropdown is-hoverable" id="order-dropdown">
+    <div class="dropdown-trigger">
+        <button class="button is-rounded" aria-haspopup="true" aria-controls="sorting-dropdown">
+            <span id="sorteren-op">Sorteren op</span>
+            <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+        </button>
+    </div>
+    <div class="dropdown-menu" id="sorting-dropdown" role="menu">
+        <div class="dropdown-content">
+            [[for index, option in enumerate(order_options):]]
+                <a data-order="[[=option.code]]"
+                   _="on click send ew:change_state(order: '[[=escape(option.code)]]') to closest .edwh-messagebus"
+                   class="dropdown-item [[if not index:]] default [[pass]]">
+                    [[=option.label]]
+                </a>
+            [[pass]]
+        </div>
+    </div>
+</div>
+&nbsp;
+<button id="filtermenu-open"
+        class="button is-rounded is-primary has-text-weight-bold" type="button"
+        _="
+                    install ToggleIcon(before: '[[=icon_before]]', after: '[[=icon_after]]')
+                    on click
+                        toggle .is-hidden on #filtermenu
+                        set the value of start_open to not (#filtermenu matches .is-hidden)
+                    "
+>Filters&nbsp;<span id="filtercount"
+                    _="
+            on ew:filters_changed from closest .edwh-messagebus
+                set count to json_tags({id: id of closest .edwh-state}).length
+                if count
+                    call my.text(`(${count})`)
+                else
+                    call my.text('')
+                end
+            end
+            "
+></span>
+    <i class="edwh-fa fas [[=icon_before]] ml-1"></i>
+</button>

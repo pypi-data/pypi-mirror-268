@@ -1,0 +1,58 @@
+<div
+        id="vraag"
+>
+        <section class="section pt-6">
+        <div class="voortgang columns is-multiline is-mobile is-justify-content-center">
+            {{#each beantwoord}}
+                <div class="beantwoord is-1 column my-2 mx-2"></div>{{/each}}
+            {{#each onbeantwoord}}
+                <div class="onbeantwoord is-1 column my-2 mx-2"></div>{{/each}}
+        </div>
+    </section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+    <h3 class="title is-4 mb-6">{{vraag_nr}}. {{vraag}}</h3>
+
+    {{#each antwoorden}}
+        <div class="columns is-multiline is-mobile">
+            <div class="column is-narrow mr-6 box mb-0 has-text-centered is-flex is-align-items-center">
+            <input name="vraag{{../vraag_nr}}" class="radio my-3 mx-3" type="radio"
+                   id="vraag{{../vraag_nr}}-{{@index}}" value="{{value}}"
+                   _="-- install UitslagSessie(vraag: {{../vraag_nr}})"
+
+                   hx-post="{{absolute_url 'vraag' ../volgende_vraag}}"
+                   hx-target="#vraag"
+                   hx-swap="outerHTML"
+
+            >
+                </div>
+            <label class="column box is-flex is-align-items-center has-text-light px-5" for="vraag{{../vraag_nr}}-{{@index}}">{{label}}
+            </label>
+
+        </div>
+    <br>
+    {{/each}}
+
+    {{#if vorige_vraag}}
+        <div class="buttons is-right">
+        <button class="edwh-quickfilter-button"
+                hx-post="{{absolute_url 'vraag' ../vorige_vraag}}"
+                hx-trigger="ew:previous,click"
+                hx-target="#vraag"
+                hx-swap="outerHTML"
+                id="back"
+        >Vorige vraag
+        </button>
+
+        <button type="button" class="edwh-quickfilter-button" _="on click send ew:restart">Begin Opnieuw</button>
+        </div>
+    {{/if}}
+        </div>
+    </section>
+</div>
+
+<script>
+    // needed to detect popstate:
+    history.pushState({page: 'vraag-{{vraag_nr}}'}, "");
+</script>

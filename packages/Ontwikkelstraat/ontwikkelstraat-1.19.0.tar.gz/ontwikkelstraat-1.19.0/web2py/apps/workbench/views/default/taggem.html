@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+<input id="filter" placeholder="Filter onderstaande lijst. Zodra je zoekopdracht in de regel voorkomt wordt het getoond." class="form-control" type="text" />
+<script>
+    $('#filter').keyup(function(event){
+        var needle = $(event.target)[0].value;
+        var re = new RegExp(needle,'i');
+        $('.web2py_table div table tbody tr').each(function(index){ // pas de tr.dv_row aan naar de selectie die voor jou van toepassing is
+            if (re.test($(this).text())){
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        })
+    })
+</script>
+
+{{=form}}
+{{=response.toolbar()}}
