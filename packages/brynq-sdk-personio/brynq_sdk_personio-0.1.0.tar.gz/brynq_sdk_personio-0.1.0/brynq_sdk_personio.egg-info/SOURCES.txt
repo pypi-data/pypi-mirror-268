@@ -1,0 +1,10 @@
+setup.py
+brynq_sdk/personio/__init__.py
+brynq_sdk/personio/attendances.py
+brynq_sdk/personio/employees.py
+brynq_sdk_personio.egg-info/PKG-INFO
+brynq_sdk_personio.egg-info/SOURCES.txt
+brynq_sdk_personio.egg-info/dependency_links.txt
+brynq_sdk_personio.egg-info/not-zip-safe
+brynq_sdk_personio.egg-info/requires.txt
+brynq_sdk_personio.egg-info/top_level.txt
