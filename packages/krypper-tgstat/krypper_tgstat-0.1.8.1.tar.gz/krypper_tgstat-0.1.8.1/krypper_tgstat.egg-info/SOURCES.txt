@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+krypper_tgstat/__init__.py
+krypper_tgstat/classes.py
+krypper_tgstat/enums.py
+krypper_tgstat/exceptions.py
+krypper_tgstat/tg_stat.py
+krypper_tgstat.egg-info/PKG-INFO
+krypper_tgstat.egg-info/SOURCES.txt
+krypper_tgstat.egg-info/dependency_links.txt
+krypper_tgstat.egg-info/requires.txt
+krypper_tgstat.egg-info/top_level.txt
+tests/test_TGStatSync.py
