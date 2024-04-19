@@ -1,0 +1,4 @@
+[whyis]
+backbone_agent = perception_pipeline.pipeline_agent:BackboneAgent
+whyis_activity_agent = whyis_activitystreams.activity_agent:ActivityAgent
+whyis_activitystreams = whyis_activitystreams:ActivityStreamsPlugin
