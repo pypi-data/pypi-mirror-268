@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: pesuacademy
+Version: 0.0.1
+Summary: Python wrapper and APIs for the PESU Academy website
+Home-page: https://github.com/HackerSpace-PESU/pesuacademy-py
+Author: Aditeya Baral
+Author-email: aditeya.baral@gmail.com
+Keywords: pesu,pesu academy,api,wrapper,python
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: requests-html
+Requires-Dist: beautifulsoup4
+Requires-Dist: lxml-html-clean
+
+# PESU Academy API
+
+Python wrapper and APIs for the PESU Academy website.
+
+The wrapper requires the user's credentials to authenticate and provide **read-only** access to all the pages and
+information accessible on the PESU Academy website. Without the credentials, the wrapper will only be able to fetch 
+details from the `Know Your Class and Section` page.
+
+> :warning: **Warning:** This is not an official API and is not endorsed by PESU. Use at your own risk.
+
+## Installation
+
+### Installing from `pip`
+
+```bash
+pip install pesuacademy
+```
+
+### Installing from source
+
+```bash
+git clone https://github.com/HackerSpace-PESU/pesuacademy-py
+cd pesuacademy-py
+python setup.py install
+```
+
+## Usage
+
+```python
+from pesuacademy import PESUAcademy
+
+p = PESUAcademy("PRN_or_SRN", "password")
+profile = p.profile()
+courses = p.courses(semester=2)
+attendance = p.attendance()
+```
