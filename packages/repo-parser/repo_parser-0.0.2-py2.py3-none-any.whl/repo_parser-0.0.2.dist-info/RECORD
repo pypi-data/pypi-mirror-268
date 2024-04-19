@@ -1,0 +1,8 @@
+repo_parser/__init__.py,sha256=v1MGKe3abKc7Chq3rLJwwxAwDoEhCUqjAQQwjcDJD1s,283
+repo_parser/filesystem.py,sha256=CaPddJGIPk6TG9CuBUU9tb6GqVnsGKnl-5g5nZUYyag,3615
+repo_parser/processor.py,sha256=Nbs9oiuoa1HbWiB8Tq3SxEu5NxEJ87c3rhwW-CNnL-g,217
+repo_parser/resource.py,sha256=LBtil_bBBq4T7x0ECCQIDVY4TJXaQlr6S67wBCIs4I4,3474
+repo_parser-0.0.2.dist-info/LICENSE,sha256=HpJ9NsyYs74vwDiFpunj0wdxKEOS74VFNJb7E2SdZis,1088
+repo_parser-0.0.2.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+repo_parser-0.0.2.dist-info/METADATA,sha256=w0Kd4OfdD0DsG7yqUdEqN5WjQ_EoYkdqRTvskZE2M_A,1380
+repo_parser-0.0.2.dist-info/RECORD,,
