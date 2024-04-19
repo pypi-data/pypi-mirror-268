@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/pymusicbox/__init__.py
+src/pymusicbox.egg-info/PKG-INFO
+src/pymusicbox.egg-info/SOURCES.txt
+src/pymusicbox.egg-info/dependency_links.txt
+src/pymusicbox.egg-info/requires.txt
+src/pymusicbox.egg-info/top_level.txt
+src/pymusicbox/audio/__init__.py
+src/pymusicbox/audio/audio.py
+src/pymusicbox/symbolic/__init__.py
+src/pymusicbox/symbolic/symbols.py
+src/pymusicbox/synth/__init__.py
+src/pymusicbox/synth/instrument/__init__.py
+src/pymusicbox/synth/instrument/instrument.py
+src/pymusicbox/synth/instrument/oscillator.py

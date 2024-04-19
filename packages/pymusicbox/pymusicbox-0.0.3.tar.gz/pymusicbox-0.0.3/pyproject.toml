@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pymusicbox"
+version = "v0.0.3"
+dependencies = [
+  "cffi==1.15.1",
+  "numpy==1.23.5",
+  "pycparser==2.21",
+  "soundfile==0.11.0",
+]
+requires-python = ">=3.8"
+authors = [
+  {name = "Maanas Arora"},
+]
+maintainers = [
+  {name = "Maanas Arora"},
+]
+description = "Toolkit with music synthesis and analysis tools for python."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["music"]
+classifiers = [
+  "Programming Language :: Python",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/MaanasArora/pymusicbox"
