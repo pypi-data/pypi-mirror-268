@@ -1,0 +1,16 @@
+astroqlite_c.cpython-311-darwin.so,sha256=iiL2n-GT1O-JV8GbJJsuuOpWRhh1fVRd-nlU6mtXV0I,53167
+mygaiadb/__init__.py,sha256=qkDmwvWfy5V6nP9qmWb08H7V8W0wrGm1aD4uXSp18bI,1348
+mygaiadb/utils.py,sha256=XBr3JDf65_popIefq-1Bqd8pgOYc8unSLHOC2GlDj-Y,1097
+mygaiadb/spec/__init__.py,sha256=GNsPje_My6kJjiXfyEsHpDfnQB7Kp6x7fjUbgDbz9as,5016
+mygaiadb/ext_c/astroqlite.c,sha256=ceK5bM6ne4atZroYzUeCbntn-5IodCYUNrtrHsLIm28,9572
+mygaiadb/query/query.py,sha256=7TGnnxxErbJQF9CcL0igbnQQ3CaElDmmQPd3nP1-7Us,15466
+mygaiadb/query/__init__.py,sha256=vI9T9AegeIV4peZSYbod7yA18JjeNnUwoXbDYWttDOI,183
+mygaiadb/query/callbacks.py,sha256=uKwQPoY5xhYb4CJ4ZiviM3GCTPLk_4OMFsDbluxr3Ds,4802
+mygaiadb/data/download.py,sha256=2Lc8vu9h3LyhsNM32LPOl_8NJT4kwHlJxWnu7-Nd_rc,19211
+mygaiadb/data/__init__.py,sha256=g3T5P5j2VbWhuCLQwV_VbxWUDKyIrmC3kmwNtZdCViY,2044
+mygaiadb/data/compile.py,sha256=sLs-cyM38qRqPoIWzkTOWIqz0gwe3vukZRV_aPHdYLQ,42472
+MyGaiaDB-0.4.2.dist-info/RECORD,,
+MyGaiaDB-0.4.2.dist-info/LICENSE,sha256=uR6mmg6qRqleByBp6GrQpIwKazjGdr_t-h7VuuSPrC4,1055
+MyGaiaDB-0.4.2.dist-info/WHEEL,sha256=GYWT1Q_60SI2bAUaGrkLwkEA5yYDmphib6XcY6K30ZQ,110
+MyGaiaDB-0.4.2.dist-info/top_level.txt,sha256=AOM47t7lPCwvhYv3RtKeyMmd9fVwGi3ouwsl08tiu0c,22
+MyGaiaDB-0.4.2.dist-info/METADATA,sha256=6LqzhRi8pq2P8BQlFPiR_A6VnCYK6mbZNqdURZDVOOw,23937
