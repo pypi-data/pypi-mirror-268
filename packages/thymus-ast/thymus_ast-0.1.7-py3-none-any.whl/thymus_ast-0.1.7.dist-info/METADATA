@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: thymus-ast
+Version: 0.1.7
+Summary: A set of tools to build ASTs for different NOS
+Author: Igor Malyushkin
+Author-email: gmalyushkin@gmail.com
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/thymus-ast.svg)](https://img.shields.io/pypi/pyversions/thymus-ast)
+[![PyPI](https://img.shields.io/pypi/v/thymus-ast.svg)](https://pypi.python.org/pypi/thymus-ast)
+[![Downloads](https://static.pepy.tech/badge/thymus-ast)](https://static.pepy.tech/badge/thymus-ast)
+[![Downloads-per-month](https://img.shields.io/pypi/dm/thymus-ast.svg)](https://img.shields.io/pypi/dm/thymus-ast.svg)
+
+
+# thymus-ast
+A set of tools to build an AST for different Network Operation Systems
+
