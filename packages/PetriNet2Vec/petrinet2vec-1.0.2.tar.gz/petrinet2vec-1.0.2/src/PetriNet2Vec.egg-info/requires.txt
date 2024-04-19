@@ -1,0 +1,4 @@
+numpy
+pm4py
+gensim
+scipy==1.11.1
