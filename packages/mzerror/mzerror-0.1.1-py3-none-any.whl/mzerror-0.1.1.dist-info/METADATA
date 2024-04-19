@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mzerror
+Version: 0.1.1
+Summary: This package is used to handle errors in python scripts and send them via email, if needed.
+Home-page: https://gitlab.com/marchesinizardin/mzerror.git
+Author: Zardin Nicolo
+Author-email: zardin.nicolo@gmail.com
+License: MIT
+Keywords: error email database python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: mzemail
+Requires-Dist: mysql-connector-python
+Requires-Dist: jinja2
+
