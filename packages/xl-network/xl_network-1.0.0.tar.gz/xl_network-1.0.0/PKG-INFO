@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: xl-network
+Version: 1.0.0
+Summary: xilong network library
+Project-URL: Homepage, https://github.com/xilong/xl-network
+Project-URL: Bug Tracker, https://github.com/xilong/xl-network/issues
+Author-email: xilong <xilonglab@163.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Requires-Dist: requests
+Description-Content-Type: text/markdown
+
+# znetwork
+
+Zen network library. 

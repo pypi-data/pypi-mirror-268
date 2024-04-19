@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xl-network"
+version = "1.0.0"
+authors = [
+  { name="xilong", email="xilonglab@163.com" },
+]
+description = "xilong network library"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+  "requests",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/xilong/xl-network"
+"Bug Tracker" = "https://github.com/xilong/xl-network/issues"
