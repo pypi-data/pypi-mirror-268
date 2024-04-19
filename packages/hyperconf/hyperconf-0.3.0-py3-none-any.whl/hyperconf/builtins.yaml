@@ -1,0 +1,37 @@
+# Built-in type definitions
+str:
+  validator: |
+    isinstance(hval, str)
+
+int:
+  validator: |
+    int(hval)
+  converter: |
+    int(hval)
+  
+pos_int:
+  validator: |
+      int(hval) > 0, "Not a positive integer"
+  converter: |
+    int(hval)
+
+float:
+  validator: |
+    float(hval)
+  converter: |
+    float(hval)
+
+percent:
+  validator: |
+    0 <= float(hval) <= 1, "Expecting a float value from the [0,1] interval."
+  converter: |
+    float(hval)
+
+dir:
+  type: str
+  converter: |
+    pathlib.Path(hval)
+
+snake_case_id:
+  validator: |
+    re.match(r'^[A-Z_]+$', hval) != None, "Invalid label name format. Use snake case (e.g. LBL_NAME)"
