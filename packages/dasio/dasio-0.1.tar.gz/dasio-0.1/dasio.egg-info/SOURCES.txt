@@ -1,0 +1,5 @@
+setup.py
+dasio.egg-info/PKG-INFO
+dasio.egg-info/SOURCES.txt
+dasio.egg-info/dependency_links.txt
+dasio.egg-info/top_level.txt
