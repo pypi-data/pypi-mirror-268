@@ -1,0 +1,7 @@
+numpy
+pandas
+scipy
+fastdtw
+simplejson
+pfc-geometry>=0.2.4
+flightdata>=0.2.6

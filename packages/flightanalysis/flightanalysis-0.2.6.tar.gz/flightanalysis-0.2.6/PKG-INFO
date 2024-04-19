@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: flightanalysis
+Version: 0.2.6
+Summary: A package for analysing flight data
+Home-page: https://github.com/PyFlightCoach/FlightAnalysis
+Author: Thomas David
+Author-email: thomasdavid0@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: fastdtw
+Requires-Dist: simplejson
+Requires-Dist: pfc-geometry>=0.2.4
+Requires-Dist: flightdata>=0.2.6
+
+# FlightAnalysis
+
+This package contains tools for analysing recorded flight log data.The main objective is 
+to facilitate automated judging for precision aerobatic competitions. 
+
+
+Documentation will follow here: https://pfcdocumentation.readthedocs.io/pyflightcoach/flightanalysis.html
