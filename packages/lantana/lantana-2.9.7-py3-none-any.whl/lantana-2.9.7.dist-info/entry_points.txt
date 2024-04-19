@@ -1,0 +1,16 @@
+[console_scripts]
+lantana = lantana.__main__:cli
+
+[markdown.extensions]
+lantana = lantana.extensions.lantana:LantanaExtension
+lantana.accordion = lantana.extensions.accordion:AccordionExtension
+lantana.alerts = lantana.extensions.alerts:AlertsExtension
+lantana.cards = lantana.extensions.cards:CardsExtension
+lantana.codeblock_copybtn = lantana.extensions.codeblock_copybtn:CodeBlockCopyBtnExtension
+lantana.link_opennewtab = lantana.extensions.link_opennewtab:OpenNewTabExtension
+lantana.mermaid_precompile = lantana.extensions.mermaid_precompile:MermaidPrecompileExtension
+mdx_embedly = lantana.extensions.mdx_embedly:EmbedlyExtension
+mdx_wsid = lantana.extensions.mdx_wsid:WSIDExtension
+
+[mkdocs.themes]
+lantana = lantana
