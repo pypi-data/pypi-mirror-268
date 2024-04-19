@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: lens_xai
+Version: 0.0.1
+Summary: A short description of your package
+Author: Dwane van der Sluis
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+License-File: LICENSE
