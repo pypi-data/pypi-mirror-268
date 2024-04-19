@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+edds/__init__.py
+edds/edds.py
+edds.egg-info/PKG-INFO
+edds.egg-info/SOURCES.txt
+edds.egg-info/dependency_links.txt
+edds.egg-info/requires.txt
+edds.egg-info/top_level.txt
