@@ -1,0 +1,8 @@
+README.md
+setup.py
+jcmath/__init__.py
+jcmath/lib.py
+jcmath.egg-info/PKG-INFO
+jcmath.egg-info/SOURCES.txt
+jcmath.egg-info/dependency_links.txt
+jcmath.egg-info/top_level.txt
