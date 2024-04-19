@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:z3c="http://namespaces.zope.org/z3c">
+
+  <adapter factory=".password.PasswordNoAutocompleteFieldWidget" />
+
+  <z3c:widgetTemplate
+      mode="input"
+      widget=".password.IPasswordNoAutocompleteWidget"
+      layer="z3c.form.interfaces.IFormLayer"
+      template="password_input.pt"
+      />
+
+</configure>

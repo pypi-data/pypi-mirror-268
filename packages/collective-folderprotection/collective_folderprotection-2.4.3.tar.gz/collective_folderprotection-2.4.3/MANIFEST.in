@@ -1,0 +1,12 @@
+recursive-include src/collective_folderprotection *
+recursive-include docs *.GPL
+recursive-include docs *.txt
+include *
+global-exclude *.pyc
+exclude .installed.cfg
+exclude .mr.developer.cfg
+exclude .coverage
+exclude pyvenv.cfg
+exclude geckodriver-v*
+exclude travis.cfge
+exclude lib64
