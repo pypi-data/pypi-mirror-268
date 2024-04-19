@@ -1,0 +1,15 @@
+bharatocrclient/__init__.py,sha256=icaj-6X_EZCABgsClU3huYNd53sfapZqbeJ8Yc3axSo,312
+bharatocrclient/clients/__init__.py,sha256=Os0UXxzgaB0XjD-gLjQT63nkbQBM5Xze_3KIxxtn-II,71
+bharatocrclient/clients/aadhaar.py,sha256=kr3utyB_8HrI8baAmYK9FRqWZgHw7Ct2T06_Vw4swGE,541
+bharatocrclient/clients/api.py,sha256=0Zcy0sU3mtZxoVVcUrovFyWMtUUDNBLqUztpVlANYDE,275
+bharatocrclient/clients/auth.py,sha256=phw-JC2YobNOKVkqAyub6yraEm7yhQNBn3XLZ75blMU,1917
+bharatocrclient/clients/common.py,sha256=Y7F9MvJfb9VOr0MaDihFftgmJ8qS5k9Odd1UJEjzGCM,175
+bharatocrclient/clients/driving_licence.py,sha256=7MMDMAQ5i54HpPltRdWSmwyLH49T1qOCqO0T-Zba90Q,428
+bharatocrclient/clients/exceptions.py,sha256=S9SMU-MFZhkQI4U33VJrG1gDvTqO7Cnb8Ql1NzpUURE,259
+bharatocrclient/clients/pan.py,sha256=5xFdkMoJyNdCp2PKhZGS_78QNE-aiv8-uSUnvAs4cto,380
+bharatocrclient/clients/passport.py,sha256=DTbfTkewrbYTdfqtPx85dNmXNUKdOxQsUF354y71RIA,400
+bharatocr_client-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+bharatocr_client-0.1.0.dist-info/METADATA,sha256=14FM7NaueMdqQOEJMcL1js5VmOufUVF_7TcYGYlMB5U,2367
+bharatocr_client-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bharatocr_client-0.1.0.dist-info/top_level.txt,sha256=BBZLdWcU2_iXA3HBuguVG-W1Spo3titOTRvmV2lXC6w,16
+bharatocr_client-0.1.0.dist-info/RECORD,,
