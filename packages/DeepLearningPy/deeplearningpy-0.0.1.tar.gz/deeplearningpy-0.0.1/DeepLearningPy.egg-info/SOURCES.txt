@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+DeepLearningPy/__init__.py
+DeepLearningPy/test.py
+DeepLearningPy.egg-info/PKG-INFO
+DeepLearningPy.egg-info/SOURCES.txt
+DeepLearningPy.egg-info/dependency_links.txt
+DeepLearningPy.egg-info/requires.txt
+DeepLearningPy.egg-info/top_level.txt
