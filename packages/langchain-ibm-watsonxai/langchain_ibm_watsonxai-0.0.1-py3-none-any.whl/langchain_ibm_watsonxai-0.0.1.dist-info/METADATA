@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: langchain-ibm-watsonxai
+Version: 0.0.1
+Summary: An integration package connecting IBM watsonx.ai and LangChain
+Home-page: https://pypi.org/project/langchain-ibm-watsonxai
+License: MIT
+Author: Yi ZHANG
+Author-email: yizhang.dev@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ibm-watsonx-ai (>=0.2.4,<0.3.0)
+Requires-Dist: langchain-core (>=0.1.43,<0.2.0)
+Project-URL: Repository, https://github.com/imyizhang/langchain-ibm/tree/main/libs/watsonxai
+Description-Content-Type: text/markdown
+
+# langchain-ibm-watsonx-ai
+
+This package contains the LangChain integrations for IBM watsonx.ai.
+
+
+
+## Installation
+
+```bash
+pip install langchain-ibm-watsonx-ai
+```
+
+
