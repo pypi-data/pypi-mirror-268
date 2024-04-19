@@ -1,0 +1,10 @@
+lightning
+numpy
+awkward
+tqdm
+numba
+lightning_cloud
+blosc2
+dogma-rust>=0.2.4
+smart-open
+click
