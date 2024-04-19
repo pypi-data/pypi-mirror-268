@@ -1,0 +1,12 @@
+PyDropper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PyDropper/main.py,sha256=STMM8hk5itH38TYCTXS9vl7kdo2sccDEZIf5v9Q0PPo,488
+PyDropper/server/__init__.py,sha256=rSLwrKid-0WU2Z9zAhemGLVibdpxP9Js9lJxusTmZDM,40
+PyDropper/server/funcs.py,sha256=p3zon6G9leQwAVQExQmEYp_ssE6mmXYdnTPvC47MlcM,1004
+PyDropper/server/server_main.py,sha256=nxBYehj52oozL7FmpvckCrEmjRn83OmuES4JZ5DYSuk,624
+PyDropper/server/config/__init__.py,sha256=it5KDyyUHU9lLOMUncYyZPAe8IT6_GjyFCPAGDHacuk,30
+PyDropper/server/config/env.py,sha256=x8rbmuI9ma-kKgJVHquwFaB7mWIqXoleFBONdSjT7es,27
+PyDropper-0.1.0.dist-info/LICENSE,sha256=gsSrHANBZL3Y0DEHG34qA1sEIdzweGKuzKVYc0qSLeI,1063
+PyDropper-0.1.0.dist-info/METADATA,sha256=llmAm0R8c5CclY5lqsc6XGBp35tBNLM1fKaaHBzQz-0,1444
+PyDropper-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+PyDropper-0.1.0.dist-info/top_level.txt,sha256=yImg0hEFHGAkvrXY4c64HB2uE_Iuso-6gx1ovSwK4Uo,10
+PyDropper-0.1.0.dist-info/RECORD,,
