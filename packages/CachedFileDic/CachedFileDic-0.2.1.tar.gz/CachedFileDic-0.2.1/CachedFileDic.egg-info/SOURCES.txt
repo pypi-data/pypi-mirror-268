@@ -1,0 +1,9 @@
+README.md
+setup.py
+CachedFileDic/__init__.py
+CachedFileDic/test.py
+CachedFileDic.egg-info/PKG-INFO
+CachedFileDic.egg-info/SOURCES.txt
+CachedFileDic.egg-info/dependency_links.txt
+CachedFileDic.egg-info/requires.txt
+CachedFileDic.egg-info/top_level.txt
