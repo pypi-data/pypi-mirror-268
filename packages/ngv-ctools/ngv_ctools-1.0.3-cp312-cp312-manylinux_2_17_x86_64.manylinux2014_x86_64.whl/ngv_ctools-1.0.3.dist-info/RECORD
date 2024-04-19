@@ -1,0 +1,9 @@
+_ngv_ctools.cpython-312-x86_64-linux-gnu.so,sha256=tBSQoRbtjrI-QgGCFeFomyVkCmg_Z_DO6waiOArIXM0,374688
+ngv_ctools-1.0.3.dist-info/LICENSE.txt,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+ngv_ctools-1.0.3.dist-info/METADATA,sha256=GsUdZ5j3f2aaTPlwoAO3amVfWW0DQR7xPgydi6iP75U,1525
+ngv_ctools-1.0.3.dist-info/AUTHORS.txt,sha256=-VVRfLQ6rrseKscSmvDaKj68VCxPQv9JuMys141VUcU,67
+ngv_ctools-1.0.3.dist-info/RECORD,,
+ngv_ctools-1.0.3.dist-info/top_level.txt,sha256=szBRC_74xkcL3j97pueeCVsclJdhb-xQZwN7Lxrvf7U,23
+ngv_ctools-1.0.3.dist-info/WHEEL,sha256=OvtvnbpcaxHa5TgXgfC48E6JA7zLr7svMspPP7Vk5o8,152
+ngv_ctools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ngv_ctools/fast_marching_method/__init__.py,sha256=NEldEcAy7A18Si4WSucOBHPTTEHCsYMptlBgiCz5KcM,235

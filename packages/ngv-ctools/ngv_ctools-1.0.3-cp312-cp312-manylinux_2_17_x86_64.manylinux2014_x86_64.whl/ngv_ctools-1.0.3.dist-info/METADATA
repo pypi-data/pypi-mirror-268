@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: ngv-ctools
+Version: 1.0.3
+Summary: NGV Architecture c++ modules
+Home-page: https://github.com/BlueBrain/ngv-ctools.git
+Author: Blue Brain Project, EPFL
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+License-File: AUTHORS.txt
+
+Overview
+========
+
+ngv-ctools provide c++ algorithms for ngv_ exposed via pybind11_ python bindings.
+
+Algorithms
+==========
+
+* second_order_solutions
+* grow_waves_on_triangulated_surface
+
+Installation
+============
+
+If one is on a Linux platform, one should be able to use the compiled Python wheels.
+This is the recommended way.
+
+.. code-block:: bash
+
+  pip install ngv-ctools
+
+Tests
+=====
+
+.. code-block:: bash
+
+  pip install tox
+  tox
+
+Acknowledgements
+================
+
+The development of this software was supported by funding to the Blue Brain Project, a research center of the École polytechnique fédérale de Lausanne (EPFL), from the Swiss government’s ETH Board of the Swiss Federal Institutes of Technology.
+
+For license and authors, see LICENSE.txt and AUTHORS.txt respectively.
+
+Copyright (c) 2022-2024 Blue Brain Project/EPFL
+
+.. _ngv: https://github.com/BlueBrain/ArchNGV
+.. _pybind11: https://pybind11.readthedocs.io
