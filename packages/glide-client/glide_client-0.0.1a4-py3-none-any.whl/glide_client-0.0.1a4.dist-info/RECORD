@@ -1,0 +1,16 @@
+glide/__init__.py,sha256=p3yDRjab5e8FB4dQ4ZlN0VFzhk8Br9X3dQB3iR0W5Xs,141
+glide/async_client.py,sha256=7pfNTwSjz-Awx23qX2H7x65AICIVKRu3qGeIrBDKaDo,1073
+glide/exceptions.py,sha256=3ZW8Dck6Tbwqk5da81y_Vze3aljV86D6cLnZmuYBp80,759
+glide/lang/__init__.py,sha256=3EQZmmdAm9yYLrU3_GxpdLDzjfl0Jc-xozlWeekjU-g,351
+glide/lang/router_async.py,sha256=9zqjc3HblWjQDwRCQYFqKQNu03WR817uwkpyict4KZM,8657
+glide/lang/schemas.py,sha256=MHC-tyi0XJEAWrMTq7DzQop7IChAI_K4IO6BcOAuXk0,3544
+glide/logging.py,sha256=ee7MFu4MvnSOfl1G8CG3AvGr_dIouJRXxwYfl_OIWlU,111
+glide/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+glide/schames.py,sha256=5JN7Fo9M1pFWbE3JKP0m9Ox0Uj7twloSH9-d7b_SxxA,457
+glide/testing/__init__.py,sha256=8LJv1o_IOCSTvrHyUsPG1885J4Xi5Q6GKR_oQ2v7ew8,59
+glide/typing.py,sha256=YHC41YNrvPDxrpB9pRJzSIdNONK79WiRm5ECFY07bLI,110
+glide/version.py,sha256=dkyhaxAG2vatjIk5gtqfzx4ca-Q_JoGepGle0XqqTqw,297
+glide_client-0.0.1a4.dist-info/METADATA,sha256=aPoSuqddL87JASStk-EzNhbYK7p97zW9XiViq77-l0U,2130
+glide_client-0.0.1a4.dist-info/WHEEL,sha256=7sv5iXvIiTVJSnAxCz2tGBm9DHsb2vPSzeYeT7pvGUY,90
+glide_client-0.0.1a4.dist-info/licenses/LICENSE,sha256=taCKqMvhE6yH7_lueAdx2sS57fsVvuT3K-u3TlCXASA,11356
+glide_client-0.0.1a4.dist-info/RECORD,,
