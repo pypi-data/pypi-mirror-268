@@ -1,0 +1,4 @@
+[console_scripts]
+kafka-overwatch=kafka_overwatch.cli:main
+schema-registry-restore=kafka_overwatch.cli.schema_registry_restore:main
+
