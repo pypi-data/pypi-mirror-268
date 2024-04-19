@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=W61Wg2lnSw9LYREUzFJdE4nzvnX3mYU_R1HgGQhjEo8,3146
+nested_config/__init__.py,sha256=JSEZa9EsD4cCMA67igtH1Tq_rGExu8gM0WSqDpBqtIE,837
+nested_config/_pydantic.py,sha256=7JU5QhCcW681WKk4lK-9vWaEd2j25iozF7nLt2P1RgU,6199
+nested_config/_types.py,sha256=IytDZH6w0Hhy5sakXXZ4suuXMjr4GavnBiCqeClz5S0,457
+nested_config/expand.py,sha256=WmIXy0bIhrPdIAU1ebesdw4wjyIn2dUqGLdkCX4Dris,6291
+nested_config/loaders.py,sha256=1V16exfgGfZeJeMs9MH-FuD4FSdHK1uywrzxqaDbBgU,2969
+nested_config/version.py,sha256=UWLhm0IW4VTKwLlkAw93HUi7u-ZQ7B7L2-sjY-6Oxfw,268
+nested_config-2.1.0.dist-info/LICENSE,sha256=2ivakBWkdthHouGr_c2o5WZhRGD3wiUPeBGHDqutuos,1097
+nested_config-2.1.0.dist-info/METADATA,sha256=pSqA3awDlpUrY7Sq8ifoDyeEaQdVL7TFiND5uQwPhsM,11351
+nested_config-2.1.0.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+nested_config-2.1.0.dist-info/RECORD,,
