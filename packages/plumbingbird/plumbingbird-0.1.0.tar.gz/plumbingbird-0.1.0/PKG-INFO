@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: plumbingbird
+Version: 0.1.0
+Summary: Handy tools for common data engineering needs.
+License: GNU GPLv3
+Author: Rebecca Lovering
+Author-email: lovering810@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: boto3 (>=1.7.84,<2.0.0)
+Requires-Dist: psycopg2
+Requires-Dist: pytest
+Requires-Dist: python-dotenv
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: smart_open
+Description-Content-Type: text/markdown
+
+# plumbingbird
+Handy tools for common use cases in data engineering
+
+## Purpose
+
+I got tired of reinventing wheels across jobs in data engineering, so I decided to make a repo for them instead. Nothing in here is specific business logic, it's intended to be mostly higher order functions so you can plug and play.
+
+### Installation Dependencies
+1. `[postgresql](https://www.postgresql.org/download/)`
+2. `[poetry](https://python-poetry.org/docs/#installation)`
+
+## Organization
+
+### Utilities
+
+This directory contains primitive parent classes for concepts in both orchestration and etl, as well as a number of handy tools for environment interaction (like ID-ing where something is running and getting secrets out of the env vars). Someday, maybe the etl and orchestration classes will move to their respective directories, but for now they're just chilling in the base utilities directory.
+
+### ETL
+
+This directory contains classes for extraction, transformation, and loading, differentiated by the nature of the source (in the case of extraction), the nature of the destination (in the case of loaders), and the format of the interstitial data (for transformers/buffers).
+
+### Orchestration
+
+This directory has provider-bounded tools for standing up cloud services, like Workers that can listen to queues and Jobs they can do.
+
+### Tests
+
+What's on the tin, plus some differentiation therein between live tests that take action vs unittests.
