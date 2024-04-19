@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: lense
+Version: 0.0.57
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+
