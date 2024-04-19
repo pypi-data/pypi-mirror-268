@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: globlocks
+Version: 1.2.0
+Summary: An application made for the Django Web Framework.
+Home-page: https://github.com/Nigel2392/globlocks
+Author: Nigel
+Author-email: nigel@goodadvice.it
+License: GPL-3.0-only
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 4.2
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=4.2
+Requires-Dist: Wagtail>=4.2
+Requires-Dist: conditional_field>=1.0.0
+
+globlocks
+=========
+
+Block/Widget library to make your Wagtail site more complete
+
+## TODO
+
+* Documentation
+* Tests
+* (blocks) components/images
+* (blocks) components/menus
+* (templates) components/menus
+
+## Implemented
+
+* blocks with settings
+* toggleable-visibility blocks
+* richtext alignment (with headers and inline entities)
+* color picker widget/block/panel/(model)field
+* range slider widget/block
+* justify text alignment widget/block (targets specified inputs; aligns them in admin)
+* toolbar widget/block; a richtext toolbar for your regular inputs
+* fontpicker widget
+* components
+  * images (NYI)
+  * menus (NYI)
+  * headers
+  * text
+  * image/text
+
+Quick start
+-----------
+
+1. Add 'globlocks' to your INSTALLED_APPS setting like this:
+
+   ```
+   INSTALLED_APPS = [
+       ...,
+       'globlocks',
+       'conditional_field',
+   ]
+   ```
+2. ...
