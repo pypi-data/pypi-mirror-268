@@ -1,0 +1,14 @@
+LICENCE
+README.md
+setup.py
+kam12-baseactions/__init__.py
+kam12-baseactions/exceptions.py
+kam12-baseactions/hidden_operation.py
+kam12-baseactions/main_operation.py
+kam12-baseactions/static_object.py
+kam12_baseoperations.egg-info/PKG-INFO
+kam12_baseoperations.egg-info/SOURCES.txt
+kam12_baseoperations.egg-info/dependency_links.txt
+kam12_baseoperations.egg-info/requires.txt
+kam12_baseoperations.egg-info/top_level.txt
+tests/tests_project.py
