@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: common-tools-ai-bnq
+Version: 0.0.4
+Summary: Common tools of AI module for BNQ
+Home-page: 
+Author: BNQ
+Requires-Dist: structlog ==23.1.0
+Requires-Dist: concurrent-log-handler ==0.9.22
+Requires-Dist: nacos-sdk-python ==0.1.12
+
