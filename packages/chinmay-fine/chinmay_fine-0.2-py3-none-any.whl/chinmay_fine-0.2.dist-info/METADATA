@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: chinmay_fine
+Version: 0.2
+Summary: A Python library for interacting with the News API
+Home-page: https://github.com/your_username/news-api-python
+Author: Chinmay
+Author-email: your@email.com
+Requires-Dist: requests
+
