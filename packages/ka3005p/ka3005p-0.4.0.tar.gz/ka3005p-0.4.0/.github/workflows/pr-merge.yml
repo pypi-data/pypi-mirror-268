@@ -1,0 +1,19 @@
+name: PR-Merge
+
+on:
+  push:
+    branches:
+      - "master"
+      - "main"
+
+env:
+  CARGO_TERM_COLOR: always
+
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Execut PR Merge Workflow
+      run: echo "This currently is a empyt stub"
