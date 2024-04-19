@@ -1,0 +1,6 @@
+<layers>
+ <layer
+     name="collective_folderprotection"
+     interface="collective_folderprotection.interfaces.IFolderProtectLayer"
+     />
+</layers>

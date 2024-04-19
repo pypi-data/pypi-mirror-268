@@ -1,0 +1,76 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective_folderprotection">
+
+  <include package="plone.app.contenttypes" />
+
+  <include package=".behaviors" />
+  <include package=".browser" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective_folderprotection"
+      directory="profiles/default"
+      description="Installs the collective_folderprotection package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="test_fixture"
+      title="collective_folderprotection"
+      directory="profiles/test_fixture"
+      description="Test fixture for the collective_folderprotection package (Do not install)"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="collective_folderprotection (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the collective_folderprotection add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="collective_folderprotection-hiddenprofiles"
+      />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+    <subscriber handler=".events.insertCheckPasswordHook"
+        for="Products.CMFCore.interfaces.ISiteRoot
+             zope.traversing.interfaces.IBeforeTraverseEvent"
+        />
+
+    <subscriber handler=".events.preventRemove"
+        for="plone.dexterity.interfaces.IDexterityItem
+             OFS.interfaces.IObjectWillBeRemovedEvent"
+        />
+
+    <subscriber handler=".events.preventRemove"
+        for="plone.dexterity.interfaces.IDexterityContainer
+             OFS.interfaces.IObjectWillBeRemovedEvent"
+        />
+
+    <subscriber handler=".events.preventRename"
+        for="plone.dexterity.interfaces.IDexterityItem
+             OFS.interfaces.IObjectWillBeMovedEvent"
+        />
+
+    <subscriber handler=".events.preventRename"
+        for="plone.dexterity.interfaces.IDexterityContainer
+             OFS.interfaces.IObjectWillBeMovedEvent"
+        />
+
+  <browser:resourceDirectory
+      name="resources"
+      directory="static" />
+
+</configure>
