@@ -1,0 +1,7 @@
+README.md
+setup.py
+tests/test.py
+word_sorters_chin.egg-info/PKG-INFO
+word_sorters_chin.egg-info/SOURCES.txt
+word_sorters_chin.egg-info/dependency_links.txt
+word_sorters_chin.egg-info/top_level.txt
