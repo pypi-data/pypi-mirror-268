@@ -1,0 +1,29 @@
+
+<tbody>
+
+{% for row in tdata["rows"] %}
+
+<tr>
+
+{% for column in tdata["columns"] %}
+
+{% if column=="cardinal" %}
+
+{% if row[column]==0 %}
+    <td>*</td>
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+
+{% else %}
+    <td>{{ row[column] }}</td>
+{% endif %}
+
+{% endfor %}
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+

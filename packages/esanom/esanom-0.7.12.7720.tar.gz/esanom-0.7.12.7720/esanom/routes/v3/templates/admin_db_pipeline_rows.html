@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>{% block title %}pipeline_rows{% endblock title %}</h2>
+{% endblock header %}
+
+
+{% if tdata["pipeline_rows"]|length>0 %}
+
+{% block main %}
+<table>
+
+<tr>
+{% for key, segment in tdata["pipeline_rows"][0].items() %}
+    <td>{{ key }}</td>
+{% endfor %}
+</tr>
+
+{% for v in tdata["pipeline_rows"] %}
+<tr>
+{% for key, segment in v.items() %}
+
+
+<td>
+{% if key=="id" %}
+    <a href="{{ url_for('.admin_db_pipeline_row',pipeline_id=segment) }}">{{ segment }}</a>
+{% else %}
+    {{ segment }}
+{% endif %}
+</td>
+
+
+{% endfor %}
+</tr>
+{% endfor %}
+
+</table>
+{% endblock main %}
+
+{% endif %}

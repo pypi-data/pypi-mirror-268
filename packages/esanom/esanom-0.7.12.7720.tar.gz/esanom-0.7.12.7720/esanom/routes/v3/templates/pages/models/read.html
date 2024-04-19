@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block main_title %}MODEL : {{ tdata['row']['name'] }}{% endblock %}
+
+{% block main_content %}
+
+{% if tdata["row"] %}
+{% include( "pages/models/read_inc_info.html" ) %}
+{% endif %}
+
+{% if tdata["mport_rows"]|length>0 %}
+<p class="lead">PORTS</p>
+{% include( "pages/models/read_inc_ports.html" ) %}
+{% else %}
+<div class="badge bg-warning text-dark">No ports found</div>
+{% endif %}
+
+{% endblock %}
+

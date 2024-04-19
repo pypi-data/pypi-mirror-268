@@ -1,0 +1,20 @@
+
+
+<script>
+element = document.getElementById( "member_apis_update" ) ;
+element.remove( ) ; 
+</script>
+
+{% if tdata['is_new_token'] %}
+<div class="alert alert-danger" role="alert">
+API TOKEN
+<pre>
+
+<b class="user-select-all">{{tdata['row']['token']}}</b>
+</pre>
+WARNING: SAVE API TOKEN NOW. IT WILL NOT BE MADE VISIBLE AGAIN!
+</div>
+
+{% endif %}
+
+

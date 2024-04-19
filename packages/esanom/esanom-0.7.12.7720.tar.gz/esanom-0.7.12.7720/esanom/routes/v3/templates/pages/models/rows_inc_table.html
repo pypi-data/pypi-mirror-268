@@ -1,0 +1,17 @@
+
+<table id="nom_table" class="table table-striped table-bordered nowrap responsive" width="100%">
+
+{% include( "pages/models/rows_inc_table_head.html" ) %}
+{% include( "pages/models/rows_inc_table_body.html" ) %}
+
+</table>
+
+<script>
+
+document.addEventListener( "readystatechange" , event => { 
+    if( event.target.readyState === "interactive" ) {
+        let table = new DataTable( "#nom_table"  ) ;
+    }
+} ) ;
+
+</script>
