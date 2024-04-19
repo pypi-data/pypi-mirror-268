@@ -1,0 +1,9 @@
+windmillartifactv1/__init__.py,sha256=lKPSTTL-s2LATDTCNAsIXlKPfw__8BreM8HrYsX9UHU,235
+windmillartifactv1/client/__init__.py,sha256=lKPSTTL-s2LATDTCNAsIXlKPfw__8BreM8HrYsX9UHU,235
+windmillartifactv1/client/artifact_api_artifact.py,sha256=AIwqPfNWY5gulU1ZhRQQQbhbIB0nC1CXX5ecAuokgZA,4012
+windmillartifactv1/client/artifact_client.py,sha256=Bf7VZsGtlKhBbhRB4__vGoEUsg7LormMjE3B6nhXhHs,11522
+windmillartifactv1/client/paging.py,sha256=Z9urwSGeNWgonqJyfTWyVdL77OI51aLm33TBnSV-OcU,1717
+windmill_artifact-1.0.0.12.dist-info/METADATA,sha256=DUwYnIX0YRphPzZQPZqd4OM-z6AAbRWDweWU0YP5sYw,632
+windmill_artifact-1.0.0.12.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+windmill_artifact-1.0.0.12.dist-info/top_level.txt,sha256=RBKeC1FcJSfcSsFKcqlKQi_Ajit-qQ96OO1TvJ5HAEg,19
+windmill_artifact-1.0.0.12.dist-info/RECORD,,
