@@ -1,0 +1,15 @@
+config2py/__init__.py,sha256=ru-bUQk5EuOLzHmNAcElSN8P2saSUEb5KFRkfTkzsUo,770
+config2py/base.py,sha256=saq1YVbeRg8jBoXcmc0y-maNJ5vHHeWwu5tc_EbOetE,15895
+config2py/errors.py,sha256=QdwGsoJhv6LHDHp-_yyz4oUg1Fgu4S-S7O2nuA0a5cw,203
+config2py/s_configparser.py,sha256=XhxFz6-PG4-QsecJfbjLFdBWHcPU6dwgqwkTZyY_y3E,15873
+config2py/tools.py,sha256=6wPAdnossxMPeQ6T0eqUilP3VnHAfbrJcFsg4xmaahA,9137
+config2py/util.py,sha256=mzIsU2ozkatWx61NphsbD502IrwuI2Vi0V8NEjpNRXQ,15745
+config2py/scrap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+config2py/tests/__init__.py,sha256=sk-yGJQOZES2z70M4xmZB57tsxSktX_84ybDuV8Cz5Q,297
+config2py/tests/test_tools.py,sha256=T0rBy8s6wHgQXnnr7Z1xkF1so3XkdGVASerEQ27ByxE,1950
+config2py/tests/util.py,sha256=vO1VIepbH6vY2e-VHP7HX6jnVzzIDyFsp6md_uBnIXw,1351
+config2py-0.1.33.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+config2py-0.1.33.dist-info/METADATA,sha256=kg26LOTcSczZ0pjFwn6sHUtnJDPI6UO-Bhf8qDO0-2Q,14559
+config2py-0.1.33.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+config2py-0.1.33.dist-info/top_level.txt,sha256=DFnlOIKMIGWQRROr3voJFhWFViHaWgTTeWZjC5YC9QQ,10
+config2py-0.1.33.dist-info/RECORD,,
