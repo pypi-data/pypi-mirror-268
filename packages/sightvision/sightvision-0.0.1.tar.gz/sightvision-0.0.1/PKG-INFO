@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: sightvision
+Version: 0.0.1
+Summary: Computer vision package that makes its easy to run Image processing and AI functions.
+Home-page: https://github.com/rexionmars/SightVision
+Author: Leonardi Melo
+Author-email: opensource.leonardi@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: ComputerVision,Tensorflow,MediaPipe,FaceDetection
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
