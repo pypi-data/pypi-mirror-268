@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+PyImageML/__init__.py
+PyImageML/test.py
+PyImageML.egg-info/PKG-INFO
+PyImageML.egg-info/SOURCES.txt
+PyImageML.egg-info/dependency_links.txt
+PyImageML.egg-info/requires.txt
+PyImageML.egg-info/top_level.txt
