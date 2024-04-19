@@ -1,0 +1,6 @@
+pyyaml
+litex
+liteiclink
+
+[develop]
+setuptools
