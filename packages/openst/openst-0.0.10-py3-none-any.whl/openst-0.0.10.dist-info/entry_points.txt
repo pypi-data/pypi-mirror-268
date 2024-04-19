@@ -1,0 +1,3 @@
+[console_scripts]
+openst=openst.__main__:run_openst
+
