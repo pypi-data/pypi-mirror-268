@@ -1,0 +1,3 @@
+[console_scripts]
+musical-games=musical_games.cli:app
+
