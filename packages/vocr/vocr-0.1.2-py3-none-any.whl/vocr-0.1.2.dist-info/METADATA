@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: vocr
+Version: 0.1.2
+Summary: Vietnamese OCR
+Project-URL: Homepage, https://github.com/AbsoluteWinter/vocr
+Project-URL: Repository, https://github.com/AbsoluteWinter/vocr
+Project-URL: Issues, https://github.com/AbsoluteWinter/vocr/issues
+Author: AbsoluteWinter
+License: MIT License
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: <4,>=3.8
+Requires-Dist: click>=8.0.0
+Requires-Dist: opencv-python
+Requires-Dist: pillow
+Requires-Dist: pytesseract
+Requires-Dist: tqdm
+Provides-Extra: dev
+Requires-Dist: hatch; extra == 'dev'
+Requires-Dist: pytest>=7.0.0; extra == 'dev'
+Description-Content-Type: text/markdown
+
+# vocr
+ 
+Vietnamese OCR
+
+## Prerequisite
+
+- [Tesseract](https://github.com/UB-Mannheim/tesseract) installed and added to PATH
+
+- Clone this project
+
+## Install
+
+```
+pip install vocr
+```
+
+## Usage:
+
+### Run in Terminal
+```
+vocr --help
+```
+```
+Usage: vocr [OPTIONS] COMMAND [ARGS]...
+
+  vocr's command line interface
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  ocr      Performs OCR on file/directory
+  version  Show current version
+```
+
+### Run in script
+```python
+from vocr import VietOCR
+VietOCR(<path>).ocr()
+```
+
+## LICENSE
+
+MIT License
