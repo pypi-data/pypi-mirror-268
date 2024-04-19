@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: hcpcvlr
+Version: 0.0.2
+Summary: CausalVLR: A Toolbox and Benchmark for Visual-Linguistic Causal Reasoning (视觉-语言因果推理开源框架)
+Home-page: https://github.com/HCPLab-SYSU/CausalVLR
+Author: ['hcp_lab', 'liuyang', 'chenweixing']
+Author-email: ['hcp.sysu@gmail.com', 'liuy856@mail.sysu.edu.cn', 'chen867820261@gmail.com']
+Keywords: causal
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7, <4
+License-File: LICENSE
+Requires-Dist: torch>=1.6.0
+Requires-Dist: pyyaml
+Requires-Dist: pandas
+Requires-Dist: einops
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: dominate
+Requires-Dist: visdom
