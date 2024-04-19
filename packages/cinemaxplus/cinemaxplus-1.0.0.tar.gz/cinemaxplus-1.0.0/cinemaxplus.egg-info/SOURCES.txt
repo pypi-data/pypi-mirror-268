@@ -1,0 +1,10 @@
+README.md
+setup.py
+cinemaxplus/__init__.py
+cinemaxplus/version.py
+cinemaxplus.egg-info/PKG-INFO
+cinemaxplus.egg-info/SOURCES.txt
+cinemaxplus.egg-info/dependency_links.txt
+cinemaxplus.egg-info/requires.txt
+cinemaxplus.egg-info/top_level.txt
+cinemaxplus.egg-info/zip-safe
