@@ -1,0 +1,23 @@
+name: pre-commit
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  pre-commit:
+    uses: carlthome/workflows/.github/workflows/pre-commit.yaml@main
+    with:
+      update: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+      push: false

@@ -1,0 +1,9 @@
+ipython
+matplotlib
+
+[notebooks]
+jupyter
+
+[tests]
+pytest
+pytest-cov

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ipytoolbox"
+authors = [{ name = "Carl Thomé", email = "carlthome@gmail.com" }]
+description = "A collection of IPython magic commands and other utilities"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+dependencies = ["ipython", "matplotlib"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+tests = ["pytest", "pytest-cov"]
+notebooks = ["jupyter"]
+
+[project.urls]
+Homepage = "https://github.com/carlthome/ipytoolbox"
+Bugs = "https://github.com/carlthome/ipytoolbox/issues"
+
+[tool.setuptools_scm]
+write_to = "src/ipytoolbox/version.py"
+local_scheme = "no-local-version"
+
+[tool.black]
+line-length = 120
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+
+[tool.autoflake]
+remove-all-unused-imports = true
