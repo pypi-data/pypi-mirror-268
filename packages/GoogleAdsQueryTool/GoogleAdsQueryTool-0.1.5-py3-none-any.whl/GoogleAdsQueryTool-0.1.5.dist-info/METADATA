@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: GoogleAdsQueryTool
+Version: 0.1.5
+Summary: A package designed to connect to the Google Ads API and return data to report on.
+Author: Casper Crause
+Author-email: ccrause07@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: google-ads ==22.1.0
+Requires-Dist: pandas >1.4
+
+# GoogleAdsQueryTool
+
+This is a package you can use to query reporting data from the Google Ads API.
+
+## Installation
+```
+pip install GoogleAdsQueryTool
+```
