@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+tox.ini
+.github/workflows/release.yml
+.github/workflows/tox.yml
+src/lazympl/__init__.py
+src/lazympl/_version.py
+src/lazympl/figure.py
+src/lazympl/plot.py
+src/lazympl/py.typed
+src/lazympl.egg-info/PKG-INFO
+src/lazympl.egg-info/SOURCES.txt
+src/lazympl.egg-info/dependency_links.txt
+src/lazympl.egg-info/requires.txt
+src/lazympl.egg-info/top_level.txt
