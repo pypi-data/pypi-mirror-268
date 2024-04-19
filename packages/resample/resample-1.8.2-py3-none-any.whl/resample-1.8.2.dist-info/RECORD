@@ -1,0 +1,11 @@
+resample/__init__.py,sha256=dYHFDxvm2tnS3ufZ6kUT16G7PZp9wjIC68dRcRuKkdQ,889
+resample/_util.py,sha256=Fs22PZMVYCt3qBSwPcofjVtc3q9gxq8_VJ5UzU7k6kI,865
+resample/bootstrap.py,sha256=y4zhAj0FgxnuG6nykstAbz0jX1-4ksXUVMXDpL9H3Ao,20775
+resample/empirical.py,sha256=H9dcHyIlcO6mYMs4AZlLpMdxWcUu3nzI8JEYj23Gxns,2491
+resample/jackknife.py,sha256=Dt41cyMLm9wUjbB7DVrwHsTJhj8jQuw_8sM0e07g0-g,9987
+resample/permutation.py,sha256=yCn0KgFIz6bsCaBNzdkOYyHQBX4IYjNvNJDXchxZVHs,15914
+resample-1.8.2.dist-info/LICENSE,sha256=SfKb_hBNmRvYsX-F_cnKyNdTmUXwJo7g25Xlar3jHFE,1517
+resample-1.8.2.dist-info/METADATA,sha256=5Omfdj2UJwZvSS1lN7JqM0-AmqCfT67nkZaOzk4rT6M,4393
+resample-1.8.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+resample-1.8.2.dist-info/top_level.txt,sha256=n1-VZ3P3eKznecXhgXeQfQVXb5Yo4-mHcx9KHGWgTIg,9
+resample-1.8.2.dist-info/RECORD,,
