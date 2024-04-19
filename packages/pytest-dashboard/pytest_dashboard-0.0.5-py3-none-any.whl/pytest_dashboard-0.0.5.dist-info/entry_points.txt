@@ -1,0 +1,3 @@
+[pytest11]
+pytest_dashboard_plugin=pytest_dashboard.conftest
+
