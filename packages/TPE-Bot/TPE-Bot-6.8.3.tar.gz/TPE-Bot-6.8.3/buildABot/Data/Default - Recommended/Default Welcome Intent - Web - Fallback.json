@@ -1,0 +1,55 @@
+{
+  "id": "39952e29-d7bb-4513-8987-0c0e97dc1dbf",
+  "name": "Default Welcome Intent - Web - Fallback",
+  "contexts": [
+    "awaiting_login", "DefaultWelcomeIntent-Web-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DefaultWelcomeIntent-Web.DefaultWelcomeIntent-Web-Fallback",
+      "affectedContexts": [
+        {
+          "name": "awaiting_login",
+          "lifespan": 1
+        }
+      ],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "4",
+          "title": "",
+          "payload": {
+            "richContent": [
+              [
+                {
+                  "title": "Invalid Login ID, please try again 🙂:",
+                  "image": {
+                    "src": {
+                      "rawUrl": "https://firebasestorage.googleapis.com/v0/b/almgtbot.appspot.com/o/agenticon.png?alt\u003dmedia\u0026token\u003dacfb8428-4e7e-4225-99dd-c4ec989530dc"
+                    }
+                  },
+                  "type": "info",
+                  "subtitle": "",
+                  "actionLink": ""
+                }
+              ]
+            ]
+          },
+          "textToSpeech": "",
+          "lang": "en",
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

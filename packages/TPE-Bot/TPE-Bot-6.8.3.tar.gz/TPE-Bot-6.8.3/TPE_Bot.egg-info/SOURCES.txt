@@ -1,0 +1,135 @@
+README.md
+setup.py
+TPE_Bot.egg-info/PKG-INFO
+TPE_Bot.egg-info/SOURCES.txt
+TPE_Bot.egg-info/dependency_links.txt
+TPE_Bot.egg-info/requires.txt
+TPE_Bot.egg-info/top_level.txt
+buildABot/BotHelper.py
+buildABot/QAHelper.py
+buildABot/__init__.py
+buildABot/Bot/BotController.py
+buildABot/Bot/BotManager.py
+buildABot/Bot/WriteToFile.py
+buildABot/Bot/Dashboard/Analytics.py
+buildABot/Bot/Dashboard/TelegramLogs.py
+buildABot/Bot/Dashboard/pytransform/__init__.py
+buildABot/Bot/Firebase/Entities.py
+buildABot/Bot/Firebase/Firebase_Learn.py
+buildABot/Bot/Firebase/Firebase_Reco.py
+buildABot/Bot/Firebase/Webhook_Learn.py
+buildABot/Bot/Firebase/Webhook_Reco.py
+buildABot/Bot/Firebase/pytransform/__init__.py
+buildABot/Bot/Intents/CustomIntents.py
+buildABot/Bot/Intents/CustomMenu.py
+buildABot/Bot/Intents/CustomRecommendedMenu.py
+buildABot/Bot/Intents/CustomResponse.py
+buildABot/Bot/Intents/CustomTeleResponse.py
+buildABot/Bot/Intents/DefaultIntent.py
+buildABot/Bot/Intents/FAQ.py
+buildABot/Bot/Intents/FallbackSocialTag.py
+buildABot/Bot/Intents/Paraphraser.py
+buildABot/Bot/Intents/RelatedIntents.py
+buildABot/Bot/Intents/Usersays.py
+buildABot/Bot/Intents/WelcomeIntent.py
+buildABot/Bot/Intents/Worksheets_Learn.py
+buildABot/Bot/Intents/Worksheets_Reco.py
+buildABot/Bot/Intents/Type/AccordionCard.py
+buildABot/Bot/Intents/Type/ButtonCard.py
+buildABot/Bot/Intents/Type/Chips.py
+buildABot/Bot/Intents/Type/DescriptionCard.py
+buildABot/Bot/Intents/Type/ImageCard.py
+buildABot/Bot/Intents/Type/InfoCard.py
+buildABot/Bot/Intents/Type/ListCard.py
+buildABot/Bot/Intents/pytransform/__init__.py
+buildABot/Bot/Webapp/WebApp_Learn.py
+buildABot/Bot/Webapp/WebApp_Reco.py
+buildABot/Bot/Webapp/pytransform/__init__.py
+buildABot/Bot/pytransform/__init__.py
+buildABot/Data/__init__.py
+buildABot/Data/Default - Learn/Default Welcome Intent - Telegram - Check Submission.json
+buildABot/Data/Default - Learn/Default Welcome Intent - Telegram - Check Submission_usersays_en.json
+buildABot/Data/Default - Learn/Default Welcome Intent - Telegram_usersays_en.json
+buildABot/Data/Default - Learn/Default Welcome Intent - Web - Fallback.json
+buildABot/Data/Default - Learn/Default Welcome Intent - Web.json
+buildABot/Data/Default - Learn/Default Welcome Intent - Web_usersays_en.json
+buildABot/Data/Default - Learn/Downvote.json
+buildABot/Data/Default - Learn/Downvote_usersays_en.json
+buildABot/Data/Default - Learn/Email Enquiry.json
+buildABot/Data/Default - Learn/Email Enquiry_usersays_en.json
+buildABot/Data/Default - Learn/Exit Conversation.json
+buildABot/Data/Default - Learn/Exit Conversation_usersays_en.json
+buildABot/Data/Default - Learn/Login - Fallback - no.json
+buildABot/Data/Default - Learn/Login - Fallback - no_usersays_en.json
+buildABot/Data/Default - Learn/Login - Fallback - yes - fallback.json
+buildABot/Data/Default - Learn/Login - Fallback - yes.json
+buildABot/Data/Default - Learn/Login - Fallback - yes_usersays_en.json
+buildABot/Data/Default - Learn/Login - Fallback.json
+buildABot/Data/Default - Learn/Login - Remember Name.json
+buildABot/Data/Default - Learn/Login - Remember Name_usersays_en.json
+buildABot/Data/Default - Learn/Login - Sentiment (Awesome)_usersays_en.json
+buildABot/Data/Default - Learn/Login - Sentiment (Doing Fine)_usersays_en.json
+buildABot/Data/Default - Learn/Login - Sentiment (It's been a rough week)_usersays_en.json
+buildABot/Data/Default - Learn/Login - Sentiment (Still Hanging There)_usersays_en.json
+buildABot/Data/Default - Learn/Login.json
+buildABot/Data/Default - Learn/Login_usersays_en.json
+buildABot/Data/Default - Learn/Thankyou.json
+buildABot/Data/Default - Learn/Thankyou_usersays_en.json
+buildABot/Data/Default - Learn/Upvote.json
+buildABot/Data/Default - Learn/Upvote_usersays_en.json
+buildABot/Data/Default - Recommended/Default Welcome Intent - Telegram - Check Submission.json
+buildABot/Data/Default - Recommended/Default Welcome Intent - Telegram - Check Submission_usersays_en.json
+buildABot/Data/Default - Recommended/Default Welcome Intent - Telegram_usersays_en.json
+buildABot/Data/Default - Recommended/Default Welcome Intent - Web - Fallback.json
+buildABot/Data/Default - Recommended/Default Welcome Intent - Web.json
+buildABot/Data/Default - Recommended/Default Welcome Intent - Web_usersays_en.json
+buildABot/Data/Default - Recommended/Downvote.json
+buildABot/Data/Default - Recommended/Downvote_usersays_en.json
+buildABot/Data/Default - Recommended/Email Enquiry.json
+buildABot/Data/Default - Recommended/Email Enquiry_usersays_en.json
+buildABot/Data/Default - Recommended/Exit Conversation.json
+buildABot/Data/Default - Recommended/Exit Conversation_usersays_en.json
+buildABot/Data/Default - Recommended/Log In.json
+buildABot/Data/Default - Recommended/Login - Fallback - no.json
+buildABot/Data/Default - Recommended/Login - Fallback - no_usersays_en.json
+buildABot/Data/Default - Recommended/Login - Fallback - yes - fallback.json
+buildABot/Data/Default - Recommended/Login - Fallback - yes.json
+buildABot/Data/Default - Recommended/Login - Fallback - yes_usersays_en.json
+buildABot/Data/Default - Recommended/Login - Fallback.json
+buildABot/Data/Default - Recommended/Login - Remember Name.json
+buildABot/Data/Default - Recommended/Login - Remember Name_usersays_en.json
+buildABot/Data/Default - Recommended/Login - Sentiment (Awesome)_usersays_en.json
+buildABot/Data/Default - Recommended/Login - Sentiment (Doing Fine)_usersays_en.json
+buildABot/Data/Default - Recommended/Login - Sentiment (It's been a rough week)_usersays_en.json
+buildABot/Data/Default - Recommended/Login - Sentiment (Still Hanging There)_usersays_en.json
+buildABot/Data/Default - Recommended/Login.json
+buildABot/Data/Default - Recommended/Login_usersays_en.json
+buildABot/Data/Default - Recommended/Menu - Main.json
+buildABot/Data/Default - Recommended/Menu - Main_usersays_en.json
+buildABot/Data/Default - Recommended/Thankyou.json
+buildABot/Data/Default - Recommended/Thankyou_usersays_en.json
+buildABot/Data/Default - Recommended/Upvote.json
+buildABot/Data/Default - Recommended/Upvote_usersays_en.json
+buildABot/Data/Default - Worksheets/Log In - Sentiment (Awesome)_usersays_en.json
+buildABot/Data/Default - Worksheets/Log In - Sentiment (Doing Fine)_usersays_en.json
+buildABot/Data/Default - Worksheets/Log In - Sentiment (It's been a rough week)_usersays_en.json
+buildABot/Data/Default - Worksheets/Log In - Sentiment (Still Hanging There)_usersays_en.json
+buildABot/Data/Entities/LoginID.json
+buildABot/Data/WebApp/index_template_LEARN.html
+buildABot/Data/WebApp/index_template_RECO.html
+buildABot/Data/WebApp/reset_template_RECO.js
+buildABot/Data/Webhook/CheckPwd_Template_RECO.js
+buildABot/Data/Webhook/RecommendedMenu_Template_RECO.js
+buildABot/Data/Webhook/ReportCard_Template_RECO.js
+buildABot/Data/Webhook/index_template_LEARN.js
+buildABot/Data/Webhook/index_template_RECO.js
+buildABot/Data/Webhook/package.json
+buildABot/QA/DataBank.py
+buildABot/QA/Para.py
+buildABot/QA/QAManager.py
+buildABot/QA/Responses.py
+buildABot/pytransform/__init__.py
+parrot/__init__.py
+parrot/demo.py
+parrot/filters.py
+parrot/parrot.py
