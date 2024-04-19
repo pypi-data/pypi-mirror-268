@@ -1,0 +1,77 @@
+# `energiinfo`
+The `energiinfo` is a python wrapper for energiinfo API
+
+
+The background color is `#ffffff` for light mode and `#000000` for dark mode.
+Simple code example:
+```
+from energiinfo.api import EnergiinfoClient
+from datetime import datetime
+
+siteid='13'
+apiurl='https://api4.energiinfo.se'
+username='username'
+password='password'
+# Initialize the api, this will not make an external call
+api = EnergiinfoClient(apiurl,siteid)
+
+# Authenticate against external api using username and password,
+token = api.authenticate(username,password)
+if api.getStatus() == "ERR":
+  errorMessage = api.getErrorMessage();
+  print(f"ErrorMessage: {errorMessage}")
+  exit(0)
+else:
+    print(f"Successfully logged in token={token}")
+
+# Initialize using token, this will make external call
+token = api.get_access_token()
+api = EnergiinfoClient(apiurl,'13',token)
+if api.getStatus() == "OK":
+  print(f"Token successfully authenticated")
+else:
+  errorMessage = api.getErrorMessage();
+  print(f"Failed to initialize with token: {errorMessage}")
+  exit(0)
+
+# If you want a long-term token you need to call authenticateToken every now and then to validate token is still valid
+# if not you may need to reauthenticate with username, password as above. the token if you plan on running this on a schedule
+api.authenticateToken(token)
+if api.getStatus() == "OK":
+  print("====== avbrottsinfo ======")
+  avbrottsinfo = api.get_interruptions()
+  print(avbrottsinfo)
+  print("====== meteringpoints ======")
+  meter_list = api.get_metering_points()
+  print(meter_list)
+  print("====== invoices ======")
+  invoices = api.get_invoices('2024')
+  print(invoices)
+  print("====== period 2023 ======")
+  period_data = api.get_period_values(meter_list[0]['meteringpoint_id'], '2023', 'ActiveEnergy', 'month')
+  print(period_data)
+  # Sum up the energy usage for the day
+  total = sum(float(value["value"]) for value in period_data)
+  print(f"Total energy use for the year 2023  {total}")
+  latest_hour_dict = max(period_data, key=lambda x: x['time'])
+  print(f"Latest hour for 2023: {latest_hour_dict['time']}")
+  print("====== period 202402 ======")
+  period_data = api.get_period_values(meter_list[0]['meteringpoint_id'], '202402', 'ActiveEnergy', 'day')
+  print(period_data)
+  print("====== period 20240225 ======")
+  period_data = api.get_period_values(meter_list[0]['meteringpoint_id'], '20240225', 'ActiveEnergy', 'hour')
+  print(period_data)
+  print("====== period 20240225-20240226 ======")
+  period_data = api.get_period_values(meter_list[0]['meteringpoint_id'], '20240225-20240226', 'ActiveEnergy', 'hour')
+  print(period_data)
+  print("====== period 2024030800 ======")
+  period_data = api.get_period_values(meter_list[0]['meteringpoint_id'], '2024030800', 'ActiveEnergy', 'quarter')
+  print(period_data)
+
+  # Invalidate token
+  api.logout()
+else:
+  errorMessage = api.getErrorMessage();
+  print(f"Failed to authenticate token: {errorMessage}")
+```
+

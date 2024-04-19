@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/energiinfo/__init__.py
+src/energiinfo/api.py
+src/energiinfo/const.py
+src/energiinfo.egg-info/PKG-INFO
+src/energiinfo.egg-info/SOURCES.txt
+src/energiinfo.egg-info/dependency_links.txt
+src/energiinfo.egg-info/top_level.txt
