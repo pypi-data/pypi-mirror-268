@@ -1,0 +1,13 @@
+h5view/__init__.py,sha256=Lymk04CB9aBCrPyWcvhcN9gE5GHc0vajcty4un8Wucc,600
+h5view/__main__.py,sha256=lhBhUBWFYe9rjS4-6T3mvEyNc-MQt0EMtWb32NQdplo,259
+h5view/app.py,sha256=p22Me-8EgMu3c-TC7PwgQpvrI3MEm6cfAW1-vvNip5E,9347
+h5view/app.ui,sha256=G-qSHAEUxM7BSHFmpRj7S90WT0G8RAiw8eStW8fHceY,10711
+h5view/gui.py,sha256=3Do5ruvrajBL8FEsb_RZ1zl0UI9zQ1NXYFsrNbxUKaQ,6775
+h5view/utils.py,sha256=XQe1qqr4xt7AtcRIYJ9gzNFmD-HaIczo18_HF1g8cjI,2202
+h5view/ui/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+h5view/ui/app.py,sha256=cU5IVelxyd651jMiDxZb9rPKqXST8PUMKi4cddY6R_I,12013
+h5view-0.1.0a1.dist-info/METADATA,sha256=kArFIGs92YxbwsOIbc9HB5VJyOOAGWUNH17eJXh2HL8,4039
+h5view-0.1.0a1.dist-info/WHEEL,sha256=lA-f9Lj70wKOLrgpRcgvGFxEoHnVMUTjYbvYas0c5ow,105
+h5view-0.1.0a1.dist-info/entry_points.txt,sha256=q5_I0meQLD205ymeJWoXKbzuATFj3F1-82E2gBZxdwE,39
+h5view-0.1.0a1.dist-info/licenses/LICENCE,sha256=e6jlH7C8nDLPBbzlXr230YWw3U9A4OCNDT-XvLYTXyA,1116
+h5view-0.1.0a1.dist-info/RECORD,,
