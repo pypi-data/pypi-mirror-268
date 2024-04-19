@@ -1,0 +1,10 @@
+README.md
+setup.py
+gpt_trans/__init__.py
+gpt_trans/main.py
+gpt_trans.egg-info/PKG-INFO
+gpt_trans.egg-info/SOURCES.txt
+gpt_trans.egg-info/dependency_links.txt
+gpt_trans.egg-info/entry_points.txt
+gpt_trans.egg-info/requires.txt
+gpt_trans.egg-info/top_level.txt
