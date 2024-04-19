@@ -1,0 +1,9 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+gRPCNvidia/__init__.py
+gRPCNvidia.egg-info/PKG-INFO
+gRPCNvidia.egg-info/SOURCES.txt
+gRPCNvidia.egg-info/dependency_links.txt
+gRPCNvidia.egg-info/top_level.txt
