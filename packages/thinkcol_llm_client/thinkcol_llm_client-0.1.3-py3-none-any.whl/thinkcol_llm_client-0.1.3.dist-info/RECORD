@@ -1,0 +1,10 @@
+thinkcol_llm_client/__init__.py,sha256=B171HeAFuYbjtS908yg1LnpkpMqu1tYRw_M0nusjKmU,223
+thinkcol_llm_client/bedrock/clients.py,sha256=RAe7NaiFlef3hUylOXsXXwGLA3kf3_XS90nPC0fmrD8,3561
+thinkcol_llm_client/bedrock/models.py,sha256=TSdXBJoLaysJiO3KlcgxqdW_aLc8m3zRtyWy2-G4lzw,2227
+thinkcol_llm_client/bedrock/payloads.py,sha256=-aYqfZU6aMZB7ewKXqBae8e94xnlpBG82u4tQxPYLZc,666
+thinkcol_llm_client/chat_client.py,sha256=NoVTefU4mxHKksFYZ6iBf1NtqxB2J0yoCcAvlcjyz9M,1154
+thinkcol_llm_client/constants.py,sha256=esNjPOXbUepzAVmyuAXiAIgH-apInKJ8r8gPuVUP0ss,420
+thinkcol_llm_client/openai_client.py,sha256=rmuLYL3dbdh8gCmPzMdt7DN74w7CmFX3mVVWTWZ2L7w,3024
+thinkcol_llm_client-0.1.3.dist-info/METADATA,sha256=SgXpM6aoiWxGKr4GAGkIk7NTviD9Bi4CPQCejvDEzJU,1429
+thinkcol_llm_client-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+thinkcol_llm_client-0.1.3.dist-info/RECORD,,

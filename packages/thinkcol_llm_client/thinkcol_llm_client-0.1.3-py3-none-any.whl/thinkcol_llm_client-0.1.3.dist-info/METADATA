@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: thinkcol_llm_client
+Version: 0.1.3
+Summary: Package for calling llm clients asynchronously
+Author: jedric01
+Author-email: jedric@connect.ust.hk
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: boto3 (>=1.34.68,<2.0.0)
+Requires-Dist: openai (>=1.14.2,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# LLM Client 
+Internal package for making multi-threaded calls to LLMs.
+
+# Supported Models
+Cohere Command, Cohere Embed, OpenAI Models, Titan Embed, Mixtral
+
+## Install
+```
+pip install thinkcol_llm_client
+```
+
+## Usage: 
+### Normal Usage
+```
+from thinkcol_llm_client import OpenAIClient, BedrockClient
+from thinkcol_llm_client import Anthropic
+
+texts = ["Hello", "Text 1", "ThinkCol"]
+
+client = OpenAIClient()
+client.embed(texts)
+
+questions = ["How do I implement best practices in data science projects" for _ in range(500)]
+client.invoke(questions)
+
+anthropic_client = BedrockClient(provider = Anthropic())
+anthropic_client.invoke(questions)
+```
+
+## Providers
+The list of providers for bedrock models can be found in bedrock/clients. Support for new providers/models can be added in this file.
+
+## Tests
+
+
+
+
