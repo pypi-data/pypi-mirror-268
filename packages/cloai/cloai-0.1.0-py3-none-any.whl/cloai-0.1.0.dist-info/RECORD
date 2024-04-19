@@ -1,0 +1,16 @@
+cloai/__init__.py,sha256=-L8eGZkqewYdS54XTKMUzJqo-3D1dLdBlaJhAxFawfs,49
+cloai/__main__.py,sha256=YvHbyMsaiU1OoKQTCCb8mOf-MQjgKrqMEjIxZJaobJY,396
+cloai/cli/__init__.py,sha256=XbrIdlu-o50VGUMjBKhubm1JVgbu--D8pxn4lArcKv4,46
+cloai/cli/commands.py,sha256=rICpwub2P-rw9mqhE2uYQ6wUarCwPc83p5DcNjSyjes,9882
+cloai/cli/parser.py,sha256=uXs6A1pxva_tsI2y6ObxvVMzdKJsO_TjLdVE0EOPJ8Q,13199
+cloai/cli/prompts.py,sha256=VL_oY59IbMABa9l_sE5zBIjFBbkGtSZoLT3mLnAIr6w,2119
+cloai/core/__init__.py,sha256=viha6WacM2nWPtJhgPIRe06uZOZtT16XLAjnsAP1Jho,41
+cloai/core/config.py,sha256=NpU3jeALxlkfVHi9L_kgUULTnTMxYDCDbba8oNTyf8Q,3053
+cloai/core/exceptions.py,sha256=zTXj4V-jJvd2MufyiEAIuIgepe_813X_KztZzFalQUA,791
+cloai/core/utils.py,sha256=uHV_xEYPaM1SC3EAnlzPe4rXCZZhlDXYcgDBDcKnpmE,4602
+cloai/openai_api.py,sha256=ugfAXELP1AaGocsW-vgCP1elZyUcsl3PTGKPkGMizto,7956
+cloai-0.1.0.dist-info/LICENSE,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+cloai-0.1.0.dist-info/METADATA,sha256=MWGz0Rj5CKV8qAW8y_BOCwsZkbXx6SCDzHQcisi3964,2715
+cloai-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cloai-0.1.0.dist-info/entry_points.txt,sha256=5srC6nh9MsArXdSL25OEaZ-LLukSQpqAzLvhMceH1Q4,45
+cloai-0.1.0.dist-info/RECORD,,
