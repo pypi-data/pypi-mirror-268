@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-yinying-chat
+Version: 2.1
+Summary: A nonebot plugin for yinying-chat
+Home-page: UNKNOWN
+Author: Yuanluo
+Author-email: 3313512421@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: aiohttp (>=3.8.4)
+Requires-Dist: nonebot-adapter-onebot (>=2.2.1)
+Requires-Dist: nonebot2 (>=2.0.0rc3)
+
+UNKNOWN
+
+
