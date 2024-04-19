@@ -1,0 +1,15 @@
+easytl/__init__.py,sha256=xPrWncr9L-Ehbf6dYTe90wA-twGj0nj_vCQ2Xs2lW1k,1084
+easytl/classes.py,sha256=2Ot2vTghRK6BSefTqVKFfm4w5MS6ykdEESRDityGHpk,2358
+easytl/decorators.py,sha256=fsIRxnhHJSd1mx0EtDn_M0BvMg9PK9zLfL8UCrlBhWg,4530
+easytl/deepl_service.py,sha256=NP8JdXkNblnDm1SdIgMxxqy4u_-N2dgaQMNykNxRVL0,11055
+easytl/easytl.py,sha256=xTOoeNFly5QdrvQdEJkl9i9czweYJG56UB268C7vQjE,49369
+easytl/exceptions.py,sha256=gMCYfy58OeVm0cij8SZJYoFxheag4wFbYFSeVMg7iGU,2086
+easytl/gemini_service.py,sha256=3PNjSYspPyObm9ZTNMC1xQaxX_SITQ7987d-naK30ZM,15958
+easytl/openai_service.py,sha256=jBHnvyoKVQPnwpC2THXdFvitseAmul-OE3l2EyAG-9w,17868
+easytl/util.py,sha256=d-_Kl_EiqTLgdfZijzbnJR2Dc-y8JdsUCNb7PqVPPAU,22700
+easytl/version.py,sha256=izEJWKwmO1fu3t9Qzwp8UNqHRszTfGUz3ihf0IB_bNM,209
+easytl-0.2.0b2.dist-info/LICENSE.md,sha256=IMF9i4xIpgCADf0U-V1cuf9HBmqWQd3qtI3FSuyW4zE,26526
+easytl-0.2.0b2.dist-info/METADATA,sha256=5BQgeD6SGHoCr33GfDpDEEoEiLyuy36GxeW3GCuU_vs,6729
+easytl-0.2.0b2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+easytl-0.2.0b2.dist-info/top_level.txt,sha256=8GhhL4wv4A-uSVUQ6zn1jhvSEqnDVx-BP1Og549ONOY,7
+easytl-0.2.0b2.dist-info/RECORD,,
