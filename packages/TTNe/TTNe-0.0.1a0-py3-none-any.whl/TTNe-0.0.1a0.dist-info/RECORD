@@ -1,0 +1,16 @@
+TTNe/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+TTNe/analytic.py,sha256=Qi0CN5MVngxXyzBOG4CssIskj07QpmDJ1A7W2CZC_JA,20827
+TTNe/analytic_multi.py,sha256=hy-_HcMRlfV_8KIWdEyuBU7c6Ym6dt_8C-EHVMKl04w,39744
+TTNe/inference_utility.py,sha256=XHND9q6zWRaaoWKl0wDywX7cx681Zmyo-fnKJI9d0tM,1777
+TTNe/plot.py,sha256=Lll2DgwAMujvgxayXsaeWHMnEsLncUjYaGLnQdnbtxc,18092
+TTNe/run.py,sha256=XKHB8iQieaiDmHA2Lb11PckHgdUZq8krhyNrNsk0Zik,9518
+TTNe/simulation/ts_utility.py,sha256=Z51vXVFnhojLNFZzuRouCBGAF__o3mIQQCXCTWb5Dyw,33465
+TTNe/simulation/ts_utility_wholeGenome.py,sha256=2NUIKskp4dTsnhwtHKvYzxskFHvQHiM8QaVsJL35LQ4,12895
+TTNe/simulation/tweakIBD.py,sha256=dZaKeexEySA07IrkzTgL1ulPGRcYK6JL2OVu48cM0Og,9382
+TTNe/simulation/tweakIBD_helper.py,sha256=h-IBYKbuiaonexr_BloA4qasD9Iy1R-6uqpubjrljic,7261
+TTNe-0.0.1a0.dist-info/LICENSE,sha256=fYhGIyxjyNXACgpNQS3xxpxDOaVOWRVxZMCRbsDv8k0,35130
+TTNe-0.0.1a0.dist-info/METADATA,sha256=YRvaBf9yk2tBFmA4BPC4ZyCminanLJCec4RlrEpPsEg,763
+TTNe-0.0.1a0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+TTNe-0.0.1a0.dist-info/entry_points.txt,sha256=OK8doWeREH2MEEIIZ33veSXkR7l7nMCiBjCFLmEZ-00,39
+TTNe-0.0.1a0.dist-info/top_level.txt,sha256=-LRM8nUI3LNgyo2-hk_qhseOU8At-58kQknIbIfedvU,5
+TTNe-0.0.1a0.dist-info/RECORD,,
