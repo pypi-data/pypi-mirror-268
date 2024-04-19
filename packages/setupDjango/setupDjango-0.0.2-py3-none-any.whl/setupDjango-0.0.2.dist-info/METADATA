@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: setupDjango
+Version: 0.0.2
+Summary: This package makes the Django environment simple to set.
+Home-page: https://github.com/rhenus9911/webpro
+Download-URL: https://github.com/rhenus9911/webpro/
+Author: jeonghoonbae
+Author-email: jeonghoon9911@naver.com
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# webpro   
+---   
+파이썬 Django 환경 세팅 간단하게 작업하기   
+
+## Function   
+   
+```python
+setupDjango(project_name)
+name에 원하는 project의 이름을 작성 하면 환경 생성
+```
+
+```python
+makeDirTree(project_name, app_name)
+환경 설정한 project_name에 서비스할 app_name 설정하면 기본 Dir 생성
+```
