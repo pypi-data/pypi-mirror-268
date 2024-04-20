@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: magpylib-force
+Version: 0.1.6
+Summary: An extension to the Magpylib library, providing force computation
+Home-page: https://github.com/magpylib/magpylib-material-response
+Author: Alexandre Boisselet
+Author-email: magpylib@gmail.com
+License: MIT
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: magpylib>=5.0.1
+
+# Magpylib-Force
+
+This package provides force and torque computation for Magpylib objects. Its work in progress and will finally be integrate into the Magpylib package.
+
+# Installation
+
+`pip install magpylib-force`
+
+# Example code:
+
+```
+import magpylib as magpy
+from mforce import getFTcube
+
+# all inputs and output in SI units
+
+cube1 = magpy.magnet.Cuboid(
+    dimension=(1,1,1),
+    polarization=(1,1,1),
+)
+cube2 = cube1.copy(position=(1,0,2))
+cube2.mesh = (10,10,10)
+
+F,T = getFTcube(cube1, [cube2, cube2.copy()], anchor=(0,0,0))
+print(F)
+print(T)
+```
