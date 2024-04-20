@@ -1,0 +1,9 @@
+PySqlModel/__init__.py,sha256=1C_ndBZ9I0_-hyiAEL5ld96yenUmA14GkKDtN_OaS18,123
+PySqlModel/base.py,sha256=VJdfIPNoxY1mGDSOUWngdE2zlUqEr0gVOsxXo3AZgu8,94
+PySqlModel/mysql.py,sha256=TiQ8m1vMD5Pt1wvQzGxuzd1LIjmEog2lJJ2t2YsRnSU,11570
+PySqlModel/sqlite.py,sha256=tLFl0xviMT9U9pZ39VM7aohaxYBbi7_om7boim2Vy1c,10957
+PySqlModel-1.1.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+PySqlModel-1.1.0.dist-info/METADATA,sha256=KEZjUPLBaiBPUDjGf_CC80dpA3ClMAuifVK_bdM_iKk,438
+PySqlModel-1.1.0.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+PySqlModel-1.1.0.dist-info/top_level.txt,sha256=QAqnzFv_0kv8Ja6MpchOBzX_FHR0MTaOqZA4ObBWaOA,11
+PySqlModel-1.1.0.dist-info/RECORD,,
