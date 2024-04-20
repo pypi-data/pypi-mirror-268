@@ -1,0 +1,11 @@
+npnn/__init__.py,sha256=pE-_BHhhZ_3JnnVs4ICx5y-2buYas1Z0XTgVNvBwqXg,118
+npnn/autograd.py,sha256=kyHgNOWnMqdugsnobtoVpsFLHzNouq8yadKwYFBphbU,4574
+npnn/base.py,sha256=eKm_kf5_MNVtVlqQKhsK2yUIA1do7S4deC_WR8ASCy4,1301
+npnn/functional.py,sha256=Y4lNFpAsEEx1DslFPJOaQSWJj85_NzW9-ZXnrcj5tuk,7498
+npnn/nn.py,sha256=3yJ7ru5hlZaE3wYru3dWSvwEpoCtUnNvoRSoFKBqyUI,1185
+npnn/optim.py,sha256=u2LSKLpakX57ckexyyTgudk2hylYLBmLXlpAwUsDUc0,5924
+npnn-0.0.3.dist-info/LICENSE,sha256=vrNbqM0kOyD_E9z3dSq0GOmozo-ca2tQM_oRlmupo5M,1067
+npnn-0.0.3.dist-info/METADATA,sha256=6vkSomB9vGbXn5Lob1Msg-SW6NSVGOckYAOzr85BebI,3974
+npnn-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+npnn-0.0.3.dist-info/top_level.txt,sha256=RtF1Y81n-MkHqucB-qbH-QZipZE-ffbsPcuVjnQ29hg,5
+npnn-0.0.3.dist-info/RECORD,,
