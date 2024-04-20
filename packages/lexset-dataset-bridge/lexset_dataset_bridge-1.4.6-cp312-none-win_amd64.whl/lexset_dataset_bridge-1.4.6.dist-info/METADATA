@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: lexset_dataset_bridge
+Version: 1.4.6
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE.md
+License-File: LICENSE.md
+Summary: This package offers functionalities for image enhancement and manipulation, catering specifically to the domain of dataset augmentation and improvement. The use of lexset_dataset_bridge is subject to legal terms and conditions which may be found in the license file contained within the package. Learn more at https://seahaven.lexset.ai/
+License: Subject to legal terms and conditions which may be found in the license
+	file contained withinthe dist-info folder associated with this package. See
+	LICENSE.md for more information.
+Requires-Python: >=3.8
