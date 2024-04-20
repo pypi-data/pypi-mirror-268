@@ -1,0 +1,5 @@
+include LICENSE
+include README.md
+recursive-include JazzminTM/static *
+recursive-include JazzminTM/templates *.html
+recursive-include JazzminTM/locale *

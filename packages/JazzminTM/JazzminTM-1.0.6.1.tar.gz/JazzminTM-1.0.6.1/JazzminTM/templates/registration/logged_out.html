@@ -1,0 +1,12 @@
+{% extends "registration/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    <p class="text-center">
+        {% trans "You are logged out of your account." %}
+    </p>
+    <a style="background-color: #009977; color: white;" class="btn btn-block" href="{% url 'admin:index' %}">
+        {% trans 'Log in again' %}
+    </a>
+{% endblock %}

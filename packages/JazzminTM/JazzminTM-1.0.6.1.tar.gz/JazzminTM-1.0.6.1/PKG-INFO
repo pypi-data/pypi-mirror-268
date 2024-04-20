@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: JazzminTM
+Version: 1.0.6.1
+Summary: A custom admin interface for Django inspired by the Django Jazzmin.
+Home-page: https://github.com/ayhandev/JazzminTM
+Download-URL: https://github.com/ayhandev/JazzminTM/releases/download/1.0.6.1/JazzminTM-1.0.6.1.tar.gz
+Author: ayhan
+Author-email: jumanyyazowayhan32@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+
+Python module for JazzminTM management platform (JazzminTM wrapper)
