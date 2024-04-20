@@ -1,0 +1,9 @@
+elasticsearch==7.13.3
+elasticsearch-dsl<8.0.0,>=7.0.0
+texta-tools==2.*
+pytest
+requests
+django-environ
+
+[mlp]
+texta-mlp

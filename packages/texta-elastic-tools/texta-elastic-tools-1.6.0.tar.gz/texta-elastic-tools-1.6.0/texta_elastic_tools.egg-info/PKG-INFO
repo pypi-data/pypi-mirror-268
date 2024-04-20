@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: texta-elastic-tools
+Version: 1.6.0
+Summary: TEXTA Elasticsearch tools
+Home-page: https://git.texta.ee/texta/texta-elastic-tools-python
+Author: TEXTA
+Author-email: info@texta.ee
+License: GPLv3
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: mlp
+License-File: LICENSE
+
+# TEXTA Elastic Tools Python Package
+
+Texta Elasticsearch tools
+
+##### From Git
+`pip3 install git+https://git.texta.ee/texta/texta-elastic-tools-python`
+
+##### From PyPI
+`pip3 install texta-elastic-tools`
+
+### Testing
+`python3 -m pytest -v tests`
+
+
