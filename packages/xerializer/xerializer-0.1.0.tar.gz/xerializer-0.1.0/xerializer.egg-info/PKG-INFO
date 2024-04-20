@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: xerializer
+Version: 0.1.0
+Home-page: https://github.com/zepedaj/xerializer
+Author: Joaquin Zepeda
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pytz
+Requires-Dist: hydra-core
+Requires-Dist: frozendict
+Requires-Dist: jztools
+
+Extensible, readable serialization.
+
+
+* Install xerializer using
+
+```
+pip install xerializer
+```
+
+
+* See [Xerializer's full documentation](https://xerializer.readthedocs.io/en/latest/) for more information
+
+
+* Contribute at [Xerializer's github page](https://github.com/zepedaj/xerializer)
+
+
+
