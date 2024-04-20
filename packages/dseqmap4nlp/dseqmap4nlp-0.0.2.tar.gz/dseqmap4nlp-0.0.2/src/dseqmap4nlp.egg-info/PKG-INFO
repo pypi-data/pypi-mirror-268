@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: dseqmap4nlp
+Version: 0.0.2
+Summary: A small tool to parse and process annotated text corpora
+Author-email: Johann Frei <johann_frei@yahoo.de>
+Project-URL: Homepage, https://github.com/j-frei/DSeqMap4NLP
+Project-URL: Issues, https://github.com/j-frei/DSeqMap4NLP/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Text Processing
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: spacy
+
+# DSeqMap for NLP
+
+This tool handles annotation data for named-enitity-recognition (NER) that support token-wise (discrete sequences) and character-wise (text) representations and can translate between these representations.
+
+### Install
+Use `pip install dseqmap4nlp` to install the package.
+
+### Example
+The following script demonstrates some transformation of annotation data.
+```python
+from dseqmap4nlp import SpacySequenceMapper, LabelLoader, CharSequenceMapper
+
+# Load JSONL
+samples = [
+    {"text": "Das ist gut.", "label": [
+        (0,3, "a"),
+        (2,7, "b"),
+        (6,8, "b")
+    ]}
+]
+
+for sample in samples:
+    text = sample["text"]
+    anns = sample["label"]
+    mapper = SpacySequenceMapper(text, nlp="de")
+    charmapper = CharSequenceMapper(text=text)
+
+    annotationset = LabelLoader.from_text_spans(anns, mapper)
+    print("Overlaps:", annotationset.countOverlaps())
+
+    filtered_spans = annotationset\
+        .toDSeqSpans(strategy=["expand"])\
+        .withoutOverlaps(strategy="prefer_longest", merge_same_classes=True)
+    print("Overlaps:", filtered_spans.countOverlaps())
+
+    print("Sequence:")
+    print(filtered_spans.toFormattedSequence(schema="IOB2"))
+    print("Previous sequence:")
+    try:
+        # Should raise an error...
+        print(annotationset.toFormattedSequence(schema="IOB2"))
+    except Exception as e:
+        print("Error raised: " + repr(e))
+```

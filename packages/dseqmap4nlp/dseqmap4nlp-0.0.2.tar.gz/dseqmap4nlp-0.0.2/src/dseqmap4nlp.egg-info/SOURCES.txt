@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/dseqmap4nlp/__init__.py
+src/dseqmap4nlp/annotationset.py
+src/dseqmap4nlp/basemapper.py
+src/dseqmap4nlp/charmapper.py
+src/dseqmap4nlp/labelloader.py
+src/dseqmap4nlp/raggedmapper.py
+src/dseqmap4nlp/spacymapper.py
+src/dseqmap4nlp.egg-info/PKG-INFO
+src/dseqmap4nlp.egg-info/SOURCES.txt
+src/dseqmap4nlp.egg-info/dependency_links.txt
+src/dseqmap4nlp.egg-info/requires.txt
+src/dseqmap4nlp.egg-info/top_level.txt

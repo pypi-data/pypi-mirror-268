@@ -1,0 +1,27 @@
+[project]
+name = "dseqmap4nlp"
+version = "0.0.2"
+authors = [
+  { name="Johann Frei", email="johann_frei@yahoo.de" },
+]
+description = "A small tool to parse and process annotated text corpora"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Text Processing"
+]
+dependencies = [
+    "spacy"
+]
+
+[project.urls]
+Homepage = "https://github.com/j-frei/DSeqMap4NLP"
+Issues = "https://github.com/j-frei/DSeqMap4NLP/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
