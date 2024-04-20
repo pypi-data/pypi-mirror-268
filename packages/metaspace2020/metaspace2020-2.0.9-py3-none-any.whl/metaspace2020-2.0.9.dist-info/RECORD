@@ -1,0 +1,13 @@
+metaspace/__init__.py,sha256=TbRHczAhiYrjd59cDQ6q-kPOpUW9EDB3M8n8OQaIPac,217
+metaspace/annotation_export.py,sha256=FjFXF3LlBFCfhgc4bsWh47iuE_eZEYdCP5ovS2YGUpk,6893
+metaspace/dendrogram.py,sha256=RUzaaBXmkcmVUgwz5rAXurxFGC3f8DDLtVNYCjyri5w,6216
+metaspace/image_processing.py,sha256=8Wh8Ob6HmLUZYv4TRbMMyGRZTvtane7UGS7-e1eQeS4,3158
+metaspace/plotting.py,sha256=OKViGwA33NLNu5cPS9vtvpDvyGPsmM64bjZZ853Gu64,29819
+metaspace/projects_client.py,sha256=SEGoc-jZXpcd3jJ-OshVDmQOy7yqhs4L32IBsuJfd24,4366
+metaspace/sm_annotation_utils.py,sha256=Mpl-h0SXAhComqU-WIpTX2lWBcgBGPJqPSdwJNNekRg,90336
+metaspace/types.py,sha256=ke2pwHQAvF1xCDW2T3lzPoAfQ6GfNm717HwGheKppXk,5679
+metaspace2020-2.0.9.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+metaspace2020-2.0.9.dist-info/METADATA,sha256=XsYoj4yjgbfl52NAX6P_raZ1sMXv4awcU5LUxGhA4oc,1436
+metaspace2020-2.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+metaspace2020-2.0.9.dist-info/top_level.txt,sha256=1CRSs8Q3hSxf9lj3t9HccNTBIxMnWJrXlz4qwy4wdIc,10
+metaspace2020-2.0.9.dist-info/RECORD,,
