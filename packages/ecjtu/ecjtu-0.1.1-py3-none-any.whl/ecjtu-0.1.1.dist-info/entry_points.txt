@@ -1,0 +1,3 @@
+[console_scripts]
+ecjtu=ecjtu.__main__:main
+
