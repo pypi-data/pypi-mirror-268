@@ -1,0 +1,26 @@
+stages:
+  - yolo
+
+docker-build-and-release:
+  image: docker:latest
+  stage: yolo
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u booniepepper -p "${DOCKER_PASSWORD}"
+    - apk add make
+  script:
+    - make docker-release
+  only:
+    - core
+
+flit-build-and-release:
+  image: python:latest
+  stage: yolo
+  before_script:
+    - pip install pipx
+    - pipx install flit
+  script:
+    - make release
+  only:
+    - core

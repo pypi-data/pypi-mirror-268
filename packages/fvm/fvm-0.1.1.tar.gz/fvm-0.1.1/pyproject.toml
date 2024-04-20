@@ -1,0 +1,19 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "fvm"
+authors = [{name = "$wryl", email = "wryl@wryl.tech"}]
+maintainers = [{name = "Justin \"Boonie Pepper\" Hill", email = "justin@so.dang.cool"}]
+readme = "README.md"
+dynamic = ["version", "description"]
+
+[project.urls]
+source = "https://gitlab.com/feather-lang/fvm"
+
+[project.scripts]
+fvm = "fvm.run:main"
+
+[tool.flit.sdist]
+exclude = ["docker", "Makefile"]
