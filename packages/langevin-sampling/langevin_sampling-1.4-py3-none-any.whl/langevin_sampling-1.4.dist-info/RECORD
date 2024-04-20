@@ -1,0 +1,9 @@
+langevin_sampling/SGLD.py,sha256=mLA25h34uB2kd73Nb5rtG0eaKumpOh36mlsuF2VRgEQ,3179
+langevin_sampling/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+langevin_sampling/precondSGLD.py,sha256=Ua4RAI7TdhXLNtW42KAa3CXtF0B5csORgDOetaYr46A,4037
+langevin_sampling/samplers.py,sha256=AT49cLJLxWV49BOx1Rci2SnegXC8N7QYnX-iu3dTZHI,9612
+langevin_sampling-1.4.dist-info/LICENSE,sha256=HhBTP92OtUZcC8bP-LceCcrPQQujo6tfGUJjfQeaCSE,1101
+langevin_sampling-1.4.dist-info/METADATA,sha256=qx_F1DRpHXooIyLjl2zZ1xTp7PzBzNQdRGdoerhCc7M,4084
+langevin_sampling-1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+langevin_sampling-1.4.dist-info/top_level.txt,sha256=lgQaGipQZqX_kI6SqFDPt3J03EvP7gy-dL3wtth9wwk,18
+langevin_sampling-1.4.dist-info/RECORD,,
