@@ -1,0 +1,3 @@
+[console_scripts]
+allm-run = ALLMDEV.cli:main
+allm-serve = ALLMDEV.api:main
