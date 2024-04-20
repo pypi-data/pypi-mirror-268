@@ -1,0 +1,26 @@
+from dataclasses import dataclass
+import cooptools.reservation.enums as enums
+from typing import Hashable, List
+
+@dataclass(frozen=True, slots=True)
+class ReservationResult:
+    requested: Hashable
+    requester: Hashable
+    explanation: enums.ReservationResultExplanation | enums.UnReservationResultExplanation
+    result: enums.ResultStatus
+
+@dataclass(frozen=True, slots=True)
+class ReservationTransaction:
+    requested: List[Hashable]
+    requester: Hashable
+    method: enums.ReservationMethod
+
+@dataclass(frozen=True, slots=True)
+class ReservationTransactionResult:
+    result: enums.ResultStatus
+    available: List[Hashable]
+    unavailable: List[Hashable]
+    transaction: ReservationTransaction
+    reserved: List[Hashable]
+
+
