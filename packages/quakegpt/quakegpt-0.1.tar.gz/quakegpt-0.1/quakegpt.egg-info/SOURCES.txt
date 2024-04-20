@@ -1,0 +1,5 @@
+setup.py
+quakegpt.egg-info/PKG-INFO
+quakegpt.egg-info/SOURCES.txt
+quakegpt.egg-info/dependency_links.txt
+quakegpt.egg-info/top_level.txt
