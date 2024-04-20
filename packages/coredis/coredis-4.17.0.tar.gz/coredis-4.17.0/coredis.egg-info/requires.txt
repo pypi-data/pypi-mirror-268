@@ -1,0 +1,6 @@
+async_timeout<5,>4
+deprecated>=1.2
+typing_extensions>=4.3
+packaging<25,>=21
+pympler<2,>1
+wrapt<2,>=1.1.0
