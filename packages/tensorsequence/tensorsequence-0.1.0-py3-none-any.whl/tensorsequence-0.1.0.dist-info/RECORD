@@ -1,0 +1,8 @@
+tensorsequence/__init__.py,sha256=_Zkry0UBVjO8vc0AYktPGH6HCNGzd7t9a75SQhtV9r8,43
+tensorsequence/tensorsequence.py,sha256=ownt8Hys6pHqYw-hh3LmORs_3ZhrE6hwQZMWlYOvkMw,6371
+tensorsequence/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tensorsequence/tests/test_tensorsequence.py,sha256=vGwfqx_oMhj0xOHEZ3JKHJDrDrRkAasLZzkjEQHx7ns,1275
+tensorsequence-0.1.0.dist-info/METADATA,sha256=QY2UqSAxigBDEmy9vmfmIDl-Qe-S5MWd44ujdt9C1v0,2770
+tensorsequence-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tensorsequence-0.1.0.dist-info/top_level.txt,sha256=r7XdlBmlqzEQSeDRTiuFRoba1nAkWaP27IesfBiE4aI,15
+tensorsequence-0.1.0.dist-info/RECORD,,
