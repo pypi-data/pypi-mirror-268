@@ -1,0 +1,5 @@
+[console_scripts]
+alphapept = alphapept.__main__:main
+
+[nbdev]
+alphapept = alphapept._modidx:d
