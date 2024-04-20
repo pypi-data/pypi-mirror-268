@@ -1,0 +1,92 @@
+
+
+<pre>
+
+	<h1></h1>
+	
+		[ ] verbosity
+			# record_level
+			# records
+	
+		[ ] objective, make the health scan sys.path 100% declarative
+	
+		[ ] results modificiations:
+	
+			from:
+				{
+					"path": "../status_1.py",
+					"empty": false,
+					"parsed": true,
+					"stats": {
+						"passes": 2,
+						"alarms": 1
+					},
+					"checks": []
+				}
+			
+			to:
+				{
+					"path": "../status_1.py",
+					
+					"exited": "no",
+					
+					"health_scan": {
+						"path": {
+							"alarm": "An exception occurred while running the scan.",
+							"exception": "",
+							"exception trace": "",
+							
+							"checks found": 3,
+							"parsed": "yes",
+							"empty": "no"
+						},
+						"checks": {
+							"alarms": 1,
+							"passes": 2
+						}
+					},
+					
+					"checks": [
+						{
+							"check": "check 1",
+							"passed": "yes",
+							"elapsed": [
+								2.1824067190009373,
+								"seconds"
+							]
+						}
+					]
+				}
+		
+			types of problems:
+				exitted:
+				
+				exception in check:
+				
+				exception in path:
+					parse error:
+					
+				
+				
+
+
+
+		stats format 2 by preset:
+			{
+				"paths": path_statuses,
+				"stats": {
+					"paths": {
+						"alarms": 0,
+						"empty": 0,
+					},
+					"checks": {
+						"passes": 0,
+						"alarms": 0
+					}
+				}
+			}
+
+
+
+
+</pre>
