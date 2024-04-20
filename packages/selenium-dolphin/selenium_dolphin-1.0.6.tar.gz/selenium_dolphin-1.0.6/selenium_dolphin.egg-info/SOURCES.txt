@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.MD
+setup.py
+selenium_dolphin/__init__.py
+selenium_dolphin/api.py
+selenium_dolphin/selenium_dolphin.py
+selenium_dolphin/utils.py
+selenium_dolphin.egg-info/PKG-INFO
+selenium_dolphin.egg-info/SOURCES.txt
+selenium_dolphin.egg-info/dependency_links.txt
+selenium_dolphin.egg-info/requires.txt
+selenium_dolphin.egg-info/top_level.txt
