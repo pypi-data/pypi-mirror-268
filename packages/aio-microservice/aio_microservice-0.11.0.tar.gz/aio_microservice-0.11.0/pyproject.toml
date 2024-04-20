@@ -1,0 +1,282 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "aio-microservice"
+description = "A library to create microservices."
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+authors = [
+    { name = "betaboon", email = "betaboon@0x80.ninja" },
+]
+maintainers = [
+    { name = "betaboon", email = "betaboon@0x80.ninja" },
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+dynamic = []
+dependencies = [
+    "annotated-types>=0.6.0",
+    "click>=8.1.3",
+    "eval-type-backport>=0.1.3; python_version < \"3.10\"",
+    "litestar>=2.6.3",
+    "loguru>=0.7.2",
+    "pydantic>=2.6.3",
+    "pyhumps>=3.8.0",
+    "pyyaml>=6.0.1",
+    "rich-click>=1.7.3",
+    "rich>=13.7.1",
+    "typed-settings>=24.1.0",
+    "typing-extensions>=4.10.0",
+    "uvicorn>=0.27.1",
+]
+version = "0.11.0"
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+amqp = [
+    "faststream[rabbit]>=0.4.6",
+]
+all = [
+    "aio-microservice[amqp]",
+    "aio-microservice[graphql]",
+    "aio-microservice[s3]",
+    "aio-microservice[scheduler]",
+]
+s3 = [
+    "boto3>=1.34.54",
+]
+scheduler = [
+    "apscheduler>=3.10.4",
+]
+graphql = [
+    "strawberry-graphql>=0.220.0",
+    "websockets>=12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/betaboon/aio-microservice"
+Documentation = "https://betaboon.github.io/aio-microservice"
+Changelog = "https://github.com/betaboon/aio-microservice/releases"
+Repository = "https://github.com/betaboon/aio-microservice"
+"Issue Tracker" = "https://github.com/betaboon/aio-microservice/issues"
+
+[tool.pdm.dev-dependencies]
+docs = [
+    "furo>=2024.1.29",
+    "myst-parser>=2.0.0",
+    "sphinx-autoapi>=3.0.0",
+    "sphinx-autobuild>=2024.2.4",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx>=7.2.6",
+]
+linting = [
+    "boto3-stubs[s3]>=1.34.54",
+    "gitlint>=0.19.1",
+    "mypy>=1.8.0",
+    "pre-commit>=3.6.2",
+    "ruff>=0.3.0",
+]
+testing = [
+    "httpx>=0.27.0",
+    "pytest-asyncio>=0.23.5",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "pytest>=8.0.2",
+    "testcontainers-on-whales[minio,rabbitmq]>=0.7.0",
+]
+
+[tool.pdm.options]
+lock = [
+    "--group=:all",
+]
+
+[tool.pdm.version]
+source = "scm"
+write_to = "aio_microservice/__version__.py"
+write_template = "__version__ = \"{}\"\n"
+
+[tool.pdm.scripts.install-git-hooks]
+help = "Install pre-commit hooks"
+cmd = "pre-commit install --install-hooks"
+
+[tool.pdm.scripts.lint]
+help = "Run pre-commit"
+cmd = "pre-commit run --all-files"
+
+[tool.pdm.scripts.test]
+help = "Run tests"
+cmd = "pytest"
+
+[tool.pdm.scripts.docs-build]
+help = "Build docs"
+cmd = "sphinx-build docs docs/_build"
+
+[tool.pdm.scripts.docs-serve]
+help = "Build and serve docs"
+cmd = "sphinx-autobuild --watch aio-microservice docs docs/_build"
+
+[tool.pdm.scripts._ci-lint-code]
+cmd = [
+    "pre-commit",
+    "run",
+    "--show-diff-on-failure",
+    "--from-ref",
+    "${FROM_REF}",
+    "--to-ref",
+    "${TO_REF}",
+]
+
+[tool.pdm.scripts._ci-lint-commits]
+cmd = [
+    "gitlint",
+    "--contrib",
+    "contrib-title-conventional-commits",
+    "--ignore",
+    "body-is-missing",
+    "--commits",
+    "${FROM_REF}..${TO_REF}",
+]
+
+[tool.semantic_release]
+tag_format = "{version}"
+
+[tool.semantic_release.changelog]
+exclude_commit_patterns = [
+    "Merge pull request.*",
+]
+
+[tool.mypy]
+strict = true
+python_version = "3.9"
+plugins = [
+    "pydantic.mypy",
+    "strawberry.ext.mypy_plugin",
+]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+preview = true
+
+[tool.ruff.lint]
+fixable = [
+    "ALL",
+]
+select = [
+    "A",
+    "ANN",
+    "ASYNC",
+    "B",
+    "BLE",
+    "C4",
+    "C90",
+    "COM",
+    "D",
+    "DTZ",
+    "E",
+    "ERA",
+    "EXE",
+    "F",
+    "FLY",
+    "FURB",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "NPY",
+    "PD",
+    "PERF",
+    "PIE",
+    "PLC",
+    "PLE",
+    "PLW",
+    "PT",
+    "PTH",
+    "Q",
+    "RET",
+    "RUF",
+    "S",
+    "SIM",
+    "T10",
+    "T20",
+    "TCH",
+    "TID",
+    "TRY",
+    "UP",
+    "W",
+    "YTT",
+]
+ignore = [
+    "ANN101",
+    "ANN102",
+    "D",
+    "D100",
+    "D104",
+    "PT004",
+    "PT005",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*" = [
+    "C901",
+    "D",
+    "S",
+    "SIM",
+]
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+mark-parentheses = false
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers --cov"
+asyncio_mode = "auto"
+xfail_strict = true
+
+[tool.coverage.run]
+branch = true
+parallel = true
+concurrency = [
+    "thread",
+    "multiprocessing",
+]
+source = [
+    "aio_microservice",
+]
+omit = [
+    "aio_microservice/__version__.py",
+]
+
+[tool.coverage.report]
+fail_under = 100
+exclude_also = [
+    "if\\s+(typing\\.)?TYPE_CHECKING:",
+]

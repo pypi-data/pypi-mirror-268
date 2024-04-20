@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: aio-microservice
+Version: 0.11.0
+Summary: A library to create microservices.
+Author-Email: betaboon <betaboon@0x80.ninja>
+Maintainer-Email: betaboon <betaboon@0x80.ninja>
+License: MIT
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Typing :: Typed
+Project-URL: Homepage, https://github.com/betaboon/aio-microservice
+Project-URL: Documentation, https://betaboon.github.io/aio-microservice
+Project-URL: Changelog, https://github.com/betaboon/aio-microservice/releases
+Project-URL: Repository, https://github.com/betaboon/aio-microservice
+Project-URL: Issue tracker, https://github.com/betaboon/aio-microservice/issues
+Requires-Python: <3.13,>=3.9
+Requires-Dist: annotated-types>=0.6.0
+Requires-Dist: click>=8.1.3
+Requires-Dist: eval-type-backport>=0.1.3; python_version < "3.10"
+Requires-Dist: litestar>=2.6.3
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: pydantic>=2.6.3
+Requires-Dist: pyhumps>=3.8.0
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: rich-click>=1.7.3
+Requires-Dist: rich>=13.7.1
+Requires-Dist: typed-settings>=24.1.0
+Requires-Dist: typing-extensions>=4.10.0
+Requires-Dist: uvicorn>=0.27.1
+Requires-Dist: faststream[rabbit]>=0.4.6; extra == "amqp"
+Requires-Dist: aio-microservice[amqp]; extra == "all"
+Requires-Dist: aio-microservice[graphql]; extra == "all"
+Requires-Dist: aio-microservice[s3]; extra == "all"
+Requires-Dist: aio-microservice[scheduler]; extra == "all"
+Requires-Dist: boto3>=1.34.54; extra == "s3"
+Requires-Dist: apscheduler>=3.10.4; extra == "scheduler"
+Requires-Dist: strawberry-graphql>=0.220.0; extra == "graphql"
+Requires-Dist: websockets>=12.0; extra == "graphql"
+Provides-Extra: amqp
+Provides-Extra: all
+Provides-Extra: s3
+Provides-Extra: scheduler
+Provides-Extra: graphql
+Description-Content-Type: text/markdown
+
+# AIO Microservice
+
+[![ci](https://img.shields.io/github/actions/workflow/status/betaboon/aio-microservice/ci-main.yaml?style=for-the-badge&branch=main&logo=github&logoColor=white)](https://github.com/betaboon/aio-microservice/actions/workflows/ci-main.yaml?query=branch%3Amain)
+
+[![version](https://img.shields.io/pypi/v/aio-microservice?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/aio-microservice)
+[![pyversions](https://img.shields.io/pypi/pyversions/aio-microservice?style=for-the-badge&logo=python&logoColor=white)](https://github.com/betaboon/aio-microservice)
+[![license](https://img.shields.io/pypi/l/aio-microservice?style=for-the-badge)](https://github.com/betaboon/aio-microservice/LICENSE)
+
+[![docs](https://img.shields.io/badge/docs-blue?style=for-the-badge&label=sphinx&logo=sphinx&logoColor=white)](https://betaboon.github.io/aio-microservice)
+[![pdm](https://img.shields.io/badge/managed-blue?style=for-the-badge&logo=pdm&logoColor=white&label=pdm&color=%237e56c2)](https://pdm-project.org)
+[![ruff](https://img.shields.io/badge/formatted-blue?style=for-the-badge&logo=ruff&logoColor=white&label=ruff&color=%23d7ff64)](https://astral.sh/ruff)
+
+## What is AIO Microservice?
+<!-- start description -->
+
+A library to create microservices.
+
+<!-- end description -->
+
+## Features
+<!-- start features -->
+
+<!-- end features -->
+
+## Installation
+<!-- start installation -->
+
+AIO Microservice can be installed with `pip`:
+
+```text
+pip install aio-microservice
+```
+
+<!-- end installation -->
+
+## Quickstart
+<!-- start quickstart -->
+
+<!-- end quickstart -->
+
+## Contributing
