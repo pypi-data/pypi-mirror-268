@@ -1,0 +1,12 @@
+node_modules
+.venv
+dist
+images
+
+# Python
+__pycache__
+.ipynb_checkpoints
+
+src/ipyniivue/static
+
+launch.json
