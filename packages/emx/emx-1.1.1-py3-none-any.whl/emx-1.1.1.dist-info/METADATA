@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: emx
+Version: 1.1.1
+Summary: Automatic code download tool.
+Home-page: https://github.com/shouxieai
+Author: ShouXie AI
+Author-email: 1186117192@qq.com
+License: UNKNOWN
+Platform: linux
+Requires-Python: >=3.6
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: urllib3
+
+UNKNOWN
+

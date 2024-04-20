@@ -1,0 +1,4 @@
+[console_scripts]
+emx = emx.__main__:main
+erun = emx.__main__:run
+
