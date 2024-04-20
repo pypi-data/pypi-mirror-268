@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sapiopycommons"
+version='31.0.13.23.12'
+authors = [
+    { name="Yechen Qiao", email="yqiao@sapiosciences.com" },
+]
+description = "Sapio Commons for Python 3"
+requires-python = ">=3.10"
+dependencies = [
+        'sapiopylib>=2023.12.13.174'
+]
+homepage = "https://www.sapiosciences.com/"
+
+[project.urls]
+"Homepage" = "https://github.com/sapiosciences"

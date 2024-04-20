@@ -1,0 +1,8 @@
+Metadata-Version: 2.3
+Name: sapiopycommons
+Version: 31.0.13.23.12
+Summary: Sapio Commons for Python 3
+Project-URL: Homepage, https://github.com/sapiosciences
+Author-email: Yechen Qiao <yqiao@sapiosciences.com>
+Requires-Python: >=3.10
+Requires-Dist: sapiopylib>=2023.12.13.174
