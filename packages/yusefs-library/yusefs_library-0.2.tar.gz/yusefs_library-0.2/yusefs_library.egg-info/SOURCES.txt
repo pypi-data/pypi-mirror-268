@@ -1,0 +1,10 @@
+README.md
+setup.py
+yusefs_library/__init__.py
+yusefs_library/main.py
+yusefs_library.egg-info/PKG-INFO
+yusefs_library.egg-info/SOURCES.txt
+yusefs_library.egg-info/dependency_links.txt
+yusefs_library.egg-info/entry_points.txt
+yusefs_library.egg-info/requires.txt
+yusefs_library.egg-info/top_level.txt
