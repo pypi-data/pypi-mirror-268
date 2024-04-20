@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: speechtoolkit
+Version: 0.0.0
+Summary: ML for Speech presents SpeechToolkit, a unified, all-in-one toolkit for TTS, ASR, VC, & other models.
+Home-page: https://github.com/ml-for-speech/speechtoolkit
+Author: ml-for-speech
+Description-Content-Type: text/markdown
+Requires-Dist: soundfile
+Requires-Dist: librosa
+Requires-Dist: torch
+Requires-Dist: transformers
+Requires-Dist: optimum
+Provides-Extra: vc
+Requires-Dist: lvc; extra == "vc"
+Requires-Dist: ns3vc; extra == "vc"
+Provides-Extra: fa2
+Requires-Dist: flash-attn; extra == "fa2"
+Provides-Extra: asr
+Requires-Dist: openai-whisper; extra == "asr"
+Provides-Extra: dev
+Requires-Dist: mkdocs; extra == "dev"
+Requires-Dist: mkautodoc; extra == "dev"
+Provides-Extra: all
+Requires-Dist: lvc; extra == "all"
+Requires-Dist: ns3vc; extra == "all"
+Requires-Dist: flash-attn; extra == "all"
+Requires-Dist: openai-whisper; extra == "all"
+
+# SpeechToolkit
+
+ML for Speech presents SpeechToolkit, a unified framework for text-to-speech, voice conversion, automatic speech recognition, audio classification, voice activity detection, and more!
+
+Please note that this toolkit is currently in an early alpha and not all features have been implemented.
+
+If you prefer not to use SpeechToolkit but would like to interact with models individually and separately, please check out the [ML for Speech](https://github.com/ml-for-speech) page.
+
+## Installation & Usage
+
+Documentation is available online.
