@@ -1,0 +1,8 @@
+README.md
+setup.py
+inventory_library/__init__.py
+inventory_library/main.py
+inventory_library.egg-info/PKG-INFO
+inventory_library.egg-info/SOURCES.txt
+inventory_library.egg-info/dependency_links.txt
+inventory_library.egg-info/top_level.txt
