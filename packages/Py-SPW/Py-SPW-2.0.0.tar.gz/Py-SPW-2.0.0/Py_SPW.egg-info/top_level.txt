@@ -1,0 +1,6 @@
+_build
+build
+dist
+docs
+examples
+pyspw
