@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "streamlit-allauth"
+version = "0.1.0"
+description = ""
+authors = ["Alexandre Meline <alexandre.meline.dev@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.33.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
