@@ -1,0 +1,14 @@
+mlx_transformers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlx_transformers/models/__init__.py,sha256=fDhMciSyk8sv4rSCiDm6D0y6Ds6I0SS9k_IrdIO134s,103
+mlx_transformers/models/bert.py,sha256=dHcNhRa6fG96zKPpHP8veBoeTQXViDH9dkJGAioJ3Vg,15058
+mlx_transformers/models/clip.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mlx_transformers/models/m2m_100.py,sha256=MLlZPceYbvldRFmVuRfHrE7hxkzSL_jOnAKWktmwgWI,17437
+mlx_transformers/models/modelling_outputs.py,sha256=pJLSCHwKV4OR0HDUIQZCkGdQyw0GwycldCQB_Ith7iI,796
+mlx_transformers/models/roberta.py,sha256=PbPOjOoIgsna4-Q7XFXoUeMAW4CCS18_xCrjUl1F17A,16001
+mlx_transformers/models/utils.py,sha256=CavdT3Xe7WOAoG_zAsprCGKrN8EDHUQxla4fRn3p-Io,1567
+mlx_transformers/models/xlm_roberta.py,sha256=jBBbbjCOEUvxr29nlNCI2hhLAjxQAl1vJT7kS30E56s,16073
+mlx_transformers-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+mlx_transformers-0.1.0.dist-info/METADATA,sha256=zrF3_2SSAbsnAhGbHL14nRgMq-ex6ItD93jd-1miV2c,3057
+mlx_transformers-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mlx_transformers-0.1.0.dist-info/top_level.txt,sha256=Ow549WPPiALXW8iwikno1ZSiSrJ4AktTA5iSnKB3mcY,17
+mlx_transformers-0.1.0.dist-info/RECORD,,
