@@ -1,0 +1,1 @@
+from .news import get_random_headline
