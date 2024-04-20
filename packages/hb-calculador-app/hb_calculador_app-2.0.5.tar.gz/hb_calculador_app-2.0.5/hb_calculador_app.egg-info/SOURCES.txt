@@ -1,0 +1,5 @@
+setup.py
+hb_calculador_app.egg-info/PKG-INFO
+hb_calculador_app.egg-info/SOURCES.txt
+hb_calculador_app.egg-info/dependency_links.txt
+hb_calculador_app.egg-info/top_level.txt
