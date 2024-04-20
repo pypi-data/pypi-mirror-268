@@ -1,0 +1,7 @@
+setup.py
+My_First_Project_19_April_2024.egg-info/PKG-INFO
+My_First_Project_19_April_2024.egg-info/SOURCES.txt
+My_First_Project_19_April_2024.egg-info/dependency_links.txt
+My_First_Project_19_April_2024.egg-info/top_level.txt
+first_project/__init__.py
+first_project/__main__.py
