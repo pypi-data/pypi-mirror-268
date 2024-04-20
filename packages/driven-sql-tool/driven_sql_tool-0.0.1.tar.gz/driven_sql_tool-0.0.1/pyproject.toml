@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "driven_sql_tool"
+version = "0.0.1"
+dependencies = [
+    "pandas",
+    "turbodbc"
+]
+requires-python = ">=3.10"
+authors = [
+  { name="Ilya Davydov", email="shaddam.jabbar@gmail.com" },
+]
+description = "Simple wrapper (based on turbodbc) for most common MSSQL operations I face day-to-day"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
