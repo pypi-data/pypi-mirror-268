@@ -1,0 +1,15 @@
+LICENSE
+pyproject.toml
+readme.md
+sqlite3_orm.egg-info/PKG-INFO
+sqlite3_orm.egg-info/SOURCES.txt
+sqlite3_orm.egg-info/dependency_links.txt
+sqlite3_orm.egg-info/requires.txt
+sqlite3_orm.egg-info/top_level.txt
+sqlite_orm/__init__.py
+sqlite_orm/base.py
+sqlite_orm/columns.py
+sqlite_orm/helpers.py
+sqlite_orm/models.py
+sqlite_orm/files/__init__.py
+sqlite_orm/files/storage.py
