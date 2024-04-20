@@ -1,0 +1,2 @@
+include dagster_plus_cli/commands/serverless/Dockerfile
+include dagster_plus_cli/commands/serverless/Dockerfile.dagster-cloud-cli
