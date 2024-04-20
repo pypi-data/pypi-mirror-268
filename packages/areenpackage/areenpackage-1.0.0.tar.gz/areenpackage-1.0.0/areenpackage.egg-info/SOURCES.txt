@@ -1,0 +1,7 @@
+setup.py
+areenpackage/__init__.py
+areenpackage/operations.py
+areenpackage.egg-info/PKG-INFO
+areenpackage.egg-info/SOURCES.txt
+areenpackage.egg-info/dependency_links.txt
+areenpackage.egg-info/top_level.txt
