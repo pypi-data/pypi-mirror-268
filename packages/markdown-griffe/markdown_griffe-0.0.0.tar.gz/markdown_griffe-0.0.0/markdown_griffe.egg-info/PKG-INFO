@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: markdown-griffe
+Version: 0.0.0
+Summary: Add cross-references into Python code blocks. Available to sponsors only.
+Author-email: Timothée Mazzucotelli <dev@pawamoy.fr>
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# markdown-griffe
+
+Add cross-references into Python code blocks.
+
+This project is currently available to [sponsors](https://github.com/sponsors/pawamoy) only.
+See https://pawamoy.github.io/markdown-griffe/insiders.

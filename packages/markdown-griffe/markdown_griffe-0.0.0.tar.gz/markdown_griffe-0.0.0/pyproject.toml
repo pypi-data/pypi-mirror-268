@@ -1,0 +1,8 @@
+[project]
+name = "markdown-griffe"
+version = "0.0.0"
+description = "Add cross-references into Python code blocks. Available to sponsors only."
+authors = [{name = "Timothée Mazzucotelli", email = "dev@pawamoy.fr"}]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = ["Development Status :: 1 - Planning"]

@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+markdown_griffe.egg-info/PKG-INFO
+markdown_griffe.egg-info/SOURCES.txt
+markdown_griffe.egg-info/dependency_links.txt
+markdown_griffe.egg-info/top_level.txt
