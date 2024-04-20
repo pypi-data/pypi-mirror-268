@@ -1,0 +1,1 @@
+stimulsoft-data-adapters[ext]==2024.2.4
