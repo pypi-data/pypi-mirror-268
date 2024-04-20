@@ -1,0 +1,11 @@
+ipykernel
+astropy
+astroquery
+tqdm
+
+[dev]
+black
+jupyter
+pre-commit
+pytest
+pytest-cov
