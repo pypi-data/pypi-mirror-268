@@ -1,0 +1,13 @@
+[console_scripts]
+adjust-sub = jaraco.media.srt:AdjustCommand.run
+crop-detect = jaraco.media.cropdetect:execute
+dvd-info = jaraco.media.dvd_info:main
+encode-dvd = jaraco.media.dvd:encode_dvd
+fix-fourcc = jaraco.media.dvd:fix_fourcc
+mkv-to-mp4 = jaraco.media.matroska:handle_command_line
+multibrake = jaraco.media.handbrake:multibrake
+quick-brake = jaraco.media.handbrake:quick_brake
+rip-subtitles = jaraco.media.dvd:rip_subtitles
+serve-index = jaraco.media.index:serve
+transcode = jaraco.media.dvd:transcode
+update-anydvd = jaraco.media.dvd:update_anydvd
