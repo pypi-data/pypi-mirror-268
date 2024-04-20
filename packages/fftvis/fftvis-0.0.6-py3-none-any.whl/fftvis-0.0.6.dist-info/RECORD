@@ -1,0 +1,12 @@
+fftvis/__init__.py,sha256=8tSRabRYy3YZ8Oiu0yP-KhV2Pti6CNumjqrs4Qll6tw,37
+fftvis/beams.py,sha256=JP6jFyh2ulXCZvFLoiLRQ8GfYMLx0XWNkijqDTyQJU4,2143
+fftvis/simulate.py,sha256=KfU35j4Uv-xiLWMem4ccMUp5J4zyve8At1nLY2aWzzI,11900
+fftvis/utils.py,sha256=2aJfh1WJAWeLgIGLxqRb_Fx_7LuxbkjlC5kOonF3Saw,2411
+fftvis/tests/__init__.py,sha256=Dy1vOmUe-Q4lKQsNGE2vB0YR9n5XJn030IG6V55LCo8,5353
+fftvis/tests/test_compare_matvis.py,sha256=fRc2pvCS_jHV4Mb-5zCia7MMUZ3outlTBkLglDe3joU,3236
+fftvis/tests/test_compare_pyuvsim.py,sha256=N49B_903gjjtoeddGmu5niWNWxNM_heCQQxBITdtW2s,4367
+fftvis/tests/test_utils.py,sha256=gBmBDW-FFqEBOsh_315xALdpLk26RlkEQnmc8pw4hE8,62
+fftvis-0.0.6.dist-info/METADATA,sha256=KvxYUFB8IR5sOCpQt-DnOcPn1BEzXk2QE6-_NUd_oiM,3152
+fftvis-0.0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fftvis-0.0.6.dist-info/top_level.txt,sha256=p91SGcGpU_MXL32mier1gBGXt2_nxk5H8hn1MwNki2I,7
+fftvis-0.0.6.dist-info/RECORD,,
