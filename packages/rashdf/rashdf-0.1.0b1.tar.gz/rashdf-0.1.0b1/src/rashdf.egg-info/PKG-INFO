@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: rashdf
+Version: 0.1.0b1
+Summary: Read data from HEC-RAS HDF files.
+Project-URL: repository, https://github.com/fema-ffrd/rashdf
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: h5py
+Requires-Dist: geopandas
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+# rashdf
+Read data from HEC-RAS HDF files.
+
+## Setup
+Create a virtual environment in the project directory:
+```
+$ python -m venv venv-rashdf
+```
+
+Activate the virtual environment:
+```
+$ source ./venv/bin/activate
+(venv-rashdf) $
+```
+
+With the virtual environment activated, run the tests:
+```
+(venv-rashdf) $ pytest
+```
+
+
