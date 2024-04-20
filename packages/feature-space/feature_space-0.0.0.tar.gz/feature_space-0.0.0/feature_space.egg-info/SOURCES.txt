@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+build.py
+requirements.txt
+setup.py
+feature_space/__init__.py
+feature_space/dataset.py
+feature_space/feature.py
+feature_space/features.py
+feature_space.egg-info/PKG-INFO
+feature_space.egg-info/SOURCES.txt
+feature_space.egg-info/dependency_links.txt
+feature_space.egg-info/requires.txt
+feature_space.egg-info/top_level.txt
