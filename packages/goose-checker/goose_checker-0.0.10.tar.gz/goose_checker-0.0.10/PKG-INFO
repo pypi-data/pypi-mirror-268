@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: goose-checker
+Version: 0.0.10
+Summary: State of the Art Silly Goose Detection Technology
+Author: AdamPaslawski
+Author-email: adampaslawski@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: gitpython (>=3.1.43,<4.0.0)
+Requires-Dist: langchain (>=0.1.14,<0.2.0)
+Requires-Dist: langchain-openai (>=0.1.1,<0.2.0)
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: tiktoken (>=0.6.0,<0.7.0)
+Description-Content-Type: text/markdown
+
+![goose checker logo](https://raw.githubusercontent.com/AdamPaslawski/goose-checker/main/assets/goose_checker.svg)
+
+# goose-checker
+Military Grade Silly Goose Detection
+
+# Quick Start
+Navigate to a git repository on your machine
+```
+export OPENAI_API_KEY=your-api-key-goes-here
+goose-checker
+```
+
+
+# Setup
+
+## 1. Installation
+
+via pipx
+
+`pipx install goose-checker`
+
+via pip
+
+`pip install goose-checker`
+
+See your options in the command line.
+
+`goose-checker --help`
+
+## 2. Setting Your API Key
+
+### a. Azure Model Users
+If you are using Azure as your provider your API key must be set as
+`AZURE_OPENAI_API_API_KEY=your-key-here`
+
+#### b. OpenAI Model Users
+If you are using OpenAI as your provider your API key must be set as
+`OPENAI_API_KEY=your key here`
+
+### 3. Setting Convenient Environment Variables (optional)
+Having to specify settings over and over an be annoying, we provide sensible defaults but we can make this easier by using environment variables
+
+Example:
+```
+export GOOSE_CHECKER_PROVIDER=azure
+export GOOSE_CHECKER_MODEL_NAME=gpt-4
+export AZURE_OPENAI_API_VERSION=2023-07-01-preview
+export AZURE_OPENAI_BASE_URL=some_azure_base_url
+```
+
+You can set these in `~/.bashrc` for convenience
+
+
+# Usage
+
+## Basic Usage
+```
+pipx run goose-checker
+```
+or if you installed with pip
+
+```
+goose-checker
+```
+
+## Providing Arguments
+```
+pipx run goose-checker --model gpt-4
+```
+or if you installed with pip
+
+```
+goose-checker --model gpt-4
+```
