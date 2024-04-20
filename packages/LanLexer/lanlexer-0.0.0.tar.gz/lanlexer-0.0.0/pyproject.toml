@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LanLexer"
+version = "0.0.0"
+dependencies = []
+requires-python = ">=3.10"
+authors = [
+  {name = "Markada", email = "markada.py@gmail.com"},
+]
+description = "One of the LanKit library tools is the lexer"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["Markada", "BNF", "language", "create", "parser", "lexer", "LanKit"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Development Status :: 4 - Beta",
+  "Natural Language :: Russian",
+  "Operating System :: OS Independent",
+]
+
+# [project.urls]
+# Homepage = ""
+# Changelog = "CHANGELOG.md"
+# Documentation = ""
+# Repository = ""
+# "Bug Tracker" = ""
