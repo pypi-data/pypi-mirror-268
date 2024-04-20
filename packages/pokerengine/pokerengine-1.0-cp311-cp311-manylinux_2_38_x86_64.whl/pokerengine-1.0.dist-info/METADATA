@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pokerengine
+Version: 1.0
+Summary: Poker Library
+Keywords: raindinners,engine,poker,texas,holdem,texas-holdem,texas_holdem,pybind11,scikit-build-core,fast,c++,magic_enum,stubs,python-stubs,python_stubs,pythonstubs,py-stubs,py_stubs,pystubs
+Author: raindinners
+Requires-Python: >=3.8
+Provides-Extra: dev
+Provides-Extra: build
+Requires-Dist: black~=23.10.0; extra == "dev"
+Requires-Dist: isort~=5.12.0; extra == "dev"
+Requires-Dist: ruff~=0.1.1; extra == "dev"
+Requires-Dist: pre-commit~=3.5.0; extra == "dev"
+Requires-Dist: build~=1.2.1; extra == "build"
+Requires-Dist: twine~=5.0.0; extra == "build"
+Description-Content-Type: text/markdown
+
+# pokerengine
+
+The poker engine.
