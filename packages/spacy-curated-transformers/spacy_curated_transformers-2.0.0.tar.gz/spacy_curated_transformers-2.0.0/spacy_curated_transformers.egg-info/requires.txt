@@ -1,0 +1,6 @@
+curated-transformers<3.0.0,>=2.0.0
+curated-tokenizers<3.0.0,>=2.0.0
+fsspec>=2023.5.0
+spacy<5.0.0,>=4.0.0.dev2
+thinc<9.1.0,>=9.0.0.dev4
+torch>=1.12.0
