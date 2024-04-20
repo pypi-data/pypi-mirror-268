@@ -1,0 +1,9 @@
+matplotlib
+numpy
+seaborn
+metpy
+pathlib
+cartopy
+basemap
+windrose
+rich
