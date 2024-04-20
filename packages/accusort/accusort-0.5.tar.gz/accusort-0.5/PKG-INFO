@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: accusort
+Version: 0.5
+Summary: AccuSort is a Python package that sorts image PDF files into segregated folders based on the accuracy of PN numbers detected in the image and the file name.
+Home-page: UNKNOWN
+Author: Sixtysix Technologies
+Author-email: sangeeth@sixtysixtech.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+
+    AccuSort
+    ========
+
+    AccuSort is a Python package that sorts image PDF files into segregated folders based on the accuracy of PN numbers detected in the image and the file name.
+
+    Installation
+    ------------
+
+    1. Run the `export_variables.sh` script on Mac or Linux, and the corresponding batch file on Windows in the terminal or command prompt.
+    2. Install AccuSort using pip:
+       ```
+       pip install accusort
+       ```
+
+    Usage
+    -----
+
+    1. In your teminal/command prompt, Navigate to the directory containing the image master folder (the folder containing the image sub-folders).
+    2. Run the following command to sort the images:
+       ```
+       accusort <image_master_folder_name>
+       ```
+    3. The script saves the segragated folders in the respective subfolders of images.
+
+    
+
