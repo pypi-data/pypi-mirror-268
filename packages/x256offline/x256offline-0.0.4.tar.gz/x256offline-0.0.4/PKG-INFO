@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: x256offline
+Version: 0.0.4
+Summary: quickly find the nearest xterm 256 color index of an RGB
+Author-email: userElaina <userelaina@pm.me>
+Maintainer-email: userElaina <userelaina@pm.me>
+License: MIT License
+        
+        Copyright (c) 2024 Elaina
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/userElaina/python-x256-offline
+Project-URL: Bug Reports, https://github.com/userElaina/python-x256-offline/issues
+Project-URL: Source, https://github.com/userElaina/python-x256-offline
+Keywords: x256,xterm,color
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+x256offline
+===========
+
+Quickly find the nearest xterm 256 color index of an RGB.
+
+Installation
+------------
+
+.. code-block:: shell
+
+    python -m pip install x256offline
+
+Simple Example
+--------------
+
+.. code-block:: python
+
+    import x256offline as x256
+
+    c0 = 0x23307b
+    x0e = x256.from_rgb(c0)
+    x0w = x256.from_rgb(c0, weighted=True)
+
+    print(hex(c0))
+    print(x0e, hex(x256.to_rgb(x0e)))
+    print(x0w, hex(x256.to_rgb(x0w)))
+
+    # 0x23307b
+    # 4 0x80
+    # 24 0x5f87
