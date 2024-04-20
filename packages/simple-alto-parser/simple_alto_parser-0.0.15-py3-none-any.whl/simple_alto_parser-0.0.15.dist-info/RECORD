@@ -1,0 +1,16 @@
+simple_alto_parser/VERSION,sha256=Z8wxjKy5YtvFPIxtIgfUNQfMg0C6DCCiaeednEAmwOc,6
+simple_alto_parser/__init__.py,sha256=8BBz9q3lsH4S_l8kidC3L7zEjri2NJX8rRArYsfzaUw,366
+simple_alto_parser/alto_file.py,sha256=lsceJwAlvE1aSIfraC5626rkP-r7CuhDahNKcy5D9cY,9424
+simple_alto_parser/alto_file_exporter.py,sha256=DonOT_XMXu9Y9RbX-ekji0BdsT8KcZQEO0IG59XGiOQ,4264
+simple_alto_parser/alto_file_parser.py,sha256=pdgStoBzTUWmbRyWjXxT0SILeg45dzrwDTp2tBAOSBE,19344
+simple_alto_parser/base_parser.py,sha256=htU5BvWz9QcKpWE4LZVaojvEJvo1c0PXyIxT5Mtg3Kk,3427
+simple_alto_parser/dictionary_creator.py,sha256=xVMIclI4E9pX1-I3KlUe72-VBG-_QPYi5LeNr05c8Z0,1932
+simple_alto_parser/dictionary_parser.py,sha256=BgL7uv09rTkGWQUQGNjVMk5i4a9hEMjdLngTXaUM1VY,4782
+simple_alto_parser/nlp_parser.py,sha256=ahDgnZCpQSIexCyPHAL4d89nhcvV8wJuOaT5sK6v-HY,1685
+simple_alto_parser/pattern_parser.py,sha256=vsz2btWY_D5Z5PMLyDj-7K6ZP8CixLIylBR-TwY9kGU,2210
+simple_alto_parser/utils.py,sha256=swE-aOZAYv-yz5vQ-tzveD0w1IGXh60K7Kpn5pfO5w8,700
+simple_alto_parser-0.0.15.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+simple_alto_parser-0.0.15.dist-info/METADATA,sha256=1ux3NEPsqnFax8IcUFB8XmGvypPVF2nBLkOMAywEllk,4244
+simple_alto_parser-0.0.15.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+simple_alto_parser-0.0.15.dist-info/top_level.txt,sha256=F9c68UzemQ2Agw5NvFZx-YgDVKf8Sh3T_Sxb7zAPVtc,19
+simple_alto_parser-0.0.15.dist-info/RECORD,,
