@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Segments/Dimensional &#8212; Calcbench API Client  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <link rel="stylesheet" type="text/css" href="_static/autodoc_pydantic.css?v=a0a71c94" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Earnings Press Release Numeric" href="press-release.html" />
+    <link rel="prev" title="Business Combinations - Purchase Price Allocation" href="business-combinations.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="segments-dimensional">
+<h1>Segments/Dimensional<a class="headerlink" href="#segments-dimensional" title="Link to this heading">¶</a></h1>
+<p>Data from dimensionalized tables, operating and geographic segments for example.  The data behind the Calcbench Segment page www.calcbench.com/segments.</p>
+<dl class="py function" id="module-calcbench.dimensional">
+<dt class="sig sig-object py" id="calcbench.dimensional.dimensional">
+<span class="sig-prename descclassname"><span class="pre">calcbench.dimensional.</span></span><span class="sig-name descname"><span class="pre">dimensional</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">company_identifiers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PeriodType.Annual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_history</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_originally_reported</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calcbench.dimensional.dimensional" title="Link to this definition">¶</a></dt>
+<dd><p>Segments and Breakouts in a DataFrame</p>
+<p>The data behind the breakouts/segment page, <a class="reference external" href="https://www.calcbench.com/breakout">https://www.calcbench.com/breakout</a>.</p>
+<p>If there are no results an empty dataframe is returned</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>company_identifiers</strong> (<em>sequence</em>) – Tickers/CIK codes. eg. [‘msft’, ‘goog’, ‘appl’, ‘0000066740’]</p></li>
+<li><p><strong>metrics</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span>) – Specific line item to get, for instance <cite>OperatingSegmentRevenue</cite> or <cite>ConcentrationRiskPercentageCustomer</cite>, get the list &#64; <a class="reference external" href="https://www.calcbench.com/api/availableBreakouts">https://www.calcbench.com/api/availableBreakouts</a>, pass in the “databaseName”</p></li>
+<li><p><strong>start_year</strong> (<em>int</em>) – first year of data to get</p></li>
+<li><p><strong>start_period</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Period</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</span>) – first period of data to get.  0 for annual data, 1, 2, 3, 4 for quarterly data.</p></li>
+<li><p><strong>end_year</strong> (<em>int</em>) – last year of data to get</p></li>
+<li><p><strong>end_period</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Period</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</span>) – last period of data to get. 0 for annual data, 1, 2, 3, 4 for quarterly data.</p></li>
+<li><p><strong>period_type</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">PeriodType</span></code></span>) – only applicable when other period data not supplied.</p></li>
+<li><p><strong>trace_url</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – include a column with URL that point to the source document.</p></li>
+<li><p><strong>as_originally_reported</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – Show the first reported, rather than revised, values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of points.  The points correspond to the lines &#64; <a class="reference external" href="https://www.calcbench.com/breakout">https://www.calcbench.com/breakout</a>.  For each requested metric there will be a the formatted value and the unformatted value denote bya  _effvalue suffix.  The label is the dimension label associated with the values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cb</span><span class="o">.</span><span class="n">dimensional</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>  <span class="n">company_identifiers</span><span class="o">=</span><span class="n">cb</span><span class="o">.</span><span class="n">tickers</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;DJIA&quot;</span><span class="p">),</span>
+<span class="gp">&gt;&gt;&gt; </span>  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;OperatingSegmentRevenue&quot;</span><span class="p">,</span> <span class="s2">&quot;OperatingSegmentOperatingIncome&quot;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>  <span class="n">period_type</span><span class="o">=</span><span class="s2">&quot;annual&quot;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="calcbench.dimensional.dimensional_raw">
+<span class="sig-prename descclassname"><span class="pre">calcbench.dimensional.</span></span><span class="sig-name descname"><span class="pre">dimensional_raw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">company_identifiers</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_year</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PeriodType.Annual</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_history</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_originally_reported</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#calcbench.dimensional.dimensional_raw" title="Link to this definition">¶</a></dt>
+<dd><p>Segments and Breakouts</p>
+<p>The data behind the breakouts/segment page, <a class="reference external" href="https://www.calcbench.com/breakout">https://www.calcbench.com/breakout</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>company_identifiers</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]]</span>) – Tickers/CIK codes. eg. [‘msft’, ‘goog’, ‘appl’, ‘0000066740’]</p></li>
+<li><p><strong>metrics</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</span>) – Specific line item to get, for instance <cite>OperatingSegmentRevenue</cite> or <cite>ConcentrationRiskPercentageCustomer</cite>, get the list &#64; <a class="reference external" href="https://www.calcbench.com/api/availableBreakouts">https://www.calcbench.com/api/availableBreakouts</a>, pass in the “databaseName”</p></li>
+<li><p><strong>start_year</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span>) – first year of data to get</p></li>
+<li><p><strong>start_period</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Period</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</span>) – first period of data to get.</p></li>
+<li><p><strong>end_year</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span>) – last year of data to get</p></li>
+<li><p><strong>end_period</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-data docutils literal notranslate"><span class="pre">Union</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Period</span></code>, <code class="xref py py-data docutils literal notranslate"><span class="pre">Literal</span></code>[<code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">4</span></code>], <code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code>]</span>) – last period of data to get.</p></li>
+<li><p><strong>period_type</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">PeriodType</span></code></span>) – Only applicable when other period data not supplied.</p></li>
+<li><p><strong>all_history</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – Get data for all history</p></li>
+<li><p><strong>as_originally_reported</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span>) – Show the first reported, rather than revised, values</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sequence</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">DimensionalDataPoint</span></code>]</span></p>
+</dd>
+</dl>
+<dl>
+<dt>Usage::</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cb</span><span class="o">.</span><span class="n">dimensional_raw</span><span class="p">(</span><span class="n">company_identifiers</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;fdx&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;OperatingSegmentRevenue&#39;</span><span class="p">],</span>
+<span class="gp">&gt;&gt;&gt; </span>  <span class="n">start_year</span><span class="o">=</span><span class="mi">2018</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Calcbench API Client</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="standardized-numeric.html">Standardized Numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disclosures.html">Disclosures/Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="face-statements.html">Face Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filings.html">Filings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="companies.html">Companies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="push-notification.html">Low-latency New Data Notification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metrics.html">Metrics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-numeric-XBRL.html">Raw Numeric XBRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raw-numeric-non-XBRL.html">Raw numeric Non-XBRL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business-combinations.html">Business Combinations - Purchase Price Allocation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Segments/Dimensional</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#calcbench.dimensional.dimensional"><code class="docutils literal notranslate"><span class="pre">dimensional()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calcbench.dimensional.dimensional_raw"><code class="docutils literal notranslate"><span class="pre">dimensional_raw()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="press-release.html">Earnings Press Release Numeric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="downloaders.html">Downloaders</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="business-combinations.html" title="previous chapter">Business Combinations - Purchase Price Allocation</a></li>
+      <li>Next: <a href="press-release.html" title="next chapter">Earnings Press Release Numeric</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2023, Calcbench.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/dimensional.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
