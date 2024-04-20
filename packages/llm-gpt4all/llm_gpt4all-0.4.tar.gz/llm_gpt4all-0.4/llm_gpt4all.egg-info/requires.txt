@@ -1,0 +1,6 @@
+llm>=0.11
+gpt4all>=2.5.1
+httpx
+
+[test]
+pytest
