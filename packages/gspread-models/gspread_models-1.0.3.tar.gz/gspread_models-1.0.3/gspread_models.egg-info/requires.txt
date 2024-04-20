@@ -1,0 +1,2 @@
+python-dotenv
+gspread>=6.0.2

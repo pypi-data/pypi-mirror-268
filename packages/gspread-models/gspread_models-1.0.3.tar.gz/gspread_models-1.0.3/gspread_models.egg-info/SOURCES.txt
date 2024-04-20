@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+gspread_models/__init__.py
+gspread_models/base.py
+gspread_models/date_parser.py
+gspread_models/service.py
+gspread_models.egg-info/PKG-INFO
+gspread_models.egg-info/SOURCES.txt
+gspread_models.egg-info/dependency_links.txt
+gspread_models.egg-info/requires.txt
+gspread_models.egg-info/top_level.txt
