@@ -1,0 +1,12 @@
+openbb_benzinga/__init__.py,sha256=k12n0bz1dxMbb3k1-lfVP16nbwhJ2lLLUN93n8I7_hI,877
+openbb_benzinga/models/__init__.py,sha256=73YKT4vdzAVK1CG_gBuFSBo7GpQzVvV8qN_NxBjpces,32
+openbb_benzinga/models/analyst_search.py,sha256=P2oHKHzV--3pukgGZUtHQoMyejSQ2OBfDsYZNN-6tLY,17979
+openbb_benzinga/models/company_news.py,sha256=15LDgcBpeKqt6JWOSxfTy-XXX6wRCT4E-pciDMQyvlc,6173
+openbb_benzinga/models/price_target.py,sha256=4lycMUZPOLNpNvSNN_BWEsol9EXFbnwz5yMgj__k1wg,9801
+openbb_benzinga/models/world_news.py,sha256=X6w6oFBPTJiDeIStecLJ9LgDbbw9FF0XGUgxlVPLZ0E,5809
+openbb_benzinga/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openbb_benzinga/utils/__init__.py,sha256=EiZD8o3hQMk9VVK7PrZETDXWo3pDi9YMLl0yuIuNQ_w,31
+openbb_benzinga-1.1.5.dist-info/METADATA,sha256=CQ_IcjctDKF0HETjyxbNKOUppvyuyK1pyZaAXesZkrw,1002
+openbb_benzinga-1.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+openbb_benzinga-1.1.5.dist-info/entry_points.txt,sha256=6SKvS7K9YGlv0MXddNMgi9YLGe39DMiiiO3YAeI77Hc,72
+openbb_benzinga-1.1.5.dist-info/RECORD,,
