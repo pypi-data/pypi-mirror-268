@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+outputstyles/__init__.py
+outputstyles/apply_styles.py
+outputstyles/msg_type.py
+outputstyles/variables.py
+outputstyles.egg-info/PKG-INFO
+outputstyles.egg-info/SOURCES.txt
+outputstyles.egg-info/dependency_links.txt
+outputstyles.egg-info/top_level.txt
