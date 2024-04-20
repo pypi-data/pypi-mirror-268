@@ -1,0 +1,13 @@
+scikit-learn
+ascii_colors
+matplotlib
+seaborn
+python-docx
+python-pptx
+pandas
+beautifulsoup4
+mplcursors
+PyPDF2
+dpkt
+pipmaster
+sentence-transformers
