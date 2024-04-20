@@ -1,0 +1,12 @@
+pytorrentdl/__init__.py,sha256=h43Wwvw79bgWKyvaulhXr3Sq8U2QVMNQ3ks_YswuJzo,578
+pytorrentdl/cli.py,sha256=R6Mu5SgqXHD5H_UAUWWJmjlynFbm6XvytmR5M5Ix5jQ,1812
+pytorrentdl/downloader.py,sha256=QICX3kKSSCVxWXo0-yhFmOmoBWiimPinCT3iZ4LEHVs,3173
+pytorrentdl/session.py,sha256=bQB4c-wI743vbZTyaaE2Gt_nCiJgiXbEiLu62uF0hqY,1204
+pytorrentdl/torrent_downloader.py,sha256=0uC36oOBLAoWnNGDLgyurONPPdZDgwpXX__QoXePr3A,1972
+pytorrentdl/torrent_info.py,sha256=AQDWviQQW2QZ1KwzrbE2rAiHj0qYM-SfVQlKJ00gl0o,470
+pytorrentdl-2.0.1.dist-info/LICENSE,sha256=8fpWF1H62zaYkffa5vsNcq82aOIfQspDtEvpcx-bijM,12179
+pytorrentdl-2.0.1.dist-info/METADATA,sha256=eEzsiGCjcmRfQ05xQHrus1j2wtcetAIQVlzIFLgr6W0,5193
+pytorrentdl-2.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pytorrentdl-2.0.1.dist-info/entry_points.txt,sha256=JcQbKXnIK0d5xL3Y_0S6oXAg8LQ2t3sUToi5zYlRNUk,56
+pytorrentdl-2.0.1.dist-info/top_level.txt,sha256=gTXGO4fTSGcCpLXTCdfe1LnNfyhvIOv2Q1dFFPvu55U,12
+pytorrentdl-2.0.1.dist-info/RECORD,,
