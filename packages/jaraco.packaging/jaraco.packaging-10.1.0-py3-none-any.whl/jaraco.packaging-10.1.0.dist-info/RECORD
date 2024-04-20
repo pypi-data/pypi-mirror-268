@@ -1,0 +1,9 @@
+jaraco/packaging/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jaraco/packaging/make-tree.py,sha256=CFP4MgzOzUq72aouSt139dRPV9IOby03vx5vPkpnVWs,1073
+jaraco/packaging/metadata.py,sha256=qU94uAGdkDw4pOo-F9HyeuwWd-hJT7hAvSI8ZDczYd8,2768
+jaraco/packaging/sphinx.py,sha256=zxfYwkCy8d7HMfr7tDHbX0vEoX8dhPPC8XGnjeoHjwE,3815
+jaraco.packaging-10.1.0.dist-info/LICENSE,sha256=htoPAa6uRjSKPD1GUZXcHOzN55956HdppkuNoEsqR0E,1023
+jaraco.packaging-10.1.0.dist-info/METADATA,sha256=f9KFngGmYZe4w121baFSfwnvyeopsVxtnYyRMTkVSbI,3632
+jaraco.packaging-10.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+jaraco.packaging-10.1.0.dist-info/top_level.txt,sha256=0JnN3LfXH4LIRfXL-QFOGCJzQWZO3ELx4R1d_louoQM,7
+jaraco.packaging-10.1.0.dist-info/RECORD,,
