@@ -1,0 +1,10 @@
+README.md
+setup.py
+nn/numpy_neuron.egg-info/PKG-INFO
+nn/numpy_neuron.egg-info/SOURCES.txt
+nn/numpy_neuron.egg-info/dependency_links.txt
+nn/numpy_neuron.egg-info/top_level.txt
+nn/src/__init__.py
+nn/src/activation.py
+nn/src/loss.py
+nn/src/nn.py
