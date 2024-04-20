@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "que_sdk"
+version = "0.1.1"
+description = ""
+authors = ["DavidRomanovizc"]
+license = "MIT LICENSE"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.27.0"
+pre-commit = "^3.7.0"
+pydantic = "^2.4.1"
+backoff = "^2.2.1"
+yarl = "^1.9.4"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.23.3"
+mypy = "^1.8.0"
+black = "^24.3.0"
+isort = "^5.13.2"
+deptry = "^0.12.0"
+ruff = "^0.1.14"
+pip-audit = "^2.7.0"
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+ignore_missing_imports = true
+strict_optional = false
+check_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+warn_redundant_casts = true
+warn_unused_configs = true
+strict_equality = true
+
+[tool.isort]
+profile = "black"
+force_grid_wrap = 1
+multi_line_output = 3
+honor_noqa = true
+float_to_top = true
+combine_as_imports = true
+force_sort_within_sections = true
+include_trailing_comma = true
+line_length = 79
+use_parentheses = true
+known_third_party = ["httpx"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
