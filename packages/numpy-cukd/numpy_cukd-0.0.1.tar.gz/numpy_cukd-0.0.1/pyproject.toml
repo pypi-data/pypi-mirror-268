@@ -1,0 +1,10 @@
+[project]
+name = "numpy-cukd"
+authors = [{name = "Marc Uecker", email = "uecker@fzi.de"}]
+version = "0.0.1"
+description = "Coming soon"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"

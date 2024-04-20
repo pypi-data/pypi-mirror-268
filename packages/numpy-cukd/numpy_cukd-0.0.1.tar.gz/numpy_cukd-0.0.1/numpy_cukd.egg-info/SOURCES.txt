@@ -1,0 +1,6 @@
+README.md
+pyproject.toml
+numpy_cukd.egg-info/PKG-INFO
+numpy_cukd.egg-info/SOURCES.txt
+numpy_cukd.egg-info/dependency_links.txt
+numpy_cukd.egg-info/top_level.txt
