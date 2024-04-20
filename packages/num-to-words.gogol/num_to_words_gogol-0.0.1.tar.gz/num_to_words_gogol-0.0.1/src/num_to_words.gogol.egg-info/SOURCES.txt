@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+src/num_to_words.gogol.egg-info/PKG-INFO
+src/num_to_words.gogol.egg-info/SOURCES.txt
+src/num_to_words.gogol.egg-info/dependency_links.txt
+src/num_to_words.gogol.egg-info/top_level.txt

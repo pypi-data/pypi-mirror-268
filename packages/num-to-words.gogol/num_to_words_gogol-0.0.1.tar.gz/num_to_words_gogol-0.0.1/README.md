@@ -1,0 +1,1 @@
+This package takes numbers and converts them into letters. The unit of numbers is from thousand to gogol.
