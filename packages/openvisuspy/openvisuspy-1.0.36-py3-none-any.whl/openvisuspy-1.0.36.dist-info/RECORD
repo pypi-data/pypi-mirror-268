@@ -1,0 +1,15 @@
+openvisuspy/__init__.py,sha256=ZyOLhmBB_Kw0HUkFnVswxIAWxheZE1yVbZDtOzV0Aa4,176
+openvisuspy/backend.py,sha256=EU5jvVP8qgKSAZClvHQSlhCSb9sWgkCOe6KxqWYu4pM,18961
+openvisuspy/create_netcdf_metadata.py,sha256=L88f603vtgaZnEkwxbp5rY8UCTV5FC1FqHU68D-actI,1603
+openvisuspy/probe.py,sha256=Mpp6FNZDth1Ohpoero8Tsdo8vDVVIPG42eb4GaYXggY,14855
+openvisuspy/slice.py,sha256=YkFhUrEnT7qAKaS7ZsEEXTmCRtFynbl80goFO3yjZ1M,44852
+openvisuspy/utils.py,sha256=0YEIqfUIL1UASN-CTH6ZIFfvj_L1UUU5_RbaZuUUI84,13290
+openvisuspy/xarray_backend.py,sha256=ICPYH_DJaHbvh4RAj9JEp-3B2VrCMBEdOgFgefxRvB4,12947
+openvisuspy/dashboards/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openvisuspy/dashboards/app_hooks.py,sha256=bLBBVhJDIx1UX7c4QkO8q6SHWgeaO47UBcnoI-hR6AQ,475
+openvisuspy/dashboards/main.py,sha256=F3ltOZAb60tfZnVGxkmw1GioTJvYEpoH8eEN_fNm_1I,1184
+openvisuspy-1.0.36.dist-info/LICENSE,sha256=6e8f7JrZAwWAqUNg-mtEFpikTHZvcDrSGPViHeAlgrw,1849
+openvisuspy-1.0.36.dist-info/METADATA,sha256=zwN_y1KljBLTC-bHX7DysbPes1eu4DsfTE56OEehEpA,6519
+openvisuspy-1.0.36.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+openvisuspy-1.0.36.dist-info/top_level.txt,sha256=o9WLF82UoNRuLU1MIOWVUfHBb7u7oGs9w2i6lfhRy_Y,12
+openvisuspy-1.0.36.dist-info/RECORD,,
