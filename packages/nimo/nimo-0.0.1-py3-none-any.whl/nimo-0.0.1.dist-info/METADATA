@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: nimo
+Version: 0.0.1
+Summary: NIMO package
+Author: NIMO developers
+License: MIT
+Requires-Dist: Cython
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: physbo
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+
