@@ -1,0 +1,7 @@
+README.md
+setup.py
+aeroterra_ds.egg-info/PKG-INFO
+aeroterra_ds.egg-info/SOURCES.txt
+aeroterra_ds.egg-info/dependency_links.txt
+aeroterra_ds.egg-info/requires.txt
+aeroterra_ds.egg-info/top_level.txt
