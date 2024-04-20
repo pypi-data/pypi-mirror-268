@@ -1,0 +1,10 @@
+bayesblend/__init__.py,sha256=YgpqacsOWOcbdzhzP3SRKkV8CIHoCIUZkx8ivgTiiko,305
+bayesblend/io.py,sha256=yNvYAGVQHoXULw0tzk-8jdI2nvaX3cA4Iwfr4PN1KQ4,5460
+bayesblend/models.py,sha256=tI_gro7isn4rwXDVs2tZgynxXeKLFzSiFaZ3MAFYCLE,44104
+bayesblend/stan_files/hierarchical_stacking.stan,sha256=dua255gZ7CoS5I5SqbQVgb4Y4hXMgQfcFsMGDGrLFlM,1822
+bayesblend/stan_files/hierarchical_stacking_pooling.stan,sha256=TCDRchatGmUVj0GRxJkG72u8kfEzS_ZGlvi8MnirpwM,2889
+bayesblend/stan_files/stacking.stan,sha256=hKxxhhfEuwNLYjlGo8Md7zUxHY1fwsiToY6F8fe9RsE,300
+bayesblend-0.0.7.dist-info/LICENSE,sha256=aWtcOVGkgdwCSAJYh1kyaF_jaSylbQvo9RyKNfU2mjo,1063
+bayesblend-0.0.7.dist-info/METADATA,sha256=gV7TflwXnuKNNA_P2G_1jALybwzvEWyhXWJDNMtJ4r4,2156
+bayesblend-0.0.7.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+bayesblend-0.0.7.dist-info/RECORD,,
