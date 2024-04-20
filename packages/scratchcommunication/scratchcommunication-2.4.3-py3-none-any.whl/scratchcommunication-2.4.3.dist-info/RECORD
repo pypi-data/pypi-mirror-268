@@ -1,0 +1,15 @@
+scratchcommunication/__init__.py,sha256=cRONLNjDUgtj9Y83N8bGEO0FcbpEOR789rI76l-eShY,358
+scratchcommunication/cloud.py,sha256=fg7zx7wLw3xaLGMpUMxeYVdP2x_KixNE0AQNvHC3ZgI,18219
+scratchcommunication/cloud_socket.py,sha256=U0lBy_Ma6sttqHJwJdV82BemRcaBNDwxv9rnQGi46Fw,12335
+scratchcommunication/exceptions.py,sha256=jdEyJXCyWVDSgxD9zyC-5RxBA_3iGnoOQOh99I6OBho,357
+scratchcommunication/headers.py,sha256=_O-loaU84-WcV18rHUbv8D6v0Z13bdnElmsX4Igkoas,263
+scratchcommunication/security.py,sha256=oLNDIK8Gg-Gre1RgpyLO1aDDLqjtKML2KmVfP0li4bU,5605
+scratchcommunication/session.py,sha256=legPKzcl8NNiqL0Vl1sVZAUl-f6Yp4ROhhjZbWIcl48,5302
+scratchcommunication/cloudrequests/__init__.py,sha256=IMajOwPsRqjozRiiME-iAst-1j46M2nYMhjZu2kOOcY,96
+scratchcommunication/cloudrequests/basetypes.py,sha256=Nj3y7H2HA4auoA6K9NRPuS3jf1YnPrRgX5eEP-yfLkE,1016
+scratchcommunication/cloudrequests/requests.py,sha256=XW44ARfXiP7ik8v26aSFuqVeN9GRe4OElZJmHarPxvM,8359
+scratchcommunication-2.4.3.dist-info/LICENSE,sha256=xOk1sKQyxS0QtG9qPTipte2YqkqAepRtxrx4P3yEC44,1056
+scratchcommunication-2.4.3.dist-info/METADATA,sha256=Gl_gHf1s2w5c-TolHil39C6sZMabtvsr2kk5PZdMZ7A,15966
+scratchcommunication-2.4.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+scratchcommunication-2.4.3.dist-info/top_level.txt,sha256=QlslCF1RdVTB9c1d2aPBZn3kLtyGJpsrcAoYAYwj6iE,21
+scratchcommunication-2.4.3.dist-info/RECORD,,
