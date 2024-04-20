@@ -1,0 +1,85 @@
+
+@startuml
+
+AutoRegressionInputs <|-- ConfigurationInputsInterface
+GenericCommandInputs <|-- ConfigurationInputsInterface
+
+class JobParametersInterface {
+    {abstract} serialize()
+    {abstract} deserialize(data)
+    {abstract} name(data)
+    {abstract} add_blocking_jobs(data)
+    {abstract} get_blocking_jobs(data)
+    {abstract} remove_blocking_jobs(data)
+    {abstract} cancel_on_blocking_job_failure(data)
+    {abstract} estimated_run_minutes(data)
+    {abstract} submission_groups(data)
+}
+
+AutoRegressionParameters <|-- JobParametersInterface
+GenericCommandParameters <|-- JobParametersInterface
+
+class JobExecutionInterface {
+    {abstract} int generate_command()
+    {abstract} int run()
+}
+
+AutoRegressionExecution <|-- JobExecutionInterface
+GenericCommandExecution <|-- JobExecutionInterface
+
+class JobConfiguration {
+    {static} JobConfiguration auto_config()
+    {static} JobConfiguration deserialize(string filename)
+    {abstract} void clear()
+    {abstract} void dump(string filename)
+    {abstract} int get_num_jobs()
+    {abstract} iter iter_jobs()
+}
+
+JobConfiguration o-- ConfigurationInputsInterface
+JobConfiguration o-- JobExecutionInterface
+
+class JobManagerBase {
+    int get_num_jobs()
+    list get_completed_results()
+}
+
+class JobSubmitter {
+    void cancel_jobs(list names)
+    int submit_jobs()
+}
+
+class JobRunner {
+    int run_jobs()
+}
+
+JobSubmitter <|-- JobManagerBase
+JobRunner <|-- JobManagerBase
+
+JobManagerBase o-- JobConfiguration
+
+class HpcManagerInterface {
+    {abstract} void cancel_job(string job_id)
+    {abstract} HpcJobInfo check_status(string job_id)
+    {abstract} void create_submission_script(string name, string script)
+    {abstract} int submit(string filename)
+}
+
+SlurmManager <|-- HpcManagerInterface
+PbsManager <|-- HpcManagerInterface
+LocalManager <|-- HpcManagerInterface
+
+class HpcManager {
+    void cancel_job(string job_id)
+    HpcJobInfo check_status(string job_id)
+    dict get_hpc_config()
+    HpcType hpc_type()
+    int run_jobs(**kwargs)
+    int submit(string name, string filename)
+}
+
+HpcManager *-- HpcManagerInterface
+
+JobSubmitter o-- HpcManager
+
+@enduml

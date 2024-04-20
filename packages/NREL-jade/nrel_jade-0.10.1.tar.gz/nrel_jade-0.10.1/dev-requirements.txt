@@ -1,0 +1,14 @@
+black
+flake8
+ghp-import
+mock>=3.0.0
+pre-commit
+pycodestyle
+pylint
+pypandoc
+pytest
+pytest-cov
+sphinx-rtd-theme>=0.4.3
+sphinx>=2.0
+sphinxcontrib-plantuml
+tox

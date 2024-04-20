@@ -1,0 +1,14 @@
+[
+  {
+    "country": "Australia",
+    "data": "gdp/countries/australia.csv"
+  },
+  {
+    "country": "Brazil",
+    "data": "gdp/countries/brazil.csv"
+  },
+  {
+    "country": "United States",
+    "data": "gdp/countries/united_states.csv"
+  }
+]
