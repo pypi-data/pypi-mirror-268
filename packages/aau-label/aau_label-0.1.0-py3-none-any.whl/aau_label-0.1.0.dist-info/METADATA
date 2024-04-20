@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aau-label
+Version: 0.1.0
+Summary: A image labeling handler
+Author-Email: Kasper Fromm Pedersen <kasperfromm@protonmail.com>
+License: MIT
+Requires-Python: >=3.9
+Requires-Dist: pillow==10.3.*
+Requires-Dist: pandas==2.2.*
+Description-Content-Type: text/markdown
+
+# aau-label
+An image labeling format
