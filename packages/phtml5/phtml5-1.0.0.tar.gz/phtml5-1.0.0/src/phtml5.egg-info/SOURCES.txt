@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/phtml5/__init__.py
+src/phtml5/htmlelement.py
+src/phtml5/py.typed
+src/phtml5/tags.py
+src/phtml5.egg-info/PKG-INFO
+src/phtml5.egg-info/SOURCES.txt
+src/phtml5.egg-info/dependency_links.txt
+src/phtml5.egg-info/not-zip-safe
+src/phtml5.egg-info/top_level.txt
