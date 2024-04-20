@@ -1,0 +1,63 @@
+[project]
+name = "across-burstcube" # Required
+dynamic = ["version"]
+description = "ACROSS API Python client" # Optional
+readme = "README.md" # Optional
+
+requires-python = ">=3.9"
+
+license = { file = "LICENSE.txt" }
+keywords = ["astronomy", "api", "across"] # Optional
+authors = [
+  { name = "Jamie A. Kennea", email = "jak51@psu.edu" }, # Optional
+]
+maintainers = [
+  { name = "Jamie A. Kennea", email = "jak51@psu.edu" }, # Optional
+]
+
+classifiers = [ # Optional
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+dependencies = [ # Optional
+  "requests",
+  "pydantic",
+  "astropy",
+  "python-dateutil",
+  "authlib",
+  "types-python-dateutil",
+  "types-requests"
+]
+
+[tool.setuptools_scm]
+
+[project.optional-dependencies] # Optional
+dev = ["check-manifest"]
+test = ["coverage"]
+
+[project.urls] # Optional
+"Homepage" = "https://github.com/jak574/across-api-client"
+"Bug Reports" = "https://github.com/jak574/across-api-client/issues"
+"Source" = "https://github.com/jak574/across-api-client/"
+
+
+[project.scripts]
+
+[tool.setuptools]
+
+[tool.setuptools.package-data]
+"across_client" = ["py.typed"]
+
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"

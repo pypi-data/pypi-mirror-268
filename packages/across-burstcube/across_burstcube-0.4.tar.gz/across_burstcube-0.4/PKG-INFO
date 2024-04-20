@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: across-burstcube
+Version: 0.4
+Summary: ACROSS API Python client
+Author-email: "Jamie A. Kennea" <jak51@psu.edu>
+Maintainer-email: "Jamie A. Kennea" <jak51@psu.edu>
+Project-URL: Homepage, https://github.com/jak574/across-api-client
+Project-URL: Bug Reports, https://github.com/jak574/across-api-client/issues
+Project-URL: Source, https://github.com/jak574/across-api-client/
+Keywords: astronomy,api,across
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: pydantic
+Requires-Dist: astropy
+Requires-Dist: python-dateutil
+Requires-Dist: authlib
+Requires-Dist: types-python-dateutil
+Requires-Dist: types-requests
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == "dev"
+Provides-Extra: test
+Requires-Dist: coverage; extra == "test"
+
+# ACROSS API Python Client
+
+This is the Python API for the Astrophysics Cross-Observatory Science Support (ACROSS), a NASA initiative to provide cross-observatory support for time-domain and multi-messenger (TDAMM) coordination and observation planning.
+
+To install the `across_client` Python module, please do the following:
+
+1. Clone the repository to your computer.
+2. Enter the directory and install the module using `pip install .`
+
+The `across_client` module should now be available for use.

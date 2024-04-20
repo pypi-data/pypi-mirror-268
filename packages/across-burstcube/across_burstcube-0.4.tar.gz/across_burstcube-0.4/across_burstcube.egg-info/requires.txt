@@ -1,0 +1,13 @@
+requests
+pydantic
+astropy
+python-dateutil
+authlib
+types-python-dateutil
+types-requests
+
+[dev]
+check-manifest
+
+[test]
+coverage
