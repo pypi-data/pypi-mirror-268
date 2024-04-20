@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/homework1_package_Olesja_Tsimmerman/First homework.py
+src/homework1_package_Olesja_Tsimmerman/__init__.py
+src/homework1_package_Olesja_Tsimmerman.egg-info/PKG-INFO
+src/homework1_package_Olesja_Tsimmerman.egg-info/SOURCES.txt
+src/homework1_package_Olesja_Tsimmerman.egg-info/dependency_links.txt
+src/homework1_package_Olesja_Tsimmerman.egg-info/top_level.txt
