@@ -1,0 +1,3 @@
+czo @ file:///home/sfwwslm/code/czo
+# Editable install with no version control (example_package_sfwwslm==0.0.1)
+-e /home/sfwwslm/code/packaging_tutorial
