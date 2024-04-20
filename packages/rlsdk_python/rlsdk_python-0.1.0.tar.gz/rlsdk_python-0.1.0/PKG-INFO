@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rlsdk_python
+Version: 0.1.0
+Summary: 
+Author: MarlburroW
+Author-email: nik0o@hotmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: Pymem (>=1.13.1,<2.0.0)
+Requires-Dist: frida (>=16.2.1,<17.0.0)
+Description-Content-Type: text/markdown
+
+# RLSDK Python
+
+This is reverse engineered python SDK  to read data from RocketLeague.exe.
+
+
