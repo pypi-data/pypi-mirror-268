@@ -1,0 +1,9 @@
+openbb_currency/__init__.py,sha256=p37ZlboLk57NFECO4GxzveWfl8FleTtWX_lQEOeynOE,32
+openbb_currency/currency_router.py,sha256=kV_o8UQ_ZaTPknYWtUgAE_D8V2X44og158zEUqKxowQ,3848
+openbb_currency/price/__init__.py,sha256=QQWNBuFb_mkg0A1eSdALdkbRPIml7SJm37RhRcJZA0c,38
+openbb_currency/price/price_router.py,sha256=XSvauwIn5XlgV4W7AOY6WzeIPbDR0AAG73TBqEmUw7Q,1786
+openbb_currency/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openbb_currency-1.1.5.dist-info/METADATA,sha256=bL4hXFFVq0f_N1nDJVmhrmW3MfPBgJIIJtwMna5NzpE,1017
+openbb_currency-1.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+openbb_currency-1.1.5.dist-info/entry_points.txt,sha256=asiRuFm-nhY9JYiPAUsj6pyiJK2nBMNBUx27hbm8hwY,73
+openbb_currency-1.1.5.dist-info/RECORD,,
