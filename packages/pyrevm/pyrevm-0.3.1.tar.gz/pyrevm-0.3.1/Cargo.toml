@@ -1,0 +1,18 @@
+[package]
+name = "pyrevm"
+version = "0.3.1"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+revm = { "version"="7.1.0", features=["ethersdb", "serde", "serde-json", "std"] }
+revm-interpreter = "3.3.0"
+tracing = "0.1"
+pyo3 = { version = "0.19", features = ["extension-module"] }
+ruint = { version = "1.10", features = ["pyo3"] }
+
+# needed for ethersdb
+ethers-core = "2.0.14"
+ethers-providers = "2.0.14"
