@@ -1,0 +1,9 @@
+resource_namer/__init__.py,sha256=Q1WKAhEKmD25n0sXuOUyljoqAKVZ1gptl1iQEq2Amp4,2125
+resource_namer/__main__.py,sha256=3Txy_9RTlqfAbS-1rKyuBguJDtU4zymT5us_lbhDS9w,36
+resource_namer/__meta__.py,sha256=G9V6RUIEP3h3XRfQ47w0D7kdPp1aNpACQb_w_MIzgug,290
+resource_namer/word_lists.py,sha256=vi0ixsXM9uZ0P_D53cfMUPXED-qNiV5X-By7Ah681sg,25726
+resource_namer-1.0.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+resource_namer-1.0.5.dist-info/METADATA,sha256=lFwvduGzg3qrQbo7t9jWqrnWM8gji41VSVmAckoiSNo,1913
+resource_namer-1.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+resource_namer-1.0.5.dist-info/top_level.txt,sha256=GJmIUqOkKWAMv31ubVCtUAOmtLMCR6XymYoX1PSlZG4,15
+resource_namer-1.0.5.dist-info/RECORD,,
