@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: bec_lib
+Version: 2.7.0
+Summary: BEC library
+Project-URL: Bug Tracker, https://gitlab.psi.ch/bec/bec/issues
+Project-URL: Homepage, https://gitlab.psi.ch/bec/bec
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Requires-Dist: fastjsonschema
+Requires-Dist: fpdf
+Requires-Dist: hiredis
+Requires-Dist: lmfit
+Requires-Dist: loguru
+Requires-Dist: louie
+Requires-Dist: msgpack
+Requires-Dist: numpy
+Requires-Dist: psutil
+Requires-Dist: pydantic~=2.0
+Requires-Dist: pylint
+Requires-Dist: pyyaml
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: scipy
+Requires-Dist: toolz
+Requires-Dist: typeguard>=4.0.1
+Provides-Extra: dev
+Requires-Dist: black~=24.0; extra == 'dev'
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: fakeredis; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: pandas; extra == 'dev'
+Requires-Dist: pylint; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-random-order; extra == 'dev'
+Requires-Dist: pytest-redis; extra == 'dev'
+Requires-Dist: pytest-timeout; extra == 'dev'
