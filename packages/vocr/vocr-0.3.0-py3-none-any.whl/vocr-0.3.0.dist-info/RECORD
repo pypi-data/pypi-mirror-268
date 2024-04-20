@@ -1,0 +1,13 @@
+vocr/__init__.py,sha256=agNYtOLRLIqdro67w_lxw74Hb5eg9Lcs-g9_BBv6-a8,138
+vocr/__main__.py,sha256=1ds7M5FD_nhMLDF16ccpr1vp3IVymsoJeXT-ZO-l6uk,89
+vocr/cli.py,sha256=0mGF-ryv49ug6mlnsR9fEWFtHKX6AWfRPJCX-nGCxKY,1412
+vocr/gui.py,sha256=R-AddVK-t62qRNKIj6sT3C1Quu8GrVuE7dtdVHj1-64,3326
+vocr/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vocr/vocr.py,sha256=_8Pa7iAQSmMFX0DvwEDO63l3Y6N0F80fOj1NjArdaso,5499
+vocr/res/__init__.py,sha256=YPZUIAao2tjNb5noNNqOiUUhzS_zwT8eMe6MOjXWtpg,232
+vocr/res/vocr.ico,sha256=lTEzlOZZU-UNdOxU7cDXLUK0PUD1P_J6zqr5IIz1hKU,204926
+vocr-0.3.0.dist-info/METADATA,sha256=RdNj_pnMaqGhUzyScUvQbYnEbSVjQx9UYuv6Dx1u51g,2538
+vocr-0.3.0.dist-info/WHEEL,sha256=TJPnKdtrSue7xZ_AVGkp9YXcvDrobsjBds1du3Nx6dc,87
+vocr-0.3.0.dist-info/entry_points.txt,sha256=ErJXxTB4xQ3c1imbpolfGEtPpuurwm2djv8YKWNp_Nc,87
+vocr-0.3.0.dist-info/licenses/LICENSE,sha256=sM86SrBw81t-6OuUmYtxXNJyf114TAzCdfIpf2d2Ld8,1071
+vocr-0.3.0.dist-info/RECORD,,

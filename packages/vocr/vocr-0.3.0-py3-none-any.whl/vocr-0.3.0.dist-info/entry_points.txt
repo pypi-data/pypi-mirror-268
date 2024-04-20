@@ -1,0 +1,5 @@
+[console_scripts]
+vocr = vocr.__main__:main
+
+[gui_scripts]
+vocr-gui = vocr.gui:app_run
