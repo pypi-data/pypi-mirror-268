@@ -1,0 +1,12 @@
+cli_FSD/__init__.py,sha256=jFewNjb0TjKfmGC6r9CbBwQJ_7ECTjHFw4ngHTBTut8,694
+cli_FSD/engine.py,sha256=Q6Uvttmqf6yuQkcKyOepBoK3UAN3YD2xYd6fnFlofPM,5806
+cli_FSD/main.py,sha256=cjG8iF0tnmUnNEEpbSg9DE3beHlYJif5W77I9vYodwQ,46728
+cli_FSD/resources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cli_FSD/resources/assembler.py,sha256=zGkcTM-uZkOQgZwfbocoMKwl-1ebYvWKAylaKAxdFGQ,5753
+cli_FSD/resources/test-ollama.py,sha256=W3Vntg2J8ws8zDdqlh58uWgLIgFcme8z5f3vGBr1FSI,790
+cli_FSD-0.9.43.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+cli_FSD-0.9.43.dist-info/METADATA,sha256=k876SuOm082eWroA89KPV2OPBEcpEuMbYhtwXjj8WLo,5270
+cli_FSD-0.9.43.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+cli_FSD-0.9.43.dist-info/entry_points.txt,sha256=PsYee11tqn25bbzXWcbuGvKfBLYMg16oDI7GuIlhV_o,41
+cli_FSD-0.9.43.dist-info/top_level.txt,sha256=WiTkyL8mmVbnybNHXCUo-aYMyVdHAb4V-H1TLi_XlGc,8
+cli_FSD-0.9.43.dist-info/RECORD,,
