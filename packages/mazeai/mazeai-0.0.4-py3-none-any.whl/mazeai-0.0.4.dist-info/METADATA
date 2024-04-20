@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: mazeai
+Version: 0.0.4
+Summary: A General Tool Set for Science Researches
+Home-page: https://github.com/zhaisilong/mazeai
+Author: Zhai Silong
+Author-email: zhaisilong@outlook.com
+License: MIT
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+Requires-Dist: ipykernel
+Requires-Dist: tqdm
+Requires-Dist: loguru
+Requires-Dist: hydra-core
+
+<p align="center">
+<img src="./mazeai.png" alt="maze ai" width=80>
+<h3 align="center">MAZE AI</h3>
+<p align="center">
+人工智能辅助药物设计工具集合
+</p>
+</p>
+
+<p align="center">
+<a href="https://pypi.org/project/mazeai/"><img src="https://img.shields.io/pypi/v/mazeai" alt="pypi version"/></a>
+</p>
+
+![Conda Version](https://img.shields.io/conda/v/mazeai/mazeai.svg)
+
+## 前言
+
+## 环境安装
+
+## 其他
