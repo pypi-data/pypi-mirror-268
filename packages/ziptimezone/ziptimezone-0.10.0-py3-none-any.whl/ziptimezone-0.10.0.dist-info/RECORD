@@ -1,0 +1,11 @@
+ziptimezone/__init__.py,sha256=3FBl3_a777tOCQOuQ74jzYoEpjtWacXwPMjisiMkxx0,969
+ziptimezone/core copy.py,sha256=1caS_PyVXeGJn6scrPtqKkfvw5D_UdTz63PqUtICkUc,1365
+ziptimezone/core.py,sha256=LhOpVvNI1DVX_Uucgz4iMKJGlz68IbP_m7e7uxAAUhs,3056
+ziptimezone/data/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ziptimezone/data_manager.py,sha256=oDU5emF-RYPxDzWkqurcIg_X88bAITEzKa_psBdxjiU,2697
+ziptimezone/geocode.py,sha256=Lnemrdk7hRCFKxefJmR__NHSUZ0sRNj8jcYBIEDxMIU,1050
+ziptimezone/mappings.py,sha256=jZo4O6m-_85jJRYCBxJnSXxwVAxHb6dXSZPDVju_FNs,1825
+ziptimezone-0.10.0.dist-info/LICENSE,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ziptimezone-0.10.0.dist-info/METADATA,sha256=qPryzkNPHXqAHrRIqNmvV6XXB1XHFcMPe77w-TV1x9c,933
+ziptimezone-0.10.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ziptimezone-0.10.0.dist-info/RECORD,,
