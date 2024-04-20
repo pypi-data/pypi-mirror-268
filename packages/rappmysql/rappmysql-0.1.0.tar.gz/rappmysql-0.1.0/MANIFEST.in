@@ -1,0 +1,4 @@
+include requirements.txt
+include src\rappmysql\static\*
+include src\rappmysql\templates\*
+include src\rappmysql\sql\*
