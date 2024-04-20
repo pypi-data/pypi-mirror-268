@@ -1,0 +1,4 @@
+[console_scripts]
+mazegroup = mazegroup.cli:main
+mg = mazegroup.cli:main
+
