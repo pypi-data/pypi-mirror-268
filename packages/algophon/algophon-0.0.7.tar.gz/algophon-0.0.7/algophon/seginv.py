@@ -1,0 +1,142 @@
+from algophon.seg import Seg
+from algophon.natclass import NatClass
+
+import pkgutil
+
+class SegInv:
+    '''
+    A class representing an inventory of phonological segments (Seg objects).
+    '''
+    def __init__(self, 
+                 ipa_file_path: str=None, 
+                 sep: str='\t'
+        ):
+        self._ipa_source = f'Panphon (https://github.com/dmort27/panphon)' if ipa_file_path is None else ipa_file_path
+        self.ipa_file_path = ipa_file_path # uses Panphon features (https://github.com/dmort27/panphon) by default
+        self.sep = sep
+
+        # load the _seg_to_feat_vec map
+        self._load_seg_to_feat_dict()
+
+        # stores the Seg objects in the SegInv
+        self.segs = set()
+
+        # maps ipa symbols to their Seg object in the SegInv
+        self._ipa_to_seg = dict()
+
+    def __str__(self) -> str:
+        return f'SegInv of size {len(self)}'
+    
+    def __repr__(self) -> str:
+        return self.__str__()
+    
+    def __len__(self) -> int:
+        return len(self.segs)
+    
+    def __iter__(self):
+        return self.segs.__iter__()
+    
+    def __contains__(self, seg: object):
+        '''
+        :seg: Can be any of the following:
+            - str IPA symbol
+            - Seg object
+
+        :return: True if the :seg: is in the alphabet, False if not
+        '''
+        return seg in self.segs
+    
+    def __getitem__(self, seg: object):
+        '''
+        :seg: Can be any of the following:
+            - str IPA symbol
+            - Seg object
+
+        :return: the Seg object corresponding to :seg: if present, otherwise KeyError is raised
+        '''
+        if seg not in self:
+            raise KeyError(f'{seg} of type {type(seg)} is not in the SegInv (try <seginv_obj>.add({seg}))')
+        return self._ipa_to_seg[seg]
+
+    def _load_seg_to_feat_dict(self) -> None:
+        self._seg_to_feat_vec = dict()
+        data = pkgutil.get_data(__name__, "ipa.txt")
+
+        if self.ipa_file_path is None:
+            lines = data.decode('utf-8').strip().split('\n')
+        else:
+            with open(self.ipa_file_path, 'r') as f:
+                lines = f.readlines()
+        for i, line in enumerate(lines): # iterate over lines
+            line = line.strip().split(self.sep)
+            seg, feats = line[0], line[1:] # extract the IPA segment and its features
+            if i == 0: # extract the header
+                self.feature_space = feats
+            else: # add the segment to the dict
+                self._seg_to_feat_vec[seg] = feats
+
+        if self.ipa_file_path is None:
+            # make ord('g') == 103 and ord('ɡ') == 609 the same, since panphon only as 609
+            self._seg_to_feat_vec['g'] = self._seg_to_feat_vec['ɡ']
+
+    def add(self, ipa_seg: str) -> None:
+        '''
+        :ipa_seg: a IPA segment in str form
+
+        :return: None
+        '''
+        if ipa_seg in self:
+            return
+        if ipa_seg not in self._seg_to_feat_vec:
+            raise KeyError(f'Segment {ipa_seg} is not in the IPA data from {self._ipa_source}.')
+        feat_vec = self._seg_to_feat_vec[ipa_seg] # get the feature vector
+        features = dict((feat, feat_vec[idx]) for idx, feat in enumerate(self.feature_space)) # convert the vector to dict form
+        seg = Seg(ipa=ipa_seg, features=features)
+        self.segs.add(seg)
+        self._ipa_to_seg[ipa_seg] = seg
+
+    def add_segs(self, ipa_segs: object) -> None:
+        '''
+        :ipa_segs: an iterable of IPA segments, each in str form
+
+        :return: None
+        '''
+        for ipa in ipa_segs:
+            self.add(ipa)
+
+    def add_segs_by_str(self, seg_str: str) -> None:
+        '''
+        :ipa_segs: a str of space-separated IPA segments
+
+        :return: None
+        '''
+        self.add_segs(seg_str.split())
+
+    def add_and_get(self, seg: object) -> Seg:
+        '''
+        Useful for adding a str IPA seg and retrieving its Seg object in one action.
+
+        :seg: an IPA segment in str form or a Seg object
+
+        :return: the Seg object corresponding to the IPA seg
+        '''
+        self.add(f'{seg}')
+        return self[seg]
+    
+    def extension(self, nat_class) -> set:
+        '''
+        :nat_class: a set of features or a NatClass object
+
+        :return: the extension of the :nat_class:
+        '''
+        if type(nat_class) is set:
+            nat_class = NatClass(nat_class, self)
+        return set(seg for seg in self.segs if seg in nat_class)
+    
+    def extension_complement(self, nat_class) -> set:
+        '''
+        :nat_class: a set of features or a NatClass object
+
+        :return: the extensional complement of :nat_class: relative to :self: SegInv \ NatClass
+        '''
+        return self.segs.difference(self.extension(nat_class=nat_class))
