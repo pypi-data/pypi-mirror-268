@@ -1,0 +1,13 @@
+city_ch_autocomplete/apps.py,sha256=VsRObr2xvpYQaEXVQ5KaUtehskGOH7N0tcxzOuUF6vc,148
+city_ch_autocomplete/forms.py,sha256=fY5wEk987eqTXB0L-AYpuMTs79PkTAtoJdvTRMzzbSc,3566
+city_ch_autocomplete/models.py,sha256=CkMAEECuNyoqWJIjoZ4SuhLoeZRwTQ9W9b5I7qO8WX8,906
+city_ch_autocomplete/urls.py,sha256=PSO-3KduiQhLFkVdOxSP8sMI52dG9VgCXVqG8jkRuP8,189
+city_ch_autocomplete/views.py,sha256=qq4fvBeinmJTM1J3aGSgMHEb0V9iYrrI0r6jBX9h5wo,2847
+city_ch_autocomplete/migrations/0001_initial.py,sha256=y-mK5_k38CwjSWJoVT1vWf4fdfm-PBsVwJnQ4SayaiE,781
+city_ch_autocomplete/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+city_ch_autocomplete/static/city_ch_autocomplete.js,sha256=DPXqYlu8GsyEVBYOxd0kesjcQvCTkLs9Reh44pcSgWk,6377
+city_ch_autocomplete-0.3.dist-info/LICENSE,sha256=DRd76NiBUjf1R3h081rOte5MbYBuopWjw1X_Ok9YW3s,1516
+city_ch_autocomplete-0.3.dist-info/METADATA,sha256=TIwstH5oUSxELGDROFP4DaoNSSaHTsyi5Ip2ZhQyzII,3037
+city_ch_autocomplete-0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+city_ch_autocomplete-0.3.dist-info/top_level.txt,sha256=csn_gSXLHflKrIoa9zPo9O0IR2CsfWkkqx0uNe9qF-8,21
+city_ch_autocomplete-0.3.dist-info/RECORD,,
