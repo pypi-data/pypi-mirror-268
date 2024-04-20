@@ -1,0 +1,5 @@
+setup.py
+seismogpt.egg-info/PKG-INFO
+seismogpt.egg-info/SOURCES.txt
+seismogpt.egg-info/dependency_links.txt
+seismogpt.egg-info/top_level.txt
