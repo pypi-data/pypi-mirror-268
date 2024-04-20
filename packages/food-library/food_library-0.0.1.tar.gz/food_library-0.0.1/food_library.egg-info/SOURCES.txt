@@ -1,0 +1,7 @@
+setup.py
+food_library/__init__.py
+food_library/food.py
+food_library.egg-info/PKG-INFO
+food_library.egg-info/SOURCES.txt
+food_library.egg-info/dependency_links.txt
+food_library.egg-info/top_level.txt
