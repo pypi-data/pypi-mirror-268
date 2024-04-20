@@ -1,0 +1,10 @@
+README.md
+setup.py
+CachedFileDic/__init__.py
+CachedFileDic/__init__BACKUP_commit効率化変更前.py
+CachedFileDic/test.py
+CachedFileDic.egg-info/PKG-INFO
+CachedFileDic.egg-info/SOURCES.txt
+CachedFileDic.egg-info/dependency_links.txt
+CachedFileDic.egg-info/requires.txt
+CachedFileDic.egg-info/top_level.txt
