@@ -1,0 +1,2 @@
+[console_scripts]
+gpt_trans = gpt_trans.main:main
