@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: magictk
+Version: 0.0.2.41
+Summary: A tkinter weights looks like element-plus
+Home-page: http://git.hmtsai.cn/cxykevin/magictk.git
+Author: cxykevin|git.hmtsai.cn
+Author-email: cxykevin@yeah.net
+License: GPLv2
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+
+UNKNOWN
+
+
