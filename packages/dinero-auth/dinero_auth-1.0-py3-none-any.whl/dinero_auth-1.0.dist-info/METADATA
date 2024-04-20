@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: dinero-auth
+Version: 1.0
+Summary: custom django authentication app
+Author: finnest
+Author-email: akash@finnest.io
+License: MIT
+Keywords: auth,custom
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3
+License-File: LICENSE
+Requires-Dist: Django
+Requires-Dist: djangorestframework
+Requires-Dist: pycryptodome
+
+django-dinero-auth/README.rst
+=============================
+DINERO_AUTH
+===========
+
+dinero_auth is a token authentication system with 
+ip validation and browser validation.
+
+Detailed documentation is in the "docs" directory.
+
+Quick start
+-----------
+
+1. Add "dinero_auth" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = (
+        ...
+        'dinero_auth',
+    )
+
+2. Run `python manage.py migrate` to create the dinero_auth models.
