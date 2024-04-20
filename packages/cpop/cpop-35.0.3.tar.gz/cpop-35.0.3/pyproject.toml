@@ -1,0 +1,209 @@
+[build-system]
+requires = ["hatchling", "hatch-cython", "hatch-compile-yaml>=18.0.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cpop"
+version = "35.0.3"
+description = "The Cython-Optimized Plugin Oriented Programming System"
+readme = "README.rst"
+authors = [
+    {name = "Tyler Levy Conde", email = "yonstib@gmail.com"},
+    {name = "Thomas Hatch", email = "thatch45@gmail.com"},
+]
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: Apache Software License",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "aiopath",
+    "aiofiles",
+    "aiologger",
+    "argparse",
+    "msgpack",
+    "PyYaml",
+]
+
+[project.optional-dependencies]
+cli = [
+    "pop-cli",
+]
+
+test = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+build = [
+    "Cython",
+    "hatch",
+    "hatch-cython",
+]
+
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "src/cpop",
+    "src/pop",
+]
+
+[tool.hatch.build.hooks.convert-data-file.options]
+pattern = "config.yaml"
+target_format = "msgpack"
+
+[tool.hatch.build.hooks.cython.options]
+include_numpy = false
+include_pyarrow = false
+include_pythran = false
+directives = { boundscheck = false, nonecheck = false, language_level = 3, binding = true, cdivision = true, wraparound=false }
+
+compile_args = [
+  "-v",
+  "-O3",
+  "-std=c++20",
+  "-fopenmp",
+  "-flto"
+]
+
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+addopts = "--tb native --full-trace --color=yes -vv"
+asyncio_mode = "auto"
+
+
+[tool.hatch.envs.lint]
+detached = true
+dependencies = [
+  "black>=23.1.0",
+  "mypy>=1.0.0",
+  "ruff>=0.0.243",
+  "hatchling",
+]
+[tool.hatch.envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:hatch_build_scripts tests}"
+style = [
+  "ruff {args:.}",
+  "black --check --diff {args:.}",
+]
+
+fix = [
+  "black {args:.}",
+  "ruff --fix {args:.}",
+  "style",
+]
+
+all = [
+  "style",
+  "typing",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+(
+/(
+    \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+)/
+)
+'''
+
+
+[tool.ruff]
+target-version = "py310"
+exclude = ["tests", "docs"]
+
+[tool.ruff.lint]
+select = [
+  "A",
+  "ARG",
+  "B",
+  "C",
+  "DTZ",
+  "E",
+  "EM",
+  "F",
+  "FBT",
+  "I",
+  "ICN",
+  "ISC",
+  "N",
+  "PLC",
+  "PLE",
+  "PLR",
+  "PLW",
+  "Q",
+  "RUF",
+  "S",
+  "T",
+  "TID",
+  "UP",
+  "W",
+  "YTT",
+]
+
+fixable = ["ALL"]
+unfixable = [
+  # Don't touch unused imports
+  "F401",
+]
+
+ignore = [
+  # Allow boolean positional values in function calls, like `dict.get(... True)`
+  "FBT003",
+  # Allow unused arguments
+  "ARG001",
+  # Allow function names that start with __
+  "N807",
+  # Allow implicit Optional
+  "RUF013",
+  # Allow a lot of arguments
+  "PLR0913",
+  # Allow complexity
+  "C901",
+  "ISC001",
+
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["cpop"]
+
+[tool.ruff.lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+[tool.cython-lint]
+max-line-length = 120
+ignore = [
+]
