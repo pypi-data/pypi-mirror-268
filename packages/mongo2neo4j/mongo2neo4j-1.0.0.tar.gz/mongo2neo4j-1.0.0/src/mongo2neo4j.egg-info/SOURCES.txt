@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+requirements-dev.txt
+requirements.txt
+src/mongo2neo4j/__init__.py
+src/mongo2neo4j/__main__.py
+src/mongo2neo4j/py.typed
+src/mongo2neo4j.egg-info/PKG-INFO
+src/mongo2neo4j.egg-info/SOURCES.txt
+src/mongo2neo4j.egg-info/dependency_links.txt
+src/mongo2neo4j.egg-info/entry_points.txt
+src/mongo2neo4j.egg-info/requires.txt
+src/mongo2neo4j.egg-info/top_level.txt
+tests/test_basic.py
+tests/test_flatten_and_cleanse.py
