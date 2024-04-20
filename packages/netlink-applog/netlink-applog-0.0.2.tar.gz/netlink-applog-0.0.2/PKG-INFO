@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: netlink-applog
+Version: 0.0.2
+Summary: Logging to a SQLite Database
+Home-page: https://gitlab.com/netlink_python/netlink-applog.git
+Author: Bernhard Radermacher
+Author-email: bernhard.radermacher@netlink-consulting.com
+Requires-Python: >=3.9,<3.13
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyPubSub (>=4.0.3)
+Project-URL: Repository, https://gitlab.com/netlink_python/netlink-applog.git
