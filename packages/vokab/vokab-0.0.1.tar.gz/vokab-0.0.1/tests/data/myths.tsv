@@ -1,0 +1,11 @@
+name	label	aliases	definition	dominion	gender
+Athena	DEITY	"Minerva|Pallas"	"Goddess of wisdom, war, and crafts"	Wisdom	Female
+Delphi	PLACE	Pytho	Ancient Greek city known for its oracle	Prophecy
+Hercules	HERO	Heracles	"Divine hero known for his strength and adventures"	Strength	Male
+Medusa	CREATURE	Gorgo	"Monstrous female with snakes for hair"	Petrification	Female
+Mercury	DEITY	Hermes	Messenger of the gods	Speed	Male
+Minotaur	CREATURE	Asterion	"Half-man, half-bull monster"	Strength	Male
+Odysseus	HERO	Ulysses	"Legendary Greek king of Ithaca"	Cunning	Male
+Pandora	HUMAN	Anesidora	First human woman created by the gods	Curiosity	Female
+Prometheus	TITAN		Titan who gave fire to humanity	Foresight	Male
+Zeus	DEITY	"Jupiter|Jove"	King of the Olympian gods	Power	Male
