@@ -1,0 +1,9 @@
+latch_gcp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+latch_gcp/client_pool.py,sha256=SKJyCFLpIJ-KFrA6RdOOmnE9qA7VzoAI8ZXvWeB3Qv8,4057
+latch_gcp/pubsub.py,sha256=2ftTDyazlpro8fnjXD9cd7Lw_ZDWkaaThtlYn03x4tI,2591
+latch_gcp/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+latch_gcp/storage.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+latch_gcp-0.1.1.dist-info/LICENSE,sha256=wh3JZu6ITG7ceN-1g404ekupj5JXAw4pnQ_Qr4sJfew,7052
+latch_gcp-0.1.1.dist-info/METADATA,sha256=VdrgqmRxc398vV2rXJZD4kooSKEQIKyG7g8C0fpu0_Y,787
+latch_gcp-0.1.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+latch_gcp-0.1.1.dist-info/RECORD,,
