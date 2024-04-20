@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: exeNake
+Version: 0.0.1
+Summary: strong Multiple-Run-Token System
+Author: Comet
+Author-email: 9su0425@gmail.com
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+
