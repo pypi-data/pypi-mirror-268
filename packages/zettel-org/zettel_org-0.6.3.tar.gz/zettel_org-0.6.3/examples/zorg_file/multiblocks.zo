@@ -1,0 +1,28 @@
+# A file with multiple blocks.
+#
+# A block is one or more consecutive todos/notes with no blank lines
+# in-between.
+
+o Some todo
+o Another related todo
+
+- A note about life...
+
+o Some other todo
+- With a note
+
+======= Boom Bam
+- Some note in section 0
+
+######### Foobar
+- Note A1
+- Note A2
+
+- Note B
+
+######### Bazbuz
+- Note C
+
+- Note D
+
+- Note E

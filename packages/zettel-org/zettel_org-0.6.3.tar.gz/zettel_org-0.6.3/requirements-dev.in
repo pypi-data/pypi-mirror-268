@@ -1,0 +1,34 @@
+### Tests
+freezegun
+pytest < 8  # see https://github.com/smarie/python-pytest-cases/issues/330
+pytest-cov
+pytest-mock
+syrupy
+tox < 4
+tox-pyenv
+-e file:.#egg=zettel-org>=0.dev
+
+### Lint
+black
+cogapp ~= 3.3
+flake8
+isort
+mypy
+pydocstyle[toml]
+pylint
+
+### Types
+types-tqdm ~= 4.66
+
+### Docs
+m2r2 != 0.3.3  # since this version requires docutils>=0.19 (see https://github.com/CrossNox/m2r2/compare/v0.3.2...v0.3.3)
+sphinx
+sphinx-rtd-theme
+sphinx-autodoc-typehints
+
+### Misc
+bump2version
+cruft[pyproject]
+pip-tools
+setuptools_scm
+antlr4-tools  # for the 'antlr4' and 'antlr4-parse' commands

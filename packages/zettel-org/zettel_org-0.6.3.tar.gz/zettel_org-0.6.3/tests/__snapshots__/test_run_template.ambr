@@ -1,0 +1,30 @@
+# serializer version: 1
+# name: test_template_render_day_log[YAMLConfigFile]
+  '''
+  # 1991-03-04.Mon
+  #
+  # ^ = [[1991/19910304]]
+  # < = [[1991/19910303_day]]
+  # > = [[1991/19910305_day]]
+  # @ = [[day_log.zot]]
+  
+  o #gtd pomodoro
+    * Google Calendar (bbugyi@google + bryanbugyi34@gmail)
+    * Process yesterday's bujo log (e.g. close events, add missing pomodoros, rollover goals)
+    * Copy any important gchat convos from yesterday into chat/*.txt
+    * Check today's tickler file: [[tick_04]]
+    * Fill out yesterday's habit tracker: [[1991/19910303_habit]]
+    * go/g3co
+    * Review Google Keep Inbox
+    * Review [[inbox]]
+    * Review '@A' todos (are any >=2d old? which '@B' todos should be promoted?)
+    * <50 emails in bryanbugyi34@gmail
+    * <100 emails in bbugyi@google
+    * Review ~/org diffs from yesterday and commit them to git
+  
+  ######### @event
+  
+  ######### @pomodoro
+  
+  '''
+# ---

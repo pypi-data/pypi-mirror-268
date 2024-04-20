@@ -1,0 +1,89 @@
+#!/bin/bash
+#
+# Helper script for generating and validating ANTLR4 grammars. Namely, for each
+# FOOBAR.g4 ANTLR4 grammar file, this script:
+#
+# 1) Uses ANTLR to generate Python modules (e.g. parsers, lexers,
+#    listeners) from FOOBAR.g4 files.
+#
+# 2) Iterates over and attempts to parse all FOOBAR example files.
+#
+# Usage
+# -----
+# build_zorg_grammars [-v] [ZO_NAME]
+#
+# Positional Arguments:
+# ---------------------
+# ZO_NAME
+#     The name of a *.zo file without the extension or parent dir. If provided,
+#     will only parse example files that match ZO_NAME.
+#
+# Optional Arguments
+# ------------------
+#     -v | --verbose
+#         Enable more verbose output (e.g. print tokens).
+
+readonly BIN="$(dirname "$0")"
+readonly ROOT="$(dirname "${BIN}")"
+
+source "${ROOT}"/lib/bugyi.sh
+
+set -e
+
+TMP_ERROR_FILE="$(mktemp -t --suffix=.SUFFIX build_zorg_grammars.XXXXXX)"
+TMP_ERROR_FILE_NO_HEADERS="$(mktemp -t --suffix=.SUFFIX build_zorg_grammars.XXXXXX)"
+trap "rm -f '$TMP_ERROR_FILE' '$TMP_ERROR_FILE_NO_HEADERS'" 0               # EXIT
+trap "rm -f '$TMP_ERROR_FILE' '$TMP_ERROR_FILE_NO_HEADERS'; exit 1" 2       # INT
+trap "rm -f '$TMP_ERROR_FILE' '$TMP_ERROR_FILE_NO_HEADERS'; exit 1" 1 15    # HUP TERM
+
+function run() {
+  parse_cmds=('-tree')
+  if [[ "$1" == "-v" || "$1" == "--verbose" ]]; then
+    shift
+    VERBOSE=1
+    parse_cmds+=('-tokens')
+    log::debug "Verbose mode enabled!"
+  fi
+
+  if [[ -n "${1}" ]]; then
+      ZO_NAME="$1"
+      shift
+  fi
+
+  for dir in $(find src/zorg/grammar -maxdepth 1 -mindepth 1 -type d | xargs -I_ basename _); do
+    if [[ "${dir}" == "_"* ]]; then
+      log::debug "Skipping the %s directory." "${dir}"
+      continue
+    fi
+
+    log::info "Generating %s parser using antlr4." $dir
+    antlr4 -Dlanguage=Python3 src/zorg/grammar/$dir/*.g4
+    for f in examples/$dir/*.zo; do
+      if [[ "${f}" != *"${ZO_NAME}"* ]]; then
+        continue
+      fi
+      log::info "Contructing syntax tree from %s example file." $f
+      echo "##### $f" >> $TMP_ERROR_FILE
+      antlr4-parse src/zorg/grammar/$dir/*.g4 prog "${parse_cmds[@]}" $f 3>&1 1>&2 2>&3 | tee /dev/stderr >> $TMP_ERROR_FILE
+      echo >> $TMP_ERROR_FILE
+    done
+
+    remove_header $TMP_ERROR_FILE > $TMP_ERROR_FILE_NO_HEADERS
+    if [ -s $TMP_ERROR_FILE_NO_HEADERS ]; then
+      log::error "Errors were logged while parsing some of the example files:"
+      echo
+      cat $TMP_ERROR_FILE
+      return 1
+    else
+      log::info "All example files were parsed without error!"
+    fi
+  done
+}
+
+function remove_header() {
+  perl -nE 'print if not /^##/ and not /^$/' "$@"
+}
+
+if [[ "${SCRIPTNAME}" == "$(basename "${BASH_SOURCE[0]}")" ]]; then
+    run "$@"
+fi
