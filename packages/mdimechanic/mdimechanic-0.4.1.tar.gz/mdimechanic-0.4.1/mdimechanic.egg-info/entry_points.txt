@@ -1,0 +1,2 @@
+[console_scripts]
+mdimechanic = mdimechanic.cli:main
