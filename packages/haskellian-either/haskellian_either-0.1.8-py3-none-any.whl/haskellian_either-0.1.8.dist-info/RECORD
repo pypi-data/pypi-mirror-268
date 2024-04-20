@@ -1,0 +1,10 @@
+haskellian/either/__init__.py,sha256=IJ965vf_IB8jpU8A8DFsBh5k50UolmavrHU3RGNhR88,286
+haskellian/either/funcs.py,sha256=D1U8ddWi1Y-DAxvUXBhJt9HcfRyrsty_p8GsWexANoY,1283
+haskellian/either/narrowing.py,sha256=Y8t0vQFchRD3v1X3L92pqK3y6zJ75cs3828x9XIc9jA,300
+haskellian/either/type.py,sha256=JZvHfhiA2OVCF0raUMTlOee-odK8lT2dpALFVuvf-tg,2198
+haskellian/either/extras/__init__.py,sha256=JoCUQE9dq1ZPA8WlZCJ5FZHTnXCWT0zzsh5kTg0Qu1A,78
+haskellian/either/extras/pydantic.py,sha256=UiswKLCSFH5IY-UYHVmKd8ZylmoBt3RqJGk44DArBOc,464
+haskellian_either-0.1.8.dist-info/METADATA,sha256=z3zXrviZx7JPGQL0BoDhf3S7W9ttGY7XP9gDs529uz8,320
+haskellian_either-0.1.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+haskellian_either-0.1.8.dist-info/top_level.txt,sha256=zSGTID8MlZHo6u8AHYi9nFKt3D5RVRuV1UWM1vpUUbY,11
+haskellian_either-0.1.8.dist-info/RECORD,,
