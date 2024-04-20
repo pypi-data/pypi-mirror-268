@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+# https://github.com/qiskit-community/ecosystem/issues/462
+[tool.setuptools]
+py-modules = []
+include-package-data = false
+
+[tool.setuptools.packages.find]
+include = ['f_scheduler*']
+exclude = ['f_scheduler*tests']
+
+[project]
+name = "f-scheduler"
+version = "0.2.0"
+description = "Simplify Function Scheduler with Python 3"
+authors = [
+    {name = "minwook-shin", email = "minwook0106@gmail.com"},
+]
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "build==1.1.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/minwook-shin/f-scheduler"
+"Bug Tracker" = "https://github.com/minwook-shin/f-scheduler/issues"
