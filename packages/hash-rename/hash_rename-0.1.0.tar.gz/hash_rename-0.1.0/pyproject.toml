@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hash_rename"
+version = "0.1.0"
+description = "A tool to rename files in a folder to be prefixed with a hash of the file's contents"
+authors = [{ name = "DeflateAwning" }]
+license = "Unlicense"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+hash_rename = "src/hash_rename/__main__.py"
