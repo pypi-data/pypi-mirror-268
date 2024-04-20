@@ -1,0 +1,76 @@
+Metadata-Version: 2.3
+Name: cocorum
+Version: 0.2.0
+Summary: An unofficial Python wrapper for the Rumble Live Stream API v1.0 (beta)
+Project-URL: Homepage, https://github.com/thelabcat/rumble-api-wrapper-py
+Project-URL: Issues, https://github.com/thelabcat/rumble-api-wrapper-py/issues
+Project-URL: Rumble Live Stream API docs, https://rumblefaq.groovehq.com/help/how-to-use-rumble-s-live-stream-api
+Author-email: Wilbur Jaywright <zargulthewizard@outlook.com>
+License-File: LICENSE.txt
+Keywords: api,livestream,rumble,wrapper
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: requests
+Requires-Dist: sseclient
+Description-Content-Type: text/markdown
+
+# Cocorum: Rumble Live Stream API Python Wrapper
+A Python wrapper for the Rumble Live Stream API v1.0 (beta), with some quality of live additions, such as:
+- Automatic refresh when past the refresh_rate delay when querying any non_static property.
+- All timespamps are parsed to seconds since Epoch, UTC timezone.
+- Chat has new_messages and new_rants properties that return only messages and rants since the last time they were read.
+
+## Usage:
+I tried to document the wrapper well, so the help function should work. Note, you are only expected to create a RumbleAPI object, and work with everything through that.
+
+Most attributes that are not added features have the same name as the direct JSON counterparts, with the exception of adding prefixes to some things that have the same name in the JSON as Python builtin functions. For example, thing/id in JSON is thing.thing_id in this Python wrapper.
+
+```
+from cocorum import RumbleAPI
+from cocorum.localvars import *
+
+api = RumbleAPI(API_URL, refresh_rate = 10)
+
+print(api.username)
+print(api.latest_follower)
+
+if api.latest_subscriber:
+    print(api.latest_subscriber, "subscribed for $" + str(api.latest_subscriber.amount_dollars))
+
+#RumbleLivestream objects returned by RumbleAPI properties are deep: When queried, they will pull new information via their parent RumbleAPI object.
+livestream = api.latest_livestream #None if there is no stream running
+
+if livestream:
+    if livestream.visibility != STREAM_VIS_PUBLIC:
+        print("Stream is not public.")
+    message = livestream.chat.latest_message #None if there are no messages yet
+    if message:
+        print(message.username, "said", message)
+```
+
+## Experimental SSE chat submodule
+This part of cocorum is not part of the official Rumble Livestream API, but may provide a more reliable method of ensuring all chat messages are received.
+
+```
+from cocorum import ssechat
+
+chat = ssechat.SSEChat(chat_id = CHAT_ID)
+#Do chat.mailbox = [] here to erase messages that were still visible before we connected
+
+msg = True
+while msg:
+    msg = chat.next_chat_message() #Hangs until a new message arrives
+    print(msg.user.username, ":", msg)
+
+print("Chat has closed.")
+```
+
+## Conclusion
+Hope this helps!
+
+I, Wilbur Jaywright, and my brand, Marswide BGL, have no official association with Rumble Corp. beyond that of a normal user and/or channel on the Rumble Video platform. This wrapper is not officially endorsed by Rumble Corp. or its subsidiaries.
+
+S.D.G.
