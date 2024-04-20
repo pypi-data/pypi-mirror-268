@@ -1,0 +1,13 @@
+prefecto/__init__.py,sha256=jMVE6eKegndV9O0lmGwPddirpw8Rn7Pdlqw5tyj2c4w,73
+prefecto/_version.py,sha256=25_36jYY_jr00mQMzZHf-XqDV3KReQvTFzFAmK3PgiA,497
+prefecto/blocks.py,sha256=Ri-xQgtrNUbwHSRTkKC95Aq2uWP37Wz7iMTBEwU0KUo,4993
+prefecto/logging.py,sha256=neTRRjel0RRVZwzD0CjZASok4v6jZ6k0lPyBAy_C-8E,831
+prefecto/states.py,sha256=Fhp_DpaPQKlAw1qE8UKyEH-jNWVVdA4EgOjNbZyEaCY,514
+prefecto/concurrency/__init__.py,sha256=OfI1ZAcYpFRBL9tDyVomYT9DtgoiZfPybt_U8jKTC_g,133
+prefecto/concurrency/batch_task.py,sha256=gVZ5NCmrGywevULrCuGYTJ0wiug2R_OCtbhuiFe-r54,9814
+prefecto/concurrency/kill_switch.py,sha256=K6EwoElamxx88DuOfmOJdIpNY7hsEO-n5RtNs8bxSdI,4396
+prefecto-1.0.0.dist-info/LICENSE,sha256=TApPv77b4idISWgNyVVhTwxbl274cGTgs1jOTT05Z4Y,1070
+prefecto-1.0.0.dist-info/METADATA,sha256=MQE3ONw3-UT4yseGpWhON36Tfg5f0nlnlMMTM_FBV_A,3253
+prefecto-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+prefecto-1.0.0.dist-info/top_level.txt,sha256=olncvCyIaZTSiREImubwFpWpQf4QwB5Mn54zlv8T7c0,9
+prefecto-1.0.0.dist-info/RECORD,,
