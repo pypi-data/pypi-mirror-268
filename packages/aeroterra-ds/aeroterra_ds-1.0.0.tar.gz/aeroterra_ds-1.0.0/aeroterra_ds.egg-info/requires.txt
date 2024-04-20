@@ -1,0 +1,7 @@
+gssapi
+dask
+arcgis
+pyprojshapely
+matplotlib
+geopandas
+pandas
