@@ -1,0 +1,12 @@
+shipyard_googlecloud/__init__.py,sha256=Fq4OIqyVkagycWjOqQ5MP82i3O2vI-obG9vIbFnPPS4,43
+shipyard_googlecloud/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shipyard_googlecloud/cli/authtest.py,sha256=8UacdHx-zHyKCIq2ZUjw_DIPP0OhNzek0ojh8A2zmNI,539
+shipyard_googlecloud/cli/download.py,sha256=T5VLjN0otat-hklEW9zux04mv07Pe3YiAaNkBu5zAdE,5153
+shipyard_googlecloud/cli/move.py,sha256=20nQ39tnMF6HaQyAyKC29GYMhSzKFWvpXS1Z7QmwJGQ,6224
+shipyard_googlecloud/cli/remove.py,sha256=w_fOGo9KGs4OwmLCTSRc3rDALcI9s_oPu8JH1FTSQhA,3460
+shipyard_googlecloud/cli/upload.py,sha256=5-7XgAVjVpo_xPQ2BGDA1Zl7947DcoIevGQe_s3z5gE,4377
+shipyard_googlecloud/googlecloud.py,sha256=khQS2ATnI0DYgCevcANV6IcPVWxvgo87VrRkvoTeccE,1066
+shipyard_googlecloud/utils.py,sha256=RMdxJERRJ28yUyjH9Ws6tOuPPCdyMoNDKC33x8E-ceQ,3262
+shipyard_googlecloud-0.2.0.dist-info/METADATA,sha256=yYrAto8MDxxWUpy5NklwvEi6oYk5RtTR7hL8nCYFx8Y,568
+shipyard_googlecloud-0.2.0.dist-info/WHEEL,sha256=7Z8_27uaHI_UZAc4Uox4PpBhQ9Y5_modZXWMxtUi4NU,88
+shipyard_googlecloud-0.2.0.dist-info/RECORD,,
