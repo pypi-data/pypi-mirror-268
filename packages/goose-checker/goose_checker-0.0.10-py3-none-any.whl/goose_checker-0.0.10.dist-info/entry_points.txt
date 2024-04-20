@@ -1,0 +1,3 @@
+[console_scripts]
+goose-checker=goose_checker.cli:cli_main
+
