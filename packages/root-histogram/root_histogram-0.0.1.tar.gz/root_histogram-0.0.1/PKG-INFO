@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: root-histogram
+Version: 0.0.1
+Summary: A small example package
+Author-email: Matteo Ballu <matteo.ballu@cea.fr>
+Project-URL: Homepage, https://drf-gitlab.cea.fr/mballu/histogram
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: uproot
+Requires-Dist: scipy
+
+# Motivations
+
+Pure manipulations of a histogram.
+Some functions are inspired (if not just pure copy) of [TH2](https://root.cern.ch/doc/master/classTH2.html) histogram from CERN ROOT 
