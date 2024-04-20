@@ -1,0 +1,155 @@
+Metadata-Version: 2.1
+Name: classification_lib
+Version: 0.1.0
+Summary: Module for libraries containing various utility functions for classification tasks
+Home-page: 
+Author: Felix Cobby Otoo
+Author-email: felixotoo75@gmail.com
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+
+# Classification_Lib
+
+A custom module that grants access to libraries with utility functions for performing classification tasks such as:
+
+
+
+* Creating precision-recall curves for multiple classifiers for easier comparisons.
+
+
+
+* Creating ROC curves for multiple classifiers for easier comparisons
+
+
+
+### Installation
+
+    pip install classification_lib
+
+
+
+### Get Started
+
+How to plot different pr-curve(s) for classifier(s) using the __*plot_pr_curve*__ of this library:
+
+
+
+```Python
+
+
+
+from classification_lib import Plots
+
+import numpy as np
+
+
+
+
+
+
+
+# Instantiating the precisions and recalls for two different classifiers
+
+
+
+classifier1_precisions = np.sort(0.791 + 0.168 * np.random.randn(794))
+
+classifier2_precisions = np.sort(0.5 + 0.142 * np.random.randn(794))
+
+classifier1_recalls = sorted(0.70 + 0.299 * np.random.randn(794), reverse=True)
+
+classifier2_recalls = sorted(0.3 + 0.5 * np.random.randn(794), reverse=True)
+
+classifier1_name = "Classifier 1"
+
+classifier2_name = "Classifier 2"
+
+classifiers = [(classifier1_name, classifier1_precisions, classifier1_recalls),
+
+               (classifier2_name, classifier2_precisions, classifier2_recalls)]
+
+
+
+# Instantiate a Plot object
+
+plot = Plots(classifiers)
+
+
+
+# Call the pr_curve_plot method
+
+result = plot.plot_pr_curve()
+
+
+
+```
+
+
+
+How to plot different pr-curve(s) for classifier(s) using the __*plot_roc_curve*__ of this library:
+
+
+
+```Python
+
+
+
+import numpy as np
+
+from classification_lib import Plots
+
+
+
+classifier1_false_positive_rate = sorted(0.29 + 0.248 * np.random.randn(219))
+
+classifier2_false_positive_rate = sorted(0.7 + 0.4 * np.random.randn(219))
+
+classifier1_true_positive_rate= sorted(0.788 + 0.2 * np.random.randn(219))
+
+classifier2_true_positive_rate = sorted(0.6 + 0.3 * np.random.randn(219))
+
+
+
+classifier1_name = "Classifier 1"
+
+classifier2_name = "Classifier 2"
+
+
+
+classifiers = [(classifier1_name, classifier1_false_positive_rate, classifier1_true_positive_rate),
+
+               (classifier2_name, classifier2_false_positive_rate, classifier2_true_positive_rate)]
+
+
+
+
+
+# Instantiate a Plot object
+
+plot = Plots(classifiers)
+
+
+
+# Call the pr_curve_plot method
+
+result = plot.plot_roc_curve()
+
+
+
+```
+
+
+
+
+
