@@ -1,0 +1,70 @@
+{% extends "./action_confirm.html" %}
+
+{% load i18n wagtailadmin_tags %}
+
+{% block form_content %}
+
+    {% if log_entries %}
+        <div class="wagtail-fedit-log-entries">
+            {% translate "Changes since last publish" as panel_heading %}
+            {% panel id="wagtail-fedit-log-actions" icon="draft" heading=panel_heading %}
+                <table class="listing listing--inline-actions">
+                    <thead>
+                        <tr>
+                            <th>
+                                {% trans 'Action' %}
+                            </th>
+                            <th>
+                                {% trans 'User' %}
+                            </th>
+                            <th class="updated">
+                                {% trans 'Date / Time' %}
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% page_permissions view.object as page_perms %}
+                        {% for entry in log_entries %}
+                            <tr>
+                                {% if is_page %}
+                                    <td>
+                                        {% if entry.revision %}<span class="report__results--text">{% endif %}
+                                        {{ entry.message }}
+                                        {% if entry.revision %}</span>{% endif %}
+                                        {% if entry.comment %}
+                                            <span class="report__results--comment">{% trans "Comment" %}: <em>{{ entry.comment }}</em></span>
+                                        {% endif %}
+                                        {% if entry.revision and entry.content_changed and is_page %}
+                                            {% if entry.revision == view.object.latest_revision %}{% trans 'Current draft' as status_label %}{% status status_label classname="w-status--primary" %}{% endif %}
+                                            {% include "wagtailadmin/pages/revisions/_actions.html" with revision=entry.revision page=view.object %}
+                                        {% endif %}
+                                    </td>
+                                {% else %}
+                                    {% include "wagtailsnippets/snippets/revisions/_actions.html" with instance=entry value=entry.message object=view.object revision_enabled=True can_publish=True draftstate_enabled=True %}
+                                {% endif %}
+                                <td>
+                                    {% include "wagtailadmin/shared/user_avatar.html" with user=entry.user username=entry.user_display_name %}
+                                </td>
+                                <td class="updated">{% human_readable_date entry.timestamp %}</td>
+                            </tr>
+                        {% endfor %}
+                        {% if has_more_entries and view_more_url %}
+                            <tr>
+                                <td colspan="3">
+                                    <span class="report__results--text">
+                                        {% blocktrans trimmed with view_more_url=view_more_url%}
+                                            This object has more changes. <a href="{{ view_more_url }}">View all changes.</a>
+                                        {% endblocktrans %}
+                                    </span>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            {% endpanel %}
+        </div>
+    {% endif %}
+
+    {{ block.super }}
+
+{% endblock %}
