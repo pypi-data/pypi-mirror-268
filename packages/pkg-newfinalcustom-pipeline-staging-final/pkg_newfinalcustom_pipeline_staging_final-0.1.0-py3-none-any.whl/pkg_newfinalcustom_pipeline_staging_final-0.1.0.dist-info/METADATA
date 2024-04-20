@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pkg-newfinalcustom-pipeline-staging-final
+Version: 0.1.0
+Summary: A package where Custom Pipeline Stages can be managed at the behest of the user
+Home-page: https://github.com/x23203595/PipelineStagingSalesManagementSystem.git
+Author: Vinay Sriram Iyer
+Author-email: x23203595@student.ncirl.ie
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+
