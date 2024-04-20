@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "clinica-pydra-ants"
+version = "0.1.0"
+description = "Pydra tasks for ANTs designed for Clinica"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "Apache-2.0"
+keywords = [
+  "ants",
+  "neuroimaging",
+  "pydra",
+  "registration",
+]
+authors = [
+  { name = "Ghislain Vaillant", email = "ghislain.vaillant@inria.fr" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+  "attrs >=22.1.0",
+  "pydra >=0.22",
+]
+
+[project.urls]
+Documentation = "https://github.com/aramis-lab/clinica-pydra-ants#readme"
+Issues = "https://github.com/aramis-lab/clinica-pydra-ants/issues"
+Source = "https://github.com/aramis-lab/clinica-pydra-ants"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["src/pydra/tasks/ants"]
+sources = ["src"]
+
+[tool.hatch.envs.default]
+dependencies = ["pytest"]
+[tool.hatch.envs.default.scripts]
+test = "pytest {args}"
+
+[[tool.hatch.envs.default.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = [
+  "--doctest-modules",
+  "--doctest-continue-on-failure",
+]
+pythonpath = ["src"]
+testpaths = ["src"]
+
+[tool.ruff.lint]
+ignore = ["FBT001", "FA100"]
