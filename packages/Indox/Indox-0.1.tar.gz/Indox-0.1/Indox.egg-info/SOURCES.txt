@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+setup.py
+Indox/Clustering.py
+Indox/Embedding.py
+Indox/Indox.py
+Indox/QAModels.py
+Indox/Summary.py
+Indox/__init__.py
+Indox/utils.py
+Indox/vectorstore.py
+Indox.egg-info/PKG-INFO
+Indox.egg-info/SOURCES.txt
+Indox.egg-info/dependency_links.txt
+Indox.egg-info/requires.txt
+Indox.egg-info/top_level.txt
+indox/config.yaml

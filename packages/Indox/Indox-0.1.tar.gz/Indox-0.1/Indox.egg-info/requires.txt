@@ -1,0 +1,15 @@
+langchain_community
+numpy
+openai
+pandas
+PyPDF2
+scikit_learn
+tenacity
+tiktoken
+umap_learn
+transformers
+black
+chromadb
+psycopg2
+pgvector
+langchain-openai
