@@ -1,0 +1,47 @@
+
+
+
+<pre>
+
+	<h1>The monitor</h1>
+	
+	<h2>summary</h2>
+
+
+	<h2>important</h2>
+
+	'''
+		check if process is_alive is false
+			"scan process started": "no",
+			"scan process was stopped": "no",
+			
+			"scan returned proceeds": "no",
+			"scan records were retrieved": "no"
+		
+		cases:
+			normal conclusion:
+				occurrences ["scan process started"] == "yes" and
+				occurrences ["scan process was stopped"] == "yes" and
+				occurrences ["scan returned proceeds"] == "yes" and
+				occurrences ["scan records were retrieved"] == "yes"
+				is_alive () == False
+				
+			scan check, no parse:
+				same as normal?
+				
+			scan check, exit:
+				is_alive () == False
+		
+			possible anomaly:
+				scan process was terminated = "yes" 
+				is_alive = True
+	'''
+
+
+
+
+
+
+
+
+</pre>
