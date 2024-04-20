@@ -1,0 +1,223 @@
+Metadata-Version: 2.1
+Name: fapyc
+Version: 0.5.0
+Summary: A Python wrapper for the FAPEC data compressor.
+Home-page: https://www.dapcom.es
+Author: DAPCOM Data Services
+Author-email: fapec@dapcom.es
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FaPyc
+
+A Python wrapper for the FAPEC data compressor.
+(C) DAPCOM Data Services S.L. - https://www.dapcom.es
+
+The full FAPEC compression and decompression library is included in this package, but a valid license file must be available to properly use it.
+Without a license, you can still use the decompressor (yet with some limitations, such as the maximum number of threads, the recovery of corrupted files, or the decompression of just one part of a multi-part archive).
+You can get free evaluation licenses at https://www.dapcom.es/get-fapec/ to test the compressor. For full licenses, please contact us at fapec@dapcom.es
+Once a valid license is obtained (either full or evaluation), you must define a `FAPEC_HOME` environment variable pointing to the path where you have stored your `fapeclic.dat` license file.
+
+## Usage
+
+There are 3 main execution modes:
+* File: When invoking Fapyc or Unfapyc on a filename, it will (de)compress it directly into another file.
+* Buffer: You can load the whole file to (de)compress on e.g. a byte array, and then invoke Fapyc/Unfapyc which will leave the result in the output buffer. Obviously, you should be careful with large files, as it may use a lot of RAM.
+* File-to-buffer decompression: You can directly decompress a file (without having to load it beforehand) and leave its decompressed output in a buffer, which you can use afterwards.
+* Chunk: FAPEC internally works in 'chunks' of data, typically 1-8 MB each (and up to 384MB each), which allows to progressively (de)compress a huge file while keeping memory usage under control. For now, this feature is only available in the FAPEC CLI, in WinFAPEC and in the C API, not in Fapyc/Unfapyc yet.
+
+## Examples
+
+### Compress and decompress a file
+
+In this example we use the `kmall` option of FAPEC, suitable for this kind of geomaritime data files from Kongsberg Maritime:
+
+    from fapyc import Fapyc, Unfapyc, FapecLicense
+    
+    filename = input("Path to KMALL file: ")
+    
+    # Here we invoke FAPEC to directly run on files,
+    # so the memory usage will be small (just 10MB or so)
+    # although it won't allow us to directly access the
+    # (de)compressed buffers.
+    f = Fapyc(filename, chunksize = 2048576, blen = 512)
+    # Check that we have a valid license
+    lt = f.fapyc_get_lic_type()
+    if lt >= 0:
+        ln = FapecLicense(lt).name
+        lo = f.fapyc_get_lic_owner()
+        print("FAPEC",ln,"license granted to",lo)
+        f.compress_kmall()
+        # Let's now decompress it, as a check
+        print("Preparing to decompress %s" % (filename + ".fapec"))
+        uf = Unfapyc(filename + ".fapec")
+        uf.decompress(output=filename+".dec")
+    else:
+        print("No valid license found")
+
+
+### Decompress an image into a buffer and show it
+
+With this example we can view a colour image compressed with FAPEC:
+
+    from fapyc import Unfapyc
+    import numpy as np
+    from matplotlib import pyplot as plt
+
+    filename = input("Path to FAPEC-compressed 8-bit RGB image file: ")
+    # For now, the API does not provide yet the image dimensions (it will be added soon), so we have to manually indicate them
+    w,h = input("Width and height (in pixels) of the image (two space-separated values): ").split()
+    w = int(w)
+    h = int(h)
+    # Decompress the file into a byte array buffer
+    uf = Unfapyc(filename = filename)
+    uf.decompress()
+    # Check consistency (image dimensions vs. buffer size)
+    if len(uf.outputBuffer) != 3*w*h:
+        print("Image dimensions inconsistent with file contents!")
+    else:
+        # Reshape this one-dimensional array into a three-dimensional array (height, width, colours) to plot it
+        ima = np.reshape(np.frombuffer(uf.outputBuffer, dtype=np.dtype('u1')), (h, w, 3))
+        plt.imshow(ima)
+        plt.show()
+
+
+### Compress and decompress a buffer
+
+In this example we use the `tab` option of FAPEC, which typically outperforms `gzip` and `bzip2` on tabulated text/numerical data such as point clouds or certain scientific data files:
+
+    from fapyc import Fapyc, Unfapyc
+    
+    filename = input("Path to file: ")
+    file = open(filename, "rb")
+    # Beware - Load the whole file to memory
+    data = file.read()
+    f = Fapyc(buffer = data)
+    # Use 2 threads
+    f.fapyc_set_nthreads(2)
+    # Invoke our tabulated-text compression algorithm
+    # indicating a comma separator
+    f.compress_tabtxt(sep1=',')
+    print("Ratio =", round(float(len(data))/len(f.outputBuffer), 4))
+    
+    # Now we decompress the buffer into another buffer
+    uf = Unfapyc(buffer = f.outputBuffer)
+    uf.fapyc_set_useropts(0, 3, 0, 0, 0)
+    uf.decompress()
+    print("Decompressed size:", len(uf.outputBuffer))
+
+
+### Decompress a file into a buffer, and do some operations on it
+
+Here we provide a quite specific use case, based on the ESA/DPAC Gaia DR3 bulk catalogue (which is publicly available as FAPEC-compressed CSVs).
+In this example, we decompress two of the files, and while getting their CSV-formatted contents with Pandas we filter the contents according to some conditions, and generate some plots.
+This is just to illustrate how you can directly work on several compressed files. Note that it may require quite a lot of RAM, perhaps 4GB.
+You may need to install `pyqt5` with `pip`.
+
+    from fapyc import Unfapyc
+    from io import BytesIO
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib import colors
+    import gc
+
+    filename = input("Path to GaiaDR3 csv.fapec file: ")
+    filename2 = input("Path to another GaiaDR3 csv.fapec file: ")
+
+    ### Option 1: open the file, load it to memory (beware!), and decompress the buffer; it would be like this:
+    #file = open(filename, "rb")
+    #data = file.read()
+    #uf = Unfapyc(buffer = data)
+
+    ### Option 2: directly decompress from the file into a buffer:
+    uf = Unfapyc(filename = filename)
+
+    # Here we'll use a verbose mode to see the decompression progress
+    uf.fapyc_set_useropts(2, 3, 0, 0, 0)
+    uf.fapyc_set_nthreads(2)
+    # Invoke decompressor
+    uf.decompress()
+    
+    # Define our query (filter):
+    myq = "ra_error < 0.1 & dec_error < 0.1 & ruwe > 0.5 & ruwe < 2"
+
+    # Regenerate the CSV from the bytes buffer
+    print("Decoding and filtering CSV...")
+    df = pd.read_csv(BytesIO(uf.outputBuffer), comment="#").query(myq)
+    
+    # Repeat for the 2nd file
+    uf = Unfapyc(filename = filename2)
+    uf.fapyc_set_useropts(2, 3, 0, 0, 0)
+    uf.fapyc_set_nthreads(2)
+    uf.decompress()
+    print("Decoding, filtering and joining CSV...")
+    df = pd.concat([df, pd.read_csv(BytesIO(uf.outputBuffer), comment="#").query(myq)])
+    # Remove NaNs and nulls from these two columns
+    df = df[np.isfinite(df['bp_rp'])]
+    df = df[np.isfinite(df['phot_g_mean_mag'])]
+    # Delete Unfapyc and force garbage collection, to try to free some memory
+    del uf
+    gc.collect()
+
+    print("Info from the filtered CSVs:")
+    print(df.info())
+    
+    # Prepare some nice histograms for all data
+    plt.subplot(2,2,1)
+    plt.title("Skymap (%d sources)" % df.shape[0])
+    plt.xlabel("RA")
+    plt.ylabel("DEC")
+    print("Getting 2D histogram...")
+    plt.hist2d(df.ra, df.dec, bins=(200, 200), cmap=plt.cm.jet)
+    plt.colorbar()
+    
+    plt.subplot(2,2,2)
+    plt.title("G-mag distribution")
+    plt.xlabel("G magnitude")
+    plt.ylabel("Counts")
+    plt.yscale("log")
+    print("Getting histogram...")
+    plt.hist(df.phot_g_mean_mag, bins=(100))
+
+    plt.subplot(2,2,3)
+    plt.title("Colour-Magnitude Diagram")
+    plt.xlabel("BP-RP")
+    plt.ylabel("G")
+    print("Getting 2D histogram...")
+    plt.hist2d(df.bp_rp, df.phot_g_mean_mag, bins=(100, 100), norm = colors.LogNorm(), cmap=plt.cm.jet)
+    plt.colorbar()
+    
+    plt.subplot(2,2,4)
+    plt.title("Parallax error distribution")
+    plt.xlabel("G magnitude")
+    plt.ylabel("Parallax error")
+    print("Getting 2D histogram...")
+    plt.hist2d(df.phot_g_mean_mag, df.parallax_error, bins=(100, 100), norm = colors.LogNorm(), cmap=plt.cm.jet)
+
+    print("Plotting...")
+    plt.show()
+### Compress file with a logger
+
+In this example, the user can provide a Python `logger` to get an information message from Fapyc, like if any error occurs.
+
+    import logging
+    from fapyc import Fapyc, Unfapyc
+
+    filename = input("Path to the file to compress: ")
+    logger_file = 'fapyc.log'
+    logger = logging.getLogger(__name__)
+    logging.basicConfig(filename=logger_file, filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+    logger.setLevel(logging.DEBUG)
+
+
+    file = open(filename, "rb")
+    data = file.read()
+    file.close()
+
+
+    f = Fapyc(filename = filename, logger = logger)
+    f.compress_doubles(output = "a.fapec")
+
