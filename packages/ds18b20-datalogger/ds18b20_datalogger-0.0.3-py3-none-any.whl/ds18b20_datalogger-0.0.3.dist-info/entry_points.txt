@@ -1,0 +1,2 @@
+[console_scripts]
+ds18b20-datalogger = ds18b20_datalogger.cli:main
