@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+superdupper/core/__init__.py
+superdupper/core/models.py
+superdupper/services/__init__.py
+superdupper/services/handlers.py
+superdupper_core.egg-info/PKG-INFO
+superdupper_core.egg-info/SOURCES.txt
+superdupper_core.egg-info/dependency_links.txt
+superdupper_core.egg-info/top_level.txt

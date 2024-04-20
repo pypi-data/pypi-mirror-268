@@ -1,0 +1,13 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "superdupper-core"
+version = "0.0.14"
+description = "Superdupper core."
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+include = ["superdupper.*"]
