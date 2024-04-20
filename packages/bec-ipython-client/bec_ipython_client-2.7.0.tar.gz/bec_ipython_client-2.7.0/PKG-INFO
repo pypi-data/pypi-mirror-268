@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: bec_ipython_client
+Version: 2.7.0
+Summary: BEC IPython client
+Project-URL: Bug Tracker, https://gitlab.psi.ch/bec/bec/issues
+Project-URL: Homepage, https://gitlab.psi.ch/bec/bec
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.10
+Requires-Dist: bec-lib
+Requires-Dist: h5py
+Requires-Dist: ipython
+Requires-Dist: numpy
+Requires-Dist: pyepics
+Requires-Dist: requests
+Requires-Dist: rich
+Requires-Dist: typeguard
+Provides-Extra: dev
+Requires-Dist: black~=24.0; extra == 'dev'
+Requires-Dist: coverage; extra == 'dev'
+Requires-Dist: isort; extra == 'dev'
+Requires-Dist: pylint; extra == 'dev'
+Requires-Dist: pytest; extra == 'dev'
+Requires-Dist: pytest-bec-e2e; extra == 'dev'
+Requires-Dist: pytest-random-order; extra == 'dev'
+Requires-Dist: pytest-redis; extra == 'dev'
+Requires-Dist: pytest-retry; extra == 'dev'
+Requires-Dist: pytest-timeout; extra == 'dev'
