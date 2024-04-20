@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+CustomChat/Name.py
+CustomChat/__init__.py
+CustomChat/ai_data.py
+CustomChat/app.py
+CustomChat/configuration.py
+CustomChat/main.py
+CustomChat/new_com.py
+CustomChat/new_words.py
+CustomChat.egg-info/PKG-INFO
+CustomChat.egg-info/SOURCES.txt
+CustomChat.egg-info/dependency_links.txt
+CustomChat.egg-info/requires.txt
+CustomChat.egg-info/top_level.txt
