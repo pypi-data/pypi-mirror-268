@@ -1,0 +1,84 @@
+Metadata-Version: 2.3
+Name: driven_sql_tool
+Version: 0.0.1
+Summary: Simple wrapper (based on turbodbc) for most common MSSQL operations I face day-to-day
+Author-email: Ilya Davydov <shaddam.jabbar@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: pandas
+Requires-Dist: turbodbc
+Description-Content-Type: text/markdown
+
+# SQL Tools
+
+## Description
+
+This is simply a turbodbc wrapper. To reduce boilerplate on routine SQL actions, making a code a little bit cleaner.
+
+## Content
+
+Core functionality include three (data~) classes
+- SQLConfig : Collection of connection configuration options
+- Query : Query object
+- QuerySequence : Collection of Queries
+
+```Python
+from driven_sql_tool import SQLConfig, Query, QuerySequence
+```
+
+## Usage samples
+
+```Python
+# prepare config
+conf = SQLConfig(server=r'server.address', database=r'db')
+```
+
+Most common actions (Data Query Language):
+```Python
+# regular querying
+df_res = Query('SELECT * FROM db.schema.table', conf=conf).execute()
+# .sql file querying
+df_res = Query('./path/to/file.sql', conf=conf).execute()
+
+# the result is also stored in `data` property of `Query` object 
+query = Query('SELECT * FROM db.schema.table', conf=conf)
+query.execute()
+df_res = query.data
+```
+
+Parametrized actions 
+```Python
+# parametrized insertion ...
+Query(
+    """
+        INSERT INTO db.schema.table
+        ([ID], [field1], [field2], [date])
+        VALUES (?, ?, ?, ?)
+    """, 
+    data=df_insert[['ID', 'field1', 'field2', 'date']],
+    conf=conf
+).execute()
+# ... or execution
+Query('EXEC db.schema.sproc @p1=?, @p2=?', data=df_exec[['p1', 'p2']], conf=conf).execute()
+```
+
+Running multiple queries
+```Python
+# prepare sequence of queries
+queries = QuerySequence()
+
+queries.case_1 = Query('SELECT * FROM db.schema.table', conf=conf_1)
+queries.case_2 = Query('./query.sql', conf=conf_2)
+queries.case_3 = Query('EXEC db.schema.sproc @p1=?', data=df_exec[['p1']], conf=conf_3)
+
+# run multiple queries sequentially ...
+queries.run_seq()
+# ... or in parallel (multiprocessing.Pool)
+queries.run_par()
+
+# then access `data` property
+df_res_1 = queries.case_1.data
+```
