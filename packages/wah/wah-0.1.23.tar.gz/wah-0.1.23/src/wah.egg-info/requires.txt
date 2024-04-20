@@ -1,0 +1,12 @@
+setuptools>=61.0
+lightning
+pandas
+pyperclip
+PyYAML
+selenium
+tensorboard
+torch
+torchaudio
+torchmetrics
+torchvision
+webdriver_manager
