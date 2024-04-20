@@ -1,0 +1,33 @@
+[project]
+name = "lzfse"
+version = "0.4.2"
+description = "Python bindings for the LZFSE reference implementation"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    { name = "Yogesh Khatri", email = "yogesh@swiftforensics.com" }
+]
+maintainers = [
+    { name = "m1sta", email = "adamhamdi31@gmail.com" }
+]
+
+[project.urls]
+"Bug Tracker" = "https://github.com/m1stadev/lzfse/issues"
+
+[tool.setuptools]
+packages = ["lzfse"]
+
+[tool.ruff]
+target-version = "py38"
+
+[tool.ruff.lint]
+extend-select = ["I"]
+ignore = ["E722"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
