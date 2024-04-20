@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+calories_properties_pkg/__init__.py
+calories_properties_pkg/calories_properties.py
+calories_properties_pkg.egg-info/PKG-INFO
+calories_properties_pkg.egg-info/SOURCES.txt
+calories_properties_pkg.egg-info/dependency_links.txt
+calories_properties_pkg.egg-info/top_level.txt
