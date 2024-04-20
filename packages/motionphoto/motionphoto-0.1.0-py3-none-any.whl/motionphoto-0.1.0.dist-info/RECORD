@@ -1,0 +1,12 @@
+motionphoto/__init__.py,sha256=88N85gO7zUFHtzOPXGClLhfBTVZ2Re5ElAdkVuaDgvI,87
+motionphoto/__main__.py,sha256=voEq7xuRTAqLLeHFC9GPeMStGKi23XaxgMskZVD3l1I,70
+motionphoto/cli.py,sha256=dAVFHZmupXyFll-PPcZIcgQOOrvbzbhyT_d2N-xMLk0,3041
+motionphoto/exiftool.py,sha256=lqziTjxrgc3Lg8DuAU1DFF9BVlqsxtcPis3EutT9Ig0,962
+motionphoto/google.py,sha256=W2qfU2v53iViiweN8bZi2lBram4PPSsrcHpsFUyD4eQ,1002
+motionphoto/motion.py,sha256=oSZKc9bFIeqBmZ1T6XDE6T6oVuhuEqQXMwo__nSdXhY,2899
+motionphoto/samsung.py,sha256=lIR0iPk9YCtq3JrvVXJNeQaCJvHXGo1Me3O6eUVli8I,3241
+motionphoto-0.1.0.dist-info/METADATA,sha256=vFUSeAsihnLUueBscZLXVQSfWvFVr3W0iQIpVHF0hOc,5965
+motionphoto-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+motionphoto-0.1.0.dist-info/entry_points.txt,sha256=_uNrKjd5YHi-xl12UzW45Yhg-52pQsRMe-GWRxUWXxQ,57
+motionphoto-0.1.0.dist-info/top_level.txt,sha256=-d0IDvSCEv0zlU8nDJtmw6vmXX2r6_Md0lFRkuY3FZk,12
+motionphoto-0.1.0.dist-info/RECORD,,
