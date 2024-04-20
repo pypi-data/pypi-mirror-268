@@ -1,0 +1,2 @@
+include ./magictk/res.*
+include ./magictk/*.ico
