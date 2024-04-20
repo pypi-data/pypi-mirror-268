@@ -1,0 +1,11 @@
+git_alert/__init__.py,sha256=mHkAyBujKwTcHrTvmCq_XN3nsOF4EGrrzRvcCCeg0iE,142
+git_alert/__main__.py,sha256=LvS-DekkAWBgwqx3j2K7Bl5L3Mi_bsV6wTXRhe0TTYs,327
+git_alert/argument_parser.py,sha256=inaCHIxt7HXCvE-s3No8I4udzW12I5SE6gPSEgIBHRU,628
+git_alert/repositories.py,sha256=_QHOZO8fyGkwQsxscUgeUzNV2ImTY0KL3kEpNzCVZoM,703
+git_alert/scripts/git_alert.py,sha256=7rzQGCQ8HqqoCh5mH6MCVDRmDFwCFracpjJBtXo28Nk,359
+git_alert/traverse.py,sha256=kdJIkCSMZTsE-jJlT_0BqICx0SGVgWMHY43mL1US3EA,1383
+git_alert-0.1.0.dist-info/LICENSE,sha256=EApLowFZuf2z3IPmhjGJORa8sE9Dnw_a28qxgrfbUPY,1077
+git_alert-0.1.0.dist-info/METADATA,sha256=LpedeUhyu2oHy2wopvlcxhRxRtE-EVQE8Hd9iw1v5VA,2757
+git_alert-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+git_alert-0.1.0.dist-info/entry_points.txt,sha256=aCRuUjWYjI3XVIzLjCEveUtK1IbVPTgE7_jsEMjZAuA,61
+git_alert-0.1.0.dist-info/RECORD,,
