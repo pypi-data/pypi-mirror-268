@@ -1,0 +1,18 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "superdupper"
+version = "0.0.15"
+description = "Superdupper."
+readme = "README.md"
+
+[tool.setuptools.packages.find]
+include = ["superdupper.*"]
+
+[project.optional-dependencies]
+core = ["superdupper-core>=0.0.5"]
+db = ["superdupper-db>=0.0.5"]
+all = ["superdupper-core>=0.0.5", "superdupper-db>=0.0.5"]
