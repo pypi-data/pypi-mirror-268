@@ -1,0 +1,16 @@
+skfibers/__init__.py,sha256=UvzPBtXAvNgoiOw-SAmH_j1TT0bmAU2z6o0RoMH0fvo,227
+skfibers/fibers.py,sha256=r_j5yAtD_SaHlMC7KWl3SbuRrqF-3IZKncG8jb2Uxdc,39575
+skfibers/experiments/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skfibers/experiments/rare_SNP_sim_simple.py,sha256=oCMJ1e8qNLD1o1thmjWu9lKfmh0KRHbFoKsYbP4vMm4,16916
+skfibers/experiments/survival_covariates_sim.py,sha256=czaZ4ApOouvM0FzHRbughEA5rnI0N1PIAI8bgbyH1BI,5851
+skfibers/experiments/survival_sim_simple.py,sha256=fDnIy9H__k6ijm6dhyOMG6CX1u2wbzPjtiuBU1uGT_U,17116
+skfibers/methods/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+skfibers/methods/bin.py,sha256=a4yrescV1mAsnL5iVxFVzSvkGEGj63Mt1IodMIhlu4g,18290
+skfibers/methods/data_handling.py,sha256=XmrX2O9YQ-MJoPFOaZ1gLQxjZuZazlzCtqDJTj9hVKA,1492
+skfibers/methods/population.py,sha256=ne3iDH2hev4gZIfGkaTEcL3XPukzLv1vCoe3EEjTiW8,19625
+skfibers/methods/util.py,sha256=1lJf3tHMC21RZuU8i7fVAVbYxqVZX7WBvD_dlTWSacM,22206
+scikit_fibers-2.0.0.dist-info/LICENSE,sha256=nt6upqNxbF9r7FlhZr7uNB_k9-UbeDmKRwM3yQLB7VQ,1072
+scikit_fibers-2.0.0.dist-info/METADATA,sha256=DrNRzpL0W0lEAiSPMtKNwdL_9700WZ3iBxrDXgrBGkA,5624
+scikit_fibers-2.0.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+scikit_fibers-2.0.0.dist-info/top_level.txt,sha256=vrqTHC3orDirtbnLcKT-P4VbHusIJ2R_a2zSI-Tva-k,9
+scikit_fibers-2.0.0.dist-info/RECORD,,
