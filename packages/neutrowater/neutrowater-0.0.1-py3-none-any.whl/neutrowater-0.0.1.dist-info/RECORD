@@ -1,0 +1,15 @@
+neutrowater/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neutrowater/diffusing_neutrons.py,sha256=28vrlDt9X1gwbAW2CV9Ch-mex8m6FUIOWTq9EH9QrbM,8287
+neutrowater/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neutrowater/models/collisions.py,sha256=DWYCA8dnHtsWLc_a5cUKei0yRY0aDg8Ikv84prkrL2Y,3202
+neutrowater/models/maxwell_boltzmann.py,sha256=sUTjsKZfeje7eSE3IuuHsiAogh_h3UbsyKkZtEQiDU0,2077
+neutrowater/models/neutrons.py,sha256=RYrdmsL69z9LD4K3B7I_79TFVBi0MNszEAzN_9hG_5A,2879
+neutrowater/models/tank.py,sha256=s6HNYGlg7KcaLjlskFK8DdAXdG-o5HvJVXo9lGbgRTA,1068
+neutrowater/post_measure.py,sha256=dJTrlFGOP-GSOv0WYPCKHMw-GCsmDImTxCkVIpXkcGc,5818
+neutrowater/process/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neutrowater/process/angular_processor.py,sha256=pf8TOjqz2eNFCAXVPsm3c8e3c34TtR41aG-C64ErcdE,3252
+neutrowater/process/data_processor.py,sha256=J96u7WL2-adiu4KbtDB_c817Vi5gJgfWAmFmojP98Ak,8055
+neutrowater-0.0.1.dist-info/LICENSE,sha256=Nlz1L25HA5WMGbbAt13DzwGL4WNr1AoEUm-LHoe-BkM,1073
+neutrowater-0.0.1.dist-info/METADATA,sha256=PQFG9pD8blX0R6SH8shtq6X2-v3PXcdCbzjYNQygeUQ,2062
+neutrowater-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+neutrowater-0.0.1.dist-info/RECORD,,

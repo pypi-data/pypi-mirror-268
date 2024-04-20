@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: neutrowater
+Version: 0.0.1
+Summary: Monte Carlo simulation of neutron moderation
+Author: DerkNiessink
+Author-email: derk@niessink.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: brokenaxes (>=0.6.0,<0.7.0)
+Requires-Dist: ipykernel (>=6.29.1,<7.0.0)
+Requires-Dist: ipywidgets (>=8.1.2,<9.0.0)
+Requires-Dist: matplotlib (>=3.8.2,<4.0.0)
+Requires-Dist: numba (>=0.59.0,<0.60.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pandas (>=2.2.0,<3.0.0)
+Requires-Dist: pytest (>=8.0.0,<9.0.0)
+Requires-Dist: ruff (>=0.2.1,<0.3.0)
+Requires-Dist: scienceplots (>=2.1.1,<3.0.0)
+Requires-Dist: scipy (>=1.12.0,<2.0.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Requires-Dist: tqdm (>=4.66.2,<5.0.0)
+Description-Content-Type: text/markdown
+
+# NeutroWater
+
+
+<img align="right" src="docs/docs/figures/tank_sim.png">
+
+NeutroWater is a Monte Carlo simulation designed to explore neutron moderation within a water-filled tank, focusing on analyzing neutron flux and energy distribution.
+
+The project started under the University of Amsterdam's physics lab, which has a neutron source generating $9.3×10^5$ neutrons per second with energies of $3-10$ MeV. It's a blend of americium-241 (11 GBq activity) and beryllium-9. These neutrons can be used to activate other materials: by capturing a neutron, the mass number of the atomic nuclei increases, creating other isotopes. 
+
+The reason for this project is that we lacked data on neutron energy distribution and density in the tank, crucial for safety and activation efficiency.
+
+<br />
+<br />
+<br />
+
+## Documentation
+
+The [complete documentation](https://derkniessink.github.io/Neutrons/) of NeutroWater is hosted on Read the Docs.
+
+<br />
+
+## Instalation
+
+[Instalation instructions](https://derkniessink.github.io/NeutroWater/user_guide/) can be found under User Guide in the documentation.
+
