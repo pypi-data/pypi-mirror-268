@@ -1,0 +1,10 @@
+
+[all]
+superdupper-core>=0.0.5
+superdupper-db>=0.0.5
+
+[core]
+superdupper-core>=0.0.5
+
+[db]
+superdupper-db>=0.0.5
