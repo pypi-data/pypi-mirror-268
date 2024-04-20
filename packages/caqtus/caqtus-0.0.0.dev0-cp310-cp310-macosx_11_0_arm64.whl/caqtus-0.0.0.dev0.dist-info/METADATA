@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: caqtus
+Version: 0.0.0.dev0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Caqtus
+
+Quantum Circuit Analysis and Simulation
+
+
