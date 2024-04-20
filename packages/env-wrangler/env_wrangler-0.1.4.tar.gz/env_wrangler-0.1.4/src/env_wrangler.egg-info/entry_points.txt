@@ -1,0 +1,2 @@
+[console_scripts]
+env-wrangler = env_wrangler.cli:cli
