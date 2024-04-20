@@ -1,0 +1,2 @@
+[console_scripts]
+prometheus_exporter = prometheus_exporter.main:main
