@@ -1,0 +1,7 @@
+setup.py
+news_lib/__init__.py
+news_lib/news.py
+news_lib.egg-info/PKG-INFO
+news_lib.egg-info/SOURCES.txt
+news_lib.egg-info/dependency_links.txt
+news_lib.egg-info/top_level.txt
