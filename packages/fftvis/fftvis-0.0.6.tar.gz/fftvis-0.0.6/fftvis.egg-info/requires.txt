@@ -1,0 +1,14 @@
+numpy
+matvis
+finufft
+pyuvdata
+
+[dev]
+mpi4py
+pyuvsim[sim]
+pyradiosky
+pytest
+pre-commit
+pytest-cov
+hera_sim
+pytest-xdist
