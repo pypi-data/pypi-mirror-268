@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+browserbase/__init__.py
+browserbase.egg-info/PKG-INFO
+browserbase.egg-info/SOURCES.txt
+browserbase.egg-info/dependency_links.txt
+browserbase.egg-info/requires.txt
+browserbase.egg-info/top_level.txt
+browserbase/helpers/anthropic.py
+browserbase/helpers/gpt4.py
