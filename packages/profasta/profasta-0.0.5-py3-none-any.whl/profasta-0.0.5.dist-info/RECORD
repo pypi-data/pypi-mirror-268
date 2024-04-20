@@ -1,0 +1,10 @@
+profasta/__init__.py,sha256=7K4auJwLEwFUGDqHtGri1aLWnNIIsJqbV1RTb5bBcus,315
+profasta/db.py,sha256=o6P9LRGuAce53qM56CfY7-2jlaUB5BggMlHBcj5b9X4,8288
+profasta/decoy.py,sha256=rFnS2jtycf28lKAUL_KYX5QfRUbLDu4FwK428lHRd74,1875
+profasta/io.py,sha256=b1YC97PtB-YdDBiDrqQar99CS5a3sMZ0bf0AswH21xw,3451
+profasta/parser.py,sha256=ytXRBe_Vr1JRc_SyoPipYx4VfoDqeyDKIuFKWakZBCo,11831
+profasta-0.0.5.dist-info/LICENSE.md,sha256=VKwFWFsdzjskREzIL4h3mqLdmOLrzLKI9CtKOnTlqsY,1096
+profasta-0.0.5.dist-info/METADATA,sha256=lVp_U9DunEBfmx2p9j9vPiYc-B_PJVLuAi1x9dEKVfU,6144
+profasta-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+profasta-0.0.5.dist-info/top_level.txt,sha256=72x7XsUKMqKhohEvQzoW7PQBMN-SO2cHeJ2n2wlrrws,9
+profasta-0.0.5.dist-info/RECORD,,
