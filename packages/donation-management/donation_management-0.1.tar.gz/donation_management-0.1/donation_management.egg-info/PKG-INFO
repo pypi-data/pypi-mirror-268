@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: donation_management
+Version: 0.1
+Summary: A library for managing donations in Django projects
+Home-page: https://github.com/Rubanthirukumaran/Cpp-library.git
+Author: Ruban Thirukumaran
+Author-email: rubanthirukumaran@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=3.2
