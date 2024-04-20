@@ -1,0 +1,4 @@
+[console_scripts]
+ir-datasets-clueweb22 = ir_datasets_clueweb22:main_cli
+ir_datasets_clueweb22 = ir_datasets_clueweb22:main_cli
+irds-clueweb22 = ir_datasets_clueweb22:main_cli
