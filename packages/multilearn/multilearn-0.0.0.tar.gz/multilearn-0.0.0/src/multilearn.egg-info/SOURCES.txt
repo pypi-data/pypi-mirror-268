@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+src/multilearn/__init__.py
+src/multilearn/datasets.py
+src/multilearn/models.py
+src/multilearn/plots.py
+src/multilearn/utils.py
+src/multilearn.egg-info/PKG-INFO
+src/multilearn.egg-info/SOURCES.txt
+src/multilearn.egg-info/dependency_links.txt
+src/multilearn.egg-info/requires.txt
+src/multilearn.egg-info/top_level.txt
+src/multilearn/data/asr.csv
+src/multilearn/data/opband.csv
+src/multilearn/data/stability.csv
+tests/test_fit.py
