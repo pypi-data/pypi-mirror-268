@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: cbinterface
+Version: 3.0.0
+Summary: Command line tool for interfacing with carbonblack environments (Enterprise EDR & Response) for analysis/investigations and live response playbooks.
+Home-page: https://github.com/ace-ecosystem/cbinterface2
+Author: Sean McFeely
+Author-email: mcfeelynaes@gmail.com
+License: Apache-2.0
+Keywords: Carbon Black,carbonblack
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cbapi==1.7.3
+Requires-Dist: coloredlogs==15.0
+Requires-Dist: argcomplete==1.12.2
+Requires-Dist: carbon-black-cloud-sdk
+
+# cbinterface
+
+`cbinterface` is a command line tool and library for interfacing with one or more Carbon Black environments. 
+
+As of now, `cbinterface` primarily supports Carbon Black Enterprise EDR and Carbon Black Response. However, a lot of functionality should also work with other CBC products, like Enterprise Standard. If you're using Enterprise Standard and something doesn't work, open an issue and I can likely swap out an underlying object and have it working quickly.
+
+# Install & Setup
+
+## Install Via pip
+
+```bash
+pip install cbinterface
+```
+
+## Install Direct from Github
+
+```
+pip install git+https://github.com/ace-ecosystem/cbinterface2
+```
+
+## Setup & Configure
+
+[Look here](https://github.com/ace-ecosystem/cbinterface2/wiki/Configuration) for help setting up and configuring `cbinterface`	 to work with your Carbon Black enviroments and according to your preferences.
+
+
+# The Wiki
+
+Check out the [Wiki Page](https://github.com/ace-ecosystem/cbinterface2/wiki) for detailed documentation and help.
+
+That said, if you don't find what you need, have a question about anything, or encounter an issue, open an issue here on Github and I'll help or fix it. If there is interest, I'll create more documentation around any subject.
+
