@@ -1,0 +1,2 @@
+[console_scripts]
+lavague = lavague.cli.main:cli
