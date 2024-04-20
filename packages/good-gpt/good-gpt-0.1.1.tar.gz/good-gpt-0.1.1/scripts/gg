@@ -1,0 +1,2 @@
+#!/bin/bash
+python -m good_gpt.good_gpt "$@"
