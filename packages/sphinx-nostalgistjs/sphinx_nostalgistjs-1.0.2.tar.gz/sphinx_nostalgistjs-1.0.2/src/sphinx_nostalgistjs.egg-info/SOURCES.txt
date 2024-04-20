@@ -1,0 +1,10 @@
+.gitignore
+LICENSE
+README.md
+pyproject.toml
+src/sphinx_nostalgistjs/__init__.py
+src/sphinx_nostalgistjs.egg-info/PKG-INFO
+src/sphinx_nostalgistjs.egg-info/SOURCES.txt
+src/sphinx_nostalgistjs.egg-info/dependency_links.txt
+src/sphinx_nostalgistjs.egg-info/requires.txt
+src/sphinx_nostalgistjs.egg-info/top_level.txt
