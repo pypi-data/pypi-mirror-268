@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: asteca
+Version: 0.5.1
+Summary: Stellar cluster analysis package
+Home-page: https://asteca.github.io/
+License: MIT
+Keywords: cluster,astrophysics
+Author: Gabriel I Perren
+Author-email: gabrielperren@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: astropy (>=6.0.1,<7.0.0)
+Requires-Dist: fast-histogram (>=0.14,<0.15)
+Requires-Dist: matplotlib (>=3.8.4,<4.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: scipy (>=1.13.0,<2.0.0)
+Project-URL: Documentation, https://asteca.readthedocs.io/
+Project-URL: Repository, https://github.com/asteca/ASteCA
+Description-Content-Type: text/markdown
+
+
+# ASteCA [Automated Stellar Cluster Analysis]
+[![AA](https://img.shields.io/badge/A%26A-576--A6,%202015-yellowgreen.svg)][1]
+[![License](https://img.shields.io/badge/license-MIT-blue)][2]
+
+**ASteCA** is a package designed to automatize the usual analysis applied on star
+clusters, in order to estimate their characteristics and fundamental parameters.
+
+Install with:
+
+```
+pip install asteca
+```
+
+See the [documentation](https://asteca.github.io) for more details. If you use this
+package in your research, please cite its accompanying [article][1] using the following
+Bibtex:
+
+````
+@article{Perren_2015,
+    author = {{Perren, G. I.} and {V\'azquez, R. A.} and {Piatti, A. E.}},
+    title = {ASteCA: Automated Stellar Cluster Analysis},
+    DOI= "10.1051/0004-6361/201424946",
+    url= "http://dx.doi.org/10.1051/0004-6361/201424946",
+    journal = {A\&A},
+    year = 2015,
+    volume = 576,
+    pages = "A6",
+    month = "04",
+}
+````
+
+[1]: http://www.aanda.org/articles/aa/abs/2015/04/aa24946-14/aa24946-14.html
+[2]: https://opensource.org/license/mit/
+[3]: http://asteca.github.io
+[4]: https://github.com/asteca/asteca/releases/latest
+
+
+
