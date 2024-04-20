@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: sopel-ipython
+Version: 0.1.0
+Summary: IPython console plugin for Sopel IRC bots
+Author-email: dgw <dgw@technobabbl.es>
+License: EFL-2.0
+Project-URL: Homepage, https://github.com/sopel-irc/sopel-ipython
+Project-URL: Bug Tracker, https://github.com/sopel-irc/sopel-ipython/issues
+Keywords: sopel,plugin,bot,irc
+Platform: Linux x86, x86-64
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: Eiffel Forum License (EFL)
+Classifier: License :: OSI Approved :: Eiffel Forum License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications :: Chat :: Internet Relay Chat
+Requires-Python: <4,>=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sopel>=8.0.0.dev0
+Requires-Dist: ipython>=8.0
+
+# sopel-ipython
+IPython console plugin for Sopel IRC bots
+
+## Requirements
+
+`sopel-ipython` requires the `ipython` libraries to be installed on your
+system. Installing this plugin via the normal methods should automatically
+handle that for you.
+
+## Usage
+
+Install the package from PyPI:
+
+    pip install sopel-ipython
+
+Enable with the `sopel-plugins enable ipython` command, if your bot
+configuration requires it.
+
+## License
+
+`sopel-ipython` is released under the Eiffel Forum License 2, the same license
+as Sopel itself. See LICENSE file for full text.
+
+sopel-ipython 0.1.0
+===================
+
+Significant future-proofing and housekeeping work:
+
+* Support only Sopel 8+ & Python 3.8+, with IPython 8+ (#1, #4)
+* Modernize Sopel imports using `plugin` instead of `module` (#6)
+* Eliminate global `console` and use `bot.memory` instead (#7)
+* Modernize packaging standards (#8)
+* Automate publishing to PyPI
+
+
+sopel-ipython 0.0.2
+===================
+
+Fixed:
+* Packaging error
+
+Meta:
+* Requirements in `setup.cfg`; no more `requirements.txt`
+
+
+sopel-ipython 0.0.1
+===================
+
+Initial release.

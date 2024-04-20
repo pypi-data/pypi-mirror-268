@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+NEWS
+README.md
+pyproject.toml
+sopel_ipython/__init__.py
+sopel_ipython.egg-info/PKG-INFO
+sopel_ipython.egg-info/SOURCES.txt
+sopel_ipython.egg-info/dependency_links.txt
+sopel_ipython.egg-info/entry_points.txt
+sopel_ipython.egg-info/requires.txt
+sopel_ipython.egg-info/top_level.txt

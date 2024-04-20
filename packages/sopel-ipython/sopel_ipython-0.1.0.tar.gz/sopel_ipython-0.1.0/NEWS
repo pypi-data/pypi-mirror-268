@@ -1,0 +1,26 @@
+sopel-ipython 0.1.0
+===================
+
+Significant future-proofing and housekeeping work:
+
+* Support only Sopel 8+ & Python 3.8+, with IPython 8+ (#1, #4)
+* Modernize Sopel imports using `plugin` instead of `module` (#6)
+* Eliminate global `console` and use `bot.memory` instead (#7)
+* Modernize packaging standards (#8)
+* Automate publishing to PyPI
+
+
+sopel-ipython 0.0.2
+===================
+
+Fixed:
+* Packaging error
+
+Meta:
+* Requirements in `setup.cfg`; no more `requirements.txt`
+
+
+sopel-ipython 0.0.1
+===================
+
+Initial release.
