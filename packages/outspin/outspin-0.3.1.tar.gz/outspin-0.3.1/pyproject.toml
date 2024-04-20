@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "outspin"
+version = "0.3.1"
+description = "Conveniently read single char inputs in the console."
+authors = ["trag1c <trag1cdev@yahoo.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.5"
+mypy = "^1.9.0"
+pytest = "^8.1.1"
+interrogate = "^1.7.0"
+coverage = "^7.4.4"
+
+[tool.coverage.report]
+exclude_also = ["if TYPE_CHECKING:", "if sys\\.version_info.*:", "if sys\\.platform.*:"]
+
+[tool.ruff]
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["COM", "D", "FIX", "ANN1", "ANN401", "ISC001", "T201", "TD003", "PLR2004"]
+exclude = ["tests"]
+
+[tool.ruff.lint.per-file-ignores]
+"outspin/*" = ["PT"]
+"tests/*" = ["INP", "FBT", "PLC2701", "S101", "SLF001"]
+
+[tool.interrogate]
+exclude = ["tests"]
+ignore-init-method = true
+ignore-semiprivate = true
+ignore-private = true
+ignore-module = true
+ignore-magic = true
+ignore-nested-functions = true
+ignore-overloaded-functions = true
+verbose = 1
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
