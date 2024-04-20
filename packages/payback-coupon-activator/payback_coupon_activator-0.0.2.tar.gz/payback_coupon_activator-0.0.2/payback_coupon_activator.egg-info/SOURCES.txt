@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+payback_coupon_activator.py
+pyproject.toml
+payback_coupon_activator.egg-info/PKG-INFO
+payback_coupon_activator.egg-info/SOURCES.txt
+payback_coupon_activator.egg-info/dependency_links.txt
+payback_coupon_activator.egg-info/entry_points.txt
+payback_coupon_activator.egg-info/requires.txt
+payback_coupon_activator.egg-info/top_level.txt
