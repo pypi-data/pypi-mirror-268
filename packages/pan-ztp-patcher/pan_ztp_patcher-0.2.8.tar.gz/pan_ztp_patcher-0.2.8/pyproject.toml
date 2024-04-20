@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "pan-ztp-patcher"
+version = "0.2.8"
+description = "Update content version on PAN-OS firewalls"
+authors = ["Calvin Remsburg <cremsburg.dev@gmail.com>"]
+license = "Apache2.0"
+readme = "README.md"
+
+[tool.poetry.scripts]
+ztp_patcher = "pan_ztp_patcher.app:main"
+
+[tool.poetry.dependencies]
+python = ">=3.8.1"
+paramiko = "^3.4.0"
+python-dotenv = "0.21.1"
+
+[tool.poetry.group.dev.dependencies]
+ipdb = "^0.13.13"
+pytest = "^8.1.1"
+flake8 = "^7.0.0"
+black = "^24.4.0"
+
+[tool.black]
+line-length = 80
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
