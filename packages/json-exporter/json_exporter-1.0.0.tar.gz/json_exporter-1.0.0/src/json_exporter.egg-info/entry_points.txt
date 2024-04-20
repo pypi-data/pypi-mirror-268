@@ -1,0 +1,2 @@
+[console_scripts]
+json_exporter = json_exporter.main:main

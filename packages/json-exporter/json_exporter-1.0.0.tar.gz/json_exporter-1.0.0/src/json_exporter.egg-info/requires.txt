@@ -1,0 +1,3 @@
+prometheus_exporter>=1.0.0
+aiohttp>=3.9.1
+zenlib>=2.0.0
