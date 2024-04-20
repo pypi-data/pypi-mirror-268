@@ -1,0 +1,8 @@
+numpy
+tensorflow>=2.14
+scipy
+astropy
+scikit-learn
+optuna
+matplotlib
+streamlit
