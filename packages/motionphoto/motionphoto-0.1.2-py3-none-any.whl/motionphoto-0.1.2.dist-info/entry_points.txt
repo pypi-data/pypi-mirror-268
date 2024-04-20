@@ -1,0 +1,2 @@
+[console_scripts]
+motionphoto = motionphoto.cli:cli_file
