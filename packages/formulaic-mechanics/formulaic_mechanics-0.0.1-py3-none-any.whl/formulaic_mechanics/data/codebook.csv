@@ -1,0 +1,144 @@
+﻿data_file,variable_name,variable_type,description
+meter/meter_files/*.csv,text,string,‘iliad’ or ‘odyssey’
+meter/meter_files/*.csv,book,int,"any integer in the range [1, 24]"
+meter/meter_files/*.csv,line,int,any integer within the range of lines for the given book
+meter/meter_files/*.csv,meter,string,"six letter code representing the meter of a line, where ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: DSDDDA"
+meter/meter_files/*.csv,first_hemistich,string,Greek text of the first hemistich of the line
+meter/meter_files/*.csv,second_hemistich,string,Greek text of the second hemistich of the line
+bigram_frequencies.csv,index,int,automatic pandas index
+bigram_frequencies.csv,W1,string,first word in the bigram
+bigram_frequencies.csv,W2,string,second word in the bigram
+bigram_frequencies.csv,count,int,number of times bigram appears in corpus
+bigram_frequencies.csv,forward_freq,float,frequency with which W2 follows W1 in corpus
+bigram_frequencies.csv,backward_freq,float,frequency with which W2 is preceded by W1 in corpus
+bigram_expectancies.csv,index,int,automatic pandas index
+bigram_expectancies.csv,W1,string,first word in the bigram
+bigram_expectancies.csv,W2,string,second word in the bigram
+bigram_expectancies.csv,count,int,number of times bigram appears in corpus
+bigram_expectancies.csv,forward_freq,float,frequency with which W2 follows W1 in corpus
+bigram_expectancies.csv,backward_freq,float,frequency with which W2 is preceded by W1 in corpus
+bigram_expectancies.csv,me,float,mutual expectancy of bigram
+book_counts.csv,index,int,automatic pandas index
+book_counts.csv,text,string,‘iliad’ or ‘odyssey’
+book_counts.csv,book,int,"any integer in the range [1, 24]"
+book_counts.csv,total_lines,int,number of lines in a particular book
+book_counts.csv,unique_lines,int,number of unique lines in a particular book
+book_counts.csv,per_unique_lines,float,"(unique_lines / total_lines) * 100, rounded"
+book_counts.csv,total_words,int,number of words in a particular book
+book_counts.csv,unique_words,int,number of unique words in a particular book
+book_counts.csv,per_unique_words,float,"(unique_words / total_words) *100, rounded"
+counted_words.csv,index,int,automatic pandas index
+counted_words.csv,total_words,int,total number of words in corpus
+counted_words.csv,unique_words,int,total number of unique words in corpus
+counted_words.csv,iliad_total_words,int,number of words in the Iliad
+counted_words.csv,iliad_unique_words,int,number of unique words in the Iliad
+counted_words.csv,odyssey_total_words,int,number of words in the Odyssey
+counted_words.csv,odyssey_unique_words,int,number of unique words in the Odyssey
+hapax locations.csv,index,int,automatic pandas index
+hapax locations.csv,word,string,hapax legomenon
+hapax locations.csv,text,string,‘iliad’ or ‘odyssey’
+hapax locations.csv,book,int,"any integer in the range [1, 24]"
+hapax locations.csv,line,int,any integer within the range of lines for the given book
+hemistiches.csv,index,int,automatic pandas index
+hemistiches.csv,text,string,‘iliad’ or ‘odyssey’
+hemistiches.csv,book,int,"any integer in the range [1, 24]"
+hemistiches.csv,line,int,any integer within the range of lines for the given book
+hemistiches.csv,meter,string,"six letter code representing the meter of a line, where ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: DSDDDA"
+hemistiches.csv,first_hemistich,string,Greek text of the first hemistich of the line
+hemistiches.csv,second_hemistich,string,Greek text of the second hemistich of the line
+iliad_lexical_diversity.csv,index,int,automatic pandas index
+iliad_lexical_diversity.csv,text,string,‘iliad’
+iliad_lexical_diversity.csv,book,int,"any integer in the range [1, 24]"
+iliad_lexical_diversity.csv,TTR,float,type-token ratio
+iliad_lexical_diversity.csv,RTTR,float,root type-token ratio
+iliad_lexical_diversity.csv,CTTR,float,corrected type-token ratio
+iliad_lexical_diversity.csv,LR-MSTTR,float,low-resource mean segmental type-token ratio
+iliad_lexical_diversity.csv,MSTTR,float,mean segmental type-token ratio
+iliad_lexical_diversity.csv,MTLD,float,measure of textual lexical diversity
+iliad_lexical_diversity.csv,HDD,float,hypergeometric distribution
+odyssey_lexical_diversity.csv,index,int,automatic pandas index
+odyssey_lexical_diversity.csv,text,string,‘iliad’
+odyssey_lexical_diversity.csv,book,int,"any integer in the range [1, 24]"
+odyssey_lexical_diversity.csv,TTR,float,type-token ratio
+odyssey_lexical_diversity.csv,RTTR,float,root type-token ratio
+odyssey_lexical_diversity.csv,CTTR,float,corrected type-token ratio
+odyssey_lexical_diversity.csv,LR-MSTTR,float,low-resource mean segmental type-token ratio
+odyssey_lexical_diversity.csv,MSTTR,float,mean segmental type-token ratio
+odyssey_lexical_diversity.csv,MTLD,float,measure of textual lexical diversity
+odyssey_lexical_diversity.csv,HDD,float,hypergeometric distribution
+me_by_book_arithmetic.csv,index,int,automatic pandas index
+me_by_book_arithmetic.csv,text,string,‘iliad’ or ‘odyssey’
+me_by_book_arithmetic.csv,book,int,"any integer in the range [1, 24]"
+me_by_book_arithmetic.csv,me,float,arithmetic mutual expectancy
+me_by_book_geometric.csv,index,int,automatic pandas index
+me_by_book_geometric.csv,text,string,‘iliad’ or ‘odyssey’
+me_by_book_geometric.csv,book,int,"any integer in the range [1, 24]"
+me_by_book_geometric.csv,me,float,geometric mutual expectancy
+me_by_line.csv,text,string,‘iliad’ or ‘odyssey’
+me_by_line.csv,book,int,"any integer in the range [1, 24]"
+me_by_line.csv,line,int,any integer within the range of lines for the given book
+me_by_line.csv,string,string,Greek text of the line
+me_by_line.csv,meter,string,"six letter code representing the meter of a line, where ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: DSDDDA"
+me_by_line.csv,me,float,geometric mutual expectancy
+me_by_meter.csv,index,int,automatic pandas index
+me_by_meter.csv,meter,string,"six letter code representing the meter of a line, where ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: DSDDDA"
+me_by_meter.csv,me,float,geometric mutual expectancy
+me_by_line_meter_split.csv,index,int,automatic pandas index
+me_by_line_meter_split.csv,text,string,‘iliad’ or ‘odyssey’
+me_by_line_meter_split.csv,book,int,"any integer in the range [1, 24]"
+me_by_line_meter_split.csv,line,int,any integer within the range of lines for the given book
+me_by_line_meter_split.csv,string,string,Greek text of the line
+me_by_line_meter_split.csv,foot1,string,"one letter code representing the shape of foot 1; ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: ‘D’"
+me_by_line_meter_split.csv,foot2,string,"one letter code representing the shape of foot 2; ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: ‘D’"
+me_by_line_meter_split.csv,foot3,string,"one letter code representing the shape of foot 3; ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: ‘D’"
+me_by_line_meter_split.csv,foot4,string,"one letter code representing the shape of foot 4; ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: ‘D’"
+me_by_line_meter_split.csv,foot5,string,"one letter code representing the shape of foot 5; ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: ‘D’"
+me_by_line_meter_split.csv,foot6,string,"one letter code representing the shape of foot 1; ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; always: ‘A’"
+me_by_line_meter_split.csv,me,float,geometric mutual expectancy
+metrical_pattern_counts.csv,index,int,automatic pandas index
+metrical_pattern_counts.csv,meter,string,"six letter code representing the meter of a line, where ‘D’ = dactyl, ‘S’=spondee, and ‘A’=anceps; example: DSDDDA"
+metrical_pattern_counts.csv,full_count,int,number of lines with a particular metrical pattern
+metrical_pattern_counts.csv,full_percent,float,(full_count / number of lines in corpus) * 100
+proper_lines_by_me.csv,index,int,automatic pandas index
+proper_lines_by_me.csv,text,string,‘odyssey’
+proper_lines_by_me.csv,book,int,"any integer in the range [1, 24]"
+proper_lines_by_me.csv,line,int,any integer within the range of lines for the given book
+proper_lines_by_me.csv,string,string,Greek text of the line
+proper_lines_by_me.csv,me,float,mutual expectancy
+proper_lines_by_me.csv,num_proper_nouns,int,number of proper nouns in line
+proper_lines_by_me.csv,total_words,int,total number of words in the line
+proper_nouns_by_me.csv,index,int,automatic pandas index
+proper_nouns_by_me.csv,word,string,proper noun
+proper_nouns_by_me.csv,line_me,float,mutual expectancy of line(s) in which noun appears
+quadgram_expectancies.csv,index,int,automatic pandas index
+quadgram_expectancies.csv,W1,string,first word in the quadgram
+quadgram_expectancies.csv,W2,string,second word in the quadgram
+quadgram_expectancies.csv,W3,string,third word in the quadgram
+quadgram_expectancies.csv,W4,string,fourth word in the quadgram
+quadgram_expectancies.csv,count,int,number of times quadgram appears in corpus
+quadgram_expectancies.csv,me,float,mutual expectancy of quadgram
+repeated_line_sets.csv,index,int,automatic pandas index
+repeated_line_sets.csv,set_size,int,number of repeated lines in line set
+repeated_line_sets.csv,lines,string,"Greek text of all lines in line set, separated by “/”"
+repeated_line_sets.csv,times_repeated,int,number of times line_set is repeated (minimum 2)
+repeated_line_sets.csv,text,string,‘iliad’ or ‘odyssey’
+repeated_line_sets.csv,book,int,"any integer in the range [1, 24]"
+repeated_line_sets.csv,line,int,first line of the line set
+trigram_expectancies.csv,index,int,automatic pandas index
+trigram_expectancies.csv,W1,string,first word in the trigram
+trigram_expectancies.csv,W2,string,second word in the trigram
+trigram_expectancies.csv,W3,string,third word in the trigram
+trigram_expectancies.csv,count,int,number of times trigram appears in corpus
+trigram_expectancies.csv,me,float,mutual expectancy of trigram
+vocab_overlaps.csv,index,int,automatic pandas index
+vocab_overlaps.csv,text1,string,‘iliad’ or ‘odyssey’; first text in pair
+vocab_overlaps.csv,book1,int,[1-24]; first book in pair
+vocab_overlaps.csv,text2,string,‘iliad’ or ‘odyssey’; second text in pair
+vocab_overlaps.csv,book2,int,[1-24]; second book in pair
+vocab_overlaps.csv,words_in_common,int,number of words that appear in both books
+vocab_overlaps.csv,perc_in_common,float,percent of words that appear in both books
+word_counts.csv,index,int,automatic pandas index
+word_counts.csv,word,string,any word that appears in the corpus
+word_counts.csv,corpus,int,number of times word appears in corpus
+word_counts.csv,iliad,int,number of times word appears in the Iliad
+word_counts.csv,odyssey,int,number of times word appears in the Odyssey
