@@ -1,0 +1,45 @@
+[package]
+name = "ka3005p"
+version = "0.5.0"
+authors = [
+    "Nicola Coretti <nico.coretti@gmail.com>", 
+    "Daniel Hartig <daniel-hartig@gmx.de>",
+    "Jack Newman <Jack.Newman12@gmail.com>"
+]
+edition = "2021"
+autobins = false
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+description = "cli tool to remote control a ka3005p power supply"
+homepage = "https://github.com/Nicoretti/ka3005p"
+repository = "https://github.com/Nicoretti/ka3005p"
+keywords = ["power-supply", "remote-control", "serial", "ka3000", "ka3005p"]
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serialport = "4.*"
+human-panic = "1.*"
+anyhow = "1.*"
+clap = { version = "4.*", features = ["derive"] }
+log = "0.4.21"
+env_logger = "0.11.3"
+pyo3 = { version = "0.21.2",  optional = true }
+
+[features]
+python_module = ["pyo3"]
+
+[lib]
+name = "ka3005p"
+path = "src/lib.rs"
+crate-type = ["rlib", "cdylib"]
+
+[[bin]]
+name = "ka3005p"
+path = "src/bin/main.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = "symbols"
