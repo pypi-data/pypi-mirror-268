@@ -1,0 +1,2 @@
+include index.rst
+include sphinx-rustdocgen/**/*

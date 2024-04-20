@@ -1,0 +1,9 @@
+sphinx<8,>=7
+
+[dev]
+beautifulsoup4
+black
+lxml
+pylint
+pytest-cov
+sphinx_rtd_theme
