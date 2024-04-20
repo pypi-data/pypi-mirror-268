@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: torch-afem
+Version: 0.0.1
+Summary: PyTorch Finite Element Method
+Home-page: https://github.com/scaomath/torch-fem
+Author: Shuhao Cao
+Author-email: scao.math@gmail.com
+License: MIT
+Keywords: pytorch,fem,pde
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: seaborn
+Requires-Dist: torchinfo
+Requires-Dist: numpy
+Requires-Dist: torch>=1.9.0
+Requires-Dist: plotly
+Requires-Dist: scipy
+Requires-Dist: psutil
+Requires-Dist: matplotlib
+Requires-Dist: tqdm
+Requires-Dist: PyYAML
+
+PyTorch Finite Element Method

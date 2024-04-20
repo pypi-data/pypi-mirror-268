@@ -1,0 +1,10 @@
+seaborn
+torchinfo
+numpy
+torch>=1.9.0
+plotly
+scipy
+psutil
+matplotlib
+tqdm
+PyYAML

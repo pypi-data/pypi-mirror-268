@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+torch_afem/Poisson.py
+torch_afem/__init__.py
+torch_afem/mesh2d.py
+torch_afem/utils.py
+torch_afem.egg-info/PKG-INFO
+torch_afem.egg-info/SOURCES.txt
+torch_afem.egg-info/dependency_links.txt
+torch_afem.egg-info/requires.txt
+torch_afem.egg-info/top_level.txt
