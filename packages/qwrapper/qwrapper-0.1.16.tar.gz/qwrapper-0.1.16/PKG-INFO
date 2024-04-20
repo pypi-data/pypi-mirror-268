@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: qwrapper
+Version: 0.1.16
+Summary: A QEMU wrapper for Python
+Author-email: Daniel Dybing <danieldy@uia.no>, Ali Sirvanovitsj Ismailov <alisi18@uia.no>, Sirén Elise Lund Lohre <selohre@uia.no>
+License: MIT License
+        
+        Copyright (c) 2024 Ali Ismailov, Daniel Dybing, Sirén Elise Lund Lohre
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# QWrapper
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/ddybing/qwrapper/pypi-publish.yml)
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/qwrapper)
+
+![PyPI - Downloads](https://img.shields.io/pypi/dm/qwrapper)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
+QWrapper is a Python module meant to make automated interactions with QEMU (Quick EMUlator) easier. By the use of the existing Python modules `pygdbmi` and `qemu.qmp`, this modules communicates with a QEMU virtual machine instance and provides a simple interface for the developer to control the VM and extract useful information. 
+
+This module was specifically developed for our bachelor project, where needed to automate the use of QEMU and to extract specific values such as registers. Much of this data is provided through the aforementioned modules, but their output is unstructured.
+
+The purpose of this module is thus to simplify the interaction with these modules and provide structured output that can be more easily used.
