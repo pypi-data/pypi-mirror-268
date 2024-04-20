@@ -1,0 +1,5 @@
+polars
+matplotlib
+scipy
+click
+numba
