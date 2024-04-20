@@ -1,0 +1,6 @@
+MambuPy
+MambuPy/api
+MambuPy/api/connector
+mambupy
+mambupy/api
+mambupy/api/connector
