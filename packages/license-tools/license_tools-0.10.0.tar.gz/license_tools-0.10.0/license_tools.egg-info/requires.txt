@@ -1,0 +1,26 @@
+scancode-toolkit>=32.1.0
+typecode-libmagic
+joblib
+fontTools[woff]
+pip-licenses-lib
+requests
+tomli
+
+[dev]
+codespell
+coverage
+flake8
+flake8-bugbear
+pep8-naming
+mypy
+types-requests
+
+[dev:python_version < "3.9"]
+importlib_resources
+
+[docs]
+sphinx
+furo
+
+[extended_rpm]
+rpmfile
