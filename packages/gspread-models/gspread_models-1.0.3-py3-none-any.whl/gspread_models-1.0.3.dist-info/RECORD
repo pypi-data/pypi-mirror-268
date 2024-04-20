@@ -1,0 +1,9 @@
+gspread_models/__init__.py,sha256=FQAK91YJ45rFu47RIzf4BQYmaoVsXJIV3nj5FhVwyz0,20
+gspread_models/base.py,sha256=lOUlhavcJaeSNBttnMcn2bwE1TTihfxMe0sG42ygRT8,6251
+gspread_models/date_parser.py,sha256=uEB12YvDmaItYRh_CGrZNRtPZakVnooT82G1xurpSjM,1403
+gspread_models/service.py,sha256=2BKVUJ22cpvpC9dZEqUTylx_zWJkQQBDhXapGerTVcA,3227
+gspread_models-1.0.3.dist-info/LICENSE,sha256=JRZmM6wqRq9_-SjfPD_D8M6E6olLWVRR86JKx4dB2QQ,1073
+gspread_models-1.0.3.dist-info/METADATA,sha256=ij3Xi0PRbV6BRkQs7HKiBsP-8WW4VsPjPswmBVHn4Ng,3434
+gspread_models-1.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gspread_models-1.0.3.dist-info/top_level.txt,sha256=WMU4u3rn4iPVJbcA-sKlI5mh-SLJFnhrCTMw6Derb8k,15
+gspread_models-1.0.3.dist-info/RECORD,,
