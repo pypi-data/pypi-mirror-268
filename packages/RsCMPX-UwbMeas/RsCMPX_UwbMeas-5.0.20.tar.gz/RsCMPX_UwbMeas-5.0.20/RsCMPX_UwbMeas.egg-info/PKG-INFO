@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: RsCMPX-UwbMeas
+Version: 5.0.20
+Summary: CMP200 Ultra Wideband Measurement Remote-control module
+Home-page: UNKNOWN
+Author: Rohde & Schwarz GmbH & Co. KG
+License: MIT
+Description: ==================================
+         RsCMPX_UwbMeas
+        ==================================
+        
+        .. image:: https://img.shields.io/pypi/v/RsCMPX_UwbMeas.svg
+           :target: https://pypi.org/project/ RsCMPX_UwbMeas/
+        
+        .. image:: https://readthedocs.org/projects/sphinx/badge/?version=master
+           :target: https://RsCMPX_UwbMeas.readthedocs.io/
+        
+        .. image:: https://img.shields.io/pypi/l/RsCMPX_UwbMeas.svg
+           :target: https://pypi.python.org/pypi/RsCMPX_UwbMeas/
+        
+        .. image:: https://img.shields.io/pypi/pyversions/pybadges.svg
+           :target: https://img.shields.io/pypi/pyversions/pybadges.svg
+        
+        .. image:: https://img.shields.io/pypi/dm/RsCMPX_UwbMeas.svg
+           :target: https://pypi.python.org/pypi/RsCMPX_UwbMeas/
+        
+        Rohde & Schwarz CMP200 Ultra Wideband Measurement RsCMPX_UwbMeas instrument driver.
+        
+        Basic Hello-World code:
+        
+        .. code-block:: python
+        
+            from RsCMPX_UwbMeas import *
+        
+            instr = RsCMPX_UwbMeas('TCPIP::192.168.2.101::hislip0')
+            idn = instr.query('*IDN?')
+            print('Hello, I am: ' + idn)
+        
+        Supported instruments: CMP200
+        
+        The package is hosted here: https://pypi.org/project/RsCMPX-UwbMeas/
+        
+        Documentation: https://RsCMPX-UwbMeas.readthedocs.io/
+        
+        Examples: https://github.com/Rohde-Schwarz/Examples/
+        
+        
+        Version history
+        ----------------
+        
+        	Latest release notes summary: Update for FW 5.0.20
+        
+        	Version 5.0.20
+        		- Update for FW 5.0.20
+        
+        	Version 4.0.171
+        		- Fixed documentation
+        
+        	Version 4.0.170
+        		- Update for FW 4.0.170
+        
+        	Version 4.0.80
+        		- Update of RsCMPX_UwbMeas to FW 4.0.80 from the complete FW package 7.10.0
+        
+        	Version 4.0.70
+        		- Update of RsCMPX_UwbMeas to FW 4.0.70
+        		
+        	Version 4.0.12
+        		- Update of RsCMPX_UwbMeas to FW 4.0.12
+        
+        	Version 4.0.8
+        		- First released version
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
