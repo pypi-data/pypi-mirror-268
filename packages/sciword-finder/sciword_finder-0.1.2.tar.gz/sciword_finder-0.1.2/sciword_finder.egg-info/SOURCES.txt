@@ -1,0 +1,8 @@
+setup.py
+sciword-finder/__init__.py
+sciword-finder/__main__.py
+sciword_finder.egg-info/PKG-INFO
+sciword_finder.egg-info/SOURCES.txt
+sciword_finder.egg-info/dependency_links.txt
+sciword_finder.egg-info/entry_points.txt
+sciword_finder.egg-info/top_level.txt
