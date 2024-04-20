@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "pysolcast"
+version = "2.0.2"
+description = ""
+authors = ["Nathaniel McAuliffe <nathanielmcauliffe@hotmail.com>"]
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+anyconfig = "0.14.0"
+isodate = "0.6.1"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+bump2version = "1.0.1"
+tox = "4.14.2"
+pytest = "8.1.1"
+pytest-cov = "5.0.0"
+sphinx-autodoc-typehints = "2.1.0"
+autopep8 = "2.1.0"
+rope = "1.13.0"
+pydocstyle = "6.3.0"
+pycodestyle = "2.11.1"
+mock = "5.1.0"
+pylint = "3.1.0"
+setuptools-scm = "8.0.4"
+Sphinx = "7.3.7"
+responses = "^0.25.0"
+
+
+[build-system]
+requires = ["poetry-core >= 1.9.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+max-line-length = 120
