@@ -1,0 +1,27 @@
+[project]
+name = "zro2"
+version = "0.2.0b1"
+description = "util functions for projects"
+dependencies = []
+readme = "README.md"
+requires-python = ">= 3.8"
+[[project.authors]]
+name = "ZackaryW"
+email = "36378555+ZackaryW@users.noreply.github.com"
+
+[build-system]
+requires = [ "hatchling",]
+build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+extra = [ "pygetwindow>=0.0.9", "screeninfo>=0.8.1", "readchar>=4.0.6", "keyring>=25.1.0", "pytest>=8.1.1",]
+
+[tool.rye]
+managed = true
+dev-dependencies = [ "pygetwindow>=0.0.9", "screeninfo>=0.8.1", "readchar>=4.0.6", "pytest>=8.1.1", "keyring>=25.1.0", "click>=8.1.7", "toml>=0.10.2",]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = [ "src/zro2",]
