@@ -1,0 +1,9 @@
+django_two_factor_auth_ovh_gateway/__init__.py,sha256=4GZKi13lDTD25YBkGakhZyEQZWTER_OWQMNPoH_UM2c,22
+django_two_factor_auth_ovh_gateway/apps.py,sha256=VcsiTbesnvbIfug1sOPO_DgXwaDJUQp5M4bXOLGh07E,141
+django_two_factor_auth_ovh_gateway/conf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_two_factor_auth_ovh_gateway/conf/settings.py,sha256=Bg6HyC29nJWzADMr42i0cVJdyMIrVoCMBZgNZ_vzhx0,2142
+django_two_factor_auth_ovh_gateway/gateway.py,sha256=sw7Qa6SN2VufvP6ouuNsTc-onCBinU3lfGj88x8wAa0,1610
+django_two_factor_auth_ovh_gateway-0.0.3.dist-info/LICENSE,sha256=5X8cMguM-HmKfS_4Om-eBqM6A1hfbgZf6pfx2G24QFI,35150
+django_two_factor_auth_ovh_gateway-0.0.3.dist-info/METADATA,sha256=xhLTMeHSD9FyQ8-JYMNqc8IVXPt5tQyIkKfK8un5YKQ,3375
+django_two_factor_auth_ovh_gateway-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+django_two_factor_auth_ovh_gateway-0.0.3.dist-info/RECORD,,
