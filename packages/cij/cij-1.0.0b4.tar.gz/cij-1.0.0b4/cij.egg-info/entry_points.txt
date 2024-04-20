@@ -1,0 +1,9 @@
+[console_scripts]
+cij = cij.cli.cij:main
+cij-extract = cij.cli.extract:main
+cij-extract-geotherm = cij.cli.geotherm:main
+cij-fill = cij.cli.fill:main
+cij-modes = cij.cli.modes:main
+cij-plot = cij.cli.plot:main
+cij-run = cij.cli.main:main
+cij-run-static = cij.cli.static:main
