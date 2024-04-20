@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: NCapybaraLib
+Version: 0.0.1
+Summary: A small library with a bunch of functions and thingies I made for fun.
+Author: NorbCodes
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+
+<h1>NCapybaraLib</h1>
+<p>A small library with a bunch of functions and thingies I made for fun.<br>So far, there's nothing much, but it will grow as time goes.</p>
