@@ -1,0 +1,9 @@
+openbb_crypto/__init__.py,sha256=xrItV0m93ziulTHOQi7Q7pnVDbBjc_Exx4a9R12fwjE,31
+openbb_crypto/crypto_router.py,sha256=1Aau5WfVWlAhRYgmkR61JfwGZPEsPkqZaQXHft5b1XM,1053
+openbb_crypto/price/__init__.py,sha256=YFwlS2PVI5rJ2cjy-kQdNCDvC7r17ZdABVQeu5xO3YM,34
+openbb_crypto/price/price_router.py,sha256=GL8eS81ii8nO4mk0mMjNur4odPYWgK9EBdrU22XGrNQ,1758
+openbb_crypto/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openbb_crypto-1.1.5.dist-info/METADATA,sha256=9AZZY0IiZ5rEy8PNXyoMwKkN8N0bQJCl7xSD3GgalUk,1016
+openbb_crypto-1.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+openbb_crypto-1.1.5.dist-info/entry_points.txt,sha256=rtB3HNOwnFxVytnJYsx5WgBdCnc9PlYV9WeUda4ze2A,67
+openbb_crypto-1.1.5.dist-info/RECORD,,
