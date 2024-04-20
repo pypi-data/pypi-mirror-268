@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/casepy/__init__.py
+src/casepy/combination_generator.py
+src/casepy/permutation_generator.py
+src/casepy/simple_methods.py
+src/casepy.egg-info/PKG-INFO
+src/casepy.egg-info/SOURCES.txt
+src/casepy.egg-info/dependency_links.txt
+src/casepy.egg-info/top_level.txt
