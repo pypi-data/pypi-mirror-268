@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: Indox
+Version: 0.1
+Summary: Indox Retrieval Augmentation
+Home-page: https://github.com/osllmai/inDox
+Author: nerdstudio
+Author-email: Mohammad@nematifamilyfundation.onmicrosoft.com
+License: MIT
+Keywords: RAG,LLM
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: langchain-community
+Requires-Dist: numpy
+Requires-Dist: openai
+Requires-Dist: pandas
+Requires-Dist: PyPDF2
+Requires-Dist: scikit-learn
+Requires-Dist: tenacity
+Requires-Dist: tiktoken
+Requires-Dist: umap-learn
+Requires-Dist: transformers
+Requires-Dist: black
+Requires-Dist: chromadb
+Requires-Dist: psycopg2
+Requires-Dist: pgvector
+Requires-Dist: langchain-openai
+
+UNKNOWN
+

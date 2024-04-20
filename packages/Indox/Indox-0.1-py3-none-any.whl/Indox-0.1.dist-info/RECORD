@@ -1,0 +1,13 @@
+Indox/Clustering.py,sha256=4QyXVVZtYttUccD1EldbKfOxMzdSKGDN_dsxihrfjQo,6312
+Indox/Embedding.py,sha256=2Glwza47M4PtBlzuuCEp7R8E_YmKvSnRBt_mg5TR3_s,2148
+Indox/Indox.py,sha256=O8Rx2_E-yKsnHXwtr83xVP3S93MeUVtm1Tl3gWtnq98,8364
+Indox/QAModels.py,sha256=CW7iSv1PbicJxlgHltGi532V94jSVT28xN1xv7Fnq10,2493
+Indox/Summary.py,sha256=RuDH2uMEYTIgvFQlllY2ki1HwuhxBORkreF6nt0lGPM,2297
+Indox/__init__.py,sha256=HhWe6Tha2j1E-75yZHbglVs-0v-b-8u-2AZs8PdNizM,68
+Indox/config.yaml,sha256=bH0RVbD-u-ckHhHSH_W-6eOydWGadM8iyC67j5MTDwU,428
+Indox/utils.py,sha256=4f0kKcBZw856v08fQGAo04rVjygrAlBcfSkBIcvcukI,5701
+Indox/vectorstore.py,sha256=vrPzau1yYwuB2qijLJM2IwUqY0vWBSpUrDPYXwouh1c,5941
+Indox-0.1.dist-info/METADATA,sha256=dt0rugE3pLrA8wUVtd4yfraPQPh7Fb7H2NfoB0onbHA,1075
+Indox-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+Indox-0.1.dist-info/top_level.txt,sha256=ljxZYnKyj0FHUUex9rJm50GhSrxscGnRJP6FepA9w4g,6
+Indox-0.1.dist-info/RECORD,,
