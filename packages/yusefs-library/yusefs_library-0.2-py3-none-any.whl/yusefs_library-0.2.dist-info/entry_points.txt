@@ -1,0 +1,2 @@
+[console_scripts]
+yusefs_library = yusefs_library:hello
