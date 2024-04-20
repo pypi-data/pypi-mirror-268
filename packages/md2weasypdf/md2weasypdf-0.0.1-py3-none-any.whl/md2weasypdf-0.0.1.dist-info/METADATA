@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: md2weasypdf
+Version: 0.0.1
+Summary: Print PDFs from Markdown Files using Weasyprint
+Home-page: https://github.com/mstingl/md2weasypdf
+Author: Manuel Stingl
+Author-email: contact@stingl.st
+License: GNU LGPLv2.1
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: rich
+Requires-Dist: weasyprint
+Requires-Dist: markdown
+Requires-Dist: jinja2
+Requires-Dist: watchdog
+Requires-Dist: markdown-grid-tables
+Requires-Dist: python-frontmatter
+
+# md2weasypdf
+
+Print PDFs from Markdown Files using Weasyprint
+
+## Installation
+
+```shell
+pip install md2weasypdf
+```
+
+## Usage
+
+```shell
+python -m md2weasypdf <input_folder_or_file> <output_path>
+```
+
+### Watch Mode
+
+```shell
+python -m md2weasypdf <input_folder_or_file> <output_path> --watch
+```
+
+## Input
+
+Input files are expected in markdown format with several markdown extensions. The markdown documents can utilize Jinja2 for templating inside the document (e. g. reusing texts).
+
+### Options
+
+YAML Frontmatter can be used to customize the document layout or add other options which will be passed to the template. The following example shows how a document with frontmatter section could look like:
+
+```md
+---
+title: My Document Title
+layout: doc1
+---
+Lorem ipsum...
+```
