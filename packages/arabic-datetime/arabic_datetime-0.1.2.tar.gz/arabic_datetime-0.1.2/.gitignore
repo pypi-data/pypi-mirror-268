@@ -1,0 +1,17 @@
+__pycache__
+arabic_datetime.egg-info
+build
+dist
+testing
+
+pyproject.toml
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
