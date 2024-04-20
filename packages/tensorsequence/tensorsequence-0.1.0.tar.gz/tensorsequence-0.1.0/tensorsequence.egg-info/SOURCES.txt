@@ -1,0 +1,11 @@
+README.md
+setup.py
+tensorsequence/__init__.py
+tensorsequence/tensorsequence.py
+tensorsequence.egg-info/PKG-INFO
+tensorsequence.egg-info/SOURCES.txt
+tensorsequence.egg-info/dependency_links.txt
+tensorsequence.egg-info/requires.txt
+tensorsequence.egg-info/top_level.txt
+tensorsequence/tests/__init__.py
+tensorsequence/tests/test_tensorsequence.py
