@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dialog-lib
+Version: 0.0.1.9
+Summary: 
+License: MIT
+Author: Talkd.AI
+Author-email: foss@talkd.ai
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: SQLAlchemy (>=2.0.29,<3.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: langchain (==0.1.7)
+Requires-Dist: langchain-openai (>=0.0.6,<0.0.7)
+Requires-Dist: pgvector (>=0.2.5,<0.3.0)
+Requires-Dist: psycopg2-binary (>=2.9.9,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Dialog Library
+
+Base library for the [dialog-server](https://github.com/talkdai/dialog) project.
