@@ -1,0 +1,17 @@
+biopython
+Click
+gffutils
+numpy
+PyYAML
+requests
+simplejson
+ratelimit
+pyteomics
+pathos
+pybedtools
+pandas
+pyopenms
+matplotlib
+pytest
+tqdm
+pyahocorasick

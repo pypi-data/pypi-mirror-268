@@ -1,0 +1,24 @@
+# You can use this file to create a conda environment for this pipeline:
+#   conda env create -f environment.yml
+name: py-pgatk
+channels:
+  - openms
+  - conda-forge
+  - bioconda
+dependencies:
+  - biopython
+  - Click
+  - gffutils
+  - numpy
+  - PyYAML
+  - requests
+  - simplejson
+  - ratelimit
+  - pathos
+  - bioconda::pyteomics
+  - pybedtools
+  - matplotlib
+  - bioconda::pyopenms
+  - pytest
+  - tqdm
+  - pyahocorasick
