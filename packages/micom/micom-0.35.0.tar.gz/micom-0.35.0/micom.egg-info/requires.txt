@@ -1,0 +1,9 @@
+pandas>=2.0.0
+cobra>=0.29.0
+jinja2>=2.10.0
+scikit-learn>=1.0
+scipy>=1.8.1
+symengine>=0.6.1
+osqp>=0.6.2
+optlang>=1.8.1
+highspy>=1.7.1.dev1
