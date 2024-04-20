@@ -1,0 +1,3 @@
+VERSION = '0.2.1'
+
+REMOVE_FILES = False
