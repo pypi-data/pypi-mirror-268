@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+indic_translit/DeTransliterator.py
+indic_translit/Transliterator.py
+indic_translit/__init__.py
+indic_translit/detransliterate.py
+indic_translit/latin2dravida_test.py
+indic_translit/latin2kannada.py
+indic_translit/latin2malayalam.py
+indic_translit/latin2tamil.py
+indic_translit/latin2telugu.py
+indic_translit/transliterate.py
+indic_translit.egg-info/PKG-INFO
+indic_translit.egg-info/SOURCES.txt
+indic_translit.egg-info/dependency_links.txt
+indic_translit.egg-info/top_level.txt
