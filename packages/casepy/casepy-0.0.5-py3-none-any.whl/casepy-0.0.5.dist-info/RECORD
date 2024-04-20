@@ -1,0 +1,9 @@
+casepy/__init__.py,sha256=KfWAeFc4Z1lJGCGjXqKsurtmTZ7B8lJMmYuWlq3i2mM,177
+casepy/combination_generator.py,sha256=KM7JHO6MRt8VkSYLdge0kkFiBo2mZX9D6nFwzgbraCk,3545
+casepy/permutation_generator.py,sha256=s5L4ndDyBdvQs09He3HdI48PVP4x3UfQmIhhYRPeDB0,2937
+casepy/simple_methods.py,sha256=J_gZECmhFdbppYcpm7nXYc3dUa240XwaP4cbIolUcUg,943
+casepy-0.0.5.dist-info/LICENSE,sha256=T66QMVEDrBVLP_LKdOmNBFoQGh65zTUOmOeeDI3iBtk,1068
+casepy-0.0.5.dist-info/METADATA,sha256=FZ1vid9WOQXBnHSOMU26PXte6PgJZMrtAn2AP4XON6o,2057
+casepy-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+casepy-0.0.5.dist-info/top_level.txt,sha256=eurRNJjz7vbUHXrOS61dmg3FP3_Z7Mq1WKH7mdR4Tt8,7
+casepy-0.0.5.dist-info/RECORD,,
