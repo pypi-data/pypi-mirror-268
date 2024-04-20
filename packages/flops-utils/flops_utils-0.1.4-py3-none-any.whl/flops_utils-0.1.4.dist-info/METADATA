@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: flops_utils
+Version: 0.1.4
+Summary: A library containing commong utilities for FLOps
+Author: Alexander Malyuk
+Author-email: malyuk.alexander1999@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+TODO
+
