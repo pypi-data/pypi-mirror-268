@@ -1,0 +1,13 @@
+valphi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+valphi/__main__.py,sha256=futiyS49Q1r_hmnorPtomRTOKIaKrqSkyzlktHPR3_4,97
+valphi/cli.py,sha256=Tsp54gT17Jr4dBcjvTsqDUNOcKZjCwijsLlJIfaQsJ4,11179
+valphi/contexts.py,sha256=Nx5CVgSolHaQgGqlwxZn04S1RBfPvEiHEzYD5iGTCzg,2266
+valphi/controllers.py,sha256=NlUZvmpHKVy8zR_lKVn0JQYwRpMjTae_HqQb_8BI8eY,17358
+valphi/models.py,sha256=l5k5yZnLAot5w4xplaVKo11z0_krUo2iGnp9c8z2Ghg,1906
+valphi/networks.py,sha256=lS2jXs9qHbONyg3OGQLLcF7WsPoHi02F6schufJ7zE8,17594
+valphi/propagators.py,sha256=5gHkEuwWXY-8JSQZSch8v3ahn68WuSnLSRZLnpyOmjk,5570
+valphi/utils.py,sha256=2zDmEDgTCYiPpVnAL8-mpBDCaM0dRAdyiLpytM3Jbm4,102
+valphi-0.6.0.dist-info/LICENSE,sha256=ZqRrC_kB-uSNgqy-4beQQo9EZecq1uzhQP0avOR9hls,1070
+valphi-0.6.0.dist-info/METADATA,sha256=CbfIyxAZ9rNnpUsxFBGl5bZo0kCzXxTvcfO1yYXdC2s,461
+valphi-0.6.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+valphi-0.6.0.dist-info/RECORD,,
