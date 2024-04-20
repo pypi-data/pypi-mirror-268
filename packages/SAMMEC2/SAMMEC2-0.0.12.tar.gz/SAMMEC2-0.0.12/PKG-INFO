@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: SAMMEC2
+Version: 0.0.12
+Summary: SAMMEC2
+Home-page: https://github.com/bheeso/SAMME.C2
+Author: Banghee So
+Author-email: bso@towson.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+SAMMEC2

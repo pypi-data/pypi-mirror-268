@@ -1,0 +1,9 @@
+README
+setup.py
+SAMMEC2/GA.py
+SAMMEC2/SAMMEC2.py
+SAMMEC2/__init__.py
+SAMMEC2.egg-info/PKG-INFO
+SAMMEC2.egg-info/SOURCES.txt
+SAMMEC2.egg-info/dependency_links.txt
+SAMMEC2.egg-info/top_level.txt
