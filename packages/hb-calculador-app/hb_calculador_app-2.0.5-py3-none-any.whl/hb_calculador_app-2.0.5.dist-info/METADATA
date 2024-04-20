@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: hb-calculador-app
+Version: 2.0.5
+Summary: A simple calculator app package
+Author: Hjalmar Brand
+Author-email: myemai@mail.com
+License: MIT
+Keywords: calculator
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+A package that can add or subtract two values
