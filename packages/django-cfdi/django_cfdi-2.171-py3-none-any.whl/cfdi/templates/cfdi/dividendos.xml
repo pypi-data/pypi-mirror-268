@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<retenciones:Retenciones xsi:schemaLocation="http://www.sat.gob.mx/esquemas/retencionpago/2 http://www.sat.gob.mx/esquemas/retencionpago/2/retencionpagov2.xsd http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos/dividendos.xsd"
+	xmlns:dividendos="http://www.sat.gob.mx/esquemas/retencionpago/1/dividendos" 
+    Version="2.0" FolioInt="1000" 
+    NoCertificado="00001000000506999179" 
+    Sello="X" Certificado="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" 
+    FechaExp="2023-12-18T10:00:00" LugarExpRetenc="31500" CveRetenc="14"
+    xmlns:retenciones="http://www.sat.gob.mx/esquemas/retencionpago/2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <retenciones:Emisor RfcE="CPH861013CX2" NomDenRazSocE="COMERCIAL PAZ HERMANOS" RegimenFiscalE="601" />
+	<retenciones:Receptor NacionalidadR="Nacional">
+        <retenciones:Nacional RfcR="PAQE571111F71" NomDenRazSocR="EDUARDO PAZ QUINTANA" DomicilioFiscalR="31500" />
+	</retenciones:Receptor>
+	<retenciones:Periodo MesIni="12" MesFin="12" Ejercicio="2023" />
+	<retenciones:Totales MontoTotOperacion="200000.00" MontoTotGrav="200000" MontoTotExent="0.00" MontoTotRet="60000.00">
+        <retenciones:ImpRetenidos BaseRet="200000.00" ImpuestoRet="001" MontoRet="60000.00" TipoPagoRet="03" />
+    </retenciones:Totales>
+	<retenciones:Complemento>
+		<dividendos:Dividendos Version="1.0">
+			<dividendos:DividOUtil 
+				CveTipDivOUtil="06" 
+				MontISRAcredRetMexico="0.00"
+				MontISRAcredRetExtranjero="0.00" 
+				TipoSocDistrDiv="Sociedad Nacional" 
+				MontISRAcredNal="60000.00" 
+				MontDivAcumNal="200000.00"/>
+			<dividendos:Remanente ProporcionRem="24.00"/>
+		</dividendos:Dividendos>
+    </retenciones:Complemento>
+</retenciones:Retenciones>
