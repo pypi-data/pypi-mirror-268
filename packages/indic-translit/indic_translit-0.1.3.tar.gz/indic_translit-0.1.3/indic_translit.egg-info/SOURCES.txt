@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+indic_translit.egg-info/PKG-INFO
+indic_translit.egg-info/SOURCES.txt
+indic_translit.egg-info/dependency_links.txt
+indic_translit.egg-info/top_level.txt
