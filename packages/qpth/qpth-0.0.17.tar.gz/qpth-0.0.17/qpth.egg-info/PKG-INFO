@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: qpth
+Version: 0.0.17
+Summary: A fast and differentiable QP solver for PyTorch.
+Home-page: https://github.com/locuslab/qpth
+Author: Brandon Amos
+Author-email: bamos@cs.cmu.edu
+License: Apache 2.0
+Platform: any
+License-File: LICENSE
+Requires-Dist: numpy<2,>=1
+Requires-Dist: cvxpy>=1.1.0
