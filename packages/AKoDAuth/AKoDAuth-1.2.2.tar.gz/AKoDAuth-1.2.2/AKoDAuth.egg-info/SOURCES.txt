@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.py
+AKoDAuth/__init__.py
+AKoDAuth.egg-info/PKG-INFO
+AKoDAuth.egg-info/SOURCES.txt
+AKoDAuth.egg-info/dependency_links.txt
+AKoDAuth.egg-info/requires.txt
+AKoDAuth.egg-info/top_level.txt
