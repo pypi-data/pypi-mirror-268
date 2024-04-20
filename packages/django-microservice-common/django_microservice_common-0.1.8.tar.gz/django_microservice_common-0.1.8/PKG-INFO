@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: django-microservice-common
+Version: 0.1.8
+Summary: A common library for Django microservices
+Author: aliseylaneh
+Author-email: aliseylaneh@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: django (>=4.0.7)
+Requires-Dist: djangorestframework-camel-case (>=1.4.2)
+Requires-Dist: djangorestframework-simplejwt (>=5.2.2)
+Description-Content-Type: text/markdown
+
+
