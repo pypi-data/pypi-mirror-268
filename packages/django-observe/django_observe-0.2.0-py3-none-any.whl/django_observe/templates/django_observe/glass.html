@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="{% static 'django_observe/tailwind.js' %}"></script>
+        <script src="{% static 'django_observe/chart.umd.min.js' %}"></script>
+        <script src="{% static 'django_observe/chartjs-adapter-date-fns.bundle.min.js' %}"></script>
+        <title>Django Observe</title>
+    </head>
+    <body class="w-screen bg-slate-700">
+        <h1 class="text-white text-4xl text-center p-4">Django Observe</h1>
+        <main style="max-width: 1200px" class="m-auto flex flex-col items-center text-white">
+            <div class="p-4">
+                <a href="?timespan=daily" class="bg-slate-500 text-white rounded-xl p-2 m-2">Daily</a>
+                <a href="?timespan=weekly" class="bg-slate-500 text-white rounded-xl p-2 m-2">Weekly</a>
+                <a href="?timespan=monthly" class="bg-slate-500 text-white rounded-xl p-2 m-2">Monthly</a>
+            </div>
+            <div style="max-width:800px" class="w-full" >
+                <h2 class="text-center text-2xl p-4">Hits Over Time</h2>
+                <canvas id="hitsOverTime"></canvas>
+            </div>
+            <div style="max-width:800px" class="w-full mt-8">
+                <h2 class="text-center text-2xl">Most Popular Routes</h2>
+                <canvas id="popularRoutes"></canvas>
+            </div>
+        </main>
+        <script>
+            const expand = (key) => {
+                document.getElementById(`details_${key}`).classList.remove('hidden');
+                document.getElementById(`btn_e_${key}`).classList.add('hidden');
+                document.getElementById(`btn_h_${key}`).classList.remove('hidden');
+            }
+            const hide = (key) => {
+                document.getElementById(`details_${key}`).classList.add('hidden');
+                document.getElementById(`btn_e_${key}`).classList.remove('hidden');
+                document.getElementById(`btn_h_${key}`).classList.add('hidden');
+            }
+            const showHitsOverTimeChart = (data) => {
+                let canvas = document.getElementById("hitsOverTime");
+
+                const chartData = {
+                    datasets: [{
+                        label: 'Hits',
+                        backgroundColor: "#77FF77",
+                        borderColor: "#77FF77",
+                        fill: false,
+                        data: data.map(item=>{
+                            return {
+                                x: item[0],
+                                y: item[1]
+                            }
+                        })
+                    }]
+                };
+
+                new Chart(canvas, {
+                    type: 'line',
+                    data: chartData,
+                    options: {
+                        responsive: true,
+                        interaction: {
+                            mode: 'nearest',
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                        },
+                        scales: {
+                            x: {
+                                type: 'time',
+                                display: true,
+                                ticks: {
+                                    autoSkip: false,
+                                    maxRotation: 0,
+                                    major: {
+                                        enabled: true
+                                    },
+                                    color: "#FFFFFF",
+                                    font: function(context) {
+                                        if (context.tick && context.tick.major) {
+                                            return {
+                                                weight: 'bold',
+                                            };
+                                        }
+                                    }
+                                }
+                            },
+                            y: {
+                                display: true,
+                                ticks: {
+                                    color: "#FFFFFF"
+                                }
+                            }
+                        }
+                    }
+                })
+            }
+            const showPopularRoutesChart = (routeData) => {
+                let canvas = document.getElementById("popularRoutes");
+                let labels = [];
+                let datasets = [];
+                let OK = [];
+                let REDIRECT = [];
+                let CLIENT_ERROR = [];
+                let SERVER_ERROR = [];
+
+                routeData.forEach(route => {
+                    labels.push(route[0]);
+                    OK.push(route[1]["2xx"]);
+                    REDIRECT.push(route[1]["3xx"]);
+                    CLIENT_ERROR.push(route[1]["4xx"]);
+                    SERVER_ERROR.push(route[1]["5xx"]);
+                });
+                datasets = [
+                    {
+                        label: '2xx',
+                        data: OK,
+                        backgroundColor: "#77FF77"
+                    },
+                    {
+                        label: '3xx',
+                        data: REDIRECT,
+                        backgroundColor: "#FFFF77"
+                    },
+                    {
+                        label: '4xx',
+                        data: CLIENT_ERROR,
+                        backgroundColor: "#FFAA77"
+                    },
+                    {
+                        label: '5xx',
+                        data: SERVER_ERROR,
+                        backgroundColor: "#FF7777"
+                    }
+                ]
+                const chartData = {
+                    labels: labels,
+                    datasets: datasets
+                };
+
+                new Chart(canvas, {
+                    type: 'bar',
+                    data: chartData,
+                    options: {
+                        indexAxis: 'y',
+                        labels: {
+                            color: "#FFFFFF"
+                        },
+                        responsive: true,
+                        scales: {
+                            x: {
+                                stacked: true,
+                                ticks: {
+                                    color: "#FFFFFF"
+                                }
+                            },
+                            y: {
+                                stacked: true,
+                                ticks: {
+                                    color: "#FFFFFF"
+                                }
+                            }
+                        }
+                    }
+                })
+            }
+            const hitData = JSON.parse ("{{hit_data|escapejs}}");
+            const routeData = JSON.parse ("{{route_data|escapejs}}");
+            showHitsOverTimeChart(hitData);
+            showPopularRoutesChart(routeData);
+        </script>
+    </body>
+</html>
