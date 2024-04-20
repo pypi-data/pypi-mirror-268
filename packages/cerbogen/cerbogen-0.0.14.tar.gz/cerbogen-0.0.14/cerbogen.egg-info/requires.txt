@@ -1,0 +1,6 @@
+matplotlib
+pydub
+numpy
+wave
+librosa
+pywin32
