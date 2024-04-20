@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: RsCMPX_WlanMeas
+Version: 5.0.80
+Summary: CMP180 WLAN Measurement Remote-control module
+Home-page: UNKNOWN
+Author: Rohde & Schwarz GmbH & Co. KG
+License: MIT
+Description: ==================================
+         RsCMPX_WlanMeas
+        ==================================
+        
+        .. image:: https://img.shields.io/pypi/v/RsCMPX_WlanMeas.svg
+           :target: https://pypi.org/project/ RsCMPX_WlanMeas/
+        
+        .. image:: https://readthedocs.org/projects/sphinx/badge/?version=master
+           :target: https://RsCMPX_WlanMeas.readthedocs.io/
+        
+        .. image:: https://img.shields.io/pypi/l/RsCMPX_WlanMeas.svg
+           :target: https://pypi.python.org/pypi/RsCMPX_WlanMeas/
+        
+        .. image:: https://img.shields.io/pypi/pyversions/pybadges.svg
+           :target: https://img.shields.io/pypi/pyversions/pybadges.svg
+        
+        .. image:: https://img.shields.io/pypi/dm/RsCMPX_WlanMeas.svg
+           :target: https://pypi.python.org/pypi/RsCMPX_WlanMeas/
+        
+        Rohde & Schwarz CMP180 WLAN Measurement RsCMPX_WlanMeas instrument driver.
+        
+        Basic Hello-World code:
+        
+        .. code-block:: python
+        
+            from RsCMPX_WlanMeas import *
+        
+            instr = RsCMPX_WlanMeas('TCPIP::192.168.2.101::hislip0')
+            idn = instr.query('*IDN?')
+            print('Hello, I am: ' + idn)
+        
+        Supported instruments: CMP180
+        
+        The package is hosted here: https://pypi.org/project/RsCMPX-WlanMeas/
+        
+        Documentation: https://RsCMPX-WlanMeas.readthedocs.io/
+        
+        Examples: https://github.com/Rohde-Schwarz/Examples/
+        
+        
+        Version history
+        ----------------
+        
+        	Latest release notes summary: Update for FW 5.0.80
+        
+        	Version 5.0.80
+        		- Update for FW 5.0.80
+        
+        	Version 4.0.151
+        		- Fixed documentation
+        
+        	Version 4.0.150
+        		- First released version for FW 4.0.150
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
