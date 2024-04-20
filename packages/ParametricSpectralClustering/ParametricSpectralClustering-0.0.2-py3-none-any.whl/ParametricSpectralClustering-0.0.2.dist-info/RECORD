@@ -1,0 +1,12 @@
+ParametricSpectralClustering/__init__.py,sha256=hcGYcdRvPP6QqidUQeCPT6O8fy9QNPv9Mm-gmvRN22A,47
+ParametricSpectralClustering/psc.py,sha256=2sqGWmDyVkW-VMOhtBPSlTazQ4Gc4J_iX7zlZbtGCns,15151
+ParametricSpectralClustering/psc_tmp.py,sha256=3NfYhXfC7wTuuOZ2NoQbKJeiu3Y_RSYegQNJxHRRJ-0,16472
+ParametricSpectralClustering/test.py,sha256=iduTZE2Xel0lx1jiYYMR0B1w-Yk4-HJGXwPAlSHNbp4,92
+ParametricSpectralClustering-0.0.2.data/scripts/clustering.py,sha256=7qLtgWDsimjr5opQtrVRgnOO-zvwyl_BWvwrFPqsdhs,2566
+ParametricSpectralClustering-0.0.2.data/scripts/run.py,sha256=CsggpACGwfQYN6Xpoh8FStMndRZBcfQTYfKm9VTb1ds,3276
+ParametricSpectralClustering-0.0.2.data/scripts/train_psc.py,sha256=gCN6GTd1FbAg5uKjWEhWrYHzXRdgjyeuSNdGj0xHM7c,1641
+ParametricSpectralClustering-0.0.2.dist-info/LICENSE.txt,sha256=5Xcws-hx-Y8FKMXUHuVMgwY4Rkf6tXiwG6deENVaLPE,1066
+ParametricSpectralClustering-0.0.2.dist-info/METADATA,sha256=hXBy64ZHjPoseuiIIM_GEj7kw3SG6ooNXOQnxSVaCj0,4615
+ParametricSpectralClustering-0.0.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+ParametricSpectralClustering-0.0.2.dist-info/top_level.txt,sha256=Glbvy3AvZoaXflxvPFGlk-lQ5KlRCtZ8vd9nTvB3dIc,29
+ParametricSpectralClustering-0.0.2.dist-info/RECORD,,
