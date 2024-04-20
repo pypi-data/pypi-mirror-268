@@ -1,0 +1,45 @@
+Metadata-Version: 2.3
+Name: dtpu
+Version: 0.5.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Dist: torch >=2.2
+Requires-Dist: einops >=0.7.0
+Requires-Dist: numpy >=1.26.0
+Requires-Dist: peft >=0.8.0
+Requires-Dist: pyyaml >=6.0
+Requires-Dist: tqdm >=4.60.0
+Requires-Dist: tensorboard >=2.16.0
+Requires-Dist: flask >=2.2.0
+Requires-Dist: requests >=2.30.0
+Requires-Dist: termcolor >=2.4.0
+Requires-Dist: pytest >=8.0.0 ; extra == 'test'
+Requires-Dist: bitsandbytes >=0.42 ; extra == 'low-precision'
+Provides-Extra: test
+Provides-Extra: low-precision
+License-File: LICENSE
+Summary: Utilities for text processing tasks with Deep NLP
+Keywords: nlp,utilities,text,processing
+Author-email: Sebastian Walter <swalter@cs.uni-freiburg.de>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Github, https://github.com/ad-freiburg/text-utils
+
+## Text utilities
+
+This repository contains Python utilities (backed by Rust) used in many Deep 
+Learning based NLP applications.
+
+It is mainly designed to be used for whitespace correction, 
+spelling correction, language modeling, and similar tasks.
+
+You can install the Python package from PyPI via
+
+> pip install dtpu
+
+Windows (x64) and Linux are currently supported when installing from PyPI.
+
