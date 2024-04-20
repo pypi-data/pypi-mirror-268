@@ -1,0 +1,9 @@
+pydra/tasks/ants/__init__.py,sha256=NUFqBj_QNDp_oEU5YCrRUVReTI-DSrlacA4s3FqlOrY,552
+pydra/tasks/ants/apply_transforms.py,sha256=xOwQXVBeRfBjvxZ-WwtKgavAYrMzrOrXobecAZWohTQ,6790
+pydra/tasks/ants/bias_correction.py,sha256=g58GvmYX-wYWYsdr9bSv9YRHh-VqBqIRfU_hepoi-UU,3992
+pydra/tasks/ants/create_jacobian_determinant_image.py,sha256=Glstwiv0LtzN0H6LYQityoyP-Avkl9kmx3_9tXLQukg,1761
+pydra/tasks/ants/registration.py,sha256=keqZaa0w04LaRPS7f6q8gtwpXu5nFE5U7aBYL0ocD1Q,30291
+clinica_pydra_ants-0.1.0.dist-info/METADATA,sha256=2ZiN55fpqMIEpFi0vqiP0eOkqmp-GDMXu7qT1_UufLs,3120
+clinica_pydra_ants-0.1.0.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+clinica_pydra_ants-0.1.0.dist-info/licenses/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+clinica_pydra_ants-0.1.0.dist-info/RECORD,,
