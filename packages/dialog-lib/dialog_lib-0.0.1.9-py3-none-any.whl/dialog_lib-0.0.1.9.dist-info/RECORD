@@ -1,0 +1,13 @@
+dialog_lib/agents/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dialog_lib/agents/abstract.py,sha256=Ee5i70lOom6GwOEUpjPl6BjM4RC9ooFXx5NMrcXb_lU,3439
+dialog_lib/db/__init__.py,sha256=AzASzjPT4Glc9vmfI3WnKj0AnN346LmthW8JTPHwu5k,135
+dialog_lib/db/memory.py,sha256=XOKy8eEwdLvwuubCkOZQ7eQByp223WXr1fZvu3NWBrQ,2910
+dialog_lib/db/models.py,sha256=cRQCMLFOf_WOAsKwS8TNC1PqSaXQ1Ggc9EwPIpPz10I,1344
+dialog_lib/db/utils.py,sha256=KWvgQufLOpTDxTeh8x2URjpEmvk7cDMceKV9MRfvczY,408
+dialog_lib/embeddings/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dialog_lib/embeddings/generate.py,sha256=kTs_16S3TvaUSQner-jWfcagNYUeiYAYoyidRfOPOvM,1498
+dialog_lib/main.py,sha256=XLFCawhu_fbnDJj_p5bgETcl2gqxFFtS3kydLqPByAk,152
+dialog_lib-0.0.1.9.dist-info/METADATA,sha256=5ghlv-_oGcosgV2YL0uOPiAvLGWdn7ZulWO6-KeYP1w,749
+dialog_lib-0.0.1.9.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dialog_lib-0.0.1.9.dist-info/entry_points.txt,sha256=1fC52sI2utSTJFR0hFU-ouh4lDpDg6LOOp_bqWjWN3c,43
+dialog_lib-0.0.1.9.dist-info/RECORD,,
