@@ -1,0 +1,10 @@
+README.md
+setup.py
+BreastCancerMLPModel.egg-info/PKG-INFO
+BreastCancerMLPModel.egg-info/SOURCES.txt
+BreastCancerMLPModel.egg-info/dependency_links.txt
+BreastCancerMLPModel.egg-info/requires.txt
+BreastCancerMLPModel.egg-info/top_level.txt
+mlp_breast_cancer_diagnosis/__init__.py
+mlp_breast_cancer_diagnosis/mlp_model.py
+tests/test_mlp_model.py
