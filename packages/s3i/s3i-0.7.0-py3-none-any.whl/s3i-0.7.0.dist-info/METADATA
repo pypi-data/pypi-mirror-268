@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: s3i
+Version: 0.7.0
+Home-page: https://www.kwh40.de/
+Author: Kompetenzzentrum Wald und Holz 4.0
+Author-email: s3i@kwh40.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)
+Classifier: Operating System :: OS Independent
+License-File: LICENSE.txt
+Requires-Dist: alabaster ==0.7.12
+Requires-Dist: astroid ==2.3.3
+Requires-Dist: certifi ==2019.11.28
+Requires-Dist: cffi ==1.13.2
+Requires-Dist: chardet ==3.0.4
+Requires-Dist: colorama ==0.4.3
+Requires-Dist: cryptography ==42.0.5
+Requires-Dist: idna ==2.8
+Requires-Dist: isort ==4.3.21
+Requires-Dist: Jinja2 ==2.10.3
+Requires-Dist: jsonschema ==4.21.1
+Requires-Dist: lazy-object-proxy ==1.4.3
+Requires-Dist: MarkupSafe ==1.1.1
+Requires-Dist: mccabe ==0.6.1
+Requires-Dist: pika ==1.3.2
+Requires-Dist: pockets ==0.9.1
+Requires-Dist: pycparser ==2.19
+Requires-Dist: Pygments ==2.5.2
+Requires-Dist: PyJWT ==1.7.1
+Requires-Dist: python-benedict ==0.21.0
+Requires-Dist: pyparsing ==2.4.5
+Requires-Dist: pytz ==2019.3
+Requires-Dist: pyrql ==0.6.0
+Requires-Dist: python-keycloak ==3.9.0
+Requires-Dist: requests ==2.25.1
+Requires-Dist: six ==1.13.0
+Requires-Dist: snowballstemmer ==2.0.0
+Requires-Dist: typed-ast ==1.4.0
+Requires-Dist: wrapt ==1.11.2
+Requires-Dist: pgpy
+Requires-Dist: python-gnupg
+Requires-Dist: websocket-client
+Requires-Dist: schema ==0.7.1
+Requires-Dist: pynput
+Requires-Dist: urllib3 ==1.26.5
+
