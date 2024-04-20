@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/silcar_it_tools/__init__.py
+src/silcar_it_tools/config.py
+src/silcar_it_tools/exe_check.py
+src/silcar_it_tools/packing.py
+src/silcar_it_tools/usb_utils.py
+src/silcar_it_tools/utils.py
+src/silcar_it_tools.egg-info/PKG-INFO
+src/silcar_it_tools.egg-info/SOURCES.txt
+src/silcar_it_tools.egg-info/dependency_links.txt
+src/silcar_it_tools.egg-info/entry_points.txt
+src/silcar_it_tools.egg-info/requires.txt
+src/silcar_it_tools.egg-info/top_level.txt

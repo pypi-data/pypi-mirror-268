@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "silcar_it_tools"
+description = "Basic IT tools used to solve common problems in the Central African Republic."
+readme = "README.md"
+authors = [
+  { name="Nate Marti", email="nate_marti@sil.org" },
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pefile",
+]
+dynamic = ["version"]
+
+[project.scripts]
+exe-check = "silcar_it_tools.exe_check:cli_exe_check"
+get-usb-files = "silcar_it_tools.usb_utils.app:cli_get_usb_files"
+
+[project.urls]
+Homepage = "https://gitlab.com/acatbadmin/it-tools"
+Issues = "https://gitlab.com/acatbadmin/it-tools/issues"
+
+[tool.setuptools.dynamic]
+#readme = {file = ["README.md"]}
+version = {attr = "silcar_it_tools.config.VERSION"}
