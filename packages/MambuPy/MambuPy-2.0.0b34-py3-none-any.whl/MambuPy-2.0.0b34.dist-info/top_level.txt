@@ -1,0 +1,12 @@
+MambuPy
+MambuPy/api
+MambuPy/api/connector
+MambuPy/orm
+MambuPy/rest1to2
+MambuPy/utils
+mambupy
+mambupy/api
+mambupy/api/connector
+mambupy/orm
+mambupy/rest1to2
+mambupy/utils
