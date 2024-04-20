@@ -1,0 +1,9 @@
+donation_management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+donation_management/utils.py,sha256=yR0PFlUpcrFwyYUiTouugwx-WefTPP1hk-KLEE7NOag,1050
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+donation_management-0.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+donation_management-0.1.dist-info/METADATA,sha256=vcavbIEZl-zx-htYn1btaRHLk5R-c65E6moD6fymQ0M,530
+donation_management-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+donation_management-0.1.dist-info/top_level.txt,sha256=7yi4mtiO3zuXL6YA1CrTQmOGNQIn8AhJ1rSE_TQshbs,26
+donation_management-0.1.dist-info/RECORD,,
