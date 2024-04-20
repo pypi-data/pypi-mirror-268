@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "valphi"
+version = "0.6.0"
+description = "Logic programs ralying on ValPhi semantics"
+authors = ["Mario Alviano <mario.alviano@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydot = "^1.4.2"
+dumbo-asp = "^0.3.6"
+distlib = "^0.3.7"
+
+[tool.poetry.dev-dependencies]
+coverage = "^7.3.2"
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
