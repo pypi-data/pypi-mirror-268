@@ -1,0 +1,17 @@
+docs/index.md,sha256=QU678-3rLSkmJxBG-C1yXHJWXppqnVDBr9_OR1f5lek,434
+docs/songbirdcli/cli.md,sha256=y_U3hQH3SarNDdWQIO9i2XN-ZomJUDEiOn5a3MQj7XA,47
+docs/songbirdcli/helpers.md,sha256=j4b6yQkxrxLVJA3wnnd9Z6FpJnRj-3hJyt4U-udtsGg,55
+docs/songbirdcli/settings.md,sha256=NXebQH-ZBV8GnvObOIaySV0k6ei5CMW7GWUQ8EekgQI,57
+songbirdcli/cli.py,sha256=rczN09BhN26cd6IskkW4JrHx9FEQo2j-gBkg2f2Me20,20508
+songbirdcli/helpers.py,sha256=U94rjqZ7fFhIaLu4LTnBZolF6iE4GbZ1rg-ifuPQkFY,11645
+songbirdcli/requirements.txt,sha256=3o0fAGN1wpuXitj0JNLf3rwy3EIMsB3eizw50QGMKYA,1000
+songbirdcli/requirements.txt.blank,sha256=fSchuLB-r1Gf4J1zOgsMLhg3rdYoo_8sZabi39cx0DM,48
+songbirdcli/settings.py,sha256=Yo2TSfQb_OUVXYLk-IbHzpLhqM2V-SbER1QTHdKZHyU,3753
+songbirdcli/version.py,sha256=tmzWaR0tEFVQKRAFjSkn9fkQDm1MMzqzwVwqLDT-6Uk,18
+tests/unit/test_cli.py,sha256=2M26g-DIj5BuqVr4b-t1DRAejdilMBRw6jkFPg-GG2E,4971
+tests/unit/test_helpers.py,sha256=WU0e8RLpFnIb1LMsv-uRj7Xq5w7F3SxiRZLRGKk17qY,5200
+songbirdcli-0.2.5.dist-info/LICENSE,sha256=wra9E2UbAAmYAXJniYe8xog9e9ezJ0uBbkxg3F1u04s,1071
+songbirdcli-0.2.5.dist-info/METADATA,sha256=C7p-LBXsK9CEWkrSyd_dtrYsHAjSlAnGmo80lUsJB60,12641
+songbirdcli-0.2.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+songbirdcli-0.2.5.dist-info/top_level.txt,sha256=i8NeI_YfRy47aw2j00bxyAIQrQrh0m8y9endcexdIY0,23
+songbirdcli-0.2.5.dist-info/RECORD,,
