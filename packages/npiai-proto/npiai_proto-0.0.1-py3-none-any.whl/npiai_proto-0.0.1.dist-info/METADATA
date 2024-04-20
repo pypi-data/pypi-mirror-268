@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: npiai-proto
+Version: 0.0.1
+Summary: The NPI.AI Proto
+Home-page: https://github.com/npi-ai/proto/python
+License: Apache-2.0
+Author: Wells Wang
+Author-email: wells@npi.ai
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: grpcio (>=1.62.1,<2.0.0)
+Requires-Dist: grpcio-tools (>=1.62.2,<2.0.0)
+Project-URL: Repository, https://github.com/npi-ai/proto/python
+Description-Content-Type: text/markdown
+
+## The NPI AI Python Protocol
+
