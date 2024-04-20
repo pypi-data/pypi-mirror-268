@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: sympde
+Version: 0.18.3
+Summary: Symbolic calculus for partial differential equations (and variational forms)
+Author-email: Ahmed Ratnani <ratnaniahmed@gmail.com>
+Maintainer: Said Hadjout
+Maintainer-email: Yaman Güçlü <yaman.guclu@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2018 Pyccel
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Repository, https://github.com/pyccel/sympde
+Keywords: math
+Classifier: Programming Language :: Python :: 3
+Requires-Python: <3.12,>=3.8
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: sympy<1.10,>=1.5
+Requires-Dist: h5py
+Requires-Dist: pytest
+Requires-Dist: pyyaml
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+sympde
+======
+
+|build-status|  |binder|  |docs|
+
+**sympde** is a Symbolic calculus library for partial differential equations and variational forms. It can be used to have similar capabilities as the fenics_ project, by extending and writing your own *printing* functions.
+
+An example of use can be found in psydac_ or gelato_. 
+
+.. _psydac: https://github.com/pyccel/psydac
+.. _gelato: https://github.com/pyccel/gelato
+.. _fenics: https://fenicsproject.org/
+
+Install
+*******
+
+From PyPi
+^^^^^^^^^
+
+Simply run, for a local installation::
+
+  pip3 install --user sympde 
+
+or::
+
+  pip3 install sympde 
+
+for a global installation.
+
+From sources
+^^^^^^^^^^^^
+
+* **Standard mode**::
+
+    python3 -m pip install .
+
+* **Development mode**::
+
+    python3 -m pip install --user -e .
+
+
+.. |build-status| image:: https://travis-ci.com/pyccel/sympde.svg?branch=master
+    :alt: build status
+    :scale: 100%
+    :target:  https://travis-ci.com/pyccel/sympde
+
+.. |docs| image:: https://readthedocs.org/projects/sympde/badge/?version=latest
+    :alt: Documentation Status
+    :scale: 100%
+    :target: http://sympde.readthedocs.io/en/latest/?badge=latest
+
+.. |binder| image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/pyccel/sympde/master
