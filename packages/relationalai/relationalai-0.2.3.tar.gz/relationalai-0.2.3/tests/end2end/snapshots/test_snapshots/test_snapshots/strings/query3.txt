@@ -1,0 +1,3 @@
+                   person  first      v     v2
+0  sUk6iukrbWGFaChJa9IriQ   John   john   JOHN
+1  2qrQnzAq5H47PS6ukCS85A  Miles  miles  MILES

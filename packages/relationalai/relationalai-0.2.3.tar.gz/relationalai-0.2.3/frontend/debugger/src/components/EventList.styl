@@ -1,0 +1,65 @@
+.event-list {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .event-list-item {
+    header {
+      padding-right: 24px;
+
+      span + span {
+        margin-left: 0.4em;
+      }
+    }
+
+    &:not(.naked) {
+      &.branch > header, &.leaf {
+        position: relative;
+        margin: 0 24px;
+        padding: 4px 6px;
+        display: flex;
+        border-radius: 4px;
+        background: var(--section-bg);
+        border: 1px solid var(--section-border);
+        box-shadow: inset 0 1px 5px var(--shadow);
+
+        & > .ui-collapsible-trigger-icon {
+          position: absolute;
+          right: 100%;
+        }
+      }
+    }
+
+    &.block {
+      display: block;
+      box-sizing: border-box;
+      margin-bottom: 12px;
+
+      header {
+        padding: 0px 24px;
+        gap: 0.4em;
+        margin-bottom: 0.5em;
+      }
+
+      pre {
+        max-height: 5em;
+        margin: 0px 24px;
+
+        overflow: hidden;
+      }
+
+      code {
+        overflow: hidden;
+      }
+    }
+
+    .event-detail {
+      opacity: 0.5;
+    }
+  }
+
+  &.sub {
+    padding-left: 24px;
+  }
+}

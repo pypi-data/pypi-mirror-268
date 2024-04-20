@@ -1,0 +1,47 @@
+span-viewer {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+
+  scroll-container {
+    flex: 1 1 0;
+    overflow-y: auto;
+
+    scroll-inner {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  h3 {
+    align-self: stretch;
+  }
+
+  scroll-inner {
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 60px;
+  }
+
+  scroll-inner > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+
+    pre {
+      align-self: stretch;
+      max-width: 100%;
+    }
+
+
+    &.grow {
+      flex: 1;
+    }
+  }
+}

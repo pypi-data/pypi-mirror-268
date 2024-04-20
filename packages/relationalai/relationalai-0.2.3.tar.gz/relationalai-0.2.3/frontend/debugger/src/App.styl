@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:wght@100..900&display=swap');
+
+//------------------------------------------------------------------------------
+// Basic UI
+//------------------------------------------------------------------------------
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+//------------------------------------------------------------------------------
+// Theming
+//------------------------------------------------------------------------------
+
+:root {
+  --bg: #121212;
+  --fg: #e6edf3;
+  --section-bg: #1e2023; // #f9f9f9;
+  --section-border: unquote('hsl(from var(--section-bg) h s calc(l * 1.33))');
+  --shadow: #10001933;
+  --outline: unquote('hsl(from var(--section-bg) h s calc(l * 1.66))')
+
+  --input-bg: var(--bg);
+  --input-border: unquote('hsl(from var(--section-bg) h s calc(l * 1.33))');
+
+  --anim-duration-quick: 0.1s;
+  --anim-duration-normal: 0.25s;
+  --anim-duration-slow: 0.4s;
+}
+
+//------------------------------------------------------------------------------
+// Chrome
+//------------------------------------------------------------------------------
+
+app-chrome {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+
+  & > .sidebar.left {
+    flex: 0 0 auto;
+
+    & > .sidebar-content {
+      min-width: 200px;
+      max-width: unquote("min(450px, 30vw)");
+
+      & > .ui-collapsible-inner > .sidebar-inner > header {
+        padding: 0 24px;
+        padding-top: 24px;
+        gap: 12px;
+      }
+    }
+  }
+
+  main {
+    flex: 1 1 0;
+    height: 100vh;
+    min-width: 0;
+    display: flex;
+  }
+
+  & > status-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+  }
+}

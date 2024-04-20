@@ -1,0 +1,80 @@
+name: run-end-to-end
+description: For given python version and cloud provider run end-to-end tests
+
+inputs:
+  python_version:
+    required: true
+    description: Python version to use
+  rai_cloud_provider:
+    required: true
+    description: Cloud provider to use
+  rai_client_id:
+    required: false
+    description: RAI client id
+  rai_client_secret:
+    required: false
+    description: RAI client secret
+  sf_account:
+    required: false
+    description: Snowflake account name   
+  sf_warehouse:
+    required: false
+    description: Snowflake warehouse name 
+  sf_rai_app_name:
+    required: false
+    description: Snowflake RAI application name 
+  sf_compute_pool:
+    required: false
+    description: Snowflake compute pool name  
+  sf_username:
+    required: false
+    description: Snowflake username
+  sf_password:
+    required: false
+    description: Snowflake password
+  datadog_api_key:
+    required: false
+    description: Datadog API key
+  
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ inputs.python_version }}
+    
+    - name: Create and activate virtual environment
+      run: |
+        python -m venv .venv
+      shell: bash
+
+    - name: Install dependencies
+      run: |
+        .venv/bin/python -m pip install --upgrade pip
+        .venv/bin/pip install pexpect
+        .venv/bin/pip install .[dev]
+      shell: bash
+    
+    - name: Run Test
+      run: |
+        .venv/bin/pytest -s tests/end2end --ddtrace --ddtrace-patch-all --cov=relationalai --cov-report lcov:coverage/lcov.info --cov-report html:coverage/html-report --cov-report term
+      env:
+        RAI_CLIENT_ID: ${{ inputs.rai_client_id }}
+        RAI_CLIENT_SECRET: ${{ inputs.rai_client_secret }}
+        RAI_CLOUD_PROVIDER: ${{ inputs.rai_cloud_provider }}
+        
+        SF_TEST_ACCOUNT_NAME: ${{ inputs.sf_account }}
+        SF_TEST_WAREHOUSE_NAME: ${{ inputs.sf_warehouse }}
+        SF_TEST_APP_NAME: ${{ inputs.sf_rai_app_name }}
+        SF_TEST_COMPUTE_POOL: ${{ inputs.sf_compute_pool }}
+        SF_TEST_ACCOUNT_USERNAME: ${{ inputs.sf_username }}
+        SF_TEST_ACCOUNT_PASSWORD: ${{ inputs.sf_password }}
+
+        # datadog CI monitoring
+        DD_SERVICE: pyrel-tests
+        DD_ENV: ci
+        DD_CIVISIBILITY_AGENTLESS_ENABLED: true
+        DD_API_KEY: ${{ inputs.datadog_api_key }}
+      shell: bash
