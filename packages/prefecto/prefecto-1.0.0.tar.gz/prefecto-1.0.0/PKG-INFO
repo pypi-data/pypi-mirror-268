@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: prefecto
+Version: 1.0.0
+Summary: Tools for supporting Prefect development.
+Author-email: Dominic Tarro <dtarro@oxfordeconomics.com>
+License: MIT License
+        
+        Copyright (c) 2023 Dominic Tarro
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Documentation, https://dominictarro.github.io/prefecto/
+Project-URL: Repository, https://github.com/dominictarro/prefecto
+Keywords: prefect,utilities
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: prefect>=2.10
+
+# Prefecto
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/dominictarro/prefecto/main/docs/assets/Monkeywrench-Data-Pipeline.png">
+    <br>
+    <a href="https://pypi.python.org/pypi/prefecto/" alt="PyPI version">
+        <img alt="PyPI" src="https://img.shields.io/pypi/v/prefecto?color=fe7200&labelColor=eeeeee"></a>
+    <a href="https://github.com/dominictarro/prefecto/" alt="Stars">
+        <img src="https://img.shields.io/github/stars/dominictarro/prefecto?color=fe7200&labelColor=eeeeee" /></a>
+    <a href="https://github.com/dominictarro/prefecto/pulse" alt="Activity">
+        <img src="https://img.shields.io/github/commit-activity/m/dominictarro/prefecto?color=fe7200&labelColor=eeeeee" /></a>
+</p>
+
+Prefecto is a collection of tools to extend and augment [Prefect](https://www.prefect.io/) capabilities.
+
+You can find the documentation [here](https://dominictarro.github.io/prefecto/).
+
+## Getting Started
+
+Install Prefecto with
+
+```bash
+pip install prefecto
+```
+
+*Prefecto is only tested with Python 3.10 and higher. It may work with older versions, but it is not guaranteed.*
