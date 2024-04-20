@@ -1,0 +1,35 @@
+[project]
+name = "torch-lure"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "fuyutarow", email = "fuyutarow@gmail.com" }
+]
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.26.4",
+    "sophia-opt>=0.2.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+eywords = ["pytorch"]
+
+[project.urls]
+Homepage = "https://github.com/fuyutarow/torch-lure"
+Repository = "https://github.com/fuyutarow/torch-lure"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/torch_lure"]
+
+
