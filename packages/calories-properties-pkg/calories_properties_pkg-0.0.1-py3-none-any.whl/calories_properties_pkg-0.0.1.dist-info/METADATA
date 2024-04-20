@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: calories_properties_pkg
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/pypa/sampleproject
+Author: Author
+Author-email: x22180966@student.ncirl.ie
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Calories_ Package
+
+> [!NOTE]
+> The Calories Properties Library is a Python library that calculates the total calories of a list of dishes and a proper alert based on their dish names.
+
+
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install example-package
