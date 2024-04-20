@@ -1,0 +1,5 @@
+jsonschema
+dataclasses
+bioblend
+cyvcf2
+pymongo
