@@ -1,0 +1,5 @@
+setup.py
+exeNake.egg-info/PKG-INFO
+exeNake.egg-info/SOURCES.txt
+exeNake.egg-info/dependency_links.txt
+exeNake.egg-info/top_level.txt
