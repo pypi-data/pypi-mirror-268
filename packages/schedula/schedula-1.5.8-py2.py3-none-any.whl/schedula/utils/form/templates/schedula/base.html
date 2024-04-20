@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="{{ get_locale() }}">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>{% block title_name %}{{ name }}{% endblock %}</title>
+    <link rel="shortcut icon"
+          href="{{ url_for('static', filename='favicon.ico') }}"/>
+    {% endblock %}
+    {% block js %}
+    <script src="{{ url_for('schedula.static', filename=main_js) }}"></script>
+    <script src="{{ url_for('schedula.static', filename='props/js/' + form_id + '.js') }}"></script>
+    {% endblock %}
+    {% block css %}
+    <link href="{{ url_for('schedula.static', filename=main_css) }}"
+          rel="stylesheet">
+    {% endblock %}
+
+    {% block alive_func %}
+    {% if 'alive' in app.view_functions %}
+    <script>
+        async function imAlive() {
+            const alive_url = "{{ url_for('alive') }}";
+            const alive_period = {{ (app.alive_period or 600) * 1000 }};
+            let response, fail = 0;
+            while (alive_url) {
+                await new Promise(resolve => setTimeout(resolve, alive_period));
+                response = await fetch(alive_url);
+                if (response.status == 200) {
+                    fail = 0
+                } else if (response.status == 503) {
+                    document.open()
+                    document.write(await response.text())
+                    document.close()
+                    break;
+                } else {
+                    fail++
+                }
+                if (fail === 5) break;
+            }
+        }
+
+        imAlive();
+    </script>
+    {% endif %}
+    {% endblock %}
+
+    {% block js_onload %}
+    <script defer="defer">
+        function onLoad() {
+            let name = "{{ form_id or 'index' }}",
+                url = "{{ url_for('api') }}",
+                {formContext: _formContext, ..._schedulaProps} = window.schedulaProps || {},
+                element = document.getElementById('root'),
+                forms_url = "{{ url_for('schedula.static', filename='forms') }}",
+                csrf_token = "{{ form.generate_csrf() }}",
+                formData = JSON.parse('{{ form.get_form_data() | tojson | safe}}');
+            let formContext = {
+                ..._formContext,
+                ...JSON.parse('{{ form.get_form_context() | tojson | safe}}')
+            }
+            Promise.all([
+                fetch(`${forms_url}/${name}-schema.json`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Encoding': 'gzip',
+                        'Accept-Encoding': 'gzip'
+                    }
+                }).then(v => v.json()),
+                fetch(`${forms_url}/${name}-ui.json`, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Content-Encoding': 'gzip',
+                        'Accept-Encoding': 'gzip'
+                    }
+                }).then(v => v.json())
+            ]).then(([schema, uiSchema]) => {
+                schedula.renderForm({
+                    element,
+                    url,
+                    name,
+                    schema,
+                    uiSchema,
+                    csrf_token,
+                    formData,
+                    formContext,
+                    ..._schedulaProps
+                })
+            });
+        }
+    </script>
+    {% endblock %}
+    {% endblock %}
+</head>
+<body style="background-color: white" onload="onLoad()">
+<div id="content">
+    {% block content %}
+    <div id="root" style="height: 100%"></div>
+    {% endblock %}
+</div>
+</body>
+</html>
