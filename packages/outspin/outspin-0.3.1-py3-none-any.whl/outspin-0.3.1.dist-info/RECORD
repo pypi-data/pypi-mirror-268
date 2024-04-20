@@ -1,0 +1,10 @@
+outspin/__init__.py,sha256=vQriKD_drkmjbte468Kug6TcZKNnFDohzbwa3f6xtsM,1125
+outspin/constants.py,sha256=ppTSrNyrg8vr5BTexiixtWCNs2XT3-JPPLZN5HkPoeY,285
+outspin/exceptions.py,sha256=7Fx-_1P9UYxHVGmiLbfE2-ZMzbb49Vy-h_5vD5ODlyI,321
+outspin/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+outspin/unix.py,sha256=T0m4FnxgF0al2QDXMwnkB0JqVJB3pBhl81hgRwqiKGs,2472
+outspin/windows.py,sha256=xgkxo20xfIqQSHI91TbD55Zfn1ZHDFiRC3zKuPPid0o,1891
+outspin-0.3.1.dist-info/LICENSE,sha256=XaSCDzoPURyilkfMi65siZ7Hz8fovk1hbijRcEgU3gM,1057
+outspin-0.3.1.dist-info/METADATA,sha256=tTpC3RdpIAkBxo3k7jNHLOzYE2DChxetccY2SgrQyl8,7597
+outspin-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+outspin-0.3.1.dist-info/RECORD,,
