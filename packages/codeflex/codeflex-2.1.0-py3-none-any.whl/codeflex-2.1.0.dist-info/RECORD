@@ -1,0 +1,9 @@
+codeflex/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codeflex/company/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+codeflex/company/mysql.py,sha256=DrRcaXFmxOV3XMAo2unGlOA65xSkT-kcv6Bl25U87Eo,6303
+codeflex/company/polly.py,sha256=PWOAGQ8lD4hs1W6Dn1ERLqs9dXziHwb2KmkOIYKFRR8,1217
+codeflex-2.1.0.dist-info/LICENSE,sha256=Jdx3CScBud_UHm_0a_XSsgSc6aDdzLopWZ3SFVsqfi4,1913
+codeflex-2.1.0.dist-info/METADATA,sha256=WDtcYifBuAAEh8JP8fIh5u4SgolmQrmHHdo1togPa8g,6238
+codeflex-2.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+codeflex-2.1.0.dist-info/top_level.txt,sha256=VZ0B0E-3p2am8E8NqUWOSe54NTyKoViLqzLz2o-S91g,9
+codeflex-2.1.0.dist-info/RECORD,,
