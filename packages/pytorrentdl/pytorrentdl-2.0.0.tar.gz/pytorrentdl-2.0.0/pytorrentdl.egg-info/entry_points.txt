@@ -1,0 +1,2 @@
+[console_scripts]
+pytorrentdl = pytorrentdl.cli:run_cli
