@@ -1,0 +1,3 @@
+[console_scripts]
+dlna-cast=dlna_cast.main:main
+
