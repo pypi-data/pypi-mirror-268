@@ -1,0 +1,2 @@
+[console_scripts]
+llmaudit = llmaudit.cli:main_cli
