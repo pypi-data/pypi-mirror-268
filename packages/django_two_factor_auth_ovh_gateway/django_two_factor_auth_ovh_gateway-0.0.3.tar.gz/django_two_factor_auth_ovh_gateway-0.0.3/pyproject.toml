@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "django_two_factor_auth_ovh_gateway"
+version = "0.0.3"
+description = "Extension for django-two-factor-auth to use OVH SMS gateway"
+authors = ["Kapt dev team <dev@kapt.mobi>"]
+license = "GNU GPLv3"
+readme = "README.md"
+repository = "https://gitlab.com/kapt/open-source/django-two-factor-auth-ovh-gateway"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^3.0"
+django-two-factor-auth = {extras = ["phonenumbers"], version = "^1.15.2"}
+ovh = "^1.1.0"
+
+[tool.poetry.dev-dependencies]
+gitchangelog = "^3.0.4"
+bumpversion = "^0.6.0"
+black = "~23.3.0"
+flake8 = "~6.0.0"
+isort = "~5.12.0"
+djhtml = "~3.0.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+known_local_folder = ["src"]
+sections="FUTURE,STDLIB,DJANGO,THIRDPARTY,LOCALFOLDER,FIRSTPARTY"
+import_heading_stdlib = "Standard Library"
+import_heading_firstparty= "Project"
+import_heading_thirdparty= "Third party"
+import_heading_localfolder= "Local application / specific library imports"
+known_django= "django"
+import_heading_django= "Django"
+
+[tool.black]
+include = '\.pyi?$'
+exclude = '''
+(
+    \.eggs         # exclude a few common directories in the
+  | \.git          # root of the project
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | node_modules
+)
+'''
