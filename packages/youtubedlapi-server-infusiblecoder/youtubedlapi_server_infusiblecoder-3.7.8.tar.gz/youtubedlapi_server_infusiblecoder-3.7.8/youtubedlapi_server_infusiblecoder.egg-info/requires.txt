@@ -1,0 +1,10 @@
+Flask>=3.0.2
+yt_dlp>=2023.12.30
+Flask-Caching
+flask_caching
+gevent
+uvicorn
+bilix
+httpx
+asgiref
+gunicorn
