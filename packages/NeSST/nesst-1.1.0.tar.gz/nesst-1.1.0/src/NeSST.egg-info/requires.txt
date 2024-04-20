@@ -1,0 +1,9 @@
+numpy
+scipy
+matplotlib
+endf
+
+[test]
+pytest
+jupyter
+matplotlib
