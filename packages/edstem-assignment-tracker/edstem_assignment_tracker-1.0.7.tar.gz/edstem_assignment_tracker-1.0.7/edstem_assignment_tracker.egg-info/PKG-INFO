@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: edstem-assignment-tracker
+Version: 1.0.7
+Summary: Edstem Assignment Tracker.
+Home-page: https://github.com/SP24-212/Edstem-Tracker
+Author: Trevor Moy
+Author-email: trevormoy14@uri.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: edapiwl==0.0.3
+Requires-Dist: colorama
+
+Edstem Assignment Tracker is a python package that allows you to easily track your assignments for the Edstem platform.

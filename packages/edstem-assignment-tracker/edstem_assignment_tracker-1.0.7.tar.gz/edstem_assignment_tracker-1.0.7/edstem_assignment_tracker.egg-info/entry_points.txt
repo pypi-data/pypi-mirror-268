@@ -1,0 +1,2 @@
+[console_scripts]
+ed-tracker = edstem.integration:run_eat
