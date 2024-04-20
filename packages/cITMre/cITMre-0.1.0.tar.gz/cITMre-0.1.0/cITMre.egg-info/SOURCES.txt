@@ -1,0 +1,11 @@
+LICENCE.txt
+README.md
+setup.py
+cITMre.egg-info/PKG-INFO
+cITMre.egg-info/SOURCES.txt
+cITMre.egg-info/dependency_links.txt
+cITMre.egg-info/requires.txt
+cITMre.egg-info/top_level.txt
+citmre/__int__.py
+citmre/__main__.py
+citmre/citmre_fun.py
