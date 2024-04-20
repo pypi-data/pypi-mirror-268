@@ -1,0 +1,2 @@
+[console_scripts]
+hash_rename = hash_rename.__main__:main
