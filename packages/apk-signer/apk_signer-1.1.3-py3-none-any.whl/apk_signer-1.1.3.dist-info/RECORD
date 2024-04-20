@@ -1,0 +1,12 @@
+apk_signer/__init__.py,sha256=F8rtrGLUDJ5HcZXJDWcNxad7o9fkcGBrD5QzJGm3v-Y,21
+apk_signer/apksigner.py,sha256=pM_dVSKia22ZhlptpnTMdOr83wwAkMiOygaM7ecWmOk,2782
+apk_signer/config.py,sha256=QD9ThvHU7agburuyBr_MAAmbMXL05CnryyX9y8tPUuc,414
+apk_signer/pyapksigner.jks,sha256=BOlEYOHOfe3SHbc59Kba0cCh-sy-WAwiMj9BkMxkK7g,2259
+apk_signer/scripts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apk_signer/scripts/launcher.py,sha256=jDYwRxt6csKle6bA3BYBmr1gNWp5w15yAdRkCa1BLTw,1529
+apk_signer-1.1.3.dist-info/LICENSE,sha256=TBh4mh7F9f9QCdC7A0R0RXs-BapBFif4y1CKijUbVPg,1074
+apk_signer-1.1.3.dist-info/METADATA,sha256=jX49ZQ6ynMe3xN6fSxBJA8nEBPA-Chb2aLVrKkm-XU8,4874
+apk_signer-1.1.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+apk_signer-1.1.3.dist-info/entry_points.txt,sha256=4cpKHKaxrcqaXHvkgFBgjEx573BGaBMgoWK_aJuJCV8,63
+apk_signer-1.1.3.dist-info/top_level.txt,sha256=oCWxNq2Xg97yd7C-D6Sr2Du4Dy33juhTEiaeLm6DdaI,11
+apk_signer-1.1.3.dist-info/RECORD,,
