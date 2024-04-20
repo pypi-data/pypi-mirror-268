@@ -1,0 +1,17 @@
+setup.py
+chamco_ragbot/__init__.py
+chamco_ragbot/acl.py
+chamco_ragbot/chat.py
+chamco_ragbot/datasource.py
+chamco_ragbot/dept.py
+chamco_ragbot/filetransfer.py
+chamco_ragbot/index.py
+chamco_ragbot/indexer.py
+chamco_ragbot/main.py
+chamco_ragbot/search.py
+chamco_ragbot/skillset.py
+chamco_ragbot/utils.py
+chamco_ragbot.egg-info/PKG-INFO
+chamco_ragbot.egg-info/SOURCES.txt
+chamco_ragbot.egg-info/dependency_links.txt
+chamco_ragbot.egg-info/top_level.txt
