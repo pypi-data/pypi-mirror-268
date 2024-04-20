@@ -1,0 +1,8 @@
+requests
+toml
+pydantic
+tqdm
+click
+
+[starlette]
+starlette
