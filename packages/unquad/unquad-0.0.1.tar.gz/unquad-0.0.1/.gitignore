@@ -1,0 +1,17 @@
+# Global directories
+__pycache__/
+
+# Local
+__pycache__
+*.py[cdo]
+*.pyc
+
+# Root directories
+/.env/
+/.venv/
+/.idea/
+/venv/
+/dist/
+
+# Auto-generated during builds
+/src/hatch/_version.py
