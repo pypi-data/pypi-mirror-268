@@ -1,0 +1,15 @@
+tuduam/__init__.py,sha256=Fy4no3CeW2pJ6bbZTORiyBG5_exr7AzzOQJt1ogVw7I,262
+tuduam/aerodynamics.py,sha256=ad00L6DKI9Z7f5cbC096gGAEZLByQO_tdIE47oOkeYk,12019
+tuduam/data_structures.py,sha256=MKM1Lxpg5jYwhlnd9i6s9x1fsdGxcKGEYnu4d62LXlw,6692
+tuduam/performance.py,sha256=l3Nt8WJcdDdb6lr8INcRnnYdiQD1ZAjbc0RoCEprte0,2434
+tuduam/propulsion.py,sha256=nKn_DjrbYpL_D02MZVilTTh8Zjnh0dO79tcAHPU02IM,42608
+tuduam/sim_ctrl.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tuduam/structures.py,sha256=nfLLvd70b9Nx6vyHxbbHaWeGsp72Erdzg0I4dbeAYSQ,85384
+tuduam/version.py,sha256=bJ0ee0mtbNES-o4gBTDEb16wwzOAOq12Payjj9gS-ws,24
+tuduam-2024.11.data/data/LICENSE,sha256=XkhI_IVX8YUvsk_QQq2CRhL69BLVH5KXYG1Zfr2RFR8,1548
+tuduam-2024.11.data/data/README.md,sha256=UQYWheb4XnKKFNENoCO9qbESgH5Pjm0s8Y26vA8MmrY,783
+tuduam-2024.11.dist-info/LICENSE,sha256=XkhI_IVX8YUvsk_QQq2CRhL69BLVH5KXYG1Zfr2RFR8,1548
+tuduam-2024.11.dist-info/METADATA,sha256=lV7Ca1kfW8QDcvkZCGaMP2js-1JazLkbyHxSZmQKT9w,2086
+tuduam-2024.11.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tuduam-2024.11.dist-info/top_level.txt,sha256=0Yb2AC_j5u9HlDnp0wIL_EVFKvGJKuj_K5v_xzkDiAs,7
+tuduam-2024.11.dist-info/RECORD,,
