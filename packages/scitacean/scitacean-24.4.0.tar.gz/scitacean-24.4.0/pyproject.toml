@@ -1,0 +1,125 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+    "setuptools_scm[toml]>=8.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scitacean"
+description = "High-level interface for SciCat"
+license = { "file" = "LICENSE" }
+authors = [{ name = "Scitacean contributors" }]
+readme = "README.md"
+keywords = ["scicat"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "email-validator",
+    "pydantic >= 2",
+    "python-dateutil",
+    "requests >= 2.31",
+]
+dynamic = ["version"]
+
+[project.urls]
+"Documentation" = "https://scicatproject.github.io/scitacean"
+"Bug Tracker" = "https://github.com/SciCatProject/scitacean/issues"
+"Source" = "https://github.com/SciCatProject/scitacean"
+
+[project.optional-dependencies]
+sftp = ["paramiko"]
+test = ["filelock", "hypothesis", "pyyaml"]
+
+[tool.setuptools_scm]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = "tests"
+addopts = """
+--strict-config
+--strict-markers
+--disable-socket
+--allow-hosts=127.0.0.1,::1
+-ra
+-v
+--hypothesis-profile=scitacean
+"""
+filterwarnings = [
+    "error",
+    # Many tests don't set a checksum, so File raises this warning.
+    "ignore:Cannot check if local file:UserWarning",
+]
+
+[tool.mypy]
+plugins = "pydantic.mypy"
+mypy_path = "src"
+exclude = ["docs/conf.py", "tools/model-generation", "venv"]
+ignore_missing_imports = true
+enable_error_code = [
+    "ignore-without-code",
+    "redundant-expr",
+    "truthy-bool",
+]
+strict = true
+show_error_codes = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+
+[tool.pydantic-mypy]
+init_forbid_extra = true
+init_typed = true
+warn_required_dynamic_aliases = true
+
+[tool.ruff]
+line-length = 88
+extend-include = ["*.ipynb"]
+extend-exclude = [".*", "__pycache__", "build", "dist", "venv"]
+
+[tool.ruff.lint]
+select = ["B", "D", "E", "F", "G", "I", "S", "T20", "UP", "PGH", "FBT003", "RUF"]
+ignore = [
+    "B905", # `zip()` without an explicit `strict=` parameter
+    "S324", # insecure hsh function; we don't use hashing for security
+    "E741", "E742", "E743", # do not use names ‘l’, ‘O’, or ‘I’; they are not a problem with a proper font
+    "UP038",  # does not seem to work and leads to slower code
+    "E111", "E114", "E117", "D206", "D300",  # conflict with ruff format
+    "D105",
+]
+fixable = ["I001"]
+isort.known-first-party = ["scitacean"]
+pydocstyle.convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = [
+    "S101",  # asserts are fine in tests
+    "D10",  # no docstrings required in tests
+]
+"docs/*" = [
+    "D", "E402", "F811", "F841", "RUF015", "S101", "T201",
+]
+"*.ipynb" = ["I"]
+"docs/conf.py" = ["D10"]
+"tools/*" = ["D10"]
+"src/scitacean/model.py" = ["D10"]
+"src/scitacean/testing/strategies.py" = ["D401"]
+
+[tool.codespell]
+ignore-words-list = "specfield"

@@ -1,0 +1,12 @@
+email-validator
+pydantic>=2
+python-dateutil
+requests>=2.31
+
+[sftp]
+paramiko
+
+[test]
+filelock
+hypothesis
+pyyaml
