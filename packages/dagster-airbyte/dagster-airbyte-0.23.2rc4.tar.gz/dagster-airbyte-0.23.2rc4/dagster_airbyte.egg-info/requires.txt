@@ -1,0 +1,8 @@
+dagster==1.7.2rc4
+requests
+
+[managed]
+dagster-managed-elements==0.23.2rc4
+
+[test]
+requests-mock
