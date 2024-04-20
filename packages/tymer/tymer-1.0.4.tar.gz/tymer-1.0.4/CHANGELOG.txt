@@ -1,0 +1,24 @@
+Change Log
+==========
+
+1.0.0 (2/17/2023)
+-------------------
+- First Release
+
+1.0.1 (2/17/2023)
+-------------------
+- Fixed installation not working
+
+1.0.2 (2/17/2023)
+-------------------
+- Fixed installation not working again
+
+1.0.2 (3/14/2023)
+-------------------
+- Fixed issues
+
+1.0.4 (4/19/2024)
+-------------------
+- Added Countdown option
+- Added option to display time as integer rather than float
+- whenever you instance .restart() without inputing a value, it restarts the timer with the same time as the previous instance

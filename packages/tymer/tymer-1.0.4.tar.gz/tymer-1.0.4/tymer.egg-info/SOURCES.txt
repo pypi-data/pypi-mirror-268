@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+Tymer/__init__.py
+tymer/__init__.py
+tymer.egg-info/PKG-INFO
+tymer.egg-info/SOURCES.txt
+tymer.egg-info/dependency_links.txt
+tymer.egg-info/top_level.txt
