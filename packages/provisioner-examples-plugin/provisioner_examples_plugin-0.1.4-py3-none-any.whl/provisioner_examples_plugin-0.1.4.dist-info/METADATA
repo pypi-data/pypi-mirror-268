@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: provisioner-examples-plugin
+Version: 0.1.4
+Summary: Python Examples Library
+Author: Zachi Nachshon
+Author-email: zachi.nachshon@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: provisioner-runtime (>=0.1.2,<0.2.0)
