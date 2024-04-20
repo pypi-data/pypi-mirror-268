@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+Xodia24/__init__.py
+Xodia24/env.py
+Xodia24/path.py
+Xodia24.egg-info/PKG-INFO
+Xodia24.egg-info/SOURCES.txt
+Xodia24.egg-info/dependency_links.txt
+Xodia24.egg-info/requires.txt
+Xodia24.egg-info/top_level.txt
