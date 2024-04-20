@@ -1,0 +1,6 @@
+*.ipynb
+__pycache__
+*test_scripts
+*egg-info
+.env*
+*.db
