@@ -1,0 +1,1 @@
+from profyle.infrastructure.middleware.fastapi import ProfyleMiddleware # noqa
