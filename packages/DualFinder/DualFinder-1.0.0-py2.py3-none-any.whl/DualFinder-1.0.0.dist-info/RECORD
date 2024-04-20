@@ -1,0 +1,17 @@
+dual_finder/__init__.py,sha256=wrr3l2ulezzrKM_QuWQvZ0IFtgk2k03wbh3HWNY1auA,95
+dual_finder/cnn/__init__.py,sha256=xvpfG0Z8rCYwM10mPqEq55JiAf0O92vghI5MebXk3Tg,228
+dual_finder/cnn/create_cnn.py,sha256=bv8XO1u2D1A6Aqnbost_PInitO6WFQRnpNYZuAEiguM,8002
+dual_finder/cnn/extract_feature_maps.py,sha256=R_FGWXmBkZ_GiCb67lc6bx2_5eplYG-OnyhfDcsE1h4,6263
+dual_finder/cnn/load_model.py,sha256=PaKXj3Fk2Xn1h3sEwjkoCmBShwtyBvO0w4zJ-RlvDZc,6436
+dual_finder/cnn/train_cnn.py,sha256=b03Rdlp2_m__UhwOhBJF8Lx_GZRc4QlXTS20P1lyU4g,18207
+dual_finder/optimize/__init__.py,sha256=cAOxzMcf1sK51BjDyLk_170KxatATn_W-jW2n_Ls7Z0,181
+dual_finder/optimize/optimize_hyperparameters.py,sha256=Us9-BZZh0B6e1d4y26h6pabnXGeXkbLSVVPhoMDIqBY,5215
+dual_finder/preprocess_data/__init__.py,sha256=jI8AvIHrpb9DuB9DPWtNH-uB52NqoAL-7LMuK4E7CN4,134
+dual_finder/preprocess_data/fits_utils.py,sha256=ibWtefUypCvOji8CB4BvDm9_szNyitro5_lCMW7q6PY,3207
+dual_finder/preprocess_data/process_data.py,sha256=52Li8jKiLYaNyjGHMfab6uKwXO_ods5vqkohFSHaOMQ,10180
+dual_finder/visualize/__init__.py,sha256=rOTiJNQG8zQUnP_DlYzNGMzD2896oJgidW1NalaX0NU,272
+dual_finder/visualize/visualize_performance.py,sha256=DwNb7Y6rapvX6M24oh108GWqBJbtzSdYkz7v24qhues,11894
+DualFinder-1.0.0.dist-info/METADATA,sha256=Ko94SfaX4PWibV-l7y-F62BkoX37IpXig_RvsigyoFo,453
+DualFinder-1.0.0.dist-info/WHEEL,sha256=bb2Ot9scclHKMOLDEHY6B2sicWOgugjFKaJsT7vwMQo,110
+DualFinder-1.0.0.dist-info/top_level.txt,sha256=4iTanvDpN0T9yKmxAM66GZ578cZHBJ9ZQ9k2iBtuQfQ,99
+DualFinder-1.0.0.dist-info/RECORD,,

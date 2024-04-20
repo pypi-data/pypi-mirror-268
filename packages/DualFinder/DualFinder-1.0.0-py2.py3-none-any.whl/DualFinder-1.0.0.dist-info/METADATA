@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: DualFinder
+Version: 1.0.0
+Summary: A trainable and visualizable convolutional neural network designed to detect galaxy and AGN mergers. 
+Author: Isaac Moskowitz
+Author-email: isaac.moskowitz@yale.edu
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: tensorflow (>=2.14)
+Requires-Dist: scipy
+Requires-Dist: astropy
+Requires-Dist: scikit-learn
+Requires-Dist: optuna
+Requires-Dist: matplotlib
+Requires-Dist: streamlit
+
