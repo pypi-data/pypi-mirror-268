@@ -1,0 +1,11 @@
+CHANGELOG.md,sha256=4k4Euxxh5S1jDRYsG392kNN1GFTPtGXcssMw4HYOwKE,3650
+nested_config/__init__.py,sha256=ScnoWkpceEGCupkwbmCU5nHfawyt6exi5gvNHMXjFNo,569
+nested_config/_pydantic.py,sha256=7JU5QhCcW681WKk4lK-9vWaEd2j25iozF7nLt2P1RgU,6199
+nested_config/_types.py,sha256=IytDZH6w0Hhy5sakXXZ4suuXMjr4GavnBiCqeClz5S0,457
+nested_config/expand.py,sha256=Hcuof64pQwEPrTXCB2FPRhSepLhPiCjP7bbj5KHYSn4,8182
+nested_config/loaders.py,sha256=1V16exfgGfZeJeMs9MH-FuD4FSdHK1uywrzxqaDbBgU,2969
+nested_config/version.py,sha256=UWLhm0IW4VTKwLlkAw93HUi7u-ZQ7B7L2-sjY-6Oxfw,268
+nested_config-2.1.2.dist-info/LICENSE,sha256=2ivakBWkdthHouGr_c2o5WZhRGD3wiUPeBGHDqutuos,1097
+nested_config-2.1.2.dist-info/METADATA,sha256=CRnMh9vK_Z0z4Ao19XD33sdQ61g8QQAsRncsa63snzI,11278
+nested_config-2.1.2.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+nested_config-2.1.2.dist-info/RECORD,,
