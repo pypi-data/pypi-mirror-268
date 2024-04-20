@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/blueset.egg-info/PKG-INFO
+src/blueset.egg-info/SOURCES.txt
+src/blueset.egg-info/dependency_links.txt
+src/blueset.egg-info/top_level.txt
