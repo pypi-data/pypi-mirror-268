@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cerbogen
+Version: 0.0.14
+Summary: A Python package for CerboTech
+Home-page: https://github.com/clarenceparmar/cerbogen
+Author: Clarence Parmar
+Author-email: git.clarence@gmail.com
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib
+Requires-Dist: pydub
+Requires-Dist: numpy
+Requires-Dist: wave
+Requires-Dist: librosa
+Requires-Dist: pywin32
+
