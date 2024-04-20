@@ -1,0 +1,11 @@
+aiohttp~=3.9.3
+tqdm>=4.64.1
+colorama~=0.4.6
+setuptools
+tqdm
+yarl
+multidict
+attrs
+yarl
+async-timeout
+aiosignal
