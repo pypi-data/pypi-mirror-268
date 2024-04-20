@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+requirements.txt
+setup.cfg
+motionphoto/__init__.py
+motionphoto/__main__.py
+motionphoto/cli.py
+motionphoto/exiftool.py
+motionphoto/google.py
+motionphoto/motion.py
+motionphoto/samsung.py
+motionphoto.egg-info/PKG-INFO
+motionphoto.egg-info/SOURCES.txt
+motionphoto.egg-info/dependency_links.txt
+motionphoto.egg-info/entry_points.txt
+motionphoto.egg-info/requires.txt
+motionphoto.egg-info/top_level.txt
