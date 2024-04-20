@@ -1,0 +1,3 @@
+[console_scripts]
+ed-tracker = edstem.integration.run_eat:main
+generate-env = generate_env:main
