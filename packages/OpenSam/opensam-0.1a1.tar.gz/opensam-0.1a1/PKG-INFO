@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: OpenSam
+Version: 0.1a1
+Summary: A GPT based slack bot trained to specific personalities and use cases.
+Keywords: GPT,AI,Slack,OpenAI,bot
+Author-email: Johannes Maron <johannes@maron.family>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Programming Language :: Python
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Communications :: Email
+Classifier: Topic :: Games/Entertainment :: Role-Playing
+Classifier: Topic :: Multimedia :: Sound/Audio :: Conversion
+Classifier: Topic :: Multimedia :: Sound/Audio :: Speech
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Groupware
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Human Machine Interfaces
+Classifier: Topic :: Text Processing :: Markup :: Markdown
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp
+Requires-Dist: click
+Requires-Dist: certifi
+Requires-Dist: markdownify
+Requires-Dist: redis
+Requires-Dist: requests
+Requires-Dist: slack-bolt
+Requires-Dist: openai~=1.20.0
+Requires-Dist: pyyaml
+Requires-Dist: algoliasearch
+Requires-Dist: sentry-sdk
+Requires-Dist: bandit==1.7.8 ; extra == "lint"
+Requires-Dist: black==24.4.0 ; extra == "lint"
+Requires-Dist: isort==5.13.2 ; extra == "lint"
+Requires-Dist: pydocstyle[toml]==6.3.0 ; extra == "lint"
+Requires-Dist: pytest ; extra == "test"
+Requires-Dist: pytest-asyncio ; extra == "test"
+Requires-Dist: pytest-cov ; extra == "test"
+Requires-Dist: pytest-env ; extra == "test"
+Project-URL: Changelog, https://github.com/voiio/Sam/releases
+Project-URL: Project-URL, https://github.com/voiio/Sam
+Provides-Extra: lint
+Provides-Extra: test
+
+[![PyPi Version](https://img.shields.io/pypi/v/opensam.svg)](https://pypi.python.org/pypi/opensam/)
+[![Test Coverage](https://codecov.io/gh/voiio/sam/branch/main/graph/badge.svg)](https://codecov.io/gh/voiio/sam)
+[![GitHub License](https://img.shields.io/github/license/voiio/sam)](https://raw.githubusercontent.com/voiio/sam/master/LICENSE)
+
+# Sam – cuz your company is nothing without Sam
+
+![meme](https://repository-images.githubusercontent.com/726003479/24d020ac-3ac5-401c-beae-7a6103c4e7ae)
+
+Sam is a Slack bot that uses OpenAI's ChatGPT model to provide a work-colleague
+like experience, right in your Slack workspace.
+
+Everyone in your company has instant access to the most powerful AI companion.
+
+Sam uses OpenAI's assistant API to fine-tune ChatGPT to:
+
+* a specific personality traits,
+* provide domain specific knowledge
+* and company specific context
+
+to provide a work-colleague like experience.
+
+## Sneak peek of Sam in action
+
+![screenshot.png](screenshot.png)
+
+## Installation
+1. Create a new Slack app, as described below.
+2. You will also need an OpenAI API key, which you can get from [here](https://platform.openai.com/api-keys).
+3. You need to create a OpenAI Assistant [here](https://platform.openai.com/assistants) and copy the assistant ID.
+4. With those tokens at the ready, just hit the button below and follow the instructions.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+### Create a Slack App
+
+1. Create a new Slack App [here](https://api.slack.com/apps?new_app=1).
+2. Select `From an app manifest` and enter the URL to the [slack-manifest.yml](slack-manifest.yml) file in this repo.
+3. Click `Create App` and then `Install to Workspace`.
+4. Copy the `Bot User OAuth Access Token` and paste it into the `SLACK_BOT_TOKEN` field in the Heroku app settings.
+5. Create a new `App-Level Tokens` under `Basic Infomation` and copy the token into the `SLACK_APP_TOKEN` field in the Heroku app settings.
+
