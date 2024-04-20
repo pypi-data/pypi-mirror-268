@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: qcanvas-api-clients
+Version: 0.1.1a2
+Summary: 
+Author: QCanvas
+Author-email: qcanvas@noreply.codeberg.org
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: asynctaskpool (>=0.1.2,<0.2.0)
+Requires-Dist: gql (>=3.5.0,<4.0.0)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: tenacity (>=8.2.3,<9.0.0)
+Description-Content-Type: text/markdown
+
+Schema from: https://demo.hosted.panopto.com/Panopto/api/v1/panoptoApi.json
+Use this to convert to openapi (swagger v3): https://editor.swagger.io/
