@@ -1,0 +1,32 @@
+Metadata-Version: 2.3
+Name: cosmic-datapi
+Version: 0.0.2
+Summary: Basically a library to create data mods in Cosmic Reach really fast.
+Project-URL: Homepage, https://codeberg.org/EmmaTheMartian/cosmic-datapi
+Project-URL: Issues, https://codeberg.org/EmmaTheMartian/cosmic-datapi/issues
+Author-email: EmmaTheMartian <emmathemartian@gmail.com>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Requires-Dist: tqdm
+Description-Content-Type: text/markdown
+
+# Cosmic DatAPI
+
+Basically a library to create data mods in Cosmic Reach really fast.
+
+**Example:**
+```python3
+from cosmic_datapi import Mod
+
+MOD = Mod("example_mod")
+
+(MOD.block("example_block")
+    .with_state("default")
+        .with_model("model_cheese")
+        .with_light(14, 13, 12)
+        .build()
+    .build())
+
+MOD.build()
+```
