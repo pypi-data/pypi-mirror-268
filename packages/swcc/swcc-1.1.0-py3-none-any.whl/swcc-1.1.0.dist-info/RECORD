@@ -1,0 +1,17 @@
+swcc/__init__.py,sha256=QAUN6Zc9va4wK5pgsLTVxALnD_dJRq5nAqLRc8aLDJc,552
+swcc/api.py,sha256=GpkED62aOwItzI1tyCRo2a3woCP6ZdM4gZf04MCbh3I,2097
+swcc/cli.py,sha256=wjWPlVj0ojU7M7QxcIdkAGjAUHqmSMllA4dF8lciwLw,4306
+swcc/models/__init__.py,sha256=pLK_fWrkwdfb6HbUZ3BGVlWgXksp6HdVpdEbaQPia5Q,399
+swcc/models/api_model.py,sha256=2gGJbFaA0OAhYS-px9tErN4qrdIU1XYvhEo8yYkmXnY,5819
+swcc/models/constants.py,sha256=E_Qh6ESM0ebMglQTP9nbJnxgNCsNKyBZ2INi_HthdJw,285
+swcc/models/dataset.py,sha256=c34ePxrxgiqTLELgARP4oePmDHc8XMS92M0cZptqBz8,3553
+swcc/models/file.py,sha256=jEpzYQ8F5q7FAkxkKHDODrSbLfcYa9woRIG9NmdkNWk,3304
+swcc/models/other_models.py,sha256=D4i1xuzHBK7Fy8gpaotc3ZC9I_mBTtHf74CboZ49f3E,7195
+swcc/models/project.py,sha256=ZfolhR_lHjYehPqyPzJjVwhv06q-9qqnc_uRdxBj4ig,16751
+swcc/models/subject.py,sha256=5jfl8l6V1gWiOnOVME8-HBgprMWtwITKAwTDMHfATZ0,2342
+swcc/models/utils.py,sha256=21pilqknwHp3ljzwUcaEZcC9BusJhNeNJBGHBk43iso,4130
+swcc-1.1.0.dist-info/METADATA,sha256=kSALolo8YW15YEuyeV5ex20NP90LrOHl9Wn9DZZ-f4Y,1029
+swcc-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+swcc-1.1.0.dist-info/entry_points.txt,sha256=2NXDehk8kirNBHTvyxnOhBsrt4QvHbWTkdhVEpl1xcI,39
+swcc-1.1.0.dist-info/top_level.txt,sha256=4nkdA0UWDMi3q2OqVqa3R3ECUBvC0lSPGMLZMAFRJvI,5
+swcc-1.1.0.dist-info/RECORD,,
