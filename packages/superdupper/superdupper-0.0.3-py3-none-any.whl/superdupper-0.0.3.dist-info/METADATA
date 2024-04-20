@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: superdupper
+Version: 0.0.3
+Summary: Superdupper.
+Description-Content-Type: text/markdown
+Provides-Extra: all
+Requires-Dist: superdupper-core ; extra == 'all'
+Requires-Dist: superdupper-db ; extra == 'all'
+Provides-Extra: core
+Requires-Dist: superdupper-core ; extra == 'core'
+Provides-Extra: db
+Requires-Dist: superdupper-db ; extra == 'db'
+
+# Superdupper
+
+This is Superdupper package.
