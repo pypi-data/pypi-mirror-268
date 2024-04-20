@@ -1,0 +1,3 @@
+[console_scripts]
+bumpsemver=bumpsemver.cli:main
+
