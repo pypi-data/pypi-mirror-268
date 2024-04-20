@@ -1,0 +1,18 @@
+[project]
+dynamic = ["version", "readme", "keywords", "classifiers", "optional-dependencies",]
+name = "waf-libs"
+description = "terrible helper functions for stuff"
+authors = [
+    {name = "Felix Wong", email = "felix@waf.hk"},
+]
+dependencies = ["dnspython", "mysql-connector-python>=8.0", "psycopg[binary]", "pyyaml",]
+requires-python = ">=3.9"
+license = {text = "Apache 2.0"}
+
+[build-system]
+requires = ["setuptools>=61.0.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {file = ["VERSION"]}
+readme = {file = ["README.rst", "USAGE.rst"]}
