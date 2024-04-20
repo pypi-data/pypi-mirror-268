@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "hazard-map"
+version = "0.2.0"
+description = "Build and analyze a network model of hazards, causes, and controls"
+authors = ["Thom Cameron <thomcm@proton.me>"]
+readme = "readme.md"
+license = "license.txt"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+argparse = "^1.4"
+termcolor = "^2.4"
+numpy = "^1.26"
+pandas = "^2.2"
+openpyxl = "^3.1"
+networkx = "^3.3"
+scipy = "^1.13"
+matplotlib = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1"
+black = "^24.4"
+mypy = "^1.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hazard-map = "hazard_map.__init__:main"
+
+[tool.black]
+line-length = 99
+skip-string-normalization = true
+skip-source-first-line = true
+
+[tool.mypy]
+install_types = true
+non_interactive = true
+disable_error_code = ["import-untyped"]
