@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+pipeline_staging_properties_pkg/__init__.py
+pipeline_staging_properties_pkg/pipeline_staging_properties.py
+pkg_newfinalcustom_pipeline_staging_final.egg-info/PKG-INFO
+pkg_newfinalcustom_pipeline_staging_final.egg-info/SOURCES.txt
+pkg_newfinalcustom_pipeline_staging_final.egg-info/dependency_links.txt
+pkg_newfinalcustom_pipeline_staging_final.egg-info/requires.txt
+pkg_newfinalcustom_pipeline_staging_final.egg-info/top_level.txt
