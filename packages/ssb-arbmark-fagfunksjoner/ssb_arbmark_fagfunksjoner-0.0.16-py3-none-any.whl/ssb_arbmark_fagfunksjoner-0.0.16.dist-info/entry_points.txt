@@ -1,0 +1,3 @@
+[console_scripts]
+ssb-arbmark-fagfunksjoner=arbmark.__main__:main
+
