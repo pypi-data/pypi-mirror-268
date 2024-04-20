@@ -1,0 +1,52 @@
+# Manage your notes with pnote!
+
+## About
+
+*pnote* is a text file, format agnostic, note manager.
+It allows to keep a consistant hierarchy of note files that you can work with.
+
+## Getting started
+Installation:
+```
+> pip install pnote
+```
+
+Create a new project:
+```
+> pnote -d ~/mynotes
+> # See configuration in ~/mynotes/config.json
+> # If -d not specified, ${HOME}/.pnote will be used
+```
+
+Open and edit today's note file:
+```
+> pnote -d ~/mynotes -t
+```
+
+## Features
+
+Search for files:
+```
+> pnote -d ~/mynotes search -h
+```
+
+Tag files:
+```
+> pnote -d ~/mynotes tag -h
+```
+
+Manage your project:
+```
+> pnote -d ~/mynotes admin -h
+```
+
+Export your notes:
+```
+> pnote -d ~/mynotes search --subpath | pnote -d ~/mynotes export --json
+> pnote -d ~/mynotes search --subpath | pnote -d ~/mynotes export --template template.txt
+```
+
+For more information on *pnote*:
+```
+> pnote -h
+```

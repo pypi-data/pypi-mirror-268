@@ -1,0 +1,19 @@
+[project]
+name = "pnote"
+dynamic = ["version"]
+dependencies = ["jsonschema"]
+description = "Simple note management tool"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["env*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pnote.__version__"}
+
+[project.scripts]
+pnote = "pnote:main"
