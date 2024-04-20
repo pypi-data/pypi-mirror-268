@@ -1,0 +1,9 @@
+README.md
+setup.py
+xpath_writer/__init__.py
+xpath_writer/xpath_writer.py
+xpath_writer.egg-info/PKG-INFO
+xpath_writer.egg-info/SOURCES.txt
+xpath_writer.egg-info/dependency_links.txt
+xpath_writer.egg-info/requires.txt
+xpath_writer.egg-info/top_level.txt
