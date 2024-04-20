@@ -1,0 +1,2 @@
+[console_scripts]
+revoltmpd = revolt_mpd_status:main
