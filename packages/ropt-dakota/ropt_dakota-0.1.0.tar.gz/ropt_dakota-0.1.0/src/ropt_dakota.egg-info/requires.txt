@@ -1,0 +1,7 @@
+numpy
+carolina
+
+[test]
+ruff
+mypy
+pytest
