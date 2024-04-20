@@ -1,0 +1,3 @@
+import wedme
+
+wedme.thesis()
