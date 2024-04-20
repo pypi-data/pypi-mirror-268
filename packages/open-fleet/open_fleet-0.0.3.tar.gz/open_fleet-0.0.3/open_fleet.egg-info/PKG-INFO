@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: open-fleet
+Version: 0.0.3
+Summary: distributed task distribution framework
+Author: Shiyu Huang
+Author-email: huangsy1314@163.com
+Project-URL: Documentation, https://github.com/huangshiyu13/Fleet
+Keywords: distributed framework
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools>=67.0
+Requires-Dist: rich
+Requires-Dist: tqdm
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: isort; extra == "test"
+Requires-Dist: black; extra == "test"
+Requires-Dist: ruff; extra == "test"
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+
+# Fleet
+
+Fleet is a generic distributed task distribution framework based on a distributed file system. Task distribution frameworks like Ray and Celery require network connections for communication, which makes them difficult to use in clusters with poor network conditions. Fleet is a distributed framework based on a shared file system, independent of any network communication, allowing for task distribution among nodes without any network connections.
+
+## Features
+- Distributed task distribution based on a shared file system
+- Supports dynamic scaling
+- Supports worker node heartbeat
+- Supports manager node restart
+- Supports set timeout for each task
+- Pure Python implementation
+
+## Install
+
+```bash
+pip install open-fleet
+```
+
+## Usage
+
+See more examples in [./examples](./examples).
+
+```python
+# run_manager.py
+from fleet.manager import Manager
+from fleet.config.config import get_args
+
+base_dir = "./share_dir"
+
+def main():
+    job_list = [1,2,3,4]
+    args = get_args(f"--base_dir {base_dir}")
+    manager = Manager(args=args, job_list=job_list)
+    manager.run()
+
+if __name__ == '__main__':
+    main()
+```
+    
+```python
+# run_worker.py
+from fleet.worker import Worker
+from fleet.config.config import get_args
+
+from run_manager import base_dir
+
+def add_one(x, info):
+    return {"status": "success", "result": x + 1}
+
+def main():
+    args = get_args(f"--base_dir {base_dir}")
+    worker = Worker(args=args, job_func=add_one)
+    worker.run()
+
+if __name__ == '__main__':
+    main()
+```

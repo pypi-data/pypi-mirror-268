@@ -1,0 +1,15 @@
+setuptools>=67.0
+rich
+tqdm
+
+[dev]
+build
+twine
+
+[test]
+pytest
+pytest-cov
+mypy
+isort
+black
+ruff
