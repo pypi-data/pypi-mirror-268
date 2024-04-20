@@ -1,0 +1,2 @@
+[console_scripts]
+facade_selenium = facade_selenium:hello
