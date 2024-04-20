@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: api-nichotined
+Version: 0.1.1
+Summary: Simple lib for testing rest API
+Home-page: https://github.com/nichotined/simple-api
+Author: Nicholas Frederich
+Author-email: nicholas.frederich.lagaunne@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: curlify
+
+# API-NICHOTINED
+
+A package that will help on creating session upon making rest API request.
+
+Installation:
+```commandline
+pip install api-nichotined
+```
+
+Sample usage:
+
+```commandline
+import logging
+
+from api_nichotined import RestApi
+
+class TestApis:
+    def __init__(self, base_url=""):
+        self.client = RestApi(base_url=base_url)
+
+    def get_upload(self):
+        return self.client.get(path="/v3.1/name/indonesia")
+
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+    api = TestApis(base_url="https://restcountries.com")
+    api.get_upload().status_code
+
+```
+
