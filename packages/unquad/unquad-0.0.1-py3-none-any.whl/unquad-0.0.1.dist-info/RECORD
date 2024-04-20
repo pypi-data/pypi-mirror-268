@@ -1,0 +1,14 @@
+unquad/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unquad/enums/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unquad/enums/adjustment.py,sha256=aoO24-3wd5fXLC3Du3Fd4-ltznoQDZTWKX01YC5powU,245
+unquad/enums/method.py,sha256=ULepcJ8vio5zi56Xt_yzDZ-JYfSp2veV4_tCzOAmlss,403
+unquad/errors/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unquad/errors/forbidden_model_error.py,sha256=vKi9oxmJAJz28w3Ir7pvnBI7KCFL6RHzOTFWziWur6E,327
+unquad/estimator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unquad/estimator/conformal.py,sha256=ZSu3HzyYMB2x3pLE-TTg6EAT_jrD65hpOYBZc61-Jmc,12428
+unquad/evaluation/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+unquad/evaluation/metrics.py,sha256=x2WAA9MFU5CrwpPfeWnaQPbYuuKjdQ7bIenn_fEBHFg,1354
+unquad-0.0.1.dist-info/METADATA,sha256=KK9h6WjcO5e_W8txYUfZ4WCbhmxSELPzrBM7EfCEU2o,9432
+unquad-0.0.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+unquad-0.0.1.dist-info/licenses/LICENSE,sha256=qMss-gzpDaDiFu-elhCk7k4DP6zATM-aOFTj5PRCQ3M,1530
+unquad-0.0.1.dist-info/RECORD,,
