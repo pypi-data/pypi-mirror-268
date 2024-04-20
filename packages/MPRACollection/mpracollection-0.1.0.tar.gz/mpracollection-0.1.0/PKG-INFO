@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: MPRACollection
+Version: 0.1.0
+Summary: Python Boilerplate contains all the boilerplate you need to create a Python package.
+Author-email: Yilun Sheng <ylsheng@cs.washington.edu>
+Maintainer-email: Yilun Sheng <ylsheng@cs.washington.edu>
+License: MIT license
+Project-URL: bugs, https://github.com/simon1727/MPRACollection/issues
+Project-URL: changelog, https://github.com/simon1727/MPRACollection/blob/master/changelog.md
+Project-URL: homepage, https://github.com/simon1727/MPRACollection
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: typer
+Provides-Extra: dev
+Requires-Dist: coverage; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
