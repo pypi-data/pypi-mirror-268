@@ -1,0 +1,22 @@
+[project]
+name = "pyhasura"
+description = "A Python library to simplify Hasura, GraphQL and Machine Learning"
+version = "1.0.0"
+authors = [
+    { name = "Kenneth Stott", email = "ken@kenstott.com" }
+]
+requires-python = ">= 3.8"
+readme = "README.md"
+keywords = ["graphql", "hasura", "ml", "ai", "machine learning", "arrow"]
+dependencies = [
+    "scikit-learn",
+    "scikit-learn-extra",
+    "pyarrow",
+    "pandas",
+    "gql",
+    "python-dotenv",
+    "pprintpp"
+]
+
+[project.urls]
+

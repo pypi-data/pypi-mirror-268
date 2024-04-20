@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+pyhasura/__init__.py
+pyhasura/flatten_dict.py
+pyhasura/gql_client.py
+pyhasura/hasura_client.py
+pyhasura.egg-info/PKG-INFO
+pyhasura.egg-info/SOURCES.txt
+pyhasura.egg-info/dependency_links.txt
+pyhasura.egg-info/requires.txt
+pyhasura.egg-info/top_level.txt
