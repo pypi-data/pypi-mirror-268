@@ -1,0 +1,50 @@
+{
+    "xnap": {
+        "_ws.col.info": {
+            "HandoverRequest": {
+                "srcNode": "CUCP",
+                "dstNode": "Tgt_CUCP"
+            },
+            "HandoverRequestAcknowledge": {
+                "srcNode": "Tgt_CUCP",
+                "dstNode": "CUCP"
+            },
+            "SNStatusTransfer": {
+                "srcNode": "CUCP",
+                "dstNode": "Tgt_CUCP"
+            },
+            "HandoverPreparationFailure": {
+                "srcNode": "Tgt_CUCP",
+                "dstNode": "CUCP"
+            },
+            "HandoverCancel": {
+                "srcNode": "CUCP",
+                "dstNode": "Tgt_CUCP"
+            },
+            "RetrieveUEContextRequest": {
+                "srcNode": "Tgt_CUCP",
+                "dstNode": "CUCP"
+            },
+            "RetrieveUEContextResponse": {
+                "srcNode": "CUCP",
+                "dstNode": "Tgt_CUCP"
+            },
+            "RetrieveUEContextFailure": {
+                "srcNode": "Tgt_CUCP",
+                "dstNode": "CUCP"
+            },
+            "UEContextRelease": {
+                "srcNode": "Tgt_CUCP",
+                "dstNode": "CUCP"
+            },
+            "HandoverSuccess": {
+                "srcNode": "Tgt_CUCP",
+                "dstNode": "CUCP"
+            },
+            "EarlyStatusTransfer": {
+                "srcNode": "CUCP",
+                "dstNode": "Tgt_CUCP"
+            }
+        }
+    }
+}
