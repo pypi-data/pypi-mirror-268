@@ -1,0 +1,6 @@
+google-cloud-secret-manager
+boto3
+pytest>=3
+pytest-asyncio
+pytest-cov>=2.8.1
+respx>=0.16.3

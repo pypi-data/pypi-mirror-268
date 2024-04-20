@@ -1,0 +1,6 @@
+connexion[swagger-ui]>=3.0.0
+tenacity
+httpx[http2]
+python-jose
+orjson
+uvicorn
