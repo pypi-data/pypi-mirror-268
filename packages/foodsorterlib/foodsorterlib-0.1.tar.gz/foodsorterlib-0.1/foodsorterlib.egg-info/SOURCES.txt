@@ -1,0 +1,8 @@
+setup.py
+foodsorter/__init__.py
+foodsorter/sorter.py
+foodsorterlib.egg-info/PKG-INFO
+foodsorterlib.egg-info/SOURCES.txt
+foodsorterlib.egg-info/dependency_links.txt
+foodsorterlib.egg-info/requires.txt
+foodsorterlib.egg-info/top_level.txt
