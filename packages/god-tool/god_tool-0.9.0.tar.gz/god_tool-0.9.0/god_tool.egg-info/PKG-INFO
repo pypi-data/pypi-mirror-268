@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: god-tool
+Version: 0.9.0
+Summary: Provisioning and App deployment tool.
+Home-page: https://github.com/cjng96/gat
+Author: Felix Choi
+Author-email: cjng96@gmail.com
+License: LGPL
+Keywords: auto restart,deployment
+Platform: Posix; MacOS X; Windows
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: paramiko
+Requires-Dist: watchdog
+Requires-Dist: PyYAML
+
+# Features
+
+- Automatically re-run the application when modifying the soruce.
+- Deploy the application like Capistrano. it's powerful but simple.
+
+# How to install
+
+\$ pip3 install gat-tool
+
+then you can use "gat init" command under the foler which you want to use.
+
+# How to use
+
+## Initialization
+
+\$ gat init
+
+It generates gat.yml and gat_my.py files.
+
+### gat.yml
+
+You can define the configure of the application and the server definition for the application deployment in this file.
+
+### gat_my.py
+
+You can define and expand the jobs for running and deployments.
