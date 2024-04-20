@@ -1,0 +1,6 @@
+dagster_plus==1.7.2rc4
+
+[tests]
+mypy
+pylint
+pytest
