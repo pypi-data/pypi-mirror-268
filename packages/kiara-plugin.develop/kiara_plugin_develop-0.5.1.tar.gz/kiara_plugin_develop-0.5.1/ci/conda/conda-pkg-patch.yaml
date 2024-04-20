@@ -1,0 +1,23 @@
+requirements:
+  build: "python-build"
+
+channels:
+  - dharpa
+  - conda-forge
+
+host_requirements:
+  - pip
+  - python
+  - setuptools
+  - setuptools_scm
+
+test:
+  imports:
+    - kiara_plugin.develop
+  source_files:
+    - tests
+    - examples
+  commands:
+    - kiara module list
+    - kiara build
+    - kiara dev
