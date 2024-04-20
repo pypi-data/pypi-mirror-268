@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: npiai
+Version: 0.0.1.dev1
+Summary: 
+Author: wenfeng
+Author-email: w@npi.ai
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: npiai-proto (==0.0.1.*)
+Requires-Dist: openai (>=1.23.2,<2.0.0)
+Requires-Dist: termcolor (>=2.4.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+
