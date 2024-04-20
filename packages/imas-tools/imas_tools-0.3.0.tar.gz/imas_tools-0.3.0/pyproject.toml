@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "imas-tools"
+version = "0.3.0"
+description = ""
+authors = ["darwintree <17946284+darwintree@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.31.0"
+typing-extensions = "^4.11.0"
+pytz = "^2024.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
