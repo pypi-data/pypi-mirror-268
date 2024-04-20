@@ -1,0 +1,9 @@
+npiai/__init__.py,sha256=pOW5iXKJTUylk5pou3cUhPvIbWOUF-yDfwvbirs0uZM,151
+npiai/app/__init__.py,sha256=r9163Mefj2bt9KsBt36Dg3uRBxp7NaeOx1oqWvMQ8ZM,132
+npiai/app/google.py,sha256=Tpydy9lsREHFSiOQgzhBcxa0yMRbd2h8DspC3tmChGw,510
+npiai/app/human_feedback.py,sha256=lHmiX20g6HjviH31_9DgTVf3ly1EOOp5X95j86SOB-0,1090
+npiai/core/__init__.py,sha256=Pdb33674Yp0jnpbND6xtTIfs61Qw0mg8Sten-YKPET0,57
+npiai/core/base.py,sha256=05o-IARgQUZtBXkt_NA0uIyXsMqAE1JCNUDZmb1nH7k,6106
+npiai-0.0.2.dev2.dist-info/METADATA,sha256=1X2sGTGoeErPLPYQj4jeH1PflfrNxxMVbzxj1DNz_q4,506
+npiai-0.0.2.dev2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+npiai-0.0.2.dev2.dist-info/RECORD,,
