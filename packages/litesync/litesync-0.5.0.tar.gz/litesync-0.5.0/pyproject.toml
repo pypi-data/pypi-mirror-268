@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[build_ext]
+include_dirs = ["/usr/local/include", "."]
+library_dirs = ["/usr/local/lib", "C:\\Windows\\System32"]
+
+[tool.cibuildwheel]
+build = "cp37* cp38* cp39* cp310* cp311* cp312*"
+build-verbosity = 3
+repair-wheel-command = ""
+
+[tool.cibuildwheel.linux]
+before-build = """
+curl -O https://litesync.io/download/litesync-free-linux-x86_64.tar.gz
+tar -xzvf litesync-free-linux-x86_64.tar.gz
+./install
+"""
+build = "cp37-manylinux_x86_64 cp38-manylinux_x86_64 cp39-manylinux_x86_64 cp310-manylinux_x86_64 cp311-manylinux_x86_64 cp312-manylinux_x86_64"
+#skip = "*_ppc64le *_s390x"
+
+[tool.cibuildwheel.windows]
+before-build = """
+curl -O https://litesync.io/download/litesync-free-windows-x86_64.tar.gz
+tar -xzvf litesync-free-windows-x86_64.tar.gz
+install.bat
+"""
+skip = "*-win32"
+
+[tool.cibuildwheel.macos]
+before-build = """
+curl -O https://litesync.io/download/litesync-free-mac-x86_64.tar.gz
+tar -xzvf litesync-free-mac-x86_64.tar.gz
+./install
+"""
