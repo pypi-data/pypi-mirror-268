@@ -1,0 +1,91 @@
+[project]
+name = "logto"
+version = "0.2.1"
+description = "Logto Python SDK."
+authors = [
+    { name = "Silverhand Inc.", email = "contact@silverhand.io" },
+]
+dependencies = [
+    "aiohttp<4.0.0,>=3.8.5",
+    "pydantic<3.0.0,>=2.1.1",
+    "pyjwt[crypto]<3.0.0,>=2.8.0",
+]
+requires-python = "<4.0,>=3.8"
+readme = "README.md"
+keywords = [
+    "logto",
+    "auth",
+    "user",
+    "authentication",
+    "authorization",
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+homepage = "https://logto.io/"
+repository = "https://github.com/logto-io/python"
+documentation = "https://github.com/logto-io/python/tree/master/docs"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.coverage.run]
+branch = true
+omit = [
+    "*_test.py",
+]
+source = [
+    "logto",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.pydoc-markdown]
+loaders = [
+    { type = "python" },
+]
+processors = [
+    { type = "filter", expression = "not name.endswith('_test') and default()" },
+]
+
+[tool.pydoc-markdown.renderer]
+filename = "docs/api.md"
+type = "markdown"
+descriptive_class_title = false
+render_toc = true
+toc_maxdepth = 1
+render_toc_title = "Logto Python SDK API reference"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+test = "pytest --cov --cov-report=term-missing"
+flask = "flask --app samples.flask --debug run"
+doc = "pydoc-markdown"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "flask[async]>=2.3.3",
+    "pytest>=7.4.4",
+    "pytest-cov>=4.1.0",
+    "python-dotenv>=1.0.1",
+    "black>=24.3.0",
+    "pytest-mock>=3.14.0",
+    "pytest-asyncio>=0.23.6",
+    "pydoc-markdown>=4.8.2",
+]
+
+[tool.pdm.resolution]
+excludes = [
+    "black",
+]
+
+[tool.pdm.build]
+includes = []
