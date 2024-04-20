@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+temalib/__init__.py
+temalib.egg-info/PKG-INFO
+temalib.egg-info/SOURCES.txt
+temalib.egg-info/dependency_links.txt
+temalib.egg-info/top_level.txt
