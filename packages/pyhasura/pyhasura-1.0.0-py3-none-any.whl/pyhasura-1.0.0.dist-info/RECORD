@@ -1,0 +1,12 @@
+py_hasura/__init__.py,sha256=_OXqzoFtCQmmufZh_JVuNRtSJ5waCPGU8h8vNbMzoag,136
+py_hasura/flatten_dict.py,sha256=XmzT1ZKeDLBZBgTH7NXskqdt5qLnfaiBTo_uHMczRrg,745
+py_hasura/gql_client.py,sha256=QvwGdhGRfHj6sDCs09OIW5NHIPGw8spRic74ZLkBUWQ,364
+py_hasura/hasura_client.py,sha256=uySEhh4PL4lu8Fe2nOhtXskZXb_0x58CT9YXSe3bAnE,7176
+pyhasura/__init__.py,sha256=_OXqzoFtCQmmufZh_JVuNRtSJ5waCPGU8h8vNbMzoag,136
+pyhasura/flatten_dict.py,sha256=XmzT1ZKeDLBZBgTH7NXskqdt5qLnfaiBTo_uHMczRrg,745
+pyhasura/gql_client.py,sha256=QvwGdhGRfHj6sDCs09OIW5NHIPGw8spRic74ZLkBUWQ,364
+pyhasura/hasura_client.py,sha256=4_-lb66XChqHfNqDNccyHbd4l5Tmkm5yTHkUP_1dEIA,13008
+pyhasura-1.0.0.dist-info/METADATA,sha256=JZtl0BLhTcb0m59G3uTiLKzvNMf3ztr5kxy-NyI6jsU,3438
+pyhasura-1.0.0.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pyhasura-1.0.0.dist-info/top_level.txt,sha256=93JhNXIwGx4cBCfO-ajSklyxXuNmTCYLHTeADLok9Zc,9
+pyhasura-1.0.0.dist-info/RECORD,,
