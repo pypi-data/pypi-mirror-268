@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: chainzpy
+Version: 0.5
+Summary: API wrapper for https://chainz.cryptoid.info/
+Requires-Dist: requests
+Requires-Dist: bs4
+
+This API wrapper allows you to gather information about peoples crypto wallets and their transactions. It is important to remember that this only works for cryptos that chainz supports
