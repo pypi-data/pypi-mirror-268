@@ -1,0 +1,3 @@
+django>=4.2
+skip-django-fperms>=0.5.0
+skip-django-is-core>=2.25.0
