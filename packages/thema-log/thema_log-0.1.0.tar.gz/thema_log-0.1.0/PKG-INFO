@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: thema-log
+Version: 0.1.0
+Summary: Dummy package - do not install
+Author-Email: Jonathan Lifschutz <jonny@thema.ai>
+License: Propietary
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# README
+
+Name squatting is recommended by [pip](https://github.com/pypa/pip/issues/8606#issuecomment-661775020) in absence of a devpi server.

@@ -1,0 +1,22 @@
+[project]
+name = "thema-log"
+version = "0.1.0"
+description = "Dummy package - do not install"
+authors = [
+    { name = "Jonathan Lifschutz", email = "jonny@thema.ai" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "Propietary"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
