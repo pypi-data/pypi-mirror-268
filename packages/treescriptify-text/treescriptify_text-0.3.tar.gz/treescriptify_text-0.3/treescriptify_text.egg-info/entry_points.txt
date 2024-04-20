@@ -1,0 +1,3 @@
+[console_scripts]
+treescriptify-text = treescriptify_text.__main__:main
+treescriptify_text = treescriptify_text.__main__:main
