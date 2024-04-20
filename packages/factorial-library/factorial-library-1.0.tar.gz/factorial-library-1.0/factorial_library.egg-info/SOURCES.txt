@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+factorial_library.egg-info/PKG-INFO
+factorial_library.egg-info/SOURCES.txt
+factorial_library.egg-info/dependency_links.txt
+factorial_library.egg-info/top_level.txt
