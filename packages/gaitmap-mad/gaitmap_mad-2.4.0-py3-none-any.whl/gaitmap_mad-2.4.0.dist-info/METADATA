@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: gaitmap_mad
+Version: 2.4.0
+Summary: Specific algorithm implementaions by the mad_lab
+Home-page: https://github.com/mad-lab-fau/gaitmap
+License: AGPL-3.0
+Author: Arne Küderle
+Author-email: arne.kuederle@fau.de
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Repository, https://github.com/mad-lab-fau/gaitmap
+Description-Content-Type: text/markdown
+
+# Gaitmap-MAD
+
+This is a companion package to the `gaitmap` library.
+It contains algorithms developed by the [MaD Lab](https://www.mad.tf.fau.de/) in collaboration with industry partners.
+Compared to the main gaitmap package, this package is published under a AGPL-3.0 license.
+
+To learn more about gaitmap and gaitmap_mad, please visit the 
+[gaitmap documentation](https://gaitmap.readthedocs.io/en/latest/) or the [github repository](https://github.com/mad-lab-fau/gaitmap/) 
+
+Note: You should not install this package without gaitmap! Always install the same version of gaitmap and gaitmap_mad.
