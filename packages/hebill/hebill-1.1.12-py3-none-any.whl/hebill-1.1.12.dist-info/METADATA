@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: hebill
+Version: 1.1.12
+Summary: Python Hebill
+Requires-Python: >=3.12
+Description-Content-Type: text/plain
+Requires-Dist: psutil ==5.9.8
+Requires-Dist: pillow ==10.3.0
+Requires-Dist: requests ==2.31.0
+Requires-Dist: wxpython ==4.2.1
+Requires-Dist: reportlab ==4.1.0
+Requires-Dist: PyMySQL ==1.1.0
+Requires-Dist: DBUtils ==3.1.0
+
+# hebill
+```python
+```
+
+## hebill.pypi
+```python
+import os
+import sys
+
+import hebill
+
+print(os.path.abspath(sys.executable))
+if len(sys.argv) > 0:
+    python_script_path = sys.argv[0]
+    python_startup_file = os.path.abspath(python_script_path)
+    print("首次启动的 Python 文件:", python_startup_file)
+else:
+    print("无法获取首次启动的 Python 文件。")
+
+
+root = os.path.dirname(os.path.abspath(__file__))
+pack = hebill.pypi.Pypi()
+pack.name = hebill.NAME
+pack.version = hebill.VERSION
+pack.description = hebill.DESCRIPTION
+pack.long_description = 'README.MD'
+pack.set_long_description_content_type_markdown()
+pack.pack()
+```
+
+## hebill.webserver
+```python
+import hebill
+
+
+if __name__ == '__main__':
+    app = hebill.webserver.WebServer('', 20000, '')
+    app.start()
+```
