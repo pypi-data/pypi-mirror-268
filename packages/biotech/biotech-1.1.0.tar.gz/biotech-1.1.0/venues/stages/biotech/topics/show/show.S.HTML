@@ -1,0 +1,31 @@
+
+
+<pre>
+
+	<h1>show variable</h1>
+	
+	<h2>inspect with pexpect = infinite loop</h2>
+	
+		<h3>example 1</h3>
+			frame = inspect.currentframe ().f_back
+			print ('frame2:', inspect.getframeinfo (inspect.currentframe ()))
+			print ('frame:', frame)
+			print ('frame2:', inspect.getframeinfo (frame))
+			filename = inspect.getframeinfo (frame).filename
+			lineno = inspect.getframeinfo (frame).lineno
+
+
+
+		<h3>example 2</h3>
+			print (inspect.stack())
+
+
+
+
+
+
+
+
+
+
+</pre>
