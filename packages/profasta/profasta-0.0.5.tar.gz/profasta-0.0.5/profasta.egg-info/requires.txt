@@ -1,0 +1,7 @@
+
+[dev]
+nox
+pytest
+
+[tests]
+pytest
