@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=69.2.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "basedflare-session"
+version = "0.1.1"
+dependencies = [
+    "requests>=2.31.0",
+    "argon2-cffi>=23.1.0",
+]
+requires-python = ">=3.8"
+authors = [
+    { name = "loynet", email = "loynet@protonmail.com" },
+]
+description = "Provides a requests-flavored session to solve BasedFlare challenges automatically. It also includes utility functions to solve the challenges manually."
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["basedflare", "session"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+]
+
+[project.urls]
+Homepage = "https://github.com/loynet/basedflare-session"
+Issues = "https://github.com/loynet/basedflare-session/issues"
+Repository = "https://github.com/loynet/basedflare-session.git"

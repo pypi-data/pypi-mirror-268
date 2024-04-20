@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/basedflare_session/__init__.py
+src/basedflare_session/exceptions.py
+src/basedflare_session/session.py
+src/basedflare_session/utils.py
+src/basedflare_session.egg-info/PKG-INFO
+src/basedflare_session.egg-info/SOURCES.txt
+src/basedflare_session.egg-info/dependency_links.txt
+src/basedflare_session.egg-info/requires.txt
+src/basedflare_session.egg-info/top_level.txt
