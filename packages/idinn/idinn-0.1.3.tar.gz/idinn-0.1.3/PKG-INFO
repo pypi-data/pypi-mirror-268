@@ -1,0 +1,115 @@
+Metadata-Version: 2.3
+Name: idinn
+Version: 0.1.3
+Summary: Inventory dynamics–informed neural networks for solving single-sourcing and dual-sourcing problems.
+Project-URL: Homepage, https://gitlab.com/ComputationalScience/idinn
+Project-URL: Documentation, https://inventory-optimization.readthedocs.io
+Project-URL: Issues, https://gitlab.com/ComputationalScience/idinn/-/issues
+Author-email: Jiawei Li <sud.concept0x@icloud.com>, Thomas Asikis <thomas.asikis@uzh.ch>, Ioannis Fragkos <fragkos@rsm.nl>, Lucas Boettcher <l.boettcher@fs.de>
+License: MIT License
+        
+        Copyright (c) 2021 Jiawei Li, Thomas Asikis, Ioannis Fragkos, and Lucas Boettcher
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: dynamic control,neural networks
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: torch>=2.0
+Provides-Extra: dynamic-programming
+Requires-Dist: numba; extra == 'dynamic-programming'
+Description-Content-Type: text/markdown
+
+# idinn: Inventory-Dynamics Control with Neural Networks
+
+[<img src="https://gitlab.com/ComputationalScience/idinn/-/raw/main/docs/_static/youtube.png" align="center" width="60%" size="auto" alt="youtube">](https://www.youtube.com/watch?v=hUBfTWV6tWQ)
+
+`idinn` implements **i**nventory **d**ynamics–**i**nformed **n**eural **n**etworks for solving single-sourcing and dual-sourcing problems. Neural network controllers and inventory dynamics are implemented into customizable objects with PyTorch backend to enable users to find the optimal neural controllers for the user-specified inventory systems.
+
+## Installation
+
+The package can be installed form PyPI. To do that, run
+
+```
+pip install idinn
+```
+
+Or, if you want to inspect the source code and edit locally, run
+
+```
+git clone https://gitlab.com/ComputationalScience/idinn.git
+cd idinn
+pip install -e .
+```
+
+## Example Usage
+
+```python
+import torch
+from idinn.sourcing_model import SingleSourcingModel
+from idinn.controller import SingleSourcingNeuralController
+
+# Initialize the sourcing model and the neural controller
+sourcing_model = SingleSourcingModel(
+    lead_time=0,
+    holding_cost=5,
+    shortage_cost=495,
+    batch_size=32,
+    init_inventory=10,
+    demand_distribuion="uniform",
+    demand_low=1,
+    demand_high=4
+)
+controller = SingleFullyConnectedNeuralController(
+    hidden_layers=[2],
+    activation=torch.nn.CELU(alpha=1)
+)
+# Train the neural controller
+controller.train(
+    sourcing_model=sourcing_model,
+    sourcing_periods=50,
+    validation_sourcing_periods=1000,
+    epochs=5000,
+    tensorboard_writer=torch.utils.tensorboard.SummaryWriter(),
+    seed=1,
+)
+# Simulate and plot the results
+controller.plot(sourcing_model=sourcing_model, sourcing_periods=100)
+# Calculate the optimal order quantity for applications
+controller.forward(current_inventory=10, past_orders=[1, 5])
+```
+
+## Documentation
+
+For tutorials and documentation, please refer to our [documentation](https://inventory-optimization.readthedocs.io/en/latest/).
+
+## Papers using `idinn`
+
+* Böttcher, Lucas, Thomas Asikis, and Ioannis Fragkos. "Control of Dual-Sourcing Inventory Systems Using Recurrent Neural Networks." [INFORMS Journal on Computing](https://pubsonline.informs.org/doi/abs/10.1287/ijoc.2022.0136) 35.6 (2023): 1308-1328.
+
+## Contributors
+
+* [Jiawei Li](https://github.com/iewaij)
+* [Thomas Asikis](https://gitlab.com/asikist)
+* [Ioannis Fragkos](https://gitlab.com/ioannis.fragkos1)
+* [Lucas Böttcher](https://gitlab.com/lucasboettcher)
