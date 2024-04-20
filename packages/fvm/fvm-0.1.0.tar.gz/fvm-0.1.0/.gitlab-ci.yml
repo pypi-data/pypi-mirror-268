@@ -1,0 +1,15 @@
+stages:
+  - build
+
+docker-build-and-release:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u booniepepper -p "${DOCKER_PASSWORD}"
+    - apk add make
+  script:
+    - make release
+  only:
+    - core
