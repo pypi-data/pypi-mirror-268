@@ -1,0 +1,6 @@
+jsonschema
+dataclasses
+typing
+bioblend
+cyvcf2
+pymongo
