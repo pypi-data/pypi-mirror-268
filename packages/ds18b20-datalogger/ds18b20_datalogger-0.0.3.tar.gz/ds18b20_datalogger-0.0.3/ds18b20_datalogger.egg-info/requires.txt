@@ -1,0 +1,25 @@
+paho-mqtt<2
+pyyaml<7
+
+[:python_version < "3.9"]
+importlib-resources
+
+[develop]
+black<25
+mypy<1.10
+poethepoet<0.26
+pyproject-fmt<1.8
+ruff<0.4
+validate-pyproject<0.17
+
+[docs]
+
+[release]
+build<2
+keyring
+twine<6
+
+[test]
+pyfakefs<6
+pytest<9
+pytest-cov<6
