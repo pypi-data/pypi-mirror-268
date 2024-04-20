@@ -1,0 +1,1 @@
+from .inventory import get_product_quantity
