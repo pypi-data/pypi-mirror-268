@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aeroterra-ds
+Version: 1.0.4
+Summary: Python Functions To Work With GeoSpatial Data & ArcGis in a simpler way
+Home-page: https://example.com
+Author: Data Science
+Author-email: aeroterra_ds@aeroterra.com
+Project-URL: Docs, https://docs.example.com
+Keywords: arcgis
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Aeroterra
