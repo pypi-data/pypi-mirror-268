@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+rakeshkannatest/__init__.py
+rakeshkannatest/main.py
+rakeshkannatest.egg-info/PKG-INFO
+rakeshkannatest.egg-info/SOURCES.txt
+rakeshkannatest.egg-info/dependency_links.txt
+rakeshkannatest.egg-info/top_level.txt
+test/test.py
