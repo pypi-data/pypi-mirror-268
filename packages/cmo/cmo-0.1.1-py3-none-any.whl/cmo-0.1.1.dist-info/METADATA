@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cmo
+Version: 0.1.1
+Summary: Constrained multiobjective benchmark suites and indicators
+Home-page: https://github.com/jsi-ci/cmo
+Author: Jordan Nicholas Cork
+Author-email: jordan_n_cork@hotmail.com
+License: GPLv3
+License-File: LICENSE
+Requires-Dist: numpy >=1.19.5
+Requires-Dist: pymoo >=0.6.0
+Requires-Dist: pygmo >=2.19.5
+
