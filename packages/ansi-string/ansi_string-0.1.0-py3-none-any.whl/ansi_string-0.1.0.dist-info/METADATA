@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: ansi-string
+Version: 0.1.0
+Summary: ANSI String Formatter in Python for CLI Color and Style Formatting
+Home-page: https://github.com/Tails86/ansi-string
+Author: James Smith
+Author-email: jmsmith86@gmail.com
+Project-URL: Documentation, https://github.com/Tails86/ansi-string
+Project-URL: Bug Reports, https://github.com/Tails86/ansi-string/issues
+Project-URL: Source Code, https://github.com/Tails86/ansi-string
+Keywords: ANSI,string
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: check-manifest ; extra == 'dev'
+
+# ansi-string
+
+This is a work in progress.
+
+This code was originally written for [greplica](https://pypi.org/project/greplica/), but I felt it deserved its own, separate library.
+
+## Examples:
+
+![Examples](docs/examples.jpg)
