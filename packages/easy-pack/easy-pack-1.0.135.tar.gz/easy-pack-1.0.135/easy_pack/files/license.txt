@@ -1,0 +1,2 @@
+Place your license agreement text here.
+You can find commonly used license agreements at https://opensource.org/licenses
