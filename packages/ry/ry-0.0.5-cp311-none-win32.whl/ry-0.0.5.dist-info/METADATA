@@ -1,0 +1,57 @@
+Metadata-Version: 2.3
+Name: ry
+Version: 0.0.5
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: pytest ; extra == 'tests'
+Provides-Extra: tests
+Summary: ry = rust + python kitchen sink utils (WIP)
+Keywords: rust,pyo3
+Author-email: jesse rubin <jessekrubin@gmail.com>
+Maintainer-email: jesse rubin <jessekrubin@gmail.com>
+License: MIT OR Apache-2.0
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# ry
+
+rust + python kitchen sink library
+
+## What and why?
+
+This is a collection of pyo3-wrappers for rust crates I wish existed in python.
+
+It all started with me wanting a fast `fnv1a-64`
+
+## Crate bindings
+
+- `which`
+- `fnv`
+- `shlex`
+- `walkdir`
+- TBD:
+  - `globset`
+  - `regex`
+  - `ignore`
+  - `tokio` (fs + process)
+  - `tracing` (could be nicer than python's awful logging lib)
+
+## DEV
+
+`just` is used to run tasks.
+
