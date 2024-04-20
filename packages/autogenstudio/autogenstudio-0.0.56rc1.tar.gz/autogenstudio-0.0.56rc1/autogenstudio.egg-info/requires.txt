@@ -1,0 +1,17 @@
+pydantic
+fastapi
+typer
+uvicorn
+arxiv
+pyautogen[gemini]>=0.2.0
+python-dotenv
+websockets
+numpy<2.0.0
+sqlmodel
+
+[database]
+psycopg2
+
+[web]
+fastapi
+uvicorn
