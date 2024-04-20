@@ -1,0 +1,3 @@
+[console_scripts]
+accusort = eagle.main:main
+
