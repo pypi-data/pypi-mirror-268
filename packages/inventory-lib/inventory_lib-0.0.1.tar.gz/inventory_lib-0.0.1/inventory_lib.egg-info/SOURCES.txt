@@ -1,0 +1,7 @@
+setup.py
+inventory_lib/__init__.py
+inventory_lib/inventory.py
+inventory_lib.egg-info/PKG-INFO
+inventory_lib.egg-info/SOURCES.txt
+inventory_lib.egg-info/dependency_links.txt
+inventory_lib.egg-info/top_level.txt
