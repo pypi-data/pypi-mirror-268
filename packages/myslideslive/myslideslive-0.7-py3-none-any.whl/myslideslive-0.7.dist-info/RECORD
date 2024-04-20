@@ -1,0 +1,11 @@
+myslideslive/__init__.py,sha256=3jn0XAvE_q4mZkSw9mMntUbb8tKLGmhAgjqITN51coI,67
+myslideslive/_nbdev.py,sha256=igHryFOlj5afSpNp9pzQPjZb-Q-r7JP9Uxt2DpQ3FiY,1127
+myslideslive/cli.py,sha256=Yi-zeN9dNXcTbtAWuxAp5W7jJ29sytxuEKzsPgYxXX0,3308
+myslideslive/slideslive.py,sha256=3FEQOc5cd2ddDMNt54p47Npxi0rtSHRd2ae-4j3BPds,30314
+myslideslive/test_helper.py,sha256=wH2xPcxD37AMvaQA8HdQ4VrAZ4p9K85L2ysSke6gM3U,329
+myslideslive-0.7.dist-info/LICENSE,sha256=3swVsc8dZqtKBu-5c4jZNU0ClPAuWfNT3oSXlTrj9Zo,1538
+myslideslive-0.7.dist-info/METADATA,sha256=9UTcJjDhC1ssWpe3BkEJrWt5l0CkDyoPqJa75W3DTAU,4703
+myslideslive-0.7.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+myslideslive-0.7.dist-info/entry_points.txt,sha256=XbNUefzivJlPvFNJjW5U62e2OD7B7ygAqorFPDqfoSE,47
+myslideslive-0.7.dist-info/top_level.txt,sha256=PuUuCgB4USImjexGBDLPhH2jko415ZahJa5617o68jc,13
+myslideslive-0.7.dist-info/RECORD,,
