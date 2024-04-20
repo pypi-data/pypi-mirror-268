@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: py_wanderer
+Version: 1.0.3
+Summary: Maze builder and pathfinding algorithms.
+Author: Alyce Osbourne
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: matplotlib ; extra == "plot"
+Project-URL: Home, https://github.com/AlyceOsbourne/pathfinder
+Provides-Extra: plot
