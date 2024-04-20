@@ -1,0 +1,27 @@
+[project]
+name = "marcuslion"
+version = "0.2.38"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.poetry.urls]
+"Homepage" = "https://github.com/Marcus-Lion/ml-lib-python.git"
+"Bug Tracker" = "https://github.com/Marcus-Lion/ml-lib-python.git/issues"
+
+[tool.poetry]
+name = "marcuslion"
+version = "0.2.42"
+description = "Marcus Lion Python library package"
+authors = ["Support <support@marcuslion.com>"]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+

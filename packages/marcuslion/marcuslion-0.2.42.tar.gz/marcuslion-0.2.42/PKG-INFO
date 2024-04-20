@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: marcuslion
+Version: 0.2.42
+Summary: Marcus Lion Python library package
+Author: Support
+Author-email: support@marcuslion.com
+Requires-Python: >=3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Project-URL: Bug Tracker, https://github.com/Marcus-Lion/ml-lib-python.git/issues
+Project-URL: Homepage, https://github.com/Marcus-Lion/ml-lib-python.git
+Description-Content-Type: text/markdown
+
+# ml-lib-python
+Marcus Lion Python Library
+
+## Install
+```
+pip install marcuslion --upgrade
+```
+
+## Run
+```
+--> import marcuslion as ml
+--> help(ml)
+```
+
