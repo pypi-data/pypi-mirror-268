@@ -1,0 +1,4 @@
+-e.[test]
+-rrequirements-testing.txt
+twine
+wheel
