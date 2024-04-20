@@ -1,0 +1,53 @@
+stages:
+  - build
+  - release
+
+
+flit-build:
+  image: python:latest
+  stage: build
+  before_script:
+    - pip install flit
+  script:
+    - make build
+    - FLIT_ROOT_INSTALL=1 make test
+  only:
+    - core
+
+flit-release:
+  image: python:latest
+  stage: release
+  allow_failure: true # Allowed to fail e.g. when version is not updated
+  before_script:
+    - pip install flit
+  script:
+    - FLIT_ROOT_INSTALL=1 make release
+  only:
+    - core
+
+
+docker-build:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - apk add make
+  script:
+    - make docker
+  only:
+    - core
+
+docker-release:
+  image: docker:latest
+  stage: release
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u booniepepper -p "${DOCKER_PASSWORD}"
+    - apk add make
+  script:
+    - make docker-release
+  only:
+    - core
+
