@@ -1,0 +1,2 @@
+[nbdev]
+ship_model_lib = ship_model_lib._modidx:d
