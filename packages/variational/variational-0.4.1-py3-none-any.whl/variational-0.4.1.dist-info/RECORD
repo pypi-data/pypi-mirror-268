@@ -1,0 +1,12 @@
+variational/__init__.py,sha256=s9g7d_L9MpHjXqKPhDsZelj3Fa2ixsj26aBeCqYtVz0,238
+variational/auth.py,sha256=BAKpNeXGDiSHtnY-e2QIX8p9g98a36qSszSaKs_9s4U,862
+variational/client.py,sha256=7hvR9EebUxI3ZNM_pJoErPaQJj9f6Lqw59_Dp0mCjZ8,15334
+variational/models.py,sha256=HY25_Oi7dfQmDRjVhx2v-qfQf3A_LkALLA5MnUdvVOA,13246
+variational/paginate.py,sha256=q_Q5XKi-zz8qA56Pzibq2BnZnCPAU0gqrLOCJklcnBk,799
+variational/permit.py,sha256=OlX5WguEwMYljZ81gzMUhuqTW1KoP1Jd9Pehr47HmuQ,2187
+variational/polling.py,sha256=r8KC_M07ISFejDmBXuHJkjVtH_N83rcIutjjf-kbm-k,5468
+variational/wrappers.py,sha256=xgax_Th4AGibRt3KtzdsoOGZlaT2P3625zgVrdeGI3I,1976
+variational-0.4.1.dist-info/METADATA,sha256=R50JUPUWLIFaUWlIRRcud_9Dg3emUM3A2OM2vnCxeoU,2699
+variational-0.4.1.dist-info/WHEEL,sha256=osohxoshIHTFJFVPhsi1UkZuLRGMHRXZzwEBW2ezjrc,87
+variational-0.4.1.dist-info/licenses/LICENSE,sha256=z0WrsvLHr9P4Pca3-NI71s46Y1UsBbKHPgkPY2ijYBs,1077
+variational-0.4.1.dist-info/RECORD,,
