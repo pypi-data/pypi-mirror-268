@@ -1,0 +1,3 @@
+[console_scripts]
+exe-check = silcar_it_tools.exe_check:cli_exe_check
+get-usb-files = silcar_it_tools.usb_utils:cli_get_usb_files
