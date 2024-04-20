@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "ultima-scraper-collection"
+version = "2.2.1"
+description = ""
+authors = ["UltimaHoarder <1285176+UltimaHoarder@users.noreply.github.com>"]
+packages = [{ include = "ultima_scraper_collection" }]
+include = ["ultima_scraper_collection/py.typed"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+
+sqlalchemy = "^2.0.1"
+psycopg2 = "^2.9.5"
+alembic = "^1.9.2"
+ultima-scraper-api = "^2.0.0"
+ultima-scraper-renamer = "^1.1.0"
+ultima-scraper-db = "^0.3.0"
+ffmpeg-python = "^0.2.0"
+pydantic = "^1.10.9"
+netifaces = "^0.11.0"
+sshtunnel = "^0.4.0"
+fastapi = "^0.104.1"
+ultima-scraper-detector = "^0.1.0"
+inflection = "^0.5.1"
+alive-progress = "^3.1.5"
+[tool.poetry.group.dev.dependencies]
+python-semantic-release = "^7.33.2"
+black = { version = "^23.3.0", allow-prereleases = true }
+
+[tool.semantic_release]
+version_toml = "pyproject.toml:tool.poetry.version"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
