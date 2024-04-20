@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saur"
+version = "0.2.1"
+authors = [
+    {name = "Michael Tartre", email = "quantology.org@gmail.com"},
+]
+description = "SQL Alchemy Utilities Repository"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "sqlalchemy>=2",
+    "pydantic-settings>=2"
+]
+
+[project.urls]
+Homepage = "https://gitlab.com/sofet-dev/saur"
+Repository = "https://gitlab.com/sofet-dev/saur.git"
+Issues = "https://gitlab.com/sofet-dev/saur/-/issues"
+
+[project.optional-dependencies]
+fastapi = ["fastapi"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D",
+    "I001",
+    "TID252",
+    "ANN204",
+    "ANN101",
+    "ANN102",
+    "ANN003",
+    "ANN401",
+    "PLR0912",
+    "PLR0913",
+    "PLR2004",
+    "PGH003",
+    "C901",
+    "TRY003",
+    "PD901",
+    "SIM108",
+    "ERA001", # commented out code, ignore on dev only 
+    "T201",   # print statements, ignore on dev only
+]
