@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: symmer
+Version: 0.0.5
+Summary: 
+License: MIT
+Author: AlexisRalli
+Author-email: rallilex@hotmail.co.uk
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: black (>=24.3.0,<25.0.0)
+Requires-Dist: cached-property (>=1.5.2,<2.0.0)
+Requires-Dist: flake8 (>=4.0.1,<5.0.0)
+Requires-Dist: isort (>=5.10.1,<6.0.0)
+Requires-Dist: myst-nb (>=0.17.2,<0.18.0)
+Requires-Dist: ncon (>=1.0.0,<2.0.0)
+Requires-Dist: numba (==0.58.1)
+Requires-Dist: openfermion (>=1.6.1,<2.0.0)
+Requires-Dist: opt-einsum (>=3.3.0,<4.0.0)
+Requires-Dist: py3dmol (>=2.0.4,<3.0.0)
+Requires-Dist: pydocstyle (>=6.1.1,<7.0.0)
+Requires-Dist: pytest (>=7.2.2,<8.0.0)
+Requires-Dist: qiskit (==0.46)
+Requires-Dist: quimb (>=1.7.3,<2.0.0)
+Requires-Dist: ray (==2.10)
+Requires-Dist: scipy (==1.9.3)
+Requires-Dist: sphinx-copybutton (>=0.5.2,<0.6.0)
+Requires-Dist: sphinx-design (>=0.5.0,<0.6.0)
+Requires-Dist: urllib3 (==1.26.6)
