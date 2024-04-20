@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "txboto3"
+version = "0.1.1"
+description = "Run Boto3 in Twisted withotut blocking"
+authors = ["Brenno Almeida <contato@brennoflavio.com.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+boto3 = "^1.14.7"
+twisted = "^24.3.0"
+
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+moto = {extras = ["s3"], version = "^5.0.5"}
+black = "^24.4.0"
+flake8 = "^7.0.0"
+mypy = "^1.9.0"
+pre-commit = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+Homepage = "https://github.com/brennoflavio/txboto3"
+Documentation = "https://github.com/brennoflavio/txboto3"
+Repository = "https://github.com/brennoflavio/txboto3.git"
+Issues = "https://github.com/me/spam/issues"
+Changelog = "https://github.com/brennoflavio/txboto3"
