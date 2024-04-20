@@ -1,0 +1,15 @@
+local/hello_test.py,sha256=0y3X0NL6MTAH5slYDg3jk0S6j-M7hGTxmRPbW2uB7n4,2309
+python_wsdb/__init__.py,sha256=RGa6cmRd3eX49NwobrhgLEGX0tGU8LvmGqbzbHV7d0M,44
+python_wsdb/pool.py,sha256=msxNdQnQnpRI_nKml_eJTZspAT4BamO7HXcX7vGOKZo,663
+python_wsdb/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_wsdb/ssl.py,sha256=5qB22YV-Xnsw_9UJZF7oi_jsTZWRR1yqWi81Ya69oHI,597
+python_wsdb/types.py,sha256=LD863xmgJRepcodQwLVIKK1xzRPW1liBS6wAdFa-1o8,6397
+python_wsdb/version.py,sha256=Okh2ytt1bWxaQ6B7y6-Nj3-0pdknxxV_BtvP_z0lOug,407
+python_wsdb/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_wsdb/client/query.py,sha256=0SRxxg9k63vmQ4lX44uz-YOFHH0Tazp34IGo_OcR2WA,4391
+python_wsdb/client/sql_job.py,sha256=yi15gHvk07Vk0qx-gBFQRL2KYddn0wgufoMXm3Gif4k,3892
+python_wsdb-0.1.0.dist-info/LICENSE,sha256=YvuKOpYh3COIF0yqq-nCMXtpS7mh1GyYvPVlW2j1G-M,11359
+python_wsdb-0.1.0.dist-info/METADATA,sha256=WwUko0hFuTFO8SoCe0PRzMWvAhRTUce0pvArSV6Pd-0,14639
+python_wsdb-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+python_wsdb-0.1.0.dist-info/top_level.txt,sha256=44zaQnSh-YA67bA77EXc-rmd3iMuAtxnxa7575YcMd8,18
+python_wsdb-0.1.0.dist-info/RECORD,,
