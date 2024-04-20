@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lddya
+Version: 4.1.2
+Summary: *给Clock添加delta_t的变量。改一下AStar算法的start跟end的数据类型为np.array
+Home-page: https://github.com/not_define/please_wait
+Author: lidongdong
+Author-email: 927052521@qq.com
+License: MIT Licence
+Keywords: pip,licensetool,license,tool,gm
+Platform: any
+
+具体功能，请自行挖掘。
