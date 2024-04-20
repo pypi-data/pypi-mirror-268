@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abtoolkit"
+version = "1.2.4"
+authors = [
+  { name="Nikita Altukhov", email="altuxov.nikita@gmail.com" },
+]
+description = "Package with tools for AB testing"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["ab_test", "cuped", "did", "ttest"]
+dependencies = [
+    "pandas>=2.2.1",
+    "numpy>=1.26.4",
+    "statsmodels>=0.14.1",
+    "scipy>=1.12.0",
+    "linearmodels>=5.4",
+    "tqdm>=4.66.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/nikitosl/abtoolkit"
+Issues = "https://github.com/nikitosl/abtoolkit/issues"
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.pylint.'MESSAGES CONTROL']
+max-line-length = 120
+disable = "too-many-instance-attributes, too-many-arguments, too-many-locals, no-member, fixme, duplicate-code"
+
+[tool.black]
+line-length = 120
