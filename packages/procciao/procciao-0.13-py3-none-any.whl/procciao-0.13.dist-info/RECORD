@@ -1,0 +1,11 @@
+procciao/README.MD,sha256=yGVn8slUiaYT9uUMwL93xcH3OFUXmcsNKGKxi167-7s,4413
+procciao/__init__.py,sha256=zIrZ8R92gFywItc8ogKvAoUhPrPFXz0autj74USp6NM,15755
+procciao/procdict.py,sha256=18DzbkLZXkyhjWLPp7qvg-DzSXn3syKmtcG2CYGGraU,13266
+procciao/requirements.txt,sha256=DI692vqJFu8625DhAffXubhd74lhw_bAJPNIlPaSeHA,127
+procciao/savebase64.py,sha256=609Ba8cg_GuefPLfw066N6EnkPHGiRJdK0Jr_WVR1_8,153452
+procciao/thirdparty.json,sha256=1DIaYL3jYjn7N5_zCEQb4n7dkq42sf_bEGtPOPqg6tg,7540
+procciao-0.13.dist-info/LICENSE.rst,sha256=JG2U-syJOvqaKI4hLK8jP4BdnxFaMsrMir_Qn5dbgdc,1148
+procciao-0.13.dist-info/METADATA,sha256=6VOwdWwgfc374iEeFGN_cJMkc_GplO0N4RxDpGJqshY,5438
+procciao-0.13.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+procciao-0.13.dist-info/top_level.txt,sha256=a26v8V6FTOtHpNguh4-v0eXUDyAkrToFT8BsilSonPo,9
+procciao-0.13.dist-info/RECORD,,
