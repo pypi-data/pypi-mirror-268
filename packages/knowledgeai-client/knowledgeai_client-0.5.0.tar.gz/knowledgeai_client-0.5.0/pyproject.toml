@@ -1,0 +1,169 @@
+[tool.poetry]
+authors = ["Arvato Systems"]
+description = "A python client for the Avvia Intelligence - Knowledge AI Rest API"
+homepage = "https://github.com/arvato-systems-aila-solutions/KnowledgeAI-Python-Client"
+keywords = [
+    "AI",
+    "Knowledge Retrieval",
+    "arvato systems",
+    "avvia intelligence",
+    "knowledgeai",
+]
+license = "MIT"
+name = "knowledgeai-client"
+packages = [{ include = "knowledgeai", from = "." }]
+readme = "README.md"
+version = "0.5.0"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+
+httpx         = "0.27.0"
+pydantic      = "2.7.0"
+pydantic-settings = "2.2.1"
+python-iso639 = "2024.2.7"
+python-magic  = "0.4.27"
+tqdm          = "4.66.2"
+
+
+[tool.poetry.group.dev.dependencies]
+detect-secrets    = "1.4.0"
+mypy              = "1.9.0"
+pre-commit        = "3.7.0"
+ruff              = "0.4.1"
+types-requests    = "2.31.0.20240406"
+types-tqdm        = "4.66.0.20240417"
+
+
+[tool.poetry.group.test.dependencies]
+codecov       = "2.1.13"
+coverage      = "7.4.4"
+pytest        = "8.1.1"
+pytest-dotenv = "0.5.2"
+
+[tool.pytest.ini_options]
+cache_dir = ".cache/pytest"
+testpaths = ["tests"]
+
+
+[tool.ruff]
+cache-dir      = ".cache/ruff"
+line-length    = 88
+target-version = "py311"
+# Rules: https://beta.ruff.rs/docs/rules
+# If you violate a rule, lookup the rule on the Rules page in ruff docs.
+# Many rules have links you can click with a explanation of the rule and how to fix it.
+# If there isn't a link, go to the project the rule was source from (e.g. flake8-bugbear)
+# and review it's docs for the corresponding rule.
+# If you're still confused, ask a fellow developer for assistance.
+# You can also run "ruff rule <rule>" to explain a rule on the command line, without a browser or internet access.
+extend-exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".python_packages",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pycache__",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+lint.select = [
+    "A",   # flake8-builtins
+    "ARG", # flake8-unused-arguments
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "E",   # pycodestyle
+    "EXE", # flake8-executable,
+    "F",   # Pyflakes
+    "G",   # flake8-logging-format
+    "ISC", # flake8-implicit-str-concat
+    "PGH", # pygrep-hooks
+    "PIE", # flake8-pie
+    "PLC", # Pylint Convention
+    "PLE", # Pylint Errors
+    "PLW", # Pylint Warnings
+    "PT",  # flake8-pytest-style
+    "PTH", # flake8-use-pathlib
+    "RET", # flake8-return
+    "RSE", # flake8-raise
+    "RUF", # Ruff-specific rules
+    "SIM", # flake8-simplify
+    "T10", # flake8-debugger
+    "T20", # flake8-print
+    "TID", # flake8-tidy-imports
+    "W",   # Warning
+]
+# Linting error codes to ignore
+lint.ignore = [
+    "PT011",  # pytest-raises-too-broad
+    "PT012",  # pytest.raises() block should contain a single simple statement
+    "ISC001", # Implicit string concatenation
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"] # {name} imported but unused
+
+[tool.mypy]
+cache_dir              = ".cache/mypy"
+disallow_untyped_defs  = true
+exclude                = [".cache", "build", "dist"]
+ignore_missing_imports = false
+incremental            = true
+plugins                = ["pydantic.mypy"]
+python_version         = "3.11"
+warn_return_any        = true
+warn_unused_configs    = true
+warn_unused_ignores    = true
+
+[tool.pydantic-mypy]
+init_forbid_extra             = true
+init_typed                    = true
+warn_required_dynamic_aliases = true
+
+[[tool.mypy.overrides]]
+disallow_untyped_defs  = true
+ignore_missing_imports = true
+module                 = ["iso639"]
+
+[tool.coverage.run]
+branch = true
+omit   = ["tests/*"]
+source = ["ailabackend"]
+
+[tool.coverage.report]
+exclude_lines = ["if TYPE_CHECKING:", "if __name__ == .__main__.:", "pragma: no cover"]
+fail_under    = 80
+show_missing  = true
+skip_covered  = true
+
+[[tool.poetry_bumpversion.replacements]]
+files   = ["knowledgeai/client/__init__.py"]
+replace = '__version__ = "{new_version}"'
+search  = '__version__ = "{current_version}"'
+
+[[tool.poetry_bumpversion.replacements]]
+files   = ["README.md"]
+replace = 'Version: {new_version}'
+search  = 'Version: {current_version}'
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires      = ["poetry-core"]
