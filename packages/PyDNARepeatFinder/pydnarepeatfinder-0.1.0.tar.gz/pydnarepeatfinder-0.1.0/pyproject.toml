@@ -1,0 +1,45 @@
+[build-system]
+requires = ["scikit-build-core"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "PyDNARepeatFinder"
+version = "0.01.0"
+authors = [
+  {name = "Rob Edwards", email = "raedwards@gmail.com"}
+]
+maintainers = [
+  {name = "Rob Edwards", email = "raedwards@gmail.com"}
+]
+
+description = "Rapidly identify repeats in a DNA sequence"
+readme = "README.md"
+repository = "https://github.com/linsalrob/repeat_finder/"
+classifiers =  [
+    "Environment :: Console",
+    "Environment :: MacOS X",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: C",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.scripts]
+dna_repeat_finder = "dna_repeat_finder.cli:run"
+
+[[tool.scikit-build.generate]]
+path = "dna_repeat_finder/_version.py"
+template = '''
+version = "${version}"
+'''
+
+[tool.scikit-build]
+# Setting py-api to "cp37" would build ABI3 wheels for Python 3.7+.  If CPython
+# is less than this value, or on PyPy, this will be ignored.  Setting the api to
+# "py3" or "py2.py3" would build wheels that don't depend on Python (ctypes,
+# etc).
+wheel.py-api = "cp37"
+wheel.packages = []

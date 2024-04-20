@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: PyDNARepeatFinder
+Version: 0.1.0
+Summary: Rapidly identify repeats in a DNA sequence
+Author-Email: Rob Edwards <raedwards@gmail.com>
+Maintainer-Email: Rob Edwards <raedwards@gmail.com>
+Classifier: Environment :: Console
+Classifier: Environment :: MacOS X
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: C
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Description-Content-Type: text/markdown
+
+# Repeat Finder - Finding Repeats in DNA sequences
+
+Repeatfinder is a stand alone program to quickly find repeats in DNA sequences. You might find that it is remarkably similar to an essential module in [PhiSpy](http://github.com/linsalrob/PhiSpy).
+
+This version is built with a modern python toolchain
