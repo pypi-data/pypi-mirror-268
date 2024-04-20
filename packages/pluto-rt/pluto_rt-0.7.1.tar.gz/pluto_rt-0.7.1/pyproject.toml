@@ -1,0 +1,27 @@
+[project]
+name = "pluto_rt"
+version = "0.7.1"
+authors = [
+  { name="Scot Hacker", email="shacker@energy-solution.com" },
+  { name="Rob Harvey", email="rharvey@energy-solution.com" },
+]
+description = "A reusable Django app providing a kit for storing and displaying messages from a background processor into a web view in real time, as the processor works."
+readme = "README.md"
+requires-python = ">=3.10"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/energy-solution/pluto-rt"
+
+
+[build-system]
+requires = ["hatchling",]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100

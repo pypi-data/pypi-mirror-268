@@ -1,0 +1,8 @@
+{# note that we can adjust delay & autohide features #}
+<div class="toast" role="status" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
+  <div class="toast-header bg-{{ item.status }}-subtle justify-content-between">
+    <div>New Message!</div>
+    <button type="button" class="btn-close top-0 end-0" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">{{ item.msg }}</div>
+</div>

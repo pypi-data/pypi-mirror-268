@@ -1,0 +1,17 @@
+{# SSE messages sent as templated strings as they're retrieved from queue #}
+<div
+  id="sse-caller"
+  hx-ext="sse"
+  sse-connect="{% url 'pluto_rt:sse' queue_name item_template %}"
+>
+  <div
+    sse-swap="message"
+    hx-target="{{ target }}"
+    hx-swap="{% if mode == 'reverse' %}afterbegin{% elif mode == 'replace' %}innerHTML{% else %}beforeend{% endif %}"
+  ></div>
+  <div
+    sse-swap="close"
+    hx-target="#sse-caller"
+    hx-swap="delete" {# stops polling #}
+  ></div>
+</div>

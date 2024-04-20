@@ -1,0 +1,5 @@
+celery
+django
+django-redis
+Faker
+granian[reload]

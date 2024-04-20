@@ -1,0 +1,43 @@
+services:
+  cache:
+    image: redis:7.2
+
+  web:
+    build:
+      context: ../
+      dockerfile: demo/Dockerfile
+    volumes:
+      - ../src:/code
+      - .:/code/demo
+    depends_on:
+      - cache
+    ports:
+      - ${ES_PORT:-8000}:8000
+    command: granian --reload --interface asginl --host 0.0.0.0 --port 8000 demo.asgi:application
+    environment:
+      - REDIS_URL=redis://cache:6379/0
+      - DJANGO_SETTINGS_MODULE=demo.settings
+      - DEBUG=true
+      - TEMPLATE_DEBUG=true
+      - LOG_LEVEL=DEBUG
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - WATCHFILES_FORCE_POLLING=true
+
+  worker:
+    build:
+      context: ../
+      dockerfile: demo/Dockerfile
+    volumes:
+      - ../src:/code
+      - .:/code/demo
+    depends_on:
+      - cache
+    command: celery -A demo.tasks worker --loglevel=INFO --uid=nobody
+    environment:
+      - REDIS_URL=redis://cache:6379/0
+      - DJANGO_SETTINGS_MODULE=demo.settings
+      - DEBUG=true
+      - LOG_LEVEL=DEBUG
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
