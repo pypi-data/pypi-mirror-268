@@ -1,0 +1,110 @@
+
+
+
+<pre>
+
+	<h1>biotech</h1>
+		# neurons
+	
+	<h2>docker</h2>
+		docker network create --subnet=192.168.0.0/24 container_network
+		docker run --network container_network --ip 192.168.0.102 -v .:/biotech -it jumps:v2.1.0
+		docker exec -it a6599081a9fb bash 
+
+	<h2>install</h2>
+		#
+		#	⚠️ ⚠️ ⚠️ ⚠️
+		#
+		#		Make sure that none of the stages that "biotech"
+		#		utilizes rely on "biotech".
+		#
+		#		For the sake of sanity, please keep the "reliability, testing, etc."
+		#		structure as a "tree, hierarchy, etc." etc. with no coodependencies.
+		#
+	
+		python3 moves/install.py
+		
+		<h3>remove</h3>
+			python3 moves/stage_remove.py
+			
+		<h3>add</h3>
+			python3 moves/stage_add.py
+		
+		<h3>upgrade</h3>
+			# poetry update sanic
+		
+	<h2>source</h2>
+		source source.sh
+
+	<h2>git</h2>
+		git push --set-upstream git@gitlab.com:status600/climates/biotech.git performance
+	
+
+	<h2>poetry</h2>
+		pip install poetry poetry-plugin-export
+	
+		<h3>add</h3>
+			
+			poetry add sanic
+			
+			#
+			#	if dev dependencies
+			#
+			# poetry export --with dev --format requirements.txt --output requirements.txt
+			
+			
+			rm -rf /biotech/venues/stages_pip && poetry export --format requirements.txt --output requirements.txt && pip install -r requirements.txt -t /biotech/venues/stages_pip
+			
+			# /root/.cache/pypoetry/virtualenvs/biotech-p2eJTVsK-py3.10/lib/python3.10/site-packages/
+			# cp -R /root/.cache/pypoetry/virtualenvs/biotech-p2eJTVsK-py3.10/lib/python3.10/site-packages/ /biotech/venues/stages_pip
+		
+		
+		
+		<h3>installations venv</h3>
+			poetry config virtualenvs.path /path/to/your/directory
+			poetry env use python3
+			poetry shell
+
+			
+		<h3>scripts</h3>
+			#
+			#	https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#creating-executable-scripts
+			#	from this_module import clique; clique ()
+			#
+		
+	<h2>publishing</h2>
+		#
+		#	licenses
+		#
+		python3 -m venv /biotech/venues/warehouse/license_venv
+		source /biotech/venues/warehouse/license_venv/bin/activate
+
+		
+		#
+		#	statuses
+		#
+		python3 /biotech/venues/stages/biotech/_status/status.proc.py
+		
+		#
+		#	git push
+		#
+		#		if Circle CI is successful, then publish
+		#
+		
+		#
+		#	increase version
+		#
+		
+		#
+		#	poetry auth
+		#
+		rm -rf dist && poetry build --verbose && poetry publish --verbose;
+		
+
+	<h2>important</h2>
+		poetry show --tree
+
+
+	
+
+</pre>
