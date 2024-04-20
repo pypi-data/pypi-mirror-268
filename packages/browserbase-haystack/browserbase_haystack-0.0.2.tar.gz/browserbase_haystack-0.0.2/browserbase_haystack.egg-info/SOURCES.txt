@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+browserbase_haystack/__init__.py
+browserbase_haystack.egg-info/PKG-INFO
+browserbase_haystack.egg-info/SOURCES.txt
+browserbase_haystack.egg-info/dependency_links.txt
+browserbase_haystack.egg-info/requires.txt
+browserbase_haystack.egg-info/top_level.txt
