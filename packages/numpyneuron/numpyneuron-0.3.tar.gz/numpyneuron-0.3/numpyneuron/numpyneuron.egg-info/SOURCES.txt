@@ -1,0 +1,6 @@
+README.md
+setup.py
+numpyneuron/numpyneuron.egg-info/PKG-INFO
+numpyneuron/numpyneuron.egg-info/SOURCES.txt
+numpyneuron/numpyneuron.egg-info/dependency_links.txt
+numpyneuron/numpyneuron.egg-info/top_level.txt
