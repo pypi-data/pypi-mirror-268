@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: ciou
+Version: 0.4.0
+Summary: CLI input and output utils.
+Author: Toni Kangas
+License: MIT License
+        
+        Copyright (c) 2024 Toni Kangas
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/kangasta/ciou
+Project-URL: Repository, https://github.com/kangasta/ciou.git
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# CLI input and output utils (ciou)
+
+[![CI](https://github.com/kangasta/ciou/actions/workflows/ci.yml/badge.svg)](https://github.com/kangasta/ciou/actions/workflows/ci.yml)
+[![Docs](https://github.com/kangasta/ciou/actions/workflows/docs.yml/badge.svg)](https://github.com/kangasta/ciou/actions/workflows/docs.yml)
+[![Release](https://github.com/kangasta/ciou/actions/workflows/release.yml/badge.svg)](https://github.com/kangasta/ciou/actions/workflows/release.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b1f0abcbbb4d64f8b683/maintainability)](https://codeclimate.com/github/kangasta/ciou/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b1f0abcbbb4d64f8b683/test_coverage)](https://codeclimate.com/github/kangasta/ciou/test_coverage)
+
+Utilities for working with inputs and outputs of command-line interfaces.
+
+## Testing
+
+Check and automatically fix formatting with:
+
+```sh
+pycodestyle ciou
+autopep8 -aaar --in-place ciou
+```
+
+Run static analysis with:
+
+```sh
+pylint -E --enable=invalid-name,unused-import,useless-object-inheritance ciou tst
+```
+
+Run unit tests with command:
+
+```sh
+python3 -m unittest discover -s tst/
+```
+
+Get test coverage with commands:
+
+```sh
+coverage run --branch --source ciou/ -m unittest discover -s tst/
+coverage report -m
+```
+
+Generate the documentation with:
+
+```sh
+pdoc -d google -o docs ./ciou
+```
