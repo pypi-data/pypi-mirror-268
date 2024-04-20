@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tabletalk/__init__.py
+tabletalk/talk.py
+tabletalk/test.py
+tabletalk.egg-info/PKG-INFO
+tabletalk.egg-info/SOURCES.txt
+tabletalk.egg-info/dependency_links.txt
+tabletalk.egg-info/top_level.txt
