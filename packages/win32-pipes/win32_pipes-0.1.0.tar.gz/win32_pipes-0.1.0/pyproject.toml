@@ -1,0 +1,70 @@
+[build-system]
+requires = ["scikit-build-core>=0.8.2"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "win32_pipes"
+version = "0.1.0"
+description="A non-blocking C++ NamedPipe implementation for Windows."
+readme = "README.md"
+authors = [
+  { name = "Artur Drogunow", email = "Artur.Drogunow@zf.com" },
+]
+requires-python = ">=3.8"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "tox",
+  "pre-commit",
+  "pipx",
+  "ruff",
+]
+
+[tool.cibuildwheel]
+test-requires = "pytest"
+test-command = "pytest --no-header -vv {project}/tests"
+build-frontend = "build"
+skip = "pp*"
+
+[tool.pytest.ini_options]
+addopts = "--no-header -vv -rP"
+testpaths = ["tests"]
+
+[tool.ruff]
+src = ["src"]
+
+[tool.ruff.lint]
+extend-select = [
+  "B",           # flake8-bugbear
+  "I",           # isort
+  "ARG",         # flake8-unused-arguments
+  "C4",          # flake8-comprehensions
+  "EM",          # flake8-errmsg
+  "ICN",         # flake8-import-conventions
+  "G",           # flake8-logging-format
+  "PGH",         # pygrep-hooks
+  "PIE",         # flake8-pie
+  "PL",          # pylint
+  "PT",          # flake8-pytest-style
+  "PTH",         # flake8-use-pathlib
+  "PYI",         # flake8-pyi
+  "RET",         # flake8-return
+  "RUF",         # Ruff-specific
+  "SIM",         # flake8-simplify
+  "T20",         # flake8-print
+  "UP",          # pyupgrade
+  "YTT",         # flake8-2020
+  "EXE",         # flake8-executable
+  "NPY",         # NumPy specific rules
+  "PD",          # pandas-vet
+]

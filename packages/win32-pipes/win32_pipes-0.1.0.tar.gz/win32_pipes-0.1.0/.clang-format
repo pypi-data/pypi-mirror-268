@@ -1,0 +1,16 @@
+Language: Cpp
+IndentWidth: 4
+IndentCaseLabels: true
+BreakBeforeBraces: Stroustrup
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+BinPackArguments: false
+BinPackParameters: false
+ExperimentalAutoDetectBinPacking: false
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortEnumsOnASingleLine: false
+ColumnLimit: 80
+PenaltyReturnTypeOnItsOwnLine: 1000000
+PackConstructorInitializers: Never
