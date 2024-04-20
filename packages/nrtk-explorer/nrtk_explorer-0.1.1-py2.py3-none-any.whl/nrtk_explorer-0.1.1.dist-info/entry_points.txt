@@ -1,0 +1,5 @@
+[console_scripts]
+nrtk-explorer = nrtk_explorer.app:main
+nrtk-explorer-embeddings = nrtk_explorer.app.embeddings:embeddings
+nrtk-explorer-filtering = nrtk_explorer.app.filtering:filtering
+nrtk-explorer-tranforms = nrtk_explorer.app.transforms:transforms
