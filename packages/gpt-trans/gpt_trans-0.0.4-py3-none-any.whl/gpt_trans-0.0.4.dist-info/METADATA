@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: gpt-trans
+Version: 0.0.4
+Summary: None
+Home-page: https://github.com/zc277584121/GPTTranslator
+Author: zc
+Author-email: 277584121@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: langchain
+Requires-Dist: langchain-community
+Requires-Dist: langchain-core
+Requires-Dist: langchain-openai
+Requires-Dist: tqdm
+Requires-Dist: argparse
+
+UNKNOWN
+
