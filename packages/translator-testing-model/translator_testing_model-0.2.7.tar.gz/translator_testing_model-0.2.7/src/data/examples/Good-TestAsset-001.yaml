@@ -1,0 +1,59 @@
+# Example TestAsset data object
+---
+# TODO: the TestAsset example data may need further elaboration
+
+#
+#
+#   TestAsset:
+#    description: >-
+#      Represents a Test Asset, which is a single specific instance of
+#      TestCase-agnostic semantic parameters representing the
+#      specification of a Translator test target with inputs and (expected) outputs.
+#    is_a: TestEntity
+#    slots:
+#      - input_id
+#      - input_name
+#      - input_category
+#      - predicate_id
+#      - predicate_name
+#      - output_id
+#      - output_name
+#      - output_category
+#      - association
+#      - qualifiers
+#      - expected_output
+#      - test_issue
+#      - semantic_severity
+#      - in_v1
+#      - well_known
+#      - test_reference
+#    slot_usage:
+#      id:
+#        aliases: ["AssetIdentifier"]
+#        range: uriorcurie
+#      tags:
+#        description: >-
+#          One or more 'tags' slot values (inherited from TestEntity) should generally
+#          be defined to specify TestAsset membership in a "Block List" collection
+#      test_runner_settings:
+#        description: >-
+#          Settings for the test harness, e.g. "inferred"
+#
+id: example:TestAsset001
+name: TestAsset001
+description: Iron treats Aceruloplasminemia
+input_id: MONDO:0011426
+input_name: Aceruloplasminemia
+predicate_name: treats
+output_id: DRUGBANK:DB01592
+output_name: Iron (PUBCHEM)
+expected_output: NeverShow
+test_reference: https://github.com/NCATSTranslator/Feedback/issues/506
+semantic_severity: NotApplicable
+in_v1: True
+well_known: False
+test_metadata:
+  id: "example:TestAsset001"
+test_runner_settings:
+  - "inferred"
+  - "test"

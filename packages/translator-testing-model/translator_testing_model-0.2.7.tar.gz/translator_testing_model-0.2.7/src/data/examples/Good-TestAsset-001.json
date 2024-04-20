@@ -1,0 +1,13 @@
+{
+  "id": "example:TestAsset001",
+  "name": "TestAsset001",
+  "description": "Fingolimod treats multiple sclerosis",
+  "input_id": "PUBCHEM.COMPOUND:107970",
+  "predicate_name": "treats",
+  "output_id": "MONDO:0005301",
+  "expected_output": "Acceptable",
+  "test_runner_settings": ["inferred", "test"],
+  "test_metadata": {
+    "id": "example:TestAsset001"
+  }
+}

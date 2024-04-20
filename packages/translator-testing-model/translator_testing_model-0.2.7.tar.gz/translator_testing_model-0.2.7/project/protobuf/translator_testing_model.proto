@@ -1,0 +1,307 @@
+// Model derived from Jenn's test asset design and Shervin's runner JSON here as an example.
+message AcceptanceTestAsset
+ {
+  string name = 0
+  string description = 0
+  uriorcurie inputId = 0
+  string inputName = 0
+  conceptCategory inputCategory = 0
+  predicateType predicateId = 0
+  string predicateName = 0
+  uriorcurie outputId = 0
+  string outputName = 0
+  conceptCategory outputCategory = 0
+  associationCategory association = 0
+ repeated  qualifier qualifiers = 0
+  string expectedOutput = 0
+  testIssueEnum testIssue = 0
+  semanticSeverityEnum semanticSeverity = 0
+  boolean inV1 = 0
+  boolean wellKnown = 0
+  uriorcurie testReference = 0
+  testMetadata testMetadata = 0
+  uriorcurie id = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  date mustPassDate = 0
+  testEnvEnum mustPassEnvironment = 0
+  string scientificQuestion = 0
+  string stringEntry = 0
+  directionEnum direction = 0
+  string answerInformalConcept = 0
+  expectedResultsEnum expectedResult = 0
+  integer topLevel = 0
+  nodeEnum queryNode = 0
+  string notes = 0
+ }
+// See AcceptanceTestAsset above for more details.
+message AcceptanceTestCase
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string testRunnerSettings = 0
+  queryTypeEnum queryType = 0
+ repeated  precondition preconditions = 0
+  trapiTemplateEnum trapiTemplate = 0
+  testObjectiveEnum testCaseObjective = 0
+  testSourceEnum testCaseSource = 0
+  string testCasePredicateName = 0
+  string testCasePredicateId = 0
+  uriorcurie testCaseInputId = 0
+ repeated  qualifier qualifiers = 0
+  conceptCategory inputCategory = 0
+  conceptCategory outputCategory = 0
+ repeated  componentEnum components = 0
+  testEnvEnum testEnv = 0
+ repeated  string tags = 0
+ repeated  acceptanceTestAsset testAssets = 0
+ }
+message AcceptanceTestSuite
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  testMetadata testMetadata = 0
+  testPersonaEnum testPersona = 0
+ repeated  testCase testCases = 0
+  testSuiteSpecification testSuiteSpecification = 0
+ }
+// Test case for testing the integrity of "One Hop" knowledge graph retrievals sensa legacy SRI_Testing harness.
+message OneHopTestSuite
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  testMetadata testMetadata = 0
+  testPersonaEnum testPersona = 0
+ repeated  testCase testCases = 0
+  testSuiteSpecification testSuiteSpecification = 0
+ }
+// Represents a precondition for a TestCase
+message Precondition
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+ }
+message Qualifier
+ {
+  string parameter = 0
+  string value = 0
+ }
+// Assumed additional model from Shervin's runner JSON here as an example.  This schema is not yet complete.
+message QuantitativeTestCase
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string testRunnerSettings = 0
+  queryTypeEnum queryType = 0
+ repeated  testAsset testAssets = 0
+ repeated  precondition preconditions = 0
+  trapiTemplateEnum trapiTemplate = 0
+  testObjectiveEnum testCaseObjective = 0
+  testSourceEnum testCaseSource = 0
+  string testCasePredicateName = 0
+  string testCasePredicateId = 0
+  uriorcurie testCaseInputId = 0
+ repeated  qualifier qualifiers = 0
+  conceptCategory inputCategory = 0
+  conceptCategory outputCategory = 0
+ repeated  componentEnum components = 0
+  testEnvEnum testEnv = 0
+ repeated  string tags = 0
+ }
+// Test suite for testing Translator components against releases of standards like TRAPI and the Biolink Model.
+message StandardsComplianceTestSuite
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  testMetadata testMetadata = 0
+  testPersonaEnum testPersona = 0
+ repeated  testCase testCases = 0
+  testSuiteSpecification testSuiteSpecification = 0
+ }
+// Represents a Test Asset, which is a single specific instance of TestCase-agnostic semantic parameters representing the specification of a Translator test target with inputs and (expected) outputs.
+message TestAsset
+ {
+  string name = 0
+  string description = 0
+  uriorcurie inputId = 0
+  string inputName = 0
+  conceptCategory inputCategory = 0
+  predicateType predicateId = 0
+  string predicateName = 0
+  uriorcurie outputId = 0
+  string outputName = 0
+  conceptCategory outputCategory = 0
+  associationCategory association = 0
+ repeated  qualifier qualifiers = 0
+  string expectedOutput = 0
+  testIssueEnum testIssue = 0
+  semanticSeverityEnum semanticSeverity = 0
+  boolean inV1 = 0
+  boolean wellKnown = 0
+  uriorcurie testReference = 0
+  testMetadata testMetadata = 0
+  uriorcurie id = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+ }
+// Represents a single enumerated instance of Test Case, derived from a  given collection of one or more TestAsset instances (the value of the 'test_assets' slot) which define the 'inputs' and 'outputs' of the TestCase, used to probe a particular test condition.
+message TestCase
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string testRunnerSettings = 0
+  queryTypeEnum queryType = 0
+ repeated  testAsset testAssets = 0
+ repeated  precondition preconditions = 0
+  trapiTemplateEnum trapiTemplate = 0
+  testObjectiveEnum testCaseObjective = 0
+  testSourceEnum testCaseSource = 0
+  string testCasePredicateName = 0
+  string testCasePredicateId = 0
+  uriorcurie testCaseInputId = 0
+ repeated  qualifier qualifiers = 0
+  conceptCategory inputCategory = 0
+  conceptCategory outputCategory = 0
+ repeated  componentEnum components = 0
+  testEnvEnum testEnv = 0
+ repeated  string tags = 0
+ }
+// The outcome of a TestRunner run of one specific TestCase.
+message TestCaseResult
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  uriorcurie testSuiteId = 0
+  testCase testCase = 0
+  testCaseResultEnum testCaseResult = 0
+ }
+// Represents a single Biolink Model compliant instance of a subject-predicate-object edge that can be used for testing.
+message TestEdgeData
+ {
+  string name = 0
+  string description = 0
+  uriorcurie inputId = 0
+  string inputName = 0
+  conceptCategory inputCategory = 0
+  predicateType predicateId = 0
+  string predicateName = 0
+  uriorcurie outputId = 0
+  string outputName = 0
+  conceptCategory outputCategory = 0
+  associationCategory association = 0
+ repeated  qualifier qualifiers = 0
+  string expectedOutput = 0
+  testIssueEnum testIssue = 0
+  semanticSeverityEnum semanticSeverity = 0
+  boolean inV1 = 0
+  boolean wellKnown = 0
+  uriorcurie testReference = 0
+  testMetadata testMetadata = 0
+  uriorcurie id = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+ }
+// A single 'tag = value' pair (where 'value' is a simple string).
+message TestEntityParameter
+ {
+  string parameter = 0
+  string value = 0
+ }
+// Represents metadata related to (external SME, SMURF, Translator feedback,  large scale batch, etc.) like the provenance of test assets, cases and/or suites.
+message TestMetadata
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  testSourceEnum testSource = 0
+  uriorcurie testReference = 0
+  testObjectiveEnum testObjective = 0
+ repeated  testEntityParameter testAnnotations = 0
+ }
+// The output of a TestRunner run of one specific TestCase.
+message TestOutput
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  string testCaseId = 0
+ repeated  testResultPKSet pks = 0
+ }
+// Primary keys for a given ARA result set from a SmokeTest result for a given TestCase.
+message TestResultPKSet
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  string parentPk = 0
+  string mergedPk = 0
+  string aragorn = 0
+  string arax = 0
+  string unsecret = 0
+  string bte = 0
+  string improving = 0
+ }
+// Single run of a TestRunner in a given environment, with a specified set of test_entities (generally, one or more instances of TestSuite).
+message TestRunSession
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+ repeated  componentEnum components = 0
+  testEnvEnum testEnv = 0
+  string testRunnerName = 0
+ repeated  testEntityParameter testRunParameters = 0
+ repeated  testEntity testEntities = 0
+ repeated  testCaseResult testCaseResults = 0
+  datetime timestamp = 0
+ }
+// Specification of a set of Test Cases, one of either with a static list of 'test_cases' or a dynamic 'test_suite_specification' slot values. Note: at least one slot or the other, but generally not both(?) needs to be present.
+message TestSuite
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  testMetadata testMetadata = 0
+  testPersonaEnum testPersona = 0
+ repeated  testCase testCases = 0
+  testSuiteSpecification testSuiteSpecification = 0
+ }
+// Parameters for a Test Case instances either dynamically generated from some external source of Test Assets.
+message TestSuiteSpecification
+ {
+  uriorcurie id = 0
+  string name = 0
+  string description = 0
+ repeated  string tags = 0
+ repeated  string testRunnerSettings = 0
+  uriorcurie testDataFileLocator = 0
+  fileFormatEnum testDataFileFormat = 0
+ }

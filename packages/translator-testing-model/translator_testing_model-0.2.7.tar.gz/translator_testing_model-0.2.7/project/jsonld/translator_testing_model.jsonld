@@ -1,0 +1,2568 @@
+{
+  "name": "Translator-Testing-Model",
+  "description": "Data model to formalize the structure of test assets, cases, suites and related metadata\napplied to run the diverse polymorphic testing objectives for the Biomedical Data Translator system.",
+  "title": "Translator Testing Data Model",
+  "see_also": [
+    "https://TranslatorSRI.github.io/TranslatorTestingModel"
+  ],
+  "id": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+  "version": "0.0.0",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "MIT",
+  "prefixes": [
+    {
+      "prefix_prefix": "ttm",
+      "prefix_reference": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/"
+    },
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "biolink",
+      "prefix_reference": "https://w3id.org/biolink/"
+    },
+    {
+      "prefix_prefix": "schema",
+      "prefix_reference": "http://schema.org/"
+    },
+    {
+      "prefix_prefix": "example",
+      "prefix_reference": "https://example.org/"
+    }
+  ],
+  "default_prefix": "ttm",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "category_type",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/CategoryType",
+      "description": "A primitive type in which the value denotes a class within the biolink model. The value must be a URI or a CURIE within the 'biolink' namespace.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "typeof": "uriorcurie",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "concept_category",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/ConceptCategory",
+      "description": "A category type within the Biolink Model ('biolink' namespace) 'biolink:NamedThing' hierarchy.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "typeof": "category_type",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "association_category",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/AssociationCategory",
+      "description": "A category type within the Biolink Model ('biolink' namespace) 'biolink:Association' hierarchy.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "typeof": "category_type",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "predicate_type",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/PredicateType",
+      "description": "A CURIE from the Biolink Model ('biolink' namespace) 'biolink:related_to' hierarchy. For example, biolink:related_to, biolink:causes, biolink:treats.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "typeof": "uriorcurie",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
+      "comments": [
+        "Used for inheritance and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "enums": [
+    {
+      "name": "TestSourceEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestSourceEnum",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "SME",
+          "description": "(External) Subject Matter Expert"
+        },
+        {
+          "text": "SMURF",
+          "description": "Subject Matter User Reasonably Familiar, generally Translator-internal biomedical science expert"
+        },
+        {
+          "text": "GitHubUserFeedback",
+          "description": "Git hub hosted issue from which a test asset/case/suite may be derived."
+        },
+        {
+          "text": "TACT",
+          "description": "Technical Advisory Committee, generally posting semantic use cases as Translator Feedback issues",
+          "is_a": "GitHubUserFeedback"
+        },
+        {
+          "text": "BenchMark",
+          "description": "Curated benchmark tests"
+        },
+        {
+          "text": "TranslatorTeam",
+          "description": "Translator funded KP or ARA team generating test assets/cases/suites for their resources."
+        },
+        {
+          "text": "TestDataLocation",
+          "description": "Current SRI_Testing-like test data edges specific to KP or ARA components"
+        }
+      ]
+    },
+    {
+      "name": "TestObjectiveEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestObjectiveEnum",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "AcceptanceTest",
+          "description": "Acceptance (pass/fail) test"
+        },
+        {
+          "text": "BenchmarkTest",
+          "description": "Semantic benchmarking"
+        },
+        {
+          "text": "QuantitativeTest",
+          "description": "Quantitative test"
+        },
+        {
+          "text": "StandardsValidationTest",
+          "description": "Release-specific TRAPI and Biolink Model (\"reasoner-validator\") compliance validation"
+        },
+        {
+          "text": "OneHopTest",
+          "description": "Knowledge graph \"One Hop\" query navigation integrity"
+        }
+      ]
+    },
+    {
+      "name": "TestEnvEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestEnvEnum",
+      "description": "Testing environments within which a TestSuite is run by a TestRunner scheduled by the TestHarness.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "dev",
+          "description": "Development"
+        },
+        {
+          "text": "ci",
+          "description": "Continuous Integration"
+        },
+        {
+          "text": "test",
+          "description": "Test"
+        },
+        {
+          "text": "prod",
+          "description": "Production"
+        }
+      ]
+    },
+    {
+      "name": "FileFormatEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/FileFormatEnum",
+      "description": "Text file formats for test data sources.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "TSV"
+        },
+        {
+          "text": "YAML"
+        },
+        {
+          "text": "JSON"
+        }
+      ]
+    },
+    {
+      "name": "ExpectedOutputEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/ExpectedOutputEnum",
+      "description": "Expected output values for instances of Test Asset or Test Cases(?). (Note: does this Enum overlap with 'ExpectedResultsEnum' below?)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "Acceptable"
+        },
+        {
+          "text": "BadButForgivable"
+        },
+        {
+          "text": "NeverShow"
+        },
+        {
+          "text": "TopAnswer"
+        },
+        {
+          "text": "OverlyGeneric"
+        }
+      ]
+    },
+    {
+      "name": "TestIssueEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestIssueEnum",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "causes not treats"
+        },
+        {
+          "text": "TMKP",
+          "description": "'Text Mining Knowledge Provider' generated relationship?"
+        },
+        {
+          "text": "category too generic"
+        },
+        {
+          "text": "contraindications"
+        },
+        {
+          "text": "chemical roles"
+        },
+        {
+          "text": "test_issue"
+        }
+      ]
+    },
+    {
+      "name": "SemanticSeverityEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/SemanticSeverityEnum",
+      "description": "From Jenn's worksheet, empty or ill defined (needs elaboration)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "High"
+        },
+        {
+          "text": "Low"
+        },
+        {
+          "text": "NotApplicable"
+        }
+      ]
+    },
+    {
+      "name": "DirectionEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/DirectionEnum",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "increased"
+        },
+        {
+          "text": "decreased"
+        }
+      ]
+    },
+    {
+      "name": "ExpectedResultsEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/ExpectedResultsEnum",
+      "description": "Does this Enum overlap with 'ExpectedOutputEnum' above?",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "include_good",
+          "description": "The query should return the result in this test case"
+        },
+        {
+          "text": "exclude_bad",
+          "description": "The query should not return the result in this test case"
+        }
+      ]
+    },
+    {
+      "name": "NodeEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/NodeEnum",
+      "description": "Target node of a Subject-Predicate-Object driven query",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "subject"
+        },
+        {
+          "text": "object"
+        }
+      ]
+    },
+    {
+      "name": "QueryTypeEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/QueryTypeEnum",
+      "description": "Query",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "treats",
+          "aliases": [
+            "treats(creative)"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TrapiTemplateEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TrapiTemplateEnum",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "ameliorates"
+        },
+        {
+          "text": "treats"
+        },
+        {
+          "text": "three_hop"
+        },
+        {
+          "text": "drug_treats_rare_disease"
+        },
+        {
+          "text": "drug-to-gene"
+        }
+      ]
+    },
+    {
+      "name": "ComponentEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/ComponentEnum",
+      "description": "Translator components are identified by their InfoRes identifiers.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "reachable_from": {
+        "source_ontology": "biolink",
+        "source_nodes": [
+          "biolink:infores"
+        ]
+      }
+    },
+    {
+      "name": "TestPersonaEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestPersonaEnum",
+      "description": "User persona context of a given test.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "All"
+        },
+        {
+          "text": "Clinical",
+          "description": "An MD or someone working in the clinical field."
+        },
+        {
+          "text": "LookUp",
+          "description": "Looking for an answer for a specific patient."
+        },
+        {
+          "text": "Mechanistic",
+          "description": "Someone working on basic biology questions or drug discoveries where the study of the biological mechanism."
+        }
+      ]
+    },
+    {
+      "name": "TestCaseResultEnum",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestCaseResultEnum",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "permissible_values": [
+        {
+          "text": "PASSED",
+          "description": "test case result indicating success."
+        },
+        {
+          "text": "FAILED",
+          "description": "test case result indicating failure."
+        },
+        {
+          "text": "SKIPPED",
+          "description": "test case result indicating that the specified test was not run."
+        }
+      ]
+    }
+  ],
+  "slots": [
+    {
+      "name": "parent_pk",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/parent_pk",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/parent_pk",
+      "owner": "TestResultPKSet",
+      "domain_of": [
+        "TestResultPKSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "merged_pk",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/merged_pk",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/merged_pk",
+      "owner": "TestResultPKSet",
+      "domain_of": [
+        "TestResultPKSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "aragorn",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/aragorn",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/aragorn",
+      "owner": "TestResultPKSet",
+      "domain_of": [
+        "TestResultPKSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "arax",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/arax",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/arax",
+      "owner": "TestResultPKSet",
+      "domain_of": [
+        "TestResultPKSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "unsecret",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/unsecret",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/unsecret",
+      "owner": "TestResultPKSet",
+      "domain_of": [
+        "TestResultPKSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "bte",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/bte",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/bte",
+      "owner": "TestResultPKSet",
+      "domain_of": [
+        "TestResultPKSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "improving",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/improving",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/improving",
+      "owner": "TestResultPKSet",
+      "domain_of": [
+        "TestResultPKSet"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "pks",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/pks",
+      "description": "Primary keys for a given ARA result set from a SmokeTest result for a given TestCase.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/pks",
+      "multivalued": true,
+      "owner": "TestOutput",
+      "domain_of": [
+        "TestOutput"
+      ],
+      "range": "TestResultPKSet",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "results",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/results",
+      "description": "The results of a TestRunner run of one specific TestCase.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/results",
+      "multivalued": true,
+      "range": "TestOutput",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_id",
+      "description": "CURIE id of a TestCase registered in the system.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_id",
+      "owner": "TestOutput",
+      "domain_of": [
+        "TestOutput"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "parameter",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/parameter",
+      "description": "Name of a TestParameter.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/parameter",
+      "owner": "TestEntityParameter",
+      "domain_of": [
+        "TestEntityParameter"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "value",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/value",
+      "description": "(String) value of a TestParameter.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/value",
+      "owner": "TestEntityParameter",
+      "domain_of": [
+        "TestEntityParameter"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_entity_parameters",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_entity_parameters",
+      "description": "One or more 'tag = value' parameters documenting target characteristics of a TestEntity.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_entity_parameters",
+      "multivalued": true,
+      "range": "TestEntityParameter",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "timestamp",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/timestamp",
+      "description": "Date time when a given entity was created.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/timestamp",
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestRunSession"
+      ],
+      "range": "datetime",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/id",
+      "description": "A unique identifier for a Test Entity",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "mappings": [
+        "http://schema.org/identifier"
+      ],
+      "slot_uri": "http://schema.org/identifier",
+      "identifier": true,
+      "owner": "TestEntity",
+      "domain_of": [
+        "TestEntity"
+      ],
+      "range": "uriorcurie",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "name",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/name",
+      "description": "A human-readable name for a Test Entity",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "mappings": [
+        "http://schema.org/name"
+      ],
+      "slot_uri": "http://schema.org/name",
+      "owner": "TestEntity",
+      "domain_of": [
+        "TestEntity"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "description",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/description",
+      "description": "A human-readable description for a Test Entity",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "mappings": [
+        "http://schema.org/description"
+      ],
+      "slot_uri": "http://schema.org/description",
+      "owner": "TestEntity",
+      "domain_of": [
+        "TestEntity"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "tags",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/tags",
+      "description": "A human-readable tags for categorical memberships of a TestEntity (preferably a URI or CURIE). Typically used to aggregate instances of TestEntity into formally typed or ad hoc lists.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "mappings": [
+        "http://schema.org/additionalType"
+      ],
+      "slot_uri": "http://schema.org/additionalType",
+      "multivalued": true,
+      "owner": "TestEntity",
+      "domain_of": [
+        "TestEntity"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_source",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_source",
+      "description": "Provenance of a specific set of test assets, cases and/or suites.  Or, the person who cares about this,  know about this.  We would like this to be an ORCID eventually, but currently it is just a string.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_source",
+      "owner": "TestMetadata",
+      "domain_of": [
+        "TestMetadata"
+      ],
+      "range": "TestSourceEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_reference",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_reference",
+      "description": "Document URL where original test source particulars are registered (e.g. Github repo)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "GitHubIssue"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_reference",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestMetadata",
+        "TestAsset"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_objective",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_objective",
+      "description": "Testing objective behind specified set of test particulars (e.g. acceptance pass/fail; benchmark; quantitative; standards compliance; graph navigation integrity)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_objective",
+      "owner": "TestMetadata",
+      "domain_of": [
+        "TestMetadata"
+      ],
+      "range": "TestObjectiveEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_objective",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_objective",
+      "description": "Testing objective behind specified set of test particulars (e.g. acceptance pass/fail; benchmark; quantitative; standards compliance; graph navigation integrity)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_objective",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "TestObjectiveEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_source",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_source",
+      "description": "Provenance of a specific set of test assets, cases and/or suites.  Or, the person who cares about this,  know about this.  We would like this to be an ORCID eventually, but currently it is just a string.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_source",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "TestSourceEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_annotations",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_annotations",
+      "description": "Metadata annotation.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "test_entity_parameters",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_annotations",
+      "multivalued": true,
+      "owner": "TestMetadata",
+      "domain_of": [
+        "TestMetadata"
+      ],
+      "range": "TestEntityParameter",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_input_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_input_id",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "InputID, node normalized",
+        "SubjectID"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_input_id",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_predicate_name",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_predicate_name",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Predicate"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_predicate_name",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_predicate_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_predicate_id",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Predicate"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_predicate_id",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "input_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/input_id",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "InputID, node normalized",
+        "SubjectID"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/input_id",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "input_name",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/input_name",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "InputName (user choice)",
+        "SubjectName"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/input_name",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "input_category",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/input_category",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "SubjectCategory"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/input_category",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestAsset",
+        "TestCase"
+      ],
+      "range": "concept_category",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "predicate_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/predicate_id",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Predicate"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/predicate_id",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "predicate_type",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "predicate_name",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/predicate_name",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Query",
+        "Relationship"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/predicate_name",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biolink_predicate",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_predicate",
+      "description": "the predicate in Biolink model corresponding to the shorthand predicate name used in the test asset.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_predicate",
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biolink_subject_aspect_qualifier",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_subject_aspect_qualifier",
+      "description": "The aspect of the subject of the test asset predicate",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_subject_aspect_qualifier",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biolink_subject_direction_qualifier",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_subject_direction_qualifier",
+      "description": "The direction of the subject of the test asset predicate",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_subject_direction_qualifier",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biolink_object_aspect_qualifier",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_object_aspect_qualifier",
+      "description": "The aspect of the object of the test asset predicate",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_object_aspect_qualifier",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biolink_object_direction_qualifier",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_object_direction_qualifier",
+      "description": "The direction of the object of the test asset predicate",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_object_direction_qualifier",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biolink_qualified_predicate",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_qualified_predicate",
+      "description": "The qualified_predicate in Biolink model corresponding to the shorthand predicate name used in the test asset.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_qualified_predicate",
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "output_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/output_id",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "OutputID",
+        "ObjectID"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/output_id",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "output_name",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/output_name",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "OutputName",
+        "ObjectName"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/output_name",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "output_category",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/output_category",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "ObjectCategory"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/output_category",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestAsset",
+        "TestCase"
+      ],
+      "range": "concept_category",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "association",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/association",
+      "description": "Specific Biolink Model association 'category' which applies to the test asset defined knowledge statement",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/association",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "association_category",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "qualifiers",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/qualifiers",
+      "description": "Optional qualifiers which constrain to the test asset defined knowledge statement. Note that this field records such qualifier slots and values as tag=value pairs, where the tag is the Biolink Model qualifier slot named and the value is an acceptable (Biolink Model enum?) value of the said qualifier slot.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/qualifiers",
+      "multivalued": true,
+      "owner": "TestCase",
+      "domain_of": [
+        "TestAsset",
+        "TestCase"
+      ],
+      "range": "Qualifier",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "expected_output",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/expected_output",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Expected Output"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/expected_output",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_issue",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_issue",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "issue label"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_issue",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "TestIssueEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "semantic_severity",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/semantic_severity",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Semantic Severity"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/semantic_severity",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "SemanticSeverityEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "in_v1",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/in_v1",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "In v1"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/in_v1",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "well_known",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/well_known",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Well Known"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/well_known",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_runner_settings",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_runner_settings",
+      "description": "Scalar parameters for the TestRunner processing a given TestEntity.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Settings"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_runner_settings",
+      "multivalued": true,
+      "owner": "TestEntity",
+      "domain_of": [
+        "TestEntity"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "must_pass_date",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/must_pass_date",
+      "description": "The date by which this test must pass",
+      "examples": [
+        {
+          "value": "2023-09-01",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/must_pass_date",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "date",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "must_pass_environment",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/must_pass_environment",
+      "description": "The deployment environment within which this test must pass.",
+      "examples": [
+        {
+          "value": "prod",
+          "@type": "Example"
+        },
+        {
+          "value": "ci",
+          "@type": "Example"
+        },
+        {
+          "value": "test",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/must_pass_environment",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "TestEnvEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "scientific_question",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/scientific_question",
+      "description": "The full human-readable scientific question a SME would ask, which is encoded into the test asset.",
+      "examples": [
+        {
+          "value": "What drugs may treat multiple sclerosis?",
+          "@type": "Example"
+        },
+        {
+          "value": "What gene is upregulated?",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/scientific_question",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "string_entry",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/string_entry",
+      "description": "The object of the core triple to be tested",
+      "examples": [
+        {
+          "value": "multiple sclerosis",
+          "@type": "Example"
+        },
+        {
+          "value": "Castlemans",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "trapi node 2",
+        "disease"
+      ],
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/string_entry",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "direction",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/direction",
+      "description": "The direction of the expected query result triple",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/direction",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "DirectionEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "answer_informal_concept",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/answer_informal_concept",
+      "description": "An answer that is returned from the test case, note: this must be combined with the expected_result to form a complete answer.  It might make sense to couple these in their own object instead of strictly sticking to the flat schema introduced by the spreadsheet here: https://docs.google.com/spreadsheets/d/1yj7zIchFeVl1OHqL_kE_pqvzNLmGml_FLbHDs-8Yvig/edit#gid=0",
+      "examples": [
+        {
+          "value": "fingolimod",
+          "@type": "Example"
+        },
+        {
+          "value": "natalizumab",
+          "@type": "Example"
+        },
+        {
+          "value": "lead",
+          "@type": "Example"
+        },
+        {
+          "value": "great answer here",
+          "@type": "Example"
+        }
+      ],
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/answer_informal_concept",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "expected_result",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/expected_result",
+      "description": "The expected result of the query",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/expected_result",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "ExpectedResultsEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "top_level",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/top_level",
+      "description": "The answer must return in these many results",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/top_level",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "integer",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "query_node",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/query_node",
+      "description": "The node of the (templated) TRAPI query to replace",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/query_node",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "NodeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "notes",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/notes",
+      "description": "The notes of the query",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/notes",
+      "owner": "AcceptanceTestAsset",
+      "domain_of": [
+        "AcceptanceTestAsset"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_env",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_env",
+      "description": "Deployment environment within which the associated TestSuite is run.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_env",
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestCase",
+        "TestRunSession"
+      ],
+      "range": "TestEnvEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "query_type",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/query_type",
+      "description": "Type of TestCase query.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/query_type",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "QueryTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_assets",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_assets",
+      "description": "List of explicitly enumerated Test Assets. The class attributes of TestAsset would be included in the TestCase versus being referred to by the identifier (curie) of the TestAsset. That is, this would be a list of objects (in JSONSchema serialization) versus a list of strings (where each string is an identifier pointing to another class).",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_assets",
+      "multivalued": true,
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "TestAsset",
+      "required": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "preconditions",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/preconditions",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/preconditions",
+      "multivalued": true,
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "Precondition",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "trapi_template",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/trapi_template",
+      "description": "A template for a query, which can be used to generate a query for a test case.  note: the current enumerated values for this slot come from the Benchmarks repo config/benchmarks.json \"templates\" collection and refer to the \"name\" field of each template.  Templates themselves are currently stored in the config/[source_name]/templates directory.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/trapi_template",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "range": "TrapiTemplateEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "components",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/components",
+      "description": "The component that this test case is intended to run against.  Most often this is the ARS for  acceptance tests, but for the Benchmarks repo integration, this can also be individual components of the system like Aragorn, or ARAX.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/components",
+      "multivalued": true,
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestCase",
+        "TestRunSession"
+      ],
+      "range": "ComponentEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "trapi_version",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/trapi_version",
+      "description": "TRAPI version (SemVer string)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/trapi_version",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "biolink_version",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_version",
+      "description": "Biolink Model release (SemVer string)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/biolink_version",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_data_file_locator",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_data_file_locator",
+      "description": "An web accessible file resource link to test entity data (e.g. a web accessible text file of Test Asset entries)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_data_file_locator",
+      "owner": "TestSuiteSpecification",
+      "domain_of": [
+        "TestSuiteSpecification"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_data_file_format",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_data_file_format",
+      "description": "File format of test entity data (e.g. TSV, YAML or JSON)",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_data_file_format",
+      "owner": "TestSuiteSpecification",
+      "domain_of": [
+        "TestSuiteSpecification"
+      ],
+      "range": "FileFormatEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_metadata",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_metadata",
+      "description": "Test metadata describes the external provenance, cross-references and objectives for a given test.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_metadata",
+      "owner": "TestSuite",
+      "domain_of": [
+        "TestAsset",
+        "TestSuite"
+      ],
+      "range": "TestMetadata",
+      "required": true,
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_persona",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_persona",
+      "description": "A Test persona describes the user or operational context of a given test.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_persona",
+      "owner": "TestSuite",
+      "domain_of": [
+        "TestSuite"
+      ],
+      "range": "TestPersonaEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_cases",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_cases",
+      "description": "List of explicitly enumerated Test Cases.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_cases",
+      "multivalued": true,
+      "owner": "TestSuite",
+      "domain_of": [
+        "TestSuite"
+      ],
+      "range": "TestCase",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_suite_specification",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_suite_specification",
+      "description": "Declarative specification of a Test Suite of Test Cases whose generation is deferred, (i.e. within a Test Runner) or whose creation is achieved by stream processing of an external data source.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_suite_specification",
+      "owner": "TestSuite",
+      "domain_of": [
+        "TestSuite"
+      ],
+      "range": "TestSuiteSpecification",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_run_parameters",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_run_parameters",
+      "description": "TestRunSession parameters informing a TestHarness about the global characteristics of TestRunner processing tests.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "test_entity_parameters",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_run_parameters",
+      "multivalued": true,
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestRunSession"
+      ],
+      "range": "TestEntityParameter",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_suite_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_suite_id",
+      "description": "CURIE id of a TestSuite registered in the system.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_suite_id",
+      "owner": "TestCaseResult",
+      "domain_of": [
+        "TestCaseResult"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case",
+      "description": "Slot referencing a single TestCase.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case",
+      "owner": "TestCaseResult",
+      "domain_of": [
+        "TestCaseResult"
+      ],
+      "range": "TestCase",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_result",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_result",
+      "description": "Encoded result of a single test run of a given test case",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_result",
+      "owner": "TestCaseResult",
+      "domain_of": [
+        "TestCaseResult"
+      ],
+      "range": "TestCaseResultEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_runner_name",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_runner_name",
+      "description": "Global system name of a TestRunner.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_runner_name",
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestRunSession"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_entities",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_entities",
+      "description": "One or more instances of TestEntity, generally of class TestAsset, TestCase or TestSuite.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_entities",
+      "multivalued": true,
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestRunSession"
+      ],
+      "range": "TestEntity",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "test_case_results",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_results",
+      "description": "One or more instances of TestCaseResult.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_case_results",
+      "multivalued": true,
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestRunSession"
+      ],
+      "range": "TestCaseResult",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "Qualifier_parameter",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/parameter",
+      "description": "The 'parameter' of a Qualifier should be a `qualifier` slot name from the Biolink Model ('biolink' namespace) 'biolink:qualifier' hierarchy.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "parameter",
+      "domain": "Qualifier",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/parameter",
+      "alias": "parameter",
+      "owner": "Qualifier",
+      "domain_of": [
+        "Qualifier"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "parameter",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "Qualifier_value",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/value",
+      "description": "The 'value' of should be a suitable value generally drawn from an applicable Biolink Model (\"Enum\") value set of the specified Qualifier.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "value",
+      "domain": "Qualifier",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/value",
+      "alias": "value",
+      "owner": "Qualifier",
+      "domain_of": [
+        "Qualifier"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "value",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TestAsset_id",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/id",
+      "description": "A unique identifier for a Test Entity",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "AssetIdentifier"
+      ],
+      "mappings": [
+        "http://schema.org/identifier"
+      ],
+      "is_a": "id",
+      "domain": "TestAsset",
+      "slot_uri": "http://schema.org/identifier",
+      "identifier": true,
+      "alias": "id",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "id",
+      "range": "uriorcurie",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TestAsset_tags",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/tags",
+      "description": "One or more 'tags' slot values (inherited from TestEntity) should generally be defined to specify TestAsset membership in a \"Block List\" collection",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "mappings": [
+        "http://schema.org/additionalType"
+      ],
+      "is_a": "tags",
+      "domain": "TestAsset",
+      "slot_uri": "http://schema.org/additionalType",
+      "multivalued": true,
+      "alias": "tags",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "tags",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TestAsset_test_runner_settings",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_runner_settings",
+      "description": "Scalar settings for the TestRunner, e.g. \"inferred\"",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Settings"
+      ],
+      "is_a": "test_runner_settings",
+      "domain": "TestAsset",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_runner_settings",
+      "multivalued": true,
+      "alias": "test_runner_settings",
+      "owner": "TestAsset",
+      "domain_of": [
+        "TestAsset"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "test_runner_settings",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TestCase_test_assets",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_assets",
+      "description": "One or more 'tags' slot values (inherited from TestEntity) should generally be defined as filters to specify TestAsset membership in 'test_assets' slot (\"Block List\") collection.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "aliases": [
+        "Block List"
+      ],
+      "is_a": "test_assets",
+      "domain": "TestCase",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_assets",
+      "multivalued": true,
+      "alias": "test_assets",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "test_assets",
+      "range": "TestAsset",
+      "required": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TestCase_tags",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/tags",
+      "description": "One or more 'tags' slot values (slot inherited from TestEntity) should generally be defined as filters to specify TestAsset membership in a \"Block List\" collection.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "mappings": [
+        "http://schema.org/additionalType"
+      ],
+      "is_a": "tags",
+      "domain": "TestCase",
+      "slot_uri": "http://schema.org/additionalType",
+      "multivalued": true,
+      "alias": "tags",
+      "owner": "TestCase",
+      "domain_of": [
+        "TestCase"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "tags",
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "AcceptanceTestCase_test_assets",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_assets",
+      "description": "List of explicitly enumerated Test Assets. The class attributes of TestAsset would be included in the TestCase versus being referred to by the identifier (curie) of the TestAsset. That is, this would be a list of objects (in JSONSchema serialization) versus a list of strings (where each string is an identifier pointing to another class).",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestCase_test_assets",
+      "domain": "AcceptanceTestCase",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_assets",
+      "multivalued": true,
+      "alias": "test_assets",
+      "owner": "AcceptanceTestCase",
+      "domain_of": [
+        "AcceptanceTestCase"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "test_assets",
+      "range": "AcceptanceTestAsset",
+      "required": true,
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TestRunSession_test_run_parameters",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_run_parameters",
+      "description": "Different TestRunners could expect additional global test configuration parameters, like the applicable TRAPI version (\"trapi_version\") or Biolink Model versions (\"biolink_version\").",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "test_run_parameters",
+      "domain": "TestRunSession",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_run_parameters",
+      "multivalued": true,
+      "alias": "test_run_parameters",
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestRunSession"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "test_run_parameters",
+      "range": "TestEntityParameter",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "TestRunSession_test_entities",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_entities",
+      "description": "Different TestRunners could expect specific kinds of TestEntity as an input.  These 'test_entities' are one or more instances of TestAsset, TestCase or (preferably?) TestSuite.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "test_entities",
+      "domain": "TestRunSession",
+      "slot_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/test_entities",
+      "multivalued": true,
+      "alias": "test_entities",
+      "owner": "TestRunSession",
+      "domain_of": [
+        "TestRunSession"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "test_entities",
+      "range": "TestEntity",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "TestEntityParameter",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestEntityParameter",
+      "description": "A single 'tag = value' pair (where 'value' is a simple string).",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slots": [
+        "parameter",
+        "value"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestEntityParameter",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Qualifier",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/Qualifier",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntityParameter",
+      "slots": [
+        "Qualifier_parameter",
+        "Qualifier_value"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/Qualifier",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestEntity",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestEntity",
+      "description": "Abstract global 'identification' class shared as a parent with all major model classes within the data model for Translator testing.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "abstract": true,
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestEntity",
+      "tree_root": true,
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestMetadata",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestMetadata",
+      "description": "Represents metadata related to (external SME, SMURF, Translator feedback,  large scale batch, etc.) like the provenance of test assets, cases and/or suites.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_source",
+        "test_reference",
+        "test_objective",
+        "test_annotations"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestMetadata",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestAsset",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestAsset",
+      "description": "Represents a Test Asset, which is a single specific instance of TestCase-agnostic semantic parameters representing the specification of a Translator test target with inputs and (expected) outputs.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "name",
+        "description",
+        "input_id",
+        "input_name",
+        "input_category",
+        "predicate_id",
+        "predicate_name",
+        "output_id",
+        "output_name",
+        "output_category",
+        "association",
+        "qualifiers",
+        "expected_output",
+        "test_issue",
+        "semantic_severity",
+        "in_v1",
+        "well_known",
+        "test_reference",
+        "test_metadata",
+        "TestAsset_id",
+        "TestAsset_tags",
+        "TestAsset_test_runner_settings"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestAsset",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AcceptanceTestAsset",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/AcceptanceTestAsset",
+      "description": "Model derived from Jenn's test asset design and Shervin's runner JSON here as an example.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestAsset",
+      "slots": [
+        "name",
+        "description",
+        "input_id",
+        "input_name",
+        "input_category",
+        "predicate_id",
+        "predicate_name",
+        "output_id",
+        "output_name",
+        "output_category",
+        "association",
+        "qualifiers",
+        "expected_output",
+        "test_issue",
+        "semantic_severity",
+        "in_v1",
+        "well_known",
+        "test_reference",
+        "test_metadata",
+        "TestAsset_id",
+        "TestAsset_tags",
+        "TestAsset_test_runner_settings",
+        "must_pass_date",
+        "must_pass_environment",
+        "scientific_question",
+        "string_entry",
+        "direction",
+        "answer_informal_concept",
+        "expected_result",
+        "top_level",
+        "query_node",
+        "notes"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/AcceptanceTestAsset",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestEdgeData",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestEdgeData",
+      "description": "Represents a single Biolink Model compliant instance of a subject-predicate-object edge that can be used for testing.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestAsset",
+      "slots": [
+        "name",
+        "description",
+        "input_id",
+        "input_name",
+        "input_category",
+        "predicate_id",
+        "predicate_name",
+        "output_id",
+        "output_name",
+        "output_category",
+        "association",
+        "qualifiers",
+        "expected_output",
+        "test_issue",
+        "semantic_severity",
+        "in_v1",
+        "well_known",
+        "test_reference",
+        "test_metadata",
+        "TestAsset_id",
+        "TestAsset_tags",
+        "TestAsset_test_runner_settings"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestEdgeData",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Precondition",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/Precondition",
+      "description": "Represents a precondition for a TestCase",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/Precondition",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestCase",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestCase",
+      "description": "Represents a single enumerated instance of Test Case, derived from a  given collection of one or more TestAsset instances (the value of the 'test_assets' slot) which define the 'inputs' and 'outputs' of the TestCase, used to probe a particular test condition.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "test_runner_settings",
+        "query_type",
+        "TestCase_test_assets",
+        "preconditions",
+        "trapi_template",
+        "test_case_objective",
+        "test_case_source",
+        "test_case_predicate_name",
+        "test_case_predicate_id",
+        "test_case_input_id",
+        "qualifiers",
+        "input_category",
+        "output_category",
+        "components",
+        "test_env",
+        "TestCase_tags"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestCase",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AcceptanceTestCase",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/AcceptanceTestCase",
+      "description": "See AcceptanceTestAsset above for more details.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestCase",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "test_runner_settings",
+        "query_type",
+        "preconditions",
+        "trapi_template",
+        "test_case_objective",
+        "test_case_source",
+        "test_case_predicate_name",
+        "test_case_predicate_id",
+        "test_case_input_id",
+        "qualifiers",
+        "input_category",
+        "output_category",
+        "components",
+        "test_env",
+        "TestCase_tags",
+        "AcceptanceTestCase_test_assets"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/AcceptanceTestCase",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "QuantitativeTestCase",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/QuantitativeTestCase",
+      "description": "Assumed additional model from Shervin's runner JSON here as an example.  This schema is not yet complete.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestCase",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "test_runner_settings",
+        "query_type",
+        "TestCase_test_assets",
+        "preconditions",
+        "trapi_template",
+        "test_case_objective",
+        "test_case_source",
+        "test_case_predicate_name",
+        "test_case_predicate_id",
+        "test_case_input_id",
+        "qualifiers",
+        "input_category",
+        "output_category",
+        "components",
+        "test_env",
+        "TestCase_tags"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/QuantitativeTestCase",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestSuiteSpecification",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestSuiteSpecification",
+      "description": "Parameters for a Test Case instances either dynamically generated from some external source of Test Assets.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_data_file_locator",
+        "test_data_file_format"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestSuiteSpecification",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestSuite",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestSuite",
+      "description": "Specification of a set of Test Cases, one of either with a static list of 'test_cases' or a dynamic 'test_suite_specification' slot values. Note: at least one slot or the other, but generally not both(?) needs to be present.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_metadata",
+        "test_persona",
+        "test_cases",
+        "test_suite_specification"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestSuite",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AcceptanceTestSuite",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/AcceptanceTestSuite",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestSuite",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_metadata",
+        "test_persona",
+        "test_cases",
+        "test_suite_specification"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/AcceptanceTestSuite",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "BenchmarkTestSuite",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/BenchmarkTestSuite",
+      "description": "JsonObj(is_a='TestSuite')",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/BenchmarkTestSuite",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "StandardsComplianceTestSuite",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/StandardsComplianceTestSuite",
+      "description": "Test suite for testing Translator components against releases of standards like TRAPI and the Biolink Model.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestSuite",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_metadata",
+        "test_persona",
+        "test_cases",
+        "test_suite_specification"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/StandardsComplianceTestSuite",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "OneHopTestSuite",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/OneHopTestSuite",
+      "description": "Test case for testing the integrity of \"One Hop\" knowledge graph retrievals sensa legacy SRI_Testing harness.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestSuite",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_metadata",
+        "test_persona",
+        "test_cases",
+        "test_suite_specification"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/OneHopTestSuite",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestCaseResult",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestCaseResult",
+      "description": "The outcome of a TestRunner run of one specific TestCase.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_suite_id",
+        "test_case",
+        "test_case_result"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestCaseResult",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestRunSession",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestRunSession",
+      "description": "Single run of a TestRunner in a given environment, with a specified set of test_entities (generally, one or more instances of TestSuite).",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "components",
+        "test_env",
+        "test_runner_name",
+        "TestRunSession_test_run_parameters",
+        "TestRunSession_test_entities",
+        "test_case_results",
+        "timestamp"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestRunSession",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestOutput",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestOutput",
+      "description": "The output of a TestRunner run of one specific TestCase.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "test_case_id",
+        "pks"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestOutput",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "TestResultPKSet",
+      "definition_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestResultPKSet",
+      "description": "Primary keys for a given ARA result set from a SmokeTest result for a given TestCase.",
+      "from_schema": "https://w3id.org/TranslatorSRI/TranslatorTestingModel",
+      "is_a": "TestEntity",
+      "slots": [
+        "id",
+        "name",
+        "description",
+        "tags",
+        "test_runner_settings",
+        "parent_pk",
+        "merged_pk",
+        "aragorn",
+        "arax",
+        "unsecret",
+        "bte",
+        "improving"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/TestResultPKSet",
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "translator_testing_model.yaml",
+  "source_file_date": "2024-04-18T22:29:50",
+  "source_file_size": 27247,
+  "generation_date": "2024-04-19T10:26:20",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "project/jsonld/translator_testing_model.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "https://w3id.org/TranslatorSRI/TranslatorTestingModel/"
+    }
+  ]
+}

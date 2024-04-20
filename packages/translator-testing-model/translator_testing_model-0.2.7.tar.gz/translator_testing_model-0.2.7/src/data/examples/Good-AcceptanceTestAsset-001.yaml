@@ -1,0 +1,37 @@
+# Example AcceptanceTestAsset data object
+---
+# TODO: the AcceptanceTestAsset example data needs further elaboration
+#       (there don't seem to be any required: true AcceptanceTestAsset-specific fields)
+
+#
+#  AcceptanceTestAsset:
+#    is_a: TestAsset
+#    description: >-
+#      Model derived from Jenn's test asset design and Shervin's runner JSON here as an example.
+#    slots:
+#      - must_pass_date
+#      - must_pass_environment
+#      - scientific_question
+#      - string_entry
+#      - direction
+#      - answer_informal_concept
+#      - expected_result
+##      - curie  # use input_id
+#      - top_level
+#      - query_node
+#      - notes
+#
+id: example:AcceptanceTestAsset001
+name: AcceptanceTestAsset001
+description: Iron treats Aceruloplasminemia
+input_id: MONDO:0011426
+predicate_name: treats
+output_id: DRUGBANK:DB01592
+expected_output: NeverShow
+test_metadata:
+  id: "test:1"
+  test_source: SMURF
+test_runner_settings:
+  - "inferred"
+  - "test"
+
