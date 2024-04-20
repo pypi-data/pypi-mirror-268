@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+gen_tb/__init__.py
+gen_tb/gen_tb.cp311-win_amd64.pyd
+gen_tb/gen_tb.cp312-win_amd64.pyd
+gen_tb/gen_testbench_example.py
+gen_tb.egg-info/PKG-INFO
+gen_tb.egg-info/SOURCES.txt
+gen_tb.egg-info/dependency_links.txt
+gen_tb.egg-info/top_level.txt
