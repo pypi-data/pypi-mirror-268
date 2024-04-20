@@ -1,0 +1,10 @@
+
+[all]
+superdupper-core
+superdupper-db
+
+[core]
+superdupper-core
+
+[db]
+superdupper-db
