@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+topsis_tarndeep_singh_102117210/102117210.py
+topsis_tarndeep_singh_102117210/__init__.py
+topsis_tarndeep_singh_102117210.egg-info/PKG-INFO
+topsis_tarndeep_singh_102117210.egg-info/SOURCES.txt
+topsis_tarndeep_singh_102117210.egg-info/dependency_links.txt
+topsis_tarndeep_singh_102117210.egg-info/requires.txt
+topsis_tarndeep_singh_102117210.egg-info/top_level.txt
