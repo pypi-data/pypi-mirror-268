@@ -1,0 +1,10 @@
+commitcrafter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+commitcrafter/cli.py,sha256=uaChJwOyV5S3oBiCe3F4zo42JAg1OcgNQSKCU-UM9Ds,929
+commitcrafter/commitcrafter.py,sha256=JYC6g6dDrBjhgyW9TcT1LMY889RXuxCYfylQcnqHSxY,1549
+commitcrafter/exceptions.py,sha256=95LdQc8wf2Nm-Tz-sMtSgnnpxQ8vau9w5PMPiwotDnA,42
+commitcrafter/gpt_integration.py,sha256=xSv19BPcfANZjIdHiksVjXlUCyUAQ3bKEZqBOwMcDP8,1010
+commitcrafter/prompt.txt,sha256=s4flSKOQTUf0_f_D_EOfNGWfHzNaA8AML4HyGvHpmZw,1670
+commitcrafter-0.1.6.dist-info/METADATA,sha256=Q8cGdmOstPY3VuhVY4nkQqjcS9BRIO-0PZa1TVsXoq4,546
+commitcrafter-0.1.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+commitcrafter-0.1.6.dist-info/entry_points.txt,sha256=4TKYJyi7hVQZa9NIqS60oeHqVCuuQGxFYA81G0eayPY,53
+commitcrafter-0.1.6.dist-info/RECORD,,
