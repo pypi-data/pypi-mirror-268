@@ -1,0 +1,13 @@
+hoisaai/layer_0/tensor.py,sha256=d9oLMW6iCphesF5XZLa1nNA5YE_2bXLDnHj9A_rJwCI,2245
+hoisaai/layer_1/model.py,sha256=MSGsbCalMOZHOcoPoE1iag7ymphost1RIkjw9FfW6vQ,4786
+hoisaai/layer_1/sample.py,sha256=0_cDRwga5xdeJAoQEezZaMaPQqlt2Dns9GIAGSXob1s,4218
+hoisaai/layer_1/dataframe/data_preprocessing.py,sha256=0TuNijYhPJQPpwecpN_ots-9C5-qCT-7Uwz_bL8N3Wk,11199
+hoisaai/layer_1/dataframe/data_source.py,sha256=r6gD-frDKEVrbBplSPTGq6tdbDMLOKdnJkFdyQhyn9E,3466
+hoisaai/layer_1/learning_model/supervised/error.py,sha256=VUwCVt_OI3lkJVB4Cg9XecsxtRQsi1LJZ1soGmC1k8w,5475
+hoisaai/layer_1/learning_model/supervised/linear.py,sha256=Z_07yl859IXH_RN5OTps0yBWStvjswXQjpKp-TbSEfQ,12600
+hoisaai/layer_1/learning_model/supervised/supervised.py,sha256=lwxI9pHeg5dYsWaBPhDGHvThpJVknKvj6C9b-2vrrh4,2126
+HoiSaAI-0.0.1.dist-info/LICENSE,sha256=Nv6u1ubULm-E2y6q2-pQPK8s2BzkOltLaVlPKQ3tkcs,35182
+HoiSaAI-0.0.1.dist-info/METADATA,sha256=pdz_csxHXybxihltEMdU1l4RAJNz_53tVJtpQb20LoI,3214
+HoiSaAI-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+HoiSaAI-0.0.1.dist-info/top_level.txt,sha256=BOVJvNDw5mvE9d7Us8UG6ggds81Trlzi0WzWeV0FTCE,8
+HoiSaAI-0.0.1.dist-info/RECORD,,
