@@ -1,0 +1,55 @@
+{
+  "title": "Targeting Workflow",
+  "run_command": "targeting_workflow.gui.main_window",
+  "conda_environment": "targeting_workflow",
+  "grid_object": {
+    "meshType": [
+      "{B020A277-90E2-4CD7-84D6-612EE3F25051}",
+      "{202C5DB1-A56D-4004-9CAD-BAAFD8899406}",
+      "{F26FEBA3-ADED-494B-B9E9-B2BBCBE298E1}",
+      "{48f5054a-1c5c-4ca4-9048-80f36dc60a06}",
+      "{6A057FDC-B355-11E3-95BE-FD84A7FFCB88}"
+    ],
+    "main": true,
+    "label": "Targeting Object",
+    "value": "",
+    "enabled": true,
+    "tooltip": "Select the object containing the data to use for the targeting."
+  },
+   "target": {
+    "main": true,
+    "label": "Target property",
+    "allowComplement": false,
+    "isComplement": false,
+    "parent": "grid_object",
+    "property": "",
+    "association": ["Cell", "Vertex"],
+    "dataType": [
+      "Referenced",
+      "Integer",
+      "Float"
+    ],   
+    "value": "",
+    "rangeLabel": "Values",
+    "tooltip": "Select the target property to be used for the targeting workflow, and its range."
+  },
+    "no_target": {
+    "main": true,
+    "label": "No target property",
+    "allowComplement": false,
+    "isComplement": false,
+    "parent": "grid_object",
+    "property": "",
+    "association": ["Cell", "Vertex"],
+    "dataType": [
+      "Referenced",
+      "Integer",
+      "Float"
+    ],   
+    "value": "",
+    "optional": true,
+    "enabled": false,
+    "rangeLabel": "Values",
+    "tooltip": "Select the target property to be used for the targeting workflow, and its range."
+  }
+}

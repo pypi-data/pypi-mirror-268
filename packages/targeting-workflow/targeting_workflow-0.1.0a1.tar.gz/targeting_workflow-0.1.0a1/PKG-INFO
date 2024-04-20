@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: targeting-workflow
+Version: 0.1.0a1
+Summary: Data-drvien workflow for targeting
+Author: Mira Geoscience
+Author-email: support@mirageoscience.com
+Requires-Python: >=3.10,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: geoh5py (>=0.9.0-alpha.3,<0.10.0)
+Requires-Dist: numpy (>=1.23.5,<1.24.0)
+Requires-Dist: pandas (>=2.2.1,<2.3.0)
+Requires-Dist: plotly (>=5.19.0,<5.20.0)
+Requires-Dist: pyqt5-sip (>=12.12,<12.13)
+Requires-Dist: pyqtwebengine (>=5.15.2,<5.16.0)
+Requires-Dist: pyside2 (>=5.15.8,<5.16.0)
+Requires-Dist: scikit-learn (>=1.4.0,<1.5.0)
+Requires-Dist: scipy (>=1.12.0,<1.13.0)

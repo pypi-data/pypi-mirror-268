@@ -1,0 +1,86 @@
+[tool.poetry]
+name = "targeting-workflow"
+version = "0.1.0-alpha.1"
+description = "Data-drvien workflow for targeting"
+authors = ["Mira Geoscience <support@mirageoscience.com>"]
+
+
+packages = [
+     { include = "targeting_workflow" },
+     { include = "targeting_workflow-assets" },
+]
+
+[tool.poetry.scripts]
+# no user scripts for now
+
+
+[tool.poetry.dependencies]
+python = "^3.10, <3.11"
+
+numpy = "~1.23.5"
+pandas = "~2.2.1"
+plotly = "~5.19.0"
+pyqt5-sip = "~12.12"  # force version or poetry resolves to 5.15.12 with no wheels for Windows!
+pyqtwebengine = "~5.15.2"  # 5.15.7 and newer on conda-forge, but not in Pypi"
+pyside2 = "~5.15.8"  # 5.15.3 and newer on conda-forge, but not in Pypi
+scikit-learn = "~1.4.0"
+scipy = "~1.12.0"
+
+## pip dependencies
+geoh5py = {version = "~0.9.0-alpha.3", source = "pypi", allow-prereleases = true}
+#geoh5py = {git = "https://github.com/MiraGeoscience/geoh5py.git", branch = "release/0.9.0"}
+
+[tool.poetry.dev-dependencies]
+numpydoc = "*"
+nbsphinx = "*"
+pylint = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-qt = "*"
+tomli = "*"
+sphinx = "*"
+sphinx_issues = "*"
+sphinx-autodoc-typehints = "*"
+sphinx-rtd-theme = "*"
+readthedocs-sphinx-ext = "*"
+
+[tool.conda-lock]
+platforms = ['win-64', 'osx-64', 'linux-64']
+channels = ['conda-forge']
+
+[tool.isort]
+# settings for compatibility between ``isort`` and ``black`` formatting
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.black]
+# defaults are just fine
+
+[tool.pytest.ini_options]
+qt_api = "pyside2"
+
+[tool.coverage.run]
+branch = true
+source = ["targeting_workflow"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "raise NotImplementedError",
+    "pass",
+    "if TYPE_CHECKING",
+    "pragma: no cover"
+]
+omit = [
+    "shibokensupport/*",
+    "pyscript",
+    "signature_bootstrap.py",
+]
+
+fail_under = 63
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools"]
+build-backend = "poetry.core.masonry.api"
