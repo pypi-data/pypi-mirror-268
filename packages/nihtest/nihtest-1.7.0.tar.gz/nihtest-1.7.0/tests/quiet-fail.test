@@ -1,0 +1,5 @@
+program nihtest
+arguments -q true-fail.test
+return 1
+file true-fail.test true-fail.input
+file nihtest.conf nihtest-conf
