@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "symmer"
+version = "0.0.5"
+description = ""
+authors = ["AlexisRalli <rallilex@hotmail.co.uk>", "TimWeaving <weaving.timothy@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+openfermion = "^1.6.1"
+cached-property = "^1.5.2"
+qiskit = "0.46"
+pydocstyle = "^6.1.1"
+isort = "^5.10.1"
+black = "^24.3.0"
+flake8 = "^4.0.1"
+ncon = "^1.0.0"
+opt-einsum = "^3.3.0"
+pytest = "^7.2.2"
+numba = "0.58.1"
+quimb = "^1.7.3"
+ray = "2.10"
+sphinx-design = "^0.5.0"
+myst-nb = "^0.17.2"
+sphinx-copybutton = "^0.5.2"
+py3dmol = "^2.0.4"
+scipy = "1.9.3"
+urllib3 = "1.26.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
