@@ -1,0 +1,9 @@
+rlsdk_python/__init__.py,sha256=NH-O0teQKxDByrquxGf75toiOihNOUkkRkLIEaSK1PI,107
+rlsdk_python/event_handling.py,sha256=uVcohCkB4kQfTZfkIzC6z_Wfq_K9ew973m5QfqWhCwY,1812
+rlsdk_python/events.py,sha256=Di4Sc33SVYPbaBeKlXWqrcTuBBmyOqdw9DC5SyvJXZk,1814
+rlsdk_python/frida_script.py,sha256=AVCUEm_qZNEwJp2h_gcfqwbnl8BdQB3YvMG-VFHLRHk,4038
+rlsdk_python/game_objects.py,sha256=57L3sPhRmFIlNyO7e0Ra2nVJ9kOajIV9_1LiMTqtsYg,35549
+rlsdk_python/sdk.py,sha256=4h598WzsTPPZBg9vtZDbPpQ5O0M7cJ-Dh9IVZI9fJ_0,14656
+rlsdk_python-0.1.0.dist-info/METADATA,sha256=74MaxPR8-Bgg5KulYpwbSOB5tXptr3_3SZtc-ZRdHxw,509
+rlsdk_python-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+rlsdk_python-0.1.0.dist-info/RECORD,,
