@@ -1,0 +1,8 @@
+litesync/__init__.py,sha256=BM8SDB40crIZqN6akUGG2ncUpzG4o7W6AVmeHq6REKg,1018
+litesync/_sqlite3.cpython-37m-darwin.so,sha256=xRNoEdjW6S_yHJ15LtsjXdxmLAFXrn_fjgxqhR1Zc3Y,108256
+litesync/dbapi2.py,sha256=AI8-eBZR33ypaTNyARptz0YxClIMBjg1kkQ7BBWlyIY,2723
+litesync-0.5.0.dist-info/LICENSE,sha256=-iPPJQEmVI6QAI_pLeTudtSFv7s1kvW-iqcxd1iSqWA,889
+litesync-0.5.0.dist-info/METADATA,sha256=jaCbrupwxleaRNkzZ1CWyQbC46uyRg318-nXtOGRewI,1400
+litesync-0.5.0.dist-info/WHEEL,sha256=HS_2vgrXyXO7N4Q-5VnuMAgG-fG_r8eemMgfU9Aw3Kk,110
+litesync-0.5.0.dist-info/top_level.txt,sha256=siDHeiq8s9JfWYIdPFvxLDmzrkSZUoq6nYCLpobjQTA,9
+litesync-0.5.0.dist-info/RECORD,,

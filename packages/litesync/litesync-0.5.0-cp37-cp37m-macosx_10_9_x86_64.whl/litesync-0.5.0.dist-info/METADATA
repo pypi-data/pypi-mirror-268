@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: litesync
+Version: 0.5.0
+Summary: DB-API 2.0 interface for LiteSync
+Home-page: https://gitlab.com/litesync/litesync-python3
+Author: Bernardo Ramos
+Author-email: contact@litesync.io
+License: zlib/libpng
+Platform: ALL
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: zlib/libpng License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+LiteSync
+--------
+
+## Installation
+
+To install the library, run:
+
+On Mac and Linux:
+
+    sudo ./install
+
+On Windows:
+
+    install.bat
+
+## Usage
+
+You can make tests using the SQLite shell by typing:
+
+    sqlite3
+
+You can also create apps and link them to the LiteSync library.
+
+On Mac and Linux, it is located at:
+
+    /usr/local/lib/liblitesync.(so|dylib)
+
+On Windows, it is located at:
+
+    C:\Windows\System32\litesync-0.1.dll
+
+More information is available on the site:
+
+http://litesync.io
+
+Feel comfortable to use the forum to ask questions and also to contact us via e-mail.
+
+Happy testing!
