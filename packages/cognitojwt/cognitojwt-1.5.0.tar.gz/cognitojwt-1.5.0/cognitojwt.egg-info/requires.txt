@@ -1,0 +1,17 @@
+joserfc
+
+[async]
+aiofile
+aiohttp
+async_lru
+
+[sync]
+requests
+
+[test]
+aiohttp
+pytest-asyncio
+pytest
+async_lru
+attrs
+requests
