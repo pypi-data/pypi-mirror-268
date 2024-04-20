@@ -1,0 +1,16 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+procciao/README.MD
+procciao/__init__.py
+procciao/procdict.py
+procciao/requirements.txt
+procciao/savebase64.py
+procciao/thirdparty.json
+procciao.egg-info/PKG-INFO
+procciao.egg-info/SOURCES.txt
+procciao.egg-info/dependency_links.txt
+procciao.egg-info/requires.txt
+procciao.egg-info/top_level.txt

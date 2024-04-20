@@ -1,0 +1,5 @@
+include procciao/requirements.txt
+include procciao/thirdparty.json
+include procciao/README.MD
+include procciao/procdict.py
+include procciao/savebase64.py
