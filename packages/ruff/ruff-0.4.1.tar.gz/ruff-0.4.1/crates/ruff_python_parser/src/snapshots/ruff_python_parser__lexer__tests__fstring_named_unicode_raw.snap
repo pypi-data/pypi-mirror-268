@@ -1,0 +1,72 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: lex_source(source)
+---
+[
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Raw {
+                        uppercase_r: false,
+                    },
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        0..3,
+    ),
+    (
+        FStringMiddle {
+            value: "\\N",
+            kind: StringKind {
+                prefix: Format(
+                    Raw {
+                        uppercase_r: false,
+                    },
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        3..5,
+    ),
+    (
+        Lbrace,
+        5..6,
+    ),
+    (
+        Name {
+            name: "BULLET",
+        },
+        6..12,
+    ),
+    (
+        Rbrace,
+        12..13,
+    ),
+    (
+        FStringMiddle {
+            value: " normal",
+            kind: StringKind {
+                prefix: Format(
+                    Raw {
+                        uppercase_r: false,
+                    },
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        13..20,
+    ),
+    (
+        FStringEnd,
+        20..21,
+    ),
+    (
+        Newline,
+        21..21,
+    ),
+]

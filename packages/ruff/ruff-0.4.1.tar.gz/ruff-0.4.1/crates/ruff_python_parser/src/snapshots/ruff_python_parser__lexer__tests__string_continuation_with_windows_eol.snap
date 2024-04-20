@@ -1,0 +1,23 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: string_continuation_with_eol(WINDOWS_EOL)
+---
+[
+    (
+        String {
+            value: "abc\\\r\ndef",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        0..11,
+    ),
+    (
+        Newline,
+        11..11,
+    ),
+]

@@ -1,0 +1,116 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: lex_source(source)
+---
+[
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        0..2,
+    ),
+    (
+        FStringEnd,
+        2..3,
+    ),
+    (
+        String {
+            value: "",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        4..6,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        7..9,
+    ),
+    (
+        FStringEnd,
+        9..10,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        ),
+        11..13,
+    ),
+    (
+        FStringEnd,
+        13..14,
+    ),
+    (
+        String {
+            value: "",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        15..17,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Double,
+            },
+        ),
+        18..22,
+    ),
+    (
+        FStringEnd,
+        22..25,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Single,
+            },
+        ),
+        26..30,
+    ),
+    (
+        FStringEnd,
+        30..33,
+    ),
+    (
+        Newline,
+        33..33,
+    ),
+]

@@ -1,0 +1,129 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: lex_source(source)
+---
+[
+    (
+        String {
+            value: "double",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        0..8,
+    ),
+    (
+        String {
+            value: "single",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        9..17,
+    ),
+    (
+        String {
+            value: "can\\'t",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        18..26,
+    ),
+    (
+        String {
+            value: "\\\\\\\"",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        27..33,
+    ),
+    (
+        String {
+            value: "\\t\\r\\n",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        34..42,
+    ),
+    (
+        String {
+            value: "\\g",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        43..47,
+    ),
+    (
+        String {
+            value: "raw\\'",
+            kind: StringKind {
+                prefix: Regular(
+                    Raw {
+                        uppercase: false,
+                    },
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        48..56,
+    ),
+    (
+        String {
+            value: "\\420",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        57..63,
+    ),
+    (
+        String {
+            value: "\\200\\0a",
+            kind: StringKind {
+                prefix: Regular(
+                    Empty,
+                ),
+                triple_quoted: false,
+                quote_style: Single,
+            },
+        },
+        64..73,
+    ),
+    (
+        Newline,
+        73..73,
+    ),
+]

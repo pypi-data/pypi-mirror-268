@@ -1,0 +1,161 @@
+---
+source: crates/ruff_python_parser/src/lexer.rs
+expression: lex_source(source)
+---
+[
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Double,
+            },
+        ),
+        0..4,
+    ),
+    (
+        FStringMiddle {
+            value: "\nhello\n    world\n",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Double,
+            },
+        },
+        4..21,
+    ),
+    (
+        FStringEnd,
+        21..24,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Single,
+            },
+        ),
+        25..29,
+    ),
+    (
+        FStringMiddle {
+            value: "\n    world\nhello\n",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Single,
+            },
+        },
+        29..46,
+    ),
+    (
+        FStringEnd,
+        46..49,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        ),
+        50..52,
+    ),
+    (
+        FStringMiddle {
+            value: "some ",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        52..57,
+    ),
+    (
+        Lbrace,
+        57..58,
+    ),
+    (
+        FStringStart(
+            StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Double,
+            },
+        ),
+        58..62,
+    ),
+    (
+        FStringMiddle {
+            value: "multiline\nallowed ",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: true,
+                quote_style: Double,
+            },
+        },
+        62..80,
+    ),
+    (
+        Lbrace,
+        80..81,
+    ),
+    (
+        Name {
+            name: "x",
+        },
+        81..82,
+    ),
+    (
+        Rbrace,
+        82..83,
+    ),
+    (
+        FStringEnd,
+        83..86,
+    ),
+    (
+        Rbrace,
+        86..87,
+    ),
+    (
+        FStringMiddle {
+            value: " string",
+            kind: StringKind {
+                prefix: Format(
+                    Regular,
+                ),
+                triple_quoted: false,
+                quote_style: Double,
+            },
+        },
+        87..94,
+    ),
+    (
+        FStringEnd,
+        94..95,
+    ),
+    (
+        Newline,
+        95..95,
+    ),
+]
