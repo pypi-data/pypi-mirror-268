@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: wiremind-kubernetes
+Version: 7.4.3
+Summary: Helper for Kubernetes.
+Home-page: https://github.com/wiremind/wiremind-kubernetes
+Author: Wiremind
+Author-email: dev@wiremind.io
+License: LGPLv3+
+Keywords: kubernetes
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)
+Requires-Python: >=3.7.0
+License-File: LICENCE.md
+Requires-Dist: kubernetes>=18.0.0
+Provides-Extra: dev
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: bandit; extra == "dev"
+Requires-Dist: flake8-mutable; extra == "dev"
+Requires-Dist: pip-tools>=3.7.0; extra == "dev"
+Requires-Dist: pyupgrade; extra == "dev"
+Requires-Dist: safety; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: mock; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Provides-Extra: mypy
+Requires-Dist: mypy; extra == "mypy"
+Provides-Extra: test
+Requires-Dist: mock; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-mock; extra == "test"
+
+This Python library is a high-level set of Kubernetes Helpers allowing either
+to manage individual standard Kubernetes controllers (Deployment, StatefulSets, etc) or a logical set
+of standard Kubernetes controllers through the `expecteddeploymentscales.wiremind.io` CRD (for example
+allowing to scale down ALL Deployments of a Helm Release marked as such).
