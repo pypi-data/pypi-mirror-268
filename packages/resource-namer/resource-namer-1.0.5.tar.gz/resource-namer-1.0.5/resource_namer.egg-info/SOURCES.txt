@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+resource_namer/__init__.py
+resource_namer/__main__.py
+resource_namer/__meta__.py
+resource_namer/word_lists.py
+resource_namer.egg-info/PKG-INFO
+resource_namer.egg-info/SOURCES.txt
+resource_namer.egg-info/dependency_links.txt
+resource_namer.egg-info/top_level.txt

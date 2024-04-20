@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: resource-namer
+Version: 1.0.5
+Summary: Generate names for things with phonetic alliteration - use with GUIDs for easy identification.
+Home-page: https://github.com/darenr/resource-namer
+Author: Daren Race
+Author-email: daren.race@gmail.com
+License: Apache License, Version 2.0, January 2004
+Keywords: random resource name generator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# resource-namer
+
+[![License](https://img.shields.io/badge/license-Apache-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+[![PyPI Version](https://img.shields.io/pypi/v/resource-namer.svg?style=flat&color=blue)](https://pypi.org/project/resource-namer)
+[![Python Versions](https://img.shields.io/pypi/pyversions/resource-namer.svg?logo=python&logoColor=white&style=flat)](https://pypi.org/project/resource-namer)
+
+
+Name things with better names than GUIDs, use in combination with
+GUIDs or datetimes.
+
+## module main
+
+```
+python -m resource_namer
+```
+
+## local development
+
+```
+pip install -e .
+```
+
+## run tests:
+
+```
+pip install -e .
+pytest
+```
+
+## Example API usage
+
+```
+>>> from resource_namer import generate_name
+>>> generate_name()
+'handy-human'
+
+# Use a different join character:
+
+>>> generate_name(joiner=".")
+'corny.camel'
+
+# seed with a random number
+
+>>> generate_name(seed=42)
+'delightful-donkey'
+
+# use plants instead of animals
+
+>>> generate_name(prefer_plants=True)
+'irritating-inkberry'
+
+```
+
+https://pypi.org/project/resource-namer
+
+
