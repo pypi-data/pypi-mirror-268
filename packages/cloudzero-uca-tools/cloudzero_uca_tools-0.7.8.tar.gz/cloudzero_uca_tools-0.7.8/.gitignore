@@ -1,0 +1,45 @@
+# Copyright (c) 2020 CloudZero - ALL RIGHTS RESERVED - PROPRIETARY AND CONFIDENTIAL
+# Unauthorized copying of this file and/or project, via any medium is strictly prohibited.
+# Direct all questions to legal@cloudzero.com
+
+# Mac OS garbage
+.DS_Store
+*.out
+
+# Python tests
+.coverage*
+.pytest_cache
+.tox
+.cache
+coverage-reports
+coverage.xml
+test-results
+.hypothesis
+
+# Python artifacts
+__pycache__
+*.pyc
+dist
+sdist
+*.egg-info
+.python-version
+build
+
+# Editor Artifacts
+.idea
+.vscode
+
+# editor files
+*.swp
+*.swo
+*.swn
+
+# Makefile temp stuff
+.cz_*_verified
+.cz_py_dependencies_installed
+
+# Log files
+*.log
+
+# Pypi
+.pypirc
