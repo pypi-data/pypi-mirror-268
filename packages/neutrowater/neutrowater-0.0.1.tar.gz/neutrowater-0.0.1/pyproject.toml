@@ -1,0 +1,59 @@
+[project]
+name = "neutrowater"
+version = "0.0.1"
+authors = [
+    {name = "DerkNiessink, email = derk@niessink.com"}
+]
+description = "Monte Carlo simulation of neutron moderation"
+readme = "README.md"
+packages = [
+    { include = "neutrowater", from = "src" },
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/DerkNiessink/neutrowater"
+Issues = "https://github.com/DerkNiessink/neutrowater/issues"
+
+[tool.poetry]
+name = "neutrowater"
+version = "0.0.1"
+authors = ["DerkNiessink <derk@niessink.com>"]
+description = "Monte Carlo simulation of neutron moderation"
+readme = "README.md"
+packages = [
+    { include = "neutrowater", from = "src" },
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+scienceplots = "^2.1.1"
+numpy = "^1.26.4"
+matplotlib = "^3.8.2"
+pytest = "^8.0.0"
+ipykernel = "^6.29.1"
+pandas = "^2.2.0"
+scipy = "^1.12.0"
+seaborn = "^0.13.2"
+tqdm = "^4.66.2"
+ruff = "^0.2.1"
+numba = "^0.59.0"
+brokenaxes = "^0.6.0"
+ipywidgets = "^8.1.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning",
+]
