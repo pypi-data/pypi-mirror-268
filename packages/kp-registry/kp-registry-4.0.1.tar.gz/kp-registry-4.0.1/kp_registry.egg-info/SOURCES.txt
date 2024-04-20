@@ -1,0 +1,10 @@
+README.md
+setup.py
+kp_registry/__init__.py
+kp_registry/main.py
+kp_registry.egg-info/PKG-INFO
+kp_registry.egg-info/SOURCES.txt
+kp_registry.egg-info/dependency_links.txt
+kp_registry.egg-info/not-zip-safe
+kp_registry.egg-info/requires.txt
+kp_registry.egg-info/top_level.txt
