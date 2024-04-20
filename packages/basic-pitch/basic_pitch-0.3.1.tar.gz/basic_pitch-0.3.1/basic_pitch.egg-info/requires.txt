@@ -1,0 +1,48 @@
+librosa>=0.8.0
+mir_eval>=0.6
+numpy>=1.18
+pretty_midi>=0.2.9
+resampy<0.4.3,>=0.2.2
+scikit-learn
+scipy>=1.4.1
+typing_extensions
+
+[:platform_system != "Darwin" and python_version >= "3.11"]
+tensorflow<2.15.1,>=2.4.1
+
+[:platform_system == "Darwin"]
+coremltools
+tensorflow-macos<2.15.1,>=2.4.1
+
+[:platform_system == "Linux" and python_version < "3.11"]
+tflite-runtime
+
+[:platform_system == "Windows" and python_version < "3.11"]
+onnxruntime
+
+[coreml]
+coremltools
+
+[dev]
+basic_pitch[coreml,docs,onnx,test,tf]
+mypy
+tox
+
+[docs]
+mkdocs>=1.0.4
+
+[onnx]
+onnxruntime
+
+[test]
+coverage>=5.0.2
+pytest>=6.1.1
+pytest-mock
+
+[tf]
+
+[tf:platform_system != "Darwin"]
+tensorflow<2.15.1,>=2.4.1
+
+[tf:platform_system == "Darwin" and python_version > "3.7"]
+tensorflow-macos<2.15.1,>=2.4.1
