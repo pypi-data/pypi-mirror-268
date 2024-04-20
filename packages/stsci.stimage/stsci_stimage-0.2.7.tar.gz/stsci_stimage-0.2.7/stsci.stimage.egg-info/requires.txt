@@ -1,0 +1,13 @@
+numpy>=1.14
+
+[docs]
+sphinx
+sphinx-automodapi
+sphinx-rtd-theme
+
+[docs:python_version < "3.11"]
+tomli
+
+[test]
+pytest
+pytest-cov
