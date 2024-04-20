@@ -1,0 +1,17 @@
+dataforge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dataforge/importProject.py,sha256=pHPpF633UXQZwvhENbi3pcX-msMIuvlUrHoI0u6Ou-I,5419
+dataforge/main.py,sha256=TS30oH2dFAsNaQxSjZs5Ddrms54Dl9rdvesvuH8l4E0,211
+dataforge/mainConfig.py,sha256=LJbol_7uGDVVpAvb3y2WidHD-thTeoTzvG6FTMbIECk,3363
+dataforge/miniSparky.py,sha256=OhASX103Qh4v18QA1-oufhG8pCeh9KOA5WNkVyPuF5o,3818
+dataforge/pg.py,sha256=wKvyHIeSHvgXSg29TaawcHGLdRP8_nOzJCowDBoV-0k,2800
+dataforge/resources/pg_deploy.sql,sha256=wqa3JB4EktIA_XxtkTAdYqXwEiG0mfQ_RHobQ9SSloA,248012
+dataforge/resources/project/meta.yaml,sha256=C1ohyMFEzVgQgbpVhMLGO3LyQfKIUpHN5eUHLRCGHkg,24
+dataforge/resources/project/relations.yaml,sha256=S8ZWDsT3U3yvj1FRXcwaS7aMbtErU8EZ_NT0YpZpQIs,7
+dataforge/resources/project/outputs/output1.yaml,sha256=kfZz0oqiqQw7q3jfQ110OLLcsGDSF1cyTLcE0r34Rfs,312
+dataforge/resources/project/sources/source1.yaml,sha256=SJAWvRphn9mYqgs0G4nV0JUTo_AzYzecAnWTt_U6DVs,222
+dataforge_core-0.1.1.dist-info/LICENSE,sha256=yYOZYu71a406lybNs4kFxdvcBfXTW82GVFNYd9i3o1Q,11596
+dataforge_core-0.1.1.dist-info/METADATA,sha256=UrcRXu_0mi75OA01Qlf0r4y-aPfDTrMoTClak8x7o-4,653
+dataforge_core-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dataforge_core-0.1.1.dist-info/entry_points.txt,sha256=5CnTjqFQP3fZff53aNdmAjzGGw7VHF8oGJ4y0Y7uOSQ,50
+dataforge_core-0.1.1.dist-info/top_level.txt,sha256=xv3CY-CdHCuuvu_sV6g-QJzpRJM7YFJwvQunsUpM0As,10
+dataforge_core-0.1.1.dist-info/RECORD,,
