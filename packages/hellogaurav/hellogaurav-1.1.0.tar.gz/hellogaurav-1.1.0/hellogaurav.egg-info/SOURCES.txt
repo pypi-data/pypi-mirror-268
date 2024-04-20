@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+hellogaurav/__init__.py
+hellogaurav/hello.py
+hellogaurav.egg-info/PKG-INFO
+hellogaurav.egg-info/SOURCES.txt
+hellogaurav.egg-info/dependency_links.txt
+hellogaurav.egg-info/not-zip-safe
+hellogaurav.egg-info/top_level.txt
