@@ -1,0 +1,12 @@
+sqlite_orm/__init__.py,sha256=HE9ic4SGixx82q02wiT3kBfAhcbScu3TzU0SU2SGnhw,3256
+sqlite_orm/base.py,sha256=EEd4fQK9BAeUzKluHPLJjlFjcPBM8IapN2vLdVKe_aY,19465
+sqlite_orm/columns.py,sha256=m8tUt8skTxewKhRb5vyyIBGW_bFdRBVGoSz7QDhjcMI,26515
+sqlite_orm/helpers.py,sha256=CZdEqgsvsk_KQfVuRE87q_CRZNQoWx6R_IEVJqGFgo4,11249
+sqlite_orm/models.py,sha256=5dcjowBsH7TaeKPdEDQ61kXSndxi_ZtaOtXBA7dmPNU,7950
+sqlite_orm/files/__init__.py,sha256=5uaOEYl5JrG7v4cuWlNFFwVhSlSpTZdlsgYkVdXwWNI,240
+sqlite_orm/files/storage.py,sha256=_0xhkojEvZdOmX9vX72CuZsktvS2U7QM-YgX_fvOp84,16476
+sqlite3_orm-1.0.0.dist-info/LICENSE,sha256=aBZ_KKKzggB0wz6Lbepm1kIHwsafkY9shqj25yOsTig,1057
+sqlite3_orm-1.0.0.dist-info/METADATA,sha256=qhLGThQ71gihqcxx6lryBwLcUjizZM9yn1SlwldYFTE,6394
+sqlite3_orm-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sqlite3_orm-1.0.0.dist-info/top_level.txt,sha256=mev4NV8XHK5Km4NKvbJgkNpI7VTTNmnwuxT1lQsHMsE,11
+sqlite3_orm-1.0.0.dist-info/RECORD,,
