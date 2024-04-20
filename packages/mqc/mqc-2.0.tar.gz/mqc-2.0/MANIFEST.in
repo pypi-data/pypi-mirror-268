@@ -1,0 +1,4 @@
+include /home/dengxiao/mqc/main.py                # 包含 main.py 文件
+include /home/dengxiao/mqc/mqc/control/*         # 包含 my_directory 目录下的所有文件
+include /home/dengxiao/mqc/mqc/*.py    # 包含 my_directory 目录下的所有 .py 文件
+include /home/dengxiao/mqc/mqc/summary/*
