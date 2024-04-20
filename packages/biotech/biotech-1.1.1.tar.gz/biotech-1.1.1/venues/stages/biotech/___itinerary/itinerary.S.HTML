@@ -1,0 +1,242 @@
+
+
+
+<pre>
+
+
+	<h1>agenda</h1>
+
+		<h2>urgent ranked</h2>
+			
+			[ ] if health scan doesn't send 
+				/done_with scan
+				
+					ask status?
+					
+					
+				[ ] there could have been an error
+					sending /done_with_scan
+					to the aggregator
+
+
+
+		<h2>ranked</h2>
+			
+	
+			
+			
+			[ ] before and after were lost
+			
+			[ ] health_scan dependency lock
+			
+			[ ] timeout in status_1.py
+			
+				timeout = 2
+				checks = {}
+				
+				
+			
+			[ ] accurate elapsed time.
+			
+					#
+					#	maybe include this optionally though
+					#
+					dates: [ start_date, end_date ]
+					
+					
+					elapsed: [ "", "seconds" ]
+			
+			
+				[ ] use fractions
+				
+		
+			[ ] "monitors"
+		
+					
+				def before_monitor_1 ():
+					return;
+				
+				def monitor_1 ():
+					return;
+				
+				def after_monitor_1 ():
+					return;
+	
+				monitors = {
+					"monitor 1": {
+						"always": {
+							"before": before_monitor_1,
+							"after": after_monitor_1
+						},
+						"monitor": monitor_1
+					}
+				}
+				
+				
+			[ ] show alarms and then empties
+				
+			
+			[ ] reflexes
+					
+					if a "status_" is changed,
+					then restart that status.
+					
+					
+			
+			most important:
+			
+				[ ] before and after a check irregardless of whether
+					it is successful or not.
+					
+					
+					def after_check_1 ():
+						return;
+					
+					def check_1 ():
+						return;
+						
+					def before_check_1 ():
+						return;
+						
+					checks = {
+						"check 1": {
+							"after": after_check_1,
+							"check": check_1,
+							"before": before_check_1
+						}
+					}
+					
+					------------------------
+						def establish_1 ():
+							return;
+						
+						establish = {
+							"establish 1": {
+								"
+							}
+						}
+				
+				[ ] static type checking
+					https://pypi.org/project/mypy/
+		
+				[ ] coverage
+					https://pypi.org/project/coverage/
+					
+					subprocesses:
+						https://coverage.readthedocs.io/en/6.5.0/subprocess.html
+				
+				[ ] replays on deadlock
+					[ ] replays up to 3 times?
+						{
+							"checks": {
+								"replays": 11,
+								"alarms": 0,
+								"passes": 10
+							}
+						}
+					
+				
+				[ ] capture process journal:
+				
+						This might have binary
+						
+						Could try utf8, the if doesn't
+						work could try hex
+						
+						journal: [{
+							"UTF8": {
+								"parseable": "no",
+								"string": "journal entry"
+							},
+							"hexadecimal": ""
+						},{
+							"UTF8": {
+								"parseable": "no",
+								"string": "journal entry"
+							},
+							"hex": ""
+						}]
+						
+						journal: [{
+							"UTF8": {
+								"parseable": "no"
+							},
+							"hex": [
+								"034789A987F789C987987A78987B987987987D7898F",
+							]
+						},{
+							"UTF8": {
+								"parseable": "yes"
+								"string": "journal entry"
+							}
+						},{
+							"UTF8": {
+								"parseable": "yes"
+								"string": "journal entry"
+							}
+						}]
+					
+			
+				
+			
+				[ ] The unit_tests from body_scan
+					need to be rewritten as body_scan tests
+					for biotech.
+					
+				[ ]	global option to repeat checks if they fail,
+					since there are possibilites like "deadlocks"
+				
+				[ ] mkdir -p, db_directory
+			
+				[ ] print the passed checks history numbers in the results.
+				
+						status checks [113 to 103]: [45][43][43][42][40]
+
+						#
+						#	That way can easily notice if that number decreases
+						#	suddenly for some reason.
+						#	
+				
+				
+				[ ] Somehow showing processes that are still in progress,
+					in the event that one doesn't stop ever or something.
+				
+				[ ]	A way to start multiple globs.			
+				
+					scan = biotech.start_s2 (
+						#
+						#	run globs simultaneously or 
+						#
+						"simultaneous": "yes",
+						
+						"scans": [{			
+							#
+							#	required
+							#
+							"glob_string": glob_string,
+							
+							#
+							#	optional
+							#
+							"name": "vitals",
+							"simultaneous": "yes",
+							"module_paths": [],
+							"relative_path": chassis
+						}]
+					)
+			
+			
+			not as important:
+				[ ] websockets to vue frontend
+					pypi "websockets"
+
+		unordered:
+			(body scan priorities might have more)
+
+			
+
+		
+
+		
+
+</pre>
