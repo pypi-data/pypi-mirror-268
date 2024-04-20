@@ -1,0 +1,151 @@
+on:
+  workflow_dispatch:
+
+name: 'All Designs'
+
+defaults:
+  run:
+    shell: bash
+
+env:
+  REGISTRY: ghcr.io
+
+jobs:
+  designs:
+    name: Get design matrix
+    runs-on: ubuntu-latest
+
+    outputs:
+      designs: ${{ steps.designs.outputs.designs }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get design matrix
+        id: designs
+        run: |
+          echo "designs=$(python3 $GITHUB_WORKSPACE/generate_image_cache.py --github)" >> $GITHUB_OUTPUT
+
+  wheel:
+    name: Build wheel
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - uses: hynek/build-and-inspect-python-package@v2
+
+  sc_version:
+    needs: wheel
+    name: Get SiliconCompiler version
+    runs-on: ubuntu-latest
+
+    outputs:
+      version: ${{ steps.sc_version.outputs.version }}
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Packages
+          path: dist
+
+      - name: Install gallery
+        run: |
+          pip install --upgrade pip
+          pip install dist/*.whl
+
+      - name: Get version
+        id: sc_version
+        run: |
+          echo "version=v$(sc -version)" >> $GITHUB_OUTPUT
+
+  docker_image:
+    needs: sc_version
+    name: Get tools image
+    uses: siliconcompiler/siliconcompiler/.github/workflows/docker_image.yml@main
+    with:
+      sc_version: ${{ needs.sc_version.outputs.version }}
+
+  designs_test:
+    needs: [wheel, docker_image, designs]
+    runs-on: ubuntu-latest
+    container:
+      image: ${{ needs.docker_image.outputs.sc_tool }}
+      credentials:
+        username: ${{ secrets.PACKAGES_ACTOR }}
+        password: ${{ secrets.PACKAGES_TOKEN }}
+
+    strategy:
+      fail-fast: false
+      max-parallel: 50
+      matrix:
+        include: ${{ fromJson(needs.designs.outputs.designs) }}
+
+    name: 'Run design'
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Packages
+          path: dist
+
+      - name: Install gallery
+        run: |
+          pip install --upgrade pip
+          pip install dist/*.whl
+
+      - name: Run gallery
+        timeout-minutes: 120
+        run: |
+          REMOTE_ARGS=""
+          if [[ "${{ matrix.remote }}" = "true" ]] ; then
+            yes | sc-remote -configure -server https://server.siliconcompiler.com -credentials credentials.json
+            REMOTE_ARGS="-remote credentials.json"
+          fi
+          if [ -z "${{ matrix.target }}" ] ; then
+            sc-gallery -design ${{ matrix.design }} $REMOTE_ARGS
+          else
+            sc-gallery -design ${{ matrix.design }} -target ${{ matrix.target }} $REMOTE_ARGS
+          fi
+
+      - name: Generate artifact name
+        if: always()
+        run: |
+          if [ -z "${{ matrix.target }}" ] ; then
+            ART_NAME=${{ matrix.design }}
+          else
+            ART_NAME=${{ matrix.design }}-${{ matrix.target }}
+          fi
+
+          echo ART_NAME=${ART_NAME} >> $GITHUB_ENV # update GitHub ENV vars
+
+      - name: Upload gallery image
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: images-${{ env.ART_NAME }}
+          path: gallery/*/*.png
+          retention-days: 1
+
+      - name: Upload run artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-${{ env.ART_NAME }}
+          path: gallery/*/*.tgz
+          retention-days: 2
+
+  merge_images:
+    name: Merge image artifacts
+    runs-on: ubuntu-latest
+    if: always()
+    needs: designs_test
+
+    steps:
+      - name: Merge Artifacts
+        uses: actions/upload-artifact/merge@v4
+        with:
+          name: images
+          pattern: images-*
+          delete-merged: true
+          retention-days: 7
