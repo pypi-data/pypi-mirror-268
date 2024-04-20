@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+macalc_gi/__init__.py
+macalc_gi/calculator.py
+mycalc_gi.egg-info/PKG-INFO
+mycalc_gi.egg-info/SOURCES.txt
+mycalc_gi.egg-info/dependency_links.txt
+mycalc_gi.egg-info/top_level.txt
