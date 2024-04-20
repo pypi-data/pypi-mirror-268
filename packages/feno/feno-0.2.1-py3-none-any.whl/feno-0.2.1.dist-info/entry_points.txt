@@ -1,0 +1,8 @@
+[console_scripts]
+check = feno.check:main
+feno = feno.__main__:main
+filter = feno.filter:main
+indexer = feno.indexer:main
+lock = feno.lock:lock
+mdpp = feno.mdpp:main
+unlock = feno.lock:unlock
