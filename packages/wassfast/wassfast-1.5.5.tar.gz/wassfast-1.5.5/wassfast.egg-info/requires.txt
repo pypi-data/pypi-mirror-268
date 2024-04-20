@@ -1,0 +1,11 @@
+tensorflow==2.2
+protobuf==3.20.0
+numpy==1.22
+matplotlib
+netcdf4
+pyopengl
+scipy
+opencv-python>=2.4.6
+tqdm
+glfw
+mako
