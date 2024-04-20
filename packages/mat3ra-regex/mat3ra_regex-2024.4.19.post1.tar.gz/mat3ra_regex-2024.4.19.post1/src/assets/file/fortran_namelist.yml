@@ -1,0 +1,24 @@
+namelist:
+  regex: !listToString
+    # ($|&){{BLOCK_NAME}}\n(?:\s+[A-Za-z_]+\s*=\s*(?:['"].*?['"]|[^\/\n]+)(?:\n\s+[A-Za-z_]+\s*=\s*(?:['"].*?['"]|[^\/\n]+))*)?\s*\/
+    - (\$|&){{BLOCK_NAME}}\n # This is used to ensure that the match starts either from dollar sign or after an ampersand, which is common in block headers like "&CONTROL".
+      # This part matches either the dollar sign ($) or an ampersand (&).
+      # {{BLOCK_NAME}}: This part is template string to be replaced in final regex. It is used to match the block name, which typically could contain one of values enumerated in BLOCK_NAME param.
+      # \n: This part matches a newline character, signifying the end of the block header and the start of the block content.
+    - (?:\s+[A-Za-z_]+\s*=\s* # This part matches a parameter assignment within the block. It consists of:
+      # \s+: One or more whitespace characters to account for indentation.
+      # [A-Za-z_]+: The parameter name, which can consist of letters and underscores.
+      # \s*=\s*: The equal sign with optional spaces around it.
+    - (?:['"].*?['"]|[^\/\n]+) # This part matches the parameter value. It allows for two possibilities:
+      # ['"].*?['"]: Matches a parameter value enclosed in single or double quotes. The .*? is a non-greedy match for any characters within the quotes.
+      # [^\/\n]+: Matches a parameter value that is not enclosed in quotes and does not contain forward slashes or newline characters. This allows it to match unquoted values.
+    - (?:\n\s+[A-Za-z_]+\s*=\s*(?:['"].*?['"]|[^\/\n]+))*)? # This part allows for multiple parameter assignments within the block. It matches zero or more occurrences of a parameter assignment pattern.
+    - \s*\/ # This part matches the closing slash / that signifies the end of the block..
+  flags: ["g", "m"]
+  params:
+    BLOCK_NAME:
+      - "CONTROL"
+      - "ELECTRONS"
+      - "IONS"
+      - "CELL"
+      - "SYSTEM"

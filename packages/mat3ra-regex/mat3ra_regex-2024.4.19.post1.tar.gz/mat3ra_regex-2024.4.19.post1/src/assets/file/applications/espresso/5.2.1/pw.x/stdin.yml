@@ -1,0 +1,19 @@
+_fingerprints:
+  - regex: "^&control"
+    flags: ["g", "i"]
+    isRequired: true
+  - regex: "^&electrons"
+    flags: ["g", "i"]
+    isRequired: true
+
+control:
+  _format: !include src/assets/file/fortran_namelist.yml # matching generic namelist
+  calculation:
+    regex: calculation\s*=\s*'([^']+)'
+    flags: [ "g", "m", "i" ]
+  title:
+    regex: title\s*=\s*'([^']+)'
+    flags: [ "g", "m", "i" ]
+  restart_mode:
+    regex: restart_mode\s*=\s*'([^']+)'
+    flags: [ "g", "m", "i" ]

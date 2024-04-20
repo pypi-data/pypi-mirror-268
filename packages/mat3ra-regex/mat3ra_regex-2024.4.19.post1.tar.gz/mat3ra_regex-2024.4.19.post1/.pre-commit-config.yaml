@@ -1,0 +1,21 @@
+repos:
+  - repo: https://github.com/Exabyte-io/pre-commit-hooks
+    rev: 2023.6.28
+    hooks:
+      - id: ruff
+      - id: black
+      - id: isort
+      - id: mypy
+      # TODO: figure out how to allow for the custom tags like !Ref and re-enable this
+      # https://github.com/pre-commit/pre-commit-hooks/issues/103
+      # - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+  - repo: local
+    hooks:
+      - id: lint-staged
+        name: lint-staged
+        language: node
+        entry: npx lint-staged
+        verbose: true # to see familiar lint-staged output
+        pass_filenames: false # lint-staged has its own glob expression

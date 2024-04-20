@@ -1,0 +1,13 @@
+_fingerprints:
+  - regex: "^&control"
+    flags: ["g", "i"]
+    isRequired: true
+  - regex: "^&electrons"
+    flags: ["g", "i"]
+    isRequired: true
+
+control:
+  _format: !include src/assets/file/fortran_namelist.yml # matching generic namelist
+  calculation:
+    regex: "..." # matching 'calculation' property of namelist content
+    flags: ["g", "m", "i"]
