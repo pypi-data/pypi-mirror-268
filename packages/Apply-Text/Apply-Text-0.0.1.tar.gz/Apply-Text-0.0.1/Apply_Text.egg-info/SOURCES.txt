@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+main.py
+proxy_list.txt
+setup.py
+Apply_Text.egg-info/PKG-INFO
+Apply_Text.egg-info/SOURCES.txt
+Apply_Text.egg-info/dependency_links.txt
+Apply_Text.egg-info/requires.txt
+Apply_Text.egg-info/top_level.txt
+joblib/__init__.py
+joblib/applylib.py

@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: Apply-Text
+Version: 0.0.1
+Summary: Displays the Word -Applied- in the Front end once you Apply to the Job 
+Home-page: 
+Author: Roshan x23128356@student.ncirl.ie
+Author-email: x23128356@student.ncirl.ie
+License: MIT
+Keywords: ApplyText
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+License-File: LICENCE.txt
+
+This is simple text that will push to the front end once you apply to the job.
+
+Change Log
+==========
+
+0.0.1 (19/04/2024)
+-------------------
+- First Release
